@@ -1,0 +1,422 @@
+[
+  {
+    "id": "u1-e-172",
+    "difficulty": "easy",
+    "topic": "sulfhydryl",
+    "text": "What is a sulfhydryl group?",
+    "choices": [
+      "-OH",
+      "-SH",
+      "-NH2",
+      "-COOH"
+    ],
+    "correct": 1,
+    "explain": "A sulfhydryl group contains a sulfur atom bonded to hydrogen (–SH).",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-173",
+    "difficulty": "easy",
+    "topic": "carbonyl",
+    "text": "What is a carbonyl group?",
+    "choices": [
+      "A group containing a carbon atom double-bonded to an oxygen atom",
+      "A group containing phosphorus bonded to four oxygens",
+      "A group that always makes a molecule basic",
+      "A group found only in amino acids"
+    ],
+    "correct": 0,
+    "explain": "Carbonyl groups have a C=O double bond and are common in many biological molecules.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-174",
+    "difficulty": "easy",
+    "topic": "monomer vs polymer",
+    "text": "What is the difference between a monomer and a polymer?",
+    "choices": [
+      "A monomer is larger than a polymer",
+      "A monomer is a building block, while a polymer is a larger molecule made from repeating monomers",
+      "A monomer contains only carbon, while a polymer contains many elements",
+      "A monomer can exist only in carbohydrates"
+    ],
+    "correct": 1,
+    "explain": "Monomers are small subunits that join to form polymers (large molecules made of repeating units).",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-175",
+    "difficulty": "easy",
+    "topic": "intermolecular forces",
+    "text": "Which force is weakest but can still help stabilize large biological molecules?",
+    "choices": [
+      "Covalent bond",
+      "Ionic bond",
+      "Van der Waals interaction",
+      "Peptide bond"
+    ],
+    "correct": 2,
+    "explain": "Van der Waals interactions are individually weak but collectively contribute to molecular stability.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-176",
+    "difficulty": "easy",
+    "topic": "fatty acids",
+    "text": "What is the main difference between saturated and unsaturated fatty acids?",
+    "choices": [
+      "Saturated fatty acids contain nitrogen, and unsaturated fatty acids do not",
+      "Saturated fatty acids contain only single bonds, while unsaturated fatty acids contain one or more double bonds",
+      "Unsaturated fatty acids are always charged, while saturated fatty acids are neutral",
+      "Saturated fatty acids are found only in plants"
+    ],
+    "correct": 1,
+    "explain": "Saturated fats have only single C–C bonds; unsaturated fats contain C=C double bonds that introduce kinks.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-177",
+    "difficulty": "easy",
+    "topic": "amino acid R groups",
+    "text": "Which statement best describes the role of R groups in amino acids?",
+    "choices": [
+      "They determine the identity and chemical properties of different amino acids",
+      "They hold nucleotides together in DNA",
+      "They replace peptide bonds in proteins",
+      "They are identical in all amino acids"
+    ],
+    "correct": 0,
+    "explain": "R groups (side chains) give each amino acid its specific chemical properties and identity.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-178",
+    "difficulty": "easy",
+    "topic": "nucleic acids",
+    "text": "Which molecule is usually single-stranded?",
+    "choices": [
+      "DNA",
+      "RNA",
+      "Cellulose",
+      "Triglyceride"
+    ],
+    "correct": 1,
+    "explain": "RNA is typically single-stranded and can fold into complex structures.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-179",
+    "difficulty": "easy",
+    "topic": "hydrocarbon chains",
+    "text": "Which statement best describes hydrocarbon chains?",
+    "choices": [
+      "They are usually nonpolar and hydrophobic",
+      "They are strongly charged and highly soluble in water",
+      "They are made of repeating amino acids",
+      "They form the sugar-phosphate backbone of DNA"
+    ],
+    "correct": 0,
+    "explain": "Hydrocarbon chains are largely nonpolar and do not interact favorably with water.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-180",
+    "difficulty": "hard",
+    "topic": "disulfide bonds",
+    "text": "A scientist mutates a protein so that two cysteine residues are replaced by alanine residues. Which outcome is most likely?",
+    "choices": [
+      "The protein may lose stability because it can no longer form the same disulfide bonds",
+      "The protein will gain a phosphate backbone",
+      "The mutation will automatically make the protein longer",
+      "The protein will become RNA"
+    ],
+    "correct": 0,
+    "explain": "Cysteines can form disulfide bonds that stabilize folding; alanine cannot form those covalent links.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-181",
+    "difficulty": "hard",
+    "topic": "isomers",
+    "text": "A researcher compares two sugars with the same molecular formula. Sugar X is part of a structural polysaccharide, while Sugar Y is readily used in cellular respiration. Which explanation is best?",
+    "choices": [
+      "The two sugars may be isomers with different structures and therefore different biological roles",
+      "One sugar must contain no oxygen",
+      "Structural sugars are always proteins",
+      "Cellular respiration uses only lipids, not sugars"
+    ],
+    "correct": 0,
+    "explain": "Isomeric differences (linkage/orientation) can change function despite identical formulas.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-182",
+    "difficulty": "hard",
+    "topic": "hydroxyl",
+    "text": "A molecule contains several hydroxyl groups and dissolves readily in water. What is the best explanation?",
+    "choices": [
+      "Hydroxyl groups increase polarity and allow favorable interactions with water",
+      "Hydroxyl groups make all molecules nonpolar",
+      "The molecule must be a lipid because it dissolves in water",
+      "Water dissolves only molecules with peptide bonds"
+    ],
+    "correct": 0,
+    "explain": "Hydroxyl groups enable hydrogen bonding with water, increasing solubility.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-183",
+    "difficulty": "hard",
+    "topic": "membrane proteins",
+    "text": "A biologist studies a membrane protein with many nonpolar amino acids exposed on the outside of the protein. In which environment is this protein most likely found?",
+    "choices": [
+      "Floating freely in the cytoplasm",
+      "Embedded in the nonpolar interior of a membrane",
+      "Dissolved in blood plasma as a fully water-soluble protein",
+      "Attached only to DNA in the nucleus"
+    ],
+    "correct": 1,
+    "explain": "Nonpolar exterior residues are consistent with a protein embedded within the membrane's hydrophobic interior.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-184",
+    "difficulty": "hard",
+    "topic": "hydrolysis",
+    "text": "A polymer is broken into monomers in a reaction that consumes water. Which statement is correct?",
+    "choices": [
+      "The reaction is hydrolysis, and water is used to break covalent bonds",
+      "The reaction is dehydration synthesis, and water is produced to break bonds",
+      "The reaction must involve amino acids only",
+      "The reaction cannot occur in cells"
+    ],
+    "correct": 0,
+    "explain": "Hydrolysis splits polymers by adding water to break covalent bonds; it is common in cells.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-185",
+    "difficulty": "hard",
+    "topic": "point mutation",
+    "text": "A point mutation changes a DNA codon so that the resulting amino acid is much larger than the original. The amino acid lies in a tightly packed region of the protein. Why might this matter?",
+    "choices": [
+      "The larger side chain could interfere with proper folding or packing, altering protein function",
+      "The protein will automatically gain more peptide bonds",
+      "Protein size can never affect structure",
+      "The DNA must now become single-stranded RNA"
+    ],
+    "correct": 0,
+    "explain": "A bulkier residue in a tight core can disrupt packing and folding, impairing function.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-186",
+    "difficulty": "hard",
+    "topic": "phospholipid",
+    "text": "A triglyceride and a phospholipid both contain fatty acids, but only one forms bilayers in water. Why?",
+    "choices": [
+      "The phospholipid has a hydrophilic region and a hydrophobic region, allowing self-assembly in water",
+      "The triglyceride contains peptide bonds that prevent bilayer formation",
+      "The phospholipid is made of amino acids",
+      "The triglyceride has a phosphate backbone like DNA"
+    ],
+    "correct": 0,
+    "explain": "Phospholipids are amphipathic (polar head, nonpolar tails), which drives bilayer formation in aqueous environments.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-187",
+    "difficulty": "hard",
+    "topic": "denaturation",
+    "text": "A protein loses activity after a pH change, but analysis shows its amino acid sequence is unchanged. Which level of structure was most directly altered?",
+    "choices": [
+      "Primary structure",
+      "Secondary, tertiary, or quaternary structure",
+      "The number of monomers in the protein",
+      "The phosphodiester bonds of the protein"
+    ],
+    "correct": 1,
+    "explain": "pH changes can disrupt ionic and hydrogen-bonding interactions that maintain higher-order folding and subunit assembly.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-188",
+    "difficulty": "hard",
+    "topic": "GC content",
+    "text": "A DNA sample with higher G-C content is compared with a DNA sample with higher A-T content. Which prediction is most reasonable?",
+    "choices": [
+      "The G-C rich DNA may be more stable because G-C pairs form more hydrogen bonds",
+      "The A-T rich DNA must contain ribose instead of deoxyribose",
+      "The G-C rich DNA cannot replicate",
+      "The A-T rich DNA is always single-stranded"
+    ],
+    "correct": 0,
+    "explain": "G-C pairs form three hydrogen bonds (vs. two for A-T), generally increasing duplex stability.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-189",
+    "difficulty": "hard",
+    "topic": "surface polarity",
+    "text": "A scientist replaces several hydroxyl-containing side chains on the surface of a protein with nonpolar side chains. Which outcome is most likely in a watery environment?",
+    "choices": [
+      "The protein may become less soluble or less stable in water",
+      "The protein will become a carbohydrate",
+      "The protein will lose all covalent bonds",
+      "The protein must now bind DNA"
+    ],
+    "correct": 0,
+    "explain": "Removing polar groups from the surface reduces favorable water interactions and can decrease solubility/stability.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-190",
+    "difficulty": "analysis",
+    "topic": "indicator tests",
+    "text": "Students perform Benedict’s test on four unknown samples and record the following:\n\nSample 1: remains blue\nSample 2: turns green\nSample 3: turns orange\nSample 4: turns brick red\n\nWhich conclusion is most reasonable?",
+    "choices": [
+      "Sample 4 likely contains the greatest amount of reducing sugar",
+      "Sample 1 likely contains the greatest amount of reducing sugar",
+      "Sample 2 must contain the most protein because it changed color",
+      "Sample 3 must be a lipid because it changed to orange"
+    ],
+    "correct": 0,
+    "explain": "Stronger color change toward orange/red in Benedict's test indicates higher reducing sugar concentration.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-191",
+    "difficulty": "analysis",
+    "topic": "enzyme specificity",
+    "text": "A class tests two enzymes that digest carbohydrates. Enzyme A breaks down starch efficiently but has almost no effect on cellulose. Which explanation best fits the results?",
+    "choices": [
+      "Enzyme A recognizes specific bond types or substrate shapes present in starch but not cellulose",
+      "Starch and cellulose are identical in every relevant way",
+      "Cellulose is made of amino acids rather than sugars",
+      "Enzyme A works only at high temperature"
+    ],
+    "correct": 0,
+    "explain": "Enzyme specificity depends on substrate structure and type of glycosidic linkage; starch and cellulose differ in linkage orientation.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-192",
+    "difficulty": "analysis",
+    "topic": "point mutation",
+    "text": "Researchers compare two enzymes that differ by one amino acid. Enzyme X functions normally, while Enzyme Y has a much lower reaction rate. Both enzymes are the same length and remain mostly folded. Which hypothesis is best?",
+    "choices": [
+      "The amino acid change likely altered the active site or another region important for catalysis",
+      "Enzyme Y must have lost all peptide bonds",
+      "Enzyme X is actually DNA",
+      "Enzyme Y must now be a lipid"
+    ],
+    "correct": 0,
+    "explain": "A single substitution can impair catalytic residues or substrate binding without global unfolding.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-193",
+    "difficulty": "analysis",
+    "topic": "buffers",
+    "text": "A lab group studies pH buffering. They add equal amounts of base to two solutions.\n\nSolution A: pH changes from 7.2 to 7.4\nSolution B: pH changes from 7.2 to 9.1\n\nWhich conclusion is best supported?",
+    "choices": [
+      "Solution A has stronger buffering capacity",
+      "Solution B has stronger buffering capacity",
+      "Solution A contains no hydrogen ions",
+      "Solution B must contain more protein"
+    ],
+    "correct": 0,
+    "explain": "Smaller pH change after adding base indicates better buffering capacity.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-194",
+    "difficulty": "analysis",
+    "topic": "hydrophobicity",
+    "text": "Students compare how two unknown molecules behave in water. Molecule P dissolves uniformly. Molecule Q forms a separate oily layer. Infrared analysis suggests Molecule Q contains long hydrocarbon chains and very few polar groups. Which conclusion is best supported?",
+    "choices": [
+      "Molecule Q is likely hydrophobic because its structure is mostly nonpolar",
+      "Molecule P must be a triglyceride because it dissolved",
+      "Molecule Q is likely strongly ionic",
+      "Molecule P and Q must be isomers because both contain carbon"
+    ],
+    "correct": 0,
+    "explain": "Long hydrocarbon chains indicate nonpolarity and poor interaction with water, producing phase separation.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-195",
+    "difficulty": "analysis",
+    "topic": "double bonds",
+    "text": "A scientist measures melting behavior of two lipid samples. Sample X melts at a lower temperature than Sample Y. Chemical analysis shows Sample X has more carbon-carbon double bonds. Which explanation best fits the evidence?",
+    "choices": [
+      "Double bonds create bends that reduce tight packing among the fatty acid chains",
+      "Double bonds increase peptide bonding between lipid molecules",
+      "Double bonds make the lipid more like DNA",
+      "Double bonds always make molecules acidic"
+    ],
+    "correct": 0,
+    "explain": "Kinks from double bonds reduce van der Waals packing and lower melting temperature.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-196",
+    "difficulty": "analysis",
+    "topic": "charge effects",
+    "text": "A mutation changes one nucleotide in a DNA coding region. The new amino acid in the protein has the opposite charge of the original. The protein now binds its target poorly. Which interpretation is most reasonable?",
+    "choices": [
+      "The charge change likely disrupted interactions needed for binding or proper folding",
+      "The mutation must have increased the protein’s length",
+      "DNA changes cannot affect protein binding",
+      "The protein must have been converted into RNA"
+    ],
+    "correct": 0,
+    "explain": "Changing charge at a binding interface can alter electrostatic interactions and disrupt binding.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-197",
+    "difficulty": "analysis",
+    "topic": "protein ID",
+    "text": "Students analyze an unknown biomolecule and find the following:\n- contains carbon, hydrogen, oxygen, and nitrogen\n- is built from monomers with variable side chains\n- loses function when its three-dimensional shape changes\n\nWhich conclusion is best supported?",
+    "choices": [
+      "The biomolecule is most likely a protein",
+      "The biomolecule is most likely a nucleic acid",
+      "The biomolecule is most likely a polysaccharide",
+      "The biomolecule is most likely a triglyceride"
+    ],
+    "correct": 0,
+    "explain": "These characteristics fit proteins made of amino acids with variable R groups and structure-dependent function.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-198",
+    "difficulty": "analysis",
+    "topic": "vesicle formation",
+    "text": "A researcher places phospholipids into water and observes spontaneous formation of vesicles. Which explanation best supports this observation?",
+    "choices": [
+      "The amphipathic structure of phospholipids causes hydrophilic heads to face water and hydrophobic tails to avoid it",
+      "Phospholipids form peptide bonds with water",
+      "Water becomes nonpolar around phospholipids",
+      "Phospholipids polymerize into nucleic acids in water"
+    ],
+    "correct": 0,
+    "explain": "Amphipathic phospholipids spontaneously assemble into bilayers or vesicles to minimize unfavorable tail–water interactions.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-199",
+    "difficulty": "analysis",
+    "topic": "sequence conservation",
+    "text": "A teacher shows students two related proteins from different species. The proteins have very similar amino acid sequences and very similar functions. Which idea does this most directly support?",
+    "choices": [
+      "Similar primary structure often leads to similar higher-level structure and function",
+      "Protein function is unrelated to amino acid sequence",
+      "All proteins with similar function must have identical sequence",
+      "Proteins and nucleic acids are the same type of molecule"
+    ],
+    "correct": 0,
+    "explain": "Similar sequences commonly fold similarly and perform similar functions, reflecting evolutionary conservation.",
+    "experiment": null
+  }
+]

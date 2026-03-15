@@ -1,0 +1,1222 @@
+[
+  {
+    "id": "u4-e-1",
+    "difficulty": "easy",
+    "topic": "cell communication",
+    "text": "Why do cells need to communicate with one another?",
+    "choices": [
+      "To coordinate activities and respond to internal or external changes",
+      "To replace DNA with proteins",
+      "To stop all metabolic reactions",
+      "To eliminate the need for membranes"
+    ],
+    "correct": 0,
+    "explain": "Cells communicate to coordinate functions, maintain homeostasis, and respond to changing conditions.",
+    "choice_explanations": [
+      "Correct. Communication helps cells coordinate behavior and respond to signals.",
+      "Incorrect. DNA is not replaced by proteins.",
+      "Incorrect. Cell communication does not stop all metabolism.",
+      "Incorrect. Membranes are still essential."
+    ]
+  },
+  {
+    "id": "u4-e-2",
+    "difficulty": "easy",
+    "topic": "signaling types",
+    "text": "What is autocrine signaling?",
+    "choices": [
+      "A cell signals itself",
+      "A signal travels through the bloodstream only",
+      "A signal moves through plasmodesmata only",
+      "A signal is sent only by neurons"
+    ],
+    "correct": 0,
+    "explain": "Autocrine signaling occurs when a cell releases a signal that binds to receptors on the same cell.",
+    "choice_explanations": [
+      "Correct. Autocrine signaling means a cell responds to its own signal.",
+      "Incorrect. That is more like long-distance endocrine signaling.",
+      "Incorrect. Plasmodesmata are plant cell connections, not the definition of autocrine signaling.",
+      "Incorrect. Autocrine signaling is not limited to neurons."
+    ]
+  },
+  {
+    "id": "u4-e-3",
+    "difficulty": "easy",
+    "topic": "signaling types",
+    "text": "What is paracrine signaling?",
+    "choices": [
+      "Local signaling to nearby cells",
+      "Signaling only within the nucleus",
+      "A signal that always uses ATP synthase",
+      "A signal that occurs only during mitosis"
+    ],
+    "correct": 0,
+    "explain": "Paracrine signaling is local signaling in which nearby cells respond to a signal molecule.",
+    "choice_explanations": [
+      "Correct. Paracrine signals act on nearby target cells.",
+      "Incorrect. The nucleus is not the definition of paracrine signaling.",
+      "Incorrect. ATP synthase is unrelated here.",
+      "Incorrect. Paracrine signaling can happen outside mitosis."
+    ]
+  },
+  {
+    "id": "u4-e-4",
+    "difficulty": "easy",
+    "topic": "signaling types",
+    "text": "What is endocrine signaling?",
+    "choices": [
+      "Long-distance signaling through the circulatory system",
+      "Direct contact between neighboring cells only",
+      "Signal transmission through ribosomes",
+      "Signaling that happens only in plants"
+    ],
+    "correct": 0,
+    "explain": "Endocrine signaling involves hormones traveling long distances, often through the bloodstream.",
+    "choice_explanations": [
+      "Correct. Endocrine signaling is long-distance communication.",
+      "Incorrect. Direct contact signaling is different from endocrine signaling.",
+      "Incorrect. Ribosomes do not transmit endocrine signals.",
+      "Incorrect. Endocrine signaling is not limited to plants."
+    ]
+  },
+  {
+    "id": "u4-e-5",
+    "difficulty": "easy",
+    "topic": "receptors",
+    "text": "What does a receptor do in cell signaling?",
+    "choices": [
+      "It receives a signal and helps start a cellular response",
+      "It copies DNA during S phase",
+      "It produces ATP in mitochondria",
+      "It builds the cell wall"
+    ],
+    "correct": 0,
+    "explain": "Receptors detect signal molecules and initiate cellular responses.",
+    "choice_explanations": [
+      "Correct. Receptors bind signals and trigger responses.",
+      "Incorrect. DNA copying occurs during replication, not by receptors.",
+      "Incorrect. ATP production is a mitochondrial function.",
+      "Incorrect. Receptors do not build cell walls."
+    ]
+  },
+  {
+    "id": "u4-e-6",
+    "difficulty": "easy",
+    "topic": "signal transduction",
+    "text": "What is signal transduction?",
+    "choices": [
+      "The conversion of a received signal into a series of cellular steps",
+      "The breakdown of glucose in glycolysis",
+      "The movement of water across a membrane",
+      "The direct replication of chromosomes"
+    ],
+    "correct": 0,
+    "explain": "Signal transduction is the process by which a signal is relayed and converted into a cellular response.",
+    "choice_explanations": [
+      "Correct. Signal transduction links reception to response.",
+      "Incorrect. Glycolysis is unrelated.",
+      "Incorrect. That is osmosis.",
+      "Incorrect. Chromosome replication is not signal transduction."
+    ]
+  },
+  {
+    "id": "u4-e-7",
+    "difficulty": "easy",
+    "topic": "ligands",
+    "text": "What is a ligand in cell signaling?",
+    "choices": [
+      "A molecule that binds to a receptor",
+      "A chromosome during mitosis",
+      "A membrane phospholipid",
+      "A type of ATP pump"
+    ],
+    "correct": 0,
+    "explain": "A ligand is a signaling molecule that binds to a receptor.",
+    "choice_explanations": [
+      "Correct. Ligands bind receptors to initiate signaling.",
+      "Incorrect. Chromosomes are not ligands.",
+      "Incorrect. Phospholipids are membrane components.",
+      "Incorrect. A ligand is not a pump."
+    ]
+  },
+  {
+    "id": "u4-e-8",
+    "difficulty": "easy",
+    "topic": "membrane receptors",
+    "text": "Why do many signaling molecules need membrane receptors instead of entering the cell directly?",
+    "choices": [
+      "Many signaling molecules are too large or too polar to cross the membrane easily",
+      "Receptors are needed to make DNA",
+      "The membrane has no proteins",
+      "Only plant cells use membrane receptors"
+    ],
+    "correct": 0,
+    "explain": "Many signaling molecules cannot pass directly through the membrane, so membrane receptors detect them at the cell surface.",
+    "choice_explanations": [
+      "Correct. Size and polarity often prevent direct membrane crossing.",
+      "Incorrect. Receptors are not used to make DNA.",
+      "Incorrect. Membranes do contain proteins.",
+      "Incorrect. Membrane receptors are used by many cell types."
+    ]
+  },
+  {
+    "id": "u4-e-9",
+    "difficulty": "easy",
+    "topic": "intracellular receptors",
+    "text": "Which type of signaling molecule is most likely to use an intracellular receptor?",
+    "choices": [
+      "A small nonpolar molecule that can cross the membrane",
+      "A large polar protein that cannot cross the membrane",
+      "A polysaccharide in the cell wall",
+      "A ribosome"
+    ],
+    "correct": 0,
+    "explain": "Small nonpolar molecules can cross the membrane and bind receptors inside the cell.",
+    "choice_explanations": [
+      "Correct. Intracellular receptors usually bind membrane-permeable molecules.",
+      "Incorrect. Large polar molecules usually require membrane receptors.",
+      "Incorrect. A polysaccharide in the cell wall is not this kind of signal.",
+      "Incorrect. A ribosome is not a signaling molecule."
+    ]
+  },
+  {
+    "id": "u4-e-10",
+    "difficulty": "easy",
+    "topic": "second messengers",
+    "text": "What is a second messenger?",
+    "choices": [
+      "A small intracellular molecule that relays a signal inside the cell",
+      "A hormone traveling in the bloodstream",
+      "A chromosome copied in S phase",
+      "A protein that builds the spindle"
+    ],
+    "correct": 0,
+    "explain": "Second messengers relay and amplify signals inside the cell after receptor activation.",
+    "choice_explanations": [
+      "Correct. Second messengers help transmit signals internally.",
+      "Incorrect. A hormone is generally an extracellular signal.",
+      "Incorrect. Chromosome replication is unrelated.",
+      "Incorrect. Spindle proteins are not second messengers."
+    ]
+  },
+  {
+    "id": "u4-e-11",
+    "difficulty": "easy",
+    "topic": "cell cycle",
+    "text": "What is the cell cycle?",
+    "choices": [
+      "The sequence of growth, DNA replication, and division in a cell",
+      "The movement of electrons through the ETC",
+      "The process of protein folding",
+      "The pathway of hormone transport in blood"
+    ],
+    "correct": 0,
+    "explain": "The cell cycle includes growth, DNA replication, and cell division.",
+    "choice_explanations": [
+      "Correct. That is the definition of the cell cycle.",
+      "Incorrect. That describes the ETC.",
+      "Incorrect. Protein folding is not the cell cycle.",
+      "Incorrect. Hormone transport is not the cell cycle."
+    ]
+  },
+  {
+    "id": "u4-e-12",
+    "difficulty": "easy",
+    "topic": "interphase",
+    "text": "Which stages make up interphase?",
+    "choices": [
+      "G1, S, and G2",
+      "Prophase, metaphase, and telophase",
+      "Cytokinesis only",
+      "Mitosis only"
+    ],
+    "correct": 0,
+    "explain": "Interphase consists of G1, S, and G2.",
+    "choice_explanations": [
+      "Correct. These are the three stages of interphase.",
+      "Incorrect. Those are mitotic stages.",
+      "Incorrect. Cytokinesis is separate from interphase.",
+      "Incorrect. Interphase is not the same as mitosis."
+    ]
+  },
+  {
+    "id": "u4-e-13",
+    "difficulty": "easy",
+    "topic": "S phase",
+    "text": "What happens during S phase?",
+    "choices": [
+      "DNA is replicated",
+      "The cell divides into two cells",
+      "Chromosomes line up at the middle of the cell",
+      "Proteins stop being made"
+    ],
+    "correct": 0,
+    "explain": "S phase is when DNA synthesis occurs.",
+    "choice_explanations": [
+      "Correct. DNA replication occurs during S phase.",
+      "Incorrect. Cell division occurs later.",
+      "Incorrect. That happens during metaphase.",
+      "Incorrect. Protein synthesis does not stop in S phase."
+    ]
+  },
+  {
+    "id": "u4-e-14",
+    "difficulty": "easy",
+    "topic": "mitosis",
+    "text": "What is the main purpose of mitosis?",
+    "choices": [
+      "To produce two genetically similar nuclei",
+      "To reduce chromosome number by half",
+      "To make ATP",
+      "To fix carbon dioxide"
+    ],
+    "correct": 0,
+    "explain": "Mitosis separates replicated chromosomes into two genetically similar nuclei.",
+    "choice_explanations": [
+      "Correct. Mitosis maintains chromosome number in daughter nuclei.",
+      "Incorrect. Reducing chromosome number happens in meiosis.",
+      "Incorrect. ATP is made by cellular respiration and photosynthesis.",
+      "Incorrect. Carbon fixation occurs in the Calvin cycle."
+    ]
+  },
+  {
+    "id": "u4-e-15",
+    "difficulty": "easy",
+    "topic": "cytokinesis",
+    "text": "What is cytokinesis?",
+    "choices": [
+      "Division of the cytoplasm",
+      "Replication of the chromosomes",
+      "Binding of a hormone to a receptor",
+      "Movement of electrons through NADH"
+    ],
+    "correct": 0,
+    "explain": "Cytokinesis is the division of the cytoplasm that usually follows mitosis.",
+    "choice_explanations": [
+      "Correct. Cytokinesis splits the cell into two daughter cells.",
+      "Incorrect. Chromosome replication occurs in S phase.",
+      "Incorrect. That describes signaling, not cytokinesis.",
+      "Incorrect. That is not cytokinesis."
+    ]
+  },
+  {
+    "id": "u4-e-16",
+    "difficulty": "easy",
+    "topic": "checkpoints",
+    "text": "What is a cell-cycle checkpoint?",
+    "choices": [
+      "A control point where the cell checks whether conditions are suitable to continue",
+      "A place in the membrane where glucose enters",
+      "A step in glycolysis",
+      "A stage in the Calvin cycle"
+    ],
+    "correct": 0,
+    "explain": "Checkpoints are control points that help regulate progression through the cell cycle.",
+    "choice_explanations": [
+      "Correct. Checkpoints help ensure the cycle proceeds correctly.",
+      "Incorrect. That is a membrane transport idea.",
+      "Incorrect. Glycolysis does not include cell-cycle checkpoints.",
+      "Incorrect. The Calvin cycle is unrelated."
+    ]
+  },
+  {
+    "id": "u4-e-17",
+    "difficulty": "easy",
+    "topic": "cyclins",
+    "text": "What do cyclins mainly do?",
+    "choices": [
+      "Help regulate progression through the cell cycle",
+      "Carry oxygen in blood",
+      "Split water during photosynthesis",
+      "Build phospholipids in the membrane"
+    ],
+    "correct": 0,
+    "explain": "Cyclins regulate the timing of cell-cycle events by interacting with cyclin-dependent kinases.",
+    "choice_explanations": [
+      "Correct. Cyclins are key regulators of the cell cycle.",
+      "Incorrect. Hemoglobin carries oxygen in blood.",
+      "Incorrect. Water splitting occurs in photosystem II.",
+      "Incorrect. Cyclins do not build phospholipids."
+    ]
+  },
+  {
+    "id": "u4-e-18",
+    "difficulty": "easy",
+    "topic": "cancer",
+    "text": "What is cancer most directly associated with?",
+    "choices": [
+      "Loss of normal regulation of cell division",
+      "Increased photosynthesis",
+      "Permanent stopping of ATP production",
+      "Loss of all membrane proteins"
+    ],
+    "correct": 0,
+    "explain": "Cancer is associated with unregulated cell division caused by failures in normal control mechanisms.",
+    "choice_explanations": [
+      "Correct. Uncontrolled cell division is a defining feature of cancer.",
+      "Incorrect. Photosynthesis is unrelated.",
+      "Incorrect. ATP production may still occur in cancer cells.",
+      "Incorrect. That is not the main definition of cancer."
+    ]
+  },
+  {
+    "id": "u4-e-19",
+    "difficulty": "easy",
+    "topic": "apoptosis",
+    "text": "What is apoptosis?",
+    "choices": [
+      "Programmed cell death",
+      "Rapid ATP production",
+      "Replication of a chromosome",
+      "A receptor in the plasma membrane"
+    ],
+    "correct": 0,
+    "explain": "Apoptosis is a regulated process of programmed cell death.",
+    "choice_explanations": [
+      "Correct. Apoptosis is programmed cell death.",
+      "Incorrect. ATP production is not apoptosis.",
+      "Incorrect. Chromosome replication is unrelated.",
+      "Incorrect. Apoptosis is a process, not a receptor."
+    ]
+  },
+  {
+    "id": "u4-e-20",
+    "difficulty": "easy",
+    "topic": "feedback systems",
+    "text": "What is negative feedback?",
+    "choices": [
+      "A response that reduces the original stimulus",
+      "A response that increases the original stimulus",
+      "A signal that always kills the cell",
+      "A checkpoint in metaphase only"
+    ],
+    "correct": 0,
+    "explain": "Negative feedback reduces the initial stimulus and helps maintain stability.",
+    "choice_explanations": [
+      "Correct. Negative feedback opposes change.",
+      "Incorrect. That describes positive feedback.",
+      "Incorrect. Negative feedback does not always kill cells.",
+      "Incorrect. It is broader than metaphase."
+    ]
+  },
+  {
+    "id": "u4-h-1",
+    "difficulty": "hard",
+    "topic": "signaling specificity",
+    "text": "Why can the same signaling molecule produce different effects in different cell types?",
+    "choices": [
+      "Different cells may have different receptors or different internal signaling pathways",
+      "The signaling molecule changes its chemical formula in each cell",
+      "All cells respond identically to any ligand",
+      "Only neurons can produce different responses"
+    ],
+    "correct": 0,
+    "explain": "Different receptor types and signaling proteins can cause the same ligand to trigger different responses in different cells.",
+    "choice_explanations": [
+      "Correct. Receptors and downstream pathways determine the cellular response.",
+      "Incorrect. The ligand does not need to change formula.",
+      "Incorrect. Different cells can respond differently.",
+      "Incorrect. This is not limited to neurons."
+    ]
+  },
+  {
+    "id": "u4-h-2",
+    "difficulty": "hard",
+    "topic": "receptor-ligand binding",
+    "text": "A mutation changes the shape of a receptor’s ligand-binding site. Which outcome is most likely?",
+    "choices": [
+      "The receptor may no longer bind the signal effectively, reducing the response",
+      "The receptor will automatically become a DNA polymerase",
+      "The ligand will become a membrane phospholipid",
+      "All signaling in the cell will stop permanently"
+    ],
+    "correct": 0,
+    "explain": "Changing the binding site can reduce or prevent ligand binding, which weakens signaling.",
+    "choice_explanations": [
+      "Correct. Binding-site shape is crucial for signaling specificity.",
+      "Incorrect. Receptor mutations do not turn them into DNA polymerases.",
+      "Incorrect. The ligand does not become a phospholipid.",
+      "Incorrect. One receptor mutation does not necessarily stop all signaling."
+    ]
+  },
+  {
+    "id": "u4-h-3",
+    "difficulty": "hard",
+    "topic": "signal amplification",
+    "text": "Why can one signaling molecule sometimes trigger a large cellular response?",
+    "choices": [
+      "Signal transduction pathways can amplify the signal through multiple downstream molecules",
+      "The ligand becomes ATP and powers every enzyme directly",
+      "The receptor always divides into many receptors immediately",
+      "The cell cycle stops completely"
+    ],
+    "correct": 0,
+    "explain": "A signaling cascade can amplify a small initial signal into a much larger response.",
+    "choice_explanations": [
+      "Correct. Amplification is a key feature of many signaling pathways.",
+      "Incorrect. Ligands do not simply become ATP.",
+      "Incorrect. Receptors do not necessarily divide this way.",
+      "Incorrect. Signal amplification is not the same as stopping the cell cycle."
+    ]
+  },
+  {
+    "id": "u4-h-4",
+    "difficulty": "hard",
+    "topic": "intracellular receptors",
+    "text": "Why do steroid hormones often use intracellular receptors instead of membrane receptors?",
+    "choices": [
+      "They are nonpolar enough to cross the plasma membrane",
+      "They are too large to approach the membrane",
+      "They are made of nucleic acids",
+      "They can function only during mitosis"
+    ],
+    "correct": 0,
+    "explain": "Steroid hormones are often nonpolar and can diffuse through the plasma membrane to bind intracellular receptors.",
+    "choice_explanations": [
+      "Correct. Membrane permeability allows them to bind receptors inside the cell.",
+      "Incorrect. Steroid hormones are not too large to approach the membrane.",
+      "Incorrect. Steroid hormones are lipids, not nucleic acids.",
+      "Incorrect. Their function is not limited to mitosis."
+    ]
+  },
+  {
+    "id": "u4-h-5",
+    "difficulty": "hard",
+    "topic": "second messengers",
+    "text": "Why are second messengers useful in signal transduction?",
+    "choices": [
+      "They can rapidly relay and amplify signals inside the cell",
+      "They replace all membrane receptors",
+      "They are chromosomes used in S phase",
+      "They remove the need for enzymes in pathways"
+    ],
+    "correct": 0,
+    "explain": "Second messengers transmit signals quickly and can amplify the effects of receptor activation.",
+    "choice_explanations": [
+      "Correct. They are key intracellular signaling intermediates.",
+      "Incorrect. They do not replace membrane receptors.",
+      "Incorrect. Second messengers are not chromosomes.",
+      "Incorrect. Enzymes are still involved."
+    ]
+  },
+  {
+    "id": "u4-h-6",
+    "difficulty": "hard",
+    "topic": "phosphorylation cascades",
+    "text": "Why can phosphorylation cascades be effective in signal transduction?",
+    "choices": [
+      "Each activated protein kinase can activate additional target proteins, amplifying the signal",
+      "Phosphorylation permanently destroys proteins",
+      "They occur only in dead cells",
+      "They replace the need for receptors"
+    ],
+    "correct": 0,
+    "explain": "Protein kinases can activate multiple downstream targets, creating signal amplification.",
+    "choice_explanations": [
+      "Correct. Cascades amplify and relay cellular signals.",
+      "Incorrect. Phosphorylation is usually regulatory, not necessarily destructive.",
+      "Incorrect. Signaling cascades occur in living cells.",
+      "Incorrect. Receptors are still needed to begin the pathway."
+    ]
+  },
+  {
+    "id": "u4-h-7",
+    "difficulty": "hard",
+    "topic": "gene expression response",
+    "text": "A signal causes a transcription factor to become active and enter the nucleus. Which outcome is most likely?",
+    "choices": [
+      "Gene expression may change in response to the signal",
+      "The cell will immediately undergo cytokinesis",
+      "The plasma membrane will dissolve",
+      "ATP synthesis will stop permanently"
+    ],
+    "correct": 0,
+    "explain": "Activated transcription factors can alter which genes are expressed, changing cell behavior.",
+    "choice_explanations": [
+      "Correct. This is a common long-term cellular response to signaling.",
+      "Incorrect. Cytokinesis is not the immediate universal result.",
+      "Incorrect. The plasma membrane does not dissolve.",
+      "Incorrect. ATP synthesis would not necessarily stop."
+    ]
+  },
+  {
+    "id": "u4-h-8",
+    "difficulty": "hard",
+    "topic": "cell cycle regulation",
+    "text": "Why is the G1 checkpoint especially important?",
+    "choices": [
+      "It helps determine whether the cell is large enough and conditions are favorable before DNA replication",
+      "It separates sister chromatids",
+      "It carries out cytokinesis",
+      "It produces spindle fibers directly"
+    ],
+    "correct": 0,
+    "explain": "The G1 checkpoint helps decide whether the cell should enter S phase and commit to division.",
+    "choice_explanations": [
+      "Correct. This checkpoint helps prevent inappropriate progression into DNA replication.",
+      "Incorrect. Sister chromatids separate later in mitosis.",
+      "Incorrect. Cytokinesis is a later event.",
+      "Incorrect. Spindle fibers are associated with mitosis, not the G1 checkpoint directly."
+    ]
+  },
+  {
+    "id": "u4-h-9",
+    "difficulty": "hard",
+    "topic": "G2 checkpoint",
+    "text": "What is the main purpose of the G2 checkpoint?",
+    "choices": [
+      "To verify that DNA replication has been completed correctly before mitosis",
+      "To allow crossing over",
+      "To ensure carbon fixation is complete",
+      "To regenerate NAD+"
+    ],
+    "correct": 0,
+    "explain": "The G2 checkpoint helps ensure DNA has been replicated properly and the cell is ready for mitosis.",
+    "choice_explanations": [
+      "Correct. This checkpoint helps prevent cells with incomplete or damaged replicated DNA from entering mitosis.",
+      "Incorrect. Crossing over occurs in meiosis, not here.",
+      "Incorrect. Carbon fixation is photosynthesis-related.",
+      "Incorrect. NAD+ regeneration is part of metabolism, not the G2 checkpoint."
+    ]
+  },
+  {
+    "id": "u4-h-10",
+    "difficulty": "hard",
+    "topic": "M checkpoint",
+    "text": "Why is the M checkpoint important?",
+    "choices": [
+      "It helps ensure chromosomes are properly attached to the spindle before separation",
+      "It checks whether glucose is present in the cytosol",
+      "It activates the Calvin cycle",
+      "It confirms that DNA has not been transcribed"
+    ],
+    "correct": 0,
+    "explain": "The M checkpoint helps prevent chromosome mis-segregation by ensuring proper spindle attachment.",
+    "choice_explanations": [
+      "Correct. Proper spindle attachment is essential before chromosome separation.",
+      "Incorrect. Glucose presence is not the main focus of the M checkpoint.",
+      "Incorrect. The Calvin cycle is unrelated.",
+      "Incorrect. This is not the checkpoint’s role."
+    ]
+  },
+  {
+    "id": "u4-h-11",
+    "difficulty": "hard",
+    "topic": "cyclins and CDKs",
+    "text": "Why do cyclins help regulate cell-cycle timing effectively?",
+    "choices": [
+      "Their concentrations rise and fall, activating cyclin-dependent kinases at specific times",
+      "They permanently stop all cell division",
+      "They directly replicate DNA by themselves",
+      "They replace chromosomes during mitosis"
+    ],
+    "correct": 0,
+    "explain": "Cyclin levels change during the cycle, which helps activate CDKs only at the appropriate times.",
+    "choice_explanations": [
+      "Correct. Oscillating cyclin levels are central to cell-cycle control.",
+      "Incorrect. Cyclins regulate rather than permanently stop division.",
+      "Incorrect. Cyclins do not replicate DNA by themselves.",
+      "Incorrect. They do not replace chromosomes."
+    ]
+  },
+  {
+    "id": "u4-h-12",
+    "difficulty": "hard",
+    "topic": "tumor suppressors",
+    "text": "What is the general role of tumor suppressor genes?",
+    "choices": [
+      "To help restrain inappropriate cell division or promote repair/apoptosis",
+      "To speed up the cell cycle no matter what",
+      "To produce signaling hormones only",
+      "To increase chromosome number"
+    ],
+    "correct": 0,
+    "explain": "Tumor suppressor genes help prevent uncontrolled division by slowing the cycle, supporting repair, or promoting apoptosis.",
+    "choice_explanations": [
+      "Correct. Tumor suppressors act as safeguards against uncontrolled growth.",
+      "Incorrect. That is closer to the effect of certain oncogenic changes.",
+      "Incorrect. Tumor suppressors are not limited to hormone production.",
+      "Incorrect. They do not increase chromosome number."
+    ]
+  },
+  {
+    "id": "u4-h-13",
+    "difficulty": "hard",
+    "topic": "proto-oncogenes and oncogenes",
+    "text": "How can a proto-oncogene contribute to cancer?",
+    "choices": [
+      "A mutation can convert it into an oncogene that promotes excessive cell division",
+      "It always prevents mitosis completely",
+      "It destroys all ATP in the cell",
+      "It causes immediate apoptosis in every cell"
+    ],
+    "correct": 0,
+    "explain": "Proto-oncogenes normally help regulate growth, but mutation can convert them into overactive oncogenes.",
+    "choice_explanations": [
+      "Correct. This is a major route to cancer development.",
+      "Incorrect. Proto-oncogenes do not always stop mitosis.",
+      "Incorrect. They do not destroy all ATP.",
+      "Incorrect. They do not universally trigger apoptosis."
+    ]
+  },
+  {
+    "id": "u4-h-14",
+    "difficulty": "hard",
+    "topic": "apoptosis",
+    "text": "Why can failure of apoptosis contribute to cancer?",
+    "choices": [
+      "Damaged or abnormal cells that should die may survive and continue dividing",
+      "Cells lose all ribosomes",
+      "The plasma membrane becomes impermeable to oxygen",
+      "The cell wall becomes too rigid"
+    ],
+    "correct": 0,
+    "explain": "If apoptosis fails, defective cells may persist and accumulate mutations, increasing cancer risk.",
+    "choice_explanations": [
+      "Correct. Programmed cell death helps eliminate potentially dangerous cells.",
+      "Incorrect. Loss of ribosomes is not the core issue here.",
+      "Incorrect. Oxygen permeability is not the main connection.",
+      "Incorrect. Most animal cancer contexts do not involve cell walls."
+    ]
+  },
+  {
+    "id": "u4-h-15",
+    "difficulty": "hard",
+    "topic": "positive feedback",
+    "text": "How does positive feedback differ from negative feedback?",
+    "choices": [
+      "Positive feedback amplifies an initial change, while negative feedback reduces it",
+      "Positive feedback always stops all signaling",
+      "Negative feedback only occurs in plants",
+      "Positive feedback is never useful in biology"
+    ],
+    "correct": 0,
+    "explain": "Positive feedback reinforces a change, whereas negative feedback counteracts a change.",
+    "choice_explanations": [
+      "Correct. This is the essential difference between the two.",
+      "Incorrect. Positive feedback amplifies rather than always stopping signaling.",
+      "Incorrect. Negative feedback occurs broadly across biology.",
+      "Incorrect. Positive feedback is useful in some biological processes."
+    ]
+  },
+  {
+    "id": "u4-h-16",
+    "difficulty": "hard",
+    "topic": "cell cycle and chromosome behavior",
+    "text": "Why must DNA replication occur before mitosis?",
+    "choices": [
+      "So each daughter nucleus receives a full set of chromosomes",
+      "So ATP synthase can form properly",
+      "So the Calvin cycle can begin",
+      "So cytokinesis can be skipped"
+    ],
+    "correct": 0,
+    "explain": "DNA must be replicated so mitosis can distribute identical chromosome sets to daughter nuclei.",
+    "choice_explanations": [
+      "Correct. Replication is required for equal genetic distribution.",
+      "Incorrect. ATP synthase is unrelated.",
+      "Incorrect. The Calvin cycle is unrelated.",
+      "Incorrect. Cytokinesis is not skipped for this reason."
+    ]
+  },
+  {
+    "id": "u4-h-17",
+    "difficulty": "hard",
+    "topic": "mitosis stages",
+    "text": "What is the main event of metaphase in mitosis?",
+    "choices": [
+      "Chromosomes align at the cell’s middle attached to spindle fibers",
+      "DNA is replicated",
+      "The nuclear envelope first reforms",
+      "The cell plate forms in plants"
+    ],
+    "correct": 0,
+    "explain": "In metaphase, chromosomes line up at the metaphase plate before separation.",
+    "choice_explanations": [
+      "Correct. Metaphase is defined by chromosome alignment.",
+      "Incorrect. DNA replication happens in S phase.",
+      "Incorrect. Nuclear envelope re-formation is later, in telophase.",
+      "Incorrect. Cell plate formation is part of cytokinesis in plants."
+    ]
+  },
+  {
+    "id": "u4-h-18",
+    "difficulty": "hard",
+    "topic": "signal transduction and mutation",
+    "text": "A mutation causes a receptor to remain active even without its ligand. Which outcome is most likely?",
+    "choices": [
+      "The cell may continue signaling as if the signal were constantly present",
+      "The receptor will stop binding all molecules permanently",
+      "The cell can no longer perform transcription",
+      "The plasma membrane disappears"
+    ],
+    "correct": 0,
+    "explain": "A constitutively active receptor can trigger signaling pathways even in the absence of ligand.",
+    "choice_explanations": [
+      "Correct. Constant receptor activity can create persistent signaling.",
+      "Incorrect. Activity without ligand does not necessarily mean no binding ever occurs.",
+      "Incorrect. Transcription may continue and even be overactivated.",
+      "Incorrect. The membrane does not disappear."
+    ]
+  },
+  {
+    "id": "u4-h-19",
+    "difficulty": "hard",
+    "topic": "cell communication and specificity",
+    "text": "Why might one hormone affect liver cells but not nearby muscle cells, even if both are exposed to it?",
+    "choices": [
+      "The liver cells may express the appropriate receptor while the muscle cells do not",
+      "Hormones can reach only one tissue at a time",
+      "Muscle cells have no membranes",
+      "Only liver cells can perform signal transduction"
+    ],
+    "correct": 0,
+    "explain": "A cell responds to a hormone only if it has the appropriate receptor and signaling machinery.",
+    "choice_explanations": [
+      "Correct. Receptor presence determines target-cell responsiveness.",
+      "Incorrect. Hormones can often reach multiple tissues.",
+      "Incorrect. Muscle cells do have membranes.",
+      "Incorrect. Muscle cells can perform signal transduction."
+    ]
+  },
+  {
+    "id": "u4-h-20",
+    "difficulty": "hard",
+    "topic": "apoptosis and development",
+    "text": "Why can apoptosis be beneficial during normal development?",
+    "choices": [
+      "It helps remove unneeded cells in a controlled way",
+      "It permanently stops all cell signaling",
+      "It doubles chromosome number",
+      "It replaces mitosis in growing tissues"
+    ],
+    "correct": 0,
+    "explain": "Apoptosis is important in development because it removes unneeded or harmful cells in an organized manner.",
+    "choice_explanations": [
+      "Correct. Controlled cell removal is essential in many developmental processes.",
+      "Incorrect. Apoptosis does not permanently stop all signaling everywhere.",
+      "Incorrect. It does not double chromosome number.",
+      "Incorrect. Growth still depends on mitosis."
+    ]
+  },
+  {
+    "id": "u4-a-1",
+    "difficulty": "analysis",
+    "topic": "ligand-receptor signaling",
+    "text": "Researchers expose two cell types to the same hormone. Cell type A shows a strong response, while Cell type B shows little response. Both cell types are otherwise healthy. Which conclusion is best supported?",
+    "choices": [
+      "Cell type A likely has the appropriate receptor or signaling pathway, while Cell type B does not",
+      "The hormone changed chemical formula in Cell type B",
+      "Cell type B must be dead",
+      "Cell type A cannot perform transcription"
+    ],
+    "correct": 0,
+    "explain": "Different cell types respond differently to the same signal if they differ in receptor expression or downstream pathway components.",
+    "choice_explanations": [
+      "Correct. Target-cell response depends on receptor and signaling machinery.",
+      "Incorrect. There is no need to assume the hormone changed formula.",
+      "Incorrect. Cell type B is described as healthy.",
+      "Incorrect. A signaling response does not imply loss of transcription."
+    ],
+    "experiment": "Two different cell types were treated with the same hormone and their responses were compared."
+  },
+  {
+    "id": "u4-a-2",
+    "difficulty": "analysis",
+    "topic": "receptor mutation",
+    "text": "A mutation prevents a membrane receptor from changing shape after ligand binding. The ligand still binds normally, but no downstream response occurs. Which interpretation is best?",
+    "choices": [
+      "Signal reception occurs, but transduction is impaired",
+      "The ligand is no longer binding to the receptor",
+      "The cell has stopped mitosis permanently",
+      "ATP production has replaced signaling"
+    ],
+    "correct": 0,
+    "explain": "If binding still occurs but no response follows, the receptor likely cannot activate the downstream transduction pathway.",
+    "choice_explanations": [
+      "Correct. Reception is intact, but signaling onward is blocked.",
+      "Incorrect. The prompt states that ligand binding still occurs.",
+      "Incorrect. Cell-cycle status is not the direct point here.",
+      "Incorrect. ATP production does not replace signaling."
+    ],
+    "experiment": "A receptor mutant was tested for ligand binding and downstream cellular response."
+  },
+  {
+    "id": "u4-a-3",
+    "difficulty": "analysis",
+    "topic": "signal amplification",
+    "text": "A very low concentration of a signaling molecule still causes a strong cellular response. Which explanation is best supported?",
+    "choices": [
+      "The signaling pathway likely includes amplification steps",
+      "The receptor concentration must be zero",
+      "The ligand directly replicated DNA",
+      "The signal bypassed all proteins in the cell"
+    ],
+    "correct": 0,
+    "explain": "A small initial signal causing a large response suggests amplification in the signaling cascade.",
+    "choice_explanations": [
+      "Correct. Amplification is a common explanation for strong responses to small signals.",
+      "Incorrect. Zero receptor concentration would prevent response.",
+      "Incorrect. Ligands do not directly replicate DNA in this context.",
+      "Incorrect. Signaling usually involves proteins."
+    ],
+    "experiment": "Cells were exposed to extremely low ligand concentrations and still showed strong responses."
+  },
+  {
+    "id": "u4-a-4",
+    "difficulty": "analysis",
+    "topic": "second messengers",
+    "text": "Researchers add a signal molecule to cells and quickly observe a sharp rise in intracellular cAMP levels, followed by activation of downstream enzymes. Which conclusion is best supported?",
+    "choices": [
+      "cAMP is acting as a second messenger in this pathway",
+      "cAMP is the membrane receptor",
+      "The signal molecule is DNA",
+      "The cell has entered metaphase"
+    ],
+    "correct": 0,
+    "explain": "A rapid rise in cAMP after signal reception indicates it is relaying the signal inside the cell as a second messenger.",
+    "choice_explanations": [
+      "Correct. This is classic second-messenger behavior.",
+      "Incorrect. cAMP is not a membrane receptor.",
+      "Incorrect. The signal is not DNA here.",
+      "Incorrect. Metaphase is unrelated to cAMP’s role."
+    ],
+    "experiment": "Cells were treated with a signaling molecule, and intracellular cAMP and enzyme activity were measured."
+  },
+  {
+    "id": "u4-a-5",
+    "difficulty": "analysis",
+    "topic": "signaling pathways",
+    "text": "A drug blocks protein kinase activity in a signaling cascade. Ligand binding to the receptor still occurs, but target genes are no longer activated. Which interpretation is best?",
+    "choices": [
+      "The cascade is interrupted between receptor activation and the gene-expression response",
+      "The receptor can no longer bind the ligand",
+      "DNA replication has replaced transcription",
+      "The drug caused the ligand to become a phospholipid"
+    ],
+    "correct": 0,
+    "explain": "If ligand binding still happens but gene activation stops, the drug likely blocks signal transduction downstream of the receptor.",
+    "choice_explanations": [
+      "Correct. Protein kinase blockage interrupts signaling to gene expression.",
+      "Incorrect. Ligand binding is stated to still occur.",
+      "Incorrect. DNA replication does not replace transcription here.",
+      "Incorrect. The ligand does not become a phospholipid."
+    ],
+    "experiment": "A kinase inhibitor was added to cells, and receptor binding plus downstream gene activation were measured."
+  },
+  {
+    "id": "u4-a-6",
+    "difficulty": "analysis",
+    "topic": "G1 checkpoint",
+    "text": "Scientists treat cells with DNA-damaging radiation. Most cells stop before entering S phase. Which conclusion is best supported?",
+    "choices": [
+      "The G1 checkpoint is preventing damaged cells from replicating DNA",
+      "The M checkpoint is aligning chromosomes",
+      "The Calvin cycle has been activated",
+      "The cells are undergoing cytokinesis faster"
+    ],
+    "correct": 0,
+    "explain": "Stopping before S phase suggests checkpoint control is preventing replication of damaged DNA.",
+    "choice_explanations": [
+      "Correct. This is a classic function of the G1 checkpoint.",
+      "Incorrect. The M checkpoint acts later in mitosis.",
+      "Incorrect. The Calvin cycle is unrelated.",
+      "Incorrect. Cytokinesis is not the main event here."
+    ],
+    "experiment": "Cells were exposed to radiation and then monitored for where they paused in the cell cycle."
+  },
+  {
+    "id": "u4-a-7",
+    "difficulty": "analysis",
+    "topic": "M checkpoint",
+    "text": "A drug prevents spindle fibers from attaching properly to chromosomes. Cells accumulate in metaphase and fail to enter anaphase. Which interpretation is best?",
+    "choices": [
+      "The M checkpoint is blocking progression because chromosome attachment is incomplete",
+      "The G1 checkpoint is preventing DNA replication",
+      "Cyclins are no longer made at all",
+      "The cells have switched to photosynthesis"
+    ],
+    "correct": 0,
+    "explain": "If cells remain stuck in metaphase, the spindle checkpoint is likely preventing chromosome separation until attachment is correct.",
+    "choice_explanations": [
+      "Correct. Proper spindle attachment is required before anaphase.",
+      "Incorrect. G1 acts before S phase, not metaphase.",
+      "Incorrect. The data specifically indicate a spindle problem.",
+      "Incorrect. Photosynthesis is unrelated."
+    ],
+    "experiment": "Cells were exposed to a spindle-disrupting drug and observed for mitotic stage accumulation."
+  },
+  {
+    "id": "u4-a-8",
+    "difficulty": "analysis",
+    "topic": "cyclins",
+    "text": "Researchers measure cyclin concentration during the cell cycle and find that it rises before mitosis and then falls sharply afterward. Which conclusion is best supported?",
+    "choices": [
+      "Cyclin levels help regulate the timing of cell-cycle transitions",
+      "Cyclins are structural membrane lipids",
+      "Cyclins are permanent DNA molecules",
+      "Cyclins function only in apoptosis"
+    ],
+    "correct": 0,
+    "explain": "Changes in cyclin concentration across the cycle support their role as timing regulators.",
+    "choice_explanations": [
+      "Correct. Oscillating cyclin levels are central to cell-cycle control.",
+      "Incorrect. Cyclins are proteins, not lipids.",
+      "Incorrect. Cyclins are not DNA molecules.",
+      "Incorrect. Their main role is cell-cycle regulation."
+    ],
+    "experiment": "Cyclin protein levels were measured at multiple points in the cell cycle."
+  },
+  {
+    "id": "u4-a-9",
+    "difficulty": "analysis",
+    "topic": "tumor suppressors",
+    "text": "A cell line with a nonfunctional tumor suppressor gene continues dividing despite DNA damage that would normally halt the cycle. Which conclusion is best supported?",
+    "choices": [
+      "The missing tumor suppressor normally helps stop cell-cycle progression or trigger repair",
+      "Tumor suppressors increase ATP production only",
+      "DNA damage always improves cell division",
+      "The cell line can no longer perform transcription"
+    ],
+    "correct": 0,
+    "explain": "Tumor suppressor genes help prevent damaged cells from continuing through the cell cycle.",
+    "choice_explanations": [
+      "Correct. This is a key tumor suppressor function.",
+      "Incorrect. ATP production is not their main role.",
+      "Incorrect. DNA damage generally threatens genomic stability.",
+      "Incorrect. The main issue is cell-cycle control, not complete loss of transcription."
+    ],
+    "experiment": "Cells with and without a functional tumor suppressor gene were compared after DNA damage."
+  },
+  {
+    "id": "u4-a-10",
+    "difficulty": "analysis",
+    "topic": "oncogenes",
+    "text": "Researchers identify a mutation that causes a growth-signaling receptor to remain active all the time, even without a ligand. Cells with the mutation divide more often than normal. Which interpretation is best?",
+    "choices": [
+      "The mutation likely creates an oncogenic signaling effect that promotes excessive division",
+      "The receptor is now functioning as a lysosome",
+      "The cells have lost all cyclins",
+      "The mutation prevents all gene expression"
+    ],
+    "correct": 0,
+    "explain": "A receptor that signals continuously can drive excessive cell division, similar to oncogenic signaling.",
+    "choice_explanations": [
+      "Correct. Constitutive signaling can contribute to uncontrolled growth.",
+      "Incorrect. Receptors do not become lysosomes.",
+      "Incorrect. Increased division does not suggest loss of all cyclins.",
+      "Incorrect. Gene expression is not universally prevented here."
+    ],
+    "experiment": "Cells with a constitutively active receptor mutation were compared with normal cells for division rate."
+  },
+  {
+    "id": "u4-a-11",
+    "difficulty": "analysis",
+    "topic": "apoptosis",
+    "text": "A population of damaged cells survives much longer than expected because a key apoptosis protein is inactive. Which conclusion is best supported?",
+    "choices": [
+      "Apoptosis normally helps eliminate damaged cells that might otherwise persist",
+      "Apoptosis causes ATP to increase dramatically",
+      "Programmed cell death is unnecessary in healthy tissues",
+      "The inactive protein must be part of the cell wall"
+    ],
+    "correct": 0,
+    "explain": "If damaged cells survive when apoptosis is blocked, apoptosis normally acts to remove such cells.",
+    "choice_explanations": [
+      "Correct. Programmed cell death protects organisms by removing damaged cells.",
+      "Incorrect. ATP change is not the key conclusion here.",
+      "Incorrect. Apoptosis is important in both healthy development and tissue maintenance.",
+      "Incorrect. Cell walls are not the issue in typical apoptosis regulation."
+    ],
+    "experiment": "Damaged cells with active or inactive apoptosis pathways were compared for survival over time."
+  },
+  {
+    "id": "u4-a-12",
+    "difficulty": "analysis",
+    "topic": "positive feedback",
+    "text": "During a physiological process, an initial stimulus causes a response that strengthens the original stimulus, leading to a rapid increase in activity. Which type of feedback is this?",
+    "choices": [
+      "Positive feedback",
+      "Negative feedback",
+      "No feedback",
+      "Allosteric inhibition"
+    ],
+    "correct": 0,
+    "explain": "A response that reinforces the original change is positive feedback.",
+    "choice_explanations": [
+      "Correct. Positive feedback amplifies a change.",
+      "Incorrect. Negative feedback reduces a change.",
+      "Incorrect. The pattern clearly describes feedback.",
+      "Incorrect. Allosteric inhibition is enzyme regulation, not this type of system-wide response."
+    ],
+    "experiment": "The strength of a physiological response was measured after the initial stimulus caused further amplification of the same process."
+  },
+  {
+    "id": "u4-a-13",
+    "difficulty": "analysis",
+    "topic": "negative feedback",
+    "text": "A hormone increases blood glucose, and the rise in blood glucose triggers mechanisms that lower it back toward normal. Which conclusion is best supported?",
+    "choices": [
+      "This is a negative feedback system that helps maintain homeostasis",
+      "This is positive feedback because the response increases the stimulus",
+      "This process occurs only during mitosis",
+      "The hormone must be a membrane phospholipid"
+    ],
+    "correct": 0,
+    "explain": "A response that reverses the original change is negative feedback and helps stabilize internal conditions.",
+    "choice_explanations": [
+      "Correct. Negative feedback helps restore conditions toward a set point.",
+      "Incorrect. The response reduces, rather than increases, the original stimulus.",
+      "Incorrect. This is not limited to mitosis.",
+      "Incorrect. Hormones are not identified as phospholipids here."
+    ],
+    "experiment": "Blood glucose was monitored before and after hormone release and the resulting corrective responses."
+  },
+  {
+    "id": "u4-a-14",
+    "difficulty": "analysis",
+    "topic": "mitosis timing",
+    "text": "Cells are labeled so replicated chromosomes can be tracked. Scientists observe that sister chromatids remain joined through metaphase and separate only afterward. Which stage transition is being observed?",
+    "choices": [
+      "Metaphase to anaphase",
+      "G1 to S phase",
+      "Telophase to cytokinesis",
+      "Prophase to metaphase only"
+    ],
+    "correct": 0,
+    "explain": "The key transition marked by sister chromatid separation is metaphase to anaphase.",
+    "choice_explanations": [
+      "Correct. Sister chromatids separate at the start of anaphase.",
+      "Incorrect. That transition is earlier in the cell cycle.",
+      "Incorrect. That occurs much later.",
+      "Incorrect. Chromatid separation does not occur during prophase to metaphase."
+    ],
+    "experiment": "Labeled chromosomes were tracked during mitosis to determine when sister chromatids separate."
+  },
+  {
+    "id": "u4-a-15",
+    "difficulty": "analysis",
+    "topic": "signal transduction and gene expression",
+    "text": "A signaling molecule activates a receptor, then a cascade of phosphorylations occurs, and several genes become more highly expressed. Which conclusion is best supported?",
+    "choices": [
+      "The signal pathway links extracellular reception to changes in gene expression",
+      "The signaling molecule directly replicated the DNA",
+      "Phosphorylation always destroys proteins",
+      "Gene expression cannot be regulated by signals outside the cell"
+    ],
+    "correct": 0,
+    "explain": "The pathway shows how an extracellular signal can be transduced into altered gene expression.",
+    "choice_explanations": [
+      "Correct. This is a common result of signal transduction.",
+      "Incorrect. The molecule did not directly replicate DNA.",
+      "Incorrect. Phosphorylation is often regulatory rather than destructive.",
+      "Incorrect. External signals often regulate gene expression."
+    ],
+    "experiment": "Cells were exposed to a signaling molecule, and receptor activation, phosphorylation events, and gene expression were measured."
+  },
+  {
+    "id": "u4-a-16",
+    "difficulty": "analysis",
+    "topic": "cell cycle and cancer",
+    "text": "A tissue sample shows many cells stuck in mitosis after treatment with a spindle poison. In untreated cancer cells from the same tissue, division is much more frequent than in normal tissue. Which conclusion is best supported?",
+    "choices": [
+      "Cancer cells have lost some normal division control, and spindle disruption can arrest them during mitosis",
+      "Cancer cells do not use cyclins",
+      "Normal tissue cannot perform mitosis",
+      "Spindle poisons increase ATP production to stop division"
+    ],
+    "correct": 0,
+    "explain": "Frequent division suggests loss of normal regulation, and spindle poisons can arrest dividing cells by disrupting mitosis.",
+    "choice_explanations": [
+      "Correct. This fits both the cancer behavior and the effect of spindle disruption.",
+      "Incorrect. Cancer cells still use cell-cycle proteins, though regulation is altered.",
+      "Incorrect. Normal tissue can undergo mitosis.",
+      "Incorrect. ATP production is not the best explanation."
+    ],
+    "experiment": "Cancerous and normal tissue samples were compared before and after treatment with a spindle-disrupting drug."
+  },
+  {
+    "id": "u4-a-17",
+    "difficulty": "analysis",
+    "topic": "paracrine signaling",
+    "text": "A group of cells releases a signaling molecule that affects only nearby cells and is quickly broken down before traveling far. Which type of signaling is best supported?",
+    "choices": [
+      "Paracrine signaling",
+      "Endocrine signaling",
+      "Autocrine signaling only",
+      "Direct DNA transfer"
+    ],
+    "correct": 0,
+    "explain": "A short-lived signal affecting nearby cells is characteristic of paracrine signaling.",
+    "choice_explanations": [
+      "Correct. Paracrine signaling acts locally.",
+      "Incorrect. Endocrine signaling acts over long distances.",
+      "Incorrect. Autocrine signaling refers specifically to signaling back to the same cell.",
+      "Incorrect. DNA transfer is unrelated."
+    ],
+    "experiment": "Researchers tracked the range and persistence of a released signaling molecule in a tissue."
+  },
+  {
+    "id": "u4-a-18",
+    "difficulty": "analysis",
+    "topic": "intracellular receptors",
+    "text": "A small hydrophobic hormone enters a cell and later a new set of proteins begins to be produced. Which conclusion is best supported?",
+    "choices": [
+      "The hormone likely bound an intracellular receptor that affected gene expression",
+      "The hormone was trapped outside the membrane",
+      "The hormone directly formed ribosomes",
+      "The cell skipped interphase"
+    ],
+    "correct": 0,
+    "explain": "A hydrophobic signal that enters the cell and changes protein production likely acts through an intracellular receptor influencing transcription.",
+    "choice_explanations": [
+      "Correct. This is a common steroid-hormone signaling pattern.",
+      "Incorrect. The prompt states the hormone entered the cell.",
+      "Incorrect. Hormones do not directly form ribosomes.",
+      "Incorrect. Interphase is unrelated to this result."
+    ],
+    "experiment": "Cells were exposed to a small hydrophobic hormone, and later changes in protein production were measured."
+  },
+  {
+    "id": "u4-a-19",
+    "difficulty": "analysis",
+    "topic": "direct contact signaling",
+    "text": "In a tissue, signaling occurs only when neighboring cells physically touch one another. Separating the cells prevents the response. Which conclusion is best supported?",
+    "choices": [
+      "The response likely depends on direct contact signaling",
+      "The signal must be endocrine",
+      "The signal must be autocrine only",
+      "The response depends on glycolysis"
+    ],
+    "correct": 0,
+    "explain": "A response that requires physical contact between adjacent cells suggests direct contact signaling.",
+    "choice_explanations": [
+      "Correct. Physical contact is the defining clue here.",
+      "Incorrect. Endocrine signals act over long distances.",
+      "Incorrect. Autocrine signaling refers to self-signaling.",
+      "Incorrect. Glycolysis is unrelated."
+    ],
+    "experiment": "Neighboring cells were tested for a response with and without physical contact."
+  },
+  {
+    "id": "u4-a-20",
+    "difficulty": "analysis",
+    "topic": "checkpoint failure",
+    "text": "A mutant cell proceeds into S phase even when severe DNA damage is present. Later, the cell accumulates many additional mutations. Which conclusion is best supported?",
+    "choices": [
+      "Failure of checkpoint control can allow damaged DNA to be replicated, increasing mutation accumulation",
+      "DNA damage improves replication accuracy",
+      "The cell has switched to the Calvin cycle",
+      "All signaling pathways are working normally"
+    ],
+    "correct": 0,
+    "explain": "If damaged DNA is allowed into S phase, replication can copy errors and increase mutation load.",
+    "choice_explanations": [
+      "Correct. This is a key consequence of checkpoint failure.",
+      "Incorrect. DNA damage usually threatens replication accuracy.",
+      "Incorrect. The Calvin cycle is unrelated.",
+      "Incorrect. Normal signaling would not usually permit this."
+    ],
+    "experiment": "Mutant cells with defective checkpoint control were monitored after DNA damage and during later replication."
+  }
+]

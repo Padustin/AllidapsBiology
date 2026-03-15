@@ -1,0 +1,1422 @@
+[
+  {
+    "id": "u3-e-1",
+    "difficulty": "easy",
+    "topic": "enzymes",
+    "text": "What is the main function of an enzyme?",
+    "choices": [
+      "To permanently raise activation energy",
+      "To speed up chemical reactions by lowering activation energy",
+      "To store genetic information",
+      "To form cell membranes"
+    ],
+    "correct": 1,
+    "explain": "Enzymes are biological catalysts that speed reactions by lowering activation energy.",
+    "choice_explanations": [
+      "Incorrect. Enzymes lower activation energy, not raise it.",
+      "Correct. This is the defining function of an enzyme.",
+      "Incorrect. Nucleic acids store genetic information.",
+      "Incorrect. Membranes are mainly formed by phospholipids."
+    ]
+  },
+  {
+    "id": "u3-e-2",
+    "difficulty": "easy",
+    "topic": "activation energy",
+    "text": "What is activation energy?",
+    "choices": [
+      "The energy stored in ATP only",
+      "The minimum energy required to start a reaction",
+      "The total energy released by photosynthesis",
+      "The energy found only in glucose"
+    ],
+    "correct": 1,
+    "explain": "Activation energy is the minimum energy needed for reactants to begin a chemical reaction.",
+    "choice_explanations": [
+      "Incorrect. Activation energy is not limited to ATP.",
+      "Correct. That is the definition of activation energy.",
+      "Incorrect. That refers to energy changes in a larger process, not activation energy.",
+      "Incorrect. Activation energy is not specific to glucose."
+    ]
+  },
+  {
+    "id": "u3-e-3",
+    "difficulty": "easy",
+    "topic": "substrates",
+    "text": "What is a substrate?",
+    "choices": [
+      "The reactant an enzyme acts on",
+      "The organelle that makes ATP",
+      "A type of membrane protein",
+      "The final product of glycolysis"
+    ],
+    "correct": 0,
+    "explain": "A substrate is the specific reactant that binds to an enzyme’s active site.",
+    "choice_explanations": [
+      "Correct. Substrates bind to enzymes and are changed into products.",
+      "Incorrect. That would describe an organelle such as the mitochondrion.",
+      "Incorrect. A substrate is not a membrane protein.",
+      "Incorrect. Glycolysis produces multiple products, but that is not the definition of substrate."
+    ]
+  },
+  {
+    "id": "u3-e-4",
+    "difficulty": "easy",
+    "topic": "active site",
+    "text": "What is the active site of an enzyme?",
+    "choices": [
+      "The part of the enzyme where the substrate binds",
+      "The region of DNA that codes for ATP",
+      "The membrane around the mitochondrion",
+      "The place where oxygen is produced in respiration"
+    ],
+    "correct": 0,
+    "explain": "The active site is the region of the enzyme where substrates bind and the reaction is catalyzed.",
+    "choice_explanations": [
+      "Correct. The active site is central to enzyme specificity.",
+      "Incorrect. DNA does not have enzyme active sites.",
+      "Incorrect. That is a membrane structure, not an enzyme feature.",
+      "Incorrect. Oxygen production is associated with photosynthesis, not enzyme active sites generally."
+    ]
+  },
+  {
+    "id": "u3-e-5",
+    "difficulty": "easy",
+    "topic": "ATP",
+    "text": "What is ATP mainly used for in cells?",
+    "choices": [
+      "Long-term storage of genetic information",
+      "Immediate transfer of usable energy",
+      "Building the cell wall in plants only",
+      "Carrying oxygen in blood"
+    ],
+    "correct": 1,
+    "explain": "ATP is the cell’s main short-term energy carrier used to power many cellular processes.",
+    "choice_explanations": [
+      "Incorrect. DNA stores genetic information.",
+      "Correct. ATP provides immediate usable energy for cells.",
+      "Incorrect. ATP is used in many cells, not only for plant cell walls.",
+      "Incorrect. Oxygen transport is mainly performed by hemoglobin in animals."
+    ]
+  },
+  {
+    "id": "u3-e-6",
+    "difficulty": "easy",
+    "topic": "exergonic reactions",
+    "text": "What happens in an exergonic reaction?",
+    "choices": [
+      "Energy is absorbed overall",
+      "Energy is released overall",
+      "No energy changes occur",
+      "ATP is always destroyed completely"
+    ],
+    "correct": 1,
+    "explain": "Exergonic reactions release free energy overall.",
+    "choice_explanations": [
+      "Incorrect. That describes an endergonic process.",
+      "Correct. Exergonic reactions release energy.",
+      "Incorrect. Chemical reactions involve energy changes.",
+      "Incorrect. ATP is not necessarily involved in every exergonic reaction."
+    ]
+  },
+  {
+    "id": "u3-e-7",
+    "difficulty": "easy",
+    "topic": "endergonic reactions",
+    "text": "What happens in an endergonic reaction?",
+    "choices": [
+      "Energy is released overall",
+      "Energy is absorbed overall",
+      "The reaction no longer needs enzymes",
+      "The reaction can only occur in plants"
+    ],
+    "correct": 1,
+    "explain": "Endergonic reactions require an input of energy overall.",
+    "choice_explanations": [
+      "Incorrect. That describes an exergonic reaction.",
+      "Correct. Endergonic reactions absorb free energy.",
+      "Incorrect. Enzymes may still be needed.",
+      "Incorrect. Endergonic reactions occur in many kinds of cells."
+    ]
+  },
+  {
+    "id": "u3-e-8",
+    "difficulty": "easy",
+    "topic": "cellular respiration",
+    "text": "What is the main purpose of cellular respiration?",
+    "choices": [
+      "To make proteins from amino acids",
+      "To harvest energy from food molecules and produce ATP",
+      "To copy DNA before cell division",
+      "To build phospholipid membranes"
+    ],
+    "correct": 1,
+    "explain": "Cellular respiration breaks down food molecules to capture energy in ATP.",
+    "choice_explanations": [
+      "Incorrect. Protein synthesis is translation.",
+      "Correct. Cellular respiration’s main role is ATP production from food molecules.",
+      "Incorrect. DNA replication is a separate process.",
+      "Incorrect. Membrane synthesis is not the main purpose of respiration."
+    ]
+  },
+  {
+    "id": "u3-e-9",
+    "difficulty": "easy",
+    "topic": "glycolysis",
+    "text": "Where does glycolysis occur in eukaryotic cells?",
+    "choices": [
+      "Nucleus",
+      "Cytosol",
+      "Golgi apparatus",
+      "Lysosome"
+    ],
+    "correct": 1,
+    "explain": "Glycolysis occurs in the cytosol, outside the mitochondrion.",
+    "choice_explanations": [
+      "Incorrect. Glycolysis does not occur in the nucleus.",
+      "Correct. Glycolysis takes place in the cytosol.",
+      "Incorrect. The Golgi apparatus does not perform glycolysis.",
+      "Incorrect. Lysosomes are digestive organelles."
+    ]
+  },
+  {
+    "id": "u3-e-10",
+    "difficulty": "easy",
+    "topic": "mitochondria",
+    "text": "Where does the Krebs cycle occur in eukaryotic cells?",
+    "choices": [
+      "Mitochondrial matrix",
+      "Cytosol",
+      "Rough ER",
+      "Cell membrane"
+    ],
+    "correct": 0,
+    "explain": "The Krebs cycle occurs in the mitochondrial matrix in eukaryotes.",
+    "choice_explanations": [
+      "Correct. The Krebs cycle is located in the mitochondrial matrix.",
+      "Incorrect. Glycolysis, not the Krebs cycle, occurs in the cytosol.",
+      "Incorrect. Rough ER is involved in protein processing.",
+      "Incorrect. The Krebs cycle does not occur at the cell membrane in eukaryotes."
+    ]
+  },
+  {
+    "id": "u3-e-11",
+    "difficulty": "easy",
+    "topic": "electron transport chain",
+    "text": "Where is the electron transport chain located in eukaryotic cellular respiration?",
+    "choices": [
+      "Inner mitochondrial membrane",
+      "Nuclear envelope",
+      "Ribosome",
+      "Cell wall"
+    ],
+    "correct": 0,
+    "explain": "The electron transport chain is embedded in the inner mitochondrial membrane.",
+    "choice_explanations": [
+      "Correct. This location is essential for chemiosmosis.",
+      "Incorrect. The nuclear envelope is not the site of the ETC.",
+      "Incorrect. Ribosomes make proteins.",
+      "Incorrect. Animal cells do not have cell walls, and ETC is not there."
+    ]
+  },
+  {
+    "id": "u3-e-12",
+    "difficulty": "easy",
+    "topic": "oxygen in respiration",
+    "text": "What is the role of oxygen in aerobic respiration?",
+    "choices": [
+      "It is the final electron acceptor in the electron transport chain",
+      "It is used to split glucose in glycolysis",
+      "It powers ATP synthase directly as a fuel",
+      "It acts as the substrate for the Krebs cycle"
+    ],
+    "correct": 0,
+    "explain": "Oxygen serves as the final electron acceptor, allowing the electron transport chain to continue functioning.",
+    "choice_explanations": [
+      "Correct. Oxygen accepts electrons at the end of the ETC.",
+      "Incorrect. Glycolysis does not directly use oxygen to split glucose.",
+      "Incorrect. ATP synthase is powered by a proton gradient, not oxygen directly.",
+      "Incorrect. Oxygen is not the substrate for the Krebs cycle."
+    ]
+  },
+  {
+    "id": "u3-e-13",
+    "difficulty": "easy",
+    "topic": "fermentation",
+    "text": "What is the main purpose of fermentation?",
+    "choices": [
+      "To regenerate NAD+ so glycolysis can continue without oxygen",
+      "To produce the most ATP possible",
+      "To split water in the thylakoid",
+      "To move glucose into the mitochondrion"
+    ],
+    "correct": 0,
+    "explain": "Fermentation regenerates NAD+ when oxygen is unavailable, allowing glycolysis to continue.",
+    "choice_explanations": [
+      "Correct. That is the key purpose of fermentation.",
+      "Incorrect. Fermentation produces much less ATP than aerobic respiration.",
+      "Incorrect. Splitting water happens in photosynthesis.",
+      "Incorrect. Fermentation does not move glucose into mitochondria."
+    ]
+  },
+  {
+    "id": "u3-e-14",
+    "difficulty": "easy",
+    "topic": "photosynthesis",
+    "text": "What is the main purpose of photosynthesis?",
+    "choices": [
+      "To convert light energy into chemical energy stored in sugars",
+      "To break down glucose into ATP",
+      "To digest proteins",
+      "To copy DNA"
+    ],
+    "correct": 0,
+    "explain": "Photosynthesis captures light energy and stores it as chemical energy in carbohydrates.",
+    "choice_explanations": [
+      "Correct. Photosynthesis converts light energy into chemical energy.",
+      "Incorrect. Breaking down glucose is part of respiration.",
+      "Incorrect. Protein digestion is unrelated.",
+      "Incorrect. DNA replication is not photosynthesis."
+    ]
+  },
+  {
+    "id": "u3-e-15",
+    "difficulty": "easy",
+    "topic": "chloroplast structure",
+    "text": "Where do the light-dependent reactions of photosynthesis occur?",
+    "choices": [
+      "Thylakoid membranes",
+      "Stroma only",
+      "Mitochondrial matrix",
+      "Cytosol"
+    ],
+    "correct": 0,
+    "explain": "The light-dependent reactions take place in the thylakoid membranes of chloroplasts.",
+    "choice_explanations": [
+      "Correct. The thylakoid membrane is the site of the light reactions.",
+      "Incorrect. The Calvin cycle occurs in the stroma.",
+      "Incorrect. The mitochondrial matrix is part of respiration, not photosynthesis.",
+      "Incorrect. Photosynthesis does not occur in the cytosol."
+    ]
+  },
+  {
+    "id": "u3-e-16",
+    "difficulty": "easy",
+    "topic": "Calvin cycle",
+    "text": "Where does the Calvin cycle occur?",
+    "choices": [
+      "Stroma of the chloroplast",
+      "Inner mitochondrial membrane",
+      "Cytosol",
+      "Lysosome"
+    ],
+    "correct": 0,
+    "explain": "The Calvin cycle takes place in the stroma of chloroplasts.",
+    "choice_explanations": [
+      "Correct. The stroma is the site of carbon fixation and sugar-building reactions.",
+      "Incorrect. The inner mitochondrial membrane is part of respiration.",
+      "Incorrect. The Calvin cycle is not in the cytosol.",
+      "Incorrect. Lysosomes do not perform the Calvin cycle."
+    ]
+  },
+  {
+    "id": "u3-e-17",
+    "difficulty": "easy",
+    "topic": "NADH and FADH2",
+    "text": "What do NADH and FADH2 mainly do in cellular respiration?",
+    "choices": [
+      "Carry high-energy electrons to the electron transport chain",
+      "Store DNA information",
+      "Build phospholipids",
+      "Break down ATP"
+    ],
+    "correct": 0,
+    "explain": "NADH and FADH2 carry high-energy electrons to the electron transport chain.",
+    "choice_explanations": [
+      "Correct. They act as electron carriers.",
+      "Incorrect. DNA stores information.",
+      "Incorrect. They are not used to build phospholipids.",
+      "Incorrect. They do not mainly break down ATP."
+    ]
+  },
+  {
+    "id": "u3-e-18",
+    "difficulty": "easy",
+    "topic": "ATP synthase",
+    "text": "What does ATP synthase do?",
+    "choices": [
+      "Uses a proton gradient to help produce ATP",
+      "Copies DNA into RNA",
+      "Breaks glucose into pyruvate",
+      "Splits water into oxygen"
+    ],
+    "correct": 0,
+    "explain": "ATP synthase uses the energy of proton flow down a gradient to make ATP.",
+    "choice_explanations": [
+      "Correct. ATP synthase converts proton gradient energy into ATP.",
+      "Incorrect. That is transcription.",
+      "Incorrect. That is glycolysis.",
+      "Incorrect. Water splitting occurs in the light reactions of photosynthesis."
+    ]
+  },
+  {
+    "id": "u3-e-19",
+    "difficulty": "easy",
+    "topic": "feedback inhibition",
+    "text": "What is feedback inhibition?",
+    "choices": [
+      "A product of a pathway inhibits an earlier step in the pathway",
+      "An enzyme speeds itself up forever",
+      "ATP is destroyed whenever glucose is present",
+      "The nucleus blocks all metabolic reactions"
+    ],
+    "correct": 0,
+    "explain": "Feedback inhibition occurs when a final product slows or stops an earlier step in a pathway.",
+    "choice_explanations": [
+      "Correct. This helps regulate metabolic pathways efficiently.",
+      "Incorrect. Feedback inhibition does not speed the pathway up forever.",
+      "Incorrect. ATP is not always destroyed when glucose is present.",
+      "Incorrect. The nucleus does not block all metabolism."
+    ]
+  },
+  {
+    "id": "u3-e-20",
+    "difficulty": "easy",
+    "topic": "metabolism",
+    "text": "What does metabolism refer to?",
+    "choices": [
+      "All the chemical reactions occurring in an organism",
+      "Only photosynthesis",
+      "Only cellular respiration",
+      "Only protein synthesis"
+    ],
+    "correct": 0,
+    "explain": "Metabolism includes all of the chemical reactions in an organism, including anabolic and catabolic reactions.",
+    "choice_explanations": [
+      "Correct. Metabolism includes all cellular chemical reactions.",
+      "Incorrect. Photosynthesis is only one part of metabolism.",
+      "Incorrect. Cellular respiration is only one part of metabolism.",
+      "Incorrect. Protein synthesis is only one part of metabolism."
+    ]
+  },
+  {
+    "id": "u3-h-1",
+    "difficulty": "hard",
+    "topic": "enzyme structure-function",
+    "text": "A mutation changes one amino acid in the active site of an enzyme. The enzyme now binds its substrate much less effectively. Which explanation is most reasonable?",
+    "choices": [
+      "The change likely altered the shape or chemistry of the active site",
+      "The enzyme must have become a lipid",
+      "The mutation removed all peptide bonds in the enzyme",
+      "The substrate no longer exists"
+    ],
+    "correct": 0,
+    "explain": "A change in active-site amino acids can change binding affinity by altering shape or chemical interactions.",
+    "choice_explanations": [
+      "Correct. Active-site structure and chemistry determine substrate binding.",
+      "Incorrect. A protein does not become a lipid from one amino acid change.",
+      "Incorrect. A single mutation does not remove all peptide bonds.",
+      "Incorrect. The mutation affects the enzyme, not necessarily the substrate’s existence."
+    ]
+  },
+  {
+    "id": "u3-h-2",
+    "difficulty": "hard",
+    "topic": "enzyme kinetics",
+    "text": "Why does increasing substrate concentration usually increase reaction rate only up to a point?",
+    "choices": [
+      "Eventually most enzyme active sites become occupied",
+      "Substrate destroys ATP immediately",
+      "The enzyme changes into a product",
+      "The reaction stops using collisions"
+    ],
+    "correct": 0,
+    "explain": "At high substrate concentration, enzymes become saturated and the reaction rate levels off.",
+    "choice_explanations": [
+      "Correct. Saturation occurs when most active sites are occupied.",
+      "Incorrect. ATP destruction is not the reason the rate plateaus.",
+      "Incorrect. Enzymes are not converted into products.",
+      "Incorrect. Collisions still occur."
+    ]
+  },
+  {
+    "id": "u3-h-3",
+    "difficulty": "hard",
+    "topic": "temperature and enzymes",
+    "text": "Why can high temperatures reduce the rate of an enzyme-catalyzed reaction after an optimum temperature is exceeded?",
+    "choices": [
+      "High temperature can disrupt the enzyme’s three-dimensional shape",
+      "Heat always increases activation energy permanently",
+      "Substrates stop moving at higher temperature",
+      "ATP synthase is destroyed first in every cell"
+    ],
+    "correct": 0,
+    "explain": "Excess heat can denature enzymes, altering the active site and reducing function.",
+    "choice_explanations": [
+      "Correct. Denaturation can reduce or destroy enzyme activity.",
+      "Incorrect. High temperature does not permanently raise activation energy in that way.",
+      "Incorrect. Substrates generally move more at higher temperature until damage occurs.",
+      "Incorrect. This is not a general explanation for all enzyme reactions."
+    ]
+  },
+  {
+    "id": "u3-h-4",
+    "difficulty": "hard",
+    "topic": "pH and enzymes",
+    "text": "Why can extreme pH reduce enzyme activity?",
+    "choices": [
+      "It can alter charges on amino acid side chains and disrupt active-site function",
+      "It turns proteins into carbohydrates",
+      "It always removes the substrate from the cell",
+      "It forces all reactions to become endergonic"
+    ],
+    "correct": 0,
+    "explain": "Changes in pH can affect amino acid side-chain charges, altering folding and substrate binding.",
+    "choice_explanations": [
+      "Correct. Enzyme function depends on proper charge interactions.",
+      "Incorrect. Proteins do not become carbohydrates from pH changes.",
+      "Incorrect. pH does not always remove substrate from the cell.",
+      "Incorrect. pH does not force all reactions to become endergonic."
+    ]
+  },
+  {
+    "id": "u3-h-5",
+    "difficulty": "hard",
+    "topic": "competitive inhibition",
+    "text": "A competitive inhibitor is added to an enzyme-catalyzed reaction. Which statement is most accurate?",
+    "choices": [
+      "The inhibitor competes with the substrate for the active site",
+      "The inhibitor permanently destroys all enzyme molecules",
+      "The inhibitor adds ATP directly to the substrate",
+      "The inhibitor can function only at pH 7"
+    ],
+    "correct": 0,
+    "explain": "Competitive inhibitors bind the active site and reduce substrate binding.",
+    "choice_explanations": [
+      "Correct. They reduce reaction rate by competing for active-site access.",
+      "Incorrect. Competitive inhibition does not necessarily destroy enzymes.",
+      "Incorrect. Competitive inhibitors do not add ATP to substrates.",
+      "Incorrect. Their action is not defined only by pH 7."
+    ]
+  },
+  {
+    "id": "u3-h-6",
+    "difficulty": "hard",
+    "topic": "allosteric regulation",
+    "text": "An inhibitor binds to a site other than the active site and reduces enzyme activity. What is the best description of this process?",
+    "choices": [
+      "Allosteric inhibition",
+      "Simple diffusion",
+      "Photophosphorylation",
+      "Substrate-level phosphorylation"
+    ],
+    "correct": 0,
+    "explain": "Binding at a separate site that changes enzyme activity is allosteric regulation.",
+    "choice_explanations": [
+      "Correct. Allosteric inhibition changes enzyme shape or activity without occupying the active site.",
+      "Incorrect. Diffusion is a transport process.",
+      "Incorrect. Photophosphorylation occurs in photosynthesis.",
+      "Incorrect. Substrate-level phosphorylation directly forms ATP from a phosphorylated substrate."
+    ]
+  },
+  {
+    "id": "u3-h-7",
+    "difficulty": "hard",
+    "topic": "ATP hydrolysis",
+    "text": "Why is ATP useful for cellular work?",
+    "choices": [
+      "Hydrolysis of ATP can be coupled to endergonic processes",
+      "ATP is a long-term storage polymer like glycogen",
+      "ATP contains DNA bases arranged in genes",
+      "ATP works only in chloroplasts"
+    ],
+    "correct": 0,
+    "explain": "ATP hydrolysis releases usable energy that can be coupled to cellular work.",
+    "choice_explanations": [
+      "Correct. Coupling ATP hydrolysis to endergonic reactions is a key cellular strategy.",
+      "Incorrect. ATP is short-term, not long-term, energy storage.",
+      "Incorrect. ATP is not arranged into genes.",
+      "Incorrect. ATP functions throughout cells, not only in chloroplasts."
+    ]
+  },
+  {
+    "id": "u3-h-8",
+    "difficulty": "hard",
+    "topic": "coupled reactions",
+    "text": "A cell uses ATP hydrolysis to drive active transport. Which idea best explains this?",
+    "choices": [
+      "An exergonic reaction is coupled to an endergonic process",
+      "Two endergonic reactions always occur together",
+      "Diffusion is being used to power ATP formation",
+      "The transport is no longer energy-dependent"
+    ],
+    "correct": 0,
+    "explain": "Cells couple the energy released by ATP hydrolysis to energy-requiring processes like active transport.",
+    "choice_explanations": [
+      "Correct. This is the principle of energy coupling.",
+      "Incorrect. Endergonic reactions do not drive each other effectively by themselves.",
+      "Incorrect. Diffusion is not the correct explanation here.",
+      "Incorrect. Active transport remains energy-dependent."
+    ]
+  },
+  {
+    "id": "u3-h-9",
+    "difficulty": "hard",
+    "topic": "glycolysis",
+    "text": "Why can glycolysis occur with or without oxygen?",
+    "choices": [
+      "Glycolysis itself does not require oxygen directly",
+      "Oxygen is produced during glycolysis",
+      "Glycolysis occurs only in chloroplasts",
+      "Glycolysis uses carbon dioxide as the final electron acceptor"
+    ],
+    "correct": 0,
+    "explain": "Glycolysis does not directly use oxygen, though continued ATP production afterward may depend on oxygen availability.",
+    "choice_explanations": [
+      "Correct. Glycolysis can proceed anaerobically.",
+      "Incorrect. Glycolysis does not produce oxygen.",
+      "Incorrect. Glycolysis occurs in the cytosol.",
+      "Incorrect. Carbon dioxide is not the final electron acceptor in glycolysis."
+    ]
+  },
+  {
+    "id": "u3-h-10",
+    "difficulty": "hard",
+    "topic": "electron carriers",
+    "text": "Why is NAD+ important in glycolysis and cellular respiration?",
+    "choices": [
+      "It accepts electrons and becomes NADH",
+      "It forms the phospholipid bilayer",
+      "It stores genetic information",
+      "It is the final product of the Calvin cycle"
+    ],
+    "correct": 0,
+    "explain": "NAD+ acts as an electron carrier, becoming NADH after accepting electrons.",
+    "choice_explanations": [
+      "Correct. NAD+ is reduced to NADH during energy-harvesting reactions.",
+      "Incorrect. NAD+ is not a membrane lipid.",
+      "Incorrect. It does not store genetic information.",
+      "Incorrect. It is not the final product of the Calvin cycle."
+    ]
+  },
+  {
+    "id": "u3-h-11",
+    "difficulty": "hard",
+    "topic": "pyruvate oxidation",
+    "text": "What is the main role of pyruvate oxidation in aerobic respiration?",
+    "choices": [
+      "To convert pyruvate into acetyl-CoA for entry into the Krebs cycle",
+      "To split water and release oxygen",
+      "To convert ATP directly into glucose",
+      "To synthesize ribosomal RNA"
+    ],
+    "correct": 0,
+    "explain": "Pyruvate oxidation links glycolysis to the Krebs cycle by producing acetyl-CoA.",
+    "choice_explanations": [
+      "Correct. Acetyl-CoA enters the Krebs cycle.",
+      "Incorrect. Water splitting occurs in photosynthesis.",
+      "Incorrect. ATP is not directly converted into glucose here.",
+      "Incorrect. rRNA synthesis is unrelated."
+    ]
+  },
+  {
+    "id": "u3-h-12",
+    "difficulty": "hard",
+    "topic": "Krebs cycle",
+    "text": "Why is the Krebs cycle important in cellular respiration?",
+    "choices": [
+      "It generates electron carriers and some ATP while oxidizing acetyl-CoA",
+      "It directly uses sunlight to excite electrons",
+      "It produces the most ATP by itself through chemiosmosis",
+      "It occurs in the cytoskeleton"
+    ],
+    "correct": 0,
+    "explain": "The Krebs cycle produces NADH, FADH2, and some ATP while releasing carbon dioxide.",
+    "choice_explanations": [
+      "Correct. This is its central role in respiration.",
+      "Incorrect. Sunlight is used in photosynthesis, not the Krebs cycle.",
+      "Incorrect. Most ATP comes from oxidative phosphorylation, not directly from the Krebs cycle.",
+      "Incorrect. In eukaryotes it occurs in the mitochondrial matrix."
+    ]
+  },
+  {
+    "id": "u3-h-13",
+    "difficulty": "hard",
+    "topic": "ETC and oxygen",
+    "text": "Why does the electron transport chain slow dramatically when oxygen is unavailable?",
+    "choices": [
+      "Electrons cannot be passed efficiently to a final acceptor",
+      "ATP can no longer be hydrolyzed",
+      "Glucose disappears immediately",
+      "The Krebs cycle moves into the nucleus"
+    ],
+    "correct": 0,
+    "explain": "Without oxygen as the final electron acceptor, electrons back up in the ETC and the chain slows or stops.",
+    "choice_explanations": [
+      "Correct. Oxygen is needed to accept electrons at the end of the chain.",
+      "Incorrect. ATP hydrolysis can still occur.",
+      "Incorrect. Glucose does not disappear immediately.",
+      "Incorrect. The Krebs cycle does not move into the nucleus."
+    ]
+  },
+  {
+    "id": "u3-h-14",
+    "difficulty": "hard",
+    "topic": "chemiosmosis",
+    "text": "What directly powers ATP synthase in mitochondria?",
+    "choices": [
+      "The flow of protons down their electrochemical gradient",
+      "Direct contact with glucose",
+      "Binding of oxygen to the enzyme",
+      "Transfer of DNA into the matrix"
+    ],
+    "correct": 0,
+    "explain": "ATP synthase is powered by protons moving down the proton gradient across the inner mitochondrial membrane.",
+    "choice_explanations": [
+      "Correct. Proton motive force drives ATP synthase.",
+      "Incorrect. Glucose does not directly power ATP synthase.",
+      "Incorrect. Oxygen is not the direct power source of ATP synthase.",
+      "Incorrect. DNA transfer is unrelated."
+    ]
+  },
+  {
+    "id": "u3-h-15",
+    "difficulty": "hard",
+    "topic": "substrate-level phosphorylation",
+    "text": "How does substrate-level phosphorylation differ from oxidative phosphorylation?",
+    "choices": [
+      "ATP is formed directly by transferring a phosphate from a substrate molecule",
+      "It requires sunlight to excite chlorophyll",
+      "It can happen only in the electron transport chain",
+      "It depends on proton flow through ATP synthase"
+    ],
+    "correct": 0,
+    "explain": "In substrate-level phosphorylation, ATP is made by direct transfer of a phosphate group from a substrate to ADP.",
+    "choice_explanations": [
+      "Correct. This distinguishes it from chemiosmotic ATP production.",
+      "Incorrect. Sunlight is involved in photosynthesis, not substrate-level phosphorylation.",
+      "Incorrect. It occurs in glycolysis and the Krebs cycle, not only the ETC.",
+      "Incorrect. That describes oxidative phosphorylation."
+    ]
+  },
+  {
+    "id": "u3-h-16",
+    "difficulty": "hard",
+    "topic": "fermentation vs respiration",
+    "text": "Why does fermentation produce much less ATP than aerobic respiration?",
+    "choices": [
+      "It does not use the electron transport chain to extract as much energy from glucose",
+      "It completely stops glycolysis",
+      "It oxidizes more glucose than respiration",
+      "It produces more oxygen than ATP"
+    ],
+    "correct": 0,
+    "explain": "Fermentation relies on glycolysis only and does not use the ETC, so much less energy is captured as ATP.",
+    "choice_explanations": [
+      "Correct. Most ATP in aerobic respiration comes from oxidative phosphorylation.",
+      "Incorrect. Fermentation allows glycolysis to continue.",
+      "Incorrect. It does not extract more energy than respiration.",
+      "Incorrect. Fermentation does not produce oxygen."
+    ]
+  },
+  {
+    "id": "u3-h-17",
+    "difficulty": "hard",
+    "topic": "light reactions",
+    "text": "Why are the light-dependent reactions necessary for the Calvin cycle?",
+    "choices": [
+      "They provide ATP and NADPH needed for carbon fixation and sugar production",
+      "They directly make glucose without any further steps",
+      "They produce pyruvate for mitochondria",
+      "They consume all oxygen in the leaf"
+    ],
+    "correct": 0,
+    "explain": "The Calvin cycle uses ATP and NADPH generated by the light-dependent reactions.",
+    "choice_explanations": [
+      "Correct. ATP and NADPH from the light reactions power the Calvin cycle.",
+      "Incorrect. Glucose is not made directly in one step by the light reactions alone.",
+      "Incorrect. Pyruvate is associated with respiration, not the Calvin cycle.",
+      "Incorrect. Light reactions produce oxygen rather than consume all of it."
+    ]
+  },
+  {
+    "id": "u3-h-18",
+    "difficulty": "hard",
+    "topic": "photosystems",
+    "text": "What is the main role of photosystems in photosynthesis?",
+    "choices": [
+      "To absorb light energy and excite electrons",
+      "To break down glucose into ATP",
+      "To copy DNA in chloroplasts",
+      "To store starch in vacuoles"
+    ],
+    "correct": 0,
+    "explain": "Photosystems contain pigments that capture light and energize electrons for the light reactions.",
+    "choice_explanations": [
+      "Correct. Photosystems initiate light-driven electron flow.",
+      "Incorrect. Glucose breakdown is part of respiration.",
+      "Incorrect. DNA copying is not the main role of photosystems.",
+      "Incorrect. Starch storage is not their function."
+    ]
+  },
+  {
+    "id": "u3-h-19",
+    "difficulty": "hard",
+    "topic": "water splitting",
+    "text": "Why is water split during the light reactions?",
+    "choices": [
+      "To provide electrons, protons, and oxygen",
+      "To produce acetyl-CoA",
+      "To regenerate pyruvate",
+      "To inhibit ATP synthase"
+    ],
+    "correct": 0,
+    "explain": "Water splitting provides replacement electrons, contributes protons, and releases oxygen as a byproduct.",
+    "choice_explanations": [
+      "Correct. This is the purpose of photolysis in photosystem II.",
+      "Incorrect. Acetyl-CoA is part of respiration, not water splitting.",
+      "Incorrect. Pyruvate regeneration is not the role of water splitting.",
+      "Incorrect. Water splitting does not inhibit ATP synthase."
+    ]
+  },
+  {
+    "id": "u3-h-20",
+    "difficulty": "hard",
+    "topic": "Calvin cycle",
+    "text": "Why is the Calvin cycle considered anabolic?",
+    "choices": [
+      "It builds higher-energy carbohydrate molecules from smaller inputs",
+      "It breaks down glucose into carbon dioxide",
+      "It always releases ATP to the environment",
+      "It occurs only during darkness"
+    ],
+    "correct": 0,
+    "explain": "The Calvin cycle uses energy to build sugars from carbon dioxide, making it anabolic.",
+    "choice_explanations": [
+      "Correct. It builds complex molecules and requires energy input.",
+      "Incorrect. That describes catabolic breakdown, not the Calvin cycle.",
+      "Incorrect. The Calvin cycle consumes ATP rather than always releasing it.",
+      "Incorrect. It does not require darkness; it depends on products of the light reactions."
+    ]
+  },
+  {
+    "id": "u3-h-21",
+    "difficulty": "hard",
+    "topic": "stomata and photosynthesis",
+    "text": "Why can closing stomata help a plant conserve water but reduce photosynthetic rate?",
+    "choices": [
+      "Less carbon dioxide enters the leaf for the Calvin cycle",
+      "ATP synthase is destroyed when stomata close",
+      "Light can no longer reach chloroplasts",
+      "The plant stops absorbing water through roots immediately"
+    ],
+    "correct": 0,
+    "explain": "Closing stomata reduces water loss but also limits CO2 uptake, which can slow carbon fixation.",
+    "choice_explanations": [
+      "Correct. Reduced CO2 entry can limit photosynthesis.",
+      "Incorrect. Stomatal closure does not directly destroy ATP synthase.",
+      "Incorrect. Light still reaches chloroplasts.",
+      "Incorrect. Root water uptake does not stop immediately because stomata close."
+    ]
+  },
+  {
+    "id": "u3-h-22",
+    "difficulty": "hard",
+    "topic": "feedback inhibition",
+    "text": "Why is feedback inhibition beneficial to cells?",
+    "choices": [
+      "It helps prevent unnecessary production of pathway products",
+      "It causes all enzymes to shut down permanently",
+      "It makes every pathway run at maximum speed",
+      "It prevents ATP from ever being used"
+    ],
+    "correct": 0,
+    "explain": "Feedback inhibition conserves resources by slowing a pathway when enough product has accumulated.",
+    "choice_explanations": [
+      "Correct. This is an efficient regulatory strategy.",
+      "Incorrect. Feedback inhibition is usually reversible and specific.",
+      "Incorrect. It often slows pathways rather than maximizing them.",
+      "Incorrect. ATP is still widely used in cells."
+    ]
+  },
+  {
+    "id": "u3-h-23",
+    "difficulty": "hard",
+    "topic": "respiration and photosynthesis comparison",
+    "text": "Which statement best compares photosynthesis and cellular respiration?",
+    "choices": [
+      "Photosynthesis stores energy in organic molecules, while cellular respiration releases energy from them",
+      "Both processes do exactly the same chemical work",
+      "Cellular respiration occurs only in plants",
+      "Photosynthesis produces ATP as the final long-term storage product used by the whole plant"
+    ],
+    "correct": 0,
+    "explain": "Photosynthesis captures and stores energy, while respiration releases energy from organic molecules for ATP production.",
+    "choice_explanations": [
+      "Correct. This is the key energetic relationship between the two processes.",
+      "Incorrect. They are related but not identical.",
+      "Incorrect. Cellular respiration occurs in both plants and animals.",
+      "Incorrect. Sugars, not ATP, are the main long-term storage product of photosynthesis."
+    ]
+  },
+  {
+    "id": "u3-h-24",
+    "difficulty": "hard",
+    "topic": "proton gradients",
+    "text": "Why is the inner mitochondrial membrane essential for oxidative phosphorylation?",
+    "choices": [
+      "It allows a proton gradient to be established across it",
+      "It contains the nucleus",
+      "It stores chromosomes for ATP synthesis",
+      "It performs glycolysis directly"
+    ],
+    "correct": 0,
+    "explain": "The ETC pumps protons across the inner mitochondrial membrane, creating the gradient that drives ATP synthesis.",
+    "choice_explanations": [
+      "Correct. The membrane is crucial for proton-gradient formation.",
+      "Incorrect. The nucleus is separate from mitochondria.",
+      "Incorrect. Mitochondria do not store nuclear chromosomes for ATP synthesis.",
+      "Incorrect. Glycolysis occurs in the cytosol."
+    ]
+  },
+  {
+    "id": "u3-h-25",
+    "difficulty": "hard",
+    "topic": "electron carriers",
+    "text": "A mutation prevents NADH from donating electrons effectively to the electron transport chain. Which effect is most likely?",
+    "choices": [
+      "Reduced proton pumping and reduced ATP production by oxidative phosphorylation",
+      "Increased glucose production in the Calvin cycle",
+      "Permanent acceleration of glycolysis",
+      "Immediate synthesis of more oxygen"
+    ],
+    "correct": 0,
+    "explain": "If NADH cannot donate electrons effectively, the ETC pumps fewer protons and ATP production by chemiosmosis drops.",
+    "choice_explanations": [
+      "Correct. Electron donation drives proton pumping and ATP generation.",
+      "Incorrect. The Calvin cycle is unrelated here.",
+      "Incorrect. Glycolysis is not necessarily permanently accelerated.",
+      "Incorrect. Oxygen synthesis occurs in photosynthesis, not respiration."
+    ]
+  },
+  {
+    "id": "u3-h-26",
+    "difficulty": "hard",
+    "topic": "respiration stages",
+    "text": "Why do cells gain much more ATP from aerobic respiration than from glycolysis alone?",
+    "choices": [
+      "Aerobic respiration includes the ETC and chemiosmosis, which capture much more energy",
+      "Glycolysis does not produce any ATP at all",
+      "Aerobic respiration uses DNA as fuel",
+      "Glycolysis requires sunlight"
+    ],
+    "correct": 0,
+    "explain": "Most ATP from respiration is produced during oxidative phosphorylation, which glycolysis alone does not include.",
+    "choice_explanations": [
+      "Correct. The ETC and chemiosmosis account for most ATP yield.",
+      "Incorrect. Glycolysis does produce a small amount of ATP.",
+      "Incorrect. DNA is not used as the main fuel in this context.",
+      "Incorrect. Glycolysis does not require sunlight."
+    ]
+  },
+  {
+    "id": "u3-h-27",
+    "difficulty": "hard",
+    "topic": "light intensity",
+    "text": "Why can increasing light intensity increase photosynthetic rate only up to a point?",
+    "choices": [
+      "Eventually another factor becomes limiting",
+      "Light permanently damages chloroplasts in all cases",
+      "More light always prevents carbon fixation",
+      "ATP can no longer be formed when light is abundant"
+    ],
+    "correct": 0,
+    "explain": "Once light is no longer the limiting factor, other factors such as CO2 or temperature may limit the rate.",
+    "choice_explanations": [
+      "Correct. Limiting factors shift as conditions change.",
+      "Incorrect. Light does not always permanently damage chloroplasts.",
+      "Incorrect. More light does not always prevent fixation.",
+      "Incorrect. ATP can still be formed."
+    ]
+  },
+  {
+    "id": "u3-h-28",
+    "difficulty": "hard",
+    "topic": "enzyme pathways",
+    "text": "In a multistep metabolic pathway, the end product binds to the first enzyme and decreases its activity. What is the best interpretation?",
+    "choices": [
+      "The pathway is regulated by feedback inhibition",
+      "The pathway has been permanently destroyed",
+      "The end product is acting as a substrate",
+      "The first enzyme has become ATP synthase"
+    ],
+    "correct": 0,
+    "explain": "An end product inhibiting an early enzyme is the hallmark of feedback inhibition.",
+    "choice_explanations": [
+      "Correct. This is the classic feedback-inhibition pattern.",
+      "Incorrect. Regulation is not the same as destruction.",
+      "Incorrect. The end product is acting as a regulator, not the substrate.",
+      "Incorrect. The enzyme has not become ATP synthase."
+    ]
+  },
+  {
+    "id": "u3-h-29",
+    "difficulty": "hard",
+    "topic": "ATP synthase in chloroplasts",
+    "text": "What powers ATP synthase in chloroplasts during the light reactions?",
+    "choices": [
+      "A proton gradient across the thylakoid membrane",
+      "Direct absorption of glucose by ATP synthase",
+      "DNA replication in the stroma",
+      "The breakdown of chlorophyll"
+    ],
+    "correct": 0,
+    "explain": "Like in mitochondria, ATP synthase in chloroplasts is driven by proton flow down a gradient.",
+    "choice_explanations": [
+      "Correct. The thylakoid proton gradient powers ATP formation.",
+      "Incorrect. ATP synthase is not powered directly by glucose.",
+      "Incorrect. DNA replication is unrelated.",
+      "Incorrect. Chlorophyll is excited by light but not broken down to power ATP synthase."
+    ]
+  },
+  {
+    "id": "u3-h-30",
+    "difficulty": "hard",
+    "topic": "redox",
+    "text": "Why are oxidation-reduction reactions central to cellular energetics?",
+    "choices": [
+      "They transfer electrons and their associated energy between molecules",
+      "They occur only in dead cells",
+      "They replace the need for enzymes",
+      "They stop ATP production"
+    ],
+    "correct": 0,
+    "explain": "Energy flow in respiration and photosynthesis depends heavily on electron transfer in redox reactions.",
+    "choice_explanations": [
+      "Correct. Electron transfer is a major way cells capture and use energy.",
+      "Incorrect. Redox reactions are central to living cells.",
+      "Incorrect. Enzymes are still needed.",
+      "Incorrect. Redox reactions are key to ATP production, not something that stops it."
+    ]
+  },
+  {
+    "id": "u3-a-1",
+    "difficulty": "analysis",
+    "topic": "enzyme temperature graph",
+    "text": "A scientist measures enzyme activity at different temperatures. Activity increases from 10°C to 37°C, then drops sharply at 55°C. Which conclusion is best supported?",
+    "choices": [
+      "The enzyme has an optimal temperature near 37°C and likely loses structure at higher temperatures",
+      "The enzyme can function only at freezing temperatures",
+      "The substrate disappears at 55°C in all systems",
+      "The reaction becomes independent of the enzyme above 37°C"
+    ],
+    "correct": 0,
+    "explain": "The pattern suggests increasing activity up to an optimum followed by denaturation or structural disruption at high temperature.",
+    "choice_explanations": [
+      "Correct. This is the classic enzyme-temperature pattern.",
+      "Incorrect. Activity is not highest near freezing in the data.",
+      "Incorrect. The data do not show that the substrate universally disappears.",
+      "Incorrect. The drop suggests reduced enzyme function, not independence from the enzyme."
+    ],
+    "experiment": "Enzyme activity was measured across a temperature range from 10°C to 55°C."
+  },
+  {
+    "id": "u3-a-2",
+    "difficulty": "analysis",
+    "topic": "enzyme pH graph",
+    "text": "An enzyme shows low activity at pH 3, moderate activity at pH 6, highest activity at pH 7.5, and low activity again at pH 10. Which interpretation is best?",
+    "choices": [
+      "The enzyme has an optimal pH near 7.5, and extreme pH values likely disrupt its active site or folding",
+      "The enzyme functions best whenever hydrogen ions are absent",
+      "The enzyme is not affected by pH",
+      "The enzyme is a lipid because its activity changes"
+    ],
+    "correct": 0,
+    "explain": "The bell-shaped pattern suggests a pH optimum near 7.5 and reduced function when charges and structure are disrupted at extreme pH values.",
+    "choice_explanations": [
+      "Correct. Enzymes often have a limited pH range of highest activity.",
+      "Incorrect. The data do not support this statement.",
+      "Incorrect. The activity clearly changes with pH.",
+      "Incorrect. Enzymes are typically proteins, not lipids."
+    ],
+    "experiment": "Reaction rates were measured for one enzyme at pH 3, 6, 7.5, and 10."
+  },
+  {
+    "id": "u3-a-3",
+    "difficulty": "analysis",
+    "topic": "substrate concentration",
+    "text": "A reaction is run with increasing substrate concentration while enzyme concentration stays constant. The rate increases at first and then levels off. Which explanation is best supported?",
+    "choices": [
+      "Enzyme active sites became saturated at high substrate concentration",
+      "The substrate turned into ATP",
+      "The enzyme stopped existing at high substrate concentration",
+      "The reaction no longer involved collisions"
+    ],
+    "correct": 0,
+    "explain": "The rate levels off because enzyme saturation limits further increases when enzyme concentration remains constant.",
+    "choice_explanations": [
+      "Correct. This explains the plateau in enzyme-catalyzed reactions.",
+      "Incorrect. The plateau is not due to substrate turning into ATP.",
+      "Incorrect. The enzyme does not disappear.",
+      "Incorrect. Collisions still occur."
+    ],
+    "experiment": "An enzyme-catalyzed reaction was measured at increasing substrate concentrations with constant enzyme concentration."
+  },
+  {
+    "id": "u3-a-4",
+    "difficulty": "analysis",
+    "topic": "competitive inhibition",
+    "text": "A reaction rate decreases when an inhibitor is added, but the rate increases again when much more substrate is supplied. Which interpretation is best?",
+    "choices": [
+      "The inhibitor is likely competitive",
+      "The inhibitor permanently destroyed the enzyme",
+      "The inhibitor converted the substrate into a lipid",
+      "The inhibitor removed ATP synthase"
+    ],
+    "correct": 0,
+    "explain": "If increasing substrate overcomes inhibition, the inhibitor most likely competes with the substrate for the active site.",
+    "choice_explanations": [
+      "Correct. This is characteristic of competitive inhibition.",
+      "Incorrect. Permanent destruction would not be overcome by more substrate.",
+      "Incorrect. The inhibitor does not convert the substrate into a lipid.",
+      "Incorrect. ATP synthase is unrelated here."
+    ],
+    "experiment": "An inhibitor was added to an enzyme reaction, and then substrate concentration was increased."
+  },
+  {
+    "id": "u3-a-5",
+    "difficulty": "analysis",
+    "topic": "glycolysis and fermentation",
+    "text": "Muscle cells under low-oxygen conditions continue glycolysis for a while by switching to lactic acid fermentation. Which conclusion is best supported?",
+    "choices": [
+      "Fermentation helps regenerate NAD+ so glycolysis can continue",
+      "Fermentation produces more ATP than aerobic respiration",
+      "Fermentation replaces glycolysis completely",
+      "Oxygen is produced during fermentation"
+    ],
+    "correct": 0,
+    "explain": "Fermentation maintains NAD+ availability, allowing glycolysis to continue producing ATP without oxygen.",
+    "choice_explanations": [
+      "Correct. NAD+ regeneration is the key role of fermentation.",
+      "Incorrect. Fermentation yields less ATP than aerobic respiration.",
+      "Incorrect. Fermentation works with glycolysis rather than replacing it.",
+      "Incorrect. Fermentation does not produce oxygen."
+    ],
+    "experiment": "Muscle cells were monitored under low-oxygen conditions while lactate production and ATP generation were measured."
+  },
+  {
+    "id": "u3-a-6",
+    "difficulty": "analysis",
+    "topic": "ETC inhibition",
+    "text": "A poison blocks the electron transport chain in mitochondria. Soon after, ATP production drops sharply and NADH accumulates. Which explanation is best?",
+    "choices": [
+      "Electrons can no longer flow efficiently, so proton pumping and NADH oxidation are reduced",
+      "Glycolysis immediately produces more oxygen",
+      "The Calvin cycle has stopped in mitochondria",
+      "ATP synthase now works faster because there are more electrons"
+    ],
+    "correct": 0,
+    "explain": "Blocking the ETC prevents efficient electron transfer, reducing proton pumping and causing electron carriers like NADH to remain reduced.",
+    "choice_explanations": [
+      "Correct. This explains both ATP decline and NADH accumulation.",
+      "Incorrect. Glycolysis does not produce oxygen.",
+      "Incorrect. The Calvin cycle occurs in chloroplasts, not mitochondria.",
+      "Incorrect. ATP synthase depends on a proton gradient, which would decrease."
+    ],
+    "experiment": "Mitochondria were exposed to an ETC inhibitor while ATP and NADH levels were tracked."
+  },
+  {
+    "id": "u3-a-7",
+    "difficulty": "analysis",
+    "topic": "ATP synthase uncoupling",
+    "text": "A chemical makes the inner mitochondrial membrane leaky to protons. The ETC continues to transfer electrons, but ATP production falls. Which interpretation is best?",
+    "choices": [
+      "The proton gradient is dissipated, so ATP synthase has less driving force",
+      "Glycolysis has stopped completely",
+      "Oxygen is no longer the final electron acceptor",
+      "The Krebs cycle moved into the cytosol"
+    ],
+    "correct": 0,
+    "explain": "If protons leak back without passing through ATP synthase, the proton gradient weakens and ATP synthesis drops.",
+    "choice_explanations": [
+      "Correct. ATP synthase depends on a strong proton gradient.",
+      "Incorrect. The scenario describes a mitochondrial membrane effect, not glycolysis stopping.",
+      "Incorrect. Oxygen can still be the final electron acceptor.",
+      "Incorrect. The Krebs cycle does not move into the cytosol."
+    ],
+    "experiment": "A proton-leaking chemical was added to mitochondria while electron transport and ATP output were measured."
+  },
+  {
+    "id": "u3-a-8",
+    "difficulty": "analysis",
+    "topic": "respiration stages",
+    "text": "Cells are supplied with glucose and oxygen, but a mutation prevents pyruvate from entering mitochondria. Which result is most likely?",
+    "choices": [
+      "Glycolysis can continue, but the Krebs cycle and oxidative phosphorylation will be greatly reduced",
+      "Photosynthesis will increase in the mitochondria",
+      "ATP production will become higher than normal",
+      "Oxygen will be produced by the cells"
+    ],
+    "correct": 0,
+    "explain": "Without pyruvate entering mitochondria, glycolysis can still occur, but later stages of aerobic respiration are strongly limited.",
+    "choice_explanations": [
+      "Correct. Pyruvate entry is needed to feed aerobic respiration in mitochondria.",
+      "Incorrect. Photosynthesis does not occur in mitochondria.",
+      "Incorrect. ATP production would generally decrease.",
+      "Incorrect. Oxygen is not produced in respiration."
+    ],
+    "experiment": "A mutant cell line unable to transport pyruvate into mitochondria was compared with normal cells."
+  },
+  {
+    "id": "u3-a-9",
+    "difficulty": "analysis",
+    "topic": "photosynthesis limiting factors",
+    "text": "A plant is exposed to increasing light intensity. Photosynthetic rate rises at first and then plateaus, even though light intensity continues to rise. Which explanation is best?",
+    "choices": [
+      "Another factor such as CO2 concentration or temperature became limiting",
+      "Chlorophyll stopped absorbing light completely",
+      "The Calvin cycle no longer needs ATP",
+      "Light destroys all glucose instantly"
+    ],
+    "correct": 0,
+    "explain": "When light is no longer limiting, some other factor determines the maximum rate of photosynthesis.",
+    "choice_explanations": [
+      "Correct. Limiting factors often shift as conditions change.",
+      "Incorrect. The plateau does not mean chlorophyll completely stopped absorbing light.",
+      "Incorrect. The Calvin cycle still needs ATP.",
+      "Incorrect. Light does not instantly destroy all glucose."
+    ],
+    "experiment": "Photosynthetic rate was measured while light intensity was increased stepwise."
+  },
+  {
+    "id": "u3-a-10",
+    "difficulty": "analysis",
+    "topic": "CO2 and photosynthesis",
+    "text": "Two identical plants receive the same light intensity and temperature, but one is given much more carbon dioxide. That plant shows a higher photosynthetic rate. Which conclusion is best supported?",
+    "choices": [
+      "Carbon dioxide was a limiting factor for the slower plant",
+      "The faster plant must have more mitochondria",
+      "ATP synthase stopped working in the slower plant",
+      "The slower plant cannot perform the light reactions"
+    ],
+    "correct": 0,
+    "explain": "If increasing CO2 increases photosynthesis under otherwise constant conditions, then CO2 was limiting the rate.",
+    "choice_explanations": [
+      "Correct. This is the classic interpretation of a limiting-factor experiment.",
+      "Incorrect. Mitochondria are not the key variable here.",
+      "Incorrect. The data do not directly indicate ATP synthase failure.",
+      "Incorrect. The slower plant may still perform light reactions."
+    ],
+    "experiment": "Photosynthetic rate was compared in plants at different CO2 concentrations while light and temperature were held constant."
+  },
+  {
+    "id": "u3-a-11",
+    "difficulty": "analysis",
+    "topic": "light reactions",
+    "text": "A chloroplast preparation is exposed to light, and oxygen gas is produced. Which conclusion is best supported?",
+    "choices": [
+      "Water is being split during the light-dependent reactions",
+      "Glucose is being oxidized in the chloroplast",
+      "The Krebs cycle is producing oxygen",
+      "The Calvin cycle is releasing oxygen as a waste product"
+    ],
+    "correct": 0,
+    "explain": "The oxygen released during photosynthesis comes from the splitting of water in the light reactions.",
+    "choice_explanations": [
+      "Correct. Photolysis of water releases oxygen.",
+      "Incorrect. Glucose oxidation is part of respiration, not the light reactions.",
+      "Incorrect. The Krebs cycle releases carbon dioxide, not oxygen.",
+      "Incorrect. The Calvin cycle does not release oxygen."
+    ],
+    "experiment": "Isolated chloroplasts were illuminated and gas production was measured."
+  },
+  {
+    "id": "u3-a-12",
+    "difficulty": "analysis",
+    "topic": "Calvin cycle dependency",
+    "text": "A plant is moved into darkness. The Calvin cycle continues briefly and then slows sharply. Which explanation is best?",
+    "choices": [
+      "The Calvin cycle depends on ATP and NADPH produced by the light-dependent reactions",
+      "The Calvin cycle directly requires darkness to stop",
+      "Glucose can no longer enter the nucleus",
+      "The plant immediately loses all chlorophyll"
+    ],
+    "correct": 0,
+    "explain": "In darkness, ATP and NADPH production from the light reactions stops, so the Calvin cycle soon slows.",
+    "choice_explanations": [
+      "Correct. This explains the brief continuation followed by decline.",
+      "Incorrect. The Calvin cycle depends on products of light reactions, not darkness itself.",
+      "Incorrect. Nuclear glucose entry is irrelevant here.",
+      "Incorrect. Chlorophyll is not immediately lost in darkness."
+    ],
+    "experiment": "Carbon fixation was measured after a photosynthesizing plant was suddenly placed in darkness."
+  },
+  {
+    "id": "u3-a-13",
+    "difficulty": "analysis",
+    "topic": "feedback inhibition",
+    "text": "In a metabolic pathway, the final product accumulates and the concentration of the first intermediate falls soon after. Which explanation is best supported?",
+    "choices": [
+      "The end product likely inhibits an earlier enzyme in the pathway",
+      "The first enzyme has been converted into ATP",
+      "The substrate for the final step became more concentrated",
+      "The pathway switched to photosynthesis"
+    ],
+    "correct": 0,
+    "explain": "If the final product rises and the earliest intermediate falls, the final product likely inhibits an early step through feedback inhibition.",
+    "choice_explanations": [
+      "Correct. This pattern fits feedback inhibition well.",
+      "Incorrect. Enzymes are not converted into ATP.",
+      "Incorrect. That would not best explain the fall in the first intermediate.",
+      "Incorrect. Photosynthesis is unrelated here."
+    ],
+    "experiment": "Intermediate and final product concentrations were measured over time in a metabolic pathway."
+  },
+  {
+    "id": "u3-a-14",
+    "difficulty": "analysis",
+    "topic": "ATP coupling",
+    "text": "Researchers find that a certain biosynthetic reaction occurs only when ATP is present. When ATP is removed, the reaction stops. Which conclusion is best supported?",
+    "choices": [
+      "The reaction is endergonic and depends on ATP coupling",
+      "The reaction is exergonic and releases enough energy by itself",
+      "ATP is acting as DNA in the reaction",
+      "The reaction must be fermentation"
+    ],
+    "correct": 0,
+    "explain": "If ATP is required for the reaction to proceed, it likely provides energy to drive an endergonic process.",
+    "choice_explanations": [
+      "Correct. ATP often drives anabolic or other endergonic reactions.",
+      "Incorrect. An exergonic reaction would not require ATP in this way.",
+      "Incorrect. ATP is not acting as DNA.",
+      "Incorrect. ATP dependence alone does not mean fermentation."
+    ],
+    "experiment": "A biosynthetic reaction was tested in the presence and absence of ATP."
+  },
+  {
+    "id": "u3-a-15",
+    "difficulty": "analysis",
+    "topic": "substrate-level phosphorylation",
+    "text": "A mutation blocks ATP synthase, but cells still produce a small amount of ATP during glycolysis. Which explanation is best?",
+    "choices": [
+      "Some ATP is still formed by substrate-level phosphorylation",
+      "ATP synthase is not needed for any ATP production",
+      "The Calvin cycle replaced glycolysis",
+      "Oxygen directly phosphorylates ADP in glycolysis"
+    ],
+    "correct": 0,
+    "explain": "Even without ATP synthase, glycolysis can still produce some ATP through substrate-level phosphorylation.",
+    "choice_explanations": [
+      "Correct. Glycolysis includes substrate-level phosphorylation steps.",
+      "Incorrect. ATP synthase is still essential for most ATP in aerobic respiration.",
+      "Incorrect. The Calvin cycle is a photosynthetic process.",
+      "Incorrect. Oxygen does not directly phosphorylate ADP in glycolysis."
+    ],
+    "experiment": "Cells with blocked ATP synthase were tested for remaining ATP production."
+  },
+  {
+    "id": "u3-a-16",
+    "difficulty": "analysis",
+    "topic": "NAD+ regeneration",
+    "text": "Cells deprived of oxygen eventually stop glycolysis unless fermentation occurs. Which explanation is best?",
+    "choices": [
+      "Without fermentation, NAD+ is not regenerated efficiently enough for glycolysis to continue",
+      "Oxygen is directly required as a substrate for every glycolysis step",
+      "Fermentation creates the mitochondria needed for glycolysis",
+      "Glycolysis stops because water is unavailable"
+    ],
+    "correct": 0,
+    "explain": "Glycolysis requires NAD+, and fermentation helps regenerate it when oxygen is absent.",
+    "choice_explanations": [
+      "Correct. NAD+ regeneration is the key reason fermentation supports glycolysis.",
+      "Incorrect. Glycolysis itself does not directly require oxygen as a substrate.",
+      "Incorrect. Fermentation does not create mitochondria.",
+      "Incorrect. Water availability is not the main issue here."
+    ],
+    "experiment": "Cells were deprived of oxygen and monitored for glycolytic activity with and without fermentation."
+  },
+  {
+    "id": "u3-a-17",
+    "difficulty": "analysis",
+    "topic": "photosynthesis vs respiration gases",
+    "text": "A plant in bright light shows a net decrease in carbon dioxide in the surrounding air and a net increase in oxygen. Which explanation is best supported?",
+    "choices": [
+      "Photosynthesis is occurring faster than cellular respiration",
+      "Cellular respiration has stopped completely",
+      "Only the Calvin cycle is active",
+      "The plant is performing fermentation instead of respiration"
+    ],
+    "correct": 0,
+    "explain": "The gas changes indicate photosynthesis is consuming CO2 and releasing O2 at a rate greater than respiration.",
+    "choice_explanations": [
+      "Correct. Net gas exchange reflects the balance between photosynthesis and respiration.",
+      "Incorrect. Plants still perform respiration.",
+      "Incorrect. The light reactions are also required for ongoing photosynthesis.",
+      "Incorrect. Fermentation is not the best explanation for the observed gas pattern."
+    ],
+    "experiment": "Gas exchange around a plant in bright light was measured over time."
+  },
+  {
+    "id": "u3-a-18",
+    "difficulty": "analysis",
+    "topic": "oxygen consumption",
+    "text": "Scientists measure oxygen consumption by cells. When a poison blocks the mitochondrial ETC, oxygen consumption falls dramatically. Which conclusion is best supported?",
+    "choices": [
+      "Oxygen is used at the end of the electron transport chain in aerobic respiration",
+      "Oxygen is produced by mitochondria during glycolysis",
+      "The Krebs cycle directly releases oxygen gas",
+      "Oxygen is the substrate of ATP synthase"
+    ],
+    "correct": 0,
+    "explain": "The drop in oxygen consumption after ETC inhibition supports the role of oxygen as the final electron acceptor.",
+    "choice_explanations": [
+      "Correct. The ETC depends on oxygen in aerobic cells.",
+      "Incorrect. Glycolysis does not produce oxygen.",
+      "Incorrect. The Krebs cycle releases carbon dioxide, not oxygen.",
+      "Incorrect. ATP synthase is driven by protons, not oxygen as a substrate."
+    ],
+    "experiment": "Oxygen use was measured before and after adding an ETC-blocking poison to respiring cells."
+  },
+  {
+    "id": "u3-a-19",
+    "difficulty": "analysis",
+    "topic": "enzyme mutation",
+    "text": "Two versions of the same enzyme are compared. Version A works normally. Version B differs by one amino acid in a region away from the active site and shows lower activity. Which conclusion is best supported?",
+    "choices": [
+      "Amino acid changes outside the active site can still alter enzyme shape or dynamics and reduce function",
+      "Only active-site mutations ever matter",
+      "The lower activity proves the enzyme became DNA",
+      "The substrate was destroyed by the mutation"
+    ],
+    "correct": 0,
+    "explain": "Changes outside the active site can still affect folding, stability, or movements that influence activity.",
+    "choice_explanations": [
+      "Correct. Protein function can depend on regions beyond the active site.",
+      "Incorrect. Non-active-site changes can still matter.",
+      "Incorrect. Proteins do not become DNA due to such mutations.",
+      "Incorrect. The mutation affects the enzyme, not necessarily the substrate."
+    ],
+    "experiment": "Two enzyme variants differing by one amino acid were compared for catalytic activity."
+  },
+  {
+    "id": "u3-a-20",
+    "difficulty": "analysis",
+    "topic": "light color and photosynthesis",
+    "text": "Plants grown under red and blue light show higher photosynthetic rates than plants grown under green light. Which explanation is best supported?",
+    "choices": [
+      "Photosynthetic pigments absorb red and blue wavelengths more effectively than green",
+      "Green light destroys chloroplasts immediately",
+      "ATP synthase functions only in blue light",
+      "The Calvin cycle requires green light specifically"
+    ],
+    "correct": 0,
+    "explain": "Pigments such as chlorophyll absorb red and blue light more effectively, so those wavelengths drive photosynthesis better.",
+    "choice_explanations": [
+      "Correct. This best explains the wavelength effect.",
+      "Incorrect. Green light does not immediately destroy chloroplasts.",
+      "Incorrect. ATP synthase is not limited to blue light.",
+      "Incorrect. The Calvin cycle depends on ATP and NADPH, not specifically green light."
+    ],
+    "experiment": "Photosynthetic rates were compared in plants exposed to different light colors."
+  }
+]

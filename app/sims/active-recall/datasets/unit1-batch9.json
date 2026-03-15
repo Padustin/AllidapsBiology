@@ -1,0 +1,422 @@
+[
+  {
+    "id": "u1-e-226",
+    "difficulty": "easy",
+    "topic": "polarity",
+    "text": "What is the main reason nonpolar molecules often do not dissolve well in water?",
+    "choices": [
+      "Water molecules are nonpolar too",
+      "Nonpolar molecules cannot form favorable interactions with polar water molecules",
+      "Nonpolar molecules always contain nitrogen",
+      "Nonpolar molecules are always larger than water molecules"
+    ],
+    "correct": 1,
+    "explain": "Water is polar and interacts best with polar or charged substances; nonpolar molecules lack favorable interactions.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-227",
+    "difficulty": "easy",
+    "topic": "hydrogen bonding",
+    "text": "What is the main role of hydrogen bonds in water?",
+    "choices": [
+      "They link hydrogen and oxygen atoms within a single water molecule",
+      "They create weak attractions between separate water molecules",
+      "They transfer electrons completely from hydrogen to oxygen",
+      "They form the sugar-phosphate backbone of water"
+    ],
+    "correct": 1,
+    "explain": "Hydrogen bonds form between neighboring water molecules, producing cohesion and many of water's properties.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-228",
+    "difficulty": "easy",
+    "topic": "nucleotide",
+    "text": "What is the main function of a nucleotide in biology?",
+    "choices": [
+      "It acts as the monomer of nucleic acids",
+      "It is the monomer of proteins",
+      "It is the main storage form of fat",
+      "It is the main structural unit of cellulose"
+    ],
+    "correct": 0,
+    "explain": "Nucleotides are the building blocks of DNA and RNA.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-229",
+    "difficulty": "easy",
+    "topic": "polymer",
+    "text": "What is the best definition of a polymer?",
+    "choices": [
+      "A single atom that can bond to many other atoms",
+      "A large molecule made of many repeating smaller units",
+      "A molecule that contains only carbon and hydrogen",
+      "A bond between two amino acids"
+    ],
+    "correct": 1,
+    "explain": "Polymers are macromolecules composed of repeating monomer units.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-230",
+    "difficulty": "easy",
+    "topic": "unsaturated fatty acid",
+    "text": "Which statement best describes an unsaturated fatty acid?",
+    "choices": [
+      "It contains one or more carbon-carbon double bonds",
+      "It contains no carbon atoms",
+      "It is always solid at room temperature",
+      "It is made of amino acids"
+    ],
+    "correct": 0,
+    "explain": "Unsaturated fatty acids have one or more double bonds that introduce kinks in the chain.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-231",
+    "difficulty": "easy",
+    "topic": "buffer",
+    "text": "Which statement best describes a buffer?",
+    "choices": [
+      "A substance that resists rapid changes in pH",
+      "A substance that permanently fixes pH at exactly 7",
+      "A molecule that digests proteins",
+      "A type of lipid that forms membranes"
+    ],
+    "correct": 0,
+    "explain": "Buffers resist pH changes by absorbing or releasing hydrogen ions, stabilizing conditions.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-232",
+    "difficulty": "hard",
+    "topic": "isomers/polarity",
+    "text": "A scientist compares two molecules with the same molecular formula. One dissolves well in water and participates in rapid energy transfer in cells. The other does not dissolve well in water and is found mainly in stored fat. Which statement best explains this difference?",
+    "choices": [
+      "Molecules with the same formula must have identical chemical behavior",
+      "The two molecules may differ in structure, polarity, or functional groups, leading to different roles",
+      "The water-soluble molecule must be a protein",
+      "Stored fat is always made of nucleotides"
+    ],
+    "correct": 1,
+    "explain": "Structural isomers or differing functional groups can give identical formulas very different properties and biological roles.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-233",
+    "difficulty": "hard",
+    "topic": "surface polarity",
+    "text": "A protein is stable in the cytoplasm because many of its polar amino acids are exposed on the surface. What would most likely happen if several of those surface amino acids were replaced with nonpolar amino acids?",
+    "choices": [
+      "The protein may become less soluble in the aqueous cytoplasm",
+      "The protein would automatically gain more peptide bonds",
+      "The protein would become DNA",
+      "The protein would lose its primary structure completely"
+    ],
+    "correct": 0,
+    "explain": "Replacing polar surface residues with nonpolar ones reduces favorable interactions with water and can decrease solubility.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-234",
+    "difficulty": "hard",
+    "topic": "hydrolysis",
+    "text": "A DNA strand is hydrolyzed into its component monomers. Which molecules would be produced directly?",
+    "choices": [
+      "Amino acids",
+      "Nucleotides",
+      "Fatty acids",
+      "Monosaccharides only"
+    ],
+    "correct": 1,
+    "explain": "Hydrolysis of DNA yields nucleotide monomers (sugar, phosphate, base).",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-235",
+    "difficulty": "hard",
+    "topic": "mutation impact",
+    "text": "A student says, “If a protein’s amino acid sequence changes by only one amino acid, the overall function should remain exactly the same.” Which response is best?",
+    "choices": [
+      "The student is correct because proteins are not sensitive to amino acid sequence",
+      "The student is incorrect because one amino acid change can alter folding, stability, or binding",
+      "The student is incorrect because proteins are made of nucleotides, not amino acids",
+      "The student is correct because primary structure never influences tertiary structure"
+    ],
+    "correct": 1,
+    "explain": "Single substitutions can have major effects on protein structure and function depending on location and properties.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-236",
+    "difficulty": "hard",
+    "topic": "dehydration synthesis",
+    "text": "A researcher forms a long polymer by linking many glucose monomers and removing a water molecule with each bond formed. What process is occurring?",
+    "choices": [
+      "Hydrolysis",
+      "Dehydration synthesis",
+      "Denaturation",
+      "Base pairing"
+    ],
+    "correct": 1,
+    "explain": "Removing water to form covalent bonds between monomers is dehydration synthesis (condensation).",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-237",
+    "difficulty": "hard",
+    "topic": "membrane fluidity",
+    "text": "A scientist studies a membrane made primarily of phospholipids with highly unsaturated tails. Compared with a membrane containing more saturated tails, what is the best prediction?",
+    "choices": [
+      "The unsaturated membrane may be more fluid because the bent tails pack less tightly",
+      "The unsaturated membrane must contain no hydrophilic regions",
+      "The unsaturated membrane will automatically become a protein",
+      "The saturated membrane is always more soluble in water"
+    ],
+    "correct": 0,
+    "explain": "Unsaturated tails create kinks that reduce packing density and increase membrane fluidity.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-238",
+    "difficulty": "hard",
+    "topic": "active site",
+    "text": "A biologist finds that two related enzymes differ in only one amino acid near the active site. One enzyme binds the substrate much more weakly. Which explanation is most likely?",
+    "choices": [
+      "The amino acid difference altered the shape or chemical environment of the active site",
+      "The weaker enzyme must have lost all hydrogen bonds in its structure",
+      "The stronger enzyme must be a carbohydrate",
+      "The weaker enzyme must contain fewer nucleotides"
+    ],
+    "correct": 0,
+    "explain": "Small changes near the active site can change binding geometry or chemistry, reducing affinity.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-239",
+    "difficulty": "hard",
+    "topic": "energy content",
+    "text": "A molecule contains many carbon-hydrogen bonds and relatively little oxygen. Which conclusion is most reasonable?",
+    "choices": [
+      "The molecule may store substantial chemical energy",
+      "The molecule must be highly polar",
+      "The molecule cannot be biological",
+      "The molecule must be RNA"
+    ],
+    "correct": 0,
+    "explain": "C-H rich molecules (lipids) often store significant chemical energy due to bond energetics.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-240",
+    "difficulty": "hard",
+    "topic": "structure-function",
+    "text": "A scientist compares two polymers made from the same monomer. Polymer A is straight and used structurally. Polymer B is highly branched and used for energy storage. Which idea does this best support?",
+    "choices": [
+      "The same monomer can produce polymers with different functions depending on linkage and overall structure",
+      "Polymers built from the same monomer must always have the same role",
+      "Branched molecules cannot store energy",
+      "Structural molecules cannot contain covalent bonds"
+    ],
+    "correct": 0,
+    "explain": "Linkage patterns and branching determine polymer properties and functions despite identical monomers.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-241",
+    "difficulty": "hard",
+    "topic": "denaturation",
+    "text": "A protein is denatured by heat, but chemical analysis shows that its peptide bonds remain intact. Which conclusion is best supported?",
+    "choices": [
+      "Heat disrupted higher-level folding without destroying the amino acid sequence",
+      "Heat removed all amino acids from the protein",
+      "Heat converted the protein into a nucleic acid",
+      "Heat caused dehydration synthesis to add more monomers"
+    ],
+    "correct": 0,
+    "explain": "Denaturation affects secondary/tertiary structure while leaving the primary sequence and peptide bonds intact.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-242",
+    "difficulty": "hard",
+    "topic": "pH change",
+    "text": "A solution changes from pH 6 to pH 4. Which conclusion is correct?",
+    "choices": [
+      "The hydrogen ion concentration decreased by a factor of 100",
+      "The hydrogen ion concentration increased by a factor of 100",
+      "The solution became more basic",
+      "The solution’s pH did not change significantly"
+    ],
+    "correct": 1,
+    "explain": "Each pH unit is a tenfold change in [H+]; two units corresponds to a 100-fold increase in hydrogen ion concentration.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-243",
+    "difficulty": "analysis",
+    "topic": "indicator tests",
+    "text": "Students test three unknown samples with common indicators.\n\nSample A:\nPositive Biuret test\nNegative Benedict’s test\nNegative iodine test\n\nSample B:\nNegative Biuret test\nPositive Benedict’s test\nNegative iodine test\n\nSample C:\nNegative Biuret test\nNegative Benedict’s test\nPositive iodine test\n\nWhich identification is most likely?",
+    "choices": [
+      "A = protein, B = reducing sugar, C = starch",
+      "A = starch, B = protein, C = lipid",
+      "A = reducing sugar, B = protein, C = amino acid",
+      "A = lipid, B = starch, C = protein"
+    ],
+    "correct": 0,
+    "explain": "Biuret indicates protein, Benedict's indicates reducing sugars, and iodine indicates starch.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-244",
+    "difficulty": "analysis",
+    "topic": "disulfide stability",
+    "text": "Researchers expose two proteins to the same high temperature. Protein X loses function quickly, while Protein Y remains functional. Protein Y contains several disulfide bonds, while Protein X has none. Which conclusion is best supported?",
+    "choices": [
+      "Disulfide bonds can contribute to protein stability under stressful conditions",
+      "Disulfide bonds are part of carbohydrate branching",
+      "Protein X must be made of nucleotides",
+      "Protein Y resists heat because it contains no amino acids"
+    ],
+    "correct": 0,
+    "explain": "Covalent disulfide bonds can stabilize tertiary/quaternary structures and increase resistance to denaturation.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-245",
+    "difficulty": "analysis",
+    "topic": "GC content",
+    "text": "A scientist compares two DNA samples of equal length. Sample 1 has 70% G-C base pairs, while Sample 2 has 40% G-C base pairs. Sample 1 requires more heat to separate its strands. Which explanation is best?",
+    "choices": [
+      "G-C pairs contribute more hydrogen bonds than A-T pairs, increasing strand stability",
+      "Sample 1 must be RNA because it is more stable",
+      "Sample 2 contains no phosphodiester bonds",
+      "Heat affects only proteins, not nucleic acids"
+    ],
+    "correct": 0,
+    "explain": "Higher G-C content raises melting temperature because G-C pairs form three hydrogen bonds compared to two for A-T.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-246",
+    "difficulty": "analysis",
+    "topic": "hydrophobic core",
+    "text": "A mutation changes one codon in a gene. The resulting protein contains a charged amino acid where a nonpolar amino acid used to be in the protein interior. The protein now folds poorly. Which explanation is most reasonable?",
+    "choices": [
+      "The mutation likely disrupted hydrophobic interactions that normally stabilize the interior",
+      "The mutation must have eliminated all peptide bonds",
+      "The mutation changed the protein into a phospholipid",
+      "The mutation proves that primary structure does not affect tertiary structure"
+    ],
+    "correct": 0,
+    "explain": "Introducing a charged residue into a hydrophobic core can disrupt packing and destabilize folding.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-247",
+    "difficulty": "analysis",
+    "topic": "phospholipid vs triglyceride",
+    "text": "Students place phospholipids into one beaker of water and triglycerides into another. The phospholipids form organized structures, while the triglycerides form droplets. Which conclusion is best supported?",
+    "choices": [
+      "Amphipathic molecules can self-organize in water differently than mostly nonpolar molecules",
+      "Triglycerides are made of amino acids, so they cannot stay mixed with water",
+      "Phospholipids dissolve completely into individual monomers in water",
+      "Water becomes nonpolar in the presence of phospholipids"
+    ],
+    "correct": 0,
+    "explain": "Phospholipids have hydrophilic heads and hydrophobic tails, enabling bilayer or vesicle formation; triglycerides are hydrophobic and form droplets.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-248",
+    "difficulty": "analysis",
+    "topic": "specific heat",
+    "text": "A lab group measures the temperature change of two equal-volume liquids after identical heating.\n\nLiquid X: +4°C\nLiquid Y: +13°C\n\nWhich inference is most reasonable?",
+    "choices": [
+      "Liquid X likely has a higher specific heat than Liquid Y",
+      "Liquid Y absorbed no heat",
+      "Liquid X must contain starch",
+      "Liquid Y must be acidic"
+    ],
+    "correct": 0,
+    "explain": "Under equal energy input, a smaller temperature change indicates a higher specific heat capacity.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-249",
+    "difficulty": "analysis",
+    "topic": "pH optima",
+    "text": "Researchers test enzyme activity across pH values and obtain the following results:\n\npH 3: very low activity\npH 6: moderate activity\npH 8: highest activity\npH 11: very low activity\n\nWhich conclusion is best supported?",
+    "choices": [
+      "The enzyme has an optimal pH near 8, and extreme pH likely disrupts interactions important for function",
+      "The enzyme functions best whenever hydrogen ions are absent",
+      "The enzyme is a lipid because it is pH-sensitive",
+      "pH affects only substrates, not enzymes"
+    ],
+    "correct": 0,
+    "explain": "Enzymes have pH optima where ionization states favor proper structure and catalysis; extremes disrupt this.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-250",
+    "difficulty": "analysis",
+    "topic": "protein ID",
+    "text": "A biologist analyzes an unknown biomolecule. It contains carbon, hydrogen, oxygen, and nitrogen; it is built from monomers with variable R groups; and changing one monomer can alter the molecule’s final shape and function. Which conclusion is most supported?",
+    "choices": [
+      "The biomolecule is a protein",
+      "The biomolecule is a nucleic acid",
+      "The biomolecule is a triglyceride",
+      "The biomolecule is starch"
+    ],
+    "correct": 0,
+    "explain": "Variable R-group monomers identify amino acids and thus proteins; sequence affects folding and function.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-251",
+    "difficulty": "analysis",
+    "topic": "enzyme specificity",
+    "text": "A teacher gives students two glucose-based polysaccharides. One is readily digested by a human enzyme, while the other is not. Both are made entirely of glucose. Which explanation is best?",
+    "choices": [
+      "The polymers likely differ in bond orientation or branching pattern, affecting enzyme recognition",
+      "The indigestible polymer must contain no carbon",
+      "The digestible polymer must actually be a protein",
+      "Human enzymes digest all glucose polymers equally"
+    ],
+    "correct": 0,
+    "explain": "Enzyme recognition depends on exact linkage orientation and branching, not just monomer identity.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-252",
+    "difficulty": "analysis",
+    "topic": "silent mutation",
+    "text": "A mutation changes one DNA nucleotide, but the amino acid sequence of the protein remains unchanged. The protein functions normally. Which explanation is most likely?",
+    "choices": [
+      "The mutation was silent because multiple codons can encode the same amino acid",
+      "DNA sequence never matters for proteins",
+      "The protein must have been denatured before testing",
+      "The mutation turned DNA into RNA temporarily"
+    ],
+    "correct": 0,
+    "explain": "Genetic code redundancy allows synonymous codons that do not change the encoded amino acid.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-253",
+    "difficulty": "analysis",
+    "topic": "environment and structure",
+    "text": "Researchers compare two enzymes. Enzyme A works in the cytoplasm and has many polar amino acids on its surface. Enzyme B is embedded in a membrane and has many nonpolar amino acids on its surface. Which principle does this best illustrate?",
+    "choices": [
+      "The favored structure of a biomolecule depends on the environment in which it functions",
+      "All enzymes must have identical amino acid compositions",
+      "Membrane proteins are made of lipids rather than amino acids",
+      "Cytoplasmic proteins cannot contain nonpolar amino acids anywhere"
+    ],
+    "correct": 0,
+    "explain": "Surface properties suited to the environment (aqueous vs membrane) support proper folding and function.",
+    "experiment": null
+  }
+]

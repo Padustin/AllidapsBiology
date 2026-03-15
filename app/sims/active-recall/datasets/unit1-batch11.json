@@ -1,0 +1,347 @@
+[
+  {
+    "id": "u1-e-280",
+    "difficulty": "easy",
+    "topic": "R group",
+    "text": "What is the main role of the R group in an amino acid?",
+    "choices": [
+      "It forms the sugar-phosphate backbone of DNA",
+      "It determines the unique chemical properties of the amino acid",
+      "It links amino acids together with hydrogen bonds",
+      "It stores hereditary information"
+    ],
+    "correct": 1,
+    "explain": "The R group (side chain) gives each amino acid its characteristic chemical behavior.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-281",
+    "difficulty": "easy",
+    "topic": "phosphodiester bond",
+    "text": "What is the main role of phosphodiester bonds in nucleic acids?",
+    "choices": [
+      "They join complementary bases across two DNA strands",
+      "They link nucleotides together within a nucleic acid strand",
+      "They connect amino acids in proteins",
+      "They attach fatty acids to glycerol"
+    ],
+    "correct": 1,
+    "explain": "Phosphodiester bonds connect the sugar and phosphate groups of adjacent nucleotides in a strand.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-282",
+    "difficulty": "easy",
+    "topic": "unsaturated fat",
+    "text": "What is the main reason unsaturated fats are often liquid at room temperature?",
+    "choices": [
+      "Their double bonds create bends that prevent tight packing",
+      "They are made of amino acids instead of fatty acids",
+      "They contain no carbon-hydrogen bonds",
+      "They are strongly ionic"
+    ],
+    "correct": 0,
+    "explain": "Double bonds introduce kinks that reduce packing and lower melting point.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-283",
+    "difficulty": "hard",
+    "topic": "surface residues",
+    "text": "A cell contains an enzyme that functions in the aqueous cytoplasm. Which amino acid property would be most favorable for many residues exposed on the enzyme’s surface?",
+    "choices": [
+      "Nonpolar side chains that avoid water",
+      "Polar or charged side chains that interact favorably with water",
+      "Side chains that can only form covalent bonds",
+      "Side chains containing no atoms other than carbon"
+    ],
+    "correct": 1,
+    "explain": "Surface-exposed residues that are polar or charged interact well with water and stabilize soluble proteins.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-284",
+    "difficulty": "hard",
+    "topic": "carbohydrate branching",
+    "text": "A scientist constructs two carbohydrate polymers from glucose. One polymer is highly branched and rapidly broken down for energy release. The other is unbranched and used for structure. Which conclusion is best supported?",
+    "choices": [
+      "The arrangement of glucose monomers influences the molecule’s function",
+      "Glucose can form only one biologically useful polymer",
+      "Structural carbohydrates must contain amino acids",
+      "Highly branched carbohydrates cannot be used for energy storage"
+    ],
+    "correct": 0,
+    "explain": "Linkage patterns and branching determine polymer properties like accessibility to enzymes and structural rigidity.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-285",
+    "difficulty": "hard",
+    "topic": "core mutation",
+    "text": "A mutation changes one amino acid from hydrophobic to hydrophilic in the core of a protein. Which outcome is most likely?",
+    "choices": [
+      "The protein may fold less stably because the hydrophobic interior is disrupted",
+      "The protein will automatically become a carbohydrate",
+      "The protein must gain additional amino acids",
+      "The protein will definitely function better"
+    ],
+    "correct": 0,
+    "explain": "Introducing a polar residue into a hydrophobic core disrupts packing and can destabilize folding.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-286",
+    "difficulty": "hard",
+    "topic": "nucleotide identification",
+    "text": "A researcher breaks a nucleic acid polymer into its monomers and finds that each monomer contains a phosphate group, a five-carbon sugar, and a nitrogenous base. Which conclusion is best?",
+    "choices": [
+      "The polymer was a protein",
+      "The polymer was a nucleic acid made of nucleotides",
+      "The polymer was a lipid bilayer",
+      "The polymer was a carbohydrate made of glucose"
+    ],
+    "correct": 1,
+    "explain": "Those three components define a nucleotide, the monomer of nucleic acids.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-287",
+    "difficulty": "hard",
+    "topic": "hydroxyl groups",
+    "text": "A molecule with many hydroxyl groups dissolves well in water. What is the best explanation?",
+    "choices": [
+      "Hydroxyl groups make the molecule more able to form hydrogen bonds with water",
+      "Hydroxyl groups remove all partial charges from the molecule",
+      "Water dissolves only molecules that contain peptide bonds",
+      "Molecules with hydroxyl groups are always lipids"
+    ],
+    "correct": 0,
+    "explain": "Hydroxyls increase polarity and hydrogen-bonding capacity, improving water solubility.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-288",
+    "difficulty": "easy",
+    "topic": "phospholipid",
+    "text": "A phospholipid differs from a triglyceride primarily because the phospholipid has which feature?",
+    "choices": [
+      "A large carbohydrate chain",
+      "A hydrophilic region that allows interaction with water",
+      "Amino acid monomers joined by peptide bonds",
+      "A sequence of nitrogenous bases"
+    ],
+    "correct": 1,
+    "explain": "Phospholipids have a polar (phosphate-containing) head that interacts with water, enabling membrane formation.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-289",
+    "difficulty": "hard",
+    "topic": "GC stability",
+    "text": "A scientist compares DNA sample X and DNA sample Y. Sample X has more G-C pairs and resists strand separation more strongly. Which statement best explains this?",
+    "choices": [
+      "G-C pairs contribute more hydrogen bonds than A-T pairs",
+      "G-C pairs are covalently bonded across the strands",
+      "A-T pairs contain amino acids instead of bases",
+      "G-C rich DNA must be single-stranded"
+    ],
+    "correct": 0,
+    "explain": "G-C base pairs form three hydrogen bonds (vs two for A-T), increasing duplex stability.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-290",
+    "difficulty": "easy",
+    "topic": "buffers",
+    "text": "A student says, “Buffers make pH changes impossible.” Which response is best?",
+    "choices": [
+      "Correct, because buffers keep pH permanently fixed at one value",
+      "Incorrect, because buffers only resist sudden or large pH changes",
+      "Correct, because buffers remove all hydrogen ions from solution",
+      "Incorrect, because buffers affect only temperature and not pH"
+    ],
+    "correct": 1,
+    "explain": "Buffers resist pH change within a range but can be overwhelmed; they don't make pH immutable.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-291",
+    "difficulty": "hard",
+    "topic": "membrane adaptation",
+    "text": "A protein is moved from an aqueous environment into the hydrophobic interior of a membrane. Which surface change would likely make the protein more stable in the membrane?",
+    "choices": [
+      "More charged amino acids exposed on the surface",
+      "More nonpolar amino acids exposed on the surface",
+      "More phosphate groups added to the outside",
+      "Replacement of peptide bonds with hydrogen bonds"
+    ],
+    "correct": 1,
+    "explain": "Exposing nonpolar residues increases compatibility with the hydrophobic membrane interior.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-292",
+    "difficulty": "hard",
+    "topic": "unsaturated melting",
+    "text": "A lipid sample with many double bonds in its fatty acid tails melts at a lower temperature than a sample with mostly single bonds. Why?",
+    "choices": [
+      "Double bonds increase branching of peptide chains",
+      "Double bonds create kinks that reduce tight packing of the tails",
+      "Double bonds make the molecules strongly hydrophilic",
+      "Double bonds remove all carbon from the molecules"
+    ],
+    "correct": 1,
+    "explain": "Kinks from double bonds reduce van der Waals packing, lowering melting temperature.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-293",
+    "difficulty": "hard",
+    "topic": "silent mutation",
+    "text": "A mutation changes a codon, but the resulting protein keeps the same amino acid at that position. Which explanation is most likely?",
+    "choices": [
+      "The mutation was silent because multiple codons can code for the same amino acid",
+      "The mutation must have occurred in a lipid",
+      "The mutation changed the protein but not the DNA",
+      "The mutation removed a peptide bond from the protein"
+    ],
+    "correct": 0,
+    "explain": "Redundancy in the genetic code allows synonymous codons that do not alter the amino acid sequence.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-294",
+    "difficulty": "hard",
+    "topic": "pH sensitivity",
+    "text": "A researcher compares two enzymes with identical amino acid length. One works at neutral pH, while the other loses function in acidic conditions. Which explanation is most reasonable?",
+    "choices": [
+      "Differences in amino acid composition likely cause different responses to proton concentration",
+      "Enzymes are unaffected by pH",
+      "Acidic conditions convert proteins into carbohydrates",
+      "Neutral pH destroys all enzyme structure"
+    ],
+    "correct": 0,
+    "explain": "pH affects ionization of side chains and can alter structure and activity depending on composition.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-295",
+    "difficulty": "hard",
+    "topic": "monomer differences",
+    "text": "A carbohydrate polymer and a protein are both broken into monomers. Why are the resulting monomers different?",
+    "choices": [
+      "Different biological polymers are made from different types of monomers",
+      "All polymers are built from the same monomer type",
+      "Proteins are not actually polymers",
+      "Carbohydrates are made of nucleotides"
+    ],
+    "correct": 0,
+    "explain": "Carbohydrates are made of sugars; proteins are made of amino acids — different monomer classes.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-296",
+    "difficulty": "hard",
+    "topic": "nonpolar role",
+    "text": "A biologist finds an unknown molecule that is rich in carbon-hydrogen bonds and mostly nonpolar. Which biological role is most likely?",
+    "choices": [
+      "Long-term energy storage",
+      "Immediate storage of genetic information as a nucleotide sequence",
+      "Formation of the sugar-phosphate backbone of DNA",
+      "Maintaining high solubility in water"
+    ],
+    "correct": 0,
+    "explain": "Nonpolar C-H rich molecules (like many lipids) are well-suited for energy storage due to high chemical energy content.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-297",
+    "difficulty": "hard",
+    "topic": "sequence matters",
+    "text": "A researcher builds two proteins using the same amino acids but in different sequences. Why can the proteins behave differently?",
+    "choices": [
+      "Amino acid order influences folding and therefore shape and function",
+      "Sequence order matters only in carbohydrates, not in proteins",
+      "Proteins with the same amino acids always have identical function",
+      "The different sequences automatically create nucleic acids"
+    ],
+    "correct": 0,
+    "explain": "Primary sequence directs folding pathways and ultimately determines structure and function.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-298",
+    "difficulty": "analysis",
+    "topic": "specific heat",
+    "text": "Students compare two samples after identical heating.\n\nSample A temperature change: +5°C\nSample B temperature change: +16°C\n\nWhich conclusion is best supported?",
+    "choices": [
+      "Sample A likely has a higher specific heat than Sample B",
+      "Sample B absorbed no energy",
+      "Sample A must contain DNA",
+      "Sample B must be basic"
+    ],
+    "correct": 0,
+    "explain": "Under equal energy input, a smaller temperature change indicates a higher specific heat capacity.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-299",
+    "difficulty": "analysis",
+    "topic": "pH optima",
+    "text": "Researchers test an enzyme at different pH values and observe the following:\n\npH 3: very low activity\npH 5: moderate activity\npH 7: highest activity\npH 10: very low activity\n\nWhich interpretation is best?",
+    "choices": [
+      "The enzyme functions best near neutral pH, and extreme pH likely disrupts interactions important for its structure or active site",
+      "The enzyme becomes more active every time pH rises",
+      "The enzyme is a carbohydrate because pH affects it",
+      "pH affects only the substrate and not the enzyme itself"
+    ],
+    "correct": 0,
+    "explain": "Enzymes have pH optima where side-chain ionization states favor correct folding and catalysis.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-300",
+    "difficulty": "analysis",
+    "topic": "disulfide loss",
+    "text": "A mutation changes one amino acid in a protein from cysteine to serine. The protein becomes less stable, but its length is unchanged. Which explanation is most likely?",
+    "choices": [
+      "The change may have removed a possible disulfide bond that helped stabilize the protein",
+      "The mutation must have removed the entire primary structure",
+      "The protein became a nucleic acid",
+      "Serine breaks peptide bonds automatically"
+    ],
+    "correct": 0,
+    "explain": "Cysteine can form disulfide bonds that stabilize structure; replacing it with serine removes that covalent stabilizer.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-301",
+    "difficulty": "analysis",
+    "topic": "amphipathic vs droplets",
+    "text": "Students place phospholipids into water and observe vesicle formation. They place triglycerides into water and observe separate droplets. Which conclusion is best supported?",
+    "choices": [
+      "Amphipathic molecules can self-organize into membrane-like structures, while mostly nonpolar lipids tend to separate",
+      "Triglycerides are made of amino acids, so they cannot form droplets",
+      "Phospholipids dissolve into individual nucleotides in water",
+      "Water becomes nonpolar in the presence of phospholipids"
+    ],
+    "correct": 0,
+    "explain": "Phospholipids have hydrophilic heads and hydrophobic tails, promoting bilayer or vesicle assembly; triglycerides form droplets.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-302",
+    "difficulty": "analysis",
+    "topic": "environment and surface",
+    "text": "A scientist studies two proteins with the same length. Protein A has many hydrophilic residues on its surface and is found in cytoplasm. Protein B has many hydrophobic residues on its surface and is embedded in a membrane. What principle is best illustrated?",
+    "choices": [
+      "Surface amino acid properties that match the environment help determine protein stability and function",
+      "All proteins with the same length must have the same function",
+      "Membrane proteins are made from lipids rather than amino acids",
+      "Cytoplasmic proteins cannot contain any nonpolar amino acids"
+    ],
+    "correct": 0,
+    "explain": "Proteins evolve surface chemistries suited to their environments; hydrophobic surfaces favor membrane embedding.",
+    "experiment": null
+  }
+]

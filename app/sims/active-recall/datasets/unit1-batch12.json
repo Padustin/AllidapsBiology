@@ -1,0 +1,527 @@
+[
+  {
+    "id": "u1-e-303",
+    "difficulty": "easy",
+    "topic": "protein diversity",
+    "text": "What is the main reason proteins can have so many different functions?",
+    "choices": [
+      "They are always made of identical monomers in the same sequence",
+      "Their amino acid sequences and resulting three-dimensional shapes can vary greatly",
+      "They contain only carbon and hydrogen",
+      "They are the only biological molecules that can form polymers"
+    ],
+    "choice_explanations": [
+      "Incorrect. Protein diversity comes from variation in amino acid sequence and resulting shape.",
+      "Correct. Different sequences lead to different folds, binding abilities, and functions.",
+      "Incorrect. Proteins also contain nitrogen and often sulfur and oxygen.",
+      "Incorrect. Nucleic acids and carbohydrates can also form polymers."
+    ],
+    "correct": 1,
+    "explain": "Different primary sequences produce different folding patterns and functional surfaces.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-304",
+    "difficulty": "easy",
+    "topic": "hydrogen bond",
+    "text": "What is the main function of hydrogen bonds between complementary DNA bases?",
+    "choices": [
+      "They create the primary structure of a protein",
+      "They help hold the two DNA strands together",
+      "They link nucleotides together in one strand",
+      "They attach fatty acids to glycerol"
+    ],
+    "choice_explanations": [
+      "Incorrect. Protein primary structure is formed by peptide bonds.",
+      "Correct. Hydrogen bonds between complementary bases stabilize the double helix.",
+      "Incorrect. Nucleotides within one strand are linked by phosphodiester bonds.",
+      "Incorrect. Fatty acids are attached to glycerol by ester linkages."
+    ],
+    "correct": 1,
+    "explain": "Hydrogen bonds provide specificity and stability between base pairs across the two strands.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-305",
+    "difficulty": "hard",
+    "topic": "mutation interior",
+    "text": "A researcher compares two amino acid substitutions in a protein. Mutation 1 replaces a nonpolar amino acid in the protein interior with another nonpolar amino acid. Mutation 2 replaces the same original amino acid with a charged amino acid. Which prediction is most reasonable?",
+    "choices": [
+      "Mutation 2 is more likely to disrupt folding because the interior of many proteins favors nonpolar side chains",
+      "Mutation 1 is more disruptive because all amino acid changes affect folding equally",
+      "Mutation 2 will convert the protein into DNA",
+      "Mutation 1 must eliminate all tertiary structure"
+    ],
+    "choice_explanations": [
+      "Correct. Charged residues in the hydrophobic core can strongly disrupt normal packing and stability.",
+      "Incorrect. Amino acid changes do not all have equal structural impact.",
+      "Incorrect. Amino acid substitutions do not change the molecule class.",
+      "Incorrect. Replacing one nonpolar residue with another is often less disruptive."
+    ],
+    "correct": 0,
+    "explain": "Introducing charge into a hydrophobic core destabilizes packing and folding.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-306",
+    "difficulty": "hard",
+    "topic": "buffers",
+    "text": "A solution becomes more acidic after metabolism in a cell. Which cellular feature would be most helpful for limiting damage to proteins?",
+    "choices": [
+      "Buffer molecules that can minimize large changes in hydrogen ion concentration",
+      "More triglycerides stored in lipid droplets",
+      "Fewer peptide bonds in proteins",
+      "Converting all proteins into carbohydrates"
+    ],
+    "choice_explanations": [
+      "Correct. Buffers help stabilize pH and protect molecules whose structure depends on charge interactions.",
+      "Incorrect. Triglyceride storage does not directly stabilize pH.",
+      "Incorrect. Peptide bond number is not the main issue in pH buffering.",
+      "Incorrect. Cells do not solve acidity this way."
+    ],
+    "correct": 0,
+    "explain": "Buffers resist changes in pH and help maintain ionization states important for protein structure.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-307",
+    "difficulty": "hard",
+    "topic": "phospholipid vs triglyceride",
+    "text": "A scientist synthesizes two lipids. Lipid A has three fatty acid tails attached to glycerol. Lipid B has two fatty acid tails and a phosphate-containing head group. Which statement is most accurate?",
+    "choices": [
+      "Lipid A is better suited for membrane bilayers than Lipid B",
+      "Lipid B is amphipathic and better suited for membrane structure",
+      "Lipid A is a nucleic acid because it has three parts",
+      "Lipid B must be a protein because it contains phosphorus"
+    ],
+    "choice_explanations": [
+      "Incorrect. Triglyceride-like molecules are not as well suited for bilayer formation as phospholipids.",
+      "Correct. The phosphate-containing head creates a hydrophilic region while the tails are hydrophobic.",
+      "Incorrect. Nucleic acids are built from nucleotides, not glycerol and fatty acids.",
+      "Incorrect. Presence of phosphorus does not make a molecule a protein."
+    ],
+    "correct": 1,
+    "explain": "Phospholipids are amphipathic and assemble into bilayers; triglycerides form storage droplets.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-308",
+    "difficulty": "hard",
+    "topic": "glycosidic linkage",
+    "text": "A carbohydrate polymer is easily broken down for energy in animal cells. Another carbohydrate polymer made of the same monomer is not digested by the same enzymes. Which explanation is best?",
+    "choices": [
+      "The polymers likely differ in glycosidic linkage arrangement or overall shape",
+      "One polymer must contain amino acids",
+      "Digestive enzymes act equally on all sugar polymers",
+      "The indigestible polymer must actually be a lipid"
+    ],
+    "choice_explanations": [
+      "Correct. Enzyme specificity depends on exact bond orientation and structure.",
+      "Incorrect. The prompt states both are carbohydrate polymers of the same monomer.",
+      "Incorrect. Enzymes are selective.",
+      "Incorrect. The prompt identifies both as carbohydrate polymers."
+    ],
+    "correct": 0,
+    "explain": "Differences in linkage type and polymer architecture determine enzyme accessibility.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-309",
+    "difficulty": "hard",
+    "topic": "binding site mutation",
+    "text": "A mutation in DNA changes a codon so that the amino acid inserted into a protein is smaller and less polar than before. The change occurs at a substrate-binding site. Which outcome is most likely?",
+    "choices": [
+      "Substrate binding may weaken because the site’s shape or chemistry has changed",
+      "The protein will automatically gain more peptide bonds",
+      "The protein must become longer",
+      "The DNA will lose all hydrogen bonds"
+    ],
+    "choice_explanations": [
+      "Correct. Even one amino acid change in a binding site can alter substrate fit and interactions.",
+      "Incorrect. A codon substitution does not add extra peptide bonds.",
+      "Incorrect. A substitution does not necessarily change protein length.",
+      "Incorrect. One codon change does not eliminate all DNA hydrogen bonds."
+    ],
+    "correct": 0,
+    "explain": "Altered side-chain size or polarity can change binding affinity and catalytic efficiency.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-310",
+    "difficulty": "hard",
+    "topic": "specific heat",
+    "text": "A researcher measures how much heat is needed to raise the temperature of equal volumes of two liquids. Liquid X requires much more heat than Liquid Y. What is the best conclusion?",
+    "choices": [
+      "Liquid X likely has a higher specific heat and resists temperature change more strongly",
+      "Liquid Y must contain more hydrogen bonds",
+      "Liquid X cannot absorb thermal energy",
+      "Liquid Y must be a protein solution"
+    ],
+    "choice_explanations": [
+      "Correct. Requiring more heat for the same temperature increase means a higher specific heat.",
+      "Incorrect. The data do not directly prove that.",
+      "Incorrect. It absorbs thermal energy; it just changes temperature less.",
+      "Incorrect. The result does not identify the exact composition."
+    ],
+    "correct": 0,
+    "explain": "Specific heat describes how much energy is needed per unit temperature change.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-311",
+    "difficulty": "hard",
+    "topic": "DNA-binding",
+    "text": "A DNA-binding protein has several positively charged amino acids on its surface. Why might these be especially important?",
+    "choices": [
+      "They can interact favorably with the negatively charged phosphate backbone of DNA",
+      "They make the protein behave like a triglyceride",
+      "They prevent the protein from ever folding",
+      "They replace the need for peptide bonds"
+    ],
+    "choice_explanations": [
+      "Correct. Electrostatic attraction often helps DNA-binding proteins interact with nucleic acids.",
+      "Incorrect. Surface charge does not make a protein a lipid.",
+      "Incorrect. Charged residues can contribute to normal folding and function.",
+      "Incorrect. Peptide bonds are still required for protein structure."
+    ],
+    "correct": 0,
+    "explain": "Positive surface charges complement DNA’s negatively charged backbone and assist binding.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-312",
+    "difficulty": "hard",
+    "topic": "membrane environment",
+    "text": "A biologist finds that a membrane protein has many hydrophobic amino acids facing outward. Which environment most likely surrounds that protein surface?",
+    "choices": [
+      "The watery cytoplasm",
+      "The hydrophobic interior of a phospholipid bilayer",
+      "Blood plasma only",
+      "A starch granule"
+    ],
+    "choice_explanations": [
+      "Incorrect. Hydrophobic outward-facing residues are less favorable in aqueous environments.",
+      "Correct. Nonpolar residues are well suited to interact with membrane interiors.",
+      "Incorrect. Blood plasma is aqueous.",
+      "Incorrect. Protein surface properties do not suggest association with starch here."
+    ],
+    "correct": 1,
+    "explain": "Hydrophobic surfaces are compatible with the nonpolar membrane interior.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-313",
+    "difficulty": "hard",
+    "topic": "amino acid identification",
+    "text": "A researcher breaks down an unknown polymer. The monomers contain a central carbon attached to an amino group, a carboxyl group, a hydrogen, and a variable side chain. Which conclusion is most supported?",
+    "choices": [
+      "The polymer was a protein",
+      "The polymer was a nucleic acid",
+      "The polymer was a phospholipid",
+      "The polymer was glycogen"
+    ],
+    "choice_explanations": [
+      "Correct. That monomer description identifies amino acids.",
+      "Incorrect. Nucleic acids are built from nucleotides, not amino acids.",
+      "Incorrect. Phospholipids are not amino-acid polymers.",
+      "Incorrect. Glycogen is a glucose polymer."
+    ],
+    "correct": 0,
+    "explain": "Amino acids have the described backbone and variable side chain.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-314",
+    "difficulty": "hard",
+    "topic": "water properties",
+    "text": "A student states that water’s cohesion and high specific heat both result from hydrogen bonding. Which response is best?",
+    "choices": [
+      "The student is correct because hydrogen bonding underlies both properties",
+      "The student is incorrect because hydrogen bonding affects only cohesion",
+      "The student is incorrect because water is nonpolar",
+      "The student is correct only if salts are dissolved in the water"
+    ],
+    "choice_explanations": [
+      "Correct. Hydrogen bonds help water molecules stick together and resist rapid temperature changes.",
+      "Incorrect. Hydrogen bonding also contributes to high specific heat.",
+      "Incorrect. Water is polar.",
+      "Incorrect. These are intrinsic properties of water itself."
+    ],
+    "correct": 0,
+    "explain": "Hydrogen bonding is central to both cohesion and water’s heat capacity.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-315",
+    "difficulty": "hard",
+    "topic": "GC content",
+    "text": "A scientist compares two DNA molecules of equal length. Molecule A has many more G-C base pairs than Molecule B. Which prediction is most reasonable?",
+    "choices": [
+      "Molecule A may require more energy to separate into single strands",
+      "Molecule A must be RNA",
+      "Molecule B cannot replicate",
+      "Molecule A lacks phosphodiester bonds"
+    ],
+    "choice_explanations": [
+      "Correct. G-C pairs form three hydrogen bonds, increasing stability.",
+      "Incorrect. G-C content does not make a molecule RNA.",
+      "Incorrect. Lower G-C content does not prevent replication.",
+      "Incorrect. DNA strands contain phosphodiester bonds regardless of base composition."
+    ],
+    "correct": 0,
+    "explain": "Higher G-C percentage often increases duplex thermal stability.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-316",
+    "difficulty": "hard",
+    "topic": "enzyme pH",
+    "text": "An enzyme catalyzes a reaction best at pH 7, but its activity drops at pH 3 and pH 10. Which explanation is best?",
+    "choices": [
+      "Extreme pH likely alters side-chain charges and disrupts active-site structure or substrate interaction",
+      "The enzyme works poorly because all peptide bonds break at pH 3 and pH 10",
+      "The enzyme becomes a lipid at extreme pH",
+      "pH affects only the substrate and never the enzyme"
+    ],
+    "choice_explanations": [
+      "Correct. pH affects ionization states and can change enzyme shape and binding.",
+      "Incorrect. Loss of activity usually reflects denaturation or altered interactions, not total peptide bond destruction.",
+      "Incorrect. Proteins do not convert into lipids because of pH.",
+      "Incorrect. pH can affect both."
+    ],
+    "correct": 0,
+    "explain": "Activity peaks at the enzyme’s pH optimum where ionizable groups support catalysis.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-317",
+    "difficulty": "easy",
+    "topic": "energy storage",
+    "text": "A cell must store energy compactly for long periods. Which macromolecule type is generally best suited for this role?",
+    "choices": [
+      "Lipids, because they contain many energy-rich carbon-hydrogen bonds",
+      "Proteins, because they are always the main energy reserve",
+      "Nucleic acids, because they are highly nonpolar",
+      "Water, because it contains hydrogen"
+    ],
+    "choice_explanations": [
+      "Correct. Lipids are efficient long-term energy storage molecules.",
+      "Incorrect. Proteins are not usually the primary long-term energy storage form.",
+      "Incorrect. Nucleic acids primarily store genetic information.",
+      "Incorrect. Water is not an energy storage macromolecule."
+    ],
+    "correct": 0,
+    "explain": "Lipids have dense C–H bonds that yield high energy upon oxidation.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-318",
+    "difficulty": "hard",
+    "topic": "quaternary",
+    "text": "A protein with multiple subunits loses function when one subunit no longer associates with the others after mutation. Which level of protein structure was most directly affected?",
+    "choices": [
+      "Primary structure only",
+      "Secondary structure only",
+      "Quaternary structure",
+      "Phosphodiester structure"
+    ],
+    "choice_explanations": [
+      "Incorrect. The issue specifically involves interaction among subunits.",
+      "Incorrect. Secondary structure refers to local folding patterns.",
+      "Correct. Quaternary structure involves the arrangement of multiple polypeptide subunits.",
+      "Incorrect. Proteins do not have phosphodiester structure."
+    ],
+    "correct": 2,
+    "explain": "Loss of subunit association disrupts quaternary-level organization and function.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-319",
+    "difficulty": "hard",
+    "topic": "isomers",
+    "text": "A researcher finds two molecules with identical molecular formulas but different biological roles. What best explains this observation?",
+    "choices": [
+      "Molecules can be isomers with different arrangements of atoms and therefore different properties",
+      "Molecules with the same formula must always behave identically",
+      "One of the molecules must not contain carbon",
+      "Biological role depends only on molecular mass"
+    ],
+    "choice_explanations": [
+      "Correct. Structural differences can lead to different functions.",
+      "Incorrect. Same formula does not guarantee same structure or role.",
+      "Incorrect. If the formulas are identical, their elemental composition matches.",
+      "Incorrect. Structure and chemistry matter more than mass alone."
+    ],
+    "correct": 0,
+    "explain": "Isomerism changes geometry or bonding while preserving formula, altering properties.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-320",
+    "difficulty": "hard",
+    "topic": "membrane fluidity",
+    "text": "A phospholipid-rich membrane is cooled, and later the membrane becomes less fluid. Which structural explanation is most relevant?",
+    "choices": [
+      "Lower temperature reduces molecular movement and allows tighter packing of the tails",
+      "Cooling removes all hydrophilic head groups",
+      "Cooling converts phospholipids into proteins",
+      "Cooling breaks every covalent bond in the membrane"
+    ],
+    "choice_explanations": [
+      "Correct. Cooling generally decreases membrane fluidity.",
+      "Incorrect. Temperature does not remove the head groups.",
+      "Incorrect. Temperature change does not change lipid class.",
+      "Incorrect. Reduced fluidity is not caused by total bond breakage."
+    ],
+    "correct": 0,
+    "explain": "Temperature affects kinetic energy and how tightly lipid tails pack together.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-321",
+    "difficulty": "hard",
+    "topic": "disulfide",
+    "text": "A mutation replaces a cysteine with a different amino acid that cannot form disulfide bonds. Which outcome is most likely in some proteins?",
+    "choices": [
+      "Reduced structural stability because a covalent stabilizing interaction may be lost",
+      "Immediate conversion of the protein into DNA",
+      "Elimination of all hydrogen bonds in the protein",
+      "Automatic increase in protein length"
+    ],
+    "choice_explanations": [
+      "Correct. Disulfide bonds can strengthen tertiary or quaternary structure.",
+      "Incorrect. Proteins do not change into DNA this way.",
+      "Incorrect. One cysteine substitution does not remove all hydrogen bonds.",
+      "Incorrect. A substitution does not necessarily change length."
+    ],
+    "correct": 0,
+    "explain": "Loss of a disulfide bond can reduce protein stability in some contexts.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-322",
+    "difficulty": "hard",
+    "topic": "RNA identification",
+    "text": "A researcher hydrolyzes a nucleic acid and finds one monomer with ribose and uracil. Which conclusion is best?",
+    "choices": [
+      "The monomer came from RNA",
+      "The monomer came from DNA",
+      "The monomer came from a triglyceride",
+      "The monomer came from cellulose"
+    ],
+    "choice_explanations": [
+      "Correct. RNA nucleotides contain ribose and uracil.",
+      "Incorrect. DNA contains deoxyribose and thymine.",
+      "Incorrect. Triglycerides are lipids, not nucleotide polymers.",
+      "Incorrect. Cellulose is a glucose polymer."
+    ],
+    "correct": 0,
+    "explain": "Ribose + uracil indicates an RNA nucleotide.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-323",
+    "difficulty": "analysis",
+    "topic": "indicator tests",
+    "text": "Students compare four unknown samples with indicator tests.\n\nSample A:\nBenedict’s positive\nBiuret negative\nIodine negative\n\nSample B:\nBenedict’s negative\nBiuret positive\nIodine negative\n\nSample C:\nBenedict’s negative\nBiuret negative\nIodine positive\n\nSample D:\nBenedict’s negative\nBiuret negative\nForms an oily translucent spot on paper\n\nWhich matching is most likely?",
+    "choices": [
+      "A = reducing sugar, B = protein, C = starch, D = lipid",
+      "A = protein, B = lipid, C = reducing sugar, D = starch",
+      "A = starch, B = reducing sugar, C = protein, D = nucleic acid",
+      "A = lipid, B = starch, C = protein, D = reducing sugar"
+    ],
+    "choice_explanations": [
+      "Correct. Each indicator result matches the typical test for those biomolecules.",
+      "Incorrect. The test patterns do not match that assignment.",
+      "Incorrect. This reverses the Benedict’s, Biuret, and iodine interpretations.",
+      "Incorrect. The observed tests do not support that ordering."
+    ],
+    "correct": 0,
+    "explain": "Benedict's indicates reducing sugars, Biuret indicates peptide bonds (proteins), iodine indicates starch, oily spot indicates lipids.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-324",
+    "difficulty": "analysis",
+    "topic": "electrostatic binding",
+    "text": "A scientist studies two related enzymes. One enzyme has a negatively charged amino acid at a binding site and binds a positively charged substrate strongly. A mutation changes that amino acid to a positively charged one, and binding weakens. Which explanation is best?",
+    "choices": [
+      "The mutation likely disrupted an electrostatic attraction that helped binding",
+      "The mutation must have lengthened the enzyme",
+      "The mutation proves primary structure is unimportant",
+      "The enzyme has become a lipid"
+    ],
+    "choice_explanations": [
+      "Correct. Opposite charges attract; changing to the same charge can weaken interaction.",
+      "Incorrect. A single substitution does not necessarily change length.",
+      "Incorrect. The scenario shows the opposite.",
+      "Incorrect. A protein does not become a lipid because of one amino acid substitution."
+    ],
+    "correct": 0,
+    "explain": "Electrostatic complementarity often contributes to binding specificity.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-325",
+    "difficulty": "analysis",
+    "topic": "buffering capacity",
+    "text": "A class measures pH after adding the same small amount of acid to two solutions.\n\nSolution X: pH changes from 7.0 to 6.8\nSolution Y: pH changes from 7.0 to 4.9\n\nWhich conclusion is best supported?",
+    "choices": [
+      "Solution X has greater buffering capacity",
+      "Solution Y has greater buffering capacity",
+      "Solution X contains no water",
+      "Solution Y must contain more proteins"
+    ],
+    "choice_explanations": [
+      "Correct. Smaller pH change indicates better resistance to added acid.",
+      "Incorrect. Large pH change means weaker buffering.",
+      "Incorrect. The data do not suggest that.",
+      "Incorrect. The result only supports a conclusion about pH buffering, not protein amount."
+    ],
+    "correct": 0,
+    "explain": "Buffers stabilize pH changes; a smaller shift indicates stronger buffering in the tested range.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-326",
+    "difficulty": "analysis",
+    "topic": "protein surface chemistry",
+    "text": "Researchers compare two proteins with the same amino acid length. Protein A contains many hydrophilic residues on the outside and functions in cytoplasm. Protein B contains many hydrophobic residues on the outside and functions in a membrane. Which principle is most directly supported?",
+    "choices": [
+      "Protein surface chemistry is shaped by the environment in which the protein functions",
+      "All proteins with the same length behave the same way",
+      "Membrane proteins are made of phospholipids rather than amino acids",
+      "Cytoplasmic proteins cannot contain nonpolar residues at all"
+    ],
+    "choice_explanations": [
+      "Correct. Stable and functional proteins often match their surroundings chemically.",
+      "Incorrect. Length alone does not determine function.",
+      "Incorrect. Membrane proteins are still proteins.",
+      "Incorrect. They often contain nonpolar residues internally."
+    ],
+    "correct": 0,
+    "explain": "Surface residue polarity tends to reflect the protein’s working environment.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-327",
+    "difficulty": "analysis",
+    "topic": "GC thermal stability",
+    "text": "A DNA sample with high G-C content is compared with one with lower G-C content. The high G-C sample requires a higher temperature for strand separation. Which explanation is best supported?",
+    "choices": [
+      "Greater G-C content increases hydrogen bonding and often raises thermal stability",
+      "High G-C DNA must be RNA",
+      "The lower G-C DNA has no sugar-phosphate backbone",
+      "Only proteins are affected by heating"
+    ],
+    "choice_explanations": [
+      "Correct. G-C base pairs contribute more hydrogen bonds per pair.",
+      "Incorrect. G-C content does not determine whether a molecule is RNA.",
+      "Incorrect. Both DNA samples have sugar-phosphate backbones.",
+      "Incorrect. Nucleic acid strand separation also depends on heat."
+    ],
+    "correct": 0,
+    "explain": "G-C pairs form three hydrogen bonds versus two for A-T, increasing stability and melting temperature.",
+    "experiment": null
+  }
+]

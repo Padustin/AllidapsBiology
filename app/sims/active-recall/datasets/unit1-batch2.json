@@ -1,0 +1,422 @@
+[
+  {
+    "id": "u1-e-30",
+    "difficulty": "easy",
+    "topic": "dehydration synthesis",
+    "text": "What is dehydration synthesis?",
+    "choices": [
+      "A reaction that uses water to break a polymer into monomers",
+      "A reaction that removes water to join smaller molecules into a larger molecule",
+      "A reaction that denatures proteins by heat",
+      "A reaction that turns lipids into carbohydrates"
+    ],
+    "correct": 1,
+    "explain": "Dehydration synthesis joins subunits by removing water to form covalent bonds.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-31",
+    "difficulty": "easy",
+    "topic": "hydrolysis",
+    "text": "What is hydrolysis?",
+    "choices": [
+      "A reaction that adds water to break a larger molecule into smaller units",
+      "A reaction that removes water to form peptide bonds",
+      "A type of ionic bond in water",
+      "A process that always builds polymers"
+    ],
+    "correct": 0,
+    "explain": "Hydrolysis adds water to break covalent bonds and split polymers into monomers.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-32",
+    "difficulty": "easy",
+    "topic": "lipids",
+    "text": "Which macromolecule is most closely associated with long-term energy storage?",
+    "choices": [
+      "Carbohydrates",
+      "Lipids",
+      "Nucleic acids",
+      "Proteins"
+    ],
+    "correct": 1,
+    "explain": "Lipids are energy-dense molecules used for long-term energy storage due to many C-H bonds.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-33",
+    "difficulty": "easy",
+    "topic": "secondary structure",
+    "text": "Which level of protein structure is formed by hydrogen bonding along the backbone of the polypeptide?",
+    "choices": [
+      "Primary structure",
+      "Secondary structure",
+      "Tertiary structure",
+      "Quaternary structure"
+    ],
+    "correct": 1,
+    "explain": "Secondary structure (alpha helices, beta sheets) arises from hydrogen bonds between backbone atoms.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-34",
+    "difficulty": "easy",
+    "topic": "nucleic acids",
+    "text": "What is the main function of nucleic acids?",
+    "choices": [
+      "To provide quick insulation",
+      "To store and transmit genetic information",
+      "To speed up all chemical reactions",
+      "To form the main structure of cell membranes"
+    ],
+    "correct": 1,
+    "explain": "DNA and RNA store and transmit genetic information necessary for heredity and protein synthesis.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-35",
+    "difficulty": "easy",
+    "topic": "amino acid properties",
+    "text": "Which part of an amino acid differs among different amino acids?",
+    "choices": [
+      "The amino group",
+      "The carboxyl group",
+      "The R group",
+      "The peptide bond"
+    ],
+    "correct": 2,
+    "explain": "The R group (side chain) varies among amino acids and determines their chemical properties.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-36",
+    "difficulty": "easy",
+    "topic": "peptide bond",
+    "text": "What kind of bond joins amino acids together in a protein?",
+    "choices": [
+      "Glycosidic bond",
+      "Hydrogen bond",
+      "Peptide bond",
+      "Phosphodiester bond"
+    ],
+    "correct": 2,
+    "explain": "Peptide bonds form between the amino group of one amino acid and the carboxyl group of another.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-37",
+    "difficulty": "easy",
+    "topic": "phospholipid",
+    "text": "Which statement best describes a phospholipid?",
+    "choices": [
+      "It contains glycerol, three fatty acids, and no polar region",
+      "It contains a hydrophilic phosphate head and hydrophobic fatty acid tails",
+      "It is a polymer made of repeating amino acids",
+      "It is the monomer of DNA"
+    ],
+    "correct": 1,
+    "explain": "Phospholipids are amphipathic with a polar head group and nonpolar tails, enabling membrane formation.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-38",
+    "difficulty": "easy",
+    "topic": "buffer",
+    "text": "What is a buffer?",
+    "choices": [
+      "A substance that always makes a solution neutral",
+      "A substance that resists sudden changes in pH",
+      "A molecule that dissolves only lipids",
+      "A type of enzyme that breaks down acids"
+    ],
+    "correct": 1,
+    "explain": "Buffers stabilize pH by absorbing or releasing H+ or OH- when acids or bases are added.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-39",
+    "difficulty": "easy",
+    "topic": "nucleic acid bases",
+    "text": "Which nitrogenous base is found in RNA but not DNA?",
+    "choices": [
+      "Thymine",
+      "Uracil",
+      "Guanine",
+      "Cytosine"
+    ],
+    "correct": 1,
+    "explain": "RNA contains uracil (U) instead of thymine (T).",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-40",
+    "difficulty": "hard",
+    "topic": "dehydration synthesis",
+    "text": "A student builds a polymer by repeatedly joining monomers and releasing one water molecule each time a bond forms. Which statement best explains the process?",
+    "choices": [
+      "The student is carrying out hydrolysis because water is involved",
+      "The student is carrying out dehydration synthesis because water is removed as the polymer is assembled",
+      "The student is denaturing the monomers",
+      "The student is converting monomers into ions"
+    ],
+    "correct": 1,
+    "explain": "Removing water to form bonds is dehydration synthesis; hydrolysis is the reverse process.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-41",
+    "difficulty": "hard",
+    "topic": "amino acid properties",
+    "text": "A protein is moved from a watery environment into the interior of a membrane. Which amino acid side chains would most likely be favored on the surface of the protein in its new location?",
+    "choices": [
+      "Charged and highly polar side chains",
+      "Nonpolar side chains",
+      "Only glycine residues",
+      "Side chains containing phosphate groups only"
+    ],
+    "correct": 1,
+    "explain": "Nonpolar side chains are favored in hydrophobic membrane interiors because they interact better with the lipid tails.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-42",
+    "difficulty": "hard",
+    "topic": "structure-function",
+    "text": "A biologist compares two polysaccharides. Both contain many monosaccharides, but one serves mainly as energy storage while the other serves mainly as structural support. Which explanation is best?",
+    "choices": [
+      "Their different functions likely result from differences in monomer arrangement and bond type",
+      "One must contain nitrogen, so it becomes structural",
+      "Energy-storage carbohydrates are always lipids",
+      "Structural carbohydrates do not contain covalent bonds"
+    ],
+    "correct": 0,
+    "explain": "Glycosidic linkage type and monomer arrangement determine the resulting polymer's structure and function.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-43",
+    "difficulty": "hard",
+    "topic": "pH",
+    "text": "A solution has a pH of 5 and another has a pH of 7. Which statement is correct?",
+    "choices": [
+      "The pH 7 solution has a greater hydrogen ion concentration",
+      "The pH 5 solution is more acidic and has a higher hydrogen ion concentration",
+      "Both solutions have the same acidity because both contain water",
+      "The pH 5 solution is basic because 5 is a large number"
+    ],
+    "correct": 1,
+    "explain": "Lower pH indicates higher H+ concentration; pH 5 is more acidic than pH 7.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-44",
+    "difficulty": "hard",
+    "topic": "protein folding",
+    "text": "A researcher substitutes a hydrophobic amino acid in the middle of a protein with a hydrophilic amino acid. Why could this disrupt protein function?",
+    "choices": [
+      "The change could interfere with folding because hydrophobic interactions often help stabilize the protein’s interior",
+      "The change will always break all peptide bonds in the protein",
+      "The change converts the protein into DNA",
+      "The change will make the protein have no primary structure"
+    ],
+    "correct": 0,
+    "explain": "Replacing interior hydrophobic residues with hydrophilic ones can disrupt core packing and destabilize tertiary structure.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-45",
+    "difficulty": "hard",
+    "topic": "unsaturated fats",
+    "text": "Which statement best explains why unsaturated fats are often liquid at room temperature?",
+    "choices": [
+      "Their double bonds create bends that prevent the fatty acid tails from packing tightly",
+      "They contain peptide bonds that increase movement",
+      "They are highly polar and dissolve in water",
+      "Their glycerol molecules evaporate quickly"
+    ],
+    "correct": 0,
+    "explain": "Double bonds introduce kinks in fatty acid tails, reducing tight packing and lowering melting point.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-46",
+    "difficulty": "hard",
+    "topic": "buffers",
+    "text": "A scientist adds an acid to two solutions. In Solution X, the pH changes only slightly. In Solution Y, the pH drops sharply. Which conclusion is most likely?",
+    "choices": [
+      "Solution Y is the better buffer",
+      "Solution X contains substances that resist changes in hydrogen ion concentration",
+      "Solution X has no water in it",
+      "Solution Y has more lipids"
+    ],
+    "correct": 1,
+    "explain": "A buffer resists pH change by neutralizing added acid or base; Solution X behaves like a buffer.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-47",
+    "difficulty": "hard",
+    "topic": "nucleic acids",
+    "text": "A student says, ‘DNA and RNA are identical except one is longer.’ Which response is best?",
+    "choices": [
+      "The student is correct because both contain amino acids",
+      "The student is incorrect because DNA and RNA can differ in sugar type, nitrogenous bases, and typical strand structure",
+      "The student is incorrect because RNA is a lipid",
+      "The student is correct because both are made of phospholipids"
+    ],
+    "correct": 1,
+    "explain": "DNA and RNA differ in sugar (deoxyribose vs ribose), bases (T vs U), and often strand structure (double vs single).",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-48",
+    "difficulty": "hard",
+    "topic": "energy storage",
+    "text": "Why are triglycerides better for long-term energy storage than many carbohydrates on a gram-for-gram basis?",
+    "choices": [
+      "Triglycerides contain more oxygen atoms, which lowers their energy content",
+      "Triglycerides contain many carbon-hydrogen bonds that store large amounts of energy",
+      "Carbohydrates cannot be broken down by cells",
+      "Triglycerides are polar, so they release energy faster"
+    ],
+    "correct": 1,
+    "explain": "Hydrocarbon chains in triglycerides are energy-rich (many C-H bonds), making them efficient energy stores.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-49",
+    "difficulty": "hard",
+    "topic": "active site mutation",
+    "text": "A mutation changes the sequence of amino acids in an enzyme’s active site. Which outcome is most likely?",
+    "choices": [
+      "The enzyme’s ability to bind its substrate may decrease",
+      "The enzyme will become a carbohydrate",
+      "The enzyme’s peptide bonds will all disappear",
+      "The enzyme will automatically function better"
+    ],
+    "correct": 0,
+    "explain": "Active site geometry and chemistry are crucial for substrate binding; substitutions can reduce binding and activity.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-50",
+    "difficulty": "analysis",
+    "topic": "enzyme specificity",
+    "text": "Students place equal masses of starch, glucose, and cellulose in separate test tubes with an enzyme that breaks glycosidic bonds in starch. After incubation, only one tube shows a large increase in free glucose. Which result is most likely?",
+    "choices": [
+      "The glucose tube shows the largest increase because glucose is made of many hidden starch bonds",
+      "The starch tube shows the largest increase because the enzyme is specific to the bonds found in starch",
+      "The cellulose tube shows the largest increase because cellulose and starch are identical",
+      "All three tubes show the same increase because enzymes act on all carbohydrates equally"
+    ],
+    "correct": 1,
+    "explain": "Enzymes are substrate-specific; a starch-specific enzyme will release glucose primarily from starch.",
+    "experiment": "Equal masses of starch, glucose, and cellulose were incubated with a starch-specific enzyme; only starch produced large increases in free glucose."
+  },
+  {
+    "id": "u1-a-51",
+    "difficulty": "analysis",
+    "topic": "protein denaturation",
+    "text": "A lab group heats two samples of a protein enzyme. Sample 1 is kept at neutral pH. Sample 2 is kept at an extreme pH. Sample 2 loses activity much faster. Which conclusion is best supported?",
+    "choices": [
+      "Extreme pH likely altered interactions among amino acid side chains, changing the enzyme’s shape",
+      "Extreme pH changed the sequence of DNA nucleotides inside the enzyme",
+      "Extreme pH always breaks every peptide bond immediately",
+      "Sample 2 lost activity because water stopped being polar"
+    ],
+    "correct": 0,
+    "explain": "Extreme pH can alter side-chain charges and disrupt stabilizing interactions, causing denaturation and loss of activity.",
+    "experiment": "Two enzyme samples were incubated at different pH values and activity was measured over time; the extreme-pH sample lost function faster."
+  },
+  {
+    "id": "u1-a-52",
+    "difficulty": "analysis",
+    "topic": "phospholipid self-assembly",
+    "text": "A researcher designs an experiment to test whether a phospholipid’s structure influences membrane formation. The researcher places phospholipids in water and observes that they spontaneously arrange into spherical structures. Which explanation best supports this observation?",
+    "choices": [
+      "The hydrophobic tails move away from water while the hydrophilic heads remain in contact with water",
+      "The phosphate heads avoid water and bury themselves in the center",
+      "The fatty acid tails form hydrogen bonds with water more strongly than the heads do",
+      "The phospholipids polymerize into nucleic acids"
+    ],
+    "correct": 0,
+    "explain": "Amphipathic phospholipids self-assemble so hydrophobic tails are sequestered away from water and hydrophilic heads face the aqueous environment.",
+    "experiment": "Phospholipids were introduced into water and observed to self-assemble into micelles or bilayers, demonstrating amphipathic-driven organization."
+  },
+  {
+    "id": "u1-a-53",
+    "difficulty": "analysis",
+    "topic": "specific heat",
+    "text": "In an investigation, students compare two solutions with equal volumes. They add the same amount of heat to each. Solution A rises by 4°C, while Solution B rises by 12°C. Which claim is best supported?",
+    "choices": [
+      "Solution A likely has a higher specific heat than Solution B",
+      "Solution B likely contains more water because it changed temperature more",
+      "Solution A did not absorb any energy",
+      "Solution B must be acidic"
+    ],
+    "correct": 0,
+    "explain": "A smaller temperature change under equal heating suggests a higher specific heat (Solution A).",
+    "experiment": "Equal heating was applied to two solutions and temperature change was recorded; Solution A changed less."
+  },
+  {
+    "id": "u1-a-54",
+    "difficulty": "analysis",
+    "topic": "active site mutation",
+    "text": "A mutation in a gene changes one codon in a protein-coding region. The resulting protein still has the same length but no longer binds its target molecule effectively. Which hypothesis is most reasonable?",
+    "choices": [
+      "The mutation likely changed an amino acid important for the protein’s shape or binding region",
+      "The mutation must have deleted the entire gene",
+      "The mutation turned the protein into a polysaccharide",
+      "The mutation proves that primary structure never affects function"
+    ],
+    "correct": 0,
+    "explain": "A single amino acid change in a binding site can alter shape or chemistry and reduce binding affinity.",
+    "experiment": "The mutant protein was assayed for binding activity and showed decreased affinity compared to wild type."
+  },
+  {
+    "id": "u1-a-55",
+    "difficulty": "analysis",
+    "topic": "saturated vs unsaturated",
+    "text": "Students compare two lipid samples. Sample X is mostly saturated fatty acids. Sample Y is mostly unsaturated fatty acids. At the same temperature, X is more solid and Y is more liquid. Which explanation best fits the data?",
+    "choices": [
+      "Unsaturated fatty acids contain double bonds that reduce tight packing",
+      "Saturated fatty acids are more polar than unsaturated fatty acids",
+      "Unsaturated fatty acids contain peptide bonds that increase fluidity",
+      "Saturated fatty acids always dissolve in water more easily"
+    ],
+    "correct": 0,
+    "explain": "Double bonds introduce kinks that prevent tight packing, making unsaturated fats more fluid at room temperature.",
+    "experiment": "Melting/phase behavior of two lipid samples was compared at set temperatures; unsaturated-rich sample was more liquid."
+  },
+  {
+    "id": "u1-a-56",
+    "difficulty": "analysis",
+    "topic": "protein identification",
+    "text": "A student tests an unknown molecule. The molecule contains carbon, hydrogen, oxygen, and nitrogen. It is built from monomers with amino groups, carboxyl groups, and variable side chains. Which conclusion is most supported?",
+    "choices": [
+      "The molecule is most likely a nucleic acid",
+      "The molecule is most likely a protein",
+      "The molecule is most likely a triglyceride",
+      "The molecule is most likely starch"
+    ],
+    "correct": 1,
+    "explain": "The described monomers are amino acids, indicating the molecule is a protein.",
+    "experiment": "Elemental analysis and monomer identification indicated amino-acid-like subunits and characteristic functional groups."
+  },
+  {
+    "id": "u1-a-57",
+    "difficulty": "analysis",
+    "topic": "blood buffering",
+    "text": "A researcher measures the effect of adding a small amount of base to blood and finds that the pH changes only slightly. Which property of blood is most responsible for this result?",
+    "choices": [
+      "Blood contains buffer systems that minimize changes in pH",
+      "Blood contains only neutral molecules",
+      "Blood has no water",
+      "Blood is made mostly of cellulose"
+    ],
+    "correct": 0,
+    "explain": "Blood has buffer systems (e.g., bicarbonate) that resist pH changes when acids or bases are added.",
+    "experiment": "Small additions of base were titrated into blood plasma and pH change was monitored; buffers minimized pH shifts."
+  }
+]

@@ -1,0 +1,422 @@
+[
+  {
+    "id": "u1-e-86",
+    "difficulty": "easy",
+    "topic": "monosaccharides",
+    "text": "What is a monosaccharide?",
+    "choices": [
+      "A polymer made of many amino acids",
+      "A simple sugar that can serve as a building block for larger carbohydrates",
+      "A lipid made of glycerol and fatty acids",
+      "A nucleotide found only in RNA"
+    ],
+    "correct": 1,
+    "explain": "Monosaccharides are single sugar molecules that serve as the building blocks of larger carbohydrates.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-87",
+    "difficulty": "easy",
+    "topic": "polysaccharides",
+    "text": "What is a polysaccharide?",
+    "choices": [
+      "A large carbohydrate made of many monosaccharides linked together",
+      "A protein composed of many amino acids",
+      "A lipid with three fatty acid tails",
+      "A single sugar molecule used only in RNA"
+    ],
+    "correct": 0,
+    "explain": "Polysaccharides are long carbohydrate polymers built from monosaccharide units.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-88",
+    "difficulty": "easy",
+    "topic": "glycosidic linkages",
+    "text": "What is a glycosidic linkage?",
+    "choices": [
+      "A bond that links amino acids in a protein",
+      "A bond that links monosaccharides in carbohydrates",
+      "A bond that links nucleotides in DNA",
+      "A weak interaction between two water molecules"
+    ],
+    "correct": 1,
+    "explain": "Glycosidic linkages are the covalent bonds that join sugar monomers in carbohydrates.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-89",
+    "difficulty": "easy",
+    "topic": "phospholipids",
+    "text": "Which part of a phospholipid is hydrophobic?",
+    "choices": [
+      "The phosphate head",
+      "The fatty acid tails",
+      "The glycerol only",
+      "The entire molecule is equally hydrophilic"
+    ],
+    "correct": 1,
+    "explain": "The hydrocarbon fatty acid tails are nonpolar and repel water, making them hydrophobic.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-90",
+    "difficulty": "easy",
+    "topic": "disulfide bonds",
+    "text": "Which interaction is especially important in stabilizing the tertiary structure of some proteins through covalent bonding?",
+    "choices": [
+      "Hydrogen bonds",
+      "Ionic interactions",
+      "Disulfide bonds",
+      "Hydrophobic interactions"
+    ],
+    "correct": 2,
+    "explain": "Disulfide bonds are covalent links between cysteine residues that can stabilize tertiary structure.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-91",
+    "difficulty": "easy",
+    "topic": "amphipathic",
+    "text": "What does it mean for a molecule to be amphipathic?",
+    "choices": [
+      "It has only acidic properties",
+      "It has both hydrophilic and hydrophobic regions",
+      "It contains both DNA and RNA",
+      "It can act as both a protein and a lipid"
+    ],
+    "correct": 1,
+    "explain": "Amphipathic molecules have both polar (hydrophilic) and nonpolar (hydrophobic) regions.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-92",
+    "difficulty": "easy",
+    "topic": "nucleic acid structure",
+    "text": "Which sugar is found in DNA?",
+    "choices": [
+      "Ribose",
+      "Deoxyribose",
+      "Glucose",
+      "Fructose"
+    ],
+    "correct": 1,
+    "explain": "DNA contains deoxyribose as its pentose sugar, while RNA contains ribose.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-93",
+    "difficulty": "easy",
+    "topic": "peptide bond",
+    "text": "Which statement best defines a peptide bond?",
+    "choices": [
+      "A bond between two fatty acids",
+      "A bond between two amino acids formed during dehydration synthesis",
+      "A bond between two nucleotides in DNA",
+      "A weak attraction between two nonpolar molecules"
+    ],
+    "correct": 1,
+    "explain": "Peptide bonds covalently link amino acids together during dehydration synthesis to build proteins.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-94",
+    "difficulty": "easy",
+    "topic": "enzymes",
+    "text": "Which macromolecule includes enzymes?",
+    "choices": [
+      "Carbohydrates",
+      "Lipids",
+      "Proteins",
+      "Nucleic acids"
+    ],
+    "correct": 2,
+    "explain": "Most enzymes are proteins that catalyze biochemical reactions.",
+    "experiment": null
+  },
+  {
+    "id": "u1-e-95",
+    "difficulty": "easy",
+    "topic": "pH",
+    "text": "What is the main reason pH matters in biological systems?",
+    "choices": [
+      "pH can affect the charge and shape of molecules such as proteins",
+      "pH determines whether cells contain carbon",
+      "pH changes convert proteins directly into lipids",
+      "pH only matters outside cells, not inside them"
+    ],
+    "correct": 0,
+    "explain": "pH influences protonation states and charges of side chains, which can alter folding and function of biomolecules.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-96",
+    "difficulty": "hard",
+    "topic": "polysaccharides",
+    "text": "A researcher finds that an unknown polymer is made of repeating glucose monomers. The polymer can be rapidly broken down by animal digestive enzymes. Which conclusion is most likely?",
+    "choices": [
+      "The polymer is likely a storage carbohydrate with bond types recognized by animal enzymes",
+      "The polymer must be DNA because it is made of repeating subunits",
+      "The polymer is definitely cellulose because all glucose polymers are digested equally",
+      "The polymer must be a lipid because it stores energy"
+    ],
+    "correct": 0,
+    "explain": "Digestibility depends on linkage type; storage carbohydrates (with appropriate linkages) are often digestible by animals.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-97",
+    "difficulty": "hard",
+    "topic": "disulfide bonds",
+    "text": "A protein contains a cysteine residue that forms a covalent bond with another cysteine elsewhere in the polypeptide. What is the most likely effect?",
+    "choices": [
+      "It may help stabilize the protein’s three-dimensional shape",
+      "It will always break the protein into two pieces",
+      "It converts the protein into RNA",
+      "It removes the primary structure of the protein"
+    ],
+    "correct": 0,
+    "explain": "Disulfide bonds (covalent links between cysteines) can reinforce tertiary structure and protein stability.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-98",
+    "difficulty": "hard",
+    "topic": "phospholipids",
+    "text": "A scientist replaces the phosphate-containing head of a phospholipid with a fully nonpolar group. Which outcome is most likely?",
+    "choices": [
+      "The molecule would be less able to interact with water and less suited for typical membrane organization",
+      "The molecule would become more soluble in water than before",
+      "The molecule would automatically become a protein",
+      "The fatty acid tails would become charged"
+    ],
+    "correct": 0,
+    "explain": "Removing the polar head reduces hydrophilicity and interferes with membrane self-assembly in aqueous environments.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-99",
+    "difficulty": "hard",
+    "topic": "mutations",
+    "text": "A student says, “Because both DNA and proteins are polymers, changing one monomer should never have a major effect.” Which response is best?",
+    "choices": [
+      "The student is correct because polymers are always tolerant of monomer changes",
+      "The student is incorrect because one changed monomer can alter sequence, structure, and function",
+      "The student is incorrect because proteins are not polymers",
+      "The student is correct because only lipids are affected by monomer changes"
+    ],
+    "correct": 1,
+    "explain": "A single monomer change can alter primary sequence and cascade to affect higher-order structure and function.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-100",
+    "difficulty": "hard",
+    "topic": "polarity",
+    "text": "An aqueous solution contains a molecule that has one positively charged end and one negatively charged end. Which property is most likely?",
+    "choices": [
+      "The molecule is nonpolar and will avoid water",
+      "The molecule can form favorable interactions with water because of its polarity",
+      "The molecule must be a saturated fatty acid",
+      "The molecule cannot participate in hydrogen bonding"
+    ],
+    "correct": 1,
+    "explain": "Opposite charges on different ends indicate polarity, which promotes interactions with water and possible hydrogen bonding.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-101",
+    "difficulty": "hard",
+    "topic": "enzyme mutations",
+    "text": "A researcher compares a normal enzyme to a mutant enzyme. The mutant enzyme has the same primary structure length but one amino acid change near the active site. Which is the best prediction?",
+    "choices": [
+      "The mutant enzyme may bind the substrate less effectively because active-site chemistry can be altered",
+      "The mutant enzyme will necessarily be longer",
+      "The mutant enzyme must become a carbohydrate",
+      "The mutant enzyme can no longer contain peptide bonds"
+    ],
+    "correct": 0,
+    "explain": "A substitution near the active site can alter binding interactions and reduce catalytic efficiency.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-102",
+    "difficulty": "hard",
+    "topic": "RNA structure",
+    "text": "Two RNA molecules have different nucleotide sequences but similar overall functions. Which statement best explains how both can still function?",
+    "choices": [
+      "Nucleotide sequence never matters in RNA",
+      "Different sequences can sometimes still fold into structures that support similar roles",
+      "RNA functions only if it is double-stranded like DNA",
+      "RNA is made of amino acids, so nucleotide sequence is irrelevant"
+    ],
+    "correct": 1,
+    "explain": "Function often depends on 3D structure; different sequences can fold into similar structural motifs supporting similar functions.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-103",
+    "difficulty": "hard",
+    "topic": "phospholipids",
+    "text": "A scientist is comparing a triglyceride and a phospholipid. Which feature best distinguishes the phospholipid?",
+    "choices": [
+      "It has three fatty acid tails and no polar region",
+      "It has a significant polar region and is especially useful in membrane structure",
+      "It is made of amino acids instead of fatty acids",
+      "It stores genetic information"
+    ],
+    "correct": 1,
+    "explain": "Phospholipids have a polar headgroup and nonpolar tails, enabling membrane formation; triglycerides lack the polar head.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-104",
+    "difficulty": "hard",
+    "topic": "buffers",
+    "text": "Why can a buffer help maintain homeostasis in organisms?",
+    "choices": [
+      "It resists drastic pH changes that could disrupt biological molecules",
+      "It permanently locks pH at exactly 7.0 in all situations",
+      "It removes all acids and bases from the system",
+      "It converts hydrogen ions into carbon atoms"
+    ],
+    "correct": 0,
+    "explain": "Buffers minimize pH changes by absorbing or releasing protons, helping preserve conditions required for biological function.",
+    "experiment": null
+  },
+  {
+    "id": "u1-h-105",
+    "difficulty": "hard",
+    "topic": "protein stability",
+    "text": "A mutation changes a hydrophilic amino acid on the outside of a cytoplasmic protein to a strongly hydrophobic amino acid. Which effect is most likely?",
+    "choices": [
+      "The protein could become less stable in the watery cytoplasmic environment",
+      "The mutation will guarantee the protein becomes a membrane phospholipid",
+      "The mutation will remove all amino acids from the protein surface",
+      "The protein will definitely become longer"
+    ],
+    "correct": 0,
+    "explain": "Exposed hydrophobic residues can destabilize soluble proteins by disrupting favorable interactions with water.",
+    "experiment": null
+  },
+  {
+    "id": "u1-a-106",
+    "difficulty": "analysis",
+    "topic": "indicator tests",
+    "text": "Students perform Benedict’s test on four samples after heating:\nTube 1: blue remains blue\nTube 2: blue turns green\nTube 3: blue turns orange\nTube 4: blue turns brick red\n\nWhich conclusion is best supported?",
+    "choices": [
+      "Tube 4 likely has the highest concentration of reducing sugar among the samples",
+      "Tube 1 has the highest reducing sugar concentration because it stayed blue",
+      "Tube 2 contains only proteins because it turned green",
+      "Tube 3 must contain lipids because it changed color"
+    ],
+    "correct": 0,
+    "explain": "Benedict’s reagent changes toward orange/red with increasing concentrations of reducing sugars; brick red indicates the most reducing sugar.",
+    "experiment": "Four samples were tested with Benedict's reagent and heated; color intensity was used as a semi-quantitative indicator of reducing sugar concentration."
+  },
+  {
+    "id": "u1-a-107",
+    "difficulty": "analysis",
+    "topic": "indicator tests",
+    "text": "A class performs Biuret tests on several samples. Sample Q turns violet, while Sample R remains blue. Which interpretation is most reasonable?",
+    "choices": [
+      "Sample Q likely contains peptide bonds, while Sample R likely contains little to no protein",
+      "Sample Q contains only lipids, while Sample R contains only nucleic acids",
+      "Sample R contains more protein because it stayed blue",
+      "Sample Q must contain DNA because it changed color"
+    ],
+    "correct": 0,
+    "explain": "Biuret reagent produces a violet color in the presence of peptide bonds (proteins); blue indicates no strong presence of protein.",
+    "experiment": "Samples were tested with Biuret reagent and observed for color change; violet indicates peptide bonds."
+  },
+  {
+    "id": "u1-a-108",
+    "difficulty": "analysis",
+    "topic": "protein denaturation",
+    "text": "Researchers compare two solutions of the same protein. Solution 1 is kept at pH 7. Solution 2 is adjusted to pH 2. The protein in Solution 2 loses function and forms clumps. Which explanation is best supported?",
+    "choices": [
+      "The extreme pH likely altered side-chain charges and disrupted the interactions that maintain protein shape",
+      "The protein in Solution 2 must have gained extra amino acids",
+      "The protein in Solution 2 changed its DNA sequence",
+      "The protein in Solution 2 turned into a carbohydrate because of the acid"
+    ],
+    "correct": 0,
+    "explain": "Extreme pH changes protonation states of side chains, disrupting ionic and hydrogen-bonding interactions and causing denaturation and aggregation.",
+    "experiment": "The protein was incubated at different pH values and then assayed for activity and solubility; the low-pH sample lost function and aggregated."
+  },
+  {
+    "id": "u1-a-109",
+    "difficulty": "analysis",
+    "topic": "mutation effects",
+    "text": "A mutation changes one nucleotide in a DNA coding region. The resulting protein differs by one amino acid and folds abnormally. Which statement best links the mutation to the phenotype?",
+    "choices": [
+      "A small change in primary structure can alter higher levels of protein structure and therefore function",
+      "DNA mutations affect only nucleic acids and never proteins",
+      "The mutation must have removed all hydrogen bonds in the organism",
+      "The abnormal folding proves the protein was originally a lipid"
+    ],
+    "correct": 0,
+    "explain": "A single amino acid substitution can change folding and disrupt function, linking the DNA mutation to the observed phenotype.",
+    "experiment": "A single-nucleotide substitution was introduced and the resulting protein's folding and activity were compared to wild type; the mutant folded abnormally."
+  },
+  {
+    "id": "u1-a-110",
+    "difficulty": "analysis",
+    "topic": "hydrophobicity",
+    "text": "Students compare how two unknown molecules behave in water. Molecule X disperses uniformly. Molecule Y forms droplets and separates. Additional testing shows Molecule Y is made mostly of long hydrocarbon chains. Which conclusion is best supported?",
+    "choices": [
+      "Molecule Y is likely hydrophobic because hydrocarbon chains are largely nonpolar",
+      "Molecule X must be a lipid because it disperses in water",
+      "Molecule Y is likely highly polar because it forms droplets",
+      "Molecule X and Y must be chemically identical because both contain carbon"
+    ],
+    "correct": 0,
+    "explain": "Long hydrocarbon chains are nonpolar and do not interact well with water, causing droplet formation and phase separation.",
+    "experiment": "Two unknown samples were added to water and observed for dispersion; composition analysis showed hydrocarbon-rich Molecule Y."
+  },
+  {
+    "id": "u1-a-111",
+    "difficulty": "analysis",
+    "topic": "indicator tests",
+    "text": "A teacher provides students with three unknown samples:\n\nSample A:\n- Positive Benedict’s test\n- Negative Biuret test\n\nSample B:\n- Negative Benedict’s test\n- Positive Biuret test\n\nSample C:\n- Negative Benedict’s test\n- Negative Biuret test\n- Oily texture and translucent spot on paper\n\nWhich identification is most likely?",
+    "choices": [
+      "A = reducing sugar, B = protein, C = lipid",
+      "A = protein, B = lipid, C = nucleic acid",
+      "A = lipid, B = reducing sugar, C = protein",
+      "A = starch, B = water, C = amino acid"
+    ],
+    "correct": 0,
+    "explain": "Benedict's positive indicates reducing sugar; Biuret positive indicates protein; oily texture and translucent spot indicate lipid.",
+    "experiment": "Three samples were tested with Benedict's and Biuret reagents and observed for physical properties (translucent spot on paper)."
+  },
+  {
+    "id": "u1-a-112",
+    "difficulty": "analysis",
+    "topic": "membrane formation",
+    "text": "A scientist designs an experiment to compare membrane-forming ability of two lipids in water. Lipid 1 forms stable bilayer-like structures. Lipid 2 aggregates into droplets instead. Which structural difference most likely explains the result?",
+    "choices": [
+      "Lipid 1 is amphipathic, while Lipid 2 is mostly nonpolar",
+      "Lipid 1 contains no carbon, while Lipid 2 does",
+      "Lipid 2 must be made of amino acids",
+      "Lipid 1 has no hydrophilic region at all"
+    ],
+    "correct": 0,
+    "explain": "Amphipathic molecules with both polar heads and nonpolar tails form bilayers; nonpolar lipids tend to form droplets.",
+    "experiment": "Two lipids were added to water and their self-assembled structures were observed under microscopy; Lipid 1 formed bilayers, Lipid 2 formed droplets."
+  },
+  {
+    "id": "u1-a-113",
+    "difficulty": "analysis",
+    "topic": "enzyme denaturation",
+    "text": "Students test the effect of temperature on two samples of the same enzyme. Sample A is incubated at 25°C. Sample B is incubated at 75°C for several minutes, then both are returned to 25°C and tested. Sample B shows very low activity. Which conclusion is best supported?",
+    "choices": [
+      "High temperature likely disrupted the enzyme’s structure in a way that reduced later activity",
+      "The enzyme in Sample B gained extra nucleotides",
+      "Sample B now contains more peptide bonds than Sample A",
+      "The enzyme in Sample B must have been converted into a phospholipid"
+    ],
+    "correct": 0,
+    "explain": "Heat can denature proteins by disrupting noncovalent interactions, causing loss of activity even after cooling.",
+    "experiment": "Two enzyme samples were incubated at different temperatures, returned to assay conditions, and activity was measured; the high-temperature sample lost activity."
+  }
+]
