@@ -100,6 +100,13 @@ export default function SimsLayout({ children }: { children: ReactNode }) {
                   </Link>
                 </div>
               </div>
+
+              <div style={{ padding: 6, borderRadius: 8 }}>
+                <div style={getSectionSummaryStyle(pathname.startsWith("/sims/feedback"))}>Feedback</div>
+                <div style={{ display: "grid", gap: 8, marginTop: 6 }}>
+                  <Link href="/sims/feedback" style={getNavItemStyle("/sims/feedback")}>Share feedback</Link>
+                </div>
+              </div>
             </div>
 
             <div style={{ marginTop: "auto", paddingTop: 12, fontSize: 12, color: text, lineHeight: 1.35 }}>
