@@ -229,11 +229,11 @@ function CentralDogmaOverlay({
   const clampedAminoAcidCount = Math.max(4, Math.min(polypeptidePlan.length, aminoAcidCount));
   const visiblePolypeptide = polypeptidePlan.slice(0, clampedAminoAcidCount);
   const isGuided = mode === "guided";
-  const preMrnaNodeBegins = isGuided ? [11.62, 12.28, 12.94, 13.6, 14.26] : [10.9, 11.25, 11.6, 11.95, 12.3];
-  const preMrnaMoveBegin = isGuided ? 18.3 : 12.65;
-  const preMrnaFadeBegin = isGuided ? 19.15 : 13.5;
-  const matureAppearBegin = isGuided ? 20 : 13.7;
-  const matureMove1Begin = isGuided ? 24 : 14.05;
+  const preMrnaNodeBegins = isGuided ? [11.62, 12.28, 12.94, 13.6, 14.26] : [7.5, 7.85, 8.2, 8.55, 8.9];
+  const preMrnaMoveBegin = isGuided ? 18.3 : 9.25;
+  const preMrnaFadeBegin = isGuided ? 19.15 : 10.1;
+  const matureAppearBegin = isGuided ? 20 : 10.3;
+  const matureMove1Begin = isGuided ? 24 : 10.65;
   const matureMove2Begin = matureMove1Begin + 1.35;
   const matureMove3Begin = matureMove2Begin + 1.15;
   const chainStart = isGuided ? 29.3 : matureMove3Begin + 1.55 + 0.08;
@@ -259,11 +259,11 @@ function CentralDogmaOverlay({
   const proteinLabelBegin = `${(foldStart + 1.2).toFixed(2)}s`;
   const matureVisibleDuration = isGuided ? 9.25 : Math.max(3.9, chainStart - matureAppearBegin + 0.2);
   const showExplanationBoxes = isGuided;
-  const ligandStart = 2;
-  const ligandSeg2 = isGuided ? 7.1 : 2.7;
-  const ligandSeg3 = isGuided ? 7.9 : 3.5;
-  const ligandSeg4 = isGuided ? 9.5 : 5.1;
-  const ligandSeg5 = isGuided ? 10.05 : 5.65;
+  const ligandStart = isGuided ? 2 : 0.5;
+  const ligandSeg2 = isGuided ? 7.1 : 1.2;
+  const ligandSeg3 = isGuided ? 7.9 : 2.0;
+  const ligandSeg4 = isGuided ? 9.5 : 3.6;
+  const ligandSeg5 = isGuided ? 10.05 : 4.15;
   const ligandDuration = isGuided ? 8.75 : 4.35;
 
   return (

@@ -40,7 +40,7 @@ export default function Home() {
               textTransform: "uppercase",
             }}
           >
-            Allidaps Biology
+            Allidaps Biology(Beta)
           </div>
           <h1
             style={{
@@ -52,7 +52,7 @@ export default function Home() {
               maxWidth: 780,
             }}
           >
-            Allidaps Biology
+            Allidaps Biology(Beta)
           </h1>
           <p style={{ margin: 0, fontSize: 18, color: "#334155", maxWidth: 720, lineHeight: 1.45 }}>
             Study with interactive AP Bio tools: active recall question sets, chi-square visual practice, and a complete cell simulation section.
@@ -72,20 +72,7 @@ export default function Home() {
             >
               Start Studying
             </a>
-            <a
-              href="/sims"
-              style={{
-                textDecoration: "none",
-                borderRadius: 12,
-                padding: "10px 14px",
-                background: "#ffffff",
-                color: "#0f172a",
-                fontWeight: 700,
-                border: "1px solid #cbd5e1",
-              }}
-            >
-              Open Dashboard
-            </a>
+
           </div>
         </section>
 

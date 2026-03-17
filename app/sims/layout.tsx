@@ -70,7 +70,7 @@ export default function SimsLayout({ children }: { children: ReactNode }) {
             }}
           >
             <div style={{ fontWeight: 900, color: heading, fontSize: 20, marginBottom: 12, lineHeight: 1.1 }}>
-              Allidaps Biology
+              Allidaps Biology(Beta)
             </div>
 
             <div style={{ display: "grid", gap: 10 }}>
@@ -82,7 +82,7 @@ export default function SimsLayout({ children }: { children: ReactNode }) {
               </div>
 
               <div style={{ padding: 6, borderRadius: 8 }}>
-                <div style={getSectionSummaryStyle(pathname.startsWith("/sims/active-recall"))}>Active recall questions</div>
+                <div style={getSectionSummaryStyle(pathname.startsWith("/sims/active-recall"))}>Study!!</div>
                 <div style={{ display: "grid", gap: 8, marginTop: 6 }}>
                   <Link href="/sims/active-recall/ap" style={getNavItemStyle("/sims/active-recall/ap")}>AP test studying</Link>
                   <Link href="/sims/active-recall/unit" style={getNavItemStyle("/sims/active-recall/unit")}>Unit specific studying</Link>
