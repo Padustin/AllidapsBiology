@@ -94,7 +94,7 @@ const ORGANELLES: Record<OrganelleKey, OrganelleInfo> = {
     steps: ["Lipid synthesis", "Detox", "Storage", "Membrane supply"],
   },
   mitochondrion: {
-    name: "Midochondria",
+    name: "Mitochondrion",
     fill: "#f97316",
     stroke: "#9a3412",
     steps: ["Fuel input", "ETC run", "ATP synthase", "ATP output"],
@@ -301,7 +301,7 @@ function CentralDogmaOverlay({
             <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.92;1" begin="21.7s" dur="3.5s" fill="freeze" />
             <rect x="430" y="340" width="710" height="86" rx="14" fill="#ffffff" stroke="#cbd5e1" strokeWidth="2" />
             <text x="452" y="374" fontSize="20" fontWeight="800" fill="#0f172a">
-              <tspan x="452" dy="0">-introns(non-coding squences) cut out and only exon remain</tspan>
+              <tspan x="452" dy="0">-introns(non-coding sequences) cut out and only exon remain</tspan>
               <tspan x="452" dy="30">-5' GTP cap and 3' poly-A tail attached</tspan>
             </text>
           </g>
@@ -720,7 +720,7 @@ function CellImageMap({
         </g>
 
         {/* mitochondrion */}
-        <g {...gClick("mitochondrion", "Midochondria")}>
+        <g {...gClick("mitochondrion", "Mitochondrion")}>
           <path
             d="M1048 655 C1067 624, 1105 606, 1148 610 C1188 614, 1220 638, 1229 672 C1238 705, 1223 739, 1191 756 C1154 775, 1107 773, 1074 752 C1041 732, 1030 693, 1048 655 Z"
             fill="url(#mitoGradient)"
@@ -769,7 +769,7 @@ function CellImageMap({
             <text x="1118" y="332" textAnchor="middle" fontWeight="700" fontSize="22">Golgi</text>
           </g>
           <g>
-            <text x="1148" y="776" textAnchor="middle" fontWeight="700" fontSize="22">Midochondria</text>
+            <text x="1148" y="776" textAnchor="middle" fontWeight="700" fontSize="22">Mitochondrion</text>
           </g>
           <g>
             <text x="284" y="508" textAnchor="end" fontWeight="700" fontSize="22">Ribosomes</text>
@@ -1007,7 +1007,7 @@ export default function CompleteCellSimulationPage() {
               onChange={(event) => setDogmaMode(event.target.checked ? "guided" : "plain")}
               style={{ width: 16, height: 16, cursor: "pointer" }}
             />
-            <span>Show Expination</span>
+            <span>Show Explanation</span>
           </label>
         </div>
 

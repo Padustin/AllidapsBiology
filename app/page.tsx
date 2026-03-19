@@ -40,7 +40,7 @@ export default function Home() {
               textTransform: "uppercase",
             }}
           >
-            Allidaps Biology(Beta)
+            Allidaps Biology
           </div>
           <h1
             style={{
@@ -52,7 +52,7 @@ export default function Home() {
               maxWidth: 780,
             }}
           >
-            Allidaps Biology(Beta)
+            Allidaps Biology
           </h1>
           <p style={{ margin: 0, fontSize: 18, color: "#334155", maxWidth: 720, lineHeight: 1.45 }}>
             Study with interactive AP Bio tools: active recall question sets, chi-square visual practice, and a complete cell simulation section.

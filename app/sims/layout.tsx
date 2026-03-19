@@ -70,7 +70,7 @@ export default function SimsLayout({ children }: { children: ReactNode }) {
             }}
           >
             <div style={{ fontWeight: 900, color: heading, fontSize: 20, marginBottom: 12, lineHeight: 1.1 }}>
-              Allidaps Biology(Beta)
+              Allidaps Biology
             </div>
 
             <div style={{ display: "grid", gap: 10 }}>
