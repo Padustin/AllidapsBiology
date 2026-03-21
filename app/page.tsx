@@ -56,7 +56,7 @@ export default function Home() {
           >
             Allidaps Biology
           </h1>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 18, flexWrap: "wrap" }}>
+          <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "flex-start", gap: 14, flexWrap: "wrap" }}>
             <p style={{ margin: 0, fontSize: 18, color: "#334155", maxWidth: 720, lineHeight: 1.45, flex: "1 1 560px" }}>
               Study with interactive AP Bio tools: active recall question sets, chi-square visual practice, and a complete cell simulation section.
             </p>
