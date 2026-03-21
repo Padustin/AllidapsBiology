@@ -63,8 +63,8 @@ export default function Home() {
             <Image
               src="/icon.png"
               alt="Allidaps Biology icon"
-              width={130}
-              height={130}
+              width={220}
+              height={220}
               style={{ flex: "0 0 auto" }}
               priority
             />
