@@ -44,22 +44,25 @@ export default function Home() {
           >
             Allidaps Biology
           </div>
-          <h1
-            style={{
-              margin: "14px 0 10px",
-              fontSize: "clamp(2rem, 4vw, 3rem)",
-              lineHeight: 1.08,
-              fontWeight: 900,
-              color: "#0f172a",
-              maxWidth: 780,
-            }}
-          >
-            Allidaps Biology
-          </h1>
-          <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "flex-start", gap: 14, flexWrap: "wrap" }}>
-            <p style={{ margin: 0, fontSize: 18, color: "#334155", maxWidth: 720, lineHeight: 1.45, flex: "1 1 560px" }}>
-              Study with interactive AP Bio tools: active recall question sets, chi-square visual practice, and a complete cell simulation section.
-            </p>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 18, flexWrap: "wrap" }}>
+            <div style={{ flex: "1 1 560px", display: "grid", gap: 12, justifyItems: "center" }}>
+              <h1
+                style={{
+                  margin: 0,
+                  fontSize: "clamp(2rem, 4vw, 3rem)",
+                  lineHeight: 1.08,
+                  fontWeight: 900,
+                  color: "#0f172a",
+                  maxWidth: 780,
+                  textAlign: "center",
+                }}
+              >
+                Allidaps Biology
+              </h1>
+              <p style={{ margin: 0, fontSize: 18, color: "#334155", maxWidth: 720, lineHeight: 1.45, textAlign: "center" }}>
+                Study with interactive AP Bio tools: active recall question sets, chi-square visual practice, and a complete cell simulation section.
+              </p>
+            </div>
             <Image
               src="/icon.png"
               alt="Allidaps Biology icon"
