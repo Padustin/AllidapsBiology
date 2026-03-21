@@ -13,6 +13,7 @@ export default function Page() {
   const [seen, setSeen] = useState<Record<string, Record<string, true>>>({});
   const [poolSize, setPoolSize] = useState<number>(0);
   const STORAGE_KEY = "ar-seen";
+  const frqPlaceholder = "FRQ mode is coming soon. This is a placeholder for now.";
 
   async function next(attempt = 0) {
     if (!unit || !difficulty) {
@@ -20,6 +21,14 @@ export default function Page() {
       setSelected(null);
       setVisibleExplanations({});
       setLoadError("Select a unit and difficulty first to begin.");
+      return;
+    }
+    if (difficulty === "frq") {
+      setQuestion(null);
+      setSelected(null);
+      setVisibleExplanations({});
+      setPoolSize(0);
+      setLoadError(frqPlaceholder);
       return;
     }
     setQuestion(null);
@@ -57,7 +66,7 @@ export default function Page() {
     if (poolSize > 0) {
       if (attempt < MAX_ATTEMPTS) return next(attempt + 1);
       setSeen((s) => ({ ...s, [scopeKey]: {} }));
-      setLoadError("You have completed this set for now. Click Reset seen to start again.");
+      setLoadError("You have completed this set for now. A fresh round will start automatically.");
       return;
     }
 
@@ -82,6 +91,11 @@ export default function Page() {
     } catch (e) {}
     // fetch pool for current scope, then request first question
     (async () => {
+      if (difficulty === "frq") {
+        setPoolSize(0);
+        setLoadError(frqPlaceholder);
+        return;
+      }
       try {
         const res = await fetch(`/api/ar-pool?mode=unit&unit=${encodeURIComponent(unit)}&difficulty=${encodeURIComponent(difficulty)}`);
         const data = await res.json();
@@ -103,6 +117,14 @@ export default function Page() {
       setLoadError("Select a unit and difficulty first to begin.");
       return;
     }
+    if (difficulty === "frq") {
+      setPoolSize(0);
+      setQuestion(null);
+      setSelected(null);
+      setVisibleExplanations({});
+      setLoadError(frqPlaceholder);
+      return;
+    }
     // when unit or difficulty changes, refresh pool and load a fresh question
     (async () => {
       try {
@@ -122,12 +144,8 @@ export default function Page() {
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(seen)); } catch (e) {}
   }, [seen]);
 
-  const renderScopeKey = `${unit}::${difficulty}`;
-  const renderSeenCount = Object.keys((seen && seen[renderScopeKey]) || {}).length;
-  const progressPercent = poolSize > 0 ? Math.round((renderSeenCount / poolSize) * 100) : 0;
-
   return (
-    <div style={{ padding: 18, fontFamily: "\"Helvetica Neue\", Helvetica, Arial, sans-serif" }}>
+    <div style={{ padding: 18, width: "100%", fontFamily: "\"Helvetica Neue\", Helvetica, Arial, sans-serif" }}>
       <h1 style={{ fontSize: 24, fontWeight: 800 }}>Unit specific studying</h1>
       <div style={{ marginTop: 12, display: "flex", gap: 8, alignItems: "center" }}>
         <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
@@ -138,6 +156,7 @@ export default function Page() {
               <option value="easy">Easy (definitions)</option>
               <option value="hard">Hard (application)</option>
               <option value="analysis">Analysis (experiment/system)</option>
+              <option value="frq">FRQ (placeholder)</option>
             </select>
           </div>
         </div>
@@ -158,27 +177,13 @@ export default function Page() {
           <div style={{ padding: 6, border: "1px solid #e2e8f0", borderRadius: 12, background: "white" }}>
             <button onClick={() => { void next(); }} disabled={!unit || !difficulty} style={{ padding: "8px 12px", borderRadius: 8, background: "transparent", border: "none", opacity: unit && difficulty ? 1 : 0.45, cursor: unit && difficulty ? "pointer" : "not-allowed" }}>New question</button>
           </div>
-          <div style={{ padding: 6, border: "1px solid #e2e8f0", borderRadius: 12, background: "white" }}>
-            <button onClick={() => { const scopeKey = `${unit}::${difficulty}`; setSeen((s) => ({ ...s, [scopeKey]: {} })); }} disabled={!unit || !difficulty} style={{ padding: "8px 12px", borderRadius: 8, background: "transparent", border: "none", opacity: unit && difficulty ? 1 : 0.45, cursor: unit && difficulty ? "pointer" : "not-allowed" }}>Reset seen</button>
-          </div>
-          <div style={{ padding: 6, border: "1px solid #e2e8f0", borderRadius: 12, background: "white", display: "flex", alignItems: "center" }}>
-            <div style={{ fontWeight: 700, marginRight: 8 }}>Seen</div>
-            <div style={{ color: "#475569" }}>{renderSeenCount}{poolSize ? ` / ${poolSize}` : ""}</div>
-          </div>
-          {poolSize > 0 && (
-            <div style={{ width: 160, marginLeft: 8 }}>
-              <div style={{ height: 8, background: '#eef2ff', borderRadius: 6, overflow: 'hidden', border: '1px solid #e6eef6' }}>
-                <div style={{ height: '100%', width: `${progressPercent}%`, background: '#a78bfa' }} />
-              </div>
-            </div>
-          )}
         </div>
       </div>
 
       <div style={{ marginTop: 12 }}>
         {!question && <div style={{ color: "#475569" }}>{loadError || "Click \"New question\" to begin."}</div>}
         {question && (
-          <div style={{ border: "1px solid #e2e8f0", padding: 12, borderRadius: 8 }}>
+          <div style={{ border: "1px solid #e2e8f0", padding: 12, borderRadius: 0, width: "100%" }}>
               {question.experiment && (
                 <div style={{ marginBottom: 10, background: '#fff', padding: 8, borderRadius: 8, border: '1px solid #e2e8f0' }}>
                   <div style={{ fontWeight: 700 }}>Experiment</div>

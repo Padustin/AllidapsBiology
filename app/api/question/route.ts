@@ -98,7 +98,25 @@ export async function POST(req: Request) {
       }
 
       if (candidates.length > 0) {
-        const choice = candidates[Math.floor(Math.random() * candidates.length)];
+        let choice: any;
+
+        // In AP mode, stratify by unit so every unit has equal chance regardless of pool size
+        if (body.mode === 'ap') {
+          const byUnit: Record<string, any[]> = {};
+          for (const q of candidates) {
+            const m = typeof q.id === 'string' ? q.id.match(/^u(\d+)-/i) : null;
+            const unitKey = m ? m[1] : 'unknown';
+            if (!byUnit[unitKey]) byUnit[unitKey] = [];
+            byUnit[unitKey].push(q);
+          }
+          const units = Object.keys(byUnit);
+          const pickedUnit = units[Math.floor(Math.random() * units.length)];
+          const pool = byUnit[pickedUnit];
+          choice = pool[Math.floor(Math.random() * pool.length)];
+        } else {
+          choice = candidates[Math.floor(Math.random() * candidates.length)];
+        }
+
         if (choice) return NextResponse.json({ question: choice, source: 'dataset' });
       }
     }

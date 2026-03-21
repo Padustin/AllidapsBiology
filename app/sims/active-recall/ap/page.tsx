@@ -17,12 +17,18 @@ export default function Page() {
   const border = "#e2e8f0";
   const text = "#334155";
   const heading = "#0f172a";
+  const frqPlaceholder = "FRQ mode is coming soon. This is a placeholder for now.";
 
   async function next(attempt = 0) {
     setQuestion(null);
     setSelected(null);
     setVisibleExplanations({});
     setLoadError(null);
+    if (difficulty === "frq") {
+      setPoolSize(0);
+      setLoadError(frqPlaceholder);
+      return;
+    }
     const MAX_ATTEMPTS = 6;
     const scopeKey = `AP::${difficulty}`;
     const scopeSeen = (seen && seen[scopeKey]) || {};
@@ -53,7 +59,7 @@ export default function Page() {
     if (poolSize > 0) {
       if (attempt < MAX_ATTEMPTS) return next(attempt + 1);
       setSeen((s) => ({ ...s, [scopeKey]: {} }));
-      setLoadError("You have completed this set for now. Click Reset seen to start again.");
+      setLoadError("You have completed this set for now. A fresh round will start automatically.");
       return;
     }
 
@@ -76,6 +82,11 @@ export default function Page() {
       }
     } catch (e) {}
     (async () => {
+      if (difficulty === "frq") {
+        setPoolSize(0);
+        setLoadError(frqPlaceholder);
+        return;
+      }
       try {
         const res = await fetch(`/api/ar-pool?mode=ap&difficulty=${encodeURIComponent(difficulty)}`);
         const data = await res.json();
@@ -87,12 +98,17 @@ export default function Page() {
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  const renderScopeKey = `AP::${difficulty}`;
-  const renderSeenCount = Object.keys((seen && seen[renderScopeKey]) || {}).length;
-  const progressPercent = poolSize > 0 ? Math.round((renderSeenCount / poolSize) * 100) : 0;
 
   useEffect(() => {
     (async () => {
+      if (difficulty === "frq") {
+        setPoolSize(0);
+        setQuestion(null);
+        setSelected(null);
+        setVisibleExplanations({});
+        setLoadError(frqPlaceholder);
+        return;
+      }
       try {
         const res = await fetch(`/api/ar-pool?mode=ap&difficulty=${encodeURIComponent(difficulty)}`);
         const data = await res.json();
@@ -110,7 +126,7 @@ export default function Page() {
   }, [seen]);
 
   return (
-    <div style={{ padding: 18, fontFamily: "\"Helvetica Neue\", Helvetica, Arial, sans-serif", color: text }}>
+    <div style={{ padding: 18, width: "100%", fontFamily: "\"Helvetica Neue\", Helvetica, Arial, sans-serif", color: text }}>
       <h1 style={{ fontSize: 24, fontWeight: 800, color: heading }}>AP test studying</h1>
 
       <div style={{ marginTop: 12, display: "flex", gap: 8, alignItems: "center" }}>
@@ -121,6 +137,7 @@ export default function Page() {
               <option value="easy">Easy (definitions)</option>
               <option value="hard">Hard (application)</option>
               <option value="analysis">Analysis (experiment/system)</option>
+              <option value="frq">FRQ (placeholder)</option>
             </select>
           </div>
         </div>
@@ -129,27 +146,13 @@ export default function Page() {
           <div style={{ padding: 6, border: `1px solid ${border}`, borderRadius: 12, background: "white" }}>
             <button onClick={() => { void next(); }} style={{ padding: "8px 12px", borderRadius: 12, border: `none`, background: "transparent", fontWeight: 700 }}>New question</button>
           </div>
-          <div style={{ padding: 6, border: `1px solid ${border}`, borderRadius: 12, background: "white" }}>
-            <button onClick={() => { const scopeKey = `AP::${difficulty}`; setSeen((s) => ({ ...s, [scopeKey]: {} })); }} style={{ padding: "8px 12px", borderRadius: 12, border: `none`, background: "transparent", fontWeight: 700 }}>Reset seen</button>
-          </div>
-          <div style={{ padding: 6, border: `1px solid ${border}`, borderRadius: 12, background: "white", display: "flex", alignItems: "center" }}>
-            <div style={{ fontWeight: 700, marginRight: 8 }}>Seen</div>
-            <div style={{ color: "#475569" }}>{renderSeenCount}{poolSize ? ` / ${poolSize}` : ""}</div>
-          </div>
-          {poolSize > 0 && (
-            <div style={{ width: 160, marginLeft: 8 }}>
-              <div style={{ height: 8, background: '#eef2ff', borderRadius: 6, overflow: 'hidden', border: `1px solid #e6eef6` }}>
-                <div style={{ height: '100%', width: `${progressPercent}%`, background: '#a78bfa' }} />
-              </div>
-            </div>
-          )}
         </div>
       </div>
 
       <div style={{ marginTop: 12 }}>
         {!question && <div style={{ color: "#475569" }}>{loadError || "Loading question..."}</div>}
         {question && (
-          <div style={{ border: `1px solid ${border}`, padding: 14, borderRadius: 14, background: cardBg }}>
+          <div style={{ border: `1px solid ${border}`, padding: 14, borderRadius: 0, background: cardBg, width: "100%" }}>
               {question.experiment && (
                 <div style={{ marginBottom: 10, background: '#ffffff', padding: 10, borderRadius: 8, border: `1px solid ${border}` }}>
                   <div style={{ fontWeight: 700 }}>Experiment</div>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <div
@@ -54,9 +56,19 @@ export default function Home() {
           >
             Allidaps Biology
           </h1>
-          <p style={{ margin: 0, fontSize: 18, color: "#334155", maxWidth: 720, lineHeight: 1.45 }}>
-            Study with interactive AP Bio tools: active recall question sets, chi-square visual practice, and a complete cell simulation section.
-          </p>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 18, flexWrap: "wrap" }}>
+            <p style={{ margin: 0, fontSize: 18, color: "#334155", maxWidth: 720, lineHeight: 1.45, flex: "1 1 560px" }}>
+              Study with interactive AP Bio tools: active recall question sets, chi-square visual practice, and a complete cell simulation section.
+            </p>
+            <Image
+              src="/icon.png"
+              alt="Allidaps Biology icon"
+              width={86}
+              height={86}
+              style={{ borderRadius: 16, border: "1px solid #dbe3ef", background: "#ffffff", padding: 8, flex: "0 0 auto" }}
+              priority
+            />
+          </div>
           <div style={{ marginTop: 18, display: "flex", gap: 10, flexWrap: "wrap" }}>
             <a
               href="/sims/active-recall/unit"

@@ -229,9 +229,9 @@ function CentralDogmaOverlay({
   const clampedAminoAcidCount = Math.max(4, Math.min(polypeptidePlan.length, aminoAcidCount));
   const visiblePolypeptide = polypeptidePlan.slice(0, clampedAminoAcidCount);
   const isGuided = mode === "guided";
-  const preMrnaNodeBegins = isGuided ? [11.62, 12.28, 12.94, 13.6, 14.26] : [7.5, 7.85, 8.2, 8.55, 8.9];
-  const preMrnaMoveBegin = isGuided ? 18.3 : 9.25;
-  const preMrnaFadeBegin = isGuided ? 19.15 : 10.1;
+  const preMrnaNodeBegins = isGuided ? [8.4, 8.95, 9.5, 10.05, 10.6] : [5.6, 5.95, 6.3, 6.65, 7.0];
+  const preMrnaMoveBegin = isGuided ? 15.2 : 7.2;
+  const preMrnaFadeBegin = isGuided ? 16.05 : 8.05;
   const matureAppearBegin = isGuided ? 20 : 10.3;
   const matureMove1Begin = isGuided ? 24 : 10.65;
   const matureMove2Begin = matureMove1Begin + 1.35;
@@ -982,7 +982,7 @@ export default function CompleteCellSimulationPage() {
         }
       `}</style>
 
-      <div style={{ maxWidth: 1600, margin: "0 auto", display: "grid", gap: 14 }}>
+      <div style={{ width: "100%", margin: 0, display: "grid", gap: 14 }}>
         <h1 style={{ margin: 0, fontSize: 34, lineHeight: 1.06, fontWeight: 900, letterSpacing: -0.3 }}>Complete Cell Simulation</h1>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
           <button

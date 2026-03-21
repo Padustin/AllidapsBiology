@@ -236,8 +236,8 @@ export default function Page() {
     <div style={{ background: pageBg, minHeight: "100vh" }}>
       <div
         style={{
-          maxWidth: 1100,
-          margin: "0 auto",
+          width: "100%",
+          margin: 0,
           padding: 18,
           fontFamily: "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
           color: text,
@@ -263,7 +263,7 @@ export default function Page() {
           <div
             style={{
               border: `1px solid ${border}`,
-              borderRadius: 14,
+              borderRadius: 0,
               padding: 14,
               background: cardBg,
             }}
@@ -414,7 +414,7 @@ export default function Page() {
             <div
               style={{
                 border: `1px solid ${border}`,
-                borderRadius: 14,
+                borderRadius: 0,
                 padding: 14,
                 background: cardBg,
               }}
@@ -475,6 +475,27 @@ export default function Page() {
 
                   <div
                     style={{
+                      border: `1px solid ${border}`,
+                      borderRadius: 12,
+                      padding: "8px 10px",
+                      background: "white",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 8,
+                      marginBottom: 12,
+                      fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace",
+                    }}
+                  >
+                    <span>χ² = Σ</span>
+                    <span style={{ display: "inline-flex", flexDirection: "column", alignItems: "center", lineHeight: 1.1 }}>
+                      <span style={{ padding: "0 6px" }}>(O−E)²</span>
+                      <span style={{ width: "100%", borderTop: `1px solid ${heading}`, margin: "1px 0" }} />
+                      <span style={{ padding: "0 6px" }}>E</span>
+                    </span>
+                  </div>
+
+                  <div
+                    style={{
                       padding: 12,
                       borderRadius: 14,
                       background: stats.p < alpha ? "#fee2e2" : "#dcfce7",
@@ -510,7 +531,13 @@ export default function Page() {
                           <th style={{ borderBottom: `1px solid ${border}`, padding: 8 }}>Category</th>
                           <th style={{ borderBottom: `1px solid ${border}`, padding: 8, color: "#7c3aed" }}>Observed (O)</th>
                           <th style={{ borderBottom: `1px solid ${border}`, padding: 8, color: "#2563eb" }}>Expected (E)</th>
-                          <th style={{ borderBottom: `1px solid ${border}`, padding: 8 }}>(O−E)²/E</th>
+                          <th style={{ borderBottom: `1px solid ${border}`, padding: 8 }}>
+                            <span style={{ display: "inline-flex", flexDirection: "column", alignItems: "center", lineHeight: 1.1 }}>
+                              <span>(O−E)²</span>
+                              <span style={{ width: "100%", borderTop: `1px solid ${heading}`, margin: "1px 0" }} />
+                              <span>E</span>
+                            </span>
+                          </th>
                         </tr>
                       </thead>
                       <tbody>
@@ -522,7 +549,14 @@ export default function Page() {
                               {row.E.toFixed(2)}
                             </td>
                             <td style={{ borderBottom: `1px solid ${border}`, padding: 8 }}>
-                              {row.contrib.toFixed(3)}
+                              <span style={{ display: "inline-flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+                                <span style={{ display: "inline-flex", flexDirection: "column", alignItems: "center", lineHeight: 1.05 }}>
+                                  <span style={{ padding: "0 4px" }}>({row.O}−{row.E.toFixed(2)})²</span>
+                                  <span style={{ width: "100%", borderTop: `1px solid ${heading}`, margin: "1px 0" }} />
+                                  <span style={{ padding: "0 4px" }}>{row.E.toFixed(2)}</span>
+                                </span>
+                                <span>= {row.contrib.toFixed(3)}</span>
+                              </span>
                             </td>
                           </tr>
                         ))}

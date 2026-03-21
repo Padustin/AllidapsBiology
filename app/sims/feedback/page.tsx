@@ -38,11 +38,11 @@ export default function FeedbackPage() {
   return (
     <div
       style={{
-        maxWidth: 760,
-        margin: "0 auto",
+        width: "100%",
+        margin: 0,
         border: "1px solid #e2e8f0",
         background: "#ffffff",
-        borderRadius: 14,
+        borderRadius: 0,
         padding: 20,
       }}
     >
