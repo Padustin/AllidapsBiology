@@ -11,11 +11,12 @@ export async function GET(req: Request) {
     for (const fn of files) {
       try {
         const raw = fs.readFileSync(path.join(datasetsDir, fn), 'utf8');
-        const arr = JSON.parse(raw);
-        if (Array.isArray(arr)) {
-          for (const q of arr) {
-            all.push({ ...q, __file: fn });
-          }
+        const parsed = JSON.parse(raw);
+        const arr = Array.isArray(parsed)
+          ? parsed
+          : (parsed && Array.isArray(parsed.questions) ? parsed.questions : []);
+        for (const q of arr) {
+          all.push({ ...q, __file: fn });
         }
       } catch (e) {
         // ignore

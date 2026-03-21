@@ -25,8 +25,11 @@ export async function GET(req: Request) {
     for (const f of files) {
       try {
         const content = fs.readFileSync(path.join(datasetsDir, f), "utf8");
-        const arr = JSON.parse(content);
-        if (!Array.isArray(arr)) continue;
+        const parsed = JSON.parse(content);
+        const arr = Array.isArray(parsed)
+          ? parsed
+          : (parsed && Array.isArray(parsed.questions) ? parsed.questions : []);
+        if (!Array.isArray(arr) || arr.length === 0) continue;
         for (const q of arr) {
           // Normalize difficulty from id prefix when possible
           if (q && typeof q.id === 'string') {

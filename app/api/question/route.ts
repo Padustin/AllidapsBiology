@@ -49,8 +49,11 @@ export async function POST(req: Request) {
         if (matchFile) {
           try {
             const raw = fs.readFileSync(path.join(datasetsDir, matchFile), 'utf8');
-            const arr = JSON.parse(raw);
-            if (Array.isArray(arr)) allQuestions.push(...arr);
+            const parsed = JSON.parse(raw);
+            const arr = Array.isArray(parsed)
+              ? parsed
+              : (parsed && Array.isArray(parsed.questions) ? parsed.questions : []);
+            if (arr.length > 0) allQuestions.push(...arr);
           } catch (e) {
             // ignore
           }
@@ -59,8 +62,11 @@ export async function POST(req: Request) {
         for (const f of files) {
           try {
             const raw = fs.readFileSync(path.join(datasetsDir, f), 'utf8');
-            const arr = JSON.parse(raw);
-            if (Array.isArray(arr)) allQuestions.push(...arr);
+            const parsed = JSON.parse(raw);
+            const arr = Array.isArray(parsed)
+              ? parsed
+              : (parsed && Array.isArray(parsed.questions) ? parsed.questions : []);
+            if (arr.length > 0) allQuestions.push(...arr);
           } catch (e) {
             // ignore bad files
           }
