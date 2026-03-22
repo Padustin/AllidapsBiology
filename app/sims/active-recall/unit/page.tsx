@@ -9,6 +9,7 @@ export default function Page() {
   const [question, setQuestion] = useState<any | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [selected, setSelected] = useState<number | null>(null);
+  const [crossedOut, setCrossedOut] = useState<Record<number, boolean>>({});
   const [visibleExplanations, setVisibleExplanations] = useState<Record<number, boolean>>({});
   const [seen, setSeen] = useState<Record<string, Record<string, true>>>({});
   const [poolSize, setPoolSize] = useState<number>(0);
@@ -19,6 +20,7 @@ export default function Page() {
     if (!unit || !difficulty) {
       setQuestion(null);
       setSelected(null);
+      setCrossedOut({});
       setVisibleExplanations({});
       setLoadError("Select a unit and difficulty first to begin.");
       return;
@@ -26,6 +28,7 @@ export default function Page() {
     if (difficulty === "frq") {
       setQuestion(null);
       setSelected(null);
+      setCrossedOut({});
       setVisibleExplanations({});
       setPoolSize(0);
       setLoadError(frqPlaceholder);
@@ -33,6 +36,7 @@ export default function Page() {
     }
     setQuestion(null);
     setSelected(null);
+    setCrossedOut({});
     setVisibleExplanations({});
     setLoadError(null);
     const MAX_ATTEMPTS = 6;
@@ -113,6 +117,7 @@ export default function Page() {
       setPoolSize(0);
       setQuestion(null);
       setSelected(null);
+      setCrossedOut({});
       setVisibleExplanations({});
       setLoadError("Select a unit and difficulty first to begin.");
       return;
@@ -121,6 +126,7 @@ export default function Page() {
       setPoolSize(0);
       setQuestion(null);
       setSelected(null);
+      setCrossedOut({});
       setVisibleExplanations({});
       setLoadError(frqPlaceholder);
       return;
@@ -146,7 +152,7 @@ export default function Page() {
 
   return (
     <div style={{ padding: 18, width: "100%", fontFamily: "\"Helvetica Neue\", Helvetica, Arial, sans-serif" }}>
-      <h1 style={{ fontSize: 24, fontWeight: 800 }}>Unit specific studying</h1>
+      <h1 style={{ fontSize: 24, fontWeight: 800 }}>Unit Specific MCQ's</h1>
       <div style={{ marginTop: 12, display: "flex", gap: 8, alignItems: "center" }}>
         <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
           <label style={{ fontWeight: 700 }}>Difficulty</label>
@@ -227,9 +233,25 @@ export default function Page() {
                             setVisibleExplanations({ [i]: true });
                           }}
                           disabled={isDisabled}
-                          style={{ textAlign: "left", padding: 8, borderRadius: 8, border: choiceBorder, background: bg, flex: 1 }}
+                          style={{ textAlign: "left", padding: 8, borderRadius: 8, border: choiceBorder, background: bg, flex: 1, textDecoration: crossedOut[i] ? "line-through" : "none", opacity: crossedOut[i] ? 0.55 : 1 }}
                         >
                           {String.fromCharCode(65 + i)}. {c}
+                        </button>
+                        <button
+                          onClick={() => setCrossedOut((s) => ({ ...s, [i]: !s[i] }))}
+                          aria-label={crossedOut[i] ? "Uncross option" : "Cross out option"}
+                          style={{
+                            width: 36,
+                            height: 36,
+                            borderRadius: 999,
+                            border: `1px solid ${crossedOut[i] ? "#fca5a5" : "#e2e8f0"}`,
+                            background: crossedOut[i] ? "#fee2e2" : "white",
+                            color: "#0f172a",
+                            fontWeight: 800,
+                            lineHeight: 1,
+                          }}
+                        >
+                          X
                         </button>
                         {selected !== null && (
                           <button

@@ -1,0 +1,968 @@
+[
+  {
+    "id": "u1-frq-1",
+    "difficulty": "hard",
+    "topic": "structure of water and hydrogen bonding",
+    "text": "Researchers place equal volumes of pure water and ethanol in identical open containers under the same environmental conditions. Over time, the ethanol evaporates more rapidly than the water.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe one structural property of water molecules that allows extensive hydrogen bonding between water molecules."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how hydrogen bonding contributes to the slower evaporation of water compared with ethanol."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how the specific heat of water would compare with the specific heat of ethanol."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "A student claims that hydrogen bonds are stronger than covalent bonds because they help water resist temperature change. Evaluate the student’s claim."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Water is a polar molecule with an uneven distribution of charge. The oxygen atom has a partial negative charge and the hydrogen atoms have partial positive charges, allowing neighboring water molecules to form hydrogen bonds.",
+        "bullet_points": [
+          "Water is polar.",
+          "Oxygen is partially negative and hydrogens are partially positive.",
+          "Opposite partial charges allow hydrogen bonds between molecules."
+        ]
+      },
+      "b": {
+        "answer": "Hydrogen bonds between water molecules require energy to break. Because many water molecules are held together by these intermolecular attractions, more energy is needed for water molecules to escape into the gas phase, so water evaporates more slowly than ethanol.",
+        "bullet_points": [
+          "Hydrogen bonds must be broken before molecules evaporate.",
+          "Breaking those interactions requires additional energy.",
+          "More energy needed means a slower rate of evaporation."
+        ]
+      },
+      "c": {
+        "answer": "Water would have a higher specific heat than ethanol. Because hydrogen bonding allows water to absorb a large amount of energy before its temperature changes substantially, water resists temperature change more than ethanol.",
+        "bullet_points": [
+          "Water has a higher specific heat.",
+          "Hydrogen bonding allows water to absorb more heat before temperature rises.",
+          "Water resists temperature change more than ethanol."
+        ]
+      },
+      "d": {
+        "answer": "The claim is incorrect. Hydrogen bonds help water resist temperature change, but hydrogen bonds are much weaker than the covalent bonds within a water molecule. Covalent bonds hold atoms together inside a molecule, whereas hydrogen bonds are weaker attractions between molecules.",
+        "bullet_points": [
+          "The claim is incorrect.",
+          "Hydrogen bonds are weaker than covalent bonds.",
+          "Hydrogen bonds are intermolecular; covalent bonds are intramolecular."
+        ]
+      }
+    },
+    "explain": "Water’s polarity leads to extensive hydrogen bonding, which explains properties such as high specific heat and slower evaporation. Students commonly confuse the importance of hydrogen bonds with their actual bond strength relative to covalent bonds.",
+    "part_explanations": {
+      "a": "Full credit requires linking water’s polarity to partial charges and hydrogen bonding capability.",
+      "b": "Responses should connect hydrogen bonds to the energy required for molecules to leave the liquid phase.",
+      "c": "Responses should explicitly compare water and ethanol and state that water has the higher specific heat.",
+      "d": "Responses should reject the claim and distinguish between hydrogen bonds and covalent bonds."
+    }
+  },
+  {
+    "id": "u1-frq-2",
+    "difficulty": "hard",
+    "topic": "structure of water and hydrogen bonding",
+    "text": "A biologist studies water movement through xylem tissue in a tall plant. The biologist observes that a continuous column of water can move upward from the roots to the leaves without the input of ATP directly into the xylem.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe how cohesion and adhesion contribute to water movement in the plant."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why hydrogen bonding is necessary for cohesion between water molecules."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict the effect on water transport if the polarity of water molecules were greatly reduced."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why disruption of hydrogen bonding in water would likely affect leaf temperature as well as transport."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Cohesion allows water molecules to stick to one another, helping maintain a continuous water column in the xylem. Adhesion allows water molecules to stick to the xylem walls, helping counter gravity and support upward movement.",
+        "bullet_points": [
+          "Cohesion = water sticking to water.",
+          "Adhesion = water sticking to xylem walls.",
+          "Together they help maintain upward movement of a continuous water column."
+        ]
+      },
+      "b": {
+        "answer": "Hydrogen bonding creates the attractive forces between polar water molecules. Without hydrogen bonds, water molecules would not cohere strongly enough to maintain a continuous column in the xylem.",
+        "bullet_points": [
+          "Hydrogen bonds create attraction between water molecules.",
+          "These attractions cause cohesion.",
+          "Cohesion helps preserve a continuous water column."
+        ]
+      },
+      "c": {
+        "answer": "Water transport would become less efficient or could fail because reduced polarity would reduce hydrogen bonding, weakening both cohesion and adhesion. The water column would be more likely to break.",
+        "bullet_points": [
+          "Reduced polarity lowers hydrogen bonding.",
+          "Weaker hydrogen bonding reduces cohesion and adhesion.",
+          "A weaker water column lowers transport efficiency."
+        ]
+      },
+      "d": {
+        "answer": "Hydrogen bonding affects water’s high specific heat and evaporative cooling as well as its transport properties. If hydrogen bonding were disrupted, water would not stabilize temperature as effectively, so leaves would likely experience larger temperature fluctuations in addition to impaired transport.",
+        "bullet_points": [
+          "Hydrogen bonding influences temperature regulation, not just transport.",
+          "Water’s high specific heat and evaporative cooling depend on hydrogen bonding.",
+          "Disruption would affect both leaf temperature stability and xylem transport."
+        ]
+      }
+    },
+    "explain": "Water’s hydrogen bonding gives rise to multiple emergent properties. In plants, the same polarity-based interactions help explain both water transport and temperature regulation.",
+    "part_explanations": {
+      "a": "Responses must distinguish cohesion from adhesion rather than treating them as the same property.",
+      "b": "Acceptable answers should connect polarity and hydrogen bonding to cohesion.",
+      "c": "Credit requires predicting reduced transport efficiency and explaining why.",
+      "d": "Strong answers link hydrogen bonding to both high specific heat and evaporative cooling."
+    }
+  },
+  {
+    "id": "u1-frq-3",
+    "difficulty": "hard",
+    "topic": "elements of life",
+    "text": "A student cultures bacteria in two media. Medium A contains all required nutrients. Medium B is identical except that it lacks phosphorus. After 24 hours, the bacteria in Medium B show much less growth.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify one major class of biological molecules whose synthesis would be directly limited by phosphorus deficiency."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why phosphorus is essential to the function of that molecule or class of molecules."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict one cellular process that would be reduced in the bacteria grown in Medium B."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why phosphorus limitation can reduce growth even if carbon, hydrogen, oxygen, and nitrogen are still available."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Acceptable answers include nucleic acids, ATP, or phospholipids. A major class that would be directly limited is nucleic acids.",
+        "bullet_points": [
+          "Acceptable examples include nucleic acids, ATP, or phospholipids.",
+          "Nucleic acids are a major valid answer.",
+          "Phosphorus-containing molecules would be hardest to synthesize."
+        ]
+      },
+      "b": {
+        "answer": "Phosphorus is essential because phosphate groups are part of the sugar-phosphate backbone of DNA and RNA. Without phosphate, cells cannot build or properly maintain nucleic acids.",
+        "bullet_points": [
+          "Phosphate is part of the DNA/RNA backbone.",
+          "Phosphorus is structurally required in nucleic acids.",
+          "Without phosphate, nucleic acid synthesis is limited."
+        ]
+      },
+      "c": {
+        "answer": "DNA replication or cell division would be reduced. If cells cannot synthesize enough nucleotides and nucleic acids, they cannot replicate genetic material efficiently.",
+        "bullet_points": [
+          "DNA replication would decrease.",
+          "Cell division would likely decrease as a result.",
+          "Reduced phosphorus limits nucleotide and nucleic acid synthesis."
+        ]
+      },
+      "d": {
+        "answer": "Growth depends on more than the presence of CHON elements. Cells also require phosphorus to synthesize essential molecules such as nucleic acids, ATP, and phospholipids. If phosphorus is missing, key processes like replication, energy transfer, and membrane formation are impaired, reducing growth.",
+        "bullet_points": [
+          "Cells require more than carbon, hydrogen, oxygen, and nitrogen.",
+          "Phosphorus is needed for nucleic acids, ATP, and phospholipids.",
+          "Without those molecules, growth-related processes are impaired."
+        ]
+      }
+    },
+    "explain": "Essential elements are important because they are incorporated into molecules with specific structural and functional roles. Phosphorus limitation affects information storage, membranes, and energy transfer, all of which are required for growth.",
+    "part_explanations": {
+      "a": "Students may identify a class of molecules or a phosphorus-containing biological molecule if clearly justified.",
+      "b": "The response should describe the role of phosphate groups in the chosen molecule.",
+      "c": "Any phosphorus-dependent cellular process can earn credit if the link is explained.",
+      "d": "Strong responses explain why missing one essential element can bottleneck growth despite the presence of others."
+    }
+  },
+  {
+    "id": "u1-frq-4",
+    "difficulty": "hard",
+    "topic": "elements of life",
+    "text": "Scientists compare two populations of cells. Population X is actively dividing. Population Y is metabolically active but not dividing. The scientists measure the percent composition of several elements in both populations.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "predict",
+        "prompt": "Predict which population is likely to contain a higher proportion of phosphorus."
+      },
+      {
+        "label": "b",
+        "verb": "justify",
+        "prompt": "Justify your prediction."
+      },
+      {
+        "label": "c",
+        "verb": "describe",
+        "prompt": "Describe one role of nitrogen in biological systems."
+      },
+      {
+        "label": "d",
+        "verb": "explain",
+        "prompt": "A student states that carbon is useful in biological molecules only because it is abundant. Explain why carbon is especially suited for building diverse biological structures."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Population X is likely to contain a higher proportion of phosphorus.",
+        "bullet_points": [
+          "Population X is the best prediction.",
+          "Actively dividing cells need more phosphorus-rich molecules.",
+          "Division increases demand for DNA, RNA, ATP, and membranes."
+        ]
+      },
+      "b": {
+        "answer": "Actively dividing cells need to replicate DNA, produce RNA, generate ATP, and synthesize additional membrane material. All of these depend on phosphate-containing molecules, so Population X would likely contain more phosphorus.",
+        "bullet_points": [
+          "Cell division increases demand for nucleic acids.",
+          "ATP and phospholipids also contain phosphorus.",
+          "Higher phosphorus demand supports the prediction for Population X."
+        ]
+      },
+      "c": {
+        "answer": "Nitrogen is a component of amino acids and therefore is essential for building proteins. Nitrogen is also found in nitrogenous bases of nucleic acids.",
+        "bullet_points": [
+          "Nitrogen is part of amino acids.",
+          "Nitrogen is necessary for protein synthesis.",
+          "Nitrogen is also found in DNA and RNA bases."
+        ]
+      },
+      "d": {
+        "answer": "Carbon is especially suited for building diverse biological molecules because it can form four covalent bonds, allowing it to make chains, rings, and branched structures. This bonding versatility allows the formation of many different molecular shapes and functions.",
+        "bullet_points": [
+          "Carbon forms four covalent bonds.",
+          "Carbon can form chains, rings, and branched molecules.",
+          "Its bonding flexibility allows great biological diversity."
+        ]
+      }
+    },
+    "explain": "The importance of biological elements comes from their chemical properties and the molecules they help build. Carbon’s bonding versatility and phosphorus’s role in nucleic acids and ATP are especially central in rapidly growing cells.",
+    "part_explanations": {
+      "a": "Credit requires selecting the actively dividing population.",
+      "b": "Responses should connect phosphorus to replication, ATP, or membrane synthesis.",
+      "c": "Any accurate role of nitrogen in biological molecules can earn credit.",
+      "d": "Responses should emphasize carbon’s tetravalence and structural versatility, not just abundance."
+    }
+  },
+  {
+    "id": "u1-frq-5",
+    "difficulty": "hard",
+    "topic": "introduction to macromolecules",
+    "text": "A researcher provides cultured animal cells with a solution containing amino acids, monosaccharides, nucleotides, and fatty acids. The cells use these small molecules to build larger biological molecules.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify which of the molecules listed are monomers of proteins."
+      },
+      {
+        "label": "b",
+        "verb": "describe",
+        "prompt": "Describe how cells generally build polymers from monomers."
+      },
+      {
+        "label": "c",
+        "verb": "explain",
+        "prompt": "Explain the role of dehydration synthesis in the formation of biological macromolecules."
+      },
+      {
+        "label": "d",
+        "verb": "predict",
+        "prompt": "Predict what would happen to the rate of polymer formation if the cell were unable to remove water molecules during bond formation."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The monomers of proteins are amino acids.",
+        "bullet_points": [
+          "Amino acids are the correct monomers.",
+          "Proteins are polymers made of amino acids.",
+          "The other listed molecules are monomers or subunits for other macromolecules."
+        ]
+      },
+      "b": {
+        "answer": "Cells build polymers by linking monomers together through covalent bonds. Enzymes catalyze these reactions, and repeated bond formation produces larger macromolecules.",
+        "bullet_points": [
+          "Monomers are linked by covalent bonds.",
+          "Enzymes catalyze polymer formation.",
+          "Repeated bonding creates polymers."
+        ]
+      },
+      "c": {
+        "answer": "Dehydration synthesis forms covalent bonds between subunits by removing a water molecule. This process is used to build many biological macromolecules such as proteins, carbohydrates, and nucleic acids.",
+        "bullet_points": [
+          "Dehydration synthesis removes water.",
+          "The removal of water helps form a covalent bond.",
+          "This process builds many macromolecules."
+        ]
+      },
+      "d": {
+        "answer": "The rate of polymer formation would decrease greatly or stop because dehydration synthesis depends on removing water to form covalent bonds between subunits.",
+        "bullet_points": [
+          "Polymer formation would slow or stop.",
+          "Dehydration synthesis requires water removal.",
+          "Without that step, covalent bonding between monomers is impaired."
+        ]
+      }
+    },
+    "explain": "Macromolecules are assembled from smaller subunits through enzyme-mediated reactions. Understanding dehydration synthesis helps connect structure, bonding, and macromolecule formation.",
+    "part_explanations": {
+      "a": "Only amino acids should be selected for proteins.",
+      "b": "Responses should mention covalent bond formation between monomers.",
+      "c": "Credit requires explicitly describing water removal during bond formation.",
+      "d": "A correct prediction must be tied to the role of dehydration synthesis."
+    }
+  },
+  {
+    "id": "u1-frq-6",
+    "difficulty": "hard",
+    "topic": "introduction to macromolecules",
+    "text": "In a digestion experiment, a student measures the breakdown of biological polymers into smaller subunits in the small intestine.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe the process of hydrolysis."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why hydrolysis is necessary for most large biological macromolecules to be absorbed by the body."
+      },
+      {
+        "label": "c",
+        "verb": "identify",
+        "prompt": "Identify one macromolecule that is not considered a true polymer in the same way as proteins or nucleic acids."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "Evaluate the claim that all biological macromolecules are assembled from repeating identical monomers."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Hydrolysis is the breakdown of a polymer into smaller subunits by adding water. The added water helps break the covalent bond between monomers.",
+        "bullet_points": [
+          "Hydrolysis adds water.",
+          "Adding water breaks a covalent bond.",
+          "The process breaks polymers into smaller units."
+        ]
+      },
+      "b": {
+        "answer": "Most macromolecules are too large to cross membranes intact. Hydrolysis breaks them into smaller monomers or subunits, which can then be transported into cells and used by the body.",
+        "bullet_points": [
+          "Large polymers are usually too large to absorb directly.",
+          "Hydrolysis produces smaller absorbable units.",
+          "Those smaller units can be transported across membranes."
+        ]
+      },
+      "c": {
+        "answer": "Lipids are not considered true polymers in the same way as proteins or nucleic acids.",
+        "bullet_points": [
+          "Lipids are the best answer.",
+          "Lipids are not built as long chains of repeating identical monomers in the same way.",
+          "Triglycerides and phospholipids use subunits but are not true polymers."
+        ]
+      },
+      "d": {
+        "answer": "The claim is incorrect. Some macromolecules, such as proteins and nucleic acids, are polymers made of repeating monomers. However, lipids are not true polymers, and even many polymers are built from similar but not always identical monomers.",
+        "bullet_points": [
+          "The claim is incorrect.",
+          "Proteins and nucleic acids are true polymers.",
+          "Lipids are not true polymers, and monomers are not always identical."
+        ]
+      }
+    },
+    "explain": "Hydrolysis is the reverse of dehydration synthesis and is essential in digestion. Students also need to recognize that not all macromolecules fit the same polymer model.",
+    "part_explanations": {
+      "a": "Answers must describe water being used to break bonds.",
+      "b": "Responses should connect size and membrane transport to the need for hydrolysis.",
+      "c": "Lipids are the strongest expected answer.",
+      "d": "Evaluation should reject the overgeneralization and explain the exception."
+    }
+  },
+  {
+    "id": "u1-frq-7",
+    "difficulty": "hard",
+    "topic": "carbohydrates",
+    "text": "A scientist compares the digestion of starch and cellulose by human digestive enzymes. Starch is digested efficiently, but cellulose passes through the digestive system largely undigested.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe one structural similarity between starch and cellulose."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why humans can digest starch but not cellulose."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how the presence of cellulose in a plant’s cell wall contributes to plant function."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why two carbohydrates made only of glucose can have different biological roles."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Both starch and cellulose are polysaccharides composed of glucose monomers.",
+        "bullet_points": [
+          "Both are carbohydrates.",
+          "Both are polysaccharides.",
+          "Both are built from glucose monomers."
+        ]
+      },
+      "b": {
+        "answer": "Humans can digest starch because human enzymes can break the alpha glycosidic linkages in starch. Humans cannot digest cellulose because cellulose contains beta glycosidic linkages, and humans generally lack cellulase to break those bonds.",
+        "bullet_points": [
+          "Starch has alpha linkages that human enzymes can break.",
+          "Cellulose has beta linkages.",
+          "Humans lack the enzyme needed to hydrolyze cellulose effectively."
+        ]
+      },
+      "c": {
+        "answer": "Cellulose helps provide structural support to the plant. Its fibers strengthen the cell wall, helping cells resist pressure and maintain shape.",
+        "bullet_points": [
+          "Cellulose contributes to structural support.",
+          "It strengthens plant cell walls.",
+          "It helps cells maintain shape and resist bursting."
+        ]
+      },
+      "d": {
+        "answer": "Different arrangements and types of glycosidic linkages change the three-dimensional structure of the carbohydrate. Because structure influences function, glucose polymers can serve either storage roles, like starch, or structural roles, like cellulose.",
+        "bullet_points": [
+          "The same monomer can be linked in different ways.",
+          "Different linkages create different structures.",
+          "Different structures lead to different biological roles."
+        ]
+      }
+    },
+    "explain": "A key AP Biology idea is that function follows structure. Even when polymers use the same monomer, differences in bonding and orientation can produce very different biological outcomes.",
+    "part_explanations": {
+      "a": "Responses should identify both molecules as glucose-based polysaccharides.",
+      "b": "Credit requires contrasting alpha and beta linkages.",
+      "c": "Answers should link cellulose to support or wall strength.",
+      "d": "The justification must explicitly connect structure to function."
+    }
+  },
+  {
+    "id": "u1-frq-8",
+    "difficulty": "hard",
+    "topic": "carbohydrates",
+    "text": "Researchers compare glycogen from liver cells with starch from potato cells. Both molecules function in energy storage.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify one structural feature of glycogen that makes it effective for short-term energy storage in animals."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how that structural feature supports rapid glucose release."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how a decrease in branching of glycogen would affect the rate at which glucose can be mobilized."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "A student claims that structural polysaccharides and storage polysaccharides are interchangeable because both are made from monosaccharides. Evaluate the claim."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Glycogen is highly branched, which makes it effective for short-term energy storage.",
+        "bullet_points": [
+          "High branching is the key feature.",
+          "Glycogen has many ends where enzymes can act.",
+          "That structure supports rapid energy mobilization."
+        ]
+      },
+      "b": {
+        "answer": "Because glycogen has many branches, it has many terminal ends where enzymes can remove glucose quickly. This allows rapid release of glucose when energy is needed.",
+        "bullet_points": [
+          "Branching creates many terminal ends.",
+          "Enzymes can work at multiple sites.",
+          "Multiple release sites allow rapid glucose mobilization."
+        ]
+      },
+      "c": {
+        "answer": "The rate of glucose mobilization would decrease. With fewer branches, glycogen would have fewer terminal ends available for enzyme activity.",
+        "bullet_points": [
+          "Glucose release would be slower.",
+          "Fewer branches means fewer enzyme-accessible ends.",
+          "Reduced branching lowers mobilization rate."
+        ]
+      },
+      "d": {
+        "answer": "The claim is incorrect. Although both types of polysaccharides are made from monosaccharides, structural polysaccharides and storage polysaccharides differ in linkage patterns and overall structure. Those structural differences lead to different functions.",
+        "bullet_points": [
+          "The claim is incorrect.",
+          "Linkage patterns and branching differ between polysaccharides.",
+          "Those structural differences produce different functions."
+        ]
+      }
+    },
+    "explain": "Storage polysaccharides are optimized for accessibility and rapid energy release, whereas structural polysaccharides are optimized for strength. Their shared monomer does not make them functionally interchangeable.",
+    "part_explanations": {
+      "a": "Branching is the most direct expected answer.",
+      "b": "Responses should connect branching to multiple terminal ends.",
+      "c": "A correct prediction should state slower mobilization and explain why.",
+      "d": "The evaluation must reject the claim and explain the structural basis for different functions."
+    }
+  },
+  {
+    "id": "u1-frq-9",
+    "difficulty": "hard",
+    "topic": "lipids",
+    "text": "A biologist grows two populations of bacteria. Population A is grown at a low temperature. Population B is grown at a high temperature. The membranes of Population A contain a higher proportion of unsaturated fatty acids than the membranes of Population B.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe the structural difference between saturated and unsaturated fatty acids."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why unsaturated fatty acids help maintain membrane function at lower temperatures."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict the effect on membrane fluidity if Population A produced more saturated fatty acids instead."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why maintaining membrane fluidity is important for cell survival."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Saturated fatty acids have no carbon-carbon double bonds in their hydrocarbon chains, whereas unsaturated fatty acids have one or more double bonds that create bends or kinks.",
+        "bullet_points": [
+          "Saturated fatty acids have no C=C double bonds.",
+          "Unsaturated fatty acids have one or more double bonds.",
+          "Double bonds create kinks in unsaturated chains."
+        ]
+      },
+      "b": {
+        "answer": "The kinks in unsaturated fatty acids prevent phospholipids from packing too tightly. At lower temperatures, this helps maintain membrane fluidity so the membrane does not become too rigid.",
+        "bullet_points": [
+          "Unsaturated fatty acids pack less tightly.",
+          "Kinks reduce close packing.",
+          "Reduced packing helps preserve fluidity in the cold."
+        ]
+      },
+      "c": {
+        "answer": "Membrane fluidity would decrease if Population A produced more saturated fatty acids. Saturated fatty acids pack more closely together, making the membrane more rigid.",
+        "bullet_points": [
+          "Fluidity would decrease.",
+          "Saturated tails pack tightly together.",
+          "Tighter packing makes the membrane more rigid."
+        ]
+      },
+      "d": {
+        "answer": "Membrane fluidity is important because membranes must remain flexible enough for transport proteins to function, for membrane-associated processes to occur, and for the membrane to act as an effective boundary. If membranes become too rigid, essential cellular processes are disrupted.",
+        "bullet_points": [
+          "Proper fluidity supports transport and membrane protein function.",
+          "Fluid membranes allow normal membrane-associated processes.",
+          "Excess rigidity can disrupt cell survival."
+        ]
+      }
+    },
+    "explain": "Membrane composition changes with temperature because cells must preserve an appropriate level of fluidity. Unsaturated fatty acids help prevent cold temperatures from making membranes overly rigid.",
+    "part_explanations": {
+      "a": "Credit depends on contrasting the presence or absence of double bonds.",
+      "b": "Students should link unsaturation to membrane packing and fluidity.",
+      "c": "Responses should predict decreased fluidity with more saturated fatty acids.",
+      "d": "Acceptable justifications include transport, protein function, or overall membrane function."
+    }
+  },
+  {
+    "id": "u1-frq-10",
+    "difficulty": "hard",
+    "topic": "lipids",
+    "text": "Scientists isolate three molecules from an animal: a triglyceride, a phospholipid, and a steroid hormone.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify which molecule is most directly involved in forming the plasma membrane."
+      },
+      {
+        "label": "b",
+        "verb": "describe",
+        "prompt": "Describe one structural feature of that molecule that allows it to form membranes."
+      },
+      {
+        "label": "c",
+        "verb": "explain",
+        "prompt": "Explain why triglycerides are efficient long-term energy storage molecules."
+      },
+      {
+        "label": "d",
+        "verb": "predict",
+        "prompt": "Predict how a major decrease in steroid hormone production could affect communication between cells."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The phospholipid is the molecule most directly involved in forming the plasma membrane.",
+        "bullet_points": [
+          "Phospholipid is the correct answer.",
+          "Phospholipids are major components of cell membranes.",
+          "They form the bilayer structure."
+        ]
+      },
+      "b": {
+        "answer": "A phospholipid has a hydrophilic phosphate-containing head and hydrophobic fatty acid tails. This amphipathic structure allows phospholipids to spontaneously arrange into bilayers in aqueous environments.",
+        "bullet_points": [
+          "The molecule is amphipathic.",
+          "It has a hydrophilic head and hydrophobic tails.",
+          "That structure allows bilayer formation in water."
+        ]
+      },
+      "c": {
+        "answer": "Triglycerides are efficient long-term energy storage molecules because they contain many energy-rich carbon-hydrogen bonds and are highly reduced. They also store energy densely because they are hydrophobic and do not associate with much water.",
+        "bullet_points": [
+          "Triglycerides contain many energy-rich bonds.",
+          "They are highly reduced molecules.",
+          "Their hydrophobic nature makes energy storage compact."
+        ]
+      },
+      "d": {
+        "answer": "Communication between cells would likely decrease or change because steroid hormones act as signaling molecules. If steroid hormone production declines, target cells would receive fewer endocrine signals and may alter gene expression or physiological responses.",
+        "bullet_points": [
+          "Steroid hormones are signaling molecules.",
+          "Less hormone means weaker or altered signaling.",
+          "Target cell responses and gene expression may change."
+        ]
+      }
+    },
+    "explain": "Different lipid classes serve distinct roles: phospholipids form membranes, triglycerides store energy, and steroids often function in signaling. Recognizing those contrasts is central to Unit 1.",
+    "part_explanations": {
+      "a": "Only phospholipid should be chosen for membrane formation.",
+      "b": "Responses should mention amphipathic structure and bilayer formation.",
+      "c": "Any explanation involving energy-rich bonds and compact storage can earn credit.",
+      "d": "Students should connect steroid hormones to cell signaling and downstream effects."
+    }
+  },
+  {
+    "id": "u1-frq-11",
+    "difficulty": "hard",
+    "topic": "nucleic acids",
+    "text": "A virus contains RNA as its genetic material, whereas a nearby bacterium stores hereditary information in DNA.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe one structural difference between RNA and DNA."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why DNA is generally better suited than RNA for long-term information storage in cells."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how replacing thymine with uracil in a cellular DNA molecule would affect the stability or function of the molecule."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why both DNA and RNA are still classified as nucleic acids despite their differences."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "One structural difference is that DNA contains deoxyribose sugar, whereas RNA contains ribose sugar. Another acceptable difference is that DNA uses thymine while RNA uses uracil, or that DNA is usually double-stranded while RNA is usually single-stranded.",
+        "bullet_points": [
+          "DNA has deoxyribose; RNA has ribose.",
+          "DNA uses thymine; RNA uses uracil.",
+          "DNA is usually double-stranded; RNA is usually single-stranded."
+        ]
+      },
+      "b": {
+        "answer": "DNA is generally better for long-term information storage because it is more chemically stable. Its double-stranded structure provides a complementary template for repair, and deoxyribose is less reactive than ribose.",
+        "bullet_points": [
+          "DNA is more chemically stable than RNA.",
+          "The double-stranded structure helps with repair and information preservation.",
+          "Deoxyribose contributes to greater stability than ribose."
+        ]
+      },
+      "c": {
+        "answer": "Replacing thymine with uracil in DNA would likely make the molecule less typical and potentially less stable or less easily maintained by cellular systems. Cells are adapted to DNA containing thymine, so such a change could interfere with normal DNA function or recognition.",
+        "bullet_points": [
+          "DNA with uracil would be atypical in cells.",
+          "It could reduce stability or interfere with normal maintenance.",
+          "Cellular systems are adapted to DNA containing thymine."
+        ]
+      },
+      "d": {
+        "answer": "Both DNA and RNA are classified as nucleic acids because both are polymers of nucleotide subunits and both function in storing or transmitting genetic information.",
+        "bullet_points": [
+          "Both are made of nucleotides.",
+          "Both have sugar-phosphate backbones and nitrogenous bases.",
+          "Both play roles in genetic information."
+        ]
+      }
+    },
+    "explain": "DNA and RNA differ in structure and stability, but both belong to the same macromolecule class because they share nucleotide-based architecture and roles in information flow.",
+    "part_explanations": {
+      "a": "Any one accurate structural difference can earn credit.",
+      "b": "Responses should emphasize DNA’s stability and/or double-stranded repair advantages.",
+      "c": "A correct prediction should mention altered stability or cellular incompatibility.",
+      "d": "The justification must mention nucleotide composition or information-related function."
+    }
+  },
+  {
+    "id": "u1-frq-12",
+    "difficulty": "hard",
+    "topic": "nucleic acids",
+    "text": "A researcher analyzes a double-stranded DNA sample and finds that 31% of its bases are adenine.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "determine",
+        "prompt": "Determine the percentage of thymine in the sample."
+      },
+      {
+        "label": "b",
+        "verb": "determine",
+        "prompt": "Determine the combined percentage of guanine and cytosine in the sample."
+      },
+      {
+        "label": "c",
+        "verb": "explain",
+        "prompt": "Explain how complementary base pairing leads to your calculations."
+      },
+      {
+        "label": "d",
+        "verb": "predict",
+        "prompt": "The researcher then isolates a single-stranded RNA molecule transcribed from the DNA. Predict whether the RNA must contain the same base percentages as the original DNA sample, and justify your answer."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Thymine would also be 31%.",
+        "bullet_points": [
+          "Thymine = 31%.",
+          "In double-stranded DNA, adenine pairs with thymine.",
+          "Therefore their percentages are equal."
+        ]
+      },
+      "b": {
+        "answer": "If adenine is 31% and thymine is 31%, then guanine plus cytosine must make up the remaining 38%.",
+        "bullet_points": [
+          "A + T = 62%.",
+          "The remaining percentage is 38%.",
+          "Therefore G + C = 38% combined."
+        ]
+      },
+      "c": {
+        "answer": "Complementary base pairing means adenine pairs with thymine and guanine pairs with cytosine in double-stranded DNA. Because each base pair contains matching partners, the proportion of A equals T and the proportion of G equals C.",
+        "bullet_points": [
+          "A pairs with T.",
+          "G pairs with C.",
+          "That pairing makes the percentages of each pair equal in double-stranded DNA."
+        ]
+      },
+      "d": {
+        "answer": "No, the RNA does not have to contain the same base percentages as the original DNA sample. RNA is single-stranded and is transcribed from only one DNA strand, so its base composition depends on the sequence of the template region rather than the overall double-stranded DNA composition.",
+        "bullet_points": [
+          "No, the RNA does not have to match the overall DNA percentages.",
+          "RNA is single-stranded.",
+          "It is copied from one DNA strand or one region, not from the entire double-stranded molecule equally."
+        ]
+      }
+    },
+    "explain": "This FRQ practices Chargaff-style reasoning while also testing whether students understand why single-stranded RNA is not constrained to the same base ratios as double-stranded DNA.",
+    "part_explanations": {
+      "a": "Students should state 31% and connect it to A-T pairing.",
+      "b": "The correct total is 38% for G plus C combined.",
+      "c": "Responses must explain why double-stranded DNA gives equal pair percentages.",
+      "d": "Strong responses explain that RNA is transcribed from one strand or one gene region."
+    }
+  },
+  {
+    "id": "u1-frq-13",
+    "difficulty": "hard",
+    "topic": "proteins",
+    "text": "A mutation changes one amino acid in an enzyme. The altered enzyme folds differently from the normal enzyme and no longer binds its substrate effectively.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe how the sequence of amino acids in a protein influences its final shape."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how a change in one amino acid can alter the function of the enzyme."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict the effect of the mutation on the rate of the reaction catalyzed by the enzyme."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why protein function depends on levels of structure beyond the primary structure."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The amino acid sequence determines which side chains are present and where they occur in the protein. Interactions among those side chains drive folding, producing the protein’s final three-dimensional shape.",
+        "bullet_points": [
+          "Primary structure determines the sequence of side chains.",
+          "Side-chain interactions influence folding.",
+          "Folding produces the final three-dimensional shape."
+        ]
+      },
+      "b": {
+        "answer": "A change in one amino acid can alter charge, polarity, or shape in part of the protein. That can change folding or the shape of the active site, reducing the enzyme’s ability to bind substrate and catalyze the reaction.",
+        "bullet_points": [
+          "One amino acid change can alter side-chain properties.",
+          "That can change folding or active-site shape.",
+          "Altered substrate binding changes enzyme function."
+        ]
+      },
+      "c": {
+        "answer": "The reaction rate would likely decrease because the altered enzyme no longer binds the substrate effectively.",
+        "bullet_points": [
+          "Reaction rate would decrease.",
+          "Poor substrate binding reduces catalysis.",
+          "Less effective enzyme-substrate interaction lowers product formation."
+        ]
+      },
+      "d": {
+        "answer": "Primary structure provides the sequence, but protein function depends on higher levels of structure because the final shape of the protein determines its interactions with other molecules. Secondary, tertiary, and sometimes quaternary structure are required to produce the active conformation.",
+        "bullet_points": [
+          "Primary structure alone does not determine function directly.",
+          "Higher levels of folding create the active shape.",
+          "Function depends on the final conformation of the protein."
+        ]
+      }
+    },
+    "explain": "Protein structure is hierarchical, and changes at the amino acid level can propagate upward into altered folding and altered function. This is one of the most important structure-function ideas in Unit 1.",
+    "part_explanations": {
+      "a": "Responses should link amino acid sequence to side-chain interactions and folding.",
+      "b": "Credit requires connecting amino acid change to altered active site or folding.",
+      "c": "A correct prediction should note reduced reaction rate or catalytic efficiency.",
+      "d": "Students should explain why higher-order structure matters for function."
+    }
+  },
+  {
+    "id": "u1-frq-14",
+    "difficulty": "hard",
+    "topic": "proteins",
+    "text": "Researchers place a soluble protein into three different environments: normal cellular pH, very low pH, and very high temperature. They then measure the protein’s activity.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "predict",
+        "prompt": "Predict how protein activity will change in the low-pH and high-temperature treatments."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how each treatment can alter the protein’s structure."
+      },
+      {
+        "label": "c",
+        "verb": "describe",
+        "prompt": "Describe one type of interaction that helps stabilize protein folding."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "A student claims that denaturation always breaks peptide bonds and destroys the primary structure of a protein. Evaluate the claim."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Protein activity would likely decrease in both the low-pH and high-temperature treatments because those conditions can denature the protein or alter its shape.",
+        "bullet_points": [
+          "Activity would decrease in both treatments.",
+          "Low pH and high temperature can alter protein shape.",
+          "Denaturation often reduces or eliminates function."
+        ]
+      },
+      "b": {
+        "answer": "Low pH can change the ionization of amino acid side chains, disrupting ionic and hydrogen-bond interactions. High temperature increases molecular motion and can disrupt hydrogen bonds and other interactions that maintain the protein’s folded structure.",
+        "bullet_points": [
+          "Low pH alters charge interactions among side chains.",
+          "High temperature disrupts stabilizing interactions by increasing motion.",
+          "Both conditions can change tertiary or quaternary structure."
+        ]
+      },
+      "c": {
+        "answer": "One interaction that stabilizes protein folding is hydrogen bonding. Other acceptable answers include ionic interactions, hydrophobic interactions, and disulfide bonds.",
+        "bullet_points": [
+          "Hydrogen bonds are one acceptable example.",
+          "Ionic interactions, hydrophobic interactions, and disulfide bonds are also acceptable.",
+          "These interactions help maintain folded structure."
+        ]
+      },
+      "d": {
+        "answer": "The claim is incorrect. Denaturation usually disrupts higher levels of protein structure such as secondary and tertiary structure, but it does not necessarily break peptide bonds or destroy the primary structure.",
+        "bullet_points": [
+          "The claim is incorrect.",
+          "Denaturation often disrupts higher-order structure.",
+          "Primary structure usually remains intact unless peptide bonds are actually broken."
+        ]
+      }
+    },
+    "explain": "Changes in pH and temperature can alter the interactions that stabilize proteins, causing denaturation and loss of activity. Students often confuse denaturation with complete bond breakage, so distinguishing primary structure from higher-order structure is important.",
+    "part_explanations": {
+      "a": "Responses should predict reduced activity under both extreme conditions.",
+      "b": "Credit requires explaining how pH and temperature affect stabilizing interactions.",
+      "c": "Any accurate stabilizing interaction can earn credit.",
+      "d": "Evaluation should reject the claim and distinguish denaturation from peptide bond hydrolysis."
+    }
+  }
+]

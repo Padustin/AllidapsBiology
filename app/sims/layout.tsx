@@ -88,8 +88,10 @@ export default function SimsLayout({ children }: { children: ReactNode }) {
               <div>
                 <div style={{ ...getSectionSummaryStyle(pathname.startsWith("/sims/active-recall")), padding: "0 14px" }}>Study!!</div>
                 <div style={{ display: "grid", gap: 0, marginTop: 6 }}>
-                  <Link href="/sims/active-recall/ap" style={getNavItemStyle("/sims/active-recall/ap")}>AP test studying</Link>
-                  <Link href="/sims/active-recall/unit" style={getNavItemStyle("/sims/active-recall/unit")}>Unit specific studying</Link>
+                  <Link href="/sims/active-recall/ap" style={getNavItemStyle("/sims/active-recall/ap")}>All Unit MCQ's</Link>
+                  <Link href="/sims/active-recall/unit" style={getNavItemStyle("/sims/active-recall/unit")}>Unit Specific MCQ's</Link>
+                  <Link href="/sims/active-recall/frq-all" style={getNavItemStyle("/sims/active-recall/frq-all")}>All Unit FRQ's</Link>
+                  <Link href="/sims/active-recall/frq-unit" style={getNavItemStyle("/sims/active-recall/frq-unit")}>Unit Specific FRQ's(BEST)</Link>
                 </div>
               </div>
 

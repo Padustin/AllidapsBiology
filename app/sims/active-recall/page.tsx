@@ -20,7 +20,7 @@ export default function ActiveRecallPage() {
             textDecoration: "none",
           }}
         >
-          AP test studying
+          All Unit MCQ's
         </Link>
         <Link
           href="/sims/active-recall/unit"
@@ -34,7 +34,35 @@ export default function ActiveRecallPage() {
             textDecoration: "none",
           }}
         >
-          Unit specific studying
+          Unit Specific MCQ's
+        </Link>
+        <Link
+          href="/sims/active-recall/frq-all"
+          style={{
+            border: "1px solid #0f766e",
+            background: "#0d9488",
+            color: "#ffffff",
+            borderRadius: 10,
+            padding: "10px 14px",
+            fontWeight: 700,
+            textDecoration: "none",
+          }}
+        >
+          All Unit FRQ's
+        </Link>
+        <Link
+          href="/sims/active-recall/frq-unit"
+          style={{
+            border: "1px solid #a16207",
+            background: "#fef3c7",
+            color: "#78350f",
+            borderRadius: 10,
+            padding: "10px 14px",
+            fontWeight: 700,
+            textDecoration: "none",
+          }}
+        >
+          Unit Specific FRQ's(BEST)
         </Link>
       </div>
     </main>

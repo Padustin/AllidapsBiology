@@ -7,6 +7,7 @@ export default function Page() {
   const [question, setQuestion] = useState<any | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [selected, setSelected] = useState<number | null>(null);
+  const [crossedOut, setCrossedOut] = useState<Record<number, boolean>>({});
   const [visibleExplanations, setVisibleExplanations] = useState<Record<number, boolean>>({});
   const [seen, setSeen] = useState<Record<string, Record<string, true>>>({});
   const [poolSize, setPoolSize] = useState<number>(0);
@@ -22,6 +23,7 @@ export default function Page() {
   async function next(attempt = 0) {
     setQuestion(null);
     setSelected(null);
+    setCrossedOut({});
     setVisibleExplanations({});
     setLoadError(null);
     if (difficulty === "frq") {
@@ -105,6 +107,7 @@ export default function Page() {
         setPoolSize(0);
         setQuestion(null);
         setSelected(null);
+        setCrossedOut({});
         setVisibleExplanations({});
         setLoadError(frqPlaceholder);
         return;
@@ -127,7 +130,7 @@ export default function Page() {
 
   return (
     <div style={{ padding: 18, width: "100%", fontFamily: "\"Helvetica Neue\", Helvetica, Arial, sans-serif", color: text }}>
-      <h1 style={{ fontSize: 24, fontWeight: 800, color: heading }}>AP test studying</h1>
+      <h1 style={{ fontSize: 24, fontWeight: 800, color: heading }}>All Unit MCQ's</h1>
 
       <div style={{ marginTop: 12, display: "flex", gap: 8, alignItems: "center" }}>
         <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
@@ -196,9 +199,25 @@ export default function Page() {
                             setVisibleExplanations({ [i]: true });
                           }}
                           disabled={isDisabled}
-                          style={{ textAlign: "left", padding: 10, borderRadius: 12, border: bdr, background: bg, flex: 1 }}
+                          style={{ textAlign: "left", padding: 10, borderRadius: 12, border: bdr, background: bg, flex: 1, textDecoration: crossedOut[i] ? "line-through" : "none", opacity: crossedOut[i] ? 0.55 : 1 }}
                         >
                           {String.fromCharCode(65 + i)}. {c}
+                        </button>
+                        <button
+                          onClick={() => setCrossedOut((s) => ({ ...s, [i]: !s[i] }))}
+                          aria-label={crossedOut[i] ? "Uncross option" : "Cross out option"}
+                          style={{
+                            width: 40,
+                            height: 40,
+                            borderRadius: 999,
+                            border: `1px solid ${crossedOut[i] ? "#fca5a5" : border}`,
+                            background: crossedOut[i] ? "#fee2e2" : "white",
+                            color: "#0f172a",
+                            fontWeight: 800,
+                            lineHeight: 1,
+                          }}
+                        >
+                          X
                         </button>
                         {selected !== null && (
                           <button
