@@ -1,0 +1,830 @@
+[
+  {
+    "id": "u4-frq-1",
+    "difficulty": "hard",
+    "topic": "cell communication",
+    "text": "Researchers culture immune cells together and observe that some cells respond only when they physically contact neighboring cells, whereas other responses occur after a signaling molecule diffuses through the medium.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe one difference between direct cell-to-cell communication and communication by a secreted local signal."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why only nearby cells respond to many local signaling molecules."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict the effect of preventing physical contact between the immune cells on a response that requires membrane-bound recognition proteins."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why multicellular organisms benefit from having multiple modes of cell communication."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Direct cell-to-cell communication requires adjacent cells to interact through membrane proteins or junctions, whereas local signaling uses molecules released by one cell that travel a short distance to target cells.",
+        "bullet_points": [
+          "Direct signaling needs cell contact.",
+          "Local signaling uses released molecules.",
+          "The two modes differ in how the signal reaches the target."
+        ]
+      },
+      "b": {
+        "answer": "Local signals are often short lived, rapidly degraded, or present at high enough concentrations only near the secreting cell. Therefore only nearby cells receive enough signal to respond.",
+        "bullet_points": [
+          "Local signals spread only short distances.",
+          "They may be degraded or diluted quickly.",
+          "Only nearby cells reach the response threshold."
+        ]
+      },
+      "c": {
+        "answer": "The response would decrease or stop because the recognition proteins would no longer be able to bind across adjacent plasma membranes. Without contact, the required signaling event cannot occur.",
+        "bullet_points": [
+          "The contact-dependent response would fall or stop.",
+          "Membrane proteins must physically interact.",
+          "Separating the cells prevents that interaction."
+        ]
+      },
+      "d": {
+        "answer": "Different communication modes allow organisms to coordinate both highly specific local interactions and broader organism-level responses. This increases precision, speed, and flexibility in maintaining homeostasis and development.",
+        "bullet_points": [
+          "Multiple signaling modes increase flexibility.",
+          "Some responses need local precision and others need broader coordination.",
+          "This helps maintain homeostasis and organize tissues."
+        ]
+      }
+    },
+    "explain": "Cells communicate either by direct contact or by released signals, and the range and specificity of the signal depend on the mechanism used.",
+    "part_explanations": {
+      "a": "Responses should compare contact-based and local secreted signaling.",
+      "b": "Responses should discuss short-range effects such as dilution or rapid degradation.",
+      "c": "Responses should tie the loss of response to the loss of membrane contact.",
+      "d": "Responses should connect communication diversity to coordinated multicellular function."
+    }
+  },
+  {
+    "id": "u4-frq-2",
+    "difficulty": "hard",
+    "topic": "cell communication",
+    "text": "A plant cell and a neuron both transmit information to other cells, but they do so using different signaling mechanisms.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify one signaling mechanism commonly used by neurons."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how signaling in plants can still coordinate responses even though plants do not have neurons."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how a breakdown in signaling would affect coordination among cells in a multicellular organism."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "Evaluate the claim that only animals require cell communication because plants do not move from place to place."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Neurons commonly use synaptic signaling, in which neurotransmitters are released from one cell and bind receptors on a nearby target cell.",
+        "bullet_points": [
+          "Identify synaptic signaling.",
+          "Neurotransmitters are released.",
+          "Target cells respond through receptors."
+        ]
+      },
+      "b": {
+        "answer": "Plants coordinate responses through hormones, chemical messengers, receptor proteins, and sometimes electrical signals that move through tissues. These signals allow different parts of the plant to respond to light, damage, water stress, and pathogens.",
+        "bullet_points": [
+          "Plants also use signaling molecules and receptors.",
+          "Signals move through tissues to coordinate responses.",
+          "Plant responses include growth and stress responses."
+        ]
+      },
+      "c": {
+        "answer": "Coordination among cells would be reduced, causing cells or tissues to respond at the wrong time or not at all. This can disrupt homeostasis, development, or defense responses.",
+        "bullet_points": [
+          "Communication loss reduces coordination.",
+          "Responses may happen at the wrong time or place.",
+          "Homeostasis and development can be disrupted."
+        ]
+      },
+      "d": {
+        "answer": "The claim is incorrect. Plants rely heavily on cell communication to regulate growth, defense, transport, and responses to environmental change even though they are sessile.",
+        "bullet_points": [
+          "Reject the claim.",
+          "Plants still need signaling to coordinate functions.",
+          "Movement is not the only reason organisms communicate."
+        ]
+      }
+    },
+    "explain": "Cell communication is essential in all multicellular organisms, not only in animals with nervous systems.",
+    "part_explanations": {
+      "a": "Any correct neuronal signaling mode can earn credit if it is described accurately.",
+      "b": "Responses should mention plant hormones or receptor-mediated signaling.",
+      "c": "Responses should focus on loss of coordination among cells or tissues.",
+      "d": "Responses should reject the idea that sessile organisms do not need communication."
+    }
+  },
+  {
+    "id": "u4-frq-3",
+    "difficulty": "hard",
+    "topic": "introduction to signal transduction",
+    "text": "A steroid hormone and a peptide hormone both trigger changes in gene expression in animal cells.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe why the steroid hormone and the peptide hormone usually interact with different types of receptors."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why peptide hormones typically bind to receptors on the plasma membrane."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict where a steroid hormone receptor is likely to be located in a target cell."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why different receptor locations can still lead to changes in gene expression."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Steroid hormones are nonpolar and can pass through the membrane, whereas peptide hormones are polar and usually cannot cross the hydrophobic lipid bilayer. Therefore the two signals typically use different receptor locations.",
+        "bullet_points": [
+          "Steroid and peptide hormones differ in polarity.",
+          "Steroids can cross membranes more easily.",
+          "Peptides usually require membrane receptors."
+        ]
+      },
+      "b": {
+        "answer": "Peptide hormones are large or polar molecules, so they usually cannot diffuse through the membrane interior. Binding to a membrane receptor allows the signal to be transmitted into the cell indirectly.",
+        "bullet_points": [
+          "Peptide hormones are not membrane-permeable.",
+          "They bind at the cell surface.",
+          "The receptor transmits the signal inward."
+        ]
+      },
+      "c": {
+        "answer": "A steroid hormone receptor is often located in the cytoplasm or nucleus, where it can bind the hormone after it crosses the membrane.",
+        "bullet_points": [
+          "The receptor is often intracellular.",
+          "Possible locations are the cytoplasm or nucleus.",
+          "Steroids can cross the membrane to reach it."
+        ]
+      },
+      "d": {
+        "answer": "Both receptor types can ultimately alter transcription. Membrane receptors do so through relay pathways and transcription factors, whereas intracellular receptors can directly affect gene expression after binding the signal.",
+        "bullet_points": [
+          "Both pathways can change transcription.",
+          "Membrane receptors use signaling cascades.",
+          "Intracellular receptors can directly regulate transcription."
+        ]
+      }
+    },
+    "explain": "Signal transduction begins with reception, and the chemical properties of the signaling molecule help determine where reception occurs.",
+    "part_explanations": {
+      "a": "Responses should compare polarity and membrane permeability.",
+      "b": "Responses should link membrane binding to the hormone's inability to cross the bilayer.",
+      "c": "Responses should place steroid receptors inside the cell.",
+      "d": "Responses should connect different receptor locations to a shared outcome: altered gene expression."
+    }
+  },
+  {
+    "id": "u4-frq-4",
+    "difficulty": "hard",
+    "topic": "introduction to signal transduction",
+    "text": "Researchers find that liver cells respond strongly to glucagon, while nearby muscle cells exposed to the same hormone show little response.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the most likely reason the liver cells respond but the muscle cells do not."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why a cell can be exposed to a signal and still fail to respond."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what would happen if the muscle cells were engineered to produce the glucagon receptor."
+      },
+      {
+        "label": "d",
+        "verb": "support a claim",
+        "prompt": "Support the claim that receptor presence contributes to cell specificity in signaling."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The liver cells likely express the appropriate glucagon receptor, whereas the muscle cells either lack the receptor or express too little of it.",
+        "bullet_points": [
+          "Different cells express different receptors.",
+          "Liver cells likely have the receptor.",
+          "Muscle cells likely lack enough receptor to respond."
+        ]
+      },
+      "b": {
+        "answer": "A cell can fail to respond if it lacks the receptor, if the receptor is defective, or if downstream signaling proteins are absent or inactive. Exposure alone does not guarantee signal reception or transduction.",
+        "bullet_points": [
+          "Exposure is not enough by itself.",
+          "Cells need a working receptor and pathway.",
+          "Missing downstream components can also prevent response."
+        ]
+      },
+      "c": {
+        "answer": "The engineered muscle cells would likely become more responsive to glucagon because they could now receive the signal and initiate the pathway associated with that receptor.",
+        "bullet_points": [
+          "Response would increase.",
+          "New receptors would allow signal reception.",
+          "Downstream pathway activation would become possible."
+        ]
+      },
+      "d": {
+        "answer": "The different responses of neighboring cells to the same hormone support the claim because the key difference is receptor expression. Receptors determine which cells can detect and respond to a given signal.",
+        "bullet_points": [
+          "Different responses support receptor-based specificity.",
+          "Receptors determine signal detection.",
+          "Cells without the receptor do not respond normally."
+        ]
+      }
+    },
+    "explain": "Specificity in signaling depends heavily on which receptors and downstream components a cell expresses.",
+    "part_explanations": {
+      "a": "Responses should focus on receptor expression or receptor function.",
+      "b": "Responses should explain why exposure alone is insufficient.",
+      "c": "Responses should predict increased responsiveness after receptor addition.",
+      "d": "Responses should use the scenario as evidence for receptor-based specificity."
+    }
+  },
+  {
+    "id": "u4-frq-5",
+    "difficulty": "hard",
+    "topic": "signal transduction pathways",
+    "text": "Scientists treat cells with a growth factor that activates a phosphorylation cascade. Each activated kinase can activate many molecules of the next kinase in the pathway.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe what is meant by signal amplification in this pathway."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how a phosphorylation cascade can amplify a small initial signal."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict the effect of inhibiting the first kinase in the cascade."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why cascade organization can allow a cell to regulate the response precisely."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Signal amplification means that a small number of initial signaling events produce a much larger downstream response.",
+        "bullet_points": [
+          "A small input produces a larger output.",
+          "The signal grows as it moves through the pathway.",
+          "The final response can be large from few initial events."
+        ]
+      },
+      "b": {
+        "answer": "Each activated kinase can activate many target molecules of the next step, so the number of active molecules increases at each stage. This multiplication produces a large cellular response.",
+        "bullet_points": [
+          "One active kinase activates many downstream molecules.",
+          "The number of active components increases stepwise.",
+          "This multiplies the response."
+        ]
+      },
+      "c": {
+        "answer": "The response would be greatly reduced or eliminated because the downstream kinases would not be activated efficiently. Blocking the first kinase prevents the cascade from propagating.",
+        "bullet_points": [
+          "The pathway would be blocked early.",
+          "Downstream kinases would remain less active.",
+          "The cellular response would decrease strongly."
+        ]
+      },
+      "d": {
+        "answer": "A cascade provides multiple control points where proteins can be activated, inactivated, or modulated by other signals. This allows fine-tuning, branching, and integration of the response.",
+        "bullet_points": [
+          "Cascades have multiple control points.",
+          "They allow tuning and branching.",
+          "Cells can regulate intensity and duration precisely."
+        ]
+      }
+    },
+    "explain": "Signal transduction pathways often work through sequential activation steps that amplify information and create multiple regulatory checkpoints.",
+    "part_explanations": {
+      "a": "Responses should define amplification as increased output from a small input.",
+      "b": "Responses should mention one-to-many activation in the cascade.",
+      "c": "Responses should state that blocking the first kinase disrupts the whole pathway.",
+      "d": "Responses should connect multiple steps to regulation or integration."
+    }
+  },
+  {
+    "id": "u4-frq-6",
+    "difficulty": "hard",
+    "topic": "signal transduction pathways",
+    "text": "A hormone activates a receptor that increases the concentration of the second messenger cAMP inside the cell.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify cAMP as what type of signaling molecule in the pathway."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how a second messenger helps transmit information inside the cell."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict the effect of a mutation that prevents cAMP breakdown."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "Evaluate the claim that second messengers are unnecessary because the receptor alone can produce the full response."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "cAMP is a second messenger in the pathway.",
+        "bullet_points": [
+          "Identify cAMP as a second messenger.",
+          "It acts inside the cell.",
+          "It relays information from receptor activation."
+        ]
+      },
+      "b": {
+        "answer": "A second messenger spreads the signal from the activated receptor to intracellular targets such as protein kinases, allowing the signal to be relayed and often amplified within the cell.",
+        "bullet_points": [
+          "Second messengers relay signals inside the cell.",
+          "They connect receptors to downstream targets.",
+          "They can also amplify the response."
+        ]
+      },
+      "c": {
+        "answer": "The cellular response would likely last longer or become stronger because cAMP would remain elevated and continue activating downstream targets.",
+        "bullet_points": [
+          "Response duration or intensity would increase.",
+          "cAMP would stay high.",
+          "Downstream proteins would stay activated longer."
+        ]
+      },
+      "d": {
+        "answer": "The claim is incorrect. Receptors detect the external signal, but second messengers help distribute and amplify that information inside the cell so many intracellular targets can respond efficiently.",
+        "bullet_points": [
+          "Reject the claim.",
+          "Receptors receive the signal but do not replace intracellular relays.",
+          "Second messengers spread and amplify the response."
+        ]
+      }
+    },
+    "explain": "Second messengers are central to many signaling pathways because they carry information from the membrane to intracellular targets.",
+    "part_explanations": {
+      "a": "Responses should classify cAMP correctly.",
+      "b": "Responses should describe intracellular relay or amplification.",
+      "c": "Responses should note prolonged signaling if breakdown is blocked.",
+      "d": "Responses should distinguish receptor detection from intracellular transmission."
+    }
+  },
+  {
+    "id": "u4-frq-7",
+    "difficulty": "hard",
+    "topic": "feedback",
+    "text": "A mammal experiences an increase in body temperature above its normal set point. In response, sweat glands become active and blood vessels near the skin surface dilate.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the type of feedback mechanism illustrated in the scenario."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why the responses of sweating and vasodilation help restore homeostasis."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what would happen to body temperature regulation if sweat glands did not function."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why this feedback system is considered stabilizing rather than amplifying."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The scenario illustrates negative feedback.",
+        "bullet_points": [
+          "Identify negative feedback.",
+          "The response opposes the initial change.",
+          "It works to restore the set point."
+        ]
+      },
+      "b": {
+        "answer": "Sweating increases evaporative heat loss, and vasodilation increases heat transfer from the blood to the environment. Together these responses lower body temperature toward the normal range.",
+        "bullet_points": [
+          "Sweating increases heat loss.",
+          "Vasodilation increases heat transfer at the skin.",
+          "Both responses move temperature back toward normal."
+        ]
+      },
+      "c": {
+        "answer": "Body temperature would likely remain elevated for longer or rise further because one important heat-loss mechanism would be absent. Homeostasis would be harder to restore.",
+        "bullet_points": [
+          "Temperature regulation would worsen.",
+          "Less heat would be removed from the body.",
+          "The elevated temperature could persist longer."
+        ]
+      },
+      "d": {
+        "answer": "The system is stabilizing because the responses reduce the original deviation from the set point instead of increasing it. A positive feedback loop would push the temperature farther from normal.",
+        "bullet_points": [
+          "Negative feedback reduces the deviation.",
+          "It restores the set point instead of increasing the change.",
+          "Positive feedback would amplify the disturbance."
+        ]
+      }
+    },
+    "explain": "Negative feedback maintains homeostasis by detecting a deviation and activating responses that counteract it.",
+    "part_explanations": {
+      "a": "Responses should name negative feedback.",
+      "b": "Responses should connect each response to heat loss.",
+      "c": "Responses should predict poorer temperature regulation if sweating is lost.",
+      "d": "Responses should contrast negative and positive feedback."
+    }
+  },
+  {
+    "id": "u4-frq-8",
+    "difficulty": "hard",
+    "topic": "feedback",
+    "text": "During childbirth, stretching of the cervix causes release of oxytocin, which increases uterine contractions, causing even more cervical stretching.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe why this loop is considered positive feedback."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how the response differs from the response in a typical homeostatic negative feedback loop."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what would happen to contractions if oxytocin receptor activity were blocked late in labor."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why positive feedback can still be biologically useful even though it does not stabilize a variable."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "This is positive feedback because the initial stimulus leads to a response that increases the same stimulus, producing stronger contractions and more stretching.",
+        "bullet_points": [
+          "The response amplifies the initial stimulus.",
+          "More stretching causes more oxytocin effect.",
+          "The loop escalates the process."
+        ]
+      },
+      "b": {
+        "answer": "In a negative feedback loop, the response would reduce the original change and restore a set point. Here the response intensifies the change until the process reaches a clear endpoint, childbirth.",
+        "bullet_points": [
+          "Negative feedback opposes a change.",
+          "Positive feedback amplifies it.",
+          "This loop continues until an endpoint is reached."
+        ]
+      },
+      "c": {
+        "answer": "Contractions would likely weaken or become less coordinated because oxytocin signaling helps strengthen the feedback loop that drives labor forward.",
+        "bullet_points": [
+          "Contractions would decrease or become less effective.",
+          "Oxytocin signaling supports the loop.",
+          "Blocking receptors interrupts amplification."
+        ]
+      },
+      "d": {
+        "answer": "Positive feedback is useful when an organism must rapidly complete a process, such as childbirth or blood clotting. Amplification helps drive the event to completion rather than maintaining an intermediate state.",
+        "bullet_points": [
+          "Positive feedback can help finish a process quickly.",
+          "Examples include childbirth or clotting.",
+          "Amplification is useful when the process has an endpoint."
+        ]
+      }
+    },
+    "explain": "Not all regulation is stabilizing; some biological events depend on amplification loops that push a process to completion.",
+    "part_explanations": {
+      "a": "Responses should explicitly describe amplification of the original stimulus.",
+      "b": "Responses should compare endpoint-driven amplification with set-point restoration.",
+      "c": "Responses should note weaker or disrupted contractions after receptor blockade.",
+      "d": "Responses should explain why amplification can be adaptive in special contexts."
+    }
+  },
+  {
+    "id": "u4-frq-9",
+    "difficulty": "hard",
+    "topic": "cell cycle",
+    "text": "A culture of eukaryotic cells is observed through time. Some cells are synthesizing DNA, some are dividing their nuclei, and others are carrying out normal metabolic functions without replicating DNA.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the stage of the cell cycle in which DNA is replicated."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why DNA replication must occur before mitosis."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what would happen to daughter cells if mitosis occurred before DNA replication."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why most cells spend more time in interphase than in mitosis."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "DNA is replicated during S phase of interphase.",
+        "bullet_points": [
+          "Identify S phase.",
+          "It occurs during interphase.",
+          "DNA replication happens there."
+        ]
+      },
+      "b": {
+        "answer": "Replication must occur before mitosis so that each daughter cell can receive a complete copy of the genome. Without prior replication, chromosome number and information would not be properly preserved.",
+        "bullet_points": [
+          "DNA must be copied before division.",
+          "Each daughter cell needs a full genome.",
+          "Replication preserves genetic continuity."
+        ]
+      },
+      "c": {
+        "answer": "The daughter cells would receive incomplete genetic information because there would not be two sister chromatids available for distribution. This would likely make the cells nonfunctional or nonviable.",
+        "bullet_points": [
+          "Daughter cells would be missing DNA.",
+          "Chromosomes could not be distributed properly.",
+          "Function or viability would be reduced."
+        ]
+      },
+      "d": {
+        "answer": "Interphase includes cell growth, normal metabolism, and DNA replication, all of which usually take much longer than the physical separation of chromosomes and cytoplasm during mitosis.",
+        "bullet_points": [
+          "Interphase includes growth and DNA replication.",
+          "Those activities take most of the cycle.",
+          "Mitosis is comparatively brief."
+        ]
+      }
+    },
+    "explain": "The cell cycle preserves genetic information by coordinating growth, DNA replication, and chromosome separation in the correct order.",
+    "part_explanations": {
+      "a": "Responses should name S phase.",
+      "b": "Responses should focus on genome duplication before chromosome separation.",
+      "c": "Responses should predict incomplete or unequal genetic information.",
+      "d": "Responses should compare the activities and time demands of interphase and mitosis."
+    }
+  },
+  {
+    "id": "u4-frq-10",
+    "difficulty": "hard",
+    "topic": "cell cycle",
+    "text": "A student examines root tip cells from a plant and notices that the chromosome number in cells undergoing mitosis remains the same as in the original parent cell.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe how mitosis contributes to genetic continuity in somatic cells."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why mitosis does not itself generate the same degree of genetic diversity as meiosis."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict one reason rapidly growing tissues contain many cells in mitosis."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "Evaluate the claim that mitosis is unimportant in multicellular organisms because it produces cells that are genetically similar."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Mitosis separates replicated chromosomes so that each daughter cell receives one copy of each chromosome, preserving chromosome number and usually preserving the genetic information of the parent cell.",
+        "bullet_points": [
+          "Mitosis distributes replicated chromosomes.",
+          "Daughter cells usually keep the same chromosome number.",
+          "Genetic continuity is maintained."
+        ]
+      },
+      "b": {
+        "answer": "Mitosis lacks homologous chromosome pairing and crossing over, so it mainly copies and distributes existing genetic information rather than reshuffling alleles the way meiosis does.",
+        "bullet_points": [
+          "Mitosis does not include crossing over or independent assortment.",
+          "It mainly copies existing DNA.",
+          "Meiosis generates much more diversity."
+        ]
+      },
+      "c": {
+        "answer": "Rapidly growing tissues need many new cells for growth, replacement, or repair, so a larger fraction of their cells are actively dividing by mitosis.",
+        "bullet_points": [
+          "Growing tissues need more cells.",
+          "Mitosis supplies new somatic cells.",
+          "Rapid growth increases the proportion of dividing cells."
+        ]
+      },
+      "d": {
+        "answer": "The claim is incorrect. Genetic similarity is precisely why mitosis is important for growth, tissue maintenance, and repair: new cells can perform the same functions as the cells they replace.",
+        "bullet_points": [
+          "Reject the claim.",
+          "Mitosis is crucial for growth and repair.",
+          "Genetic similarity helps replacement cells function correctly."
+        ]
+      }
+    },
+    "explain": "Mitosis is a conservative division process that maintains chromosome number and supports growth and tissue replacement.",
+    "part_explanations": {
+      "a": "Responses should mention preservation of chromosome number or genetic continuity.",
+      "b": "Responses should contrast mitosis with meiosis.",
+      "c": "Responses should tie high mitotic activity to growth or repair.",
+      "d": "Responses should reject the idea that genetic similarity makes mitosis unimportant."
+    }
+  },
+  {
+    "id": "u4-frq-11",
+    "difficulty": "hard",
+    "topic": "regulation of cell cycle",
+    "text": "Researchers discover a mutation in a checkpoint protein that normally prevents cells with damaged DNA from entering mitosis. Cells carrying the mutation continue dividing after DNA damage.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the most likely immediate effect of losing this checkpoint function."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why checkpoint proteins help reduce the risk of cancer."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how the number of mutations in descendant cells would compare between mutant cells and normal cells."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why restoring checkpoint activity would likely slow the growth of the mutant cell population."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Cells with damaged DNA would continue through the cell cycle instead of pausing for repair or undergoing programmed cell death.",
+        "bullet_points": [
+          "Damaged cells fail to pause.",
+          "They continue through the cycle.",
+          "Repair or removal is reduced."
+        ]
+      },
+      "b": {
+        "answer": "Checkpoint proteins stop or slow the cycle when DNA is damaged, which gives the cell time to repair errors or prevents damaged cells from reproducing. This lowers the chance that harmful mutations will accumulate.",
+        "bullet_points": [
+          "Checkpoints detect problems and pause division.",
+          "They allow repair or remove damaged cells.",
+          "This lowers mutation accumulation and cancer risk."
+        ]
+      },
+      "c": {
+        "answer": "Mutant cells would produce descendants with more mutations because DNA damage would be replicated and passed to daughter cells more often.",
+        "bullet_points": [
+          "Mutant descendants would accumulate more mutations.",
+          "Damage is copied into new cells.",
+          "Normal checkpoints would have prevented some of that inheritance."
+        ]
+      },
+      "d": {
+        "answer": "If checkpoint activity were restored, more cells would stop dividing to repair damage or undergo apoptosis, so fewer cells would complete the cycle and the population would grow more slowly.",
+        "bullet_points": [
+          "Restored checkpoints stop more cells.",
+          "Repair or apoptosis would increase.",
+          "Population growth would slow."
+        ]
+      }
+    },
+    "explain": "Checkpoint regulation is one of the cell's main defenses against uncontrolled division and mutation accumulation.",
+    "part_explanations": {
+      "a": "Responses should focus on continued division after DNA damage.",
+      "b": "Responses should tie checkpoints to repair or apoptosis.",
+      "c": "Responses should explicitly compare mutant and normal descendant cells.",
+      "d": "Responses should connect checkpoint restoration to lower cell-cycle progression."
+    }
+  },
+  {
+    "id": "u4-frq-12",
+    "difficulty": "hard",
+    "topic": "regulation of cell cycle",
+    "text": "A new drug prevents spindle fibers from attaching to chromosomes during mitosis.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe the role of spindle fibers during mitosis."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why cells should not proceed through mitosis when chromosomes are not properly attached to the spindle."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what could happen to chromosome number in daughter cells if the checkpoint failed and the cell divided anyway."
+      },
+      {
+        "label": "d",
+        "verb": "support a claim",
+        "prompt": "Support the claim that cell-cycle regulation depends on interactions among multiple cellular structures, not only on DNA itself."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Spindle fibers attach to chromosomes and help move sister chromatids to opposite poles of the cell so the genetic material is separated accurately.",
+        "bullet_points": [
+          "Spindle fibers attach to chromosomes.",
+          "They move chromatids to opposite poles.",
+          "They are required for accurate chromosome separation."
+        ]
+      },
+      "b": {
+        "answer": "Improper attachment can cause chromosomes to separate unequally, so the checkpoint prevents division until the chromosomes are aligned and attached correctly. This protects genome integrity.",
+        "bullet_points": [
+          "Improper attachment risks unequal chromosome separation.",
+          "The checkpoint delays division until alignment is correct.",
+          "This protects genetic integrity."
+        ]
+      },
+      "c": {
+        "answer": "Daughter cells could end up with abnormal chromosome numbers because some chromosomes might both move to one pole or fail to separate properly.",
+        "bullet_points": [
+          "Chromosome number could become abnormal.",
+          "Some daughter cells may gain or lose chromosomes.",
+          "This results from improper segregation."
+        ]
+      },
+      "d": {
+        "answer": "The claim is supported because accurate division requires DNA, spindle fibers, centrosomes, kinetochores, and checkpoint proteins to work together. Genome stability depends on coordinated cellular machinery.",
+        "bullet_points": [
+          "Support the claim with multiple structures.",
+          "Spindle components and checkpoints work with chromosomes.",
+          "Regulation is a system-level process."
+        ]
+      }
+    },
+    "explain": "Cell-cycle regulation depends on coordinated chromosome behavior, spindle attachment, and checkpoint signaling.",
+    "part_explanations": {
+      "a": "Responses should describe chromosome movement by the spindle.",
+      "b": "Responses should mention prevention of unequal segregation.",
+      "c": "Responses should predict aneuploid daughter cells or unequal chromosome numbers.",
+      "d": "Responses should use the scenario to show that multiple structures are involved."
+    }
+  }
+]

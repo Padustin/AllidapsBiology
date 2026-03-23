@@ -1,0 +1,692 @@
+[
+  {
+    "id": "u3-frq-1",
+    "difficulty": "hard",
+    "topic": "enzymes",
+    "text": "Researchers measure the rate at which an enzyme converts substrate to product. As substrate concentration increases, the reaction rate rises rapidly and then levels off.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe why the reaction rate increases at low substrate concentrations."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why the reaction rate eventually levels off even when more substrate is added."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how the graph would change if more enzyme were added while all other conditions remained constant."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why enzymes can speed up reactions without changing the overall amount of free energy released by the reaction."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "At low substrate concentrations, many enzyme active sites are unoccupied. Adding more substrate increases the frequency of successful collisions between enzyme and substrate, so more enzyme-substrate complexes form each second.",
+        "bullet_points": [
+          "Many active sites are initially empty.",
+          "More substrate increases successful collisions.",
+          "More enzyme-substrate complexes increase reaction rate."
+        ]
+      },
+      "b": {
+        "answer": "The reaction levels off when the enzymes become saturated. Once nearly all active sites are occupied, the amount of enzyme rather than the amount of substrate limits the maximum rate.",
+        "bullet_points": [
+          "The enzymes become saturated.",
+          "Most active sites are occupied.",
+          "Enzyme concentration becomes the limiting factor."
+        ]
+      },
+      "c": {
+        "answer": "The plateau would occur at a higher reaction rate because more enzyme molecules would provide more active sites. The initial rise could also be steeper because the system could process substrate faster.",
+        "bullet_points": [
+          "More enzyme adds more active sites.",
+          "The maximum rate would increase.",
+          "The reaction could rise faster before saturating."
+        ]
+      },
+      "d": {
+        "answer": "Enzymes lower activation energy by stabilizing the transition state, but they do not alter the free energy of reactants or products. Therefore they speed up how fast equilibrium is reached without changing the reaction's overall energy change.",
+        "bullet_points": [
+          "Enzymes lower activation energy.",
+          "They do not change reactant or product free energy.",
+          "They change rate, not overall ΔG."
+        ]
+      }
+    },
+    "explain": "Enzyme activity depends on collisions between substrate and active sites, and saturation explains why reaction rates do not increase forever as substrate concentration rises.",
+    "part_explanations": {
+      "a": "Responses should refer to empty active sites or increased enzyme-substrate complex formation.",
+      "b": "Responses should connect the plateau to enzyme saturation, not to substrate running out.",
+      "c": "Responses should compare available active sites before and after enzyme is added.",
+      "d": "Responses should distinguish activation energy from the total free-energy change of the reaction."
+    }
+  },
+  {
+    "id": "u3-frq-2",
+    "difficulty": "hard",
+    "topic": "enzymes",
+    "text": "A student compares a normal enzyme with a mutant enzyme that has a slightly altered active site. The mutant enzyme binds the original substrate very poorly.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the level of protein structure most directly changed when one amino acid in the enzyme is replaced."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how a small change in amino acid sequence can reduce substrate binding."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict the effect of the mutation on product formation over the same time interval."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "A student claims that the mutant enzyme will still function normally because enzymes are not specific. Evaluate the claim."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The primary structure is directly changed because one amino acid in the polypeptide sequence has been replaced.",
+        "bullet_points": [
+          "Identify primary structure.",
+          "Amino acid sequence is altered.",
+          "Primary structure change can affect later folding."
+        ]
+      },
+      "b": {
+        "answer": "A different amino acid can alter interactions such as hydrogen bonds, ionic interactions, or hydrophobic interactions, which can change folding and the shape of the active site. If the active site is less complementary to the substrate, binding and catalysis decrease.",
+        "bullet_points": [
+          "Amino acid changes can alter folding interactions.",
+          "Active-site shape or chemistry can change.",
+          "Reduced complementarity lowers binding and catalysis."
+        ]
+      },
+      "c": {
+        "answer": "Product formation would decrease because fewer substrate molecules would bind properly and reach the transition state. A lower fraction of successful enzyme-substrate complexes means a lower reaction rate.",
+        "bullet_points": [
+          "The reaction rate would decrease.",
+          "Poor binding reduces enzyme-substrate complex formation.",
+          "Less product is made in the same time."
+        ]
+      },
+      "d": {
+        "answer": "The claim is incorrect. Enzymes are highly specific because the active site must interact with particular substrates, so changing the active site often reduces or eliminates function.",
+        "bullet_points": [
+          "The claim is incorrect.",
+          "Enzymes show substrate specificity.",
+          "Changing the active site can strongly reduce function."
+        ]
+      }
+    },
+    "explain": "Specificity comes from enzyme structure. Even one amino acid substitution can alter folding enough to change how well the substrate fits.",
+    "part_explanations": {
+      "a": "Responses should name primary structure rather than secondary or tertiary structure as the direct change.",
+      "b": "Responses should link sequence change to active-site shape or chemical properties.",
+      "c": "Responses should explicitly compare mutant and normal product formation.",
+      "d": "Responses should reject the idea that enzymes are nonspecific."
+    }
+  },
+  {
+    "id": "u3-frq-3",
+    "difficulty": "hard",
+    "topic": "environmental impacts on enzyme function",
+    "text": "Researchers test the same enzyme at pH 4, pH 7, and pH 10. The enzyme shows the highest activity at pH 7 and much lower activity at the other pH values.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe one way extreme pH can affect an enzyme molecule."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why activity is highest at pH 7 in this experiment."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what would happen if the enzyme were returned from pH 10 to pH 7, assuming the enzyme was not permanently denatured."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why pH changes can alter enzyme function even when substrate concentration stays the same."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Extreme pH can disrupt ionic interactions and hydrogen bonds within the enzyme, changing the enzyme's three-dimensional shape and the shape of its active site.",
+        "bullet_points": [
+          "Extreme pH disrupts interactions in the protein.",
+          "The enzyme's shape can change.",
+          "The active site may no longer fit the substrate well."
+        ]
+      },
+      "b": {
+        "answer": "The enzyme likely has an optimal pH near 7, where its active site has the correct shape and charge distribution for substrate binding and catalysis. At pH 4 and pH 10, the altered environment reduces that fit.",
+        "bullet_points": [
+          "The enzyme has an optimal pH.",
+          "At pH 7 the active site works best.",
+          "More acidic or basic conditions reduce activity."
+        ]
+      },
+      "c": {
+        "answer": "Activity would likely increase again when the enzyme returns to pH 7 because the favorable environment for the active site is restored. Reversible loss of shape would allow more normal binding and catalysis.",
+        "bullet_points": [
+          "Activity would rise again if denaturation was reversible.",
+          "Returning to optimal pH can restore active-site shape.",
+          "Catalysis would improve."
+        ]
+      },
+      "d": {
+        "answer": "pH affects enzyme structure and the ionization state of amino acid side chains, so the enzyme itself changes even if substrate amount does not. Substrate concentration alone cannot overcome an active site that is no longer functioning properly.",
+        "bullet_points": [
+          "pH changes the enzyme, not just the substrate supply.",
+          "Side-chain charge and shape affect catalysis.",
+          "Normal substrate levels cannot fix a damaged active site."
+        ]
+      }
+    },
+    "explain": "Environmental conditions matter because enzyme function depends on a precise three-dimensional structure maintained by weak interactions.",
+    "part_explanations": {
+      "a": "Responses should mention shape or interaction changes caused by pH.",
+      "b": "Responses should tie highest activity to an optimal pH rather than saying 'neutral is always best.'",
+      "c": "Responses should note that recovery depends on reversible, not permanent, denaturation.",
+      "d": "Responses should connect pH to enzyme structure or charge state."
+    }
+  },
+  {
+    "id": "u3-frq-4",
+    "difficulty": "hard",
+    "topic": "environmental impacts on enzyme function",
+    "text": "In a metabolic pathway, Product P inhibits the first enzyme in the pathway by binding to a site other than the active site.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the type of inhibition shown in the scenario."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how binding at a site other than the active site can reduce enzyme activity."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict the effect on pathway output if Product P is no longer able to bind the enzyme."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify how this form of regulation can help maintain homeostasis in a cell."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The scenario shows noncompetitive, or allosteric, inhibition by the end product of the pathway.",
+        "bullet_points": [
+          "Identify noncompetitive/allosteric inhibition.",
+          "The inhibitor binds away from the active site.",
+          "It is end-product feedback inhibition."
+        ]
+      },
+      "b": {
+        "answer": "Binding at an allosteric site changes the enzyme's conformation, which alters the active site's ability to bind substrate or catalyze the reaction efficiently.",
+        "bullet_points": [
+          "The inhibitor binds allosterically.",
+          "The enzyme changes shape.",
+          "The active site works less effectively."
+        ]
+      },
+      "c": {
+        "answer": "Pathway output would increase because the first enzyme would remain more active and continue converting substrate into downstream products. Without feedback inhibition, the cell could overproduce Product P.",
+        "bullet_points": [
+          "The pathway would stay more active.",
+          "More Product P would be produced.",
+          "Loss of inhibition can cause overproduction."
+        ]
+      },
+      "d": {
+        "answer": "Feedback inhibition prevents cells from wasting energy and raw materials making excess product. By reducing pathway activity when enough product is present, the cell keeps internal conditions more stable.",
+        "bullet_points": [
+          "Feedback inhibition prevents unnecessary synthesis.",
+          "It conserves energy and resources.",
+          "It helps maintain stable internal conditions."
+        ]
+      }
+    },
+    "explain": "Allosteric regulation is a major way cells tune enzyme activity in response to changing internal conditions.",
+    "part_explanations": {
+      "a": "Responses should identify allosteric or noncompetitive inhibition, not competitive inhibition.",
+      "b": "Responses should describe a conformational change that affects the active site.",
+      "c": "Responses should state that output increases when inhibition is removed.",
+      "d": "Responses should connect regulation to conservation of resources and stable concentrations."
+    }
+  },
+  {
+    "id": "u3-frq-5",
+    "difficulty": "hard",
+    "topic": "cellular energy",
+    "text": "Scientists compare ATP production in a rapidly contracting muscle cell and in a dormant seed cell. Both cells require ATP for basic cellular work.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe one direct role of ATP in cellular processes."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why ATP is considered an immediate energy source rather than a long-term energy storage molecule."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict which cell would hydrolyze ATP at a higher rate and explain why."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why all known cells require a continual input of energy even when they are maintaining homeostasis rather than growing."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "ATP can provide energy for processes such as active transport, movement by motor proteins, biosynthesis, or phosphorylation of target molecules.",
+        "bullet_points": [
+          "ATP powers cellular work.",
+          "Examples include active transport or movement.",
+          "ATP often transfers a phosphate group to a target."
+        ]
+      },
+      "b": {
+        "answer": "ATP stores a relatively small, usable amount of energy in phosphate bonds and is quickly made and used by cells. Long-term storage molecules such as glycogen or triglycerides store more energy over longer timescales.",
+        "bullet_points": [
+          "ATP is used quickly.",
+          "It stores small packets of transferable energy.",
+          "Long-term storage molecules hold more energy for later use."
+        ]
+      },
+      "c": {
+        "answer": "The rapidly contracting muscle cell would hydrolyze ATP faster because muscle contraction, ion pumping, and recovery after contraction require large amounts of immediate energy. The dormant seed cell uses energy more slowly.",
+        "bullet_points": [
+          "The muscle cell uses ATP faster.",
+          "Contraction and ion transport demand rapid energy.",
+          "Dormant cells have lower metabolic rates."
+        ]
+      },
+      "d": {
+        "answer": "Maintaining homeostasis still requires transport, repair, signaling, and organization of cellular components, all of which require energy. Without continual energy input, gradients would dissipate and ordered cell structure would break down.",
+        "bullet_points": [
+          "Homeostasis requires energy-dependent work.",
+          "Cells must maintain gradients and organization.",
+          "Without energy input, internal stability is lost."
+        ]
+      }
+    },
+    "explain": "Cellular energy is constantly transformed into ATP and then spent on transport, movement, synthesis, and regulation.",
+    "part_explanations": {
+      "a": "Any correct ATP-dependent cellular process can earn credit.",
+      "b": "Responses should contrast ATP with long-term storage molecules.",
+      "c": "Responses should compare metabolic demand in the two cell types.",
+      "d": "Responses should mention active maintenance of gradients or order."
+    }
+  },
+  {
+    "id": "u3-frq-6",
+    "difficulty": "hard",
+    "topic": "cellular energy",
+    "text": "Researchers add a chemical that prevents ATP synthase from functioning in an aerobic eukaryotic cell.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the process most directly blocked when ATP synthase stops functioning."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why the proton gradient would build up when ATP synthase is blocked."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict the effect on total ATP production in the cell."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why cells with inhibited ATP synthase may eventually show reduced active transport across membranes."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Chemiosmosis is most directly blocked because ATP synthase normally uses the proton gradient to drive ATP production.",
+        "bullet_points": [
+          "Identify chemiosmosis.",
+          "ATP synthase uses the proton gradient.",
+          "This process directly makes ATP from ADP."
+        ]
+      },
+      "b": {
+        "answer": "Protons are still pumped across the membrane by the electron transport chain for a time, but they cannot flow back through ATP synthase efficiently. As a result, protons accumulate on one side of the membrane and the gradient increases.",
+        "bullet_points": [
+          "Protons continue to be pumped for a time.",
+          "They cannot flow back through ATP synthase normally.",
+          "The proton gradient builds up."
+        ]
+      },
+      "c": {
+        "answer": "Total ATP production would fall sharply because oxidative phosphorylation produces most ATP in aerobic respiration. The cell might still make some ATP by substrate-level phosphorylation.",
+        "bullet_points": [
+          "ATP production drops sharply.",
+          "Oxidative phosphorylation is lost.",
+          "A small amount may still come from substrate-level phosphorylation."
+        ]
+      },
+      "d": {
+        "answer": "Active transport depends on ATP to power membrane pumps. If ATP levels fall, those pumps cannot maintain ion gradients effectively, so transport and homeostasis are disrupted.",
+        "bullet_points": [
+          "Active transport uses ATP.",
+          "Low ATP weakens pump activity.",
+          "Ion gradients and homeostasis become harder to maintain."
+        ]
+      }
+    },
+    "explain": "ATP synthase connects stored electrochemical energy to ATP production, so blocking it affects many downstream cell functions.",
+    "part_explanations": {
+      "a": "Responses should identify chemiosmosis or ATP synthesis through ATP synthase.",
+      "b": "Responses should mention continued proton pumping and reduced proton return.",
+      "c": "Responses should state that ATP production falls substantially.",
+      "d": "Responses should connect ATP shortage to membrane pumps and gradients."
+    }
+  },
+  {
+    "id": "u3-frq-7",
+    "difficulty": "hard",
+    "topic": "photosynthesis",
+    "text": "A plant is grown under white light and supplied with water containing radioactive oxygen. Later, radioactive oxygen gas is detected leaving the leaf.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the stage of photosynthesis that produces the oxygen gas released from the leaf."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why the radioactive oxygen appears in the released oxygen gas rather than first appearing in glucose."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict the effect on oxygen production if the plant is moved into darkness."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why chloroplast structure is important for the light-dependent reactions."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The oxygen gas is produced during the light-dependent reactions when water is split.",
+        "bullet_points": [
+          "Identify the light-dependent reactions.",
+          "Water is split there.",
+          "That process releases O2."
+        ]
+      },
+      "b": {
+        "answer": "The oxygen atoms in released O2 come directly from water molecules that are split to replace electrons lost by photosystem II. Carbon dioxide supplies the carbon and oxygen used to build sugar in the Calvin cycle.",
+        "bullet_points": [
+          "Released O2 comes from water.",
+          "Water is split in the light reactions.",
+          "CO2 is used for carbohydrate production."
+        ]
+      },
+      "c": {
+        "answer": "Oxygen production would drop to near zero in darkness because the light reactions require light energy to excite electrons and split water.",
+        "bullet_points": [
+          "Oxygen production would largely stop.",
+          "Light is required to excite electrons.",
+          "Water splitting depends on the light reactions."
+        ]
+      },
+      "d": {
+        "answer": "Thylakoid membranes organize photosystems, electron carriers, and ATP synthase so that light capture, electron transport, and proton-gradient formation can occur efficiently.",
+        "bullet_points": [
+          "Thylakoids hold the photosystems and ETC.",
+          "They separate compartments for a proton gradient.",
+          "Their organization enables ATP and NADPH production."
+        ]
+      }
+    },
+    "explain": "Photosynthesis uses light energy to split water and generate ATP and NADPH, which are then used to build carbohydrates.",
+    "part_explanations": {
+      "a": "Responses should identify water splitting during the light-dependent reactions.",
+      "b": "Responses should distinguish the source of O2 from the source of sugar carbon.",
+      "c": "Responses should tie darkness to the loss of light reactions.",
+      "d": "Responses should mention thylakoid membranes and compartmentalization."
+    }
+  },
+  {
+    "id": "u3-frq-8",
+    "difficulty": "hard",
+    "topic": "photosynthesis",
+    "text": "Two genetically identical plants are grown under the same light intensity. Plant A is supplied with normal carbon dioxide, whereas Plant B is supplied with very low carbon dioxide.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe the role of carbon dioxide in photosynthesis."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why Plant B would likely produce less sugar than Plant A."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict the effect of low carbon dioxide on the Calvin cycle."
+      },
+      {
+        "label": "d",
+        "verb": "support a claim",
+        "prompt": "A student claims that increasing light intensity alone will fully overcome the low-carbon-dioxide condition in Plant B. Support or refute the claim with reasoning."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Carbon dioxide provides the carbon atoms that are fixed into organic molecules during the Calvin cycle.",
+        "bullet_points": [
+          "CO2 is a reactant in the Calvin cycle.",
+          "It supplies carbon for organic molecules.",
+          "Fixed carbon is used to build sugars."
+        ]
+      },
+      "b": {
+        "answer": "With very low carbon dioxide, the Calvin cycle has less substrate for carbon fixation, so less carbohydrate can be produced even if light is available.",
+        "bullet_points": [
+          "Low CO2 limits carbon fixation.",
+          "Less fixed carbon means less sugar production.",
+          "Light alone cannot replace missing CO2."
+        ]
+      },
+      "c": {
+        "answer": "The Calvin cycle would slow because fewer carbon dioxide molecules are available to be incorporated into organic intermediates. As a result, production of G3P and later sugars would decrease.",
+        "bullet_points": [
+          "The Calvin cycle slows.",
+          "G3P production decreases.",
+          "Less sugar is ultimately formed."
+        ]
+      },
+      "d": {
+        "answer": "The claim should be refuted. Additional light may increase ATP and NADPH production, but without enough carbon dioxide the Calvin cycle remains limited by carbon supply, so sugar production cannot fully recover.",
+        "bullet_points": [
+          "Refute the claim.",
+          "Light reactions and carbon fixation are both required.",
+          "Low CO2 still limits sugar production."
+        ]
+      }
+    },
+    "explain": "Photosynthesis depends on both energy capture and carbon fixation; increasing one part of the process does not remove limitations in another.",
+    "part_explanations": {
+      "a": "Responses should identify CO2 as the carbon source for sugars.",
+      "b": "Responses should connect low CO2 to lower sugar output.",
+      "c": "Responses should mention reduced carbon fixation or reduced G3P production.",
+      "d": "Responses should treat the claim as a limitation problem, not just a light problem."
+    }
+  },
+  {
+    "id": "u3-frq-9",
+    "difficulty": "hard",
+    "topic": "cellular respiration",
+    "text": "Researchers compare oxygen consumption in germinating pea seeds and dry dormant pea seeds kept at the same temperature. The germinating seeds consume much more oxygen.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe why oxygen consumption is associated with aerobic cellular respiration."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why germinating seeds consume more oxygen than dormant seeds."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict the effect on ATP production if oxygen becomes unavailable to the germinating seeds."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why mitochondria are especially important in cells with high rates of aerobic respiration."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "In aerobic respiration, oxygen acts as the final electron acceptor in the electron transport chain. Its presence allows electron transport and oxidative phosphorylation to continue.",
+        "bullet_points": [
+          "Oxygen is the final electron acceptor.",
+          "It keeps the electron transport chain running.",
+          "That supports aerobic ATP production."
+        ]
+      },
+      "b": {
+        "answer": "Germinating seeds are growing and carrying out more biosynthesis and transport, so they have a higher metabolic rate and need more ATP. Greater aerobic respiration requires greater oxygen consumption.",
+        "bullet_points": [
+          "Germinating seeds have higher metabolic demand.",
+          "They need more ATP for growth.",
+          "Higher respiration uses more oxygen."
+        ]
+      },
+      "c": {
+        "answer": "ATP production would fall sharply because the electron transport chain would stop without a final electron acceptor. The seeds could produce only a much smaller amount of ATP through glycolysis and fermentation-related pathways.",
+        "bullet_points": [
+          "ATP production would drop sharply.",
+          "The ETC stops without oxygen.",
+          "Only limited ATP can come from glycolysis/fermentation."
+        ]
+      },
+      "d": {
+        "answer": "Mitochondria contain the inner membrane and matrix where major stages of aerobic respiration occur. Their membrane organization allows the electron transport chain, proton gradient formation, and ATP synthesis.",
+        "bullet_points": [
+          "Mitochondria house major respiration steps.",
+          "The inner membrane supports the ETC and proton gradient.",
+          "This structure enables efficient ATP production."
+        ]
+      }
+    },
+    "explain": "Aerobic respiration is closely tied to oxygen use because oxygen keeps electron flow moving in the mitochondrial electron transport chain.",
+    "part_explanations": {
+      "a": "Responses should explicitly name oxygen as the final electron acceptor.",
+      "b": "Responses should compare metabolic activity in germinating and dormant seeds.",
+      "c": "Responses should note a large decrease, not a total elimination, of ATP production.",
+      "d": "Responses should connect mitochondrial structure to respiratory function."
+    }
+  },
+  {
+    "id": "u3-frq-10",
+    "difficulty": "hard",
+    "topic": "cellular respiration",
+    "text": "A toxin prevents NADH from donating electrons to the electron transport chain in mitochondria.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the cellular process most directly disrupted by the toxin."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why the proton gradient would decrease after exposure to the toxin."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how carbon dioxide production from the citric acid cycle would change over time."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "A student claims that glycolysis would also stop immediately when the toxin is added. Evaluate the claim."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The toxin most directly disrupts oxidative phosphorylation, specifically electron transport.",
+        "bullet_points": [
+          "Identify oxidative phosphorylation/electron transport.",
+          "NADH normally donates electrons there.",
+          "That step is directly blocked."
+        ]
+      },
+      "b": {
+        "answer": "If electrons do not move through the electron transport chain, the complexes cannot pump protons across the inner mitochondrial membrane effectively. Without continued pumping, the proton gradient falls.",
+        "bullet_points": [
+          "Electron flow drives proton pumping.",
+          "Blocking electron donation stops most pumping.",
+          "The proton gradient decreases."
+        ]
+      },
+      "c": {
+        "answer": "Carbon dioxide production would decrease over time because the citric acid cycle depends on oxidized electron carriers such as NAD+. If NADH cannot be reoxidized efficiently, NAD+ becomes limiting and the cycle slows.",
+        "bullet_points": [
+          "CO2 production would eventually decrease.",
+          "The citric acid cycle needs NAD+.",
+          "Failure to regenerate NAD+ slows the cycle."
+        ]
+      },
+      "d": {
+        "answer": "The claim is incorrect. Glycolysis can continue temporarily in the cytosol, especially if NAD+ is regenerated by fermentation or other pathways, although total ATP yield remains much lower than in normal aerobic cells.",
+        "bullet_points": [
+          "Refute the claim.",
+          "Glycolysis is separate from the mitochondrial ETC.",
+          "It may continue temporarily if NAD+ is regenerated."
+        ]
+      }
+    },
+    "explain": "Electron transport connects the oxidation of carriers such as NADH to proton pumping and ATP synthesis, so blocking electron flow has system-wide effects.",
+    "part_explanations": {
+      "a": "Responses should focus on electron transport rather than only on the citric acid cycle.",
+      "b": "Responses should connect reduced electron flow to reduced proton pumping.",
+      "c": "Responses should explain the role of NAD+ recycling in the citric acid cycle.",
+      "d": "Responses should distinguish glycolysis from oxidative phosphorylation."
+    }
+  }
+]

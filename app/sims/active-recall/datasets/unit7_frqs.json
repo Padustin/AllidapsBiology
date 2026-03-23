@@ -1,0 +1,1658 @@
+[
+  {
+    "id": "u7-frq-1",
+    "difficulty": "hard",
+    "topic": "introduction to natural selection",
+    "text": "A population of beetles contains heritable variation in shell thickness. Some beetles survive bird predation better than others.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe the two conditions in the scenario that are necessary for natural selection to occur."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why natural selection acts on phenotypes even though evolution is defined as a change in allele frequencies."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how the frequency of alleles associated with thicker shells could change over generations if predation remains strong."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why individual beetles do not evolve during their lifetimes."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The scenario includes heritable variation in shell thickness and differential survival related to that trait. Both are necessary for natural selection.",
+        "bullet_points": [
+          "There is heritable variation.",
+          "Individuals differ in survival or reproductive success.",
+          "Both conditions are required for natural selection."
+        ]
+      },
+      "b": {
+        "answer": "Predators interact with the beetles' traits, not directly with their alleles. However, if the phenotype is heritable, differential survival changes which alleles are passed to the next generation.",
+        "bullet_points": [
+          "Selection acts on observable traits.",
+          "Heritable traits are linked to alleles.",
+          "Differential reproduction changes allele frequencies."
+        ]
+      },
+      "c": {
+        "answer": "The frequency of alleles associated with thicker shells would likely increase if thicker-shelled beetles survive and reproduce more successfully over many generations.",
+        "bullet_points": [
+          "Alleles for thicker shells would likely increase.",
+          "Better survival leads to greater reproduction.",
+          "The change happens across generations."
+        ]
+      },
+      "d": {
+        "answer": "Evolution is a population-level change in allele frequency across generations. An individual beetle's genotype does not change in a directed way because selection occurs after variation already exists.",
+        "bullet_points": [
+          "Individuals do not change allele frequencies within the population by themselves.",
+          "Their inherited genotype is largely fixed during life.",
+          "Evolution is measured across generations in populations."
+        ]
+      }
+    },
+    "explain": "Natural selection requires heritable variation and differential reproductive success, and its evolutionary consequence appears at the population level.",
+    "part_explanations": {
+      "a": "Responses should name heritable variation and differential success.",
+      "b": "Responses should connect phenotype-level selection to allele-frequency change.",
+      "c": "Responses should predict an increase in favored alleles over generations.",
+      "d": "Responses should emphasize that populations, not individual organisms, evolve."
+    }
+  },
+  {
+    "id": "u7-frq-2",
+    "difficulty": "hard",
+    "topic": "introduction to natural selection",
+    "text": "Students observe that some bacteria in a population survive exposure to an antibiotic while many others die.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the source of the trait differences on which selection can act in the bacterial population."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why the antibiotic does not cause bacteria to develop resistance because they 'need' it."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how the frequency of resistant bacteria will change after repeated antibiotic exposure."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "Evaluate the statement that natural selection always produces traits that organisms intentionally acquire."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Selection acts on existing genetic variation, such as mutations that confer resistance.",
+        "bullet_points": [
+          "Existing variation is required.",
+          "Mutations can create resistance traits.",
+          "Selection acts on those differences."
+        ]
+      },
+      "b": {
+        "answer": "Resistance mutations arise before exposure by chance, not because the bacteria need them. The antibiotic selects for bacteria that already carry resistance alleles.",
+        "bullet_points": [
+          "Mutations are not directed by need.",
+          "Resistance variants exist before selection.",
+          "The antibiotic selects among preexisting variants."
+        ]
+      },
+      "c": {
+        "answer": "Resistant bacteria will likely become more common because they survive treatment and contribute a greater fraction of the next generation.",
+        "bullet_points": [
+          "Resistance frequency will increase.",
+          "Survivors reproduce more often after treatment.",
+          "Selection changes population composition."
+        ]
+      },
+      "d": {
+        "answer": "The statement is incorrect. Natural selection does not involve intention; it favors inherited traits that already affect survival or reproduction under current conditions.",
+        "bullet_points": [
+          "Reject teleological wording.",
+          "Traits are not intentionally acquired.",
+          "Selection favors existing heritable variation."
+        ]
+      }
+    },
+    "explain": "Evolutionary explanations should avoid Lamarckian language: selection filters existing variation rather than creating adaptive traits on demand.",
+    "part_explanations": {
+      "a": "Responses should identify mutation or existing genetic variation.",
+      "b": "Responses should reject need-based acquisition.",
+      "c": "Responses should predict increasing resistance frequency with repeated selection.",
+      "d": "Responses should reject the idea of intentional trait acquisition."
+    }
+  },
+  {
+    "id": "u7-frq-3",
+    "difficulty": "hard",
+    "topic": "natural selection",
+    "text": "In a dry year, seeds become harder to crack. Within a finch population, birds with deeper beaks leave more offspring than birds with shallower beaks.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe how differential reproductive success is shown in the scenario."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how this environmental change can shift the trait distribution in the finch population."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what could happen to average beak depth if several wet years later favor softer seeds."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why an environmental change can alter which phenotype is favored by selection."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Finches with deeper beaks leave more offspring, so they contribute more genes to the next generation than finches with shallower beaks.",
+        "bullet_points": [
+          "Some phenotypes leave more offspring.",
+          "Those individuals contribute more genes.",
+          "That is differential reproductive success."
+        ]
+      },
+      "b": {
+        "answer": "If beak depth is heritable, individuals with deeper beaks will contribute more alleles associated with deeper beaks, so the population's average beak depth can increase over generations.",
+        "bullet_points": [
+          "The trait must be heritable.",
+          "Favored birds contribute more alleles.",
+          "The population mean can shift across generations."
+        ]
+      },
+      "c": {
+        "answer": "Average beak depth could decrease if softer seeds make shallower beaks advantageous, because selection can favor a different phenotype under different environmental conditions.",
+        "bullet_points": [
+          "The favored phenotype may change.",
+          "Average beak depth could shift downward.",
+          "Selection depends on the environment."
+        ]
+      },
+      "d": {
+        "answer": "Selection depends on how phenotype interacts with the environment. When the environment changes, the trait that gives the highest survival or reproductive success may also change.",
+        "bullet_points": [
+          "Fitness depends on environment.",
+          "A phenotype is favored only in a particular context.",
+          "Environmental shifts can reverse selection pressures."
+        ]
+      }
+    },
+    "explain": "Natural selection is context dependent: the same trait can be favored, neutral, or disfavored in different environments.",
+    "part_explanations": {
+      "a": "Responses should focus on differential offspring production.",
+      "b": "Responses should describe a shift in trait distribution over generations.",
+      "c": "Responses should predict a change in average trait value if conditions change.",
+      "d": "Responses should tie fitness to environmental context."
+    }
+  },
+  {
+    "id": "u7-frq-4",
+    "difficulty": "hard",
+    "topic": "natural selection",
+    "text": "A population of insects shows continuous variation in body color from very light to very dark. On a newly darkened substrate, intermediate and dark individuals survive better than the lightest individuals.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the type of selection most consistent with the scenario."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how this pattern of survival would affect the distribution of body color over time."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how the outcome would differ if only the darkest insects survived best and intermediate insects did not."
+      },
+      {
+        "label": "d",
+        "verb": "support a claim",
+        "prompt": "Support the claim that natural selection can change the shape of a trait distribution in a population."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The scenario is most consistent with directional selection toward darker body color.",
+        "bullet_points": [
+          "Identify directional selection.",
+          "The environment favors darker phenotypes.",
+          "One end of the trait distribution is favored."
+        ]
+      },
+      "b": {
+        "answer": "The trait distribution would shift toward darker colors because lighter individuals contribute less to future generations.",
+        "bullet_points": [
+          "The population mean would shift darker.",
+          "Lighter phenotypes would become less common.",
+          "Selection changes the distribution over time."
+        ]
+      },
+      "c": {
+        "answer": "The shift toward darkness would likely be stronger because selection would favor a narrower extreme rather than both intermediate and dark individuals.",
+        "bullet_points": [
+          "The response would be more strongly toward the extreme.",
+          "Intermediate insects would no longer be favored.",
+          "Selection would be more restrictive."
+        ]
+      },
+      "d": {
+        "answer": "The scenario shows that some trait values survive better than others, so the frequency of those phenotypes changes in later generations. That directly changes the distribution of trait values in the population.",
+        "bullet_points": [
+          "Use differential survival as evidence.",
+          "Trait frequencies change over generations.",
+          "The overall trait distribution is reshaped."
+        ]
+      }
+    },
+    "explain": "Natural selection does not just change a mean value; it can alter the entire distribution of trait frequencies in a population.",
+    "part_explanations": {
+      "a": "Responses should identify the selection pattern accurately.",
+      "b": "Responses should describe a distribution shift, not just individual survival.",
+      "c": "Responses should compare the broader versus narrower favored range.",
+      "d": "Responses should use population-level trait distributions as evidence."
+    }
+  },
+  {
+    "id": "u7-frq-5",
+    "difficulty": "hard",
+    "topic": "artificial selection",
+    "text": "Humans breed dogs over many generations for particular body sizes and behaviors.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe how artificial selection differs from natural selection."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why repeated human choice can rapidly change trait frequencies in a population."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict one consequence of selecting strongly for a narrow set of desired traits over many generations."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why artificial selection still depends on heritable variation in the population."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Artificial selection is driven by human choice of which individuals reproduce, whereas natural selection is driven by environmental differences in survival and reproduction.",
+        "bullet_points": [
+          "Artificial selection is human-directed.",
+          "Natural selection is environment-driven.",
+          "Both affect reproduction, but the selective agent differs."
+        ]
+      },
+      "b": {
+        "answer": "If humans repeatedly choose organisms with certain traits to reproduce, alleles associated with those traits are passed on more often, causing trait frequencies to change quickly.",
+        "bullet_points": [
+          "Humans choose breeders with desired traits.",
+          "Those alleles become more common.",
+          "Repeated selection changes the population rapidly."
+        ]
+      },
+      "c": {
+        "answer": "Strong artificial selection can reduce genetic variation and may increase the frequency of harmful linked alleles or health problems associated with inbreeding.",
+        "bullet_points": [
+          "Genetic variation may decrease.",
+          "Undesired alleles can rise with the selected traits.",
+          "Health costs or inbreeding effects may appear."
+        ]
+      },
+      "d": {
+        "answer": "Artificial selection can only amplify traits that have a heritable basis. If there is no inherited variation for a trait, selective breeding cannot consistently shift it across generations.",
+        "bullet_points": [
+          "Selection requires heritable variation.",
+          "Breeding cannot change a nonheritable trait in descendants.",
+          "Inherited differences are the raw material."
+        ]
+      }
+    },
+    "explain": "Artificial selection is an evolutionary process because it changes heritable traits in populations over generations.",
+    "part_explanations": {
+      "a": "Responses should contrast human choice with environmental selection.",
+      "b": "Responses should explain allele-frequency change through breeding choices.",
+      "c": "Responses should mention reduced variation or health trade-offs.",
+      "d": "Responses should tie selective breeding to heritable variation."
+    }
+  },
+  {
+    "id": "u7-frq-6",
+    "difficulty": "hard",
+    "topic": "artificial selection",
+    "text": "Farmers save seeds only from corn plants that produce the largest kernels each season.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the population-level outcome expected after many generations of this practice."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why the average kernel size can increase even though individual corn plants do not change genetically during their lives."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what would happen if farmers instead saved seeds randomly from all plants regardless of kernel size."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "Evaluate the claim that artificial selection proves organisms can permanently improve themselves just by use or practice."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The population would be expected to evolve a larger average kernel size over generations.",
+        "bullet_points": [
+          "Average kernel size would increase.",
+          "Population trait distribution would shift.",
+          "The change occurs over generations."
+        ]
+      },
+      "b": {
+        "answer": "Plants with large kernels contribute more seeds to the next generation, so alleles associated with larger kernel size become more common. Individual plants do not direct this change during life.",
+        "bullet_points": [
+          "Selected plants leave more descendants.",
+          "Alleles for larger kernels become more common.",
+          "Individuals do not change their genotype by use."
+        ]
+      },
+      "c": {
+        "answer": "The trait would change more slowly or not at all because there would be little or no consistent selection for large kernels.",
+        "bullet_points": [
+          "Without selective saving, selection pressure weakens.",
+          "Large-kernel alleles are not favored consistently.",
+          "Population change slows or stops."
+        ]
+      },
+      "d": {
+        "answer": "The claim is incorrect. Artificial selection changes populations because breeders choose among existing heritable variation, not because organisms improve traits through use or practice and pass those changes on.",
+        "bullet_points": [
+          "Reject Lamarckian reasoning.",
+          "Artificial selection acts on inherited variation.",
+          "Use or practice does not directly create heritable improvement."
+        ]
+      }
+    },
+    "explain": "Artificial selection changes populations through differential reproduction, not through inheritance of acquired characteristics.",
+    "part_explanations": {
+      "a": "Responses should predict population-level change in kernel size.",
+      "b": "Responses should explain change through differential reproduction.",
+      "c": "Responses should note the loss of directional selection under random seed saving.",
+      "d": "Responses should reject inheritance of acquired traits."
+    }
+  },
+  {
+    "id": "u7-frq-7",
+    "difficulty": "hard",
+    "topic": "population genetics",
+    "text": "A hurricane kills many individuals in a lizard population at random, regardless of their traits. The surviving population has different allele frequencies from the original population.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the evolutionary mechanism illustrated in the scenario."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why the allele-frequency change in this case is not necessarily due to natural selection."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how this event could affect genetic variation in the population."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why random events can have especially strong effects in small populations."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The scenario illustrates genetic drift, specifically a bottleneck effect.",
+        "bullet_points": [
+          "Identify genetic drift or bottleneck effect.",
+          "The change results from random survival.",
+          "Trait advantage is not required."
+        ]
+      },
+      "b": {
+        "answer": "The hurricane kills individuals randomly rather than favoring particular phenotypes. Because survival is not linked to a heritable trait advantage, the allele-frequency change is due to chance, not selection.",
+        "bullet_points": [
+          "Survival was random.",
+          "No trait-based advantage was described.",
+          "Therefore the change is due to chance, not natural selection."
+        ]
+      },
+      "c": {
+        "answer": "Genetic variation may decrease because some alleles can be lost entirely when the population is sharply reduced.",
+        "bullet_points": [
+          "Variation often decreases after a bottleneck.",
+          "Some alleles may be lost.",
+          "The gene pool becomes smaller."
+        ]
+      },
+      "d": {
+        "answer": "In small populations, each individual represents a larger fraction of the gene pool, so random births, deaths, or survival events can shift allele frequencies more dramatically.",
+        "bullet_points": [
+          "Each individual has a larger proportional effect in a small population.",
+          "Random events change frequencies more easily.",
+          "Drift is stronger when populations are small."
+        ]
+      }
+    },
+    "explain": "Population genetics includes mechanisms other than natural selection, and random sampling can strongly shape gene pools.",
+    "part_explanations": {
+      "a": "Responses should identify drift or the bottleneck effect.",
+      "b": "Responses should contrast random mortality with trait-based selection.",
+      "c": "Responses should predict reduced variation or allele loss.",
+      "d": "Responses should connect sample size to stronger random fluctuation."
+    }
+  },
+  {
+    "id": "u7-frq-8",
+    "difficulty": "hard",
+    "topic": "population genetics",
+    "text": "A small group of birds colonizes a remote island. After many generations, the island population has allele frequencies that differ substantially from those of the mainland source population.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe the founder effect shown in the scenario."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why the island population's allele frequencies can differ even if the colonists were healthy and well adapted."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict one genetic consequence of establishing the island population from only a few individuals."
+      },
+      {
+        "label": "d",
+        "verb": "support a claim",
+        "prompt": "Support the claim that evolution can occur through chance processes as well as through natural selection."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The founder effect occurs when a new population is started by a small number of individuals carrying only a subset of the original population's alleles.",
+        "bullet_points": [
+          "A few individuals start the new population.",
+          "They carry only part of the original gene pool.",
+          "This can shift allele frequencies."
+        ]
+      },
+      "b": {
+        "answer": "Because the founders are a random sample of the mainland population, they may not carry alleles in the same proportions as the source population. The difference can arise by chance alone.",
+        "bullet_points": [
+          "Founders are a random sample.",
+          "Random sampling can distort allele frequencies.",
+          "Differences do not require poor adaptation."
+        ]
+      },
+      "c": {
+        "answer": "The island population may have reduced genetic variation and some alleles may be overrepresented or absent compared with the mainland population.",
+        "bullet_points": [
+          "Variation may decrease.",
+          "Some alleles become unusually common or rare.",
+          "Some alleles may be missing entirely."
+        ]
+      },
+      "d": {
+        "answer": "The founder effect shows that allele frequencies can change because of random sampling when a new population forms. This is direct evidence that chance processes can drive evolutionary change.",
+        "bullet_points": [
+          "Use the founder effect as evidence.",
+          "Allele frequencies change by random sampling.",
+          "Therefore evolution can occur by chance, not only by selection."
+        ]
+      }
+    },
+    "explain": "Chance sampling during colonization can permanently reshape the genetic composition of new populations.",
+    "part_explanations": {
+      "a": "Responses should define the founder effect clearly.",
+      "b": "Responses should emphasize random sampling rather than adaptation.",
+      "c": "Responses should predict altered variation or allele representation.",
+      "d": "Responses should use the scenario as evidence for evolution by chance."
+    }
+  },
+  {
+    "id": "u7-frq-9",
+    "difficulty": "hard",
+    "topic": "hardy-weinberg equilibrium",
+    "text": "In a large population, the frequency of recessive phenotype individuals is 0.16 for a trait controlled by a single gene with two alleles.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "determine",
+        "prompt": "Determine the value of q for the population."
+      },
+      {
+        "label": "b",
+        "verb": "determine",
+        "prompt": "Determine the expected frequency of heterozygotes if the population is in Hardy-Weinberg equilibrium."
+      },
+      {
+        "label": "c",
+        "verb": "explain",
+        "prompt": "Explain what assumption about the population must be true for these calculations to apply."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why Hardy-Weinberg equilibrium serves as a useful null model in population genetics."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "q = 0.4 because q^2 = 0.16 and q is the square root of 0.16.",
+        "bullet_points": [
+          "q^2 = 0.16.",
+          "q = 0.4.",
+          "This is the recessive allele frequency."
+        ]
+      },
+      "b": {
+        "answer": "If q = 0.4, then p = 0.6, so 2pq = 2(0.6)(0.4) = 0.48.",
+        "bullet_points": [
+          "p = 1 − q = 0.6.",
+          "Heterozygote frequency = 2pq.",
+          "2pq = 0.48."
+        ]
+      },
+      "c": {
+        "answer": "The population must meet Hardy-Weinberg assumptions such as random mating and no selection, mutation, migration, or strong genetic drift affecting the locus.",
+        "bullet_points": [
+          "Hardy-Weinberg assumptions must hold.",
+          "Examples include random mating and no selection.",
+          "No evolutionary forces should alter the locus appreciably."
+        ]
+      },
+      "d": {
+        "answer": "It provides an expected baseline for allele and genotype frequencies when no evolution is occurring. Deviations from that baseline suggest that one or more evolutionary mechanisms may be acting.",
+        "bullet_points": [
+          "Hardy-Weinberg gives a no-evolution expectation.",
+          "Observed deviations can indicate evolutionary change.",
+          "It functions as a null model for comparison."
+        ]
+      }
+    },
+    "explain": "Hardy-Weinberg equilibrium is a mathematical baseline used to detect when real populations differ from no-evolution expectations.",
+    "part_explanations": {
+      "a": "Responses should compute q correctly from q².",
+      "b": "Responses should calculate 2pq correctly.",
+      "c": "Responses should reference Hardy-Weinberg assumptions.",
+      "d": "Responses should frame H-W as a baseline or null model."
+    }
+  },
+  {
+    "id": "u7-frq-10",
+    "difficulty": "hard",
+    "topic": "hardy-weinberg equilibrium",
+    "text": "Researchers calculate genotype frequencies for a fish population and find that the observed frequencies differ significantly from Hardy-Weinberg expectations.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "state the null hypothesis",
+        "prompt": "State the null hypothesis for the researchers' comparison."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain what a significant deviation from Hardy-Weinberg expectations suggests about the population."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict one evolutionary mechanism that could produce such a deviation."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "Evaluate the claim that a Hardy-Weinberg calculation can reveal exactly which mechanism is acting."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The null hypothesis is that the observed genotype frequencies do not differ significantly from Hardy-Weinberg expectations and that any differences are due to chance.",
+        "bullet_points": [
+          "Observed frequencies fit Hardy-Weinberg expectations under the null.",
+          "Any differences are due to chance.",
+          "No significant deviation is assumed."
+        ]
+      },
+      "b": {
+        "answer": "A significant deviation suggests that one or more Hardy-Weinberg assumptions are being violated and that the population may be evolving at that locus.",
+        "bullet_points": [
+          "At least one assumption may be violated.",
+          "The locus may not be in equilibrium.",
+          "Evolutionary forces may be acting."
+        ]
+      },
+      "c": {
+        "answer": "One possible mechanism is natural selection. Other acceptable answers include nonrandom mating, migration, mutation, or genetic drift.",
+        "bullet_points": [
+          "Name a valid mechanism such as selection, drift, mutation, migration, or nonrandom mating.",
+          "Any one valid mechanism is sufficient.",
+          "That mechanism could shift genotype frequencies."
+        ]
+      },
+      "d": {
+        "answer": "The claim is incorrect. Hardy-Weinberg analysis can show that equilibrium is not met, but additional evidence is usually needed to determine which mechanism or combination of mechanisms caused the deviation.",
+        "bullet_points": [
+          "Reject the claim.",
+          "The calculation detects deviation, not the exact cause.",
+          "More data are needed to identify the mechanism."
+        ]
+      }
+    },
+    "explain": "Hardy-Weinberg tests are diagnostic, not magical: they reveal departures from equilibrium but do not by themselves identify the cause.",
+    "part_explanations": {
+      "a": "Responses should state a proper statistical null hypothesis.",
+      "b": "Responses should link deviation to violated assumptions.",
+      "c": "Responses should name a valid evolutionary mechanism.",
+      "d": "Responses should reject overinterpretation of the calculation."
+    }
+  },
+  {
+    "id": "u7-frq-11",
+    "difficulty": "hard",
+    "topic": "evidence of evolution",
+    "text": "Scientists compare forelimb skeletons of humans, whales, bats, and cats and find that the bones share a similar arrangement despite different functions.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the type of evidence for evolution illustrated by the forelimb comparison."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why similar underlying structure with different functions supports evolutionary theory."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what pattern scientists would expect if these structures evolved from a common ancestral limb."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why analogous structures provide weaker evidence of common ancestry than homologous structures."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The comparison shows homologous structures.",
+        "bullet_points": [
+          "Identify homologous structures.",
+          "The structures share an underlying pattern.",
+          "They are used for different functions."
+        ]
+      },
+      "b": {
+        "answer": "Shared structural patterns are consistent with inheritance from a common ancestor followed by modification for different environments or functions.",
+        "bullet_points": [
+          "Similarity suggests inheritance from a common ancestor.",
+          "Different functions reflect later modification.",
+          "This supports descent with modification."
+        ]
+      },
+      "c": {
+        "answer": "Scientists would expect the structures to share a common basic developmental and anatomical pattern even though their sizes or specialized shapes differ.",
+        "bullet_points": [
+          "A shared basic pattern is expected.",
+          "Differences reflect later adaptation.",
+          "The underlying organization should remain similar."
+        ]
+      },
+      "d": {
+        "answer": "Analogous structures arise through convergent evolution and reflect similar function, not shared ancestry, so they do not provide the same direct evidence of descent from a common ancestor.",
+        "bullet_points": [
+          "Analogous structures reflect similar function.",
+          "They can evolve independently.",
+          "Therefore they are weaker evidence of common ancestry."
+        ]
+      }
+    },
+    "explain": "Anatomical comparisons are powerful because they distinguish similarity from shared ancestry versus similarity from shared function.",
+    "part_explanations": {
+      "a": "Responses should identify homologous structures.",
+      "b": "Responses should connect shared structure to common ancestry and modification.",
+      "c": "Responses should predict a conserved basic pattern.",
+      "d": "Responses should contrast homologous and analogous evidence."
+    }
+  },
+  {
+    "id": "u7-frq-12",
+    "difficulty": "hard",
+    "topic": "evidence of evolution",
+    "text": "Biologists compare DNA sequences from several species and find that closely related species have fewer sequence differences than more distantly related species.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe how molecular data can be used as evidence for evolution."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why closely related species are expected to have more similar DNA sequences."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what scientists would infer if two species share a very recent common ancestor."
+      },
+      {
+        "label": "d",
+        "verb": "support a claim",
+        "prompt": "Support the claim that multiple independent lines of evidence strengthen the case for evolution."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Molecular evidence uses similarities and differences in DNA or protein sequences to infer relatedness and common ancestry among species.",
+        "bullet_points": [
+          "DNA and protein sequences can be compared.",
+          "Sequence similarity reflects relatedness.",
+          "Molecular data provide evolutionary evidence."
+        ]
+      },
+      "b": {
+        "answer": "Species that diverged more recently have had less time to accumulate different mutations, so their sequences are expected to remain more similar.",
+        "bullet_points": [
+          "Recent divergence means less time for differences to accumulate.",
+          "Fewer mutations separate close relatives.",
+          "Therefore their DNA is more similar."
+        ]
+      },
+      "c": {
+        "answer": "Scientists would infer that the two species should show relatively few sequence differences and likely cluster closely on a phylogenetic tree.",
+        "bullet_points": [
+          "They should be genetically similar.",
+          "Few sequence differences are expected.",
+          "They should appear close together on a phylogeny."
+        ]
+      },
+      "d": {
+        "answer": "Evolution is supported by anatomy, fossils, embryology, biogeography, and molecular data. Agreement among independent evidence sources makes the explanation far stronger than any one source alone.",
+        "bullet_points": [
+          "Use multiple evidence types.",
+          "Independent lines that agree strengthen confidence.",
+          "Evolution is supported by converging evidence."
+        ]
+      }
+    },
+    "explain": "Molecular comparisons extend evolutionary evidence beyond anatomy and often provide high-resolution information about relatedness.",
+    "part_explanations": {
+      "a": "Responses should describe sequence comparison as evidence.",
+      "b": "Responses should link similarity to recent common ancestry.",
+      "c": "Responses should predict close clustering or few differences.",
+      "d": "Responses should emphasize converging evidence across methods."
+    }
+  },
+  {
+    "id": "u7-frq-13",
+    "difficulty": "hard",
+    "topic": "common ancestry",
+    "text": "All known organisms use DNA or RNA, the same basic genetic code, and many shared metabolic pathways such as glycolysis.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe how the universality of the genetic code supports common ancestry."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why the conservation of core pathways such as glycolysis is significant evidence for common ancestry."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what scientists would expect to observe if all modern organisms descended from a distant common ancestor."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why shared complex features across diverse organisms are less likely to be due to coincidence alone."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "If very different organisms use the same codon-to-amino-acid system, that pattern is consistent with inheritance of the coding system from a common ancestor.",
+        "bullet_points": [
+          "The genetic code is nearly universal.",
+          "Shared coding rules suggest inheritance.",
+          "That supports common ancestry."
+        ]
+      },
+      "b": {
+        "answer": "A conserved pathway such as glycolysis is used across very different lineages, suggesting it evolved early and was inherited because it was effective and fundamental to cellular life.",
+        "bullet_points": [
+          "Glycolysis is widespread and conserved.",
+          "It likely evolved early.",
+          "Its conservation suggests inheritance from a common ancestor."
+        ]
+      },
+      "c": {
+        "answer": "Scientists would expect broad similarities in core molecular machinery, shared biochemical pathways, and a nested pattern of relatedness among organisms.",
+        "bullet_points": [
+          "Shared molecular features would be expected.",
+          "Conserved pathways and cell processes should be widespread.",
+          "Relatedness should show a nested pattern."
+        ]
+      },
+      "d": {
+        "answer": "The more complex and specific a shared feature is, the less likely it is that many lineages independently acquired the exact same system by chance. Inheritance from a common ancestor is a more parsimonious explanation.",
+        "bullet_points": [
+          "Complex shared traits are unlikely to arise identically by chance.",
+          "Common ancestry is a simpler explanation.",
+          "Parsimony supports descent with modification."
+        ]
+      }
+    },
+    "explain": "Common ancestry is supported not only by visible traits but also by deep molecular similarities shared across life.",
+    "part_explanations": {
+      "a": "Responses should connect the shared genetic code to inheritance.",
+      "b": "Responses should explain why conserved core pathways matter.",
+      "c": "Responses should predict widespread shared cellular machinery.",
+      "d": "Responses should use parsimony or improbability of coincidence."
+    }
+  },
+  {
+    "id": "u7-frq-14",
+    "difficulty": "hard",
+    "topic": "common ancestry",
+    "text": "Biologists note that vertebrate embryos share several early developmental features that become more different later in development.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify what these embryological similarities are commonly used as evidence for."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why shared early developmental features can support common ancestry."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict why later stages of development may differ more among species."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "Evaluate the claim that embryonic similarity proves adult organisms must have the same function or ecology."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "These similarities are used as evidence for common ancestry among the species.",
+        "bullet_points": [
+          "Identify common ancestry.",
+          "Embryology is an evidence source for evolution.",
+          "Shared development suggests relatedness."
+        ]
+      },
+      "b": {
+        "answer": "Shared early developmental features suggest that organisms inherited similar developmental programs from a common ancestor and later modified them in different lineages.",
+        "bullet_points": [
+          "Early developmental programs can be inherited.",
+          "Shared embryonic traits suggest a common developmental origin.",
+          "Differences accumulate with later divergence."
+        ]
+      },
+      "c": {
+        "answer": "Later development may differ more because lineage-specific gene-expression patterns and adaptations produce specialized adult structures suited to different functions and environments.",
+        "bullet_points": [
+          "Species-specific regulation diverges later in development.",
+          "Adult specializations emerge over time.",
+          "Different functions lead to greater later differences."
+        ]
+      },
+      "d": {
+        "answer": "The claim is incorrect. Embryonic similarity supports relatedness, but adult organisms can still differ greatly in ecology and function because development later diverges.",
+        "bullet_points": [
+          "Reject the claim.",
+          "Embryonic similarity does not require identical adult function.",
+          "Related species can occupy different ecological roles."
+        ]
+      }
+    },
+    "explain": "Embryological evidence is strongest when it is integrated with other evidence for descent with modification, not when it is overinterpreted.",
+    "part_explanations": {
+      "a": "Responses should identify common ancestry.",
+      "b": "Responses should connect similar early development to inherited developmental programs.",
+      "c": "Responses should predict increased divergence later in development.",
+      "d": "Responses should reject overclaiming about adult function."
+    }
+  },
+  {
+    "id": "u7-frq-15",
+    "difficulty": "hard",
+    "topic": "continuing evolution",
+    "text": "A population of mosquitoes becomes increasingly resistant to an insecticide over several years of use.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe how this scenario demonstrates that evolution is an ongoing process."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why the increase in resistance is a population-level change rather than a change in one mosquito."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what could happen to resistance frequency if use of the insecticide is stopped and resistance has a fitness cost."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why human actions can strongly influence continuing evolution in other species."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The frequency of a heritable trait changes over time in response to environmental conditions, showing that evolution continues in present-day populations.",
+        "bullet_points": [
+          "A heritable trait is changing in frequency.",
+          "The change occurs over time in a living population.",
+          "That is ongoing evolution."
+        ]
+      },
+      "b": {
+        "answer": "Evolution refers to changes in allele frequencies across generations in the population. Individual mosquitoes do not change genetically because they were exposed; instead resistant individuals leave more descendants.",
+        "bullet_points": [
+          "Evolution is population level.",
+          "Individuals do not evolve resistance because of need during life.",
+          "Differential reproduction changes the population."
+        ]
+      },
+      "c": {
+        "answer": "Resistance could decrease if it reduces fitness when the insecticide is absent, because susceptible individuals may then have a reproductive advantage.",
+        "bullet_points": [
+          "Resistance may decline if it has a cost.",
+          "Selection can reverse when the environment changes.",
+          "Susceptible mosquitoes may do better without the insecticide."
+        ]
+      },
+      "d": {
+        "answer": "Humans alter environments through pesticides, antibiotics, habitat change, and harvesting, creating strong selection pressures that can rapidly change allele frequencies in other organisms.",
+        "bullet_points": [
+          "Human activities change selection pressures.",
+          "Examples include pesticides and antibiotics.",
+          "These pressures can drive rapid evolutionary change."
+        ]
+      }
+    },
+    "explain": "Continuing evolution is easiest to see when humans impose strong selective pressures, but the same principles apply in all changing environments.",
+    "part_explanations": {
+      "a": "Responses should define ongoing evolution in present populations.",
+      "b": "Responses should emphasize allele-frequency change across generations.",
+      "c": "Responses should predict a possible decline if resistance is costly.",
+      "d": "Responses should mention human-generated selection pressures."
+    }
+  },
+  {
+    "id": "u7-frq-16",
+    "difficulty": "hard",
+    "topic": "continuing evolution",
+    "text": "Researchers observe that influenza virus strains change noticeably from year to year.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "explain",
+        "prompt": "Explain why rapidly reproducing organisms can evolve quickly."
+      },
+      {
+        "label": "b",
+        "verb": "describe",
+        "prompt": "Describe one reason viruses can show evolutionary change on human timescales."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict why vaccines may need to be updated over time for such viruses."
+      },
+      {
+        "label": "d",
+        "verb": "support a claim",
+        "prompt": "Support the claim that evolution is relevant to medicine."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Rapidly reproducing organisms generate many generations in a short time, allowing mutations and selection to shift populations quickly.",
+        "bullet_points": [
+          "Short generation times speed evolutionary change.",
+          "Many generations occur quickly.",
+          "Mutation and selection act repeatedly."
+        ]
+      },
+      "b": {
+        "answer": "Viruses often have high mutation rates and very large population sizes, so new variants arise frequently and can spread under selection.",
+        "bullet_points": [
+          "High mutation rates create variation.",
+          "Large populations generate many variants.",
+          "Selection can spread successful variants."
+        ]
+      },
+      "c": {
+        "answer": "Vaccines may need updating because the viral population can accumulate changes in antigens, reducing how well immune memory from older vaccines recognizes new strains.",
+        "bullet_points": [
+          "Antigenic change can alter immune recognition.",
+          "Older vaccines may match poorly.",
+          "Updates improve protection against current variants."
+        ]
+      },
+      "d": {
+        "answer": "Evolution affects how pathogens change, how resistance emerges, and how treatments or vaccines perform. Medical decisions therefore often depend on evolutionary processes.",
+        "bullet_points": [
+          "Pathogen evolution affects disease control.",
+          "Resistance and antigenic change are evolutionary problems.",
+          "Medicine must account for those changes."
+        ]
+      }
+    },
+    "explain": "Evolution is not only historical; it is central to modern public health and treatment strategies.",
+    "part_explanations": {
+      "a": "Responses should tie rapid evolution to short generation time.",
+      "b": "Responses should mention high mutation rates or large population sizes.",
+      "c": "Responses should connect viral change to vaccine matching.",
+      "d": "Responses should use medical examples as evidence."
+    }
+  },
+  {
+    "id": "u7-frq-17",
+    "difficulty": "hard",
+    "topic": "phylogeny",
+    "text": "Biologists use DNA sequences and anatomical traits to construct a phylogenetic tree for several species.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe what a phylogenetic tree represents."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why species that share a more recent common ancestor should be placed closer together on the tree."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how adding additional molecular data might affect confidence in the tree."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why phylogenetic trees are hypotheses rather than absolute proofs."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "A phylogenetic tree represents hypothesized evolutionary relationships and patterns of common ancestry among taxa.",
+        "bullet_points": [
+          "Trees represent evolutionary relationships.",
+          "They show patterns of common ancestry.",
+          "They are models of relatedness."
+        ]
+      },
+      "b": {
+        "answer": "A recent common ancestor means the lineages diverged more recently and typically share more derived traits or sequence similarity than lineages whose common ancestor is older.",
+        "bullet_points": [
+          "Recent common ancestry implies closer relatedness.",
+          "Such taxa often share more derived characters or sequence similarity.",
+          "They are placed closer together."
+        ]
+      },
+      "c": {
+        "answer": "Additional molecular data can increase confidence if they support the same branching pattern, or they can lead to revisions if they suggest a different pattern.",
+        "bullet_points": [
+          "More data can strengthen support for a tree.",
+          "Conflicting data can prompt revision.",
+          "Confidence depends on evidence quality and agreement."
+        ]
+      },
+      "d": {
+        "answer": "Trees are models built from available evidence and inference. As new data or methods become available, the inferred relationships can be revised.",
+        "bullet_points": [
+          "Phylogenies are evidence-based hypotheses.",
+          "They can change with new evidence.",
+          "Models are not final proof."
+        ]
+      }
+    },
+    "explain": "Phylogenies organize evidence about shared ancestry, but like all scientific models they are revised when new evidence appears.",
+    "part_explanations": {
+      "a": "Responses should define what a phylogenetic tree represents.",
+      "b": "Responses should connect recent common ancestry to proximity on the tree.",
+      "c": "Responses should note that more data can strengthen or revise the tree.",
+      "d": "Responses should explain the model/hypothesis nature of phylogenies."
+    }
+  },
+  {
+    "id": "u7-frq-18",
+    "difficulty": "hard",
+    "topic": "phylogeny",
+    "text": "A researcher compares two competing phylogenetic trees. One tree groups whales more closely with hippos than with fish.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "evaluate",
+        "prompt": "Evaluate which tree is more consistent with the principle of common ancestry if whales share more molecular similarities with hippos than with fish."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why superficial similarity to fish body shape is not sufficient to group whales with fish."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict one additional type of evidence that could be used to test the relationship."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why convergent evolution can complicate phylogenetic analysis."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The tree grouping whales more closely with hippos is more consistent with common ancestry if the molecular evidence supports that relationship.",
+        "bullet_points": [
+          "Choose the whale-hippo grouping if supported by molecular data.",
+          "Common ancestry is inferred from shared inherited features.",
+          "Evidence should guide the preferred tree."
+        ]
+      },
+      "b": {
+        "answer": "Whale body shape is similar to fish because both are adapted to aquatic life, but whales are mammals and many of their similarities to fish are analogous rather than homologous.",
+        "bullet_points": [
+          "Body-shape similarity can be due to shared environment.",
+          "Whales and fish show analogous aquatic adaptations.",
+          "Analogy is weaker evidence of relatedness than homology."
+        ]
+      },
+      "c": {
+        "answer": "Additional evidence could include fossils, embryological development, more DNA sequences, or shared derived anatomical traits.",
+        "bullet_points": [
+          "Name a valid additional evidence type.",
+          "More data can test the relationship.",
+          "Multiple evidence sources strengthen inference."
+        ]
+      },
+      "d": {
+        "answer": "Convergent evolution can produce similar traits in unrelated lineages facing similar environments, which can mislead researchers if they rely only on superficial similarity.",
+        "bullet_points": [
+          "Convergence creates misleading similarity.",
+          "Unrelated taxa may appear alike.",
+          "Phylogenetic analysis must distinguish analogy from homology."
+        ]
+      }
+    },
+    "explain": "Phylogenetic reasoning requires distinguishing homologous similarities from analogous similarities created by convergence.",
+    "part_explanations": {
+      "a": "Responses should prefer the tree that matches the stronger evidence.",
+      "b": "Responses should explain that aquatic shape is an analogous adaptation.",
+      "c": "Any valid extra evidence type can earn credit.",
+      "d": "Responses should connect convergence to misleading similarity."
+    }
+  },
+  {
+    "id": "u7-frq-19",
+    "difficulty": "hard",
+    "topic": "speciation",
+    "text": "A river changes course and splits one population of rodents into two geographically isolated populations.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the type of speciation process that could begin in this scenario."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why geographic isolation can lead to speciation over time."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what would need to happen for the two rodent populations to be considered separate species under the biological species concept."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why isolation alone does not instantly create a new species."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The scenario could lead to allopatric speciation.",
+        "bullet_points": [
+          "Identify allopatric speciation.",
+          "The populations become geographically separated.",
+          "Isolation begins the divergence process."
+        ]
+      },
+      "b": {
+        "answer": "Geographic isolation reduces or stops gene flow, allowing mutations, genetic drift, and natural selection to cause the populations to diverge genetically over time.",
+        "bullet_points": [
+          "Isolation reduces gene flow.",
+          "Separated populations accumulate differences.",
+          "Selection, drift, and mutation can drive divergence."
+        ]
+      },
+      "c": {
+        "answer": "They would need to become reproductively isolated so they no longer interbreed successfully or no longer produce fertile, viable offspring if brought back together.",
+        "bullet_points": [
+          "Reproductive isolation is required.",
+          "They must fail to interbreed successfully or produce fertile viable offspring.",
+          "That meets the biological species concept."
+        ]
+      },
+      "d": {
+        "answer": "Isolation only starts the process. The populations must accumulate enough genetic, behavioral, or physiological differences to become reproductively isolated.",
+        "bullet_points": [
+          "Geographic separation is only the beginning.",
+          "Divergence takes time.",
+          "Speciation requires reproductive isolation, not just distance."
+        ]
+      }
+    },
+    "explain": "Speciation usually begins with reduced gene flow, but it is completed only when populations become reproductively isolated.",
+    "part_explanations": {
+      "a": "Responses should identify allopatric speciation.",
+      "b": "Responses should explain divergence through reduced gene flow.",
+      "c": "Responses should define reproductive isolation.",
+      "d": "Responses should note that speciation is a process, not an instant event."
+    }
+  },
+  {
+    "id": "u7-frq-20",
+    "difficulty": "hard",
+    "topic": "speciation",
+    "text": "Two populations of frogs live in the same region but breed in different seasons, so they rarely interbreed.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe the reproductive isolating mechanism shown in the scenario."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how this mechanism can maintain species boundaries even without geographic separation."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what could happen if climate change caused the breeding seasons to overlap substantially."
+      },
+      {
+        "label": "d",
+        "verb": "support a claim",
+        "prompt": "Support the claim that multiple kinds of barriers can contribute to speciation."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The scenario shows temporal isolation, a prezygotic barrier.",
+        "bullet_points": [
+          "Identify temporal isolation.",
+          "It is a prezygotic barrier.",
+          "The populations breed at different times."
+        ]
+      },
+      "b": {
+        "answer": "If individuals reproduce at different times, they do not exchange genes even while living in the same place. This lack of gene flow helps maintain distinct populations or species.",
+        "bullet_points": [
+          "Different breeding times reduce gene flow.",
+          "The barrier works even in the same area.",
+          "Species boundaries can persist without geographic separation."
+        ]
+      },
+      "c": {
+        "answer": "Gene flow could increase if individuals from the two populations begin breeding at the same time, potentially weakening reproductive isolation if other barriers are absent.",
+        "bullet_points": [
+          "Overlap could increase interbreeding.",
+          "Gene flow may rise.",
+          "Isolation may weaken if no other barriers prevent mating."
+        ]
+      },
+      "d": {
+        "answer": "Speciation can involve geographic, temporal, behavioral, mechanical, or postzygotic barriers. The frog example supports one such barrier, and others can act alongside it to reinforce isolation.",
+        "bullet_points": [
+          "Use temporal isolation as one example.",
+          "Many barriers can reduce gene flow.",
+          "Multiple barriers can reinforce speciation."
+        ]
+      }
+    },
+    "explain": "Speciation is often maintained by one or more reproductive barriers, and those barriers can act before or after fertilization.",
+    "part_explanations": {
+      "a": "Responses should identify temporal isolation as prezygotic.",
+      "b": "Responses should connect different breeding times to reduced gene flow.",
+      "c": "Responses should predict possible increased interbreeding with overlap.",
+      "d": "Responses should mention more than one type of isolating barrier."
+    }
+  },
+  {
+    "id": "u7-frq-21",
+    "difficulty": "hard",
+    "topic": "variations in populations",
+    "text": "A population of wildflowers contains many color alleles, but a nearby small population founded recently by a few individuals contains only two color alleles.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe how genetic variation differs between the two populations."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why genetic variation is important for evolution by natural selection."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how the smaller population may respond to a new disease compared with the larger, more variable population."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why mutations and sexual reproduction together can influence variation in populations."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The large wildflower population has greater genetic variation because it contains more alleles, while the small founded population has fewer alleles and a narrower gene pool.",
+        "bullet_points": [
+          "The larger population has more alleles.",
+          "The smaller population has reduced variation.",
+          "Their gene pools differ in breadth."
+        ]
+      },
+      "b": {
+        "answer": "Natural selection requires heritable variation in traits. Without variation, there are fewer differences for selection to favor under changing conditions.",
+        "bullet_points": [
+          "Selection needs heritable differences.",
+          "More variation provides more possible advantageous phenotypes.",
+          "Low variation limits adaptive potential."
+        ]
+      },
+      "c": {
+        "answer": "The small population may be more vulnerable because fewer alleles mean a lower chance that some individuals carry resistance-related traits.",
+        "bullet_points": [
+          "The small population may respond less effectively.",
+          "Reduced variation lowers the chance of resistant individuals.",
+          "The larger population may have more adaptive options."
+        ]
+      },
+      "d": {
+        "answer": "Mutations create new alleles, and sexual reproduction reshuffles alleles into new combinations. Together they increase the genetic diversity on which selection can act.",
+        "bullet_points": [
+          "Mutations generate new alleles.",
+          "Sexual reproduction recombines existing alleles.",
+          "Together they expand variation."
+        ]
+      }
+    },
+    "explain": "Population-level variation is the raw material for selection and a major determinant of how populations respond to change.",
+    "part_explanations": {
+      "a": "Responses should compare allele diversity between populations.",
+      "b": "Responses should tie variation to selection's raw material.",
+      "c": "Responses should predict greater vulnerability in the less variable population.",
+      "d": "Responses should distinguish new alleles from new combinations."
+    }
+  },
+  {
+    "id": "u7-frq-22",
+    "difficulty": "hard",
+    "topic": "variations in populations",
+    "text": "A student says that all variation in populations comes from new mutations that occur in each generation.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "evaluate",
+        "prompt": "Evaluate the student's statement."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain one additional source of variation besides mutation."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how variation among offspring would change if meiosis occurred without crossing over and independent assortment."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why standing genetic variation can matter even before new mutations arise."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The statement is incomplete. New mutations are one source of variation, but existing alleles are also reshuffled by sexual reproduction to produce additional variation.",
+        "bullet_points": [
+          "The statement is not fully correct.",
+          "Mutation creates new alleles.",
+          "Sexual reproduction also creates new combinations of existing alleles."
+        ]
+      },
+      "b": {
+        "answer": "Crossing over and independent assortment during meiosis generate new combinations of alleles in gametes, increasing variation among offspring.",
+        "bullet_points": [
+          "Name a recombination source such as crossing over or independent assortment.",
+          "These processes reshuffle alleles.",
+          "They increase variation without making new alleles."
+        ]
+      },
+      "c": {
+        "answer": "Variation among offspring would decrease because two major mechanisms that reshuffle alleles into new combinations would be absent.",
+        "bullet_points": [
+          "Offspring variation would decrease.",
+          "Crossing over and independent assortment normally create diversity.",
+          "Without them, gametes become more similar."
+        ]
+      },
+      "d": {
+        "answer": "Standing genetic variation already present in a population can allow some individuals to survive or reproduce better when conditions change. Selection can act on that variation immediately, without waiting for new mutations.",
+        "bullet_points": [
+          "Existing variation can be selected right away.",
+          "Populations need not wait for new mutations.",
+          "Standing variation can drive rapid evolutionary responses."
+        ]
+      }
+    },
+    "explain": "Variation comes from both new alleles and new combinations of old alleles, and existing variation often matters most in short-term evolution.",
+    "part_explanations": {
+      "a": "Responses should reject the mutation-only claim.",
+      "b": "Responses should identify a recombination-based source of variation.",
+      "c": "Responses should predict less variation without meiotic reshuffling.",
+      "d": "Responses should explain the importance of standing variation."
+    }
+  },
+  {
+    "id": "u7-frq-23",
+    "difficulty": "hard",
+    "topic": "origins of life on earth",
+    "text": "Early Earth likely had very different atmospheric and oceanic conditions from those of modern Earth. Scientists investigate how organic molecules might have formed before the first cells existed.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe one requirement for the abiotic formation of complex biological molecules from simpler precursors."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why the origin of life is not the same question as the later evolution of life."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict why environments with repeated energy inputs could have been important in prebiotic chemistry."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why scientific hypotheses about the origin of life can be investigated even though the events occurred in the distant past."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "One requirement is a source of simple precursor molecules and energy that can drive chemical reactions leading to more complex organic compounds.",
+        "bullet_points": [
+          "Prebiotic chemistry needs building blocks.",
+          "An energy source is needed to drive reactions.",
+          "These conditions can form more complex molecules."
+        ]
+      },
+      "b": {
+        "answer": "The origin of life concerns how the first self-sustaining systems arose, whereas evolution explains how existing life diversified and changed after heritable replication already existed.",
+        "bullet_points": [
+          "Origin of life asks how life first began.",
+          "Evolution explains change after life exists.",
+          "They are related but distinct questions."
+        ]
+      },
+      "c": {
+        "answer": "Repeated energy inputs such as lightning, UV radiation, or geothermal activity could help drive reactions that build and transform organic molecules over time.",
+        "bullet_points": [
+          "Energy input can power chemical reactions.",
+          "Repeated inputs allow many reaction opportunities.",
+          "This can increase formation of complex molecules."
+        ]
+      },
+      "d": {
+        "answer": "Scientists can test origin-of-life hypotheses by modeling early Earth conditions, running experiments, comparing chemical plausibility, and looking for evidence consistent with different scenarios.",
+        "bullet_points": [
+          "Past events can be studied through models and experiments.",
+          "Researchers test chemical plausibility under hypothesized conditions.",
+          "Scientific investigation does not require direct observation of the original event."
+        ]
+      }
+    },
+    "explain": "The origin of life is studied scientifically through hypotheses about prebiotic chemistry and early self-replicating systems.",
+    "part_explanations": {
+      "a": "Responses should mention precursors plus energy or suitable conditions.",
+      "b": "Responses should distinguish abiogenesis from biological evolution.",
+      "c": "Responses should connect repeated energy inputs to reaction opportunities.",
+      "d": "Responses should explain how models and experiments test hypotheses."
+    }
+  },
+  {
+    "id": "u7-frq-24",
+    "difficulty": "hard",
+    "topic": "origins of life on earth",
+    "text": "A researcher proposes that membrane-like structures surrounding simple organic molecules would have been advantageous in early prebiotic systems.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "explain",
+        "prompt": "Explain one way a membrane-like boundary could have benefited early chemical systems."
+      },
+      {
+        "label": "b",
+        "verb": "describe",
+        "prompt": "Describe why compartmentalization can matter for the origin of life."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what problem early self-replicating molecules might face in the absence of any compartment boundary."
+      },
+      {
+        "label": "d",
+        "verb": "support a claim",
+        "prompt": "Support the claim that modern cells provide clues, but not complete answers, about the origin of life."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "A boundary could concentrate molecules, maintain local chemical conditions, and reduce diffusion away from useful reactants or products.",
+        "bullet_points": [
+          "Boundaries can concentrate molecules.",
+          "They can maintain local conditions.",
+          "They reduce loss by diffusion."
+        ]
+      },
+      "b": {
+        "answer": "Compartmentalization allows reactions to occur in a more controlled microenvironment, making it easier for interacting molecules to persist and potentially support self-maintaining systems.",
+        "bullet_points": [
+          "Compartments create microenvironments.",
+          "Related molecules can stay together.",
+          "This can help build more organized chemical systems."
+        ]
+      },
+      "c": {
+        "answer": "Without boundaries, useful molecules could diffuse away too easily, making coordinated reactions and stable chemical networks harder to maintain.",
+        "bullet_points": [
+          "Molecules would disperse more readily.",
+          "Reaction partners would be harder to keep together.",
+          "Stable networks would be more difficult."
+        ]
+      },
+      "d": {
+        "answer": "Modern cells show that boundaries, information molecules, and energy-transformation systems are important for life, but the first life likely formed through simpler intermediate stages that no living cell fully preserves.",
+        "bullet_points": [
+          "Modern cells reveal important life functions.",
+          "Early life likely involved simpler intermediate systems.",
+          "Thus cells provide clues but not a complete historical record."
+        ]
+      }
+    },
+    "explain": "Origin-of-life hypotheses often focus on how molecules became organized into self-maintaining systems rather than on single molecules acting alone.",
+    "part_explanations": {
+      "a": "Responses should mention concentration or local conditions as a membrane benefit.",
+      "b": "Responses should explain the role of compartments in organizing reactions.",
+      "c": "Responses should predict diffusion-related problems without compartments.",
+      "d": "Responses should use modern cells as informative but incomplete analogies."
+    }
+  }
+]

@@ -1,0 +1,1106 @@
+[
+  {
+    "id": "u6-frq-1",
+    "difficulty": "hard",
+    "topic": "dna and rna structure",
+    "text": "A researcher compares a DNA molecule with an RNA molecule transcribed from one of its genes.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe one structural difference between DNA and RNA."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why DNA is generally more suitable for long-term information storage."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how replacing deoxyribose with ribose throughout a DNA molecule would affect its stability."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why both DNA and RNA are classified as nucleic acids despite their structural differences."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "DNA usually contains deoxyribose and thymine and is often double stranded, whereas RNA contains ribose and uracil and is often single stranded.",
+        "bullet_points": [
+          "DNA and RNA differ in sugar type.",
+          "They also differ in one nitrogenous base.",
+          "DNA is often double stranded while RNA is often single stranded."
+        ]
+      },
+      "b": {
+        "answer": "DNA is more stable because it is double stranded and uses deoxyribose, which makes it less chemically reactive. This stability is useful for storing hereditary information over long periods.",
+        "bullet_points": [
+          "DNA is more chemically stable.",
+          "Double-stranded structure helps protect information.",
+          "That makes DNA better for long-term storage."
+        ]
+      },
+      "c": {
+        "answer": "The molecule would become less stable because ribose makes nucleic acids more prone to hydrolysis than deoxyribose. Long-term storage would become more difficult.",
+        "bullet_points": [
+          "Stability would decrease.",
+          "Ribose is less suited for long-term storage.",
+          "The molecule would be more reactive."
+        ]
+      },
+      "d": {
+        "answer": "Both are polymers of nucleotides linked by phosphodiester bonds and both store or transmit genetic information. Those shared chemical features place them in the nucleic acid category.",
+        "bullet_points": [
+          "Both are made of nucleotide monomers.",
+          "Both use phosphodiester-linked sugar-phosphate backbones.",
+          "Both function in genetic information systems."
+        ]
+      }
+    },
+    "explain": "DNA and RNA have distinct structures that fit their roles, but both belong to the same chemical class because of their shared nucleotide-based architecture.",
+    "part_explanations": {
+      "a": "Any valid structural difference can earn credit.",
+      "b": "Responses should connect DNA stability to structure and chemistry.",
+      "c": "Responses should predict reduced stability with ribose.",
+      "d": "Responses should identify shared nucleotide/polymer features."
+    }
+  },
+  {
+    "id": "u6-frq-2",
+    "difficulty": "hard",
+    "topic": "dna and rna structure",
+    "text": "A double-stranded DNA sample contains 18% guanine.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "determine",
+        "prompt": "Determine the percentage of cytosine in the sample."
+      },
+      {
+        "label": "b",
+        "verb": "determine",
+        "prompt": "Determine the combined percentage of adenine and thymine in the sample."
+      },
+      {
+        "label": "c",
+        "verb": "explain",
+        "prompt": "Explain why the percentages of guanine and cytosine must be equal in the sample."
+      },
+      {
+        "label": "d",
+        "verb": "predict",
+        "prompt": "Predict whether a single-stranded RNA copied from part of the DNA must have the same base percentages as the full DNA sample."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The sample contains 18% cytosine because guanine pairs with cytosine in double-stranded DNA.",
+        "bullet_points": [
+          "G pairs with C.",
+          "If G = 18%, then C = 18%.",
+          "Therefore cytosine is 18%."
+        ]
+      },
+      "b": {
+        "answer": "Adenine plus thymine must make up 64% because guanine plus cytosine account for 36% of the bases.",
+        "bullet_points": [
+          "G + C = 36%.",
+          "Total = 100%.",
+          "A + T = 64%."
+        ]
+      },
+      "c": {
+        "answer": "Complementary base pairing requires each guanine on one strand to pair with a cytosine on the other strand in double-stranded DNA. Therefore their percentages are equal in the whole molecule.",
+        "bullet_points": [
+          "Complementary pairing links G with C.",
+          "Each G corresponds to a C in double-stranded DNA.",
+          "Whole-molecule percentages of G and C are equal."
+        ]
+      },
+      "d": {
+        "answer": "No. A single RNA transcript made from only one DNA region does not have to match the overall base percentages of the full DNA sample, and RNA uses uracil instead of thymine.",
+        "bullet_points": [
+          "The RNA is copied from only one region.",
+          "It is single stranded and need not reflect the full DNA composition.",
+          "RNA also uses uracil instead of thymine."
+        ]
+      }
+    },
+    "explain": "Base-pairing rules allow quantitative reasoning about double-stranded DNA, but those rules do not transfer directly to single RNA transcripts.",
+    "part_explanations": {
+      "a": "Responses should identify C as 18%.",
+      "b": "Responses should calculate A + T correctly.",
+      "c": "Responses should explicitly invoke complementary base pairing.",
+      "d": "Responses should note both transcript specificity and the use of uracil."
+    }
+  },
+  {
+    "id": "u6-frq-3",
+    "difficulty": "hard",
+    "topic": "dna replication",
+    "text": "Scientists track DNA synthesis in a dividing eukaryotic cell and observe that new nucleotides are added to both template strands in the 5' to 3' direction.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe why DNA polymerase can add nucleotides only in the 5' to 3' direction."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why one new strand is synthesized continuously while the other is synthesized discontinuously."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what would happen to replication if helicase did not function."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why semiconservative replication helps preserve genetic information."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "DNA polymerase adds nucleotides to the 3' end of a growing strand, so synthesis proceeds in the 5' to 3' direction.",
+        "bullet_points": [
+          "DNA polymerase extends from the 3' end.",
+          "New nucleotides are added to that end.",
+          "Therefore synthesis proceeds 5' to 3'."
+        ]
+      },
+      "b": {
+        "answer": "Because the template strands are antiparallel, one new strand can be built continuously toward the replication fork, while the other must be built in short Okazaki fragments away from the fork and then joined.",
+        "bullet_points": [
+          "Templates are antiparallel.",
+          "One strand is leading and continuous.",
+          "The lagging strand is made in Okazaki fragments."
+        ]
+      },
+      "c": {
+        "answer": "Replication would stop or be greatly reduced because helicase is needed to unwind and separate the DNA strands so they can be copied.",
+        "bullet_points": [
+          "Helicase unwinds the double helix.",
+          "Without strand separation, templates are inaccessible.",
+          "Replication would largely stop."
+        ]
+      },
+      "d": {
+        "answer": "In semiconservative replication, each daughter DNA molecule contains one original strand and one newly synthesized strand. This complementary copying mechanism helps maintain sequence information across cell divisions.",
+        "bullet_points": [
+          "Each daughter molecule keeps one parental strand.",
+          "New strands are copied using base pairing.",
+          "This helps preserve genetic information."
+        ]
+      }
+    },
+    "explain": "DNA replication depends on strand separation, complementary base pairing, and the directional limitations of DNA polymerase.",
+    "part_explanations": {
+      "a": "Responses should mention addition to the 3' end.",
+      "b": "Responses should explain leading versus lagging strands.",
+      "c": "Responses should connect helicase loss to failure to unwind DNA.",
+      "d": "Responses should define semiconservative replication accurately."
+    }
+  },
+  {
+    "id": "u6-frq-4",
+    "difficulty": "hard",
+    "topic": "dna replication",
+    "text": "A mutant cell line lacks a functional DNA ligase enzyme.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the part of DNA replication most directly affected by loss of DNA ligase."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why DNA ligase is especially important on the lagging strand."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how the newly synthesized DNA would differ from normal DNA in the mutant cells."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "Evaluate the claim that DNA ligase is unnecessary because complementary base pairing alone can complete replication."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The joining of adjacent DNA fragments is most directly affected.",
+        "bullet_points": [
+          "DNA ligase joins DNA fragments.",
+          "Phosphodiester bond formation between fragments is disrupted.",
+          "Fragment joining is the most direct effect."
+        ]
+      },
+      "b": {
+        "answer": "The lagging strand is synthesized as many short Okazaki fragments, so ligase is required repeatedly to seal the sugar-phosphate backbone between those fragments.",
+        "bullet_points": [
+          "Lagging-strand synthesis is discontinuous.",
+          "It produces many Okazaki fragments.",
+          "Ligase seals the gaps between fragments."
+        ]
+      },
+      "c": {
+        "answer": "The new DNA would contain more unsealed nicks or fragments on the lagging strand, making replication products less continuous and less stable.",
+        "bullet_points": [
+          "The lagging strand would remain fragmented.",
+          "More backbone nicks would persist.",
+          "DNA continuity and stability would decrease."
+        ]
+      },
+      "d": {
+        "answer": "The claim is incorrect. Complementary base pairing aligns the nucleotides, but ligase is needed to form the covalent phosphodiester bonds that make one continuous strand.",
+        "bullet_points": [
+          "Reject the claim.",
+          "Base pairing is not the same as covalent backbone formation.",
+          "Ligase makes the phosphodiester bonds."
+        ]
+      }
+    },
+    "explain": "Replication needs both accurate base pairing and enzymes that physically assemble a continuous DNA backbone.",
+    "part_explanations": {
+      "a": "Responses should focus on fragment joining rather than unwinding or base pairing.",
+      "b": "Responses should refer to Okazaki fragments.",
+      "c": "Responses should predict fragmented or nicked DNA.",
+      "d": "Responses should distinguish hydrogen-bond pairing from phosphodiester bond formation."
+    }
+  },
+  {
+    "id": "u6-frq-5",
+    "difficulty": "hard",
+    "topic": "transcription and rna processing",
+    "text": "A eukaryotic gene is transcribed into a primary RNA transcript that contains both introns and exons.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe the role of RNA polymerase during transcription."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why RNA processing is required before the transcript can usually be translated in eukaryotic cells."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict the effect on the final mRNA if introns were not removed."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why transcription occurs in the nucleus in eukaryotic cells."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "RNA polymerase binds DNA, unwinds a small region, and synthesizes a complementary RNA strand using one DNA strand as the template.",
+        "bullet_points": [
+          "RNA polymerase uses DNA as a template.",
+          "It synthesizes RNA.",
+          "It carries out transcription."
+        ]
+      },
+      "b": {
+        "answer": "Eukaryotic primary transcripts usually need processing such as intron removal and addition of a 5' cap and poly-A tail so the mature mRNA can be stable, exported, and translated properly.",
+        "bullet_points": [
+          "Primary transcripts are often not ready for translation.",
+          "Processing includes splicing and end modifications.",
+          "These changes help stability, export, and translation."
+        ]
+      },
+      "c": {
+        "answer": "The final RNA would contain intron sequences that are normally absent from mature mRNA, which could alter codons and likely produce an altered or nonfunctional protein.",
+        "bullet_points": [
+          "Introns would remain in the mRNA.",
+          "The coding sequence could be disrupted.",
+          "Protein structure or function would likely be altered."
+        ]
+      },
+      "d": {
+        "answer": "In eukaryotes, DNA is housed in the nucleus, separating transcription from translation. This compartmentalization allows RNA processing before the message reaches ribosomes in the cytoplasm.",
+        "bullet_points": [
+          "DNA is in the nucleus.",
+          "Transcription is separated from translation.",
+          "This allows RNA processing before translation."
+        ]
+      }
+    },
+    "explain": "Eukaryotic gene expression includes both transcription and RNA processing, and nucleus-cytoplasm compartmentalization is part of that regulation.",
+    "part_explanations": {
+      "a": "Responses should identify RNA polymerase as the enzyme making RNA from DNA.",
+      "b": "Responses should mention at least one processing step and why it matters.",
+      "c": "Responses should predict retained introns and altered coding information.",
+      "d": "Responses should connect nuclear location to compartmentalization and processing."
+    }
+  },
+  {
+    "id": "u6-frq-6",
+    "difficulty": "hard",
+    "topic": "transcription and rna processing",
+    "text": "Researchers compare mature mRNA molecules made from the same gene in two different cell types and find that the mRNAs differ in which exons are included.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the RNA-processing phenomenon shown in the scenario."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how this phenomenon can allow one gene to produce different proteins."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how protein diversity would change if all exons were always included in the same way in every cell."
+      },
+      {
+        "label": "d",
+        "verb": "support a claim",
+        "prompt": "Support the claim that RNA processing contributes to cell specialization."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The scenario shows alternative splicing.",
+        "bullet_points": [
+          "Identify alternative splicing.",
+          "Different mature mRNAs are produced from the same primary transcript.",
+          "Exon inclusion differs between cell types."
+        ]
+      },
+      "b": {
+        "answer": "Different exon combinations produce different mature mRNA sequences, which can be translated into proteins with different amino acid sequences and sometimes different functions.",
+        "bullet_points": [
+          "Different exon combinations change the mRNA sequence.",
+          "Different mRNAs can yield different proteins.",
+          "Protein function can change as a result."
+        ]
+      },
+      "c": {
+        "answer": "Protein diversity would decrease because each gene would produce fewer distinct mRNA and protein forms across different cell types.",
+        "bullet_points": [
+          "Protein diversity would fall.",
+          "Fewer transcript variants would be produced.",
+          "Different cells would have fewer specialized protein forms."
+        ]
+      },
+      "d": {
+        "answer": "The same gene can yield different mature mRNAs in different cell types, so RNA processing helps cells make different protein sets even though they share the same genome. This supports specialized cell functions.",
+        "bullet_points": [
+          "Use the scenario as evidence.",
+          "Different cell types process the same gene differently.",
+          "Different protein sets support specialization."
+        ]
+      }
+    },
+    "explain": "RNA processing is not just cleanup; it is an important layer of gene regulation that expands protein diversity.",
+    "part_explanations": {
+      "a": "Responses should name alternative splicing.",
+      "b": "Responses should connect exon choice to protein differences.",
+      "c": "Responses should predict reduced diversity if splicing patterns were fixed.",
+      "d": "Responses should link processing differences to specialized cell function."
+    }
+  },
+  {
+    "id": "u6-frq-7",
+    "difficulty": "hard",
+    "topic": "translation",
+    "text": "A mutation changes the anticodon of a tRNA so that it no longer pairs with its normal codon on mRNA.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe the role of tRNA during translation."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how codon-anticodon pairing contributes to accurate protein synthesis."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict the effect of the mutation on incorporation of the corresponding amino acid during translation."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why translation occurs on ribosomes rather than free in the cytosol."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "tRNA carries a specific amino acid to the ribosome and uses its anticodon to pair with a complementary codon on the mRNA.",
+        "bullet_points": [
+          "tRNA carries an amino acid.",
+          "Its anticodon pairs with the mRNA codon.",
+          "This helps place amino acids in sequence."
+        ]
+      },
+      "b": {
+        "answer": "Correct codon-anticodon pairing ensures that the amino acid associated with a particular codon is added in the correct position in the growing polypeptide.",
+        "bullet_points": [
+          "Codon-anticodon pairing matches codons to amino acids.",
+          "This preserves the amino acid order.",
+          "Accurate pairing supports accurate proteins."
+        ]
+      },
+      "c": {
+        "answer": "The corresponding amino acid would be incorporated less often or incorrectly because the altered tRNA would no longer recognize its normal codon effectively.",
+        "bullet_points": [
+          "Incorporation of that amino acid would be disrupted.",
+          "The tRNA would not bind the normal codon well.",
+          "Protein sequence could be altered."
+        ]
+      },
+      "d": {
+        "answer": "Ribosomes bring together mRNA and tRNAs, ensure correct codon reading, and catalyze peptide bond formation. Their structure organizes translation efficiently and accurately.",
+        "bullet_points": [
+          "Ribosomes coordinate mRNA and tRNA interactions.",
+          "They catalyze peptide bond formation.",
+          "Their structure makes translation efficient and accurate."
+        ]
+      }
+    },
+    "explain": "Translation depends on a precise relationship among mRNA codons, tRNA anticodons, amino acids, and ribosomes.",
+    "part_explanations": {
+      "a": "Responses should state that tRNA carries amino acids and matches codons.",
+      "b": "Responses should connect pairing to accurate amino acid order.",
+      "c": "Responses should predict reduced or altered amino acid incorporation.",
+      "d": "Responses should mention ribosome organization and peptide-bond formation."
+    }
+  },
+  {
+    "id": "u6-frq-8",
+    "difficulty": "hard",
+    "topic": "translation",
+    "text": "A cell is treated with a drug that blocks peptide bond formation at the ribosome.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the process directly blocked by the drug."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why mRNA could still be present in the cell even though the drug stops protein synthesis."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how the abundance of newly synthesized proteins would change after treatment."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "Evaluate the claim that blocking translation should also immediately stop transcription of all genes."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The drug directly blocks translation.",
+        "bullet_points": [
+          "Identify translation.",
+          "Peptide bond formation occurs during translation.",
+          "Ribosomal protein synthesis is blocked."
+        ]
+      },
+      "b": {
+        "answer": "mRNA is produced during transcription, which is a separate process from translation. Existing mRNA molecules can remain in the cell even if ribosomes can no longer make proteins from them.",
+        "bullet_points": [
+          "Transcription and translation are separate processes.",
+          "mRNA can already be present before translation is blocked.",
+          "Existing transcripts may persist."
+        ]
+      },
+      "c": {
+        "answer": "Newly synthesized protein abundance would decrease sharply because ribosomes could not elongate polypeptide chains effectively.",
+        "bullet_points": [
+          "New protein production would fall sharply.",
+          "Ribosomes could not add amino acids normally.",
+          "Translation output would decrease."
+        ]
+      },
+      "d": {
+        "answer": "The claim is incorrect. Blocking translation does not automatically stop transcription because the two processes are distinct, especially in eukaryotic cells where they occur in different compartments.",
+        "bullet_points": [
+          "Reject the claim.",
+          "Transcription is separate from translation.",
+          "In eukaryotes the two processes are compartmentalized."
+        ]
+      }
+    },
+    "explain": "Protein synthesis can be disrupted at different steps, and blocking translation does not erase the existence of mRNA or the process of transcription.",
+    "part_explanations": {
+      "a": "Responses should identify translation rather than transcription.",
+      "b": "Responses should note that mRNA can preexist or continue to be transcribed.",
+      "c": "Responses should predict a large drop in new proteins.",
+      "d": "Responses should distinguish the two processes clearly."
+    }
+  },
+  {
+    "id": "u6-frq-9",
+    "difficulty": "hard",
+    "topic": "regulation of gene expression",
+    "text": "Two neighboring cells contain the same DNA, but only one cell produces large amounts of a particular enzyme because transcription factors bind near that gene's promoter only in that cell.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe the role of transcription factors in gene expression."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why the two cells can differ in protein production even though they have the same genome."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict the effect on enzyme production if the promoter region is mutated so transcription factors can no longer bind."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why regulation of transcription is an efficient point for controlling gene expression."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Transcription factors are regulatory proteins that bind DNA near genes and increase or decrease the recruitment or activity of RNA polymerase.",
+        "bullet_points": [
+          "Transcription factors bind regulatory DNA.",
+          "They influence RNA polymerase and transcription rate.",
+          "They help turn genes on or off."
+        ]
+      },
+      "b": {
+        "answer": "Cells can express different sets of genes because they contain different active transcription factors and signaling states. Therefore the same genome can produce different proteins in different cells.",
+        "bullet_points": [
+          "Different cells activate different genes.",
+          "Gene expression depends on regulatory proteins, not just DNA sequence.",
+          "Same genome does not mean same transcriptome."
+        ]
+      },
+      "c": {
+        "answer": "Enzyme production would decrease greatly or stop because transcription would be reduced if the necessary transcription factors could not bind the promoter region.",
+        "bullet_points": [
+          "Transcription would fall.",
+          "Less mRNA would be made.",
+          "Protein production would drop."
+        ]
+      },
+      "d": {
+        "answer": "Controlling transcription prevents the cell from wasting resources making unnecessary mRNA and protein. Regulation at this early step strongly influences all later steps of expression.",
+        "bullet_points": [
+          "Early regulation saves energy and materials.",
+          "Less unnecessary mRNA and protein are produced.",
+          "Transcription is a powerful control point."
+        ]
+      }
+    },
+    "explain": "Gene expression differences among cells often begin with differential transcription-factor binding and promoter access.",
+    "part_explanations": {
+      "a": "Responses should describe transcription-factor action at DNA.",
+      "b": "Responses should explain differential gene expression from the same genome.",
+      "c": "Responses should predict reduced transcription and protein production after promoter disruption.",
+      "d": "Responses should focus on efficiency and early control."
+    }
+  },
+  {
+    "id": "u6-frq-10",
+    "difficulty": "hard",
+    "topic": "regulation of gene expression",
+    "text": "Researchers treat cells with a histone deacetylase enzyme that removes acetyl groups from histone tails near a gene.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe how histone acetylation generally affects chromatin structure."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why removing acetyl groups near a gene often reduces transcription of that gene."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how accessibility of the DNA to RNA polymerase would change after histone deacetylation."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "Evaluate the claim that epigenetic regulation requires changing the nucleotide sequence of the gene."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Histone acetylation generally loosens chromatin and makes DNA more accessible for transcription.",
+        "bullet_points": [
+          "Acetylation is associated with more open chromatin.",
+          "DNA becomes more accessible.",
+          "Transcription is often promoted."
+        ]
+      },
+      "b": {
+        "answer": "Removing acetyl groups usually makes chromatin more condensed, which reduces access of transcription factors and RNA polymerase to the DNA and lowers transcription.",
+        "bullet_points": [
+          "Deacetylation condenses chromatin.",
+          "Regulatory proteins have less access to DNA.",
+          "Transcription often decreases."
+        ]
+      },
+      "c": {
+        "answer": "DNA accessibility would decrease because the chromatin around the gene would become more tightly packed.",
+        "bullet_points": [
+          "Accessibility would decrease.",
+          "Chromatin would become more compact.",
+          "RNA polymerase would bind less easily."
+        ]
+      },
+      "d": {
+        "answer": "The claim is incorrect. Epigenetic regulation changes gene activity through chromatin or DNA modifications without altering the underlying nucleotide sequence.",
+        "bullet_points": [
+          "Reject the claim.",
+          "Epigenetic changes affect expression, not sequence.",
+          "Chromatin modifications are a major example."
+        ]
+      }
+    },
+    "explain": "Epigenetic regulation changes how accessible genes are, which strongly affects whether they are transcribed.",
+    "part_explanations": {
+      "a": "Responses should connect acetylation to open chromatin.",
+      "b": "Responses should explain reduced transcription after deacetylation.",
+      "c": "Responses should predict lower accessibility.",
+      "d": "Responses should distinguish epigenetic modification from mutation."
+    }
+  },
+  {
+    "id": "u6-frq-11",
+    "difficulty": "hard",
+    "topic": "gene expression and cell specialization",
+    "text": "Skin cells and neurons in the same organism contain the same genome, yet they have different structures and functions.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "explain",
+        "prompt": "Explain why skin cells and neurons can have different phenotypes even though they contain the same DNA."
+      },
+      {
+        "label": "b",
+        "verb": "describe",
+        "prompt": "Describe one way differential gene expression contributes to cell specialization."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what would happen if a neuron began expressing many genes normally active only in dividing skin cells."
+      },
+      {
+        "label": "d",
+        "verb": "support a claim",
+        "prompt": "Support the claim that cell specialization depends more on patterns of gene expression than on differences in genome sequence among most body cells."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "They express different sets of genes. Regulatory proteins, signaling pathways, and chromatin states determine which genes are active in each cell type, producing different proteins and phenotypes.",
+        "bullet_points": [
+          "Different cell types express different genes.",
+          "Regulation changes which proteins are made.",
+          "Same DNA can yield different phenotypes."
+        ]
+      },
+      "b": {
+        "answer": "Differential gene expression allows each cell type to produce the proteins needed for its specific structure and function, such as ion channels in neurons or structural proteins in skin cells.",
+        "bullet_points": [
+          "Different proteins support different cell functions.",
+          "Gene-expression patterns shape cell structure.",
+          "Examples include cell-type-specific proteins."
+        ]
+      },
+      "c": {
+        "answer": "The neuron's identity and function would likely be disrupted because it would begin making proteins inappropriate for its specialized role. This could impair signaling or alter its phenotype.",
+        "bullet_points": [
+          "Cell function would likely be disrupted.",
+          "Inappropriate proteins would be made.",
+          "The specialized phenotype could be altered."
+        ]
+      },
+      "d": {
+        "answer": "Most body cells share the same genome, yet they differ greatly in form and function. This pattern supports the claim that specialization results mainly from which genes are turned on or off.",
+        "bullet_points": [
+          "Use shared genome plus different phenotypes as evidence.",
+          "Different expression patterns explain specialization.",
+          "Genome sequence is mostly the same across somatic cells."
+        ]
+      }
+    },
+    "explain": "Cell specialization is a classic example of how the same genome can produce many cell types through regulated expression.",
+    "part_explanations": {
+      "a": "Responses should focus on gene-expression differences rather than DNA differences.",
+      "b": "Responses should mention specialized proteins or structures.",
+      "c": "Responses should predict functional disruption from inappropriate gene expression.",
+      "d": "Responses should use shared genome plus different phenotypes as evidence."
+    }
+  },
+  {
+    "id": "u6-frq-12",
+    "difficulty": "hard",
+    "topic": "gene expression and cell specialization",
+    "text": "In an early embryo, signaling molecules from neighboring cells activate different transcription factors in different regions of the embryo.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe how these signals can lead to different developmental outcomes in nearby cells."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why embryonic cells can become specialized over time."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what could happen if one region of the embryo failed to receive the signal."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why cell signaling and gene regulation are closely linked during development."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Different signals activate different transcription factors, which turn on different sets of genes in nearby cells. As a result, those cells follow different developmental pathways.",
+        "bullet_points": [
+          "Different signals activate different transcription factors.",
+          "Different genes are expressed in different cells.",
+          "Cells follow different developmental paths."
+        ]
+      },
+      "b": {
+        "answer": "As development proceeds, cells receive different signals and maintain different gene-expression programs. These stable differences cause cells to become increasingly specialized.",
+        "bullet_points": [
+          "Development changes signaling environments.",
+          "Different expression programs are maintained.",
+          "Cells become progressively specialized."
+        ]
+      },
+      "c": {
+        "answer": "Cells in that region might adopt an abnormal identity, fail to specialize properly, or develop into a different tissue because the genes normally activated by the signal would not be expressed.",
+        "bullet_points": [
+          "Specialization in that region could fail or change.",
+          "Needed developmental genes would not turn on.",
+          "Tissue patterning could be altered."
+        ]
+      },
+      "d": {
+        "answer": "Signals outside the cell influence which transcription factors are active inside the cell, and transcription factors determine which genes are expressed. Development therefore depends on both communication and gene regulation.",
+        "bullet_points": [
+          "External signals affect internal gene regulation.",
+          "Transcription factors connect the two processes.",
+          "Development requires coordinated signaling and expression."
+        ]
+      }
+    },
+    "explain": "Embryonic development depends on cells interpreting signals and converting them into stable patterns of gene expression.",
+    "part_explanations": {
+      "a": "Responses should connect external signals to different gene-expression programs.",
+      "b": "Responses should explain progressive specialization over time.",
+      "c": "Responses should predict altered cell fate or patterning.",
+      "d": "Responses should explicitly link signaling to transcriptional control."
+    }
+  },
+  {
+    "id": "u6-frq-13",
+    "difficulty": "hard",
+    "topic": "mutations",
+    "text": "A point mutation changes one nucleotide in a coding region of a gene.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe one way a point mutation can affect the protein encoded by the gene."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why some point mutations have little or no effect on phenotype."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict one possible consequence of a point mutation that introduces a premature stop codon."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why mutation is considered the original source of new alleles."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "A point mutation can change one codon, which may change one amino acid in the protein, create a stop codon, or leave the amino acid unchanged.",
+        "bullet_points": [
+          "Point mutations alter a single nucleotide.",
+          "They can change an amino acid, create a stop, or be silent.",
+          "Protein effects vary by codon change."
+        ]
+      },
+      "b": {
+        "answer": "Some point mutations are silent because the altered codon still specifies the same amino acid, or the change occurs in a region that does not strongly affect protein function or expression.",
+        "bullet_points": [
+          "Some mutations do not change the amino acid.",
+          "Some changes occur in less critical regions.",
+          "Therefore phenotype may be unchanged."
+        ]
+      },
+      "c": {
+        "answer": "A premature stop codon can produce a shortened protein that is incomplete and often nonfunctional.",
+        "bullet_points": [
+          "Translation would stop early.",
+          "The protein would be shorter.",
+          "Function is often lost or reduced."
+        ]
+      },
+      "d": {
+        "answer": "A mutation creates a DNA sequence not previously present in the population at that locus. Recombination and meiosis reshuffle existing alleles, but mutation generates new ones.",
+        "bullet_points": [
+          "Mutation creates a new sequence variant.",
+          "That variant is a new allele.",
+          "Other processes mainly reshuffle existing alleles."
+        ]
+      }
+    },
+    "explain": "Mutations vary widely in effect, but they are the fundamental source of new genetic variation at the DNA-sequence level.",
+    "part_explanations": {
+      "a": "Any valid protein consequence can earn credit.",
+      "b": "Responses should explain why some mutations are neutral or silent.",
+      "c": "Responses should predict truncation from a stop codon.",
+      "d": "Responses should distinguish mutation from recombination."
+    }
+  },
+  {
+    "id": "u6-frq-14",
+    "difficulty": "hard",
+    "topic": "mutations",
+    "text": "A scientist finds a mutation in a regulatory DNA sequence upstream of a gene rather than in the gene's coding region.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify one aspect of gene function most likely to be affected by a mutation in a regulatory DNA sequence."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how a regulatory-sequence mutation can alter phenotype without changing the amino acid sequence of the protein."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict the effect of a mutation that increases the affinity of a transcription factor for the regulatory sequence."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "Evaluate the claim that only coding-region mutations are biologically important."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The level, timing, or location of gene expression is most likely to be affected.",
+        "bullet_points": [
+          "Regulatory mutations often alter expression patterns.",
+          "They affect when, where, or how much a gene is transcribed.",
+          "Protein sequence may remain unchanged."
+        ]
+      },
+      "b": {
+        "answer": "If the regulatory mutation changes transcription-factor binding, the amount of mRNA and protein produced can change. A phenotype may change because the protein is made at the wrong time, place, or amount.",
+        "bullet_points": [
+          "Regulatory mutations affect transcription-factor binding.",
+          "mRNA/protein levels can change.",
+          "Phenotype can change without altering amino acid sequence."
+        ]
+      },
+      "c": {
+        "answer": "Gene expression would likely increase if the transcription factor is an activator, because stronger binding would promote more transcription.",
+        "bullet_points": [
+          "Expression would often increase for an activator.",
+          "Stronger binding changes transcription rate.",
+          "mRNA and protein abundance could rise."
+        ]
+      },
+      "d": {
+        "answer": "The claim is incorrect. Regulatory mutations can strongly affect phenotype by altering gene expression, and some developmental or evolutionary changes involve regulation more than protein-coding sequence.",
+        "bullet_points": [
+          "Reject the claim.",
+          "Regulatory mutations can be biologically important.",
+          "Expression changes can strongly affect phenotype."
+        ]
+      }
+    },
+    "explain": "Mutations need not alter protein sequence to matter; many important changes affect when, where, and how much a gene is expressed.",
+    "part_explanations": {
+      "a": "Responses should focus on expression pattern rather than protein sequence.",
+      "b": "Responses should explain phenotype change through altered expression.",
+      "c": "Responses should condition the prediction on the transcription factor acting as an activator.",
+      "d": "Responses should reject the coding-only claim."
+    }
+  },
+  {
+    "id": "u6-frq-15",
+    "difficulty": "hard",
+    "topic": "biotechnology",
+    "text": "Scientists use PCR to amplify a specific DNA region from a very small biological sample.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe the basic purpose of PCR."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why repeated cycles of heating and cooling are used in PCR."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what would happen if the primers did not match the target DNA sequence well."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why PCR is useful when only a tiny amount of starting DNA is available."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "PCR is used to make many copies of a specific DNA sequence.",
+        "bullet_points": [
+          "PCR amplifies a target DNA region.",
+          "It produces many copies from a small starting sample.",
+          "The target sequence is selected by primers."
+        ]
+      },
+      "b": {
+        "answer": "Heating separates the DNA strands, cooling allows primers to bind, and a higher temperature lets DNA polymerase extend the primers. Repeating these steps doubles the target repeatedly.",
+        "bullet_points": [
+          "Heating denatures the DNA.",
+          "Cooling allows primer annealing.",
+          "Polymerase extension copies the target each cycle."
+        ]
+      },
+      "c": {
+        "answer": "Amplification would decrease or fail because poorly matching primers would bind inefficiently or not at all, so DNA polymerase would not copy the intended region effectively.",
+        "bullet_points": [
+          "Poor primer matching reduces binding.",
+          "Extension from primers would be inefficient.",
+          "Target amplification would fall or fail."
+        ]
+      },
+      "d": {
+        "answer": "PCR can exponentially amplify the target sequence, so even trace amounts of starting DNA can become enough for analysis, identification, or cloning.",
+        "bullet_points": [
+          "PCR makes exponential numbers of copies.",
+          "Tiny initial samples become analyzable.",
+          "This is why PCR is so powerful in biotechnology."
+        ]
+      }
+    },
+    "explain": "PCR is a core biotechnology tool because it can selectively and rapidly amplify DNA from very small samples.",
+    "part_explanations": {
+      "a": "Responses should identify selective DNA amplification.",
+      "b": "Responses should explain denaturation, primer annealing, and extension.",
+      "c": "Responses should tie poor primer matching to failed amplification.",
+      "d": "Responses should mention exponential amplification from small samples."
+    }
+  },
+  {
+    "id": "u6-frq-16",
+    "difficulty": "hard",
+    "topic": "biotechnology",
+    "text": "A researcher inserts a human gene into a bacterial plasmid and then places the plasmid into bacterial cells.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe one reason plasmids are useful tools in genetic engineering."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how inserting the gene into the plasmid can allow bacteria to produce a human protein."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict one outcome if the bacteria receive plasmids that lack the inserted human gene."
+      },
+      {
+        "label": "d",
+        "verb": "support a claim",
+        "prompt": "Support the claim that biotechnology allows humans to manipulate genetic information in ways that can have medical benefits."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Plasmids are small circular DNA molecules that can be copied inside bacteria and can carry inserted genes into cells.",
+        "bullet_points": [
+          "Plasmids can carry foreign DNA.",
+          "They replicate in bacterial cells.",
+          "They are useful vectors in genetic engineering."
+        ]
+      },
+      "b": {
+        "answer": "If the plasmid contains the human gene with appropriate regulatory elements, bacterial cells can transcribe and translate that gene, producing the encoded protein.",
+        "bullet_points": [
+          "The inserted gene becomes part of the plasmid vector.",
+          "Bacteria can express the gene if regulation allows.",
+          "The protein can then be produced in the cells."
+        ]
+      },
+      "c": {
+        "answer": "Those bacteria would not produce the desired human protein because they would lack the gene required to encode it.",
+        "bullet_points": [
+          "No inserted gene means no target protein.",
+          "Only vector functions remain.",
+          "Desired expression is absent."
+        ]
+      },
+      "d": {
+        "answer": "Recombinant DNA methods make it possible to mass-produce medically useful proteins, such as insulin, by engineering microbes. This is direct evidence that biotechnology can manipulate genetic information for medical benefit.",
+        "bullet_points": [
+          "Support the claim with recombinant DNA technology.",
+          "Engineered organisms can produce useful proteins.",
+          "This has clear medical applications."
+        ]
+      }
+    },
+    "explain": "Biotechnology often relies on vectors such as plasmids to move genes between organisms and harness cellular machinery for useful purposes.",
+    "part_explanations": {
+      "a": "Responses should identify plasmids as gene-carrying vectors.",
+      "b": "Responses should connect inserted gene expression to protein production.",
+      "c": "Responses should predict no target protein without the inserted gene.",
+      "d": "Responses should support the claim with a concrete recombinant-DNA example."
+    }
+  }
+]

@@ -1,0 +1,1382 @@
+[
+  {
+    "id": "u2-frq-1",
+    "difficulty": "hard",
+    "topic": "cell structure and function",
+    "text": "Researchers study pancreatic cells that release large amounts of digestive enzyme into the small intestine. Electron micrographs show that the cells contain extensive internal membrane systems and numerous small vesicles near the plasma membrane.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the organelle most directly responsible for the synthesis of the exported digestive enzyme and describe its role in the pathway."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why cells that secrete large amounts of protein typically contain abundant Golgi apparatus."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict the effect on enzyme export if transport vesicles can no longer fuse with the plasma membrane."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why these secretory cells usually contain many mitochondria."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The rough endoplasmic reticulum is the organelle most directly responsible. Ribosomes attached to the rough ER translate the mRNA, and the newly made polypeptide enters the rough ER for folding and early modification before being sent onward through the endomembrane system.",
+        "bullet_points": [
+          "Identify the rough ER.",
+          "Bound ribosomes synthesize proteins for export.",
+          "The rough ER helps process the protein before it moves to later organelles."
+        ]
+      },
+      "b": {
+        "answer": "The Golgi apparatus modifies, sorts, and packages proteins into vesicles. Cells that secrete large amounts of protein need extensive Golgi activity so the proteins can be processed correctly and directed to the plasma membrane for release.",
+        "bullet_points": [
+          "Golgi modifies and sorts proteins.",
+          "Golgi packages proteins into vesicles.",
+          "High secretion requires extensive Golgi processing."
+        ]
+      },
+      "c": {
+        "answer": "Enzyme export would decrease greatly or stop because exocytosis requires vesicles to fuse with the plasma membrane. If fusion cannot occur, the enzyme may accumulate inside vesicles or within the endomembrane system instead of being released outside the cell.",
+        "bullet_points": [
+          "Export would decrease or stop.",
+          "Exocytosis requires vesicle-plasma membrane fusion.",
+          "Proteins would accumulate inside the cell rather than being secreted."
+        ]
+      },
+      "d": {
+        "answer": "Secretory cells need large amounts of ATP for protein synthesis, vesicle transport, membrane trafficking, and exocytosis. Mitochondria provide that ATP, so having many mitochondria supports the high energy demand of secretion.",
+        "bullet_points": [
+          "Secretory pathways require ATP.",
+          "Mitochondria produce ATP.",
+          "Many mitochondria support the energy demands of secretion."
+        ]
+      }
+    },
+    "explain": "This question targets how organelles in the endomembrane system work together in protein secretion. Strong responses connect rough ER, Golgi, vesicles, plasma membrane, and mitochondria through structure-function reasoning.",
+    "part_explanations": {
+      "a": "Full credit requires naming the rough ER and linking it to ribosome-based synthesis of exported proteins.",
+      "b": "Responses should state that the Golgi modifies, sorts, and packages proteins for secretion.",
+      "c": "Responses should explicitly connect vesicle fusion failure to reduced exocytosis and intracellular accumulation.",
+      "d": "Responses should justify abundant mitochondria in terms of ATP demand, not just say they make energy."
+    }
+  },
+  {
+    "id": "u2-frq-2",
+    "difficulty": "hard",
+    "topic": "cell structure and function",
+    "text": "A botanist compares palisade mesophyll cells from a leaf with cells from the root cortex of the same plant. The leaf cells contain numerous chloroplasts and one large central vacuole.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe one structural feature of chloroplasts that allows them to perform their function in leaf cells."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why mature leaf cells usually contain many chloroplasts, whereas most root cells do not."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict the effect on the plant cell if the large central vacuole were lost."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "A student claims that lysosomes and vacuoles have the same function because both are membrane-bound sacs. Evaluate the claim."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Chloroplasts contain extensive internal membranes organized into thylakoids. These membranes provide surface area and compartments needed for the light-dependent reactions of photosynthesis.",
+        "bullet_points": [
+          "Chloroplasts contain internal thylakoid membranes.",
+          "The membranes increase surface area.",
+          "Those membranes support photosynthetic reactions."
+        ]
+      },
+      "b": {
+        "answer": "Leaf cells perform photosynthesis and therefore require many chloroplasts to capture light energy. Root cells are usually underground and receive little or no light, so they generally do not need many chloroplasts for their primary function.",
+        "bullet_points": [
+          "Leaf cells photosynthesize and need chloroplasts.",
+          "Roots usually receive little light.",
+          "Root cells therefore generally contain few or no chloroplasts."
+        ]
+      },
+      "c": {
+        "answer": "The cell would lose turgor pressure and become less rigid. In plants, the large central vacuole stores water and solutes, helping maintain internal pressure that supports cell shape and plant structure.",
+        "bullet_points": [
+          "Turgor pressure would decrease.",
+          "The cell would become less rigid or wilt more easily.",
+          "The central vacuole helps store water and maintain pressure."
+        ]
+      },
+      "d": {
+        "answer": "The claim is only partially correct. Both are membrane-bound sacs, but they are not functionally identical. Lysosomes primarily contain hydrolytic enzymes for digestion and recycling, whereas vacuoles often focus on storage and, in plants, maintenance of water balance and turgor pressure.",
+        "bullet_points": [
+          "The claim is only partially correct.",
+          "Both are membrane-bound sacs.",
+          "Lysosomes mainly digest materials, whereas vacuoles mainly store materials and can maintain turgor pressure."
+        ]
+      }
+    },
+    "explain": "This question emphasizes structure-function relationships among chloroplasts, vacuoles, and lysosomes. Students should distinguish related organelles instead of treating all membrane sacs as interchangeable.",
+    "part_explanations": {
+      "a": "Credit requires linking a chloroplast structure, such as thylakoids, to photosynthetic function.",
+      "b": "Responses should compare the functions of leaf and root cells rather than just list organelles.",
+      "c": "Responses should connect the central vacuole to water storage and turgor pressure.",
+      "d": "Responses should recognize the similarity between lysosomes and vacuoles but clearly separate their major functions."
+    }
+  },
+  {
+    "id": "u2-frq-3",
+    "difficulty": "hard",
+    "topic": "cell size",
+    "text": "A scientist models cells as cubes to study the relationship between size and exchange. One model cell has side length 1 mm, and another has side length 4 mm.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "calculate",
+        "prompt": "Calculate the surface area-to-volume ratio of a cube-shaped cell with side length 1 mm."
+      },
+      {
+        "label": "b",
+        "verb": "determine",
+        "prompt": "Determine whether a cube-shaped cell with side length 4 mm would exchange materials with its environment more or less efficiently than the 1 mm cell."
+      },
+      {
+        "label": "c",
+        "verb": "explain",
+        "prompt": "Explain why increasing cell size creates a challenge for maintaining homeostasis."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why cell division can help restore efficient exchange with the environment."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The surface area is 6 mm\u00b2 and the volume is 1 mm\u00b3, so the surface area-to-volume ratio is 6:1.",
+        "bullet_points": [
+          "Surface area = 6 \u00d7 1\u00b2 = 6 mm\u00b2.",
+          "Volume = 1\u00b3 = 1 mm\u00b3.",
+          "SA:V = 6:1."
+        ]
+      },
+      "b": {
+        "answer": "The 4 mm cell would exchange materials less efficiently. As cells get larger, volume increases faster than surface area, so the surface area-to-volume ratio decreases.",
+        "bullet_points": [
+          "The 4 mm cell is less efficient at exchange.",
+          "Larger cells have lower surface area-to-volume ratios.",
+          "Volume increases faster than surface area as size increases."
+        ]
+      },
+      "c": {
+        "answer": "A larger cell has more internal volume that must be supplied with nutrients and cleared of wastes, but relatively less membrane area available for exchange. This makes it harder for diffusion and transport processes to meet the cell\u2019s needs quickly enough.",
+        "bullet_points": [
+          "Larger cells have more internal demand.",
+          "They have relatively less membrane area for exchange.",
+          "Lower SA:V makes transport and homeostasis more difficult."
+        ]
+      },
+      "d": {
+        "answer": "Cell division produces smaller daughter cells with higher surface area-to-volume ratios. The higher ratio improves the rate of exchange relative to the amount of cytoplasm that must be supported.",
+        "bullet_points": [
+          "Division creates smaller cells.",
+          "Smaller cells have higher SA:V ratios.",
+          "Higher SA:V improves exchange and helps maintain homeostasis."
+        ]
+      }
+    },
+    "explain": "This question focuses on how geometry constrains cell function. Students should show both the calculation and the biological consequence of changes in surface area-to-volume ratio.",
+    "part_explanations": {
+      "a": "Credit requires correct calculation of both surface area and volume, followed by the ratio.",
+      "b": "Responses should identify the 4 mm cell as less efficient and tie that to a lower SA:V ratio.",
+      "c": "Responses should connect cell size to exchange demands and homeostasis.",
+      "d": "Responses should explain why producing smaller cells increases exchange efficiency."
+    }
+  },
+  {
+    "id": "u2-frq-4",
+    "difficulty": "hard",
+    "topic": "cell size",
+    "text": "Intestinal epithelial cells contain many microvilli, whereas a hypothetical mutant cell type is much larger and has a smooth outer surface.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify one major problem a very large single cell would face because of its size."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how microvilli help some cells overcome size-related exchange limitations."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how flattening a cell into a thinner shape would affect material exchange."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "A student claims that larger cells are always advantageous because they can contain more organelles. Evaluate the claim."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "A very large single cell would have difficulty exchanging enough materials across its membrane quickly enough to support its volume. Waste removal and nutrient uptake would become less efficient as surface area-to-volume ratio decreases.",
+        "bullet_points": [
+          "A major problem is reduced exchange efficiency.",
+          "Large cells have lower SA:V ratios.",
+          "Nutrient uptake and waste removal become limiting."
+        ]
+      },
+      "b": {
+        "answer": "Microvilli increase membrane surface area without greatly increasing volume. This raises the amount of membrane available for absorption and transport, improving exchange with the environment.",
+        "bullet_points": [
+          "Microvilli increase surface area.",
+          "They add little volume.",
+          "More membrane surface improves absorption and exchange."
+        ]
+      },
+      "c": {
+        "answer": "Flattening the cell would improve exchange because it increases the amount of surface area relative to volume and shortens diffusion distances within the cell.",
+        "bullet_points": [
+          "Flattening improves exchange.",
+          "It increases relative surface area.",
+          "It can also reduce diffusion distance."
+        ]
+      },
+      "d": {
+        "answer": "The claim is incomplete. Larger cells may hold more organelles, but they also face serious exchange and transport limitations. Cells must balance internal capacity with the need to efficiently move materials across the plasma membrane.",
+        "bullet_points": [
+          "The claim is incomplete, not fully correct.",
+          "Larger cells may contain more organelles.",
+          "But lower SA:V creates exchange problems that can outweigh that advantage."
+        ]
+      }
+    },
+    "explain": "This question extends the surface area-to-volume concept to cell adaptations and trade-offs. Strong answers evaluate the claim rather than simply rejecting or accepting it.",
+    "part_explanations": {
+      "a": "Responses should specifically mention reduced exchange efficiency or lowered surface area-to-volume ratio.",
+      "b": "Responses should connect microvilli to added membrane area and improved transport.",
+      "c": "Responses should explain why a thinner shape improves exchange.",
+      "d": "Credit requires recognizing that larger cells have both potential benefits and major limitations."
+    }
+  },
+  {
+    "id": "u2-frq-5",
+    "difficulty": "hard",
+    "topic": "plasma membrane",
+    "text": "Researchers compare the membranes of vertebrate cells grown at different temperatures. They observe that the membranes contain phospholipids, embedded proteins, cholesterol, glycoproteins, and glycolipids.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe the arrangement of phospholipids in the plasma membrane."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how cholesterol helps maintain membrane function when temperature changes."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict the effect on cell recognition if many membrane glycoproteins were removed."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why the plasma membrane is described by the fluid mosaic model rather than as a rigid sheet."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The plasma membrane is a phospholipid bilayer. The hydrophilic phosphate heads face the aqueous exterior and cytosol, while the hydrophobic fatty acid tails face inward toward one another.",
+        "bullet_points": [
+          "The membrane is a phospholipid bilayer.",
+          "Hydrophilic heads face water.",
+          "Hydrophobic tails face inward toward each other."
+        ]
+      },
+      "b": {
+        "answer": "Cholesterol helps stabilize membrane fluidity. At high temperatures it limits excessive movement of phospholipids, and at low temperatures it prevents phospholipids from packing too tightly, helping the membrane remain functional across conditions.",
+        "bullet_points": [
+          "Cholesterol stabilizes membrane fluidity.",
+          "It reduces excessive fluidity at high temperature.",
+          "It prevents tight packing at low temperature."
+        ]
+      },
+      "c": {
+        "answer": "Cell recognition would likely decrease because glycoproteins on the membrane surface often act as identification markers used in cell-cell recognition and signaling interactions.",
+        "bullet_points": [
+          "Cell recognition would decrease.",
+          "Glycoproteins can serve as identification markers.",
+          "Removing them disrupts recognition interactions."
+        ]
+      },
+      "d": {
+        "answer": "The membrane is called a fluid mosaic because multiple components, including phospholipids, proteins, glycoproteins, and cholesterol, are embedded in it and can move laterally within the membrane. It is not rigid because its components are dynamic rather than fixed permanently in place.",
+        "bullet_points": [
+          "The membrane contains many different components.",
+          "Those components form a mosaic.",
+          "Many membrane components can move laterally, so the membrane is fluid rather than rigid."
+        ]
+      }
+    },
+    "explain": "This question targets the components of the plasma membrane and the logic of the fluid mosaic model. Strong responses distinguish membrane structure from membrane function.",
+    "part_explanations": {
+      "a": "Responses should accurately orient hydrophilic heads and hydrophobic tails.",
+      "b": "Credit requires explaining cholesterol\u2019s role at both higher and lower temperatures.",
+      "c": "Responses should link glycoproteins to recognition rather than transport.",
+      "d": "Responses should mention both the variety of membrane components and their lateral movement."
+    }
+  },
+  {
+    "id": "u2-frq-6",
+    "difficulty": "hard",
+    "topic": "plasma membrane",
+    "text": "A mutation alters an integral membrane protein so that many nonpolar amino acids in one region are replaced with charged amino acids.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify where nonpolar amino acid side chains of an integral membrane protein are most likely to be located."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why replacing many of those nonpolar side chains with charged side chains could interfere with proper membrane insertion."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how the mutation could affect the cell\u2019s ability to maintain its internal environment if the protein normally functions as a transporter."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "A student claims that membrane proteins are fixed in place and therefore cannot contribute to membrane fluidity. Evaluate the claim."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The nonpolar side chains are most likely located in the region of the protein that contacts the hydrophobic interior of the phospholipid bilayer.",
+        "bullet_points": [
+          "They are located in the membrane-spanning region.",
+          "That region contacts the hydrophobic fatty acid tails.",
+          "Nonpolar side chains are favored in the membrane interior."
+        ]
+      },
+      "b": {
+        "answer": "Replacing many nonpolar side chains with charged side chains would make the membrane-spanning region less compatible with the hydrophobic bilayer interior. As a result, the protein may not insert or fold correctly in the membrane.",
+        "bullet_points": [
+          "Charged side chains are unfavorable in the hydrophobic bilayer interior.",
+          "The mutation disrupts compatibility with the membrane core.",
+          "Improper folding or insertion can result."
+        ]
+      },
+      "c": {
+        "answer": "Transport across the membrane would likely decrease or fail if the transporter is misinserted or nonfunctional. This would reduce the cell\u2019s ability to regulate solute concentrations and maintain homeostasis.",
+        "bullet_points": [
+          "Transporter function would likely decrease.",
+          "Solute movement across the membrane would be disrupted.",
+          "Homeostasis would be harder to maintain."
+        ]
+      },
+      "d": {
+        "answer": "The claim is incorrect. Although some membrane proteins may be anchored, many can move laterally within the membrane. Their mobility is part of why the membrane is described as fluid rather than completely rigid.",
+        "bullet_points": [
+          "The claim is incorrect.",
+          "Many membrane proteins can move laterally.",
+          "Protein mobility contributes to membrane fluidity."
+        ]
+      }
+    },
+    "explain": "This question links amino acid properties to membrane protein structure and to the fluid mosaic model. Students should reason from chemistry to cell-level consequences.",
+    "part_explanations": {
+      "a": "Responses should place nonpolar side chains in the membrane-spanning region exposed to hydrophobic tails.",
+      "b": "Credit requires connecting charged side chains to poor compatibility with the bilayer interior.",
+      "c": "Responses should connect transporter malfunction to loss of homeostasis.",
+      "d": "Responses should reject the claim and distinguish anchored proteins from laterally mobile ones."
+    }
+  },
+  {
+    "id": "u2-frq-7",
+    "difficulty": "hard",
+    "topic": "membrane permeability",
+    "text": "Scientists construct artificial phospholipid bilayers with no proteins present and test how quickly different molecules cross the membrane.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "determine",
+        "prompt": "Determine which of the following molecules would pass most readily through a phospholipid bilayer without the help of membrane proteins: O2, glucose, or Na+."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why the phospholipid bilayer is selectively permeable rather than equally permeable to all substances."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how the rate of glucose movement across the membrane would change if all transport proteins were removed."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "A student claims that molecular size alone determines whether a substance can pass through the membrane. Evaluate the claim."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "O2 would pass most readily because it is a small nonpolar molecule. Glucose is large and polar, and Na+ is charged, so both cross the hydrophobic membrane interior poorly without transport proteins.",
+        "bullet_points": [
+          "O2 passes most readily.",
+          "Small nonpolar molecules move through the bilayer most easily.",
+          "Glucose and Na+ are hindered because they are polar or charged."
+        ]
+      },
+      "b": {
+        "answer": "The bilayer is selectively permeable because its interior is hydrophobic. Small nonpolar molecules pass through easily, but polar molecules and ions are restricted unless specific membrane proteins assist them.",
+        "bullet_points": [
+          "The membrane has a hydrophobic interior.",
+          "Small nonpolar molecules cross more easily.",
+          "Polar molecules and ions usually require proteins."
+        ]
+      },
+      "c": {
+        "answer": "Glucose movement would decrease greatly because glucose is a relatively large polar molecule that typically depends on transport proteins to cross the membrane efficiently.",
+        "bullet_points": [
+          "Glucose transport would decrease greatly.",
+          "Glucose is large and polar.",
+          "It usually depends on membrane transport proteins."
+        ]
+      },
+      "d": {
+        "answer": "The claim is incomplete. Size matters, but polarity and charge also strongly affect permeability. For example, a small charged ion crosses poorly, while a small nonpolar gas crosses readily.",
+        "bullet_points": [
+          "The claim is incomplete.",
+          "Permeability depends on size, polarity, and charge.",
+          "Small charged ions can still cross poorly."
+        ]
+      }
+    },
+    "explain": "This question tests selective permeability of the phospholipid bilayer. Strong answers compare size with polarity and charge instead of overgeneralizing from one property.",
+    "part_explanations": {
+      "a": "Responses should rank O2 as most permeable and justify using its nonpolar character.",
+      "b": "Credit requires linking selective permeability to the hydrophobic membrane interior.",
+      "c": "Responses should recognize that glucose generally requires transport proteins.",
+      "d": "Responses should evaluate the claim by showing that size is only one factor."
+    }
+  },
+  {
+    "id": "u2-frq-8",
+    "difficulty": "hard",
+    "topic": "membrane permeability",
+    "text": "A biologist compares plant cells and animal cells placed in distilled water. The plant cells remain intact and become turgid, while many animal cells burst.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe one role of the cell wall in maintaining cell structure and function."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why plant cells with intact cell walls are less likely to burst in very hypotonic conditions than animal cells."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what would happen to plant cells if cellulose synthesis were blocked and the cells were then placed in distilled water."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why the plasma membrane is still essential even when a cell wall is present."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The cell wall provides structural support and helps maintain cell shape. It can also protect the cell from osmotic lysis by resisting expansion when water enters the cell.",
+        "bullet_points": [
+          "The cell wall provides structural support.",
+          "It helps maintain cell shape.",
+          "It can protect against osmotic lysis."
+        ]
+      },
+      "b": {
+        "answer": "In hypotonic conditions, water enters cells by osmosis. The rigid cell wall resists excessive swelling, so internal pressure builds as turgor pressure instead of allowing the membrane to keep expanding until it bursts.",
+        "bullet_points": [
+          "Water enters in hypotonic conditions.",
+          "The cell wall resists excessive expansion.",
+          "This reduces the chance of bursting and promotes turgor pressure instead."
+        ]
+      },
+      "c": {
+        "answer": "Without normal cellulose production, the cells would lose wall strength and would be much more likely to swell excessively or lyse in distilled water because they could no longer resist osmotic influx effectively.",
+        "bullet_points": [
+          "Cells would lose wall strength.",
+          "They would swell more in distilled water.",
+          "Risk of lysis would increase."
+        ]
+      },
+      "d": {
+        "answer": "The plasma membrane remains essential because it is selectively permeable and controls what enters and leaves the cell. The cell wall provides support, but it does not replace the membrane\u2019s role in regulating transport and maintaining the internal environment.",
+        "bullet_points": [
+          "The plasma membrane is selectively permeable.",
+          "It regulates transport into and out of the cell.",
+          "The cell wall provides support but does not replace membrane transport control."
+        ]
+      }
+    },
+    "explain": "This question links membrane permeability to the role of the cell wall in resisting osmotic stress. Strong responses distinguish support from selective transport.",
+    "part_explanations": {
+      "a": "Responses should mention structure, protection from lysis, or both.",
+      "b": "Credit requires connecting hypotonic water influx to wall resistance and turgor pressure.",
+      "c": "Responses should predict increased swelling or lysis after cellulose synthesis is blocked.",
+      "d": "Responses should clearly separate the transport role of the plasma membrane from the support role of the wall."
+    }
+  },
+  {
+    "id": "u2-frq-9",
+    "difficulty": "hard",
+    "topic": "membrane transport",
+    "text": "Researchers measure ion concentrations in nerve cells and find that the cells maintain much lower Na+ concentration inside the cell than outside the cell.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe the difference between passive transport and active transport across the plasma membrane."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why ATP production is especially important for maintaining the Na+ gradient in these cells."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what would happen to the intracellular Na+ concentration if ATP production suddenly stopped."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why maintaining ion gradients can be considered part of maintaining homeostasis."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Passive transport moves substances down their concentration gradient without direct energy input, whereas active transport uses energy, often from ATP, to move substances against a gradient or to maintain gradients.",
+        "bullet_points": [
+          "Passive transport moves down a gradient without direct energy input.",
+          "Active transport requires energy.",
+          "Active transport can move substances against gradients or maintain them."
+        ]
+      },
+      "b": {
+        "answer": "The Na+ gradient is maintained by active transport proteins that use ATP to move Na+ in a direction that would not occur by simple diffusion. Without ATP, the pumps cannot continue establishing or maintaining the gradient.",
+        "bullet_points": [
+          "The Na+ gradient depends on active transport.",
+          "Active transport uses ATP.",
+          "Without ATP, the gradient cannot be maintained effectively."
+        ]
+      },
+      "c": {
+        "answer": "Intracellular Na+ concentration would increase because active pumping would stop while passive leakage or diffusion through available pathways would continue reducing the gradient.",
+        "bullet_points": [
+          "Intracellular Na+ would increase.",
+          "ATP-dependent pumping out would stop.",
+          "The gradient would begin to dissipate."
+        ]
+      },
+      "d": {
+        "answer": "Ion gradients help control water balance, membrane potential, and internal solute concentrations. Maintaining those gradients helps keep internal conditions within ranges compatible with cell function, which is a core part of homeostasis.",
+        "bullet_points": [
+          "Ion gradients affect internal conditions.",
+          "They help regulate water balance and membrane properties.",
+          "Maintaining stable internal conditions is homeostasis."
+        ]
+      }
+    },
+    "explain": "This question addresses core differences between passive and active transport and applies them to ion homeostasis. Students should emphasize gradients and ATP rather than memorized definitions alone.",
+    "part_explanations": {
+      "a": "Responses should distinguish the direction of movement and the energy requirement.",
+      "b": "Credit requires linking ATP to active transport, not just saying ATP gives energy.",
+      "c": "Responses should predict increased intracellular Na+ and explain gradient dissipation.",
+      "d": "Responses should connect ion gradients to stable internal conditions."
+    }
+  },
+  {
+    "id": "u2-frq-10",
+    "difficulty": "hard",
+    "topic": "membrane transport",
+    "text": "An immune cell engulfs bacteria from its environment and later releases signaling proteins called cytokines into nearby tissue.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify which process is used when the cell engulfs the bacteria and which process is used when the cell releases cytokines."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why both of these processes require energy."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict the effect of a mutation that prevents vesicle formation from the plasma membrane."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "A student claims that large macromolecules can usually cross the membrane by simple diffusion if enough time passes. Evaluate the claim."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Engulfing the bacteria is endocytosis, specifically phagocytosis, and releasing cytokines is exocytosis.",
+        "bullet_points": [
+          "Engulfing bacteria is endocytosis.",
+          "More specifically, it is phagocytosis.",
+          "Releasing cytokines is exocytosis."
+        ]
+      },
+      "b": {
+        "answer": "Both processes require energy because the membrane must change shape, vesicles must form or fuse, and the cell must move large materials in bulk rather than allowing them to diffuse directly across the bilayer.",
+        "bullet_points": [
+          "Membrane remodeling requires energy.",
+          "Vesicle formation and fusion require energy.",
+          "Large materials are moved in bulk, not by simple diffusion."
+        ]
+      },
+      "c": {
+        "answer": "The cell would have trouble taking in bacteria because phagocytosis depends on membrane invagination and vesicle formation. As a result, bacterial uptake would decrease greatly or stop.",
+        "bullet_points": [
+          "Bacterial uptake would decrease or stop.",
+          "Phagocytosis requires vesicle formation.",
+          "Without vesicles, the cell cannot engulf the bacteria effectively."
+        ]
+      },
+      "d": {
+        "answer": "The claim is incorrect. Large macromolecules generally cannot cross the hydrophobic membrane core by simple diffusion, even over long periods. They typically require endocytosis, exocytosis, or specific transport mechanisms.",
+        "bullet_points": [
+          "The claim is incorrect.",
+          "Large macromolecules do not cross the bilayer well by simple diffusion.",
+          "They usually require vesicle-based transport or specialized proteins."
+        ]
+      }
+    },
+    "explain": "This question focuses on vesicle-based transport processes. Strong responses distinguish bulk membrane transport from movement through the phospholipid bilayer.",
+    "part_explanations": {
+      "a": "Responses should correctly pair engulfing with endocytosis and release with exocytosis.",
+      "b": "Credit requires explaining why membrane and vesicle dynamics need energy.",
+      "c": "Responses should predict loss of phagocytosis if vesicles cannot form.",
+      "d": "Responses should reject the claim and note that large molecules require specialized transport pathways."
+    }
+  },
+  {
+    "id": "u2-frq-11",
+    "difficulty": "hard",
+    "topic": "facilitated diffusion",
+    "text": "Muscle cells take up glucose from the surrounding fluid through membrane transport proteins when extracellular glucose concentration is higher than intracellular glucose concentration.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe facilitated diffusion."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why glucose often requires a membrane protein to cross the plasma membrane efficiently."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how the rate of glucose entry would change if the number of transport proteins in the membrane decreased."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why facilitated diffusion does not require direct ATP input even though a membrane protein is involved."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Facilitated diffusion is the movement of a substance down its concentration gradient through a membrane protein, such as a channel or carrier, without direct energy input from ATP.",
+        "bullet_points": [
+          "The substance moves down its gradient.",
+          "A membrane protein assists the movement.",
+          "No direct ATP input is required."
+        ]
+      },
+      "b": {
+        "answer": "Glucose is a relatively large polar molecule, so it does not pass efficiently through the hydrophobic interior of the phospholipid bilayer. Transport proteins provide a pathway that allows glucose to move across the membrane more readily.",
+        "bullet_points": [
+          "Glucose is large and polar.",
+          "The bilayer interior is hydrophobic.",
+          "Transport proteins help glucose cross efficiently."
+        ]
+      },
+      "c": {
+        "answer": "The rate of glucose entry would decrease because fewer transport proteins would be available to facilitate movement of glucose across the membrane.",
+        "bullet_points": [
+          "The rate would decrease.",
+          "Fewer transport proteins would be available.",
+          "Less facilitated movement would occur."
+        ]
+      },
+      "d": {
+        "answer": "Facilitated diffusion does not require direct ATP because the driving force is the concentration gradient itself. The protein provides a route for movement, but it does not use ATP to push the substance against its gradient.",
+        "bullet_points": [
+          "No ATP is needed because the gradient provides the driving force.",
+          "The protein serves as a pathway, not an ATP-powered pump.",
+          "The substance still moves from higher to lower concentration."
+        ]
+      }
+    },
+    "explain": "This question targets the definition and logic of facilitated diffusion. Students should separate the need for a protein from the need for metabolic energy.",
+    "part_explanations": {
+      "a": "Responses should include both the gradient direction and the role of a membrane protein.",
+      "b": "Credit requires explaining why glucose is poorly suited to direct passage through the bilayer.",
+      "c": "Responses should predict reduced rate because transport proteins become limiting.",
+      "d": "Responses should link the lack of ATP requirement to movement down a gradient."
+    }
+  },
+  {
+    "id": "u2-frq-12",
+    "difficulty": "hard",
+    "topic": "facilitated diffusion",
+    "text": "A neuron contains membrane proteins that allow K+ to move across the plasma membrane, and a nearby epithelial cell uses aquaporins to move water rapidly.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the type of membrane protein most directly required for rapid movement of K+ across the membrane when K+ is moving down its electrochemical gradient."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why ions such as K+ cannot pass easily through the phospholipid bilayer without such proteins."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what would happen to water movement across the membrane if aquaporins were blocked."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "A student claims that channel proteins involved in facilitated diffusion move ions against their concentration gradient. Evaluate the claim."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "A channel protein is most directly required because channel proteins allow ions such as K+ to cross the membrane down their electrochemical gradients.",
+        "bullet_points": [
+          "Identify a channel protein.",
+          "Channels allow ions to cross the membrane.",
+          "The ions move down an electrochemical gradient."
+        ]
+      },
+      "b": {
+        "answer": "K+ is charged, and the hydrophobic interior of the phospholipid bilayer is unfavorable for charged particles. Channel proteins provide a hydrophilic pathway through the membrane.",
+        "bullet_points": [
+          "K+ is charged.",
+          "The bilayer interior is hydrophobic.",
+          "Channel proteins provide a hydrophilic route across the membrane."
+        ]
+      },
+      "c": {
+        "answer": "Water movement would become slower if aquaporins were blocked because aquaporins greatly increase the rate at which water crosses many membranes.",
+        "bullet_points": [
+          "Water would still move, but more slowly.",
+          "Aquaporins increase the rate of water transport.",
+          "Blocking them reduces rapid water movement."
+        ]
+      },
+      "d": {
+        "answer": "The claim is incorrect. Channel proteins used in facilitated diffusion allow ions to move down, not against, their electrochemical gradients. Moving ions against a gradient requires active transport.",
+        "bullet_points": [
+          "The claim is incorrect.",
+          "Facilitated diffusion moves down a gradient.",
+          "Against-gradient movement requires active transport."
+        ]
+      }
+    },
+    "explain": "This question emphasizes the role of channels and aquaporins in facilitated diffusion. Strong answers distinguish electrochemical-gradient movement from active pumping.",
+    "part_explanations": {
+      "a": "Responses should identify a channel protein, not an ATP-driven pump.",
+      "b": "Credit requires connecting ion charge to the hydrophobic nature of the bilayer interior.",
+      "c": "Responses should predict slower water transport when aquaporins are blocked.",
+      "d": "Responses should reject the claim and distinguish facilitated diffusion from active transport."
+    }
+  },
+  {
+    "id": "u2-frq-13",
+    "difficulty": "hard",
+    "topic": "tonicity and osmoregulation",
+    "text": "A student places red blood cells into three salt solutions: 0.2% NaCl, 0.9% NaCl, and 2.0% NaCl.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "predict",
+        "prompt": "Predict what will happen to the volume of the red blood cells in the 0.2% NaCl solution and in the 2.0% NaCl solution."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain your predictions in terms of tonicity and osmosis."
+      },
+      {
+        "label": "c",
+        "verb": "determine",
+        "prompt": "Determine which solution is closest to isotonic for the cells and justify your answer."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why animal cells are especially vulnerable to extreme changes in tonicity."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "In 0.2% NaCl, the red blood cells would swell and may lyse. In 2.0% NaCl, the cells would lose water and shrink.",
+        "bullet_points": [
+          "Cells swell in 0.2% NaCl.",
+          "Cells shrink in 2.0% NaCl.",
+          "Extreme swelling can lead to lysis."
+        ]
+      },
+      "b": {
+        "answer": "The 0.2% NaCl solution is hypotonic relative to the cells, so water enters by osmosis. The 2.0% NaCl solution is hypertonic, so water leaves the cells by osmosis.",
+        "bullet_points": [
+          "0.2% NaCl is hypotonic, so water enters.",
+          "2.0% NaCl is hypertonic, so water leaves.",
+          "Water moves by osmosis down its water potential gradient."
+        ]
+      },
+      "c": {
+        "answer": "The 0.9% NaCl solution is closest to isotonic because it produces little net water movement and therefore little change in cell volume.",
+        "bullet_points": [
+          "0.9% NaCl is closest to isotonic.",
+          "Isotonic solutions cause little net water movement.",
+          "Cell volume remains relatively stable."
+        ]
+      },
+      "d": {
+        "answer": "Animal cells lack rigid cell walls, so they cannot resist extreme swelling in hypotonic conditions or maintain shape as effectively in hypertonic conditions. Their plasma membranes alone cannot provide the same structural protection as a wall.",
+        "bullet_points": [
+          "Animal cells lack cell walls.",
+          "They are more likely to burst in hypotonic solutions.",
+          "They also change shape readily in hypertonic solutions."
+        ]
+      }
+    },
+    "explain": "This question tests tonicity and osmosis using a classic animal-cell scenario. Strong responses explicitly label solutions as hypotonic, hypertonic, or isotonic.",
+    "part_explanations": {
+      "a": "Responses should correctly predict swelling in hypotonic solution and shrinking in hypertonic solution.",
+      "b": "Credit requires using tonicity vocabulary and explaining water movement by osmosis.",
+      "c": "Responses should identify the isotonic condition as the one with minimal net water movement.",
+      "d": "Responses should connect animal-cell vulnerability to the absence of a cell wall."
+    }
+  },
+  {
+    "id": "u2-frq-14",
+    "difficulty": "hard",
+    "topic": "tonicity and osmoregulation",
+    "text": "A freshwater protist lives in ponds where the surrounding water has a much lower solute concentration than the protist\u2019s cytoplasm. The protist contains a contractile vacuole.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe the function of a contractile vacuole in a freshwater protist."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why a contractile vacuole is especially important in freshwater rather than in seawater."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what would happen to the protist if its contractile vacuole stopped functioning in freshwater."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify how osmoregulatory mechanisms contribute to the survival of organisms."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "A contractile vacuole collects excess water that enters the cell and periodically expels it, helping the protist maintain water balance.",
+        "bullet_points": [
+          "It collects excess water.",
+          "It expels water from the cell.",
+          "It helps maintain water balance."
+        ]
+      },
+      "b": {
+        "answer": "Freshwater is hypotonic relative to the protist\u2019s cytoplasm, so water continuously enters the cell by osmosis. The contractile vacuole is needed to remove that excess water. In seawater, the inward osmotic pressure is much lower or may reverse.",
+        "bullet_points": [
+          "Freshwater is hypotonic to the cell.",
+          "Water tends to enter continuously by osmosis.",
+          "The contractile vacuole removes the excess water."
+        ]
+      },
+      "c": {
+        "answer": "The protist would take in water, swell, and could burst if the contractile vacuole stopped working in freshwater.",
+        "bullet_points": [
+          "Water would continue entering.",
+          "The cell would swell.",
+          "The cell could lyse."
+        ]
+      },
+      "d": {
+        "answer": "Osmoregulatory mechanisms help organisms maintain appropriate internal water and solute balance despite external changes. This preserves cell volume, prevents osmotic damage, and keeps cellular processes functioning.",
+        "bullet_points": [
+          "Osmoregulation maintains internal water and solute balance.",
+          "It prevents osmotic damage such as swelling or dehydration.",
+          "Stable internal conditions support survival and normal cell function."
+        ]
+      }
+    },
+    "explain": "This question applies osmoregulation to an organismal adaptation. Students should reason from environmental conditions to the need for a specific cellular mechanism.",
+    "part_explanations": {
+      "a": "Responses should identify water removal as the central role of the contractile vacuole.",
+      "b": "Credit requires comparing freshwater to seawater in terms of osmotic conditions.",
+      "c": "Responses should predict swelling and possible lysis if the vacuole fails in freshwater.",
+      "d": "Responses should frame osmoregulation as a survival mechanism that maintains homeostasis."
+    }
+  },
+  {
+    "id": "u2-frq-15",
+    "difficulty": "hard",
+    "topic": "mechanisms of transport",
+    "text": "Scientists expose a neuron to a toxin that specifically inhibits the Na+/K+ pump in the plasma membrane.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe how the Na+/K+ pump uses energy to move ions across the membrane."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how the activity of the pump contributes to the membrane potential of the cell."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what would happen to the ion gradients and membrane potential if the pump were inhibited by a toxin."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why membrane proteins are necessary for this type of transport."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The Na+/K+ pump uses energy from ATP to actively transport Na+ and K+ across the membrane against their gradients. ATP hydrolysis changes the shape of the protein, allowing ion movement that would not occur by passive diffusion.",
+        "bullet_points": [
+          "The pump uses ATP.",
+          "It moves ions against their gradients.",
+          "ATP-driven shape changes in the protein enable transport."
+        ]
+      },
+      "b": {
+        "answer": "By actively moving ions across the membrane, the pump helps establish and maintain unequal ion distributions on the two sides of the membrane. These unequal distributions contribute to the electrical difference known as membrane potential.",
+        "bullet_points": [
+          "The pump creates unequal ion distributions.",
+          "Unequal ion distributions contribute to membrane potential.",
+          "Maintaining those gradients helps preserve the cell\u2019s electrical state."
+        ]
+      },
+      "c": {
+        "answer": "If the pump were inhibited, the Na+ and K+ gradients would gradually diminish, and the membrane potential would become harder to maintain because active transport would no longer oppose passive ion movement.",
+        "bullet_points": [
+          "Ion gradients would dissipate over time.",
+          "Active maintenance would stop.",
+          "Membrane potential would decline or become harder to maintain."
+        ]
+      },
+      "d": {
+        "answer": "Membrane proteins are necessary because ions cannot move efficiently through the hydrophobic lipid bilayer on their own, especially when transport must occur against gradients. The protein provides both specificity and an ATP-coupled transport mechanism.",
+        "bullet_points": [
+          "Ions cannot cross the hydrophobic bilayer efficiently on their own.",
+          "Transport against gradients requires a protein mechanism.",
+          "The membrane protein provides specificity and ATP coupling."
+        ]
+      }
+    },
+    "explain": "This question focuses on ATP-driven ion transport and membrane potential. Strong answers tie active transport to electrochemical consequences rather than treating the pump as an isolated fact.",
+    "part_explanations": {
+      "a": "Responses should mention ATP use and against-gradient ion movement.",
+      "b": "Credit requires connecting unequal ion distribution to membrane potential.",
+      "c": "Responses should predict loss of gradients and disruption of membrane potential.",
+      "d": "Responses should justify the need for membrane proteins by referring to the hydrophobic bilayer and ion specificity."
+    }
+  },
+  {
+    "id": "u2-frq-16",
+    "difficulty": "hard",
+    "topic": "mechanisms of transport",
+    "text": "A plant cell uses an ATPase embedded in the tonoplast membrane to pump ions into the central vacuole.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the type of transport used by an ATPase that pumps ions into the vacuole against their gradient."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why ATP hydrolysis is required for this transport process."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how ion accumulation in the vacuole would change if cellular ATP levels dropped sharply."
+      },
+      {
+        "label": "d",
+        "verb": "support a claim",
+        "prompt": "Support the claim that active transport is important for maintaining distinct internal environments in different parts of a cell."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The ATPase is using active transport because it moves ions against their gradient with direct input of metabolic energy.",
+        "bullet_points": [
+          "Identify active transport.",
+          "Ions are moving against a gradient.",
+          "The process uses ATP directly."
+        ]
+      },
+      "b": {
+        "answer": "ATP hydrolysis is required because moving ions against their gradient is energetically unfavorable. Energy from ATP changes the conformation of the ATPase so it can transport ions into the vacuole.",
+        "bullet_points": [
+          "Against-gradient movement is energetically unfavorable.",
+          "ATP provides the needed energy.",
+          "ATP-driven conformational change allows pumping."
+        ]
+      },
+      "c": {
+        "answer": "Ion accumulation in the vacuole would decrease if ATP levels dropped sharply because the ATPase would no longer have enough energy to maintain the uphill transport process.",
+        "bullet_points": [
+          "Ion accumulation would decrease.",
+          "The ATPase would function less effectively.",
+          "The uphill gradient would be harder to maintain."
+        ]
+      },
+      "d": {
+        "answer": "Active transport allows cells to create different concentrations of ions and solutes in different compartments, such as the cytosol and vacuole. These distinct environments are necessary for specialized functions and help the cell regulate its internal conditions.",
+        "bullet_points": [
+          "Active transport creates different solute concentrations in different compartments.",
+          "Distinct internal environments support specialized functions.",
+          "This helps maintain internal organization and homeostasis."
+        ]
+      }
+    },
+    "explain": "This question extends active transport to intracellular membranes and compartment-specific conditions. Students should connect ATP use to the maintenance of distinct cellular environments.",
+    "part_explanations": {
+      "a": "Responses should identify ATPase-mediated ion pumping as active transport.",
+      "b": "Credit requires explaining why uphill transport needs ATP.",
+      "c": "Responses should predict reduced ion accumulation when ATP becomes limiting.",
+      "d": "Responses should use the idea of different internal compartments with different solute conditions."
+    }
+  },
+  {
+    "id": "u2-frq-17",
+    "difficulty": "hard",
+    "topic": "cell compartmentalization",
+    "text": "A eukaryotic cell contains mitochondria, endoplasmic reticulum, Golgi apparatus, lysosomes, and a nucleus. A researcher proposes that these internal membranes improve cellular efficiency.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe how membrane-bound organelles contribute to compartmentalization in eukaryotic cells."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how internal membranes can increase the efficiency of cellular processes."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what would happen to metabolic efficiency if the enzymes from many organelles were released into the cytosol and no longer compartmentalized."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why separating incompatible reactions into different compartments is beneficial to the cell."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Membrane-bound organelles partition the eukaryotic cell into distinct regions where particular reactions and functions occur. This allows different processes to occur under different internal conditions within the same cell.",
+        "bullet_points": [
+          "Organelles create separate internal regions.",
+          "Different processes occur in different compartments.",
+          "Different compartments can maintain different internal conditions."
+        ]
+      },
+      "b": {
+        "answer": "Internal membranes increase efficiency by increasing surface area for membrane-associated reactions and by concentrating enzymes and substrates in specific places. This reduces interference among pathways and makes reactions more organized.",
+        "bullet_points": [
+          "Internal membranes increase surface area.",
+          "They localize enzymes and substrates.",
+          "This reduces interference and improves reaction efficiency."
+        ]
+      },
+      "c": {
+        "answer": "Metabolic efficiency would likely decrease because reactions that normally occur in specialized compartments would interfere with one another, and optimal local conditions for specific enzymes would be lost.",
+        "bullet_points": [
+          "Efficiency would decrease.",
+          "Specialized local conditions would be lost.",
+          "Competing or incompatible reactions would interfere more."
+        ]
+      },
+      "d": {
+        "answer": "Separating incompatible reactions prevents one pathway from disrupting another and allows each set of enzymes to function in the conditions best suited to it. This helps the cell coordinate complex metabolism.",
+        "bullet_points": [
+          "Compartmentalization prevents incompatible reactions from interfering.",
+          "It allows optimized local conditions for enzymes.",
+          "It supports coordinated complex metabolism."
+        ]
+      }
+    },
+    "explain": "This question targets the core logic of compartmentalization. Strong responses move beyond naming organelles and explain why spatial separation improves cell function.",
+    "part_explanations": {
+      "a": "Responses should define compartmentalization in terms of distinct internal regions and specialized functions.",
+      "b": "Credit requires mentioning increased surface area, localized enzymes, or reduced competition among pathways.",
+      "c": "Responses should predict reduced efficiency if compartment boundaries are lost.",
+      "d": "Responses should justify the benefit of separating incompatible or competing reactions."
+    }
+  },
+  {
+    "id": "u2-frq-18",
+    "difficulty": "hard",
+    "topic": "cell compartmentalization",
+    "text": "A chloroplast contains extensive internal membranes that organize the reactions of photosynthesis. A mutation causes those internal membranes to become much less organized.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the membrane system in chloroplasts that increases the area available for the light-dependent reactions of photosynthesis."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how extensive folding of internal membranes can contribute to increased reaction rates in organelles."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict the effect on photosynthetic output if the internal membrane organization of the chloroplast were greatly reduced."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "A student claims that compartmentalization is unnecessary in cells because enzymes can function just as well if mixed together in one space. Evaluate the claim."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The thylakoid membrane system increases the area available for the light-dependent reactions.",
+        "bullet_points": [
+          "Identify the thylakoid membranes.",
+          "They are internal chloroplast membranes.",
+          "They provide area for light-dependent reactions."
+        ]
+      },
+      "b": {
+        "answer": "Extensive membrane folding increases the surface area available for reactions and for proteins involved in those reactions. More surface area allows more reaction sites and can increase the overall rate of the process.",
+        "bullet_points": [
+          "Folding increases surface area.",
+          "More surface area provides more reaction sites.",
+          "This can increase overall reaction rate."
+        ]
+      },
+      "c": {
+        "answer": "Photosynthetic output would decrease because less internal membrane area would be available to support the light-dependent reactions and the organization of photosynthetic components would be disrupted.",
+        "bullet_points": [
+          "Photosynthetic output would decrease.",
+          "Less membrane area would be available.",
+          "Organization of photosynthetic components would be disrupted."
+        ]
+      },
+      "d": {
+        "answer": "The claim is incorrect. Mixing all enzymes in one space would reduce the cell\u2019s ability to maintain optimal conditions for different pathways and would increase interference among reactions. Compartmentalization improves efficiency and regulation.",
+        "bullet_points": [
+          "The claim is incorrect.",
+          "Different pathways often require different local conditions.",
+          "Compartmentalization improves efficiency and reduces interference."
+        ]
+      }
+    },
+    "explain": "This question applies compartmentalization to chloroplast function and reaction efficiency. Students should link internal membranes to both surface area and organization.",
+    "part_explanations": {
+      "a": "Responses should identify thylakoid membranes specifically, not just the chloroplast.",
+      "b": "Credit requires linking membrane folding to increased surface area and reaction sites.",
+      "c": "Responses should predict reduced photosynthetic performance if internal membrane organization declines.",
+      "d": "Responses should reject the claim and emphasize the functional value of compartmentalization."
+    }
+  },
+  {
+    "id": "u2-frq-19",
+    "difficulty": "hard",
+    "topic": "origins of cell compartmentalization",
+    "text": "A researcher examining mitochondria finds that they have circular DNA, ribosomes, and a double membrane. The researcher proposes that mitochondria originated by endosymbiosis.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe two observations about mitochondria that support the endosymbiotic theory."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how those observations support the claim that mitochondria evolved from once free-living prokaryotes."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict one mitochondrial feature that would be less likely to exist if mitochondria had originated only as folds of the host cell\u2019s internal membrane system."
+      },
+      {
+        "label": "d",
+        "verb": "support a claim",
+        "prompt": "Support the claim that endosymbiosis contributed to the evolution of compartmentalization in eukaryotic cells."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Two supporting observations are that mitochondria contain their own circular DNA and have ribosomes that resemble those of prokaryotes. Mitochondria also divide independently by a process similar to binary fission and have a double membrane.",
+        "bullet_points": [
+          "Acceptable evidence includes circular DNA.",
+          "Acceptable evidence includes prokaryote-like ribosomes or binary fission.",
+          "A double membrane is also supporting evidence."
+        ]
+      },
+      "b": {
+        "answer": "These features resemble characteristics of bacteria more than those of the eukaryotic nucleus or endomembrane system. The similarities suggest that mitochondria descended from formerly independent prokaryotic cells that became incorporated into an ancestral host cell.",
+        "bullet_points": [
+          "The features are bacteria-like.",
+          "They differ from what would be expected of a simple membrane fold.",
+          "This supports origin from an engulfed prokaryote."
+        ]
+      },
+      "c": {
+        "answer": "Independent circular DNA would be less likely if mitochondria had originated only as folds of the host cell membrane, because simple membrane folds would not be expected to retain their own genome separate from the nucleus.",
+        "bullet_points": [
+          "Independent circular DNA would be less likely.",
+          "Simple host membrane folds would not be expected to have their own genome.",
+          "A separate genome supports endosymbiotic origin."
+        ]
+      },
+      "d": {
+        "answer": "Endosymbiosis added specialized internal structures, such as mitochondria, to ancestral eukaryotic cells. These new compartments allowed distinct processes to occur in dedicated locations, increasing functional specialization and contributing to eukaryotic compartmentalization.",
+        "bullet_points": [
+          "Endosymbiosis produced specialized internal compartments.",
+          "Those compartments supported distinct cellular processes.",
+          "This increased functional specialization within eukaryotic cells."
+        ]
+      }
+    },
+    "explain": "This question centers on the evidence and reasoning behind endosymbiosis. Strong answers should use observed mitochondrial traits as evidence for evolutionary origin, not just restate the theory.",
+    "part_explanations": {
+      "a": "Responses should provide two valid pieces of evidence such as circular DNA, prokaryote-like ribosomes, binary fission, or double membranes.",
+      "b": "Credit requires explaining how the evidence supports origin from engulfed prokaryotes.",
+      "c": "Responses should predict the absence or reduced likelihood of a bacteria-like feature if mitochondria were merely membrane folds.",
+      "d": "Responses should connect endosymbiosis to the evolution of internal specialization and compartmentalization."
+    }
+  },
+  {
+    "id": "u2-frq-20",
+    "difficulty": "hard",
+    "topic": "origins of cell compartmentalization",
+    "text": "A biology class compares prokaryotic cells with eukaryotic cells while discussing how compartmentalization evolved.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe one major difference and one major similarity between prokaryotic and eukaryotic cells in terms of compartmentalization."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how internal membrane-bound organelles benefit eukaryotic cells."
+      },
+      {
+        "label": "c",
+        "verb": "support a claim",
+        "prompt": "Support the claim that prokaryotic cells can still carry out specialized functions even though they usually lack membrane-bound organelles."
+      },
+      {
+        "label": "d",
+        "verb": "predict",
+        "prompt": "Predict one consequence for a eukaryotic cell if its internal membranes could no longer partition the cell into specialized regions."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "A major difference is that eukaryotic cells contain membrane-bound organelles that create specialized internal compartments, whereas prokaryotic cells usually lack these membrane-bound organelles. A similarity is that both types of cells still organize cellular functions and contain specialized structures, such as ribosomes and distinct membrane regions.",
+        "bullet_points": [
+          "Difference: eukaryotes have membrane-bound organelles, prokaryotes usually do not.",
+          "Similarity: both organize cellular functions and contain specialized structures.",
+          "Both cell types are structured rather than random mixtures."
+        ]
+      },
+      "b": {
+        "answer": "Internal membrane-bound organelles allow eukaryotic cells to separate processes into specialized regions, maintain distinct local conditions, and increase efficiency by reducing interference among pathways and increasing reaction surface area.",
+        "bullet_points": [
+          "Organelles separate processes into specialized regions.",
+          "They maintain distinct local conditions.",
+          "They improve efficiency and reduce interference."
+        ]
+      },
+      "c": {
+        "answer": "Prokaryotic cells can still carry out specialized functions because they have organized internal regions, proteins, and membrane surfaces that localize processes even without classic membrane-bound organelles. Their lack of organelles does not mean their interior is functionally unorganized.",
+        "bullet_points": [
+          "Prokaryotes still have organized internal regions and specialized structures.",
+          "Functions can be localized without membrane-bound organelles.",
+          "Lack of organelles does not mean lack of functional organization."
+        ]
+      },
+      "d": {
+        "answer": "The cell would likely become less efficient because incompatible reactions would interfere more often, local conditions for specific pathways would be harder to maintain, and the organization of major processes would be disrupted.",
+        "bullet_points": [
+          "Cell efficiency would decrease.",
+          "Interference among pathways would increase.",
+          "Specialized local conditions and organization would be lost."
+        ]
+      }
+    },
+    "explain": "This question compares prokaryotic and eukaryotic organization while avoiding the false idea that prokaryotes are unstructured. Strong answers emphasize differences without oversimplifying prokaryotic cells.",
+    "part_explanations": {
+      "a": "Responses should include both a valid difference and a valid similarity.",
+      "b": "Credit requires explaining the functional benefit of membrane-bound organelles.",
+      "c": "Responses should support the claim using the idea of organized regions or specialized structures in prokaryotes.",
+      "d": "Responses should predict decreased efficiency and loss of specialization if internal partitioning disappeared."
+    }
+  }
+]

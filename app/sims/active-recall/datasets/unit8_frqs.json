@@ -1,0 +1,968 @@
+[
+  {
+    "id": "u8-frq-1",
+    "difficulty": "hard",
+    "topic": "responses to the environment",
+    "text": "Desert rodents are mostly nocturnal, whereas closely related rodents in cooler habitats are active during the day.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe how the desert rodents' behavior relates to environmental conditions."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how this behavioral response can help maintain homeostasis."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what could happen to water balance if the desert rodents became active during the hottest part of the day."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why behavioral responses can affect fitness."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The nocturnal behavior is a response to the hot, dry environment because activity at night reduces exposure to daytime heat.",
+        "bullet_points": [
+          "Behavior changes with environmental conditions.",
+          "Night activity reduces daytime heat exposure.",
+          "The response is linked to habitat conditions."
+        ]
+      },
+      "b": {
+        "answer": "Being active at cooler times can reduce overheating and water loss, helping the rodents maintain internal temperature and hydration more effectively.",
+        "bullet_points": [
+          "The behavior reduces heat stress.",
+          "It helps conserve water.",
+          "Homeostasis is better maintained."
+        ]
+      },
+      "c": {
+        "answer": "Water loss would likely increase because higher daytime temperatures promote evaporation and raise the risk of overheating.",
+        "bullet_points": [
+          "Water loss would rise.",
+          "Heat stress would increase.",
+          "Homeostasis would be harder to maintain."
+        ]
+      },
+      "d": {
+        "answer": "Behavioral responses can improve survival and reproduction by helping organisms avoid stress, find resources, and interact successfully with their environment.",
+        "bullet_points": [
+          "Behavior influences survival and reproduction.",
+          "Adaptive behaviors improve environmental matching.",
+          "That affects fitness."
+        ]
+      }
+    },
+    "explain": "Ecological responses begin at the organism level: behavior and physiology help individuals maintain stability in changing environments.",
+    "part_explanations": {
+      "a": "Responses should connect behavior to environmental conditions.",
+      "b": "Responses should mention heat loss or water conservation.",
+      "c": "Responses should predict poorer water balance in daytime heat.",
+      "d": "Responses should tie behavior to survival or reproduction."
+    }
+  },
+  {
+    "id": "u8-frq-2",
+    "difficulty": "hard",
+    "topic": "responses to the environment",
+    "text": "When a leaf is attacked by herbivores, the plant releases chemicals that can induce defensive responses in nearby tissues or neighboring plants.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe how this scenario illustrates a response to the environment."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why a chemical signaling response can increase plant success."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what could happen if the attacked plant were unable to produce the signaling chemical."
+      },
+      {
+        "label": "d",
+        "verb": "support a claim",
+        "prompt": "Support the claim that organisms without nervous systems can still respond effectively to environmental change."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Herbivore damage is an external environmental stimulus, and release of defensive chemicals is the organism's response to that stimulus.",
+        "bullet_points": [
+          "An external change triggers a response.",
+          "Herbivory is the stimulus.",
+          "Chemical release is the response."
+        ]
+      },
+      "b": {
+        "answer": "Chemical signaling can activate defenses before damage spreads, reducing tissue loss and increasing the plant's ability to survive and reproduce.",
+        "bullet_points": [
+          "Signals can induce defense early.",
+          "Less tissue may be lost to herbivores.",
+          "That can improve survival and reproduction."
+        ]
+      },
+      "c": {
+        "answer": "Defensive responses in the plant or nearby plants would likely be reduced, making them more vulnerable to herbivore damage.",
+        "bullet_points": [
+          "Defense activation would decrease.",
+          "Plants would be more vulnerable to herbivory.",
+          "Damage could increase."
+        ]
+      },
+      "d": {
+        "answer": "The plant example shows that receptor-based and chemical responses can detect and respond to environmental change without a nervous system.",
+        "bullet_points": [
+          "Use the plant example as evidence.",
+          "Nervous systems are not required for environmental response.",
+          "Chemical signaling can be effective."
+        ]
+      }
+    },
+    "explain": "Responses to the environment are widespread across life and do not depend on a nervous system.",
+    "part_explanations": {
+      "a": "Responses should identify stimulus and response clearly.",
+      "b": "Responses should connect chemical signaling to increased defense.",
+      "c": "Responses should predict increased vulnerability without the signal.",
+      "d": "Responses should use the example to support non-neural responsiveness."
+    }
+  },
+  {
+    "id": "u8-frq-3",
+    "difficulty": "hard",
+    "topic": "energy flow through ecosystems",
+    "text": "In a grassland ecosystem, only a small fraction of the energy captured by producers becomes biomass in hawks at the top trophic level.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe why energy decreases from one trophic level to the next."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why top predators usually have much less total biomass than producers."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what would happen to the energy available to hawks if producer biomass declined sharply."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why matter can cycle in ecosystems even though energy does not cycle in the same way."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "At each trophic transfer, organisms use much of the energy they obtain for metabolism, movement, and maintenance, and much is lost as heat, so only a smaller fraction becomes biomass at the next level.",
+        "bullet_points": [
+          "Energy is used for metabolism at each level.",
+          "Much is lost as heat.",
+          "Only a fraction becomes biomass for the next trophic level."
+        ]
+      },
+      "b": {
+        "answer": "Because energy transfer is inefficient, much less energy is available to support biomass at higher trophic levels, so top predators usually have lower total biomass.",
+        "bullet_points": [
+          "Energy availability declines up the food chain.",
+          "Less energy supports less biomass at higher levels.",
+          "Top predators therefore have low biomass."
+        ]
+      },
+      "c": {
+        "answer": "The energy available to hawks would decrease because less producer biomass means less energy enters the food web and less can be transferred upward through consumers.",
+        "bullet_points": [
+          "Less producer biomass means less energy enters the system.",
+          "Energy available to higher trophic levels falls.",
+          "Hawks ultimately receive less energy."
+        ]
+      },
+      "d": {
+        "answer": "Matter such as carbon and nitrogen is reused and transformed among organisms and the environment, whereas energy enters mostly as sunlight and leaves ecosystems as heat after transfer.",
+        "bullet_points": [
+          "Matter is recycled between biotic and abiotic components.",
+          "Energy flows in and then dissipates as heat.",
+          "Therefore matter cycles but energy flows."
+        ]
+      }
+    },
+    "explain": "Energy flow and matter cycling follow different rules, and that difference explains trophic structure in ecosystems.",
+    "part_explanations": {
+      "a": "Responses should mention metabolic use and heat loss.",
+      "b": "Responses should connect low transfer efficiency to low predator biomass.",
+      "c": "Responses should predict lower energy at the top after reduced producer biomass.",
+      "d": "Responses should distinguish energy flow from matter cycling."
+    }
+  },
+  {
+    "id": "u8-frq-4",
+    "difficulty": "hard",
+    "topic": "energy flow through ecosystems",
+    "text": "A student models a food chain as grass → grasshopper → frog → snake.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the primary producer in the chain."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why the grasshopper is not the original source of energy in the chain."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict one effect on the snake population if grass growth declines for several seasons."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "Evaluate the claim that decomposers are unimportant to ecosystem energetics because they are not shown in simple food chains."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The grass is the primary producer.",
+        "bullet_points": [
+          "Identify the grass as the producer.",
+          "It captures energy by photosynthesis.",
+          "It forms the base of the chain."
+        ]
+      },
+      "b": {
+        "answer": "The grasshopper obtains energy by consuming the grass, which originally captured energy from sunlight. Therefore the grasshopper is a consumer, not the original energy source.",
+        "bullet_points": [
+          "The grasshopper gets energy from the producer.",
+          "The producer captured sunlight.",
+          "Consumers are not the original energy source."
+        ]
+      },
+      "c": {
+        "answer": "The snake population would likely decline because less producer biomass would reduce energy and prey availability at each higher trophic level.",
+        "bullet_points": [
+          "Reduced producer growth lowers energy through the chain.",
+          "Prey populations may decline.",
+          "Snake numbers would likely fall."
+        ]
+      },
+      "d": {
+        "answer": "The claim is incorrect. Decomposers break down dead organic matter and recycle nutrients, which supports producer growth and helps keep energy and matter moving through ecosystem pathways.",
+        "bullet_points": [
+          "Reject the claim.",
+          "Decomposers recycle nutrients and process detritus.",
+          "They are essential parts of ecosystem function even if omitted from simple chains."
+        ]
+      }
+    },
+    "explain": "Food chains simplify feeding relationships, but decomposers and detrital pathways remain essential to ecosystem function.",
+    "part_explanations": {
+      "a": "Responses should identify the producer correctly.",
+      "b": "Responses should trace energy back to producers and sunlight.",
+      "c": "Responses should predict cascading effects from reduced producer growth.",
+      "d": "Responses should reject the omission-based claim about decomposers."
+    }
+  },
+  {
+    "id": "u8-frq-5",
+    "difficulty": "hard",
+    "topic": "population ecology",
+    "text": "Researchers track a rabbit population in a meadow for several years and plot population size against time. The population grows rapidly at first and then levels off near a stable value.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the growth pattern shown by the population."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why population growth slows as the population approaches carrying capacity."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what could happen to carrying capacity if food availability in the meadow increased substantially."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why carrying capacity is not always a fixed number."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The graph shows logistic growth.",
+        "bullet_points": [
+          "Identify logistic growth.",
+          "Population size rises quickly and then levels off.",
+          "The stable value reflects carrying capacity."
+        ]
+      },
+      "b": {
+        "answer": "Growth slows because limited resources, competition, disease, or other density-dependent factors reduce birth rates or increase death rates as population density rises.",
+        "bullet_points": [
+          "Density-dependent limits intensify as density rises.",
+          "Birth rates may fall or death rates rise.",
+          "Growth slows near carrying capacity."
+        ]
+      },
+      "c": {
+        "answer": "Carrying capacity could increase if food becomes more available, because the environment could support more rabbits before resource limitation becomes strong.",
+        "bullet_points": [
+          "More resources can raise carrying capacity.",
+          "The habitat could support more individuals.",
+          "The equilibrium size may increase."
+        ]
+      },
+      "d": {
+        "answer": "Carrying capacity depends on environmental conditions such as food, shelter, water, predators, and climate, all of which can change over time.",
+        "bullet_points": [
+          "Carrying capacity is set by environmental factors.",
+          "Those factors can change.",
+          "Therefore carrying capacity can shift."
+        ]
+      }
+    },
+    "explain": "Population ecology often centers on how environmental limits shape changes in population size through time.",
+    "part_explanations": {
+      "a": "Responses should name logistic growth.",
+      "b": "Responses should refer to density-dependent limits.",
+      "c": "Responses should predict a higher carrying capacity with more food.",
+      "d": "Responses should explain why carrying capacity can vary."
+    }
+  },
+  {
+    "id": "u8-frq-6",
+    "difficulty": "hard",
+    "topic": "population ecology",
+    "text": "A bacterial culture doubles at regular intervals when resources are abundant.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe the type of population growth expected under these conditions."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why exponential growth cannot continue indefinitely in natural ecosystems."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict one environmental change that would slow the culture's growth rate."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why per capita growth rate is often highest when population size is low relative to available resources."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Under abundant resources, the population is expected to show exponential growth.",
+        "bullet_points": [
+          "Identify exponential growth.",
+          "Population size increases by a constant proportion.",
+          "Resources are not yet strongly limiting."
+        ]
+      },
+      "b": {
+        "answer": "In natural ecosystems, resources eventually become limited and factors such as waste accumulation, competition, or predation prevent indefinite exponential growth.",
+        "bullet_points": [
+          "Resources do not stay unlimited.",
+          "Limiting factors eventually appear.",
+          "Exponential growth cannot continue forever."
+        ]
+      },
+      "c": {
+        "answer": "A reduction in nutrient concentration, accumulation of toxic waste, or a temperature shift away from the optimum could slow the culture's growth.",
+        "bullet_points": [
+          "Any valid limiting change can earn credit.",
+          "Reduced nutrients or poor conditions slow growth.",
+          "The growth rate would decline."
+        ]
+      },
+      "d": {
+        "answer": "When resources are abundant relative to population size, each individual has more access to the necessities for survival and reproduction, so average contribution to growth is higher.",
+        "bullet_points": [
+          "Low density means more resources per individual.",
+          "Individuals can reproduce more successfully.",
+          "Per capita growth rate is therefore high."
+        ]
+      }
+    },
+    "explain": "Exponential growth is a useful model for early population expansion, but real populations eventually encounter limits.",
+    "part_explanations": {
+      "a": "Responses should identify exponential growth.",
+      "b": "Responses should mention limiting factors in natural ecosystems.",
+      "c": "Any valid environmental limiter can earn credit.",
+      "d": "Responses should connect resource availability per individual to per capita growth rate."
+    }
+  },
+  {
+    "id": "u8-frq-7",
+    "difficulty": "hard",
+    "topic": "effect of density on populations",
+    "text": "In a crowded deer population, disease spreads more quickly and individuals compete more intensely for food.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the type of limiting factors illustrated by the scenario."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why these factors become stronger as density increases."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what could happen to birth rate in the deer population as crowding persists."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why density-dependent factors can stabilize population size."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The scenario illustrates density-dependent limiting factors.",
+        "bullet_points": [
+          "Identify density-dependent factors.",
+          "Disease spread and competition are classic examples.",
+          "Their effects depend on population density."
+        ]
+      },
+      "b": {
+        "answer": "At higher density, individuals contact one another more often and share limited resources more intensely, so disease transmission and competition increase.",
+        "bullet_points": [
+          "Crowding increases contact rates.",
+          "Resources are divided among more individuals.",
+          "Effects strengthen with density."
+        ]
+      },
+      "c": {
+        "answer": "Birth rate could decrease because nutritional stress and disease can reduce survival to reproductive age or lower reproductive success.",
+        "bullet_points": [
+          "Birth rate may fall.",
+          "Crowding can reduce health and resources.",
+          "Reproductive success may decline."
+        ]
+      },
+      "d": {
+        "answer": "As population size rises, stronger density-dependent effects reduce growth; when size falls, those effects weaken. This feedback can keep populations from increasing without limit.",
+        "bullet_points": [
+          "Density-dependent factors create negative feedback.",
+          "High density suppresses growth more strongly.",
+          "That can stabilize population size."
+        ]
+      }
+    },
+    "explain": "Density dependence is a major reason real populations do not grow without bound.",
+    "part_explanations": {
+      "a": "Responses should identify density-dependent factors.",
+      "b": "Responses should link stronger effects to higher density.",
+      "c": "Responses should predict reduced birth rate or reproduction.",
+      "d": "Responses should describe stabilizing negative feedback."
+    }
+  },
+  {
+    "id": "u8-frq-8",
+    "difficulty": "hard",
+    "topic": "effect of density on populations",
+    "text": "A severe freeze kills many trees in a forest regardless of how crowded the forest was beforehand.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the type of limiting factor represented by the freeze."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why this factor differs from competition for light among trees."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict one way the freeze could indirectly affect density-dependent interactions in the following growing season."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "Evaluate the claim that density-independent events never influence long-term population patterns."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The freeze is a density-independent limiting factor.",
+        "bullet_points": [
+          "Identify density-independent limitation.",
+          "Its effect does not depend on prior population density.",
+          "Weather extremes are common examples."
+        ]
+      },
+      "b": {
+        "answer": "Competition for light depends on how many trees are present and how closely they are spaced, whereas the freeze can affect trees regardless of crowding.",
+        "bullet_points": [
+          "Competition intensity depends on density.",
+          "The freeze affects trees regardless of spacing.",
+          "That is the key difference."
+        ]
+      },
+      "c": {
+        "answer": "If many trees die, competition among surviving trees for light and nutrients could decrease in the next season because density is lower.",
+        "bullet_points": [
+          "Post-freeze density may be lower.",
+          "Density-dependent competition could weaken.",
+          "Survivors may have more resources."
+        ]
+      },
+      "d": {
+        "answer": "The claim is incorrect. Density-independent events can alter population size, habitat structure, and later resource availability, so they can influence long-term patterns directly and indirectly.",
+        "bullet_points": [
+          "Reject the claim.",
+          "Density-independent events can change later population dynamics.",
+          "They can have lasting ecological effects."
+        ]
+      }
+    },
+    "explain": "Population dynamics depend on both density-dependent and density-independent factors, which often interact over time.",
+    "part_explanations": {
+      "a": "Responses should classify the freeze correctly.",
+      "b": "Responses should contrast density-independent effects with competition.",
+      "c": "Responses should predict weaker competition after density drops.",
+      "d": "Responses should reject the overstatement about long-term influence."
+    }
+  },
+  {
+    "id": "u8-frq-9",
+    "difficulty": "hard",
+    "topic": "community ecology",
+    "text": "In a rocky intertidal community, removal of a predatory starfish causes mussels to become much more abundant and several other species to decline.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe the ecological interaction between the starfish and the mussels."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why removing one predator can alter the abundance of many other species in the community."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how species diversity in the community is likely to change after starfish removal."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why some species are considered keystone species."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The interaction between the starfish and mussels is predation.",
+        "bullet_points": [
+          "Identify predation.",
+          "The starfish consumes mussels.",
+          "One species directly reduces the other by feeding."
+        ]
+      },
+      "b": {
+        "answer": "The predator helps keep the mussel population from dominating space and resources. Removing the predator allows mussels to outcompete other species, changing the whole community.",
+        "bullet_points": [
+          "Predators can regulate dominant prey.",
+          "Unchecked prey can exclude competitors.",
+          "Community composition can shift widely."
+        ]
+      },
+      "c": {
+        "answer": "Species diversity is likely to decrease because mussels can become dominant and reduce the abundance of other species.",
+        "bullet_points": [
+          "Diversity would likely fall.",
+          "One prey species may dominate.",
+          "Other species decline as a result."
+        ]
+      },
+      "d": {
+        "answer": "Keystone species have disproportionately large effects on community structure relative to their abundance. Removing them causes major changes in the community.",
+        "bullet_points": [
+          "Keystone species have outsized ecological effects.",
+          "Their removal causes large community changes.",
+          "Abundance alone does not measure importance."
+        ]
+      }
+    },
+    "explain": "Community ecology often depends on interaction networks, so changing one species can trigger cascading effects.",
+    "part_explanations": {
+      "a": "Responses should identify predation.",
+      "b": "Responses should explain the indirect community effects of predator removal.",
+      "c": "Responses should predict reduced diversity under prey dominance.",
+      "d": "Responses should define a keystone species by disproportionate effect."
+    }
+  },
+  {
+    "id": "u8-frq-10",
+    "difficulty": "hard",
+    "topic": "community ecology",
+    "text": "Two barnacle species occupy the same shoreline. In experimental plots where one species is removed, the other expands into a broader zone than it occupies in undisturbed areas.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the ecological interaction illustrated by the change in distribution."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain what the experiment suggests about realized niche versus fundamental niche."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what would happen if resources used by the two barnacle species became even more limited."
+      },
+      {
+        "label": "d",
+        "verb": "support a claim",
+        "prompt": "Support the claim that experiments can reveal species interactions more clearly than observation alone."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The scenario illustrates interspecific competition.",
+        "bullet_points": [
+          "Identify interspecific competition.",
+          "The two species limit one another's distribution.",
+          "Removal changes the other's abundance or range."
+        ]
+      },
+      "b": {
+        "answer": "The broader zone after removal suggests the species' fundamental niche is larger than its realized niche. Competition from the other barnacle restricts where it actually lives in nature.",
+        "bullet_points": [
+          "Fundamental niche is the full potential range.",
+          "Realized niche is the narrower range actually occupied.",
+          "Competition reduces the realized niche."
+        ]
+      },
+      "c": {
+        "answer": "Competition would likely intensify and could further restrict the distribution or abundance of one or both species.",
+        "bullet_points": [
+          "Resource limitation strengthens competition.",
+          "Ranges may shrink or one species may be excluded.",
+          "Abundance could decline."
+        ]
+      },
+      "d": {
+        "answer": "By removing one species while holding other conditions similar, the experiment isolates the effect of that interaction. Observation alone may show patterns but not as clearly reveal causation.",
+        "bullet_points": [
+          "Experiments isolate variables.",
+          "Species removal helps identify causal effects.",
+          "Observation alone may not separate correlation from interaction."
+        ]
+      }
+    },
+    "explain": "Community ecology is strongest when observation is paired with manipulative experiments that test the causes of species distributions.",
+    "part_explanations": {
+      "a": "Responses should identify competition.",
+      "b": "Responses should compare realized and fundamental niches accurately.",
+      "c": "Responses should predict stronger competitive effects under greater limitation.",
+      "d": "Responses should explain why experiments improve causal inference."
+    }
+  },
+  {
+    "id": "u8-frq-11",
+    "difficulty": "hard",
+    "topic": "biodiversity",
+    "text": "Two grassland plots have the same total number of organisms, but Plot A contains many species in relatively even proportions, while Plot B is dominated by one species and contains few rare others.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe which plot has greater biodiversity."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why biodiversity includes more than just the total number of organisms present."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict which plot is likely to be more resilient after a moderate disturbance."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why high biodiversity can contribute to ecosystem stability."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Plot A has greater biodiversity because it has higher species richness and greater evenness.",
+        "bullet_points": [
+          "Plot A has more even species representation.",
+          "Biodiversity includes richness and evenness.",
+          "Therefore Plot A is more diverse."
+        ]
+      },
+      "b": {
+        "answer": "Biodiversity reflects how many species are present and how evenly individuals are distributed among them, not simply the total number of individuals.",
+        "bullet_points": [
+          "Total abundance is not the same as diversity.",
+          "Richness and evenness both matter.",
+          "Many individuals of one species can still mean low diversity."
+        ]
+      },
+      "c": {
+        "answer": "Plot A is likely to be more resilient because a more diverse community often contains species with overlapping ecological roles or different responses to disturbance.",
+        "bullet_points": [
+          "The more diverse plot is usually more resilient.",
+          "Different species may respond differently to disturbance.",
+          "Functional overlap can buffer the system."
+        ]
+      },
+      "d": {
+        "answer": "High biodiversity can stabilize ecosystems by spreading ecological functions across multiple species, reducing the chance that one species' decline will collapse a process such as productivity or nutrient cycling.",
+        "bullet_points": [
+          "Multiple species can support similar ecosystem functions.",
+          "Loss of one species may be buffered by others.",
+          "That can increase stability."
+        ]
+      }
+    },
+    "explain": "Biodiversity is about composition and balance, not just abundance, and it often influences how communities respond to change.",
+    "part_explanations": {
+      "a": "Responses should identify Plot A as more diverse.",
+      "b": "Responses should define biodiversity using richness and/or evenness.",
+      "c": "Responses should predict greater resilience for the more diverse plot.",
+      "d": "Responses should connect diversity to functional buffering or stability."
+    }
+  },
+  {
+    "id": "u8-frq-12",
+    "difficulty": "hard",
+    "topic": "biodiversity",
+    "text": "A disease eliminates one pollinator species from a flowering plant community, but several other pollinator species remain.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "explain",
+        "prompt": "Explain why the effect on plant reproduction may depend on community biodiversity."
+      },
+      {
+        "label": "b",
+        "verb": "describe",
+        "prompt": "Describe one reason a community with more pollinator species may be less disrupted by the loss."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what could happen in a community that depended heavily on only the lost pollinator species."
+      },
+      {
+        "label": "d",
+        "verb": "support a claim",
+        "prompt": "Support the claim that conserving biodiversity can have practical ecosystem benefits."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "If multiple pollinator species can visit the plants, the community may continue reproducing despite the loss of one pollinator. With lower biodiversity, plant reproduction may drop more sharply.",
+        "bullet_points": [
+          "The effect depends on whether other pollinators can compensate.",
+          "Higher biodiversity can buffer function.",
+          "Low biodiversity can mean larger disruption."
+        ]
+      },
+      "b": {
+        "answer": "More pollinator species increase the chance of functional redundancy, so another species may continue pollinating the plants when one is lost.",
+        "bullet_points": [
+          "Different pollinators can provide overlapping functions.",
+          "Functional redundancy reduces disruption.",
+          "The community is buffered against single-species loss."
+        ]
+      },
+      "c": {
+        "answer": "Plant reproduction could decline sharply, which might reduce seed production and eventually alter plant abundance and community structure.",
+        "bullet_points": [
+          "Reproduction may fall if no substitute pollinator exists.",
+          "Seed production could decline.",
+          "Long-term plant abundance may change."
+        ]
+      },
+      "d": {
+        "answer": "Conserving biodiversity helps maintain services such as pollination, productivity, and resilience to disturbance, which have direct ecological and human benefits.",
+        "bullet_points": [
+          "Use pollination as a practical example.",
+          "Biodiversity supports ecosystem services.",
+          "Those services matter to both ecosystems and people."
+        ]
+      }
+    },
+    "explain": "Biodiversity often matters because it preserves functions, not merely because it increases the number of species.",
+    "part_explanations": {
+      "a": "Responses should frame the outcome in terms of functional redundancy or lack of it.",
+      "b": "Responses should mention why additional pollinator species buffer the system.",
+      "c": "Responses should predict stronger disruption under low diversity.",
+      "d": "Responses should connect biodiversity to ecosystem services."
+    }
+  },
+  {
+    "id": "u8-frq-13",
+    "difficulty": "hard",
+    "topic": "disruptions in ecosystems",
+    "text": "A prolonged drought reduces plant productivity in a savanna ecosystem.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe one direct effect of the drought on producers."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how the disruption can affect higher trophic levels."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict one long-term change that could occur in the ecosystem if droughts become more frequent."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why disruptions can alter both energy flow and species interactions."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The drought can reduce plant growth and photosynthetic productivity because water becomes limiting.",
+        "bullet_points": [
+          "Plant productivity falls under drought.",
+          "Water limitation affects growth and photosynthesis.",
+          "Producer biomass can decline."
+        ]
+      },
+      "b": {
+        "answer": "Lower producer biomass means less energy enters the food web, so herbivores may have less food and predators may later decline as prey abundance falls.",
+        "bullet_points": [
+          "Less producer biomass means less energy for consumers.",
+          "Herbivore populations may drop.",
+          "Predators can also decline indirectly."
+        ]
+      },
+      "c": {
+        "answer": "The ecosystem could shift in species composition toward more drought-tolerant organisms, with changes in abundance of consumers and altered community structure.",
+        "bullet_points": [
+          "Species composition may change.",
+          "Drought-tolerant species may become more common.",
+          "The community can reorganize over time."
+        ]
+      },
+      "d": {
+        "answer": "When producer productivity changes, total energy entering the web changes; at the same time, altered resource availability changes competition, predation, and other interactions among species.",
+        "bullet_points": [
+          "Disruptions affect energy entering the system.",
+          "They also alter who competes with or eats whom.",
+          "Both energetics and interactions can shift."
+        ]
+      }
+    },
+    "explain": "Ecosystem disruptions propagate through networks of energy transfer and species interactions, often producing cascading effects.",
+    "part_explanations": {
+      "a": "Responses should mention reduced producer growth or productivity.",
+      "b": "Responses should trace the effect to consumers and predators.",
+      "c": "Responses should predict a plausible long-term shift in community composition.",
+      "d": "Responses should discuss both energy flow and biotic interactions."
+    }
+  },
+  {
+    "id": "u8-frq-14",
+    "difficulty": "hard",
+    "topic": "disruptions in ecosystems",
+    "text": "Researchers compare two forests after wildfire. Forest A regains vegetation quickly, whereas Forest B remains sparse for many years.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe one factor that could make the two forests differ in recovery rate."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why disturbances do not always have identical effects on ecosystems."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how repeated severe disturbances in short succession could affect ecosystem resilience."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "Evaluate the claim that all disturbances are harmful and should always be prevented in every ecosystem."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Differences in soil condition, seed bank availability, climate, severity of burn, or species composition could affect how quickly the forests recover.",
+        "bullet_points": [
+          "Any valid recovery factor can earn credit.",
+          "Recovery depends on local conditions and disturbance severity.",
+          "The two systems need not respond the same way."
+        ]
+      },
+      "b": {
+        "answer": "Ecosystems differ in species composition, biodiversity, prior condition, and the nature of the disturbance, so the same type of event can produce different outcomes in different systems.",
+        "bullet_points": [
+          "Different ecosystems have different starting conditions.",
+          "Disturbance severity and timing also vary.",
+          "Therefore effects are not identical."
+        ]
+      },
+      "c": {
+        "answer": "Resilience could decrease because the ecosystem may not have enough time to recover between disturbances, leading to loss of biodiversity, soil quality, or key species.",
+        "bullet_points": [
+          "Repeated severe disturbance can reduce resilience.",
+          "Recovery time becomes insufficient.",
+          "The ecosystem may shift to a less diverse or less stable state."
+        ]
+      },
+      "d": {
+        "answer": "The claim is too broad. Some disturbances are natural and can maintain ecosystem structure or diversity, but unusually intense or frequent disturbances can be harmful. The effect depends on context.",
+        "bullet_points": [
+          "Reject the absolute claim.",
+          "Some disturbances are natural and can be beneficial in context.",
+          "Impact depends on frequency, severity, and ecosystem type."
+        ]
+      }
+    },
+    "explain": "Disturbance ecology is about context: ecosystems vary in how they respond, recover, and reorganize after disruption.",
+    "part_explanations": {
+      "a": "Any valid recovery factor can earn credit.",
+      "b": "Responses should emphasize context and variation among ecosystems.",
+      "c": "Responses should predict reduced resilience with repeated severe events.",
+      "d": "Responses should reject the absolute anti-disturbance claim."
+    }
+  }
+]

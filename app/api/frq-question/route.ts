@@ -36,6 +36,7 @@ export async function GET(req: Request) {
         const arr = parseFrqData(raw);
         for (const q of arr) {
           if (!q || !Array.isArray(q.parts)) continue;
+          
           if (mode === "unit" && unitNum !== null) {
             if (typeof q.id === "string" && q.id.startsWith(`u${unitNum}-frq-`)) {
               candidates.push(q);

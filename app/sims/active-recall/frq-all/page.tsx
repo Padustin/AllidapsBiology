@@ -17,11 +17,11 @@ type FrqQuestion = {
 export default function AllUnitFrqPage() {
   const [question, setQuestion] = useState<FrqQuestion | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
-  const [showAnswers, setShowAnswers] = useState(false);
+  const [revealedParts, setRevealedParts] = useState<Record<string, boolean>>({});
 
   async function nextFrq() {
     setLoadError(null);
-    setShowAnswers(false);
+    setRevealedParts({});
     try {
       const res = await fetch("/api/frq-question?mode=all");
       const data = await res.json();
@@ -44,20 +44,6 @@ export default function AllUnitFrqPage() {
   return (
     <div style={{ padding: 18, width: "100%", fontFamily: "\"Helvetica Neue\", Helvetica, Arial, sans-serif" }}>
       <h1 style={{ fontSize: 24, fontWeight: 800 }}>All Unit FRQ's</h1>
-      <div style={{ marginTop: 12, display: "flex", gap: 8, alignItems: "center" }}>
-        <div style={{ padding: 6, border: "1px solid #e2e8f0", borderRadius: 12, background: "white" }}>
-          <button onClick={() => { void nextFrq(); }} style={{ padding: "8px 12px", borderRadius: 8, border: "none", background: "transparent" }}>
-            New FRQ
-          </button>
-        </div>
-        {question && (
-          <div style={{ padding: 6, border: "1px solid #e2e8f0", borderRadius: 12, background: "white" }}>
-            <button onClick={() => setShowAnswers((s) => !s)} style={{ padding: "8px 12px", borderRadius: 8, border: "none", background: "transparent" }}>
-              {showAnswers ? "Hide Rubric" : "Show Rubric"}
-            </button>
-          </div>
-        )}
-      </div>
 
       <div style={{ marginTop: 12 }}>
         {!question && <div style={{ color: "#475569" }}>{loadError || "Loading FRQ..."}</div>}
@@ -70,12 +56,13 @@ export default function AllUnitFrqPage() {
                 const partKey = part.label?.toLowerCase?.() || "";
                 const key = question.answer_key?.[partKey];
                 const partExplain = question.part_explanations?.[partKey];
+                const isRevealed = revealedParts[partKey];
                 return (
                   <div key={part.label} style={{ border: "1px solid #e2e8f0", borderRadius: 8, padding: 10, background: "#ffffff" }}>
                     <div style={{ fontWeight: 800 }}>
                       {part.label}) {part.verb}: {part.prompt}
                     </div>
-                    {showAnswers && (
+                    {isRevealed && (
                       <div style={{ marginTop: 8, paddingTop: 8, borderTop: "1px dashed #cbd5e1" }}>
                         {key?.answer && <div style={{ color: "#0f172a" }}>{key.answer}</div>}
                         {!!key?.bullet_points?.length && (
@@ -88,15 +75,42 @@ export default function AllUnitFrqPage() {
                         {partExplain && <div style={{ marginTop: 8, color: "#475569" }}>Scoring note: {partExplain}</div>}
                       </div>
                     )}
+                    <div style={{ marginTop: 8, paddingTop: 8 }}>
+                      <button
+                        onClick={() => setRevealedParts((prev) => ({ ...prev, [partKey]: !prev[partKey] }))}
+                        style={{
+                          padding: "6px 10px",
+                          borderRadius: 6,
+                          border: "1px solid #cbd5e1",
+                          background: isRevealed ? "#fee2e2" : "#f1f5f9",
+                          cursor: "pointer",
+                          fontSize: 13,
+                          fontWeight: 600,
+                          color: isRevealed ? "#7f1d1d" : "#334155"
+                        }}
+                      >
+                        {isRevealed ? "Hide" : "Show answer and explanation"}
+                      </button>
+                    </div>
                   </div>
                 );
               })}
             </div>
-            {showAnswers && question.explain && (
+            {Object.values(revealedParts).some((v) => v) && question.explain && (
               <div style={{ marginTop: 12, padding: 10, background: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: 8 }}>
                 <span style={{ fontWeight: 800 }}>Teacher note:</span> {question.explain}
               </div>
             )}
+            <div style={{ marginTop: 12, display: "flex", gap: 8 }}>
+              <div style={{ padding: 6, border: "1px solid #e2e8f0", borderRadius: 12, background: "white" }}>
+                <button onClick={() => void nextFrq()} style={{ padding: "8px 12px", borderRadius: 8, border: "none", background: "transparent", cursor: "pointer", fontWeight: 600 }}>
+                  Next question
+                </button>
+              </div>
+            </div>
+            <div style={{ marginTop: 16, padding: 12, background: "#fefce8", border: "1px solid #fde047", borderRadius: 10, color: "#713f12", fontSize: 14 }}>
+              <span style={{ fontWeight: 800 }}>Padilla tip</span> — When you practice the FRQ questions, try to either write your answers down or say them out loud rather than just answering them in your head.
+            </div>
           </div>
         )}
       </div>

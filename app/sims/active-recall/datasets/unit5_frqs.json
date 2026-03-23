@@ -1,0 +1,692 @@
+[
+  {
+    "id": "u5-frq-1",
+    "difficulty": "hard",
+    "topic": "meiosis",
+    "text": "A diploid organism has a body cell with 16 chromosomes. Scientists observe the organism producing gametes through meiosis.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "determine",
+        "prompt": "Determine how many chromosomes a normal gamete from this organism should contain."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why meiosis reduces chromosome number whereas mitosis does not."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what would happen to chromosome number across generations if gametes were produced by mitosis instead of meiosis."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why meiosis is necessary for sexual reproduction in diploid organisms."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "A normal gamete should contain 8 chromosomes because meiosis reduces the diploid number by half.",
+        "bullet_points": [
+          "Diploid number = 16.",
+          "Gametes are haploid.",
+          "A normal gamete has 8 chromosomes."
+        ]
+      },
+      "b": {
+        "answer": "Meiosis includes one round of DNA replication followed by two rounds of division, separating homologous chromosomes in meiosis I and sister chromatids in meiosis II. This halves chromosome number.",
+        "bullet_points": [
+          "Meiosis has two divisions after one replication.",
+          "Homologous chromosomes separate in meiosis I.",
+          "Chromosome number is reduced by half."
+        ]
+      },
+      "c": {
+        "answer": "Chromosome number would double after fertilization in each generation because full diploid sets would combine without prior reduction to haploid gametes.",
+        "bullet_points": [
+          "Chromosome number would not be reduced before fertilization.",
+          "Fertilization would combine two diploid sets.",
+          "The chromosome number would increase across generations."
+        ]
+      },
+      "d": {
+        "answer": "Meiosis produces haploid gametes so fertilization can restore the diploid number without endlessly increasing chromosome count. It also helps create genetic variation among offspring.",
+        "bullet_points": [
+          "Meiosis makes haploid gametes.",
+          "Fertilization restores diploid number.",
+          "This is necessary for stable chromosome numbers in sexual reproduction."
+        ]
+      }
+    },
+    "explain": "Meiosis is the reduction division that preserves chromosome number across generations of sexually reproducing organisms.",
+    "part_explanations": {
+      "a": "Responses should halve the diploid number correctly.",
+      "b": "Responses should reference homologous chromosome separation.",
+      "c": "Responses should predict chromosome doubling across generations.",
+      "d": "Responses should connect meiosis to stable chromosome number after fertilization."
+    }
+  },
+  {
+    "id": "u5-frq-2",
+    "difficulty": "hard",
+    "topic": "meiosis",
+    "text": "A student compares meiosis I with meiosis II in a eukaryotic cell.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe one event unique to meiosis I that does not occur in meiosis II."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why homologous chromosomes, rather than sister chromatids, separate during meiosis I."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict the effect on gametes if homologous chromosomes fail to separate in meiosis I."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "Evaluate the claim that meiosis II is the stage that most directly reduces chromosome number."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "Homologous chromosomes pair and then separate during meiosis I, a process that does not occur in meiosis II.",
+        "bullet_points": [
+          "Meiosis I involves homolog pairing.",
+          "Homologous chromosomes separate in meiosis I.",
+          "This does not occur in meiosis II."
+        ]
+      },
+      "b": {
+        "answer": "Meiosis I is the reductional division. Separating homologous chromosomes moves one chromosome from each pair into each daughter cell, which reduces the chromosome number from diploid to haploid.",
+        "bullet_points": [
+          "Meiosis I is the reduction division.",
+          "Homolog separation halves chromosome number.",
+          "Sister chromatid separation happens later."
+        ]
+      },
+      "c": {
+        "answer": "Some gametes would receive an extra chromosome and others would be missing that chromosome because nondisjunction in meiosis I produces unequal chromosome distribution.",
+        "bullet_points": [
+          "Gametes would have abnormal chromosome numbers.",
+          "Some gain a chromosome and some lose one.",
+          "The error is due to nondisjunction in meiosis I."
+        ]
+      },
+      "d": {
+        "answer": "The claim is incorrect. Meiosis I most directly reduces chromosome number because that is when homologous chromosomes separate; meiosis II mainly separates sister chromatids.",
+        "bullet_points": [
+          "Reject the claim.",
+          "Meiosis I reduces chromosome number.",
+          "Meiosis II mainly separates sister chromatids."
+        ]
+      }
+    },
+    "explain": "Understanding which chromosomes separate in each meiotic division is essential for predicting chromosome number in gametes.",
+    "part_explanations": {
+      "a": "Responses should mention homologous chromosome pairing or separation.",
+      "b": "Responses should tie homolog separation to haploidization.",
+      "c": "Responses should predict aneuploid gametes from nondisjunction.",
+      "d": "Responses should identify meiosis I as the reduction division."
+    }
+  },
+  {
+    "id": "u5-frq-3",
+    "difficulty": "hard",
+    "topic": "meiosis and genetic diversity",
+    "text": "In a species with many chromosome pairs, meiosis produces genetically different gametes even when no mutation occurs.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify one meiotic process that contributes to genetic diversity in gametes."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how independent assortment increases variation among gametes."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how the amount of genetic diversity would change if all homologous chromosome pairs always lined up in the same orientation at metaphase I."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why genetic diversity in gametes can increase variation among offspring."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "One process is independent assortment of homologous chromosomes. Another acceptable answer is crossing over during prophase I.",
+        "bullet_points": [
+          "Identify independent assortment or crossing over.",
+          "The process occurs during meiosis.",
+          "It changes allele combinations in gametes."
+        ]
+      },
+      "b": {
+        "answer": "Independent assortment means each homologous pair aligns independently of the others at metaphase I, so maternal and paternal chromosomes are distributed into gametes in many possible combinations.",
+        "bullet_points": [
+          "Each homolog pair aligns independently.",
+          "Maternal and paternal chromosomes assort in different combinations.",
+          "This creates many possible gametes."
+        ]
+      },
+      "c": {
+        "answer": "Genetic diversity would decrease because the same chromosome combinations would be sorted into gametes more often. Random orientation at metaphase I is one source of variation.",
+        "bullet_points": [
+          "Diversity would decrease.",
+          "Gametes would receive more similar chromosome combinations.",
+          "Random orientation is normally a source of variation."
+        ]
+      },
+      "d": {
+        "answer": "Genetically different gametes can combine during fertilization to produce offspring with different allele combinations, increasing variation within the population.",
+        "bullet_points": [
+          "Different gametes create different zygotes.",
+          "Offspring inherit different allele combinations.",
+          "Population-level variation increases."
+        ]
+      }
+    },
+    "explain": "Meiosis generates diversity by reshuffling existing alleles before fertilization occurs.",
+    "part_explanations": {
+      "a": "Responses should identify a valid meiotic source of variation.",
+      "b": "Responses should describe random orientation at metaphase I.",
+      "c": "Responses should predict reduced diversity if orientation were fixed.",
+      "d": "Responses should link gamete diversity to offspring diversity."
+    }
+  },
+  {
+    "id": "u5-frq-4",
+    "difficulty": "hard",
+    "topic": "meiosis and genetic diversity",
+    "text": "Researchers examine homologous chromosomes during prophase I and observe several chiasmata between nonsister chromatids.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe what a chiasma indicates has occurred."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain how crossing over can create new allele combinations on a chromosome."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict how the number of recombinant gametes would change if crossing over did not occur."
+      },
+      {
+        "label": "d",
+        "verb": "support a claim",
+        "prompt": "Support the claim that meiosis contributes to evolution even without creating new mutations."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "A chiasma indicates that crossing over has occurred between nonsister chromatids of homologous chromosomes.",
+        "bullet_points": [
+          "A chiasma marks crossing over.",
+          "It involves nonsister chromatids.",
+          "It occurs between homologous chromosomes."
+        ]
+      },
+      "b": {
+        "answer": "Crossing over exchanges corresponding DNA segments between homologs, so a chromatid can end up carrying a new combination of maternal and paternal alleles.",
+        "bullet_points": [
+          "DNA segments are exchanged between homologs.",
+          "Alleles on the same chromosome can be reshuffled.",
+          "New recombinant chromatids are formed."
+        ]
+      },
+      "c": {
+        "answer": "The number of recombinant gametes would decrease because one major source of new allele combinations on chromosomes would be absent.",
+        "bullet_points": [
+          "Recombinant gametes would become less common.",
+          "Crossing over creates recombinant chromatids.",
+          "Without it, more gametes keep parental combinations."
+        ]
+      },
+      "d": {
+        "answer": "Meiosis contributes to evolution because independent assortment and crossing over increase heritable variation in populations. Natural selection can then act on that variation even if no new mutations arise in that generation.",
+        "bullet_points": [
+          "Support the claim with heritable variation from meiosis.",
+          "Crossing over and independent assortment reshuffle alleles.",
+          "Selection can act on that variation."
+        ]
+      }
+    },
+    "explain": "Crossing over does not create new alleles, but it creates new combinations of existing alleles that matter to evolution.",
+    "part_explanations": {
+      "a": "Responses should define chiasmata correctly.",
+      "b": "Responses should describe exchange between nonsister chromatids.",
+      "c": "Responses should state that recombinant gametes become less common without crossing over.",
+      "d": "Responses should connect meiotic recombination to evolutionary change through variation."
+    }
+  },
+  {
+    "id": "u5-frq-5",
+    "difficulty": "hard",
+    "topic": "mendelian genetics",
+    "text": "In pea plants, purple flower color is dominant to white flower color. Two heterozygous purple-flowered plants are crossed.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "determine",
+        "prompt": "Determine the expected phenotypic ratio of the offspring."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why two purple-flowered parents can produce white-flowered offspring."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict the probability that an individual offspring will be homozygous recessive."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why a Punnett square is useful for this cross."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The expected phenotypic ratio is 3 purple : 1 white.",
+        "bullet_points": [
+          "For Pp × Pp, the phenotype ratio is 3:1.",
+          "Three offspring classes show purple in expectation.",
+          "One offspring class shows white in expectation."
+        ]
+      },
+      "b": {
+        "answer": "Each parent can pass on the recessive allele. An offspring that inherits the recessive allele from both parents is pp and expresses the white phenotype.",
+        "bullet_points": [
+          "Both parents carry the recessive allele.",
+          "A pp offspring can result.",
+          "The recessive phenotype appears only in the homozygous recessive genotype."
+        ]
+      },
+      "c": {
+        "answer": "The probability is 1/4, or 25%.",
+        "bullet_points": [
+          "One of four expected genotype outcomes is pp.",
+          "Probability = 25%.",
+          "This is the homozygous recessive genotype."
+        ]
+      },
+      "d": {
+        "answer": "A Punnett square organizes the possible gametes from each parent and shows the expected genotype combinations and their probabilities.",
+        "bullet_points": [
+          "A Punnett square organizes gametes and offspring combinations.",
+          "It helps visualize genotype probabilities.",
+          "It connects genotype to expected phenotype ratios."
+        ]
+      }
+    },
+    "explain": "Mendelian predictions come from how alleles segregate into gametes and recombine at fertilization.",
+    "part_explanations": {
+      "a": "Responses should give the 3:1 phenotypic ratio.",
+      "b": "Responses should explain recessive inheritance with heterozygous parents.",
+      "c": "Responses should calculate 1/4 correctly.",
+      "d": "Responses should describe how Punnett squares organize possible outcomes."
+    }
+  },
+  {
+    "id": "u5-frq-6",
+    "difficulty": "hard",
+    "topic": "mendelian genetics",
+    "text": "A student performs a monohybrid cross and obtains 78 dominant-phenotype offspring and 22 recessive-phenotype offspring.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "state the null hypothesis",
+        "prompt": "State the null hypothesis for a chi-square test evaluating whether the data fit the expected 3:1 ratio."
+      },
+      {
+        "label": "b",
+        "verb": "determine",
+        "prompt": "Determine whether the observed data are closer to a 3:1 ratio or a 1:1 ratio."
+      },
+      {
+        "label": "c",
+        "verb": "explain",
+        "prompt": "Explain why observed results may deviate from expected ratios even when the underlying inheritance pattern is Mendelian."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why a chi-square test is useful in this type of genetic analysis."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The null hypothesis is that the observed offspring counts do not differ significantly from the expected 3:1 ratio and that any deviation is due to chance alone.",
+        "bullet_points": [
+          "State that the data fit a 3:1 ratio under the null.",
+          "Any differences are attributed to chance.",
+          "The null connects the data to the expected inheritance model."
+        ]
+      },
+      "b": {
+        "answer": "The data are closer to a 3:1 ratio because 78:22 is much closer to 75:25 than to 50:50 out of 100 total offspring.",
+        "bullet_points": [
+          "Observed counts total 100.",
+          "78:22 is near 75:25.",
+          "Therefore it is closer to 3:1 than 1:1."
+        ]
+      },
+      "c": {
+        "answer": "Random sampling variation can make observed counts differ from theoretical expectations, especially with limited sample size. Mendelian inheritance predicts probabilities, not exact counts in every trial.",
+        "bullet_points": [
+          "Expected ratios are probabilistic.",
+          "Chance variation affects actual counts.",
+          "Small or moderate samples may not match exactly."
+        ]
+      },
+      "d": {
+        "answer": "A chi-square test evaluates whether the difference between observed and expected counts is large enough to reject the inheritance model. It helps distinguish random variation from a meaningful departure from expectation.",
+        "bullet_points": [
+          "Chi-square compares observed and expected values.",
+          "It tests whether deviations are larger than expected by chance.",
+          "This helps evaluate the proposed inheritance model."
+        ]
+      }
+    },
+    "explain": "Classical genetic crosses produce expected probabilities, but statistical tests are needed to judge whether observed deviations are likely due to chance.",
+    "part_explanations": {
+      "a": "Responses should include 'no significant difference' and 'due to chance' in the null hypothesis.",
+      "b": "Responses should compare 78:22 to both candidate ratios.",
+      "c": "Responses should describe chance variation rather than changing the inheritance model automatically.",
+      "d": "Responses should explain the purpose of chi-square testing."
+    }
+  },
+  {
+    "id": "u5-frq-7",
+    "difficulty": "hard",
+    "topic": "non-mendelian genetics",
+    "text": "In snapdragons, red flowers and white flowers produce pink-flowered offspring when crossed.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify the inheritance pattern shown in the scenario."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why the heterozygous phenotype differs from the phenotypes of both homozygotes."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict the phenotypic ratio from a cross of two pink-flowered plants."
+      },
+      {
+        "label": "d",
+        "verb": "evaluate",
+        "prompt": "Evaluate the claim that the pink phenotype must result from blending inheritance."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The inheritance pattern is incomplete dominance.",
+        "bullet_points": [
+          "Identify incomplete dominance.",
+          "The heterozygote shows an intermediate phenotype.",
+          "It is not simple complete dominance."
+        ]
+      },
+      "b": {
+        "answer": "In incomplete dominance, one allele does not completely mask the other, so the heterozygote produces an intermediate amount or effect of the trait compared with the two homozygotes.",
+        "bullet_points": [
+          "Neither allele is fully dominant in phenotype.",
+          "The heterozygote shows an intermediate expression.",
+          "Phenotype reflects the combined effect of both alleles."
+        ]
+      },
+      "c": {
+        "answer": "The phenotypic ratio would be 1 red : 2 pink : 1 white.",
+        "bullet_points": [
+          "A cross of two heterozygotes gives 1:2:1.",
+          "One quarter red, one half pink, one quarter white.",
+          "Phenotype ratio matches genotype ratio in incomplete dominance."
+        ]
+      },
+      "d": {
+        "answer": "The claim should be rejected. The alleles remain discrete and are inherited according to Mendelian segregation; the heterozygous phenotype is intermediate, but the parental phenotypes can reappear in later generations.",
+        "bullet_points": [
+          "Reject blending inheritance.",
+          "Alleles remain discrete and segregate normally.",
+          "Parental phenotypes reappear in the offspring of heterozygotes."
+        ]
+      }
+    },
+    "explain": "Non-Mendelian inheritance patterns can change the relationship between genotype and phenotype without violating allele segregation.",
+    "part_explanations": {
+      "a": "Responses should identify incomplete dominance.",
+      "b": "Responses should focus on heterozygous expression, not on allele disappearance.",
+      "c": "Responses should predict the 1:2:1 phenotypic ratio.",
+      "d": "Responses should reject the older blending model because alleles remain distinct."
+    }
+  },
+  {
+    "id": "u5-frq-8",
+    "difficulty": "hard",
+    "topic": "non-mendelian genetics",
+    "text": "In humans, the ABO blood group is determined by three alleles, and individuals with genotype IAIB have blood type AB.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe how the ABO system illustrates a non-Mendelian inheritance pattern."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why a person with genotype IAIB expresses both A and B antigens."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict one possible blood-type outcome of a cross between a type A heterozygote and a type B heterozygote."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why the ABO system still follows Mendelian segregation even though it involves more than two alleles."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The ABO system shows multiple alleles in the population and codominance in individuals with genotype IAIB.",
+        "bullet_points": [
+          "The trait involves more than two alleles in the population.",
+          "IA and IB are codominant.",
+          "This is a non-Mendelian phenotype pattern."
+        ]
+      },
+      "b": {
+        "answer": "Both IA and IB encode functional products that add different antigens to red blood cells, so both are expressed in the heterozygote and neither masks the other.",
+        "bullet_points": [
+          "IA and IB are both expressed.",
+          "Neither allele masks the other.",
+          "The heterozygote displays both antigens."
+        ]
+      },
+      "c": {
+        "answer": "One possible outcome is blood type O if each parent contributes the recessive i allele. Other outcomes such as A, B, or AB are also possible depending on the gametes combined.",
+        "bullet_points": [
+          "Type O is possible from IAi × IBi.",
+          "Each parent can contribute i.",
+          "Other blood types are also possible."
+        ]
+      },
+      "d": {
+        "answer": "Each parent still segregates only one allele into each gamete, and offspring inherit one allele from each parent. The trait is non-Mendelian in dominance relationships, not in the basic segregation of alleles.",
+        "bullet_points": [
+          "Gametes still receive one allele each.",
+          "Offspring inherit one allele from each parent.",
+          "Segregation still follows Mendelian rules."
+        ]
+      }
+    },
+    "explain": "Non-Mendelian inheritance often involves different dominance relationships, while the fundamental behavior of alleles in meiosis remains the same.",
+    "part_explanations": {
+      "a": "Responses should mention multiple alleles and/or codominance.",
+      "b": "Responses should explain simultaneous expression of A and B antigens.",
+      "c": "Responses should give at least one correct possible offspring blood type.",
+      "d": "Responses should distinguish segregation from dominance pattern."
+    }
+  },
+  {
+    "id": "u5-frq-9",
+    "difficulty": "hard",
+    "topic": "environmental effects on phenotype",
+    "text": "Genetically identical hydrangea plants are grown in soils with different pH values. Plants in acidic soil produce blue flowers, whereas plants in less acidic soil produce pink flowers.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "describe",
+        "prompt": "Describe what the scenario shows about the relationship between genotype and phenotype."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why genetically identical plants can display different phenotypes in different environments."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict what would happen to flower color if a blue-flowered plant were moved to the less acidic soil."
+      },
+      {
+        "label": "d",
+        "verb": "justify",
+        "prompt": "Justify why environmental effects on phenotype do not necessarily mean the DNA sequence has changed."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "The scenario shows that phenotype can depend on both genotype and environment. The same genotype can produce different phenotypes under different environmental conditions.",
+        "bullet_points": [
+          "Phenotype depends on genotype and environment.",
+          "One genotype can produce multiple phenotypes.",
+          "The environment affects trait expression."
+        ]
+      },
+      "b": {
+        "answer": "Environmental conditions can alter gene expression, pigment chemistry, or developmental pathways, leading to different visible traits even when the underlying genotype is unchanged.",
+        "bullet_points": [
+          "The environment changes trait expression or physiology.",
+          "The genotype can remain the same.",
+          "Different conditions produce different phenotypes."
+        ]
+      },
+      "c": {
+        "answer": "The plant would likely produce pinker flowers over time because the environmental condition associated with the pink phenotype would now influence pigment expression or chemistry.",
+        "bullet_points": [
+          "The phenotype would shift toward the new environment's outcome.",
+          "Moving to less acidic soil favors pink flowers.",
+          "Change occurs without needing a new genotype."
+        ]
+      },
+      "d": {
+        "answer": "Environmental influence can change which genes are expressed or how molecules behave without altering the nucleotide sequence of DNA. Phenotypic plasticity does not automatically imply mutation.",
+        "bullet_points": [
+          "Phenotype can change without a DNA sequence change.",
+          "Gene expression or molecular interactions may change instead.",
+          "Environmental effects are not the same as mutation."
+        ]
+      }
+    },
+    "explain": "Phenotype reflects an interaction between genotype and environment, so genetically identical organisms can still differ in their traits.",
+    "part_explanations": {
+      "a": "Responses should explicitly reference genotype-environment interaction.",
+      "b": "Responses should discuss gene expression or physiology rather than inheritance alone.",
+      "c": "Responses should predict a phenotype shift matching the new environment.",
+      "d": "Responses should distinguish environmental effects from mutation."
+    }
+  },
+  {
+    "id": "u5-frq-10",
+    "difficulty": "hard",
+    "topic": "environmental effects on phenotype",
+    "text": "Researchers raise genetically similar mice on two diets. Mice on Diet A reach a larger average body mass than mice on Diet B.",
+    "parts": [
+      {
+        "label": "a",
+        "verb": "identify",
+        "prompt": "Identify one conclusion that can be made from the data about environmental effects on phenotype."
+      },
+      {
+        "label": "b",
+        "verb": "explain",
+        "prompt": "Explain why average body mass is not determined by genotype alone in this experiment."
+      },
+      {
+        "label": "c",
+        "verb": "predict",
+        "prompt": "Predict one feature of the experimental design that would improve the claim that diet caused the difference."
+      },
+      {
+        "label": "d",
+        "verb": "support a claim",
+        "prompt": "Support the claim that phenotype is often the result of interactions between inherited information and environmental conditions."
+      }
+    ],
+    "answer_key": {
+      "a": {
+        "answer": "One valid conclusion is that diet, an environmental factor, can influence body mass phenotype.",
+        "bullet_points": [
+          "Diet is an environmental factor.",
+          "Body mass changed with environmental conditions.",
+          "Phenotype is affected by more than genotype."
+        ]
+      },
+      "b": {
+        "answer": "Even with similar genotypes, different nutrient availability, energy balance, or metabolism under different diets can lead to different growth outcomes. Thus the environment contributes to body-mass phenotype.",
+        "bullet_points": [
+          "Different diets change growth conditions.",
+          "Similar genotypes can still produce different body masses.",
+          "Environment influences the phenotype."
+        ]
+      },
+      "c": {
+        "answer": "Including random assignment and large sample sizes, while keeping other variables constant, would strengthen the claim that diet caused the difference.",
+        "bullet_points": [
+          "Use controlled conditions.",
+          "Random assignment and replication strengthen causation.",
+          "Other variables should be held constant."
+        ]
+      },
+      "d": {
+        "answer": "The mice have similar inherited information, yet body mass differs across diets, showing that phenotype emerges from both genes and the environment. In many traits, neither factor alone fully explains the outcome.",
+        "bullet_points": [
+          "Use the experiment as evidence.",
+          "Similar genes produced different outcomes under different diets.",
+          "Phenotype often reflects gene-environment interaction."
+        ]
+      }
+    },
+    "explain": "Applied examples of phenotype make it clear that inheritance sets possibilities, but environmental conditions strongly influence final expression.",
+    "part_explanations": {
+      "a": "Responses should state that environment can influence phenotype.",
+      "b": "Responses should explain why genotype alone is insufficient here.",
+      "c": "Responses should propose a design feature that strengthens causal inference.",
+      "d": "Responses should use the evidence to support genotype-environment interaction."
+    }
+  }
+]
