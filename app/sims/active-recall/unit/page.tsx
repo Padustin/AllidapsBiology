@@ -7,6 +7,7 @@ export default function Page() {
   const [difficulty, setDifficulty] = useState("");
   const [unit, setUnit] = useState("");
   const [question, setQuestion] = useState<any | null>(null);
+  const [previousQuestions, setPreviousQuestions] = useState<any[]>([]);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [selected, setSelected] = useState<number | null>(null);
   const [crossedOut, setCrossedOut] = useState<Record<number, boolean>>({});
@@ -14,24 +15,15 @@ export default function Page() {
   const [seen, setSeen] = useState<Record<string, Record<string, true>>>({});
   const [poolSize, setPoolSize] = useState<number>(0);
   const STORAGE_KEY = "ar-seen";
-  const frqPlaceholder = "FRQ mode is coming soon. This is a placeholder for now.";
 
   async function next(attempt = 0) {
+    const currentQuestion = question;
     if (!unit || !difficulty) {
       setQuestion(null);
       setSelected(null);
       setCrossedOut({});
       setVisibleExplanations({});
       setLoadError("Select a unit and difficulty first to begin.");
-      return;
-    }
-    if (difficulty === "frq") {
-      setQuestion(null);
-      setSelected(null);
-      setCrossedOut({});
-      setVisibleExplanations({});
-      setPoolSize(0);
-      setLoadError(frqPlaceholder);
       return;
     }
     setQuestion(null);
@@ -58,6 +50,7 @@ export default function Page() {
           setSeen((s) => ({ ...s, [scopeKey]: {} }));
         }
         if (q.id) setSeen((s) => ({ ...s, [scopeKey]: { ...(s[scopeKey] || {}), [q.id]: true } }));
+        if (currentQuestion) setPreviousQuestions((prev) => [...prev, currentQuestion]);
         // ensure per-choice explanations
         try { const mod = (await import("../shared")).ensureChoiceExplanations; setQuestion(mod(q)); } catch (e) { setQuestion(q); }
         return;
@@ -75,6 +68,19 @@ export default function Page() {
     }
 
     setLoadError("No fixed questions are available for this unit and difficulty yet.");
+  }
+
+  function previous() {
+    setLoadError(null);
+    setSelected(null);
+    setCrossedOut({});
+    setVisibleExplanations({});
+    setPreviousQuestions((prev) => {
+      if (prev.length === 0) return prev;
+      const last = prev[prev.length - 1];
+      setQuestion(last);
+      return prev.slice(0, -1);
+    });
   }
 
   useEffect(() => {
@@ -95,11 +101,6 @@ export default function Page() {
     } catch (e) {}
     // fetch pool for current scope, then request first question
     (async () => {
-      if (difficulty === "frq") {
-        setPoolSize(0);
-        setLoadError(frqPlaceholder);
-        return;
-      }
       try {
         const res = await fetch(`/api/ar-pool?mode=unit&unit=${encodeURIComponent(unit)}&difficulty=${encodeURIComponent(difficulty)}`);
         const data = await res.json();
@@ -115,6 +116,7 @@ export default function Page() {
   useEffect(() => {
     if (!unit || !difficulty) {
       setPoolSize(0);
+      setPreviousQuestions([]);
       setQuestion(null);
       setSelected(null);
       setCrossedOut({});
@@ -122,17 +124,9 @@ export default function Page() {
       setLoadError("Select a unit and difficulty first to begin.");
       return;
     }
-    if (difficulty === "frq") {
-      setPoolSize(0);
-      setQuestion(null);
-      setSelected(null);
-      setCrossedOut({});
-      setVisibleExplanations({});
-      setLoadError(frqPlaceholder);
-      return;
-    }
     // when unit or difficulty changes, refresh pool and load a fresh question
     (async () => {
+      setPreviousQuestions([]);
       try {
         const res = await fetch(`/api/ar-pool?mode=unit&unit=${encodeURIComponent(unit)}&difficulty=${encodeURIComponent(difficulty)}`);
         const data = await res.json();
@@ -162,7 +156,6 @@ export default function Page() {
               <option value="easy">Easy (definitions)</option>
               <option value="hard">Hard (application)</option>
               <option value="analysis">Analysis (experiment/system)</option>
-              <option value="frq">FRQ (placeholder)</option>
             </select>
           </div>
         </div>
@@ -180,6 +173,9 @@ export default function Page() {
         </div>
 
         <div style={{ marginLeft: "auto", display: "flex", gap: 8, alignItems: "center" }}>
+          <div style={{ padding: 6, border: "1px solid #e2e8f0", borderRadius: 12, background: "white" }}>
+            <button onClick={previous} disabled={previousQuestions.length === 0} style={{ padding: "8px 12px", borderRadius: 8, background: "transparent", border: "none", opacity: previousQuestions.length > 0 ? 1 : 0.45, cursor: previousQuestions.length > 0 ? "pointer" : "not-allowed" }}>Previous question</button>
+          </div>
           <div style={{ padding: 6, border: "1px solid #e2e8f0", borderRadius: 12, background: "white" }}>
             <button onClick={() => { void next(); }} disabled={!unit || !difficulty} style={{ padding: "8px 12px", borderRadius: 8, background: "transparent", border: "none", opacity: unit && difficulty ? 1 : 0.45, cursor: unit && difficulty ? "pointer" : "not-allowed" }}>New question</button>
           </div>

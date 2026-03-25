@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 export default function Page() {
   const [difficulty, setDifficulty] = useState("easy");
   const [question, setQuestion] = useState<any | null>(null);
+  const [previousQuestions, setPreviousQuestions] = useState<any[]>([]);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [selected, setSelected] = useState<number | null>(null);
   const [crossedOut, setCrossedOut] = useState<Record<number, boolean>>({});
@@ -18,19 +19,14 @@ export default function Page() {
   const border = "#e2e8f0";
   const text = "#334155";
   const heading = "#0f172a";
-  const frqPlaceholder = "FRQ mode is coming soon. This is a placeholder for now.";
 
   async function next(attempt = 0) {
+    const currentQuestion = question;
     setQuestion(null);
     setSelected(null);
     setCrossedOut({});
     setVisibleExplanations({});
     setLoadError(null);
-    if (difficulty === "frq") {
-      setPoolSize(0);
-      setLoadError(frqPlaceholder);
-      return;
-    }
     const MAX_ATTEMPTS = 6;
     const scopeKey = `AP::${difficulty}`;
     const scopeSeen = (seen && seen[scopeKey]) || {};
@@ -50,6 +46,7 @@ export default function Page() {
           setSeen((s) => ({ ...s, [scopeKey]: {} }));
         }
         if (q.id) setSeen((s) => ({ ...s, [scopeKey]: { ...(s[scopeKey] || {}), [q.id]: true } }));
+        if (currentQuestion) setPreviousQuestions((prev) => [...prev, currentQuestion]);
         try { const { ensureChoiceExplanations } = await import("../shared"); setQuestion(ensureChoiceExplanations(q)); } catch (e) { setQuestion(q); }
         return;
       }
@@ -68,6 +65,19 @@ export default function Page() {
     setLoadError("No fixed questions are available for this difficulty yet.");
   }
 
+  function previous() {
+    setLoadError(null);
+    setSelected(null);
+    setCrossedOut({});
+    setVisibleExplanations({});
+    setPreviousQuestions((prev) => {
+      if (prev.length === 0) return prev;
+      const last = prev[prev.length - 1];
+      setQuestion(last);
+      return prev.slice(0, -1);
+    });
+  }
+
   useEffect(() => {
     // generate first question on load
     try {
@@ -84,11 +94,6 @@ export default function Page() {
       }
     } catch (e) {}
     (async () => {
-      if (difficulty === "frq") {
-        setPoolSize(0);
-        setLoadError(frqPlaceholder);
-        return;
-      }
       try {
         const res = await fetch(`/api/ar-pool?mode=ap&difficulty=${encodeURIComponent(difficulty)}`);
         const data = await res.json();
@@ -103,15 +108,7 @@ export default function Page() {
 
   useEffect(() => {
     (async () => {
-      if (difficulty === "frq") {
-        setPoolSize(0);
-        setQuestion(null);
-        setSelected(null);
-        setCrossedOut({});
-        setVisibleExplanations({});
-        setLoadError(frqPlaceholder);
-        return;
-      }
+      setPreviousQuestions([]);
       try {
         const res = await fetch(`/api/ar-pool?mode=ap&difficulty=${encodeURIComponent(difficulty)}`);
         const data = await res.json();
@@ -140,12 +137,14 @@ export default function Page() {
               <option value="easy">Easy (definitions)</option>
               <option value="hard">Hard (application)</option>
               <option value="analysis">Analysis (experiment/system)</option>
-              <option value="frq">FRQ (placeholder)</option>
             </select>
           </div>
         </div>
 
         <div style={{ marginLeft: "auto", display: "flex", gap: 8, alignItems: "center" }}>
+          <div style={{ padding: 6, border: `1px solid ${border}`, borderRadius: 12, background: "white" }}>
+            <button onClick={previous} disabled={previousQuestions.length === 0} style={{ padding: "8px 12px", borderRadius: 12, border: `none`, background: "transparent", fontWeight: 700, opacity: previousQuestions.length > 0 ? 1 : 0.45, cursor: previousQuestions.length > 0 ? "pointer" : "not-allowed" }}>Previous question</button>
+          </div>
           <div style={{ padding: 6, border: `1px solid ${border}`, borderRadius: 12, background: "white" }}>
             <button onClick={() => { void next(); }} style={{ padding: "8px 12px", borderRadius: 12, border: `none`, background: "transparent", fontWeight: 700 }}>New question</button>
           </div>

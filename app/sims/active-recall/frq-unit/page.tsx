@@ -19,10 +19,12 @@ export default function UnitFrqPage() {
   const [unit, setUnit] = useState(UNITS[0]);
   const [difficulty, setDifficulty] = useState("AP Style");
   const [question, setQuestion] = useState<FrqQuestion | null>(null);
+  const [previousQuestions, setPreviousQuestions] = useState<FrqQuestion[]>([]);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [revealedParts, setRevealedParts] = useState<Record<string, boolean>>({});
 
   async function nextFrq() {
+    const currentQuestion = question;
     setLoadError(null);
     setRevealedParts({});
     try {
@@ -30,6 +32,7 @@ export default function UnitFrqPage() {
       const res = await fetch(`/api/frq-question?mode=unit&unit=${encodeURIComponent(unit)}&difficulty=${encodeURIComponent(diffParam)}`);
       const data = await res.json();
       if (data?.question) {
+        if (currentQuestion) setPreviousQuestions((prev) => [...prev, currentQuestion]);
         setQuestion(data.question);
         return;
       }
@@ -41,7 +44,19 @@ export default function UnitFrqPage() {
     }
   }
 
+  function previousFrq() {
+    setLoadError(null);
+    setRevealedParts({});
+    setPreviousQuestions((prev) => {
+      if (prev.length === 0) return prev;
+      const last = prev[prev.length - 1];
+      setQuestion(last);
+      return prev.slice(0, -1);
+    });
+  }
+
   useEffect(() => {
+    setPreviousQuestions([]);
     void nextFrq();
   }, [unit, difficulty]);
 
@@ -161,6 +176,11 @@ export default function UnitFrqPage() {
               </div>
             )}
             <div style={{ marginTop: 12, display: "flex", gap: 8 }}>
+              <div style={{ padding: 6, border: "1px solid #e2e8f0", borderRadius: 12, background: "white" }}>
+                <button onClick={previousFrq} disabled={previousQuestions.length === 0} style={{ padding: "8px 12px", borderRadius: 8, border: "none", background: "transparent", cursor: previousQuestions.length > 0 ? "pointer" : "not-allowed", fontWeight: 600, opacity: previousQuestions.length > 0 ? 1 : 0.45 }}>
+                  Previous question
+                </button>
+              </div>
               <div style={{ padding: 6, border: "1px solid #e2e8f0", borderRadius: 12, background: "white" }}>
                 <button onClick={() => void nextFrq()} style={{ padding: "8px 12px", borderRadius: 8, border: "none", background: "transparent", cursor: "pointer", fontWeight: 600 }}>
                   Next question
