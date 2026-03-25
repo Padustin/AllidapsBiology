@@ -15,6 +15,7 @@ type FrqQuestion = {
 };
 
 export default function AllUnitFrqPage() {
+  const [difficulty, setDifficulty] = useState("AP Style");
   const [question, setQuestion] = useState<FrqQuestion | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [revealedParts, setRevealedParts] = useState<Record<string, boolean>>({});
@@ -23,7 +24,8 @@ export default function AllUnitFrqPage() {
     setLoadError(null);
     setRevealedParts({});
     try {
-      const res = await fetch("/api/frq-question?mode=all");
+      const diffParam = difficulty === "AP Style" ? "ap" : "active-recall";
+      const res = await fetch(`/api/frq-question?mode=all&difficulty=${encodeURIComponent(diffParam)}`);
       const data = await res.json();
       if (data?.question) {
         setQuestion(data.question);
@@ -39,11 +41,23 @@ export default function AllUnitFrqPage() {
 
   useEffect(() => {
     void nextFrq();
-  }, []);
+  }, [difficulty]);
 
   return (
     <div style={{ padding: 18, width: "100%", fontFamily: "\"Helvetica Neue\", Helvetica, Arial, sans-serif" }}>
       <h1 style={{ fontSize: 24, fontWeight: 800 }}>All Unit FRQ's</h1>
+
+      <div style={{ marginTop: 12, display: "flex", gap: 8, alignItems: "center" }}>
+        <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+          <label style={{ fontWeight: 700 }}>Difficulty</label>
+          <div style={{ padding: 6, border: "1px solid #e2e8f0", borderRadius: 12, background: "white" }}>
+            <select value={difficulty} onChange={(e) => setDifficulty(e.target.value)} style={{ padding: 6, border: "none", background: "transparent" }}>
+              <option value="AP Style">AP Style</option>
+              <option value="Active Recall">Active Recall</option>
+            </select>
+          </div>
+        </div>
+      </div>
 
       <div style={{ marginTop: 12 }}>
         {!question && <div style={{ color: "#475569" }}>{loadError || "Loading FRQ..."}</div>}

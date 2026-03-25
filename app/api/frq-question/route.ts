@@ -21,6 +21,7 @@ export async function GET(req: Request) {
     const url = new URL(req.url);
     const mode = url.searchParams.get("mode") || "all";
     const unit = url.searchParams.get("unit");
+    const difficulty = url.searchParams.get("difficulty") || "ap";
     const unitNum = parseUnitNumber(unit);
 
     const datasetsDir = path.join(process.cwd(), "app", "sims", "active-recall", "datasets");
@@ -36,6 +37,12 @@ export async function GET(req: Request) {
         const arr = parseFrqData(raw);
         for (const q of arr) {
           if (!q || !Array.isArray(q.parts)) continue;
+          
+          // Filter by difficulty: active-recall mode shows only hard questions
+          if (difficulty === "active-recall") {
+            const qDifficulty = String(q.difficulty || "").toLowerCase();
+            if (qDifficulty !== "hard") continue;
+          }
           
           if (mode === "unit" && unitNum !== null) {
             if (typeof q.id === "string" && q.id.startsWith(`u${unitNum}-frq-`)) {
