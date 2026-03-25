@@ -1,0 +1,128 @@
+[
+  {
+    "id": "u4-ar-1",
+    "difficulty": "easy",
+    "topic": "cell communication",
+    "text": "What is cell signaling?"
+  },
+  {
+    "id": "u4-ar-2",
+    "difficulty": "easy",
+    "topic": "cell communication",
+    "text": "What is a ligand?"
+  },
+  {
+    "id": "u4-ar-3",
+    "difficulty": "easy",
+    "topic": "cell communication",
+    "text": "What is a receptor?"
+  },
+  {
+    "id": "u4-ar-4",
+    "difficulty": "easy",
+    "topic": "cell communication",
+    "text": "What is local signaling?"
+  },
+  {
+    "id": "u4-ar-5",
+    "difficulty": "easy",
+    "topic": "cell communication",
+    "text": "What is long-distance signaling?"
+  },
+  {
+    "id": "u4-ar-6",
+    "difficulty": "easy",
+    "topic": "cell communication",
+    "text": "What is direct contact signaling?"
+  },
+  {
+    "id": "u4-ar-7",
+    "difficulty": "easy",
+    "topic": "cell communication",
+    "text": "What is paracrine signaling?"
+  },
+  {
+    "id": "u4-ar-8",
+    "difficulty": "easy",
+    "topic": "cell communication",
+    "text": "What is endocrine signaling?"
+  },
+  {
+    "id": "u4-ar-9",
+    "difficulty": "easy",
+    "topic": "introduction to signal transduction",
+    "text": "What is signal transduction?"
+  },
+  {
+    "id": "u4-ar-10",
+    "difficulty": "easy",
+    "topic": "introduction to signal transduction",
+    "text": "What is reception in cell signaling?"
+  },
+  {
+    "id": "u4-ar-11",
+    "difficulty": "easy",
+    "topic": "introduction to signal transduction",
+    "text": "What is transduction in cell signaling?"
+  },
+  {
+    "id": "u4-ar-12",
+    "difficulty": "easy",
+    "topic": "introduction to signal transduction",
+    "text": "What is a cellular response?"
+  },
+  {
+    "id": "u4-ar-13",
+    "difficulty": "easy",
+    "topic": "introduction to signal transduction",
+    "text": "Why is specificity important in cell signaling?"
+  },
+  {
+    "id": "u4-ar-14",
+    "difficulty": "easy",
+    "topic": "signal transduction pathways",
+    "text": "What is a phosphorylation cascade?"
+  },
+  {
+    "id": "u4-ar-15",
+    "difficulty": "easy",
+    "topic": "signal transduction pathways",
+    "text": "What is a protein kinase?"
+  },
+  {
+    "id": "u4-ar-16",
+    "difficulty": "easy",
+    "topic": "signal transduction pathways",
+    "text": "What is a protein phosphatase?"
+  },
+  {
+    "id": "u4-ar-17",
+    "difficulty": "easy",
+    "topic": "signal transduction pathways",
+    "text": "What is signal amplification?"
+  },
+  {
+    "id": "u4-ar-18",
+    "difficulty": "easy",
+    "topic": "signal transduction pathways",
+    "text": "What is a second messenger?"
+  },
+  {
+    "id": "u4-ar-19",
+    "difficulty": "easy",
+    "topic": "signal transduction pathways",
+    "text": "What is cAMP?"
+  },
+  {
+    "id": "u4-ar-20",
+    "difficulty": "easy",
+    "topic": "signal transduction pathways",
+    "text": "What is a G protein-coupled receptor (GPCR)?"
+  },
+  {
+    "id": "u4-ar-21",
+    "difficulty": "easy",
+    "topic": "signal transduction pathways",
+    "text": "What is a receptor tyrosine kinase (RTK)?"
+  }
+]

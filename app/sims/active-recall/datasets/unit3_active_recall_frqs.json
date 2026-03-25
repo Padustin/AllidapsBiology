@@ -1,0 +1,134 @@
+[
+  {
+    "id": "u3-ar-1",
+    "difficulty": "easy",
+    "topic": "enzymes",
+    "text": "What is an enzyme?"
+  },
+  {
+    "id": "u3-ar-2",
+    "difficulty": "easy",
+    "topic": "enzymes",
+    "text": "What is activation energy?"
+  },
+  {
+    "id": "u3-ar-3",
+    "difficulty": "easy",
+    "topic": "enzymes",
+    "text": "What is a substrate?"
+  },
+  {
+    "id": "u3-ar-4",
+    "difficulty": "easy",
+    "topic": "enzymes",
+    "text": "What is the active site?"
+  },
+  {
+    "id": "u3-ar-5",
+    "difficulty": "easy",
+    "topic": "enzymes",
+    "text": "What is the enzyme-substrate complex?"
+  },
+  {
+    "id": "u3-ar-6",
+    "difficulty": "easy",
+    "topic": "enzymes",
+    "text": "What is induced fit?"
+  },
+  {
+    "id": "u3-ar-7",
+    "difficulty": "easy",
+    "topic": "environmental impacts on enzyme function",
+    "text": "What is denaturation in the context of enzymes?"
+  },
+  {
+    "id": "u3-ar-8",
+    "difficulty": "easy",
+    "topic": "environmental impacts on enzyme function",
+    "text": "How does temperature affect enzyme activity?"
+  },
+  {
+    "id": "u3-ar-9",
+    "difficulty": "easy",
+    "topic": "environmental impacts on enzyme function",
+    "text": "How does pH affect enzyme activity?"
+  },
+  {
+    "id": "u3-ar-10",
+    "difficulty": "easy",
+    "topic": "environmental impacts on enzyme function",
+    "text": "What is a competitive inhibitor?"
+  },
+  {
+    "id": "u3-ar-11",
+    "difficulty": "easy",
+    "topic": "environmental impacts on enzyme function",
+    "text": "What is a noncompetitive inhibitor?"
+  },
+  {
+    "id": "u3-ar-12",
+    "difficulty": "easy",
+    "topic": "environmental impacts on enzyme function",
+    "text": "What is an allosteric site?"
+  },
+  {
+    "id": "u3-ar-13",
+    "difficulty": "easy",
+    "topic": "environmental impacts on enzyme function",
+    "text": "What is a cofactor?"
+  },
+  {
+    "id": "u3-ar-14",
+    "difficulty": "easy",
+    "topic": "environmental impacts on enzyme function",
+    "text": "What is a coenzyme?"
+  },
+  {
+    "id": "u3-ar-15",
+    "difficulty": "easy",
+    "topic": "environmental impacts on enzyme function",
+    "text": "What does optimal temperature mean for an enzyme?"
+  },
+  {
+    "id": "u3-ar-16",
+    "difficulty": "easy",
+    "topic": "environmental impacts on enzyme function",
+    "text": "What does optimal pH mean for an enzyme?"
+  },
+  {
+    "id": "u3-ar-17",
+    "difficulty": "easy",
+    "topic": "cellular energy",
+    "text": "What is ATP?"
+  },
+  {
+    "id": "u3-ar-18",
+    "difficulty": "easy",
+    "topic": "cellular energy",
+    "text": "What is ADP?"
+  },
+  {
+    "id": "u3-ar-19",
+    "difficulty": "easy",
+    "topic": "cellular energy",
+    "text": "What is phosphorylation?"
+  },
+  {
+    "id": "u3-ar-20",
+    "difficulty": "easy",
+    "topic": "cellular energy",
+    "text": "What is an exergonic reaction?"
+  },
+  {
+    "id": "u3-ar-21",
+    "difficulty": "easy",
+    "topic": "cellular energy",
+    "text": "What is an endergonic reaction?"
+  },
+  {
+    "id": "u3-ar-22",
+    "difficulty": "easy",
+    "topic": "cellular energy",
+    "text": "What does it mean to say ATP couples reactions?"
+  }
+]

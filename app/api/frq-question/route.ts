@@ -27,7 +27,15 @@ export async function GET(req: Request) {
     const datasetsDir = path.join(process.cwd(), "app", "sims", "active-recall", "datasets");
     const files = fs
       .readdirSync(datasetsDir)
-      .filter((f) => f.endsWith(".json") && /frq/i.test(f));
+      .filter((f) => {
+        if (difficulty === "active-recall") {
+          // Use active recall specific files
+          return f.endsWith(".json") && /active_recall_frq/i.test(f);
+        } else {
+          // Use regular FRQ files (but not active recall files)
+          return f.endsWith(".json") && /frq/i.test(f) && !/active_recall/i.test(f);
+        }
+      });
 
     const candidates: any[] = [];
 
@@ -36,16 +44,13 @@ export async function GET(req: Request) {
         const raw = fs.readFileSync(path.join(datasetsDir, f), "utf8");
         const arr = parseFrqData(raw);
         for (const q of arr) {
-          if (!q || !Array.isArray(q.parts)) continue;
+          if (!q) continue;
           
-          // Filter by difficulty: active-recall mode shows only hard questions
-          if (difficulty === "active-recall") {
-            const qDifficulty = String(q.difficulty || "").toLowerCase();
-            if (qDifficulty !== "hard") continue;
-          }
+          // Active recall questions may not have parts, regular FRQs should
+          if (difficulty !== "active-recall" && !Array.isArray(q.parts)) continue;
           
           if (mode === "unit" && unitNum !== null) {
-            if (typeof q.id === "string" && q.id.startsWith(`u${unitNum}-frq-`)) {
+            if (typeof q.id === "string" && q.id.startsWith(`u${unitNum}-`)) {
               candidates.push(q);
             }
           } else {
