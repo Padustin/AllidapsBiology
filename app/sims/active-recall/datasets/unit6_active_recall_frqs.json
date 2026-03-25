@@ -3,132 +3,924 @@
     "id": "u6-ar-1",
     "difficulty": "easy",
     "topic": "dna and rna structure",
-    "text": "What is DNA?"
+    "text": "What is DNA?",
+    "explain": "DNA is the hereditary molecule that stores genetic information in most organisms.",
+    "bullet_points": [
+      "Stores genetic information.",
+      "Usually double-stranded.",
+      "Contains deoxyribose and thymine."
+    ]
   },
   {
     "id": "u6-ar-2",
     "difficulty": "easy",
     "topic": "dna and rna structure",
-    "text": "What is RNA?"
+    "text": "What is RNA?",
+    "explain": "RNA is a nucleic acid involved in gene expression and other cellular functions. It is usually single-stranded.",
+    "bullet_points": [
+      "Usually single-stranded.",
+      "Contains ribose and uracil.",
+      "Important in protein synthesis and regulation."
+    ]
   },
   {
     "id": "u6-ar-3",
     "difficulty": "easy",
     "topic": "dna and rna structure",
-    "text": "What is the difference between DNA and RNA?"
+    "text": "What is the difference between DNA and RNA?",
+    "explain": "DNA contains deoxyribose and thymine and is usually double-stranded, while RNA contains ribose and uracil and is usually single-stranded.",
+    "bullet_points": [
+      "Different sugar.",
+      "Different base: thymine vs uracil.",
+      "Usually double-stranded DNA vs single-stranded RNA."
+    ]
   },
   {
     "id": "u6-ar-4",
     "difficulty": "easy",
     "topic": "dna and rna structure",
-    "text": "What is a chromosome?"
+    "text": "What is a chromosome?",
+    "explain": "A chromosome is a DNA molecule packaged with proteins that carries genetic information.",
+    "bullet_points": [
+      "Carries genetic information.",
+      "DNA packaged with proteins.",
+      "Eukaryotic chromosomes are usually linear."
+    ]
   },
   {
     "id": "u6-ar-5",
     "difficulty": "easy",
     "topic": "dna and rna structure",
-    "text": "What is a plasmid?"
+    "text": "What is a plasmid?",
+    "explain": "A plasmid is a small circular DNA molecule separate from the main chromosome.",
+    "bullet_points": [
+      "Usually circular DNA.",
+      "Can be found in prokaryotes and some eukaryotes.",
+      "Often used in biotechnology."
+    ]
   },
   {
     "id": "u6-ar-6",
     "difficulty": "easy",
     "topic": "dna and rna structure",
-    "text": "What is a purine?"
+    "text": "What is a purine?",
+    "explain": "A purine is a nitrogenous base with a double-ring structure. Adenine and guanine are purines.",
+    "bullet_points": [
+      "Double-ring base.",
+      "Adenine and guanine are purines.",
+      "Pair with pyrimidines."
+    ]
   },
   {
     "id": "u6-ar-7",
     "difficulty": "easy",
     "topic": "dna and rna structure",
-    "text": "What is a pyrimidine?"
+    "text": "What is a pyrimidine?",
+    "explain": "A pyrimidine is a nitrogenous base with a single-ring structure. Cytosine, thymine, and uracil are pyrimidines.",
+    "bullet_points": [
+      "Single-ring base.",
+      "Cytosine, thymine, and uracil are pyrimidines.",
+      "Pair with purines."
+    ]
   },
   {
     "id": "u6-ar-8",
     "difficulty": "easy",
     "topic": "dna and rna structure",
-    "text": "What is complementary base pairing?"
+    "text": "What is complementary base pairing?",
+    "explain": "Complementary base pairing is the specific pairing of nucleotides, with A pairing to T in DNA or U in RNA, and G pairing to C.",
+    "bullet_points": [
+      "Specific pairing rules.",
+      "A pairs with T or U.",
+      "G pairs with C."
+    ]
   },
   {
     "id": "u6-ar-9",
     "difficulty": "easy",
     "topic": "dna and rna structure",
-    "text": "What is a histone?"
+    "text": "What is a histone?",
+    "explain": "A histone is a protein around which eukaryotic DNA is wrapped to help package chromosomes.",
+    "bullet_points": [
+      "DNA-packaging protein.",
+      "Found in eukaryotes.",
+      "Helps organize and condense DNA."
+    ]
   },
   {
     "id": "u6-ar-10",
     "difficulty": "easy",
     "topic": "dna replication",
-    "text": "What is DNA replication?"
+    "text": "What is DNA replication?",
+    "explain": "DNA replication is the process of copying DNA before cell division.",
+    "bullet_points": [
+      "Copies the DNA molecule.",
+      "Occurs before division.",
+      "Ensures daughter cells receive genetic information."
+    ]
   },
   {
     "id": "u6-ar-11",
     "difficulty": "easy",
     "topic": "dna replication",
-    "text": "What does semiconservative replication mean?"
+    "text": "What does semiconservative replication mean?",
+    "explain": "Semiconservative replication means each new DNA molecule contains one original strand and one newly synthesized strand.",
+    "bullet_points": [
+      "One old strand plus one new strand.",
+      "Describes the result of DNA replication.",
+      "Preserves template information."
+    ]
   },
   {
     "id": "u6-ar-12",
     "difficulty": "easy",
     "topic": "dna replication",
-    "text": "What is helicase?"
+    "text": "What is helicase?",
+    "explain": "Helicase is the enzyme that unwinds DNA by breaking hydrogen bonds between the two strands.",
+    "bullet_points": [
+      "Unwinds the double helix.",
+      "Breaks hydrogen bonds.",
+      "Opens the replication fork."
+    ]
   },
   {
     "id": "u6-ar-13",
     "difficulty": "easy",
     "topic": "dna replication",
-    "text": "What is a replication fork?"
+    "text": "What is a replication fork?",
+    "explain": "A replication fork is the Y-shaped region where DNA is being unwound and copied.",
+    "bullet_points": [
+      "Y-shaped region.",
+      "Site of active replication.",
+      "Forms where helicase opens DNA."
+    ]
   },
   {
     "id": "u6-ar-14",
     "difficulty": "easy",
     "topic": "dna replication",
-    "text": "What is primase?"
+    "text": "What is primase?",
+    "explain": "Primase is the enzyme that builds a short RNA primer so DNA polymerase can begin synthesis.",
+    "bullet_points": [
+      "Makes RNA primer.",
+      "Provides a starting point.",
+      "Needed because DNA polymerase cannot start from nothing."
+    ]
   },
   {
     "id": "u6-ar-15",
     "difficulty": "easy",
     "topic": "dna replication",
-    "text": "What is a primer?"
+    "text": "What is a primer?",
+    "explain": "A primer is a short RNA strand that provides the starting point for DNA synthesis.",
+    "bullet_points": [
+      "Short RNA segment.",
+      "Made by primase.",
+      "Needed for DNA polymerase to begin."
+    ]
   },
   {
     "id": "u6-ar-16",
     "difficulty": "easy",
     "topic": "dna replication",
-    "text": "What is DNA polymerase?"
+    "text": "What is DNA polymerase?",
+    "explain": "DNA polymerase is the enzyme that adds DNA nucleotides to a growing strand during replication.",
+    "bullet_points": [
+      "Adds DNA nucleotides.",
+      "Builds the new strand.",
+      "Uses the old strand as a template."
+    ]
   },
   {
     "id": "u6-ar-17",
     "difficulty": "easy",
     "topic": "dna replication",
-    "text": "What is the leading strand?"
+    "text": "What is the leading strand?",
+    "explain": "The leading strand is the new DNA strand synthesized continuously toward the replication fork.",
+    "bullet_points": [
+      "Synthesized continuously.",
+      "Built toward the fork.",
+      "Requires only one primer in a region."
+    ]
   },
   {
     "id": "u6-ar-18",
     "difficulty": "easy",
     "topic": "dna replication",
-    "text": "What is the lagging strand?"
+    "text": "What is the lagging strand?",
+    "explain": "The lagging strand is the new DNA strand synthesized discontinuously away from the replication fork.",
+    "bullet_points": [
+      "Synthesized discontinuously.",
+      "Built away from the fork.",
+      "Made in short segments."
+    ]
   },
   {
     "id": "u6-ar-19",
     "difficulty": "easy",
     "topic": "dna replication",
-    "text": "What are Okazaki fragments?"
+    "text": "What are Okazaki fragments?",
+    "explain": "Okazaki fragments are short DNA segments synthesized on the lagging strand.",
+    "bullet_points": [
+      "Short DNA pieces.",
+      "Form on the lagging strand.",
+      "Later joined together."
+    ]
   },
   {
     "id": "u6-ar-20",
     "difficulty": "easy",
     "topic": "dna replication",
-    "text": "What is DNA ligase?"
+    "text": "What is DNA ligase?",
+    "explain": "DNA ligase is the enzyme that joins DNA fragments by sealing breaks in the sugar-phosphate backbone.",
+    "bullet_points": [
+      "Joins fragments together.",
+      "Seals the backbone.",
+      "Important on the lagging strand."
+    ]
   },
   {
     "id": "u6-ar-21",
     "difficulty": "easy",
     "topic": "dna replication",
-    "text": "Why is base pairing important in DNA replication?"
+    "text": "Why is base pairing important in DNA replication?",
+    "explain": "Base pairing is important because it allows each original strand to serve as a template for building a complementary new strand.",
+    "bullet_points": [
+      "Old strands act as templates.",
+      "Specific pairing preserves sequence information.",
+      "Helps ensure accurate copying."
+    ]
   },
   {
     "id": "u6-ar-22",
     "difficulty": "easy",
     "topic": "transcription and rna processing",
-    "text": "What is transcription?"
+    "text": "What is transcription?",
+    "explain": "Transcription is the process of making an RNA molecule from a DNA template.",
+    "bullet_points": [
+      "Makes RNA from DNA.",
+      "Uses RNA polymerase.",
+      "Often produces mRNA."
+    ]
+  },
+  {
+    "id": "u6-ar-23",
+    "difficulty": "easy",
+    "topic": "transcription and rna processing",
+    "text": "What does RNA polymerase do?",
+    "explain": "RNA polymerase reads the DNA template strand and links RNA nucleotides together to form an RNA transcript.",
+    "bullet_points": [
+      "Reads DNA template.",
+      "Builds RNA strand.",
+      "Main enzyme of transcription."
+    ]
+  },
+  {
+    "id": "u6-ar-24",
+    "difficulty": "easy",
+    "topic": "transcription and rna processing",
+    "text": "What is a promoter?",
+    "explain": "A promoter is a DNA sequence where RNA polymerase and other factors bind to begin transcription.",
+    "bullet_points": [
+      "Start region for transcription.",
+      "RNA polymerase binds here.",
+      "Controls where transcription begins."
+    ]
+  },
+  {
+    "id": "u6-ar-25",
+    "difficulty": "easy",
+    "topic": "transcription and rna processing",
+    "text": "What is the template strand?",
+    "explain": "The template strand is the DNA strand that RNA polymerase reads to build a complementary RNA strand.",
+    "bullet_points": [
+      "Read by RNA polymerase.",
+      "Used to determine RNA sequence.",
+      "Complementary to the RNA transcript."
+    ]
+  },
+  {
+    "id": "u6-ar-26",
+    "difficulty": "easy",
+    "topic": "transcription and rna processing",
+    "text": "What is the coding strand?",
+    "explain": "The coding strand is the DNA strand whose sequence matches the RNA transcript except that DNA uses thymine and RNA uses uracil.",
+    "bullet_points": [
+      "Sequence resembles the RNA transcript.",
+      "Not the strand read by RNA polymerase.",
+      "Uses T instead of U."
+    ]
+  },
+  {
+    "id": "u6-ar-27",
+    "difficulty": "easy",
+    "topic": "transcription and rna processing",
+    "text": "What is a terminator?",
+    "explain": "A terminator is a DNA sequence that signals transcription to stop.",
+    "bullet_points": [
+      "Signals the end of transcription.",
+      "Helps end RNA synthesis.",
+      "Part of gene regulation."
+    ]
+  },
+  {
+    "id": "u6-ar-28",
+    "difficulty": "easy",
+    "topic": "transcription and rna processing",
+    "text": "What is pre-mRNA?",
+    "explain": "Pre-mRNA is the initial RNA transcript in eukaryotes before processing is complete.",
+    "bullet_points": [
+      "Early transcript in eukaryotes.",
+      "Contains introns and exons.",
+      "Must be processed before translation."
+    ]
+  },
+  {
+    "id": "u6-ar-29",
+    "difficulty": "easy",
+    "topic": "transcription and rna processing",
+    "text": "What is RNA processing?",
+    "explain": "RNA processing is the modification of pre-mRNA in eukaryotes to produce mature mRNA.",
+    "bullet_points": [
+      "Occurs in eukaryotes.",
+      "Includes splicing and other modifications.",
+      "Produces mature mRNA."
+    ]
+  },
+  {
+    "id": "u6-ar-30",
+    "difficulty": "easy",
+    "topic": "transcription and rna processing",
+    "text": "What is an intron?",
+    "explain": "An intron is a noncoding region in pre-mRNA that is removed during RNA processing.",
+    "bullet_points": [
+      "Noncoding region.",
+      "Removed during splicing.",
+      "Not present in mature mRNA."
+    ]
+  },
+  {
+    "id": "u6-ar-31",
+    "difficulty": "easy",
+    "topic": "transcription and rna processing",
+    "text": "What is an exon?",
+    "explain": "An exon is a region of RNA that remains in mature mRNA after processing.",
+    "bullet_points": [
+      "Retained in mature mRNA.",
+      "Often codes for part of the protein sequence.",
+      "Joined together during splicing."
+    ]
+  },
+  {
+    "id": "u6-ar-32",
+    "difficulty": "easy",
+    "topic": "transcription and rna processing",
+    "text": "What is splicing?",
+    "explain": "Splicing is the removal of introns and joining of exons in a eukaryotic RNA transcript.",
+    "bullet_points": [
+      "Removes introns.",
+      "Joins exons.",
+      "Part of RNA processing."
+    ]
+  },
+  {
+    "id": "u6-ar-33",
+    "difficulty": "easy",
+    "topic": "transcription and rna processing",
+    "text": "What is a 5' cap?",
+    "explain": "A 5' cap is a modified nucleotide added to the beginning of eukaryotic mRNA that helps protect the RNA and assists in translation.",
+    "bullet_points": [
+      "Added to the front of mRNA.",
+      "Helps protect transcript.",
+      "Helps ribosome recognition."
+    ]
+  },
+  {
+    "id": "u6-ar-34",
+    "difficulty": "easy",
+    "topic": "transcription and rna processing",
+    "text": "What is a poly-A tail?",
+    "explain": "A poly-A tail is a chain of adenines added to the end of eukaryotic mRNA that helps protect and stabilize the transcript.",
+    "bullet_points": [
+      "Added to the end of mRNA.",
+      "Helps stabilize the RNA.",
+      "Protects against degradation."
+    ]
+  },
+  {
+    "id": "u6-ar-35",
+    "difficulty": "easy",
+    "topic": "transcription and rna processing",
+    "text": "What is alternative splicing?",
+    "explain": "Alternative splicing is the process in which different combinations of exons are joined to produce different mRNAs from the same gene.",
+    "bullet_points": [
+      "One gene can produce multiple mRNAs.",
+      "Different exon combinations are used.",
+      "Increases protein diversity."
+    ]
+  },
+  {
+    "id": "u6-ar-36",
+    "difficulty": "easy",
+    "topic": "translation",
+    "text": "What is translation?",
+    "explain": "Translation is the process in which ribosomes read mRNA codons to build a polypeptide.",
+    "bullet_points": [
+      "Builds a polypeptide from mRNA information.",
+      "Occurs at ribosomes.",
+      "Uses tRNA and codons."
+    ]
+  },
+  {
+    "id": "u6-ar-37",
+    "difficulty": "easy",
+    "topic": "translation",
+    "text": "What is a codon?",
+    "explain": "A codon is a three-nucleotide sequence on mRNA that specifies an amino acid or a stop signal.",
+    "bullet_points": [
+      "Three nucleotides long.",
+      "Found on mRNA.",
+      "Codes for an amino acid or stop."
+    ]
+  },
+  {
+    "id": "u6-ar-38",
+    "difficulty": "easy",
+    "topic": "translation",
+    "text": "What is an anticodon?",
+    "explain": "An anticodon is a three-nucleotide sequence on tRNA that pairs with a complementary codon on mRNA.",
+    "bullet_points": [
+      "Found on tRNA.",
+      "Pairs with mRNA codon.",
+      "Helps place the correct amino acid."
+    ]
+  },
+  {
+    "id": "u6-ar-39",
+    "difficulty": "easy",
+    "topic": "translation",
+    "text": "What is tRNA?",
+    "explain": "tRNA is a transfer RNA molecule that carries an amino acid to the ribosome and matches its anticodon to the mRNA codon.",
+    "bullet_points": [
+      "Carries amino acids.",
+      "Has an anticodon.",
+      "Functions in translation."
+    ]
+  },
+  {
+    "id": "u6-ar-40",
+    "difficulty": "easy",
+    "topic": "translation",
+    "text": "What is mRNA?",
+    "explain": "mRNA is messenger RNA that carries the genetic code from DNA to the ribosome.",
+    "bullet_points": [
+      "Carries coding information.",
+      "Used in translation.",
+      "Contains codons."
+    ]
+  },
+  {
+    "id": "u6-ar-41",
+    "difficulty": "easy",
+    "topic": "translation",
+    "text": "What is rRNA?",
+    "explain": "rRNA is ribosomal RNA, a structural and catalytic component of ribosomes.",
+    "bullet_points": [
+      "Part of ribosomes.",
+      "Helps ribosomes function.",
+      "A type of functional RNA."
+    ]
+  },
+  {
+    "id": "u6-ar-42",
+    "difficulty": "easy",
+    "topic": "translation",
+    "text": "What is a start codon?",
+    "explain": "A start codon is the codon that signals the beginning of translation, usually AUG.",
+    "bullet_points": [
+      "Begins translation.",
+      "Usually AUG.",
+      "Also codes for methionine."
+    ]
+  },
+  {
+    "id": "u6-ar-43",
+    "difficulty": "easy",
+    "topic": "translation",
+    "text": "What is a stop codon?",
+    "explain": "A stop codon is a codon that signals the end of translation.",
+    "bullet_points": [
+      "Ends translation.",
+      "Does not code for an amino acid.",
+      "There are three stop codons."
+    ]
+  },
+  {
+    "id": "u6-ar-44",
+    "difficulty": "easy",
+    "topic": "translation",
+    "text": "What is a ribosome?",
+    "explain": "A ribosome is the structure that reads mRNA and links amino acids together to make a polypeptide.",
+    "bullet_points": [
+      "Site of translation.",
+      "Made of rRNA and proteins.",
+      "Forms peptide bonds."
+    ]
+  },
+  {
+    "id": "u6-ar-45",
+    "difficulty": "easy",
+    "topic": "translation",
+    "text": "What is a polypeptide?",
+    "explain": "A polypeptide is a chain of amino acids linked by peptide bonds.",
+    "bullet_points": [
+      "Chain of amino acids.",
+      "Product of translation.",
+      "Can fold into a protein."
+    ]
+  },
+  {
+    "id": "u6-ar-46",
+    "difficulty": "easy",
+    "topic": "translation",
+    "text": "What is a peptide bond?",
+    "explain": "A peptide bond is the covalent bond that joins amino acids together.",
+    "bullet_points": [
+      "Joins amino acids.",
+      "Forms during translation.",
+      "Found in polypeptides and proteins."
+    ]
+  },
+  {
+    "id": "u6-ar-47",
+    "difficulty": "easy",
+    "topic": "regulation of gene expression",
+    "text": "What is gene expression?",
+    "explain": "Gene expression is the process by which information in a gene is used to produce a functional product, usually a protein or functional RNA.",
+    "bullet_points": [
+      "Uses genetic information.",
+      "Produces RNA or protein.",
+      "Can be regulated at many steps."
+    ]
+  },
+  {
+    "id": "u6-ar-48",
+    "difficulty": "easy",
+    "topic": "regulation of gene expression",
+    "text": "What is an operon?",
+    "explain": "An operon is a group of genes in prokaryotes that are regulated together under one promoter.",
+    "bullet_points": [
+      "Common in prokaryotes.",
+      "Genes are regulated together.",
+      "Usually includes promoter, operator, and structural genes."
+    ]
+  },
+  {
+    "id": "u6-ar-49",
+    "difficulty": "easy",
+    "topic": "regulation of gene expression",
+    "text": "What is an operator?",
+    "explain": "An operator is a DNA region in an operon where a regulatory protein can bind to affect transcription.",
+    "bullet_points": [
+      "Regulatory DNA sequence.",
+      "Often binds a repressor.",
+      "Helps control transcription."
+    ]
+  },
+  {
+    "id": "u6-ar-50",
+    "difficulty": "easy",
+    "topic": "regulation of gene expression",
+    "text": "What does a repressor do?",
+    "explain": "A repressor is a regulatory protein that decreases or blocks transcription when it binds to DNA.",
+    "bullet_points": [
+      "Blocks transcription.",
+      "Binds regulatory DNA sequences.",
+      "Reduces gene expression."
+    ]
+  },
+  {
+    "id": "u6-ar-51",
+    "difficulty": "easy",
+    "topic": "regulation of gene expression",
+    "text": "What does an activator do?",
+    "explain": "An activator is a regulatory protein that increases transcription of a gene.",
+    "bullet_points": [
+      "Increases transcription.",
+      "Helps recruit or stabilize RNA polymerase.",
+      "Raises gene expression."
+    ]
+  },
+  {
+    "id": "u6-ar-52",
+    "difficulty": "easy",
+    "topic": "regulation of gene expression",
+    "text": "What is an inducer?",
+    "explain": "An inducer is a molecule that turns on gene expression, often by inactivating a repressor.",
+    "bullet_points": [
+      "Helps activate gene expression.",
+      "Can remove repression.",
+      "Common in operon regulation."
+    ]
+  },
+  {
+    "id": "u6-ar-53",
+    "difficulty": "easy",
+    "topic": "regulation of gene expression",
+    "text": "What is the lac operon?",
+    "explain": "The lac operon is a bacterial gene system involved in lactose metabolism that is turned on when lactose is available and the pathway is needed.",
+    "bullet_points": [
+      "Bacterial operon.",
+      "Involved in lactose metabolism.",
+      "Can be regulated by a repressor and CAP-cAMP."
+    ]
+  },
+  {
+    "id": "u6-ar-54",
+    "difficulty": "easy",
+    "topic": "regulation of gene expression",
+    "text": "How does DNA methylation affect gene expression?",
+    "explain": "DNA methylation usually decreases gene expression by making DNA less accessible to the transcription machinery.",
+    "bullet_points": [
+      "Usually lowers expression.",
+      "Makes DNA less accessible.",
+      "An epigenetic change."
+    ]
+  },
+  {
+    "id": "u6-ar-55",
+    "difficulty": "easy",
+    "topic": "regulation of gene expression",
+    "text": "How does histone acetylation affect gene expression?",
+    "explain": "Histone acetylation usually increases gene expression by loosening the interaction between DNA and histones.",
+    "bullet_points": [
+      "Usually raises expression.",
+      "Loosens DNA-histone interaction.",
+      "Makes DNA more accessible."
+    ]
+  },
+  {
+    "id": "u6-ar-56",
+    "difficulty": "easy",
+    "topic": "regulation of gene expression",
+    "text": "What is epigenetic regulation?",
+    "explain": "Epigenetic regulation is control of gene expression through changes that affect DNA accessibility without changing the DNA sequence itself.",
+    "bullet_points": [
+      "Changes expression without changing sequence.",
+      "Includes DNA methylation and histone modification.",
+      "Can affect chromatin structure."
+    ]
+  },
+  {
+    "id": "u6-ar-57",
+    "difficulty": "easy",
+    "topic": "gene expression and cell specialization",
+    "text": "What is cell specialization?",
+    "explain": "Cell specialization is the process by which cells develop distinct structures and functions.",
+    "bullet_points": [
+      "Cells become different in form and function.",
+      "Important in multicellular organisms.",
+      "Depends on differential gene expression."
+    ]
+  },
+  {
+    "id": "u6-ar-58",
+    "difficulty": "easy",
+    "topic": "gene expression and cell specialization",
+    "text": "Why can cells with the same DNA have different functions?",
+    "explain": "Cells with the same DNA can have different functions because different genes are turned on or off in different cells.",
+    "bullet_points": [
+      "Same genome, different expression patterns.",
+      "Different proteins are made in different cells.",
+      "Leads to different cell types."
+    ]
+  },
+  {
+    "id": "u6-ar-59",
+    "difficulty": "easy",
+    "topic": "gene expression and cell specialization",
+    "text": "What is differentiation?",
+    "explain": "Differentiation is the process by which an unspecialized cell becomes a specialized cell type.",
+    "bullet_points": [
+      "Cells become specialized.",
+      "Driven by gene expression changes.",
+      "Important in development."
+    ]
+  },
+  {
+    "id": "u6-ar-60",
+    "difficulty": "easy",
+    "topic": "gene expression and cell specialization",
+    "text": "What is differential gene expression?",
+    "explain": "Differential gene expression means different cells express different sets of genes.",
+    "bullet_points": [
+      "Different genes are active in different cells.",
+      "Produces different proteins.",
+      "Causes specialized functions."
+    ]
+  },
+  {
+    "id": "u6-ar-61",
+    "difficulty": "easy",
+    "topic": "mutations",
+    "text": "What is a mutation?",
+    "explain": "A mutation is a change in the nucleotide sequence of DNA.",
+    "bullet_points": [
+      "Change in DNA sequence.",
+      "Can affect gene products.",
+      "May be harmful, neutral, or beneficial."
+    ]
+  },
+  {
+    "id": "u6-ar-62",
+    "difficulty": "easy",
+    "topic": "mutations",
+    "text": "What is a substitution mutation?",
+    "explain": "A substitution mutation is a mutation in which one nucleotide is replaced by another.",
+    "bullet_points": [
+      "One base is replaced.",
+      "Can be silent, missense, or nonsense.",
+      "Does not shift the reading frame."
+    ]
+  },
+  {
+    "id": "u6-ar-63",
+    "difficulty": "easy",
+    "topic": "mutations",
+    "text": "What is an insertion mutation?",
+    "explain": "An insertion mutation adds one or more nucleotides to a DNA sequence.",
+    "bullet_points": [
+      "Adds nucleotide(s).",
+      "Can cause a frameshift if not in multiples of three.",
+      "May alter the protein greatly."
+    ]
+  },
+  {
+    "id": "u6-ar-64",
+    "difficulty": "easy",
+    "topic": "mutations",
+    "text": "What is a deletion mutation?",
+    "explain": "A deletion mutation removes one or more nucleotides from a DNA sequence.",
+    "bullet_points": [
+      "Removes nucleotide(s).",
+      "Can cause a frameshift if not in multiples of three.",
+      "May alter the protein greatly."
+    ]
+  },
+  {
+    "id": "u6-ar-65",
+    "difficulty": "easy",
+    "topic": "mutations",
+    "text": "What is a frameshift mutation?",
+    "explain": "A frameshift mutation is a mutation that shifts the codon reading frame, usually because of an insertion or deletion not in multiples of three.",
+    "bullet_points": [
+      "Shifts reading frame.",
+      "Often changes many amino acids downstream.",
+      "Usually has large effects."
+    ]
+  },
+  {
+    "id": "u6-ar-66",
+    "difficulty": "easy",
+    "topic": "mutations",
+    "text": "What is a silent mutation?",
+    "explain": "A silent mutation changes the DNA sequence without changing the amino acid sequence of the protein.",
+    "bullet_points": [
+      "DNA changes but amino acid does not.",
+      "Often due to redundancy in the genetic code.",
+      "May have little effect on protein sequence."
+    ]
+  },
+  {
+    "id": "u6-ar-67",
+    "difficulty": "easy",
+    "topic": "mutations",
+    "text": "What is a missense mutation?",
+    "explain": "A missense mutation changes a codon so that a different amino acid is incorporated.",
+    "bullet_points": [
+      "Changes one amino acid to another.",
+      "Can alter protein structure or function.",
+      "A type of substitution mutation."
+    ]
+  },
+  {
+    "id": "u6-ar-68",
+    "difficulty": "easy",
+    "topic": "mutations",
+    "text": "What is a nonsense mutation?",
+    "explain": "A nonsense mutation changes a codon into a stop codon, causing translation to stop early.",
+    "bullet_points": [
+      "Creates a stop codon.",
+      "Shortens the protein.",
+      "Often disrupts function."
+    ]
+  },
+  {
+    "id": "u6-ar-69",
+    "difficulty": "easy",
+    "topic": "mutations",
+    "text": "Are all mutations harmful?",
+    "explain": "No. Mutations can be harmful, neutral, or beneficial depending on how they affect the organism and its environment.",
+    "bullet_points": [
+      "Not all mutations are harmful.",
+      "Effects depend on the mutation and context.",
+      "Some mutations have no noticeable effect."
+    ]
+  },
+  {
+    "id": "u6-ar-70",
+    "difficulty": "easy",
+    "topic": "biotechnology",
+    "text": "What is biotechnology?",
+    "explain": "Biotechnology is the use of living systems or biological molecules to solve problems or make useful products.",
+    "bullet_points": [
+      "Uses biology to solve problems.",
+      "Can involve DNA technology.",
+      "Used in medicine, agriculture, and research."
+    ]
+  },
+  {
+    "id": "u6-ar-71",
+    "difficulty": "easy",
+    "topic": "biotechnology",
+    "text": "What is PCR?",
+    "explain": "PCR, or polymerase chain reaction, is a technique used to make many copies of a specific DNA sequence.",
+    "bullet_points": [
+      "Amplifies DNA.",
+      "Creates many copies of a target sequence.",
+      "Useful in research and forensics."
+    ]
+  },
+  {
+    "id": "u6-ar-72",
+    "difficulty": "easy",
+    "topic": "biotechnology",
+    "text": "What is gel electrophoresis?",
+    "explain": "Gel electrophoresis is a method that separates DNA fragments by size using an electric current through a gel.",
+    "bullet_points": [
+      "Separates DNA by size.",
+      "Smaller fragments usually move farther.",
+      "Used to analyze DNA samples."
+    ]
+  },
+  {
+    "id": "u6-ar-73",
+    "difficulty": "easy",
+    "topic": "biotechnology",
+    "text": "What is recombinant DNA?",
+    "explain": "Recombinant DNA is DNA formed by combining genetic material from different sources.",
+    "bullet_points": [
+      "DNA from different sources is combined.",
+      "Used in genetic engineering.",
+      "Can be inserted into cells or plasmids."
+    ]
+  },
+  {
+    "id": "u6-ar-74",
+    "difficulty": "easy",
+    "topic": "biotechnology",
+    "text": "What is a restriction enzyme?",
+    "explain": "A restriction enzyme is a protein that cuts DNA at specific sequences.",
+    "bullet_points": [
+      "Cuts DNA at specific sites.",
+      "Used in biotechnology.",
+      "Helps create recombinant DNA."
+    ]
+  },
+  {
+    "id": "u6-ar-75",
+    "difficulty": "easy",
+    "topic": "biotechnology",
+    "text": "What is CRISPR-Cas9?",
+    "explain": "CRISPR-Cas9 is a gene-editing system that can cut DNA at targeted sequences.",
+    "bullet_points": [
+      "Targeted gene editing tool.",
+      "Cuts DNA at selected sites.",
+      "Can be used to alter genes."
+    ]
+  },
+  {
+    "id": "u6-ar-76",
+    "difficulty": "easy",
+    "topic": "biotechnology",
+    "text": "What is DNA sequencing?",
+    "explain": "DNA sequencing is the process of determining the order of nucleotides in a DNA molecule.",
+    "bullet_points": [
+      "Determines base order.",
+      "Used to analyze genes and genomes.",
+      "Important in modern biology and medicine."
+    ]
+  },
+  {
+    "id": "u6-ar-77",
+    "difficulty": "easy",
+    "topic": "biotechnology",
+    "text": "What is a plasmid vector?",
+    "explain": "A plasmid vector is a plasmid used to carry foreign DNA into a cell.",
+    "bullet_points": [
+      "Carries inserted DNA.",
+      "Often used in bacteria.",
+      "Useful in cloning and gene engineering."
+    ]
   }
 ]

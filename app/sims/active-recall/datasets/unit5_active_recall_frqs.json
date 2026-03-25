@@ -3,144 +3,492 @@
     "id": "u5-ar-1",
     "difficulty": "easy",
     "topic": "meiosis",
-    "text": "What is meiosis?"
+    "text": "What is meiosis?",
+    "explain": "Meiosis is a two-stage cell division that reduces chromosome number by half and produces haploid gametes.",
+    "bullet_points": [
+      "Produces haploid cells.",
+      "Includes meiosis I and meiosis II.",
+      "Important in sexual reproduction."
+    ]
   },
   {
     "id": "u5-ar-2",
     "difficulty": "easy",
     "topic": "meiosis",
-    "text": "What is a haploid cell?"
+    "text": "What is a haploid cell?",
+    "explain": "A haploid cell has one set of chromosomes.",
+    "bullet_points": [
+      "One chromosome set.",
+      "Gametes are haploid.",
+      "Represented as n."
+    ]
   },
   {
     "id": "u5-ar-3",
     "difficulty": "easy",
     "topic": "meiosis",
-    "text": "What is a diploid cell?"
+    "text": "What is a diploid cell?",
+    "explain": "A diploid cell has two sets of chromosomes, one from each parent.",
+    "bullet_points": [
+      "Two chromosome sets.",
+      "Most body cells are diploid.",
+      "Represented as 2n."
+    ]
   },
   {
     "id": "u5-ar-4",
     "difficulty": "easy",
     "topic": "meiosis",
-    "text": "What happens in meiosis I?"
+    "text": "What happens in meiosis I?",
+    "explain": "In meiosis I, homologous chromosomes separate, reducing chromosome number by half.",
+    "bullet_points": [
+      "Homologous chromosomes separate.",
+      "Reduction division.",
+      "Creates two haploid cells."
+    ]
   },
   {
     "id": "u5-ar-5",
     "difficulty": "easy",
     "topic": "meiosis",
-    "text": "What happens in meiosis II?"
+    "text": "What happens in meiosis II?",
+    "explain": "In meiosis II, sister chromatids separate, producing a total of four haploid cells.",
+    "bullet_points": [
+      "Sister chromatids separate.",
+      "Similar to mitosis in that respect.",
+      "Produces four haploid cells total."
+    ]
   },
   {
     "id": "u5-ar-6",
     "difficulty": "easy",
     "topic": "meiosis",
-    "text": "What is crossing over?"
+    "text": "What is crossing over?",
+    "explain": "Crossing over is the exchange of corresponding DNA segments between homologous chromosomes during prophase I of meiosis.",
+    "bullet_points": [
+      "Occurs in prophase I.",
+      "Homologous chromosomes exchange segments.",
+      "Increases genetic variation."
+    ]
   },
   {
     "id": "u5-ar-7",
     "difficulty": "easy",
     "topic": "meiosis",
-    "text": "What is independent assortment?"
+    "text": "What is independent assortment?",
+    "explain": "Independent assortment is the random orientation of homologous chromosome pairs during meiosis I, leading to different combinations in gametes.",
+    "bullet_points": [
+      "Random chromosome pair alignment.",
+      "Occurs in metaphase I.",
+      "Increases genetic variation."
+    ]
   },
   {
     "id": "u5-ar-8",
     "difficulty": "easy",
     "topic": "meiosis",
-    "text": "What is a gamete?"
+    "text": "What is a gamete?",
+    "explain": "A gamete is a haploid sex cell, such as a sperm or egg.",
+    "bullet_points": [
+      "Sex cell.",
+      "Haploid.",
+      "Produced by meiosis."
+    ]
   },
   {
     "id": "u5-ar-9",
     "difficulty": "easy",
     "topic": "meiosis",
-    "text": "What is fertilization?"
+    "text": "What is fertilization?",
+    "explain": "Fertilization is the fusion of two haploid gametes to form a diploid zygote.",
+    "bullet_points": [
+      "Fusion of gametes.",
+      "Restores diploid chromosome number.",
+      "Produces a zygote."
+    ]
   },
   {
     "id": "u5-ar-10",
     "difficulty": "easy",
     "topic": "meiosis and genetic diversity",
-    "text": "Why does meiosis increase genetic diversity?"
+    "text": "Why does meiosis increase genetic diversity?",
+    "explain": "Meiosis increases genetic diversity through crossing over and independent assortment, which produce new combinations of alleles.",
+    "bullet_points": [
+      "Crossing over creates new chromosome combinations.",
+      "Independent assortment shuffles maternal and paternal chromosomes.",
+      "Gametes become genetically unique."
+    ]
   },
   {
     "id": "u5-ar-11",
     "difficulty": "easy",
     "topic": "meiosis and genetic diversity",
-    "text": "What are homologous chromosomes?"
+    "text": "What are homologous chromosomes?",
+    "explain": "Homologous chromosomes are a pair of chromosomes, one from each parent, that carry the same genes in the same order but may have different alleles.",
+    "bullet_points": [
+      "One maternal and one paternal chromosome.",
+      "Same genes, possibly different alleles.",
+      "Pair during meiosis I."
+    ]
   },
   {
     "id": "u5-ar-12",
     "difficulty": "easy",
     "topic": "meiosis and genetic diversity",
-    "text": "What are sister chromatids?"
+    "text": "What are sister chromatids?",
+    "explain": "Sister chromatids are identical copies of a chromosome that are joined together after DNA replication.",
+    "bullet_points": [
+      "Identical copies.",
+      "Joined at the centromere.",
+      "Separate in meiosis II and mitosis."
+    ]
   },
   {
     "id": "u5-ar-13",
     "difficulty": "easy",
     "topic": "meiosis and genetic diversity",
-    "text": "What is a tetrad?"
+    "text": "What is a tetrad?",
+    "explain": "A tetrad is the structure formed when homologous chromosomes pair up during prophase I of meiosis.",
+    "bullet_points": [
+      "Two homologous chromosomes together.",
+      "Contains four chromatids total.",
+      "Site of crossing over."
+    ]
   },
   {
     "id": "u5-ar-14",
     "difficulty": "easy",
     "topic": "meiosis and genetic diversity",
-    "text": "What is a chiasma?"
+    "text": "What is a chiasma?",
+    "explain": "A chiasma is the visible point where crossing over occurs between homologous chromatids.",
+    "bullet_points": [
+      "Site of crossing over.",
+      "Visible during meiosis I.",
+      "Helps create genetic recombination."
+    ]
   },
   {
     "id": "u5-ar-15",
     "difficulty": "easy",
     "topic": "meiosis and genetic diversity",
-    "text": "What is recombination?"
+    "text": "What is recombination?",
+    "explain": "Recombination is the creation of new allele combinations, often through crossing over during meiosis.",
+    "bullet_points": [
+      "Creates new genetic combinations.",
+      "Often results from crossing over.",
+      "Increases variation in offspring."
+    ]
   },
   {
     "id": "u5-ar-16",
     "difficulty": "easy",
     "topic": "mendelian genetics",
-    "text": "What is a gene?"
+    "text": "What is a gene?",
+    "explain": "A gene is a segment of DNA that contains information for a functional product, such as a protein or functional RNA.",
+    "bullet_points": [
+      "Segment of DNA.",
+      "Contains hereditary information.",
+      "Can influence traits."
+    ]
   },
   {
     "id": "u5-ar-17",
     "difficulty": "easy",
     "topic": "mendelian genetics",
-    "text": "What is an allele?"
+    "text": "What is an allele?",
+    "explain": "An allele is an alternative version of a gene.",
+    "bullet_points": [
+      "Different form of a gene.",
+      "Individuals inherit alleles from parents.",
+      "Alleles can affect phenotype."
+    ]
   },
   {
     "id": "u5-ar-18",
     "difficulty": "easy",
     "topic": "mendelian genetics",
-    "text": "What is genotype?"
+    "text": "What is genotype?",
+    "explain": "Genotype is the genetic makeup of an organism, often referring to the alleles it carries for a trait.",
+    "bullet_points": [
+      "Allele combination.",
+      "Describes genetic information.",
+      "Can influence phenotype."
+    ]
   },
   {
     "id": "u5-ar-19",
     "difficulty": "easy",
     "topic": "mendelian genetics",
-    "text": "What is phenotype?"
+    "text": "What is phenotype?",
+    "explain": "Phenotype is the observable traits of an organism resulting from genotype and environment.",
+    "bullet_points": [
+      "Observable characteristic.",
+      "Influenced by genes and environment.",
+      "Examples include eye color or height."
+    ]
   },
   {
     "id": "u5-ar-20",
     "difficulty": "easy",
     "topic": "mendelian genetics",
-    "text": "What does dominant mean?"
+    "text": "What does dominant mean?",
+    "explain": "A dominant allele is expressed in the phenotype when at least one copy is present.",
+    "bullet_points": [
+      "One copy is enough for expression.",
+      "Masks a recessive allele in a heterozygote.",
+      "Often written with a capital letter."
+    ]
   },
   {
     "id": "u5-ar-21",
     "difficulty": "easy",
     "topic": "mendelian genetics",
-    "text": "What does recessive mean?"
+    "text": "What does recessive mean?",
+    "explain": "A recessive allele is expressed in the phenotype only when two copies are present in a diploid organism.",
+    "bullet_points": [
+      "Requires two copies for expression in diploids.",
+      "Hidden by a dominant allele in a heterozygote.",
+      "Often written with a lowercase letter."
+    ]
   },
   {
     "id": "u5-ar-22",
     "difficulty": "easy",
     "topic": "mendelian genetics",
-    "text": "What is homozygous?"
+    "text": "What is homozygous?",
+    "explain": "Homozygous means having two identical alleles for a gene.",
+    "bullet_points": [
+      "Two same alleles.",
+      "Can be homozygous dominant or homozygous recessive.",
+      "A type of genotype."
+    ]
   },
   {
     "id": "u5-ar-23",
     "difficulty": "easy",
     "topic": "mendelian genetics",
-    "text": "What is heterozygous?"
+    "text": "What is heterozygous?",
+    "explain": "Heterozygous means having two different alleles for a gene.",
+    "bullet_points": [
+      "Two different alleles.",
+      "Often shows the dominant phenotype.",
+      "A type of genotype."
+    ]
   },
   {
     "id": "u5-ar-24",
     "difficulty": "easy",
     "topic": "mendelian genetics",
-    "text": "What is segregation?"
+    "text": "What is segregation?",
+    "explain": "Segregation is the separation of two alleles for a gene during gamete formation.",
+    "bullet_points": [
+      "Alleles separate during meiosis.",
+      "Each gamete gets one allele.",
+      "A core Mendelian principle."
+    ]
+  },
+  {
+    "id": "u5-ar-25",
+    "difficulty": "easy",
+    "topic": "mendelian genetics",
+    "text": "What is a Punnett square?",
+    "explain": "A Punnett square is a diagram used to predict the possible genotypes and phenotypes of offspring from a genetic cross.",
+    "bullet_points": [
+      "Prediction tool.",
+      "Shows allele combinations.",
+      "Used in inheritance problems."
+    ]
+  },
+  {
+    "id": "u5-ar-26",
+    "difficulty": "easy",
+    "topic": "mendelian genetics",
+    "text": "What is a monohybrid cross?",
+    "explain": "A monohybrid cross is a genetic cross that examines the inheritance of one trait.",
+    "bullet_points": [
+      "One trait is followed.",
+      "Often uses one gene with two alleles.",
+      "Can be modeled with a Punnett square."
+    ]
+  },
+  {
+    "id": "u5-ar-27",
+    "difficulty": "easy",
+    "topic": "mendelian genetics",
+    "text": "What is a testcross?",
+    "explain": "A testcross is a cross between an individual with an unknown genotype and a homozygous recessive individual to determine the unknown genotype.",
+    "bullet_points": [
+      "Used to determine genotype.",
+      "Crosses with a homozygous recessive individual.",
+      "Phenotypes of offspring reveal information."
+    ]
+  },
+  {
+    "id": "u5-ar-28",
+    "difficulty": "easy",
+    "topic": "non-mendelian genetics",
+    "text": "What is incomplete dominance?",
+    "explain": "Incomplete dominance is inheritance in which the heterozygote has an intermediate phenotype between the two homozygotes.",
+    "bullet_points": [
+      "Heterozygote is intermediate.",
+      "Neither allele is fully dominant.",
+      "Example: red and white flowers producing pink flowers."
+    ]
+  },
+  {
+    "id": "u5-ar-29",
+    "difficulty": "easy",
+    "topic": "non-mendelian genetics",
+    "text": "What is codominance?",
+    "explain": "Codominance is inheritance in which both alleles are fully expressed in the heterozygote.",
+    "bullet_points": [
+      "Both alleles show.",
+      "Neither masks the other.",
+      "Example: AB blood type."
+    ]
+  },
+  {
+    "id": "u5-ar-30",
+    "difficulty": "easy",
+    "topic": "non-mendelian genetics",
+    "text": "What is multiple alleles?",
+    "explain": "Multiple alleles means that more than two allele forms exist for a gene in a population.",
+    "bullet_points": [
+      "More than two possible alleles in the population.",
+      "Any one individual still carries at most two alleles in diploids.",
+      "ABO blood group is an example."
+    ]
+  },
+  {
+    "id": "u5-ar-31",
+    "difficulty": "easy",
+    "topic": "non-mendelian genetics",
+    "text": "What is polygenic inheritance?",
+    "explain": "Polygenic inheritance is inheritance in which multiple genes contribute to a single trait.",
+    "bullet_points": [
+      "Many genes affect one trait.",
+      "Often produces continuous variation.",
+      "Examples include height and skin color."
+    ]
+  },
+  {
+    "id": "u5-ar-32",
+    "difficulty": "easy",
+    "topic": "non-mendelian genetics",
+    "text": "What is epistasis?",
+    "explain": "Epistasis occurs when one gene affects the expression of another gene.",
+    "bullet_points": [
+      "One gene influences another gene’s expression.",
+      "Can modify expected Mendelian ratios.",
+      "A gene interaction pattern."
+    ]
+  },
+  {
+    "id": "u5-ar-33",
+    "difficulty": "easy",
+    "topic": "non-mendelian genetics",
+    "text": "What is linked inheritance?",
+    "explain": "Linked inheritance occurs when genes located close together on the same chromosome tend to be inherited together.",
+    "bullet_points": [
+      "Genes are on the same chromosome.",
+      "Often inherited together.",
+      "Crossing over can separate them."
+    ]
+  },
+  {
+    "id": "u5-ar-34",
+    "difficulty": "easy",
+    "topic": "non-mendelian genetics",
+    "text": "What is sex-linked inheritance?",
+    "explain": "Sex-linked inheritance is inheritance of genes located on sex chromosomes, usually the X chromosome in AP Biology examples.",
+    "bullet_points": [
+      "Gene is on a sex chromosome.",
+      "Often refers to X-linked traits.",
+      "Patterns differ between males and females."
+    ]
+  },
+  {
+    "id": "u5-ar-35",
+    "difficulty": "easy",
+    "topic": "non-mendelian genetics",
+    "text": "What is a pedigree?",
+    "explain": "A pedigree is a family diagram used to trace the inheritance of a trait across generations.",
+    "bullet_points": [
+      "Shows family relationships.",
+      "Tracks inheritance patterns.",
+      "Useful for identifying dominant, recessive, or sex-linked traits."
+    ]
+  },
+  {
+    "id": "u5-ar-36",
+    "difficulty": "easy",
+    "topic": "non-mendelian genetics",
+    "text": "What is nondisjunction?",
+    "explain": "Nondisjunction is the failure of chromosomes or sister chromatids to separate properly during cell division.",
+    "bullet_points": [
+      "Improper chromosome separation.",
+      "Can occur in meiosis or mitosis.",
+      "Can lead to abnormal chromosome numbers."
+    ]
+  },
+  {
+    "id": "u5-ar-37",
+    "difficulty": "easy",
+    "topic": "environmental effects on phenotype",
+    "text": "How can the environment affect phenotype?",
+    "explain": "The environment can affect phenotype by influencing how genes are expressed or how traits develop.",
+    "bullet_points": [
+      "Phenotype is not determined by genotype alone.",
+      "Environment can change trait expression.",
+      "Examples include nutrition, temperature, and sunlight."
+    ]
+  },
+  {
+    "id": "u5-ar-38",
+    "difficulty": "easy",
+    "topic": "environmental effects on phenotype",
+    "text": "What is phenotypic plasticity?",
+    "explain": "Phenotypic plasticity is the ability of one genotype to produce different phenotypes in different environments.",
+    "bullet_points": [
+      "One genotype, different phenotypes.",
+      "Depends on environmental conditions.",
+      "Shows gene-environment interaction."
+    ]
+  },
+  {
+    "id": "u5-ar-39",
+    "difficulty": "easy",
+    "topic": "environmental effects on phenotype",
+    "text": "What is norm of reaction?",
+    "explain": "Norm of reaction is the range of phenotypes that a single genotype can produce under different environmental conditions.",
+    "bullet_points": [
+      "Range of possible phenotypes.",
+      "Depends on environment.",
+      "Illustrates environmental influence on traits."
+    ]
+  },
+  {
+    "id": "u5-ar-40",
+    "difficulty": "easy",
+    "topic": "environmental effects on phenotype",
+    "text": "Why can identical genotypes produce different phenotypes?",
+    "explain": "Identical genotypes can produce different phenotypes when they develop in different environments or experience different conditions.",
+    "bullet_points": [
+      "Environment affects expression and development.",
+      "Phenotype is genes plus environment.",
+      "Explains differences among genetically similar individuals."
+    ]
+  },
+  {
+    "id": "u5-ar-41",
+    "difficulty": "easy",
+    "topic": "environmental effects on phenotype",
+    "text": "What is an environmental factor?",
+    "explain": "An environmental factor is any outside condition that can influence an organism, such as temperature, diet, or light.",
+    "bullet_points": [
+      "External condition.",
+      "Can influence phenotype or fitness.",
+      "Examples include light, temperature, and nutrients."
+    ]
   }
 ]

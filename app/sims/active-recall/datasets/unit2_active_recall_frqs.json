@@ -3,126 +3,708 @@
     "id": "u2-ar-1",
     "difficulty": "easy",
     "topic": "cell structure and function",
-    "text": "What is the plasma membrane?"
+    "text": "What is the plasma membrane?",
+    "explain": "The plasma membrane is the selectively permeable boundary that surrounds a cell and separates the internal environment from the external environment.",
+    "bullet_points": [
+      "Surrounds the cell.",
+      "Selectively permeable.",
+      "Controls what enters and leaves."
+    ]
   },
   {
     "id": "u2-ar-2",
     "difficulty": "easy",
     "topic": "cell structure and function",
-    "text": "What is the nucleus?"
+    "text": "What is the nucleus?",
+    "explain": "The nucleus is the membrane-bound organelle in eukaryotic cells that stores most of the cell’s DNA.",
+    "bullet_points": [
+      "Stores DNA.",
+      "Found in eukaryotes.",
+      "Surrounded by a nuclear envelope."
+    ]
   },
   {
     "id": "u2-ar-3",
     "difficulty": "easy",
     "topic": "cell structure and function",
-    "text": "What is the nucleolus?"
+    "text": "What is the nucleolus?",
+    "explain": "The nucleolus is a region inside the nucleus where rRNA is made and ribosome subunits are assembled.",
+    "bullet_points": [
+      "Inside the nucleus.",
+      "Makes rRNA.",
+      "Assembles ribosome subunits."
+    ]
   },
   {
     "id": "u2-ar-4",
     "difficulty": "easy",
     "topic": "cell structure and function",
-    "text": "What is a ribosome?"
+    "text": "What is a ribosome?",
+    "explain": "A ribosome is the structure that carries out protein synthesis by translating mRNA into a polypeptide.",
+    "bullet_points": [
+      "Site of protein synthesis.",
+      "Found free in cytoplasm or bound to rough ER.",
+      "Made of rRNA and protein."
+    ]
   },
   {
     "id": "u2-ar-5",
     "difficulty": "easy",
     "topic": "cell structure and function",
-    "text": "What is the rough ER?"
+    "text": "What is the rough ER?",
+    "explain": "The rough endoplasmic reticulum is a membrane network covered with ribosomes that helps synthesize and process proteins for export or membranes.",
+    "bullet_points": [
+      "Has ribosomes attached.",
+      "Helps make proteins.",
+      "Part of the endomembrane system."
+    ]
   },
   {
     "id": "u2-ar-6",
     "difficulty": "easy",
     "topic": "cell structure and function",
-    "text": "What is the smooth ER?"
+    "text": "What is the smooth ER?",
+    "explain": "The smooth endoplasmic reticulum is a membrane network without ribosomes that functions in lipid synthesis, detoxification, and calcium storage.",
+    "bullet_points": [
+      "No ribosomes attached.",
+      "Makes lipids.",
+      "Can detoxify substances."
+    ]
   },
   {
     "id": "u2-ar-7",
     "difficulty": "easy",
     "topic": "cell structure and function",
-    "text": "What is the Golgi apparatus?"
+    "text": "What is the Golgi apparatus?",
+    "explain": "The Golgi apparatus modifies, sorts, and packages proteins and lipids for transport.",
+    "bullet_points": [
+      "Modifies cell products.",
+      "Sorts and packages molecules.",
+      "Ships materials in vesicles."
+    ]
   },
   {
     "id": "u2-ar-8",
     "difficulty": "easy",
     "topic": "cell structure and function",
-    "text": "What is a vesicle?"
+    "text": "What is a vesicle?",
+    "explain": "A vesicle is a small membrane-bound sac used to transport or store materials in a cell.",
+    "bullet_points": [
+      "Membrane-bound sac.",
+      "Transports materials.",
+      "Can fuse with membranes."
+    ]
   },
   {
     "id": "u2-ar-9",
     "difficulty": "easy",
     "topic": "cell structure and function",
-    "text": "What is a lysosome?"
+    "text": "What is a lysosome?",
+    "explain": "A lysosome is an organelle containing digestive enzymes that break down macromolecules and worn-out cell parts.",
+    "bullet_points": [
+      "Contains hydrolytic enzymes.",
+      "Digests materials.",
+      "Common in animal cells."
+    ]
   },
   {
     "id": "u2-ar-10",
     "difficulty": "easy",
     "topic": "cell structure and function",
-    "text": "What is a vacuole?"
+    "text": "What is a vacuole?",
+    "explain": "A vacuole is a membrane-bound storage compartment. In plants, the central vacuole also helps maintain turgor pressure.",
+    "bullet_points": [
+      "Stores water or other materials.",
+      "Large central vacuole in plants.",
+      "Can help maintain cell pressure."
+    ]
   },
   {
     "id": "u2-ar-11",
     "difficulty": "easy",
     "topic": "cell structure and function",
-    "text": "What is a mitochondrion?"
+    "text": "What is a mitochondrion?",
+    "explain": "A mitochondrion is an organelle that carries out aerobic cellular respiration and makes ATP.",
+    "bullet_points": [
+      "Site of aerobic respiration.",
+      "Produces ATP.",
+      "Has a double membrane."
+    ]
   },
   {
     "id": "u2-ar-12",
     "difficulty": "easy",
     "topic": "cell structure and function",
-    "text": "What is a chloroplast?"
+    "text": "What is a chloroplast?",
+    "explain": "A chloroplast is the organelle in plants and some protists that performs photosynthesis.",
+    "bullet_points": [
+      "Site of photosynthesis.",
+      "Contains chlorophyll.",
+      "Has a double membrane and thylakoids."
+    ]
   },
   {
     "id": "u2-ar-13",
     "difficulty": "easy",
     "topic": "cell structure and function",
-    "text": "What is the cytoskeleton?"
+    "text": "What is the cytoskeleton?",
+    "explain": "The cytoskeleton is a network of protein fibers that supports cell shape, movement, and transport within the cell.",
+    "bullet_points": [
+      "Provides structural support.",
+      "Helps with movement.",
+      "Includes microtubules and microfilaments."
+    ]
   },
   {
     "id": "u2-ar-14",
     "difficulty": "easy",
     "topic": "cell structure and function",
-    "text": "What is a cell wall?"
+    "text": "What is a cell wall?",
+    "explain": "A cell wall is a rigid outer layer outside the plasma membrane that provides support and protection.",
+    "bullet_points": [
+      "Outside the plasma membrane.",
+      "Provides support and protection.",
+      "Found in plants, fungi, and many prokaryotes."
+    ]
   },
   {
     "id": "u2-ar-15",
     "difficulty": "easy",
     "topic": "cell structure and function",
-    "text": "What is the extracellular matrix?"
+    "text": "What is the extracellular matrix?",
+    "explain": "The extracellular matrix is a network of proteins and other molecules outside animal cells that helps with support, adhesion, and signaling.",
+    "bullet_points": [
+      "Outside animal cells.",
+      "Provides support.",
+      "Helps cells attach and communicate."
+    ]
   },
   {
     "id": "u2-ar-16",
     "difficulty": "easy",
     "topic": "cell size",
-    "text": "What is surface area-to-volume ratio?"
+    "text": "What is surface area-to-volume ratio?",
+    "explain": "Surface area-to-volume ratio compares the amount of membrane available for exchange to the cell’s internal volume.",
+    "bullet_points": [
+      "Compares membrane area to cell volume.",
+      "As cells get larger, the ratio decreases.",
+      "Affects exchange efficiency."
+    ]
   },
   {
     "id": "u2-ar-17",
     "difficulty": "easy",
     "topic": "cell size",
-    "text": "Why can't cells keep growing forever?"
+    "text": "Why can't cells keep growing forever?",
+    "explain": "Cells cannot keep growing forever because volume increases faster than surface area, making exchange of materials less efficient.",
+    "bullet_points": [
+      "Volume grows faster than surface area.",
+      "Exchange becomes less efficient.",
+      "Limits cell size."
+    ]
   },
   {
     "id": "u2-ar-18",
     "difficulty": "easy",
     "topic": "cell size",
-    "text": "Why is a high surface area-to-volume ratio beneficial to cells?"
+    "text": "Why is a high surface area-to-volume ratio beneficial to cells?",
+    "explain": "A high surface area-to-volume ratio is beneficial because it allows materials to move into and out of the cell more efficiently.",
+    "bullet_points": [
+      "More membrane per unit volume.",
+      "Improves exchange of nutrients and wastes.",
+      "Supports cell homeostasis."
+    ]
   },
   {
     "id": "u2-ar-19",
     "difficulty": "easy",
     "topic": "cell size",
-    "text": "What are microvilli?"
+    "text": "What are microvilli?",
+    "explain": "Microvilli are small extensions of the plasma membrane that increase surface area for absorption.",
+    "bullet_points": [
+      "Increase surface area.",
+      "Common on absorptive cells.",
+      "Help with transport and exchange."
+    ]
   },
   {
     "id": "u2-ar-20",
     "difficulty": "easy",
     "topic": "plasma membrane",
-    "text": "What is the fluid mosaic model?"
+    "text": "What is the fluid mosaic model?",
+    "explain": "The fluid mosaic model describes the plasma membrane as a flexible phospholipid bilayer with proteins and other molecules embedded in it.",
+    "bullet_points": [
+      "Membrane is fluid, not rigid.",
+      "Contains many different molecules.",
+      "Includes phospholipids, proteins, and cholesterol."
+    ]
   },
   {
     "id": "u2-ar-21",
     "difficulty": "easy",
     "topic": "plasma membrane",
-    "text": "What is a phospholipid bilayer?"
+    "text": "What is a phospholipid bilayer?",
+    "explain": "A phospholipid bilayer is the basic structure of cell membranes in which phospholipids arrange into two layers with heads outward and tails inward.",
+    "bullet_points": [
+      "Two layers of phospholipids.",
+      "Hydrophilic heads face water.",
+      "Hydrophobic tails face inward."
+    ]
+  },
+  {
+    "id": "u2-ar-22",
+    "difficulty": "easy",
+    "topic": "plasma membrane",
+    "text": "Why do phospholipids form a bilayer in water?",
+    "explain": "Phospholipids form a bilayer because their hydrophilic heads interact with water while their hydrophobic tails avoid water.",
+    "bullet_points": [
+      "Phospholipids are amphipathic.",
+      "Heads face water.",
+      "Tails group away from water."
+    ]
+  },
+  {
+    "id": "u2-ar-23",
+    "difficulty": "easy",
+    "topic": "plasma membrane",
+    "text": "What is a membrane protein?",
+    "explain": "A membrane protein is a protein associated with the plasma membrane that can help with transport, signaling, recognition, or enzyme activity.",
+    "bullet_points": [
+      "Located in or on the membrane.",
+      "Has transport or signaling roles.",
+      "Can be integral or peripheral."
+    ]
+  },
+  {
+    "id": "u2-ar-24",
+    "difficulty": "easy",
+    "topic": "plasma membrane",
+    "text": "What does cholesterol do in animal cell membranes?",
+    "explain": "Cholesterol helps stabilize animal cell membranes and regulates membrane fluidity.",
+    "bullet_points": [
+      "Found in animal membranes.",
+      "Helps keep membranes from becoming too rigid or too fluid.",
+      "Supports membrane stability."
+    ]
+  },
+  {
+    "id": "u2-ar-25",
+    "difficulty": "easy",
+    "topic": "membrane permeability",
+    "text": "What does selectively permeable mean?",
+    "explain": "Selectively permeable means allowing some substances to cross a membrane more easily than others.",
+    "bullet_points": [
+      "Some molecules cross easily.",
+      "Others are blocked or require help.",
+      "This helps maintain homeostasis."
+    ]
+  },
+  {
+    "id": "u2-ar-26",
+    "difficulty": "easy",
+    "topic": "membrane permeability",
+    "text": "Why do small nonpolar molecules cross membranes easily?",
+    "explain": "Small nonpolar molecules cross membranes easily because they can move through the hydrophobic interior of the phospholipid bilayer.",
+    "bullet_points": [
+      "They dissolve in the bilayer interior.",
+      "They do not need transport proteins as often.",
+      "Examples include oxygen and carbon dioxide."
+    ]
+  },
+  {
+    "id": "u2-ar-27",
+    "difficulty": "easy",
+    "topic": "membrane permeability",
+    "text": "Why do ions have difficulty crossing membranes directly?",
+    "explain": "Ions have difficulty crossing membranes because they are charged and the membrane interior is hydrophobic.",
+    "bullet_points": [
+      "Ions are charged.",
+      "Membrane interior is nonpolar.",
+      "Many ions require transport proteins."
+    ]
+  },
+  {
+    "id": "u2-ar-28",
+    "difficulty": "easy",
+    "topic": "membrane permeability",
+    "text": "What does hydrophobic mean?",
+    "explain": "Hydrophobic means repelled by water or not mixing well with water.",
+    "bullet_points": [
+      "Water-fearing or nonpolar.",
+      "Hydrophobic parts avoid water.",
+      "Examples include fatty acid tails."
+    ]
+  },
+  {
+    "id": "u2-ar-29",
+    "difficulty": "easy",
+    "topic": "membrane permeability",
+    "text": "What does hydrophilic mean?",
+    "explain": "Hydrophilic means attracted to water or able to interact well with water.",
+    "bullet_points": [
+      "Water-attracting or polar.",
+      "Hydrophilic parts face watery environments.",
+      "Examples include phospholipid heads."
+    ]
+  },
+  {
+    "id": "u2-ar-30",
+    "difficulty": "easy",
+    "topic": "membrane transport",
+    "text": "What is diffusion?",
+    "explain": "Diffusion is the net movement of molecules from an area of higher concentration to an area of lower concentration.",
+    "bullet_points": [
+      "Moves down a concentration gradient.",
+      "Passive process.",
+      "Occurs because of random molecular motion."
+    ]
+  },
+  {
+    "id": "u2-ar-31",
+    "difficulty": "easy",
+    "topic": "membrane transport",
+    "text": "What is osmosis?",
+    "explain": "Osmosis is the diffusion of water across a selectively permeable membrane.",
+    "bullet_points": [
+      "Movement of water.",
+      "Across a selectively permeable membrane.",
+      "Water moves toward the side with lower free water concentration."
+    ]
+  },
+  {
+    "id": "u2-ar-32",
+    "difficulty": "easy",
+    "topic": "membrane transport",
+    "text": "What is passive transport?",
+    "explain": "Passive transport is movement across a membrane that does not require the cell to use ATP directly.",
+    "bullet_points": [
+      "No direct ATP required.",
+      "Moves substances down gradients.",
+      "Includes diffusion, osmosis, and facilitated diffusion."
+    ]
+  },
+  {
+    "id": "u2-ar-33",
+    "difficulty": "easy",
+    "topic": "membrane transport",
+    "text": "What is active transport?",
+    "explain": "Active transport is movement across a membrane that requires energy, often to move substances against their concentration gradient.",
+    "bullet_points": [
+      "Requires energy.",
+      "Can move substances against a gradient.",
+      "Uses transport proteins or vesicles."
+    ]
+  },
+  {
+    "id": "u2-ar-34",
+    "difficulty": "easy",
+    "topic": "membrane transport",
+    "text": "What is a concentration gradient?",
+    "explain": "A concentration gradient is a difference in the concentration of a substance across space or across a membrane.",
+    "bullet_points": [
+      "Difference in concentration.",
+      "Drives passive movement.",
+      "Substances move from high to low concentration."
+    ]
+  },
+  {
+    "id": "u2-ar-35",
+    "difficulty": "easy",
+    "topic": "membrane transport",
+    "text": "What is an electrochemical gradient?",
+    "explain": "An electrochemical gradient is the combined effect of a concentration gradient and an electrical gradient on an ion.",
+    "bullet_points": [
+      "Applies to ions.",
+      "Includes both charge and concentration differences.",
+      "Influences ion movement across membranes."
+    ]
+  },
+  {
+    "id": "u2-ar-36",
+    "difficulty": "easy",
+    "topic": "facilitated diffusion",
+    "text": "What is facilitated diffusion?",
+    "explain": "Facilitated diffusion is passive transport in which a substance moves down its gradient through a membrane protein.",
+    "bullet_points": [
+      "Passive transport.",
+      "Uses a transport protein.",
+      "Moves down a concentration gradient."
+    ]
+  },
+  {
+    "id": "u2-ar-37",
+    "difficulty": "easy",
+    "topic": "facilitated diffusion",
+    "text": "What is a channel protein?",
+    "explain": "A channel protein is a membrane protein that forms a pore through which specific substances can pass.",
+    "bullet_points": [
+      "Forms a passageway through the membrane.",
+      "Often used by ions or water.",
+      "Selective for certain substances."
+    ]
+  },
+  {
+    "id": "u2-ar-38",
+    "difficulty": "easy",
+    "topic": "facilitated diffusion",
+    "text": "What is a carrier protein?",
+    "explain": "A carrier protein is a membrane protein that binds a substance and changes shape to move it across the membrane.",
+    "bullet_points": [
+      "Binds the transported molecule.",
+      "Changes shape during transport.",
+      "Can be used in facilitated diffusion or active transport."
+    ]
+  },
+  {
+    "id": "u2-ar-39",
+    "difficulty": "easy",
+    "topic": "facilitated diffusion",
+    "text": "What is an aquaporin?",
+    "explain": "An aquaporin is a channel protein that specifically allows water to cross a membrane quickly.",
+    "bullet_points": [
+      "Water channel protein.",
+      "Speeds water movement.",
+      "Important in osmosis."
+    ]
+  },
+  {
+    "id": "u2-ar-40",
+    "difficulty": "easy",
+    "topic": "tonicity and osmoregulation",
+    "text": "What is tonicity?",
+    "explain": "Tonicity is the ability of a solution to cause a cell to gain or lose water.",
+    "bullet_points": [
+      "Depends on solute concentration.",
+      "Affects water movement.",
+      "Used to compare solutions around cells."
+    ]
+  },
+  {
+    "id": "u2-ar-41",
+    "difficulty": "easy",
+    "topic": "tonicity and osmoregulation",
+    "text": "What does hypertonic mean?",
+    "explain": "Hypertonic means a solution has a higher solute concentration than the cell, so water tends to leave the cell.",
+    "bullet_points": [
+      "Higher solute outside the cell.",
+      "Water leaves the cell.",
+      "Cells often shrink in hypertonic solutions."
+    ]
+  },
+  {
+    "id": "u2-ar-42",
+    "difficulty": "easy",
+    "topic": "tonicity and osmoregulation",
+    "text": "What does hypotonic mean?",
+    "explain": "Hypotonic means a solution has a lower solute concentration than the cell, so water tends to enter the cell.",
+    "bullet_points": [
+      "Lower solute outside the cell.",
+      "Water enters the cell.",
+      "Animal cells may swell or burst."
+    ]
+  },
+  {
+    "id": "u2-ar-43",
+    "difficulty": "easy",
+    "topic": "tonicity and osmoregulation",
+    "text": "What does isotonic mean?",
+    "explain": "Isotonic means two solutions have equal effective solute concentrations, so there is no net movement of water.",
+    "bullet_points": [
+      "Equal effective solute concentration.",
+      "No net water movement.",
+      "Cell size stays about the same."
+    ]
+  },
+  {
+    "id": "u2-ar-44",
+    "difficulty": "easy",
+    "topic": "tonicity and osmoregulation",
+    "text": "What is osmoregulation?",
+    "explain": "Osmoregulation is the control of water balance and solute concentration in an organism or cell.",
+    "bullet_points": [
+      "Maintains water balance.",
+      "Helps maintain homeostasis.",
+      "Important in many environments."
+    ]
+  },
+  {
+    "id": "u2-ar-45",
+    "difficulty": "easy",
+    "topic": "tonicity and osmoregulation",
+    "text": "What is turgor pressure?",
+    "explain": "Turgor pressure is the pressure of water inside a plant cell pushing the membrane against the cell wall.",
+    "bullet_points": [
+      "Occurs in plant cells.",
+      "Caused by water uptake.",
+      "Helps keep plants rigid."
+    ]
+  },
+  {
+    "id": "u2-ar-46",
+    "difficulty": "easy",
+    "topic": "tonicity and osmoregulation",
+    "text": "What is plasmolysis?",
+    "explain": "Plasmolysis is the pulling away of the plasma membrane from the cell wall when a plant cell loses water in a hypertonic environment.",
+    "bullet_points": [
+      "Occurs in plant cells.",
+      "Caused by water loss.",
+      "Membrane pulls away from the wall."
+    ]
+  },
+  {
+    "id": "u2-ar-47",
+    "difficulty": "easy",
+    "topic": "mechanisms of transport",
+    "text": "What is endocytosis?",
+    "explain": "Endocytosis is the process by which a cell brings materials into the cell by forming vesicles from the plasma membrane.",
+    "bullet_points": [
+      "Brings materials into the cell.",
+      "Uses membrane vesicles.",
+      "A type of bulk transport."
+    ]
+  },
+  {
+    "id": "u2-ar-48",
+    "difficulty": "easy",
+    "topic": "mechanisms of transport",
+    "text": "What is exocytosis?",
+    "explain": "Exocytosis is the process by which a cell releases materials outside the cell when vesicles fuse with the plasma membrane.",
+    "bullet_points": [
+      "Releases materials out of the cell.",
+      "Uses vesicle fusion.",
+      "A type of bulk transport."
+    ]
+  },
+  {
+    "id": "u2-ar-49",
+    "difficulty": "easy",
+    "topic": "mechanisms of transport",
+    "text": "What is phagocytosis?",
+    "explain": "Phagocytosis is a type of endocytosis in which a cell engulfs large particles or entire cells.",
+    "bullet_points": [
+      "Cell eating.",
+      "Engulfs large particles.",
+      "Often used by immune cells."
+    ]
+  },
+  {
+    "id": "u2-ar-50",
+    "difficulty": "easy",
+    "topic": "mechanisms of transport",
+    "text": "What is receptor-mediated endocytosis?",
+    "explain": "Receptor-mediated endocytosis is a specific type of endocytosis in which membrane receptors bind target molecules before the membrane folds inward.",
+    "bullet_points": [
+      "Uses specific receptors.",
+      "Allows selective uptake.",
+      "A form of endocytosis."
+    ]
+  },
+  {
+    "id": "u2-ar-51",
+    "difficulty": "easy",
+    "topic": "mechanisms of transport",
+    "text": "What is the sodium-potassium pump?",
+    "explain": "The sodium-potassium pump is a membrane protein that uses ATP to pump sodium out of the cell and potassium into the cell.",
+    "bullet_points": [
+      "Uses ATP.",
+      "Moves sodium out and potassium in.",
+      "An example of active transport."
+    ]
+  },
+  {
+    "id": "u2-ar-52",
+    "difficulty": "easy",
+    "topic": "mechanisms of transport",
+    "text": "What is cotransport?",
+    "explain": "Cotransport is transport in which the movement of one substance down its gradient helps drive the movement of another substance.",
+    "bullet_points": [
+      "Links movement of two substances.",
+      "Often uses an existing gradient.",
+      "Can move one substance against its gradient."
+    ]
+  },
+  {
+    "id": "u2-ar-53",
+    "difficulty": "easy",
+    "topic": "cell compartmentalization",
+    "text": "What is compartmentalization in a cell?",
+    "explain": "Compartmentalization is the separation of cellular functions into different membrane-bound regions or organelles.",
+    "bullet_points": [
+      "Different processes occur in different spaces.",
+      "Increases efficiency.",
+      "Allows incompatible reactions to be separated."
+    ]
+  },
+  {
+    "id": "u2-ar-54",
+    "difficulty": "easy",
+    "topic": "cell compartmentalization",
+    "text": "Why are organelles useful in eukaryotic cells?",
+    "explain": "Organelles are useful because they create specialized environments for specific reactions and make complex cells more efficient.",
+    "bullet_points": [
+      "Provide specialized environments.",
+      "Increase organization and efficiency.",
+      "Allow simultaneous but separate processes."
+    ]
+  },
+  {
+    "id": "u2-ar-55",
+    "difficulty": "easy",
+    "topic": "cell compartmentalization",
+    "text": "What is the endomembrane system?",
+    "explain": "The endomembrane system is a group of interacting membranes in eukaryotic cells, including the nuclear envelope, ER, Golgi, vesicles, and plasma membrane.",
+    "bullet_points": [
+      "Interconnected membrane system.",
+      "Helps process and transport molecules.",
+      "Includes ER, Golgi, vesicles, and plasma membrane."
+    ]
+  },
+  {
+    "id": "u2-ar-56",
+    "difficulty": "easy",
+    "topic": "origins of cell compartmentalization",
+    "text": "What is the endosymbiotic theory?",
+    "explain": "The endosymbiotic theory states that mitochondria and chloroplasts originated from free-living prokaryotes that were engulfed by an ancestral cell and formed a symbiotic relationship.",
+    "bullet_points": [
+      "Explains origin of mitochondria and chloroplasts.",
+      "These organelles likely came from prokaryotes.",
+      "They became permanent parts of eukaryotic cells."
+    ]
+  },
+  {
+    "id": "u2-ar-57",
+    "difficulty": "easy",
+    "topic": "origins of cell compartmentalization",
+    "text": "What evidence supports the endosymbiotic theory?",
+    "explain": "Evidence includes that mitochondria and chloroplasts have double membranes, circular DNA, prokaryote-like ribosomes, and divide by binary fission.",
+    "bullet_points": [
+      "Double membranes.",
+      "Own circular DNA and ribosomes.",
+      "Replicate similarly to bacteria."
+    ]
+  },
+  {
+    "id": "u2-ar-58",
+    "difficulty": "easy",
+    "topic": "origins of cell compartmentalization",
+    "text": "What is a prokaryote?",
+    "explain": "A prokaryote is a cell that lacks a nucleus and membrane-bound organelles. Bacteria and archaea are prokaryotes.",
+    "bullet_points": [
+      "No nucleus.",
+      "No membrane-bound organelles.",
+      "Includes bacteria and archaea."
+    ]
+  },
+  {
+    "id": "u2-ar-59",
+    "difficulty": "easy",
+    "topic": "origins of cell compartmentalization",
+    "text": "What is a eukaryote?",
+    "explain": "A eukaryote is a cell with a nucleus and membrane-bound organelles.",
+    "bullet_points": [
+      "Has a nucleus.",
+      "Has membrane-bound organelles.",
+      "Includes plants, animals, fungi, and protists."
+    ]
   }
 ]

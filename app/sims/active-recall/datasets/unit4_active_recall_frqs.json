@@ -3,126 +3,540 @@
     "id": "u4-ar-1",
     "difficulty": "easy",
     "topic": "cell communication",
-    "text": "What is cell signaling?"
+    "text": "What is cell signaling?",
+    "explain": "Cell signaling is the process by which cells detect and respond to information from their environment or from other cells.",
+    "bullet_points": [
+      "Cells send and receive information.",
+      "Allows cells to coordinate responses.",
+      "Important for homeostasis and development."
+    ]
   },
   {
     "id": "u4-ar-2",
     "difficulty": "easy",
     "topic": "cell communication",
-    "text": "What is a ligand?"
+    "text": "What is a ligand?",
+    "explain": "A ligand is a signaling molecule that binds to a receptor.",
+    "bullet_points": [
+      "Signaling molecule.",
+      "Binds specifically to a receptor.",
+      "Can trigger a cellular response."
+    ]
   },
   {
     "id": "u4-ar-3",
     "difficulty": "easy",
     "topic": "cell communication",
-    "text": "What is a receptor?"
+    "text": "What is a receptor?",
+    "explain": "A receptor is a protein that binds a signaling molecule and starts a cellular response.",
+    "bullet_points": [
+      "Binds a ligand.",
+      "Initiates signaling.",
+      "Can be on the membrane or inside the cell."
+    ]
   },
   {
     "id": "u4-ar-4",
     "difficulty": "easy",
     "topic": "cell communication",
-    "text": "What is local signaling?"
+    "text": "What is local signaling?",
+    "explain": "Local signaling is communication over short distances, often using nearby target cells.",
+    "bullet_points": [
+      "Short-distance communication.",
+      "Often affects nearby cells.",
+      "Includes paracrine signaling."
+    ]
   },
   {
     "id": "u4-ar-5",
     "difficulty": "easy",
     "topic": "cell communication",
-    "text": "What is long-distance signaling?"
+    "text": "What is long-distance signaling?",
+    "explain": "Long-distance signaling is communication in which signals travel far through an organism, such as hormones moving through the bloodstream.",
+    "bullet_points": [
+      "Signal travels far.",
+      "Often uses hormones.",
+      "Targets distant cells."
+    ]
   },
   {
     "id": "u4-ar-6",
     "difficulty": "easy",
     "topic": "cell communication",
-    "text": "What is direct contact signaling?"
+    "text": "What is direct contact signaling?",
+    "explain": "Direct contact signaling occurs when cells communicate by touching, often through cell junctions or membrane-bound molecules.",
+    "bullet_points": [
+      "Requires cell-to-cell contact.",
+      "No released signal molecule is necessary in some cases.",
+      "Important in development and immune responses."
+    ]
   },
   {
     "id": "u4-ar-7",
     "difficulty": "easy",
     "topic": "cell communication",
-    "text": "What is paracrine signaling?"
+    "text": "What is paracrine signaling?",
+    "explain": "Paracrine signaling is local signaling in which a cell releases a regulator that affects nearby target cells.",
+    "bullet_points": [
+      "Local signaling.",
+      "Affects nearby cells.",
+      "Does not usually travel through the whole body."
+    ]
   },
   {
     "id": "u4-ar-8",
     "difficulty": "easy",
     "topic": "cell communication",
-    "text": "What is endocrine signaling?"
+    "text": "What is endocrine signaling?",
+    "explain": "Endocrine signaling is long-distance signaling in which hormones travel through body fluids to target cells.",
+    "bullet_points": [
+      "Uses hormones.",
+      "Long-distance signaling.",
+      "Targets cells with the proper receptors."
+    ]
   },
   {
     "id": "u4-ar-9",
     "difficulty": "easy",
     "topic": "introduction to signal transduction",
-    "text": "What is signal transduction?"
+    "text": "What is signal transduction?",
+    "explain": "Signal transduction is the series of steps that converts an external signal received by a receptor into a specific cellular response.",
+    "bullet_points": [
+      "Signal is converted inside the cell.",
+      "Usually involves multiple steps.",
+      "Links reception to response."
+    ]
   },
   {
     "id": "u4-ar-10",
     "difficulty": "easy",
     "topic": "introduction to signal transduction",
-    "text": "What is reception in cell signaling?"
+    "text": "What is reception in cell signaling?",
+    "explain": "Reception is the first step of signaling in which a ligand binds to a receptor.",
+    "bullet_points": [
+      "First step of signaling.",
+      "Ligand binds receptor.",
+      "Begins the pathway."
+    ]
   },
   {
     "id": "u4-ar-11",
     "difficulty": "easy",
     "topic": "introduction to signal transduction",
-    "text": "What is transduction in cell signaling?"
+    "text": "What is transduction in cell signaling?",
+    "explain": "Transduction is the series of molecular changes that relays and often amplifies a signal inside the cell.",
+    "bullet_points": [
+      "Middle stage of signaling.",
+      "Relays the signal inside the cell.",
+      "Can amplify the signal."
+    ]
   },
   {
     "id": "u4-ar-12",
     "difficulty": "easy",
     "topic": "introduction to signal transduction",
-    "text": "What is a cellular response?"
+    "text": "What is a cellular response?",
+    "explain": "A cellular response is the final effect of a signaling pathway, such as a change in gene expression or enzyme activity.",
+    "bullet_points": [
+      "Final outcome of signaling.",
+      "May change gene expression or protein activity.",
+      "Depends on cell type and pathway."
+    ]
   },
   {
     "id": "u4-ar-13",
     "difficulty": "easy",
     "topic": "introduction to signal transduction",
-    "text": "Why is specificity important in cell signaling?"
+    "text": "Why is specificity important in cell signaling?",
+    "explain": "Specificity is important because only target cells with the correct receptors or internal machinery respond appropriately to a signal.",
+    "bullet_points": [
+      "Only certain cells respond.",
+      "Requires the right receptor and pathway.",
+      "Allows different cells to respond differently to the same environment."
+    ]
   },
   {
     "id": "u4-ar-14",
     "difficulty": "easy",
     "topic": "signal transduction pathways",
-    "text": "What is a phosphorylation cascade?"
+    "text": "What is a phosphorylation cascade?",
+    "explain": "A phosphorylation cascade is a series of reactions in which protein kinases activate one another by adding phosphate groups.",
+    "bullet_points": [
+      "Series of kinase activations.",
+      "Uses phosphorylation.",
+      "Can amplify a signal."
+    ]
   },
   {
     "id": "u4-ar-15",
     "difficulty": "easy",
     "topic": "signal transduction pathways",
-    "text": "What is a protein kinase?"
+    "text": "What is a protein kinase?",
+    "explain": "A protein kinase is an enzyme that adds phosphate groups to proteins.",
+    "bullet_points": [
+      "Adds phosphate groups.",
+      "Often activates or changes target proteins.",
+      "Important in signaling pathways."
+    ]
   },
   {
     "id": "u4-ar-16",
     "difficulty": "easy",
     "topic": "signal transduction pathways",
-    "text": "What is a protein phosphatase?"
+    "text": "What is a protein phosphatase?",
+    "explain": "A protein phosphatase is an enzyme that removes phosphate groups from proteins.",
+    "bullet_points": [
+      "Removes phosphate groups.",
+      "Can turn signaling steps off.",
+      "Helps regulate pathways."
+    ]
   },
   {
     "id": "u4-ar-17",
     "difficulty": "easy",
     "topic": "signal transduction pathways",
-    "text": "What is signal amplification?"
+    "text": "What is signal amplification?",
+    "explain": "Signal amplification is the process by which one signaling event triggers many downstream events, increasing the strength of the response.",
+    "bullet_points": [
+      "One signal leads to many effects.",
+      "Makes pathways more powerful.",
+      "Common in cascades."
+    ]
   },
   {
     "id": "u4-ar-18",
     "difficulty": "easy",
     "topic": "signal transduction pathways",
-    "text": "What is a second messenger?"
+    "text": "What is a second messenger?",
+    "explain": "A second messenger is a small intracellular molecule that relays a signal from a receptor to target molecules inside the cell.",
+    "bullet_points": [
+      "Small internal signaling molecule.",
+      "Relays signals inside the cell.",
+      "Examples include cAMP and calcium ions."
+    ]
   },
   {
     "id": "u4-ar-19",
     "difficulty": "easy",
     "topic": "signal transduction pathways",
-    "text": "What is cAMP?"
+    "text": "What is cAMP?",
+    "explain": "cAMP is a second messenger that helps relay signals inside cells in many pathways.",
+    "bullet_points": [
+      "A second messenger.",
+      "Relays intracellular signals.",
+      "Often activates downstream proteins."
+    ]
   },
   {
     "id": "u4-ar-20",
     "difficulty": "easy",
     "topic": "signal transduction pathways",
-    "text": "What is a G protein-coupled receptor (GPCR)?"
+    "text": "What is a G protein-coupled receptor (GPCR)?",
+    "explain": "A GPCR is a membrane receptor that activates a G protein when a ligand binds, starting an intracellular signaling pathway.",
+    "bullet_points": [
+      "Membrane receptor.",
+      "Activates a G protein.",
+      "Common in signaling pathways."
+    ]
   },
   {
     "id": "u4-ar-21",
     "difficulty": "easy",
     "topic": "signal transduction pathways",
-    "text": "What is a receptor tyrosine kinase (RTK)?"
+    "text": "What is a receptor tyrosine kinase (RTK)?",
+    "explain": "A receptor tyrosine kinase is a membrane receptor that activates itself and other proteins by phosphorylation when a ligand binds.",
+    "bullet_points": [
+      "Membrane receptor.",
+      "Uses phosphorylation.",
+      "Can trigger growth and signaling pathways."
+    ]
+  },
+  {
+    "id": "u4-ar-22",
+    "difficulty": "easy",
+    "topic": "changes in signal transduction pathways",
+    "text": "How can a mutation in a receptor affect cell signaling?",
+    "explain": "A mutation in a receptor can prevent ligand binding, stop the pathway, or in some cases keep the receptor permanently active.",
+    "bullet_points": [
+      "Can block signaling.",
+      "Can change receptor shape or function.",
+      "May cause abnormal responses."
+    ]
+  },
+  {
+    "id": "u4-ar-23",
+    "difficulty": "easy",
+    "topic": "changes in signal transduction pathways",
+    "text": "What does it mean if a signaling protein is constitutively active?",
+    "explain": "It means the protein stays active all the time, even when the normal signal is absent.",
+    "bullet_points": [
+      "Always on.",
+      "Does not require the usual signal.",
+      "Can lead to abnormal cell responses."
+    ]
+  },
+  {
+    "id": "u4-ar-24",
+    "difficulty": "easy",
+    "topic": "changes in signal transduction pathways",
+    "text": "Why can changes in signaling pathways lead to disease?",
+    "explain": "Changes in signaling pathways can lead to disease because cells may divide, respond, or express genes at the wrong time or at the wrong level.",
+    "bullet_points": [
+      "Pathways control key cell activities.",
+      "Disruptions can cause inappropriate responses.",
+      "Often linked to cancer or other disorders."
+    ]
+  },
+  {
+    "id": "u4-ar-25",
+    "difficulty": "easy",
+    "topic": "feedback",
+    "text": "What is feedback regulation?",
+    "explain": "Feedback regulation occurs when the output of a system influences the activity of that system.",
+    "bullet_points": [
+      "Output affects the system itself.",
+      "Helps regulate biological processes.",
+      "Can be negative or positive."
+    ]
+  },
+  {
+    "id": "u4-ar-26",
+    "difficulty": "easy",
+    "topic": "feedback",
+    "text": "What is negative feedback?",
+    "explain": "Negative feedback is a control mechanism in which a change in a condition triggers responses that counteract the original change.",
+    "bullet_points": [
+      "Response opposes the initial change.",
+      "Helps maintain stability.",
+      "Common in homeostasis."
+    ]
+  },
+  {
+    "id": "u4-ar-27",
+    "difficulty": "easy",
+    "topic": "feedback",
+    "text": "What is positive feedback?",
+    "explain": "Positive feedback is a control mechanism in which a change triggers responses that increase or reinforce that change.",
+    "bullet_points": [
+      "Response amplifies the initial change.",
+      "Less common than negative feedback.",
+      "Often used for rapid completion of a process."
+    ]
+  },
+  {
+    "id": "u4-ar-28",
+    "difficulty": "easy",
+    "topic": "feedback",
+    "text": "Why is negative feedback important in homeostasis?",
+    "explain": "Negative feedback is important because it keeps conditions such as temperature or blood glucose near a stable set point.",
+    "bullet_points": [
+      "Maintains stable internal conditions.",
+      "Counters deviations from the set point.",
+      "Supports homeostasis."
+    ]
+  },
+  {
+    "id": "u4-ar-29",
+    "difficulty": "easy",
+    "topic": "feedback",
+    "text": "What is homeostasis?",
+    "explain": "Homeostasis is the maintenance of a relatively stable internal environment despite changes in external or internal conditions.",
+    "bullet_points": [
+      "Internal stability.",
+      "Maintained by regulatory systems.",
+      "Essential for cell and organism function."
+    ]
+  },
+  {
+    "id": "u4-ar-30",
+    "difficulty": "easy",
+    "topic": "cell cycle",
+    "text": "What is the cell cycle?",
+    "explain": "The cell cycle is the ordered series of events by which a cell grows, replicates its DNA, and divides.",
+    "bullet_points": [
+      "Includes growth, DNA replication, and division.",
+      "Produces new cells.",
+      "Important for growth and repair."
+    ]
+  },
+  {
+    "id": "u4-ar-31",
+    "difficulty": "easy",
+    "topic": "cell cycle",
+    "text": "What is interphase?",
+    "explain": "Interphase is the part of the cell cycle in which the cell grows, carries out normal functions, and replicates its DNA.",
+    "bullet_points": [
+      "Includes G1, S, and G2 phases.",
+      "Cell spends most of its time here.",
+      "DNA is replicated during S phase."
+    ]
+  },
+  {
+    "id": "u4-ar-32",
+    "difficulty": "easy",
+    "topic": "cell cycle",
+    "text": "What is mitosis?",
+    "explain": "Mitosis is the division of the nucleus that distributes duplicated chromosomes into two nuclei.",
+    "bullet_points": [
+      "Nuclear division.",
+      "Maintains chromosome number.",
+      "Produces genetically similar nuclei."
+    ]
+  },
+  {
+    "id": "u4-ar-33",
+    "difficulty": "easy",
+    "topic": "cell cycle",
+    "text": "What is cytokinesis?",
+    "explain": "Cytokinesis is the division of the cytoplasm to form two separate daughter cells.",
+    "bullet_points": [
+      "Divides the cell body.",
+      "Usually follows mitosis.",
+      "Completes cell division."
+    ]
+  },
+  {
+    "id": "u4-ar-34",
+    "difficulty": "easy",
+    "topic": "cell cycle",
+    "text": "What is the G1 phase?",
+    "explain": "G1 is the first gap phase of interphase when the cell grows and performs normal functions.",
+    "bullet_points": [
+      "Cell growth occurs.",
+      "Normal metabolism continues.",
+      "Precedes DNA replication."
+    ]
+  },
+  {
+    "id": "u4-ar-35",
+    "difficulty": "easy",
+    "topic": "cell cycle",
+    "text": "What is the S phase?",
+    "explain": "S phase is the part of interphase during which DNA is replicated.",
+    "bullet_points": [
+      "DNA synthesis occurs.",
+      "Chromosomes are copied.",
+      "Prepares the cell for division."
+    ]
+  },
+  {
+    "id": "u4-ar-36",
+    "difficulty": "easy",
+    "topic": "cell cycle",
+    "text": "What is the G2 phase?",
+    "explain": "G2 is the second gap phase of interphase when the cell grows more and prepares for mitosis.",
+    "bullet_points": [
+      "Further growth and preparation.",
+      "Occurs after DNA replication.",
+      "Precedes mitosis."
+    ]
+  },
+  {
+    "id": "u4-ar-37",
+    "difficulty": "easy",
+    "topic": "regulation of cell cycle",
+    "text": "What is a checkpoint in the cell cycle?",
+    "explain": "A checkpoint is a control point where the cell cycle can be paused or stopped if conditions are not correct.",
+    "bullet_points": [
+      "Control point in the cycle.",
+      "Can stop progression if problems are detected.",
+      "Helps prevent errors from being passed on."
+    ]
+  },
+  {
+    "id": "u4-ar-38",
+    "difficulty": "easy",
+    "topic": "regulation of cell cycle",
+    "text": "Why are checkpoints important?",
+    "explain": "Checkpoints are important because they help ensure DNA is copied correctly and damaged cells do not continue dividing.",
+    "bullet_points": [
+      "Protect against errors.",
+      "Help maintain genome integrity.",
+      "Reduce risk of uncontrolled growth."
+    ]
+  },
+  {
+    "id": "u4-ar-39",
+    "difficulty": "easy",
+    "topic": "regulation of cell cycle",
+    "text": "What is a cyclin?",
+    "explain": "A cyclin is a regulatory protein that helps control progression through the cell cycle by activating cyclin-dependent kinases.",
+    "bullet_points": [
+      "Cell-cycle regulatory protein.",
+      "Binds to CDKs.",
+      "Levels rise and fall during the cycle."
+    ]
+  },
+  {
+    "id": "u4-ar-40",
+    "difficulty": "easy",
+    "topic": "regulation of cell cycle",
+    "text": "What is a cyclin-dependent kinase (CDK)?",
+    "explain": "A cyclin-dependent kinase is an enzyme that regulates the cell cycle when activated by binding to a cyclin.",
+    "bullet_points": [
+      "Enzyme involved in cell-cycle control.",
+      "Activated by cyclins.",
+      "Helps move the cycle forward."
+    ]
+  },
+  {
+    "id": "u4-ar-41",
+    "difficulty": "easy",
+    "topic": "regulation of cell cycle",
+    "text": "Why can loss of cell cycle regulation lead to cancer?",
+    "explain": "Loss of cell cycle regulation can lead to cancer because cells may divide uncontrollably even when DNA is damaged or growth signals are absent.",
+    "bullet_points": [
+      "Cells keep dividing when they should not.",
+      "Damaged DNA may be passed on.",
+      "Can result in tumors and cancer."
+    ]
+  },
+  {
+    "id": "u4-ar-42",
+    "difficulty": "easy",
+    "topic": "regulation of cell cycle",
+    "text": "What is apoptosis?",
+    "explain": "Apoptosis is programmed cell death, a controlled process that removes damaged or unnecessary cells.",
+    "bullet_points": [
+      "Programmed cell death.",
+      "Controlled and regulated.",
+      "Helps protect the organism."
+    ]
+  },
+  {
+    "id": "u4-ar-43",
+    "difficulty": "easy",
+    "topic": "regulation of cell cycle",
+    "text": "What is a tumor suppressor gene?",
+    "explain": "A tumor suppressor gene is a gene whose normal role is to slow cell division, repair DNA, or trigger apoptosis.",
+    "bullet_points": [
+      "Helps prevent uncontrolled growth.",
+      "Can stop the cell cycle or help repair DNA.",
+      "Loss of function can contribute to cancer."
+    ]
+  },
+  {
+    "id": "u4-ar-44",
+    "difficulty": "easy",
+    "topic": "regulation of cell cycle",
+    "text": "What is a proto-oncogene?",
+    "explain": "A proto-oncogene is a normal gene that promotes cell growth or division when appropriately regulated.",
+    "bullet_points": [
+      "Normally promotes growth.",
+      "Useful when controlled correctly.",
+      "Can become an oncogene if altered."
+    ]
+  },
+  {
+    "id": "u4-ar-45",
+    "difficulty": "easy",
+    "topic": "regulation of cell cycle",
+    "text": "What is an oncogene?",
+    "explain": "An oncogene is a gene that can cause excessive cell division when mutated or overexpressed.",
+    "bullet_points": [
+      "Usually a changed proto-oncogene.",
+      "Promotes uncontrolled growth.",
+      "Can contribute to cancer."
+    ]
   }
 ]

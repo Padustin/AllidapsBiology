@@ -3,132 +3,588 @@
     "id": "u3-ar-1",
     "difficulty": "easy",
     "topic": "enzymes",
-    "text": "What is an enzyme?"
+    "text": "What is an enzyme?",
+    "explain": "An enzyme is a biological catalyst, usually a protein, that speeds up a reaction by lowering activation energy.",
+    "bullet_points": [
+      "Biological catalyst.",
+      "Usually a protein.",
+      "Lowers activation energy."
+    ]
   },
   {
     "id": "u3-ar-2",
     "difficulty": "easy",
     "topic": "enzymes",
-    "text": "What is activation energy?"
+    "text": "What is activation energy?",
+    "explain": "Activation energy is the energy needed to start a chemical reaction.",
+    "bullet_points": [
+      "Required to begin a reaction.",
+      "Enzymes lower it.",
+      "Lower activation energy increases reaction rate."
+    ]
   },
   {
     "id": "u3-ar-3",
     "difficulty": "easy",
     "topic": "enzymes",
-    "text": "What is a substrate?"
+    "text": "What is a substrate?",
+    "explain": "A substrate is the reactant an enzyme acts on.",
+    "bullet_points": [
+      "Reactant for an enzyme.",
+      "Binds to the active site.",
+      "Is converted into product."
+    ]
   },
   {
     "id": "u3-ar-4",
     "difficulty": "easy",
     "topic": "enzymes",
-    "text": "What is the active site?"
+    "text": "What is the active site?",
+    "explain": "The active site is the specific region of an enzyme where the substrate binds and the reaction occurs.",
+    "bullet_points": [
+      "Region on the enzyme.",
+      "Binds the substrate.",
+      "Shape and chemistry determine specificity."
+    ]
   },
   {
     "id": "u3-ar-5",
     "difficulty": "easy",
     "topic": "enzymes",
-    "text": "What is the enzyme-substrate complex?"
+    "text": "What is the enzyme-substrate complex?",
+    "explain": "The enzyme-substrate complex is the temporary association formed when a substrate binds to an enzyme’s active site.",
+    "bullet_points": [
+      "Temporary binding state.",
+      "Forms before product is released.",
+      "Important for catalysis."
+    ]
   },
   {
     "id": "u3-ar-6",
     "difficulty": "easy",
     "topic": "enzymes",
-    "text": "What is induced fit?"
+    "text": "What is induced fit?",
+    "explain": "Induced fit is the slight change in enzyme shape that occurs when the substrate binds, improving the fit and helping catalysis.",
+    "bullet_points": [
+      "Binding can change enzyme shape slightly.",
+      "Improves fit between enzyme and substrate.",
+      "Helps explain enzyme specificity."
+    ]
   },
   {
     "id": "u3-ar-7",
     "difficulty": "easy",
     "topic": "environmental impacts on enzyme function",
-    "text": "What is denaturation in the context of enzymes?"
+    "text": "What is denaturation in the context of enzymes?",
+    "explain": "Denaturation is the loss of an enzyme’s normal shape, which can reduce or eliminate its ability to function.",
+    "bullet_points": [
+      "Enzyme shape changes.",
+      "Active site may no longer fit the substrate.",
+      "Can be caused by heat or pH changes."
+    ]
   },
   {
     "id": "u3-ar-8",
     "difficulty": "easy",
     "topic": "environmental impacts on enzyme function",
-    "text": "How does temperature affect enzyme activity?"
+    "text": "How does temperature affect enzyme activity?",
+    "explain": "Enzyme activity usually increases with temperature up to an optimal point, but very high temperatures can denature the enzyme and reduce activity.",
+    "bullet_points": [
+      "Rate often rises as molecules move faster.",
+      "Each enzyme has an optimal temperature.",
+      "High heat can denature the enzyme."
+    ]
   },
   {
     "id": "u3-ar-9",
     "difficulty": "easy",
     "topic": "environmental impacts on enzyme function",
-    "text": "How does pH affect enzyme activity?"
+    "text": "How does pH affect enzyme activity?",
+    "explain": "pH affects enzyme activity by changing the ionization of amino acids and the shape or charge of the active site.",
+    "bullet_points": [
+      "Each enzyme has an optimal pH.",
+      "Extreme pH can reduce activity.",
+      "Changes can alter active site shape or charge."
+    ]
   },
   {
     "id": "u3-ar-10",
     "difficulty": "easy",
     "topic": "environmental impacts on enzyme function",
-    "text": "What is a competitive inhibitor?"
+    "text": "What is a competitive inhibitor?",
+    "explain": "A competitive inhibitor is a molecule that competes with the substrate for the active site of an enzyme.",
+    "bullet_points": [
+      "Binds at the active site.",
+      "Competes with substrate.",
+      "Can reduce reaction rate."
+    ]
   },
   {
     "id": "u3-ar-11",
     "difficulty": "easy",
     "topic": "environmental impacts on enzyme function",
-    "text": "What is a noncompetitive inhibitor?"
+    "text": "What is a noncompetitive inhibitor?",
+    "explain": "A noncompetitive inhibitor is a molecule that binds to an enzyme at a site other than the active site and changes the enzyme’s shape or function.",
+    "bullet_points": [
+      "Binds at an allosteric site.",
+      "Changes enzyme activity.",
+      "Does not compete directly for the active site."
+    ]
   },
   {
     "id": "u3-ar-12",
     "difficulty": "easy",
     "topic": "environmental impacts on enzyme function",
-    "text": "What is an allosteric site?"
+    "text": "What is an allosteric site?",
+    "explain": "An allosteric site is a location on an enzyme other than the active site where a molecule can bind and alter enzyme function.",
+    "bullet_points": [
+      "Not the active site.",
+      "Binding there changes activity.",
+      "Used in regulation."
+    ]
   },
   {
     "id": "u3-ar-13",
     "difficulty": "easy",
     "topic": "environmental impacts on enzyme function",
-    "text": "What is a cofactor?"
+    "text": "What is a cofactor?",
+    "explain": "A cofactor is a nonprotein helper, such as a metal ion, that is required for some enzymes to function.",
+    "bullet_points": [
+      "Helper needed by some enzymes.",
+      "Often an ion like magnesium or zinc.",
+      "Supports enzyme activity."
+    ]
   },
   {
     "id": "u3-ar-14",
     "difficulty": "easy",
     "topic": "environmental impacts on enzyme function",
-    "text": "What is a coenzyme?"
+    "text": "What is a coenzyme?",
+    "explain": "A coenzyme is an organic helper molecule required by some enzymes to function.",
+    "bullet_points": [
+      "Organic cofactor.",
+      "Often vitamin-derived.",
+      "Helps transfer electrons or groups."
+    ]
   },
   {
     "id": "u3-ar-15",
     "difficulty": "easy",
     "topic": "environmental impacts on enzyme function",
-    "text": "What does optimal temperature mean for an enzyme?"
+    "text": "What does optimal temperature mean for an enzyme?",
+    "explain": "Optimal temperature is the temperature at which an enzyme works best and has its highest activity.",
+    "bullet_points": [
+      "Temperature of highest activity.",
+      "Varies by enzyme.",
+      "Above or below it, activity usually falls."
+    ]
   },
   {
     "id": "u3-ar-16",
     "difficulty": "easy",
     "topic": "environmental impacts on enzyme function",
-    "text": "What does optimal pH mean for an enzyme?"
+    "text": "What does optimal pH mean for an enzyme?",
+    "explain": "Optimal pH is the pH at which an enzyme functions best.",
+    "bullet_points": [
+      "pH of highest activity.",
+      "Varies by enzyme.",
+      "Extreme pH can reduce function."
+    ]
   },
   {
     "id": "u3-ar-17",
     "difficulty": "easy",
     "topic": "cellular energy",
-    "text": "What is ATP?"
+    "text": "What is ATP?",
+    "explain": "ATP, or adenosine triphosphate, is the main energy-carrying molecule used by cells.",
+    "bullet_points": [
+      "Stores usable energy.",
+      "Has three phosphate groups.",
+      "Can power cellular work."
+    ]
   },
   {
     "id": "u3-ar-18",
     "difficulty": "easy",
     "topic": "cellular energy",
-    "text": "What is ADP?"
+    "text": "What is ADP?",
+    "explain": "ADP, or adenosine diphosphate, is the molecule formed when ATP loses one phosphate group.",
+    "bullet_points": [
+      "Has two phosphate groups.",
+      "Formed when ATP is hydrolyzed.",
+      "Can be converted back to ATP."
+    ]
   },
   {
     "id": "u3-ar-19",
     "difficulty": "easy",
     "topic": "cellular energy",
-    "text": "What is phosphorylation?"
+    "text": "What is phosphorylation?",
+    "explain": "Phosphorylation is the addition of a phosphate group to a molecule.",
+    "bullet_points": [
+      "Adds a phosphate group.",
+      "Often changes the energy or activity of a molecule.",
+      "Important in metabolism and signaling."
+    ]
   },
   {
     "id": "u3-ar-20",
     "difficulty": "easy",
     "topic": "cellular energy",
-    "text": "What is an exergonic reaction?"
+    "text": "What is an exergonic reaction?",
+    "explain": "An exergonic reaction releases free energy.",
+    "bullet_points": [
+      "Releases energy.",
+      "Can power other processes.",
+      "Products have less free energy than reactants."
+    ]
   },
   {
     "id": "u3-ar-21",
     "difficulty": "easy",
     "topic": "cellular energy",
-    "text": "What is an endergonic reaction?"
+    "text": "What is an endergonic reaction?",
+    "explain": "An endergonic reaction requires an input of free energy.",
+    "bullet_points": [
+      "Requires energy input.",
+      "Often coupled to ATP hydrolysis.",
+      "Products have more free energy than reactants."
+    ]
   },
   {
     "id": "u3-ar-22",
     "difficulty": "easy",
     "topic": "cellular energy",
-    "text": "What does it mean to say ATP couples reactions?"
+    "text": "What does it mean to say ATP couples reactions?",
+    "explain": "ATP couples reactions by releasing energy from its hydrolysis and using that energy to drive endergonic cellular processes.",
+    "bullet_points": [
+      "ATP hydrolysis is exergonic.",
+      "That released energy can drive endergonic work.",
+      "Links energy-releasing and energy-requiring reactions."
+    ]
+  },
+  {
+    "id": "u3-ar-23",
+    "difficulty": "easy",
+    "topic": "cellular energy",
+    "text": "What is the first law of thermodynamics?",
+    "explain": "The first law of thermodynamics states that energy cannot be created or destroyed, only transferred or transformed.",
+    "bullet_points": [
+      "Energy is conserved.",
+      "Can change form.",
+      "Applies to living systems too."
+    ]
+  },
+  {
+    "id": "u3-ar-24",
+    "difficulty": "easy",
+    "topic": "cellular energy",
+    "text": "What is the second law of thermodynamics?",
+    "explain": "The second law of thermodynamics states that every energy transfer increases entropy in the universe.",
+    "bullet_points": [
+      "Energy transfers are not 100 percent efficient.",
+      "Some energy becomes less useful, often as heat.",
+      "Entropy increases overall."
+    ]
+  },
+  {
+    "id": "u3-ar-25",
+    "difficulty": "easy",
+    "topic": "photosynthesis",
+    "text": "What is photosynthesis?",
+    "explain": "Photosynthesis is the process by which autotrophs use light energy to make sugars from carbon dioxide and water.",
+    "bullet_points": [
+      "Uses light energy.",
+      "Builds sugars.",
+      "Occurs in chloroplasts of plants and many algae."
+    ]
+  },
+  {
+    "id": "u3-ar-26",
+    "difficulty": "easy",
+    "topic": "photosynthesis",
+    "text": "What is a chloroplast?",
+    "explain": "A chloroplast is the organelle where photosynthesis occurs in plants and many protists.",
+    "bullet_points": [
+      "Site of photosynthesis.",
+      "Contains chlorophyll.",
+      "Has thylakoids and stroma."
+    ]
+  },
+  {
+    "id": "u3-ar-27",
+    "difficulty": "easy",
+    "topic": "photosynthesis",
+    "text": "What is a thylakoid?",
+    "explain": "A thylakoid is a flattened membrane sac inside a chloroplast where the light-dependent reactions occur.",
+    "bullet_points": [
+      "Membrane sac in chloroplasts.",
+      "Site of light reactions.",
+      "Contains chlorophyll and electron transport proteins."
+    ]
+  },
+  {
+    "id": "u3-ar-28",
+    "difficulty": "easy",
+    "topic": "photosynthesis",
+    "text": "What is a granum?",
+    "explain": "A granum is a stack of thylakoids inside a chloroplast.",
+    "bullet_points": [
+      "Stack of thylakoids.",
+      "Increases membrane surface area.",
+      "Found in chloroplasts."
+    ]
+  },
+  {
+    "id": "u3-ar-29",
+    "difficulty": "easy",
+    "topic": "photosynthesis",
+    "text": "What is the stroma?",
+    "explain": "The stroma is the fluid-filled region of a chloroplast surrounding the thylakoids. The Calvin cycle occurs there.",
+    "bullet_points": [
+      "Fluid around thylakoids.",
+      "Site of the Calvin cycle.",
+      "Inside the chloroplast."
+    ]
+  },
+  {
+    "id": "u3-ar-30",
+    "difficulty": "easy",
+    "topic": "photosynthesis",
+    "text": "What are the light-dependent reactions?",
+    "explain": "The light-dependent reactions capture light energy to produce ATP and NADPH and release oxygen from water.",
+    "bullet_points": [
+      "Occur in thylakoid membranes.",
+      "Make ATP and NADPH.",
+      "Split water and release oxygen."
+    ]
+  },
+  {
+    "id": "u3-ar-31",
+    "difficulty": "easy",
+    "topic": "photosynthesis",
+    "text": "What is the Calvin cycle?",
+    "explain": "The Calvin cycle is the series of reactions that uses ATP and NADPH to fix carbon dioxide into sugars.",
+    "bullet_points": [
+      "Occurs in the stroma.",
+      "Uses ATP and NADPH.",
+      "Builds carbohydrates from CO2."
+    ]
+  },
+  {
+    "id": "u3-ar-32",
+    "difficulty": "easy",
+    "topic": "photosynthesis",
+    "text": "What is chlorophyll?",
+    "explain": "Chlorophyll is the main pigment that absorbs light energy for photosynthesis.",
+    "bullet_points": [
+      "Light-absorbing pigment.",
+      "Located in thylakoid membranes.",
+      "Important for capturing solar energy."
+    ]
+  },
+  {
+    "id": "u3-ar-33",
+    "difficulty": "easy",
+    "topic": "photosynthesis",
+    "text": "What is photolysis?",
+    "explain": "Photolysis is the splitting of water by light during the light-dependent reactions.",
+    "bullet_points": [
+      "Water is split.",
+      "Provides electrons and hydrogen ions.",
+      "Releases oxygen."
+    ]
+  },
+  {
+    "id": "u3-ar-34",
+    "difficulty": "easy",
+    "topic": "photosynthesis",
+    "text": "What is NADPH?",
+    "explain": "NADPH is an electron carrier produced in the light-dependent reactions and used in the Calvin cycle.",
+    "bullet_points": [
+      "Carries high-energy electrons.",
+      "Made during light reactions.",
+      "Used to help reduce carbon in the Calvin cycle."
+    ]
+  },
+  {
+    "id": "u3-ar-35",
+    "difficulty": "easy",
+    "topic": "cellular respiration",
+    "text": "What is cellular respiration?",
+    "explain": "Cellular respiration is the process by which cells break down organic molecules to make ATP.",
+    "bullet_points": [
+      "Releases energy from organic molecules.",
+      "Produces ATP.",
+      "Includes glycolysis, Krebs cycle, and oxidative phosphorylation."
+    ]
+  },
+  {
+    "id": "u3-ar-36",
+    "difficulty": "easy",
+    "topic": "cellular respiration",
+    "text": "What is glycolysis?",
+    "explain": "Glycolysis is the pathway that splits glucose into two pyruvate molecules and produces a small amount of ATP and NADH.",
+    "bullet_points": [
+      "Occurs in the cytosol.",
+      "Splits glucose into pyruvate.",
+      "Does not require oxygen directly."
+    ]
+  },
+  {
+    "id": "u3-ar-37",
+    "difficulty": "easy",
+    "topic": "cellular respiration",
+    "text": "What is pyruvate oxidation?",
+    "explain": "Pyruvate oxidation is the step in which pyruvate is converted to acetyl-CoA before entering the Krebs cycle.",
+    "bullet_points": [
+      "Occurs before the Krebs cycle.",
+      "Forms acetyl-CoA.",
+      "Releases CO2 and makes NADH."
+    ]
+  },
+  {
+    "id": "u3-ar-38",
+    "difficulty": "easy",
+    "topic": "cellular respiration",
+    "text": "What is the Krebs cycle?",
+    "explain": "The Krebs cycle, or citric acid cycle, is a cyclic pathway that breaks down acetyl-CoA and produces CO2, NADH, FADH2, and ATP.",
+    "bullet_points": [
+      "Occurs in the mitochondrial matrix in eukaryotes.",
+      "Produces electron carriers.",
+      "Releases carbon dioxide."
+    ]
+  },
+  {
+    "id": "u3-ar-39",
+    "difficulty": "easy",
+    "topic": "cellular respiration",
+    "text": "What is oxidative phosphorylation?",
+    "explain": "Oxidative phosphorylation is the process that uses electrons from NADH and FADH2 to power ATP production through the electron transport chain and chemiosmosis.",
+    "bullet_points": [
+      "Produces most ATP in aerobic respiration.",
+      "Uses electron transport and chemiosmosis.",
+      "Occurs at the inner mitochondrial membrane in eukaryotes."
+    ]
+  },
+  {
+    "id": "u3-ar-40",
+    "difficulty": "easy",
+    "topic": "cellular respiration",
+    "text": "What is the electron transport chain?",
+    "explain": "The electron transport chain is a series of membrane proteins that pass electrons and use their energy to pump protons.",
+    "bullet_points": [
+      "Series of electron carriers.",
+      "Uses electron energy to pump H+.",
+      "Helps create a proton gradient."
+    ]
+  },
+  {
+    "id": "u3-ar-41",
+    "difficulty": "easy",
+    "topic": "cellular respiration",
+    "text": "What is chemiosmosis?",
+    "explain": "Chemiosmosis is the movement of protons down their gradient through ATP synthase, which drives ATP production.",
+    "bullet_points": [
+      "Uses a proton gradient.",
+      "Protons flow through ATP synthase.",
+      "Makes ATP."
+    ]
+  },
+  {
+    "id": "u3-ar-42",
+    "difficulty": "easy",
+    "topic": "cellular respiration",
+    "text": "What is ATP synthase?",
+    "explain": "ATP synthase is the enzyme that makes ATP using energy from proton flow across a membrane.",
+    "bullet_points": [
+      "Enzyme that produces ATP.",
+      "Powered by proton movement.",
+      "Important in mitochondria and chloroplasts."
+    ]
+  },
+  {
+    "id": "u3-ar-43",
+    "difficulty": "easy",
+    "topic": "cellular respiration",
+    "text": "Why is oxygen important in aerobic respiration?",
+    "explain": "Oxygen is important because it acts as the final electron acceptor in the electron transport chain.",
+    "bullet_points": [
+      "Final electron acceptor.",
+      "Allows the chain to keep running.",
+      "Forms water when it accepts electrons and protons."
+    ]
+  },
+  {
+    "id": "u3-ar-44",
+    "difficulty": "easy",
+    "topic": "cellular respiration",
+    "text": "What is NADH?",
+    "explain": "NADH is an electron carrier that stores high-energy electrons and delivers them to the electron transport chain.",
+    "bullet_points": [
+      "Carries electrons.",
+      "Made during glycolysis and the Krebs cycle.",
+      "Helps drive ATP production."
+    ]
+  },
+  {
+    "id": "u3-ar-45",
+    "difficulty": "easy",
+    "topic": "cellular respiration",
+    "text": "What is FADH2?",
+    "explain": "FADH2 is an electron carrier produced during the Krebs cycle that donates electrons to the electron transport chain.",
+    "bullet_points": [
+      "Carries high-energy electrons.",
+      "Produced in the Krebs cycle.",
+      "Contributes to ATP production."
+    ]
+  },
+  {
+    "id": "u3-ar-46",
+    "difficulty": "easy",
+    "topic": "cellular respiration",
+    "text": "What is fermentation?",
+    "explain": "Fermentation is an anaerobic pathway that regenerates NAD+ so glycolysis can continue when oxygen is unavailable.",
+    "bullet_points": [
+      "Occurs without oxygen.",
+      "Regenerates NAD+.",
+      "Allows ATP production through glycolysis to continue."
+    ]
+  },
+  {
+    "id": "u3-ar-47",
+    "difficulty": "easy",
+    "topic": "cellular respiration",
+    "text": "What is lactic acid fermentation?",
+    "explain": "Lactic acid fermentation is a type of fermentation that converts pyruvate to lactate while regenerating NAD+.",
+    "bullet_points": [
+      "Anaerobic pathway.",
+      "Regenerates NAD+.",
+      "Occurs in some bacteria and animal muscle cells."
+    ]
+  },
+  {
+    "id": "u3-ar-48",
+    "difficulty": "easy",
+    "topic": "cellular respiration",
+    "text": "What is alcoholic fermentation?",
+    "explain": "Alcoholic fermentation is a type of fermentation that converts pyruvate into ethanol and carbon dioxide while regenerating NAD+.",
+    "bullet_points": [
+      "Produces ethanol and CO2.",
+      "Regenerates NAD+.",
+      "Occurs in yeast and some other microorganisms."
+    ]
+  },
+  {
+    "id": "u3-ar-49",
+    "difficulty": "easy",
+    "topic": "cellular respiration",
+    "text": "What does anaerobic mean?",
+    "explain": "Anaerobic means occurring without oxygen.",
+    "bullet_points": [
+      "No oxygen required.",
+      "Applies to some pathways and organisms.",
+      "Fermentation is anaerobic."
+    ]
   }
 ]

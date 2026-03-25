@@ -3,132 +3,672 @@
     "id": "u8-ar-1",
     "difficulty": "easy",
     "topic": "responses to the environment",
-    "text": "What is a behavioral response?"
+    "text": "What is a behavioral response?",
+    "explain": "A behavioral response is an action an organism takes in response to internal or external stimuli.",
+    "bullet_points": [
+      "An action or activity change.",
+      "Triggered by cues or conditions.",
+      "Can affect survival and reproduction."
+    ]
   },
   {
     "id": "u8-ar-2",
     "difficulty": "easy",
     "topic": "responses to the environment",
-    "text": "What is a physiological response?"
+    "text": "What is a physiological response?",
+    "explain": "A physiological response is a change in internal function of an organism in response to stimuli.",
+    "bullet_points": [
+      "Internal functional change.",
+      "Can involve hormones or metabolism.",
+      "Helps maintain homeostasis or fitness."
+    ]
   },
   {
     "id": "u8-ar-3",
     "difficulty": "easy",
     "topic": "responses to the environment",
-    "text": "What is phototropism?"
+    "text": "What is phototropism?",
+    "explain": "Phototropism is the growth of a plant toward or away from light.",
+    "bullet_points": [
+      "Response to light.",
+      "A plant growth response.",
+      "A type of tropism."
+    ]
   },
   {
     "id": "u8-ar-4",
     "difficulty": "easy",
     "topic": "responses to the environment",
-    "text": "What is taxis?"
+    "text": "What is taxis?",
+    "explain": "Taxis is directed movement toward or away from a stimulus.",
+    "bullet_points": [
+      "Directed movement.",
+      "Response to a stimulus.",
+      "Often seen in mobile organisms."
+    ]
   },
   {
     "id": "u8-ar-5",
     "difficulty": "easy",
     "topic": "responses to the environment",
-    "text": "What is kinesis?"
+    "text": "What is kinesis?",
+    "explain": "Kinesis is a change in activity rate in response to a stimulus, rather than directed movement toward or away from it.",
+    "bullet_points": [
+      "Change in movement rate.",
+      "Not directed toward a stimulus.",
+      "A simple behavioral response."
+    ]
   },
   {
     "id": "u8-ar-6",
     "difficulty": "easy",
     "topic": "responses to the environment",
-    "text": "How can behavior affect fitness?"
+    "text": "How can behavior affect fitness?",
+    "explain": "Behavior can affect fitness by improving survival, access to resources, mating success, or care of offspring.",
+    "bullet_points": [
+      "Can increase survival or reproduction.",
+      "Behavior influences fitness.",
+      "Examples include mating displays and predator avoidance."
+    ]
   },
   {
     "id": "u8-ar-7",
     "difficulty": "easy",
     "topic": "responses to the environment",
-    "text": "What is communication in organisms?"
+    "text": "What is communication in organisms?",
+    "explain": "Communication in organisms is the transfer of information from one organism to another through signals.",
+    "bullet_points": [
+      "Transfers information.",
+      "Can be visual, chemical, tactile, electrical, or auditory.",
+      "Can alter behavior."
+    ]
   },
   {
     "id": "u8-ar-8",
     "difficulty": "easy",
     "topic": "responses to the environment",
-    "text": "What is an innate behavior?"
+    "text": "What is an innate behavior?",
+    "explain": "An innate behavior is a behavior that is genetically programmed and does not need to be learned.",
+    "bullet_points": [
+      "Inherited behavior.",
+      "Does not require learning.",
+      "Often performed correctly the first time."
+    ]
   },
   {
     "id": "u8-ar-9",
     "difficulty": "easy",
     "topic": "responses to the environment",
-    "text": "What is learned behavior?"
+    "text": "What is learned behavior?",
+    "explain": "A learned behavior is a behavior modified by experience.",
+    "bullet_points": [
+      "Changes with experience.",
+      "Not fully hardwired.",
+      "Can improve with practice or memory."
+    ]
   },
   {
     "id": "u8-ar-10",
     "difficulty": "easy",
     "topic": "energy flow through ecosystems",
-    "text": "What is a trophic level?"
+    "text": "What is a trophic level?",
+    "explain": "A trophic level is a feeding level in an ecosystem.",
+    "bullet_points": [
+      "Position in a food chain or web.",
+      "Examples include producers and consumers.",
+      "Energy decreases at higher levels."
+    ]
   },
   {
     "id": "u8-ar-11",
     "difficulty": "easy",
     "topic": "energy flow through ecosystems",
-    "text": "What is a producer?"
+    "text": "What is a producer?",
+    "explain": "A producer is an autotroph that captures energy and makes organic molecules.",
+    "bullet_points": [
+      "Usually first trophic level.",
+      "Makes its own food.",
+      "Includes plants and photosynthetic algae."
+    ]
   },
   {
     "id": "u8-ar-12",
     "difficulty": "easy",
     "topic": "energy flow through ecosystems",
-    "text": "What is a consumer?"
+    "text": "What is a consumer?",
+    "explain": "A consumer is a heterotroph that gets energy by eating other organisms.",
+    "bullet_points": [
+      "Cannot make its own food from inorganic sources alone.",
+      "Obtains energy by consumption.",
+      "Includes herbivores, carnivores, and omnivores."
+    ]
   },
   {
     "id": "u8-ar-13",
     "difficulty": "easy",
     "topic": "energy flow through ecosystems",
-    "text": "What is a decomposer?"
+    "text": "What is a decomposer?",
+    "explain": "A decomposer is an organism that breaks down dead organic matter and recycles nutrients.",
+    "bullet_points": [
+      "Breaks down dead material.",
+      "Recycles matter.",
+      "Examples include many fungi and bacteria."
+    ]
   },
   {
     "id": "u8-ar-14",
     "difficulty": "easy",
     "topic": "energy flow through ecosystems",
-    "text": "What is a food chain?"
+    "text": "What is a food chain?",
+    "explain": "A food chain is a simple linear sequence showing who eats whom in an ecosystem.",
+    "bullet_points": [
+      "Linear feeding relationship.",
+      "Shows energy transfer.",
+      "Simpler than a food web."
+    ]
   },
   {
     "id": "u8-ar-15",
     "difficulty": "easy",
     "topic": "energy flow through ecosystems",
-    "text": "What is a food web?"
+    "text": "What is a food web?",
+    "explain": "A food web is a network of interconnected feeding relationships in an ecosystem.",
+    "bullet_points": [
+      "More complex than a food chain.",
+      "Shows multiple feeding pathways.",
+      "Reflects real ecosystems better."
+    ]
   },
   {
     "id": "u8-ar-16",
     "difficulty": "easy",
     "topic": "energy flow through ecosystems",
-    "text": "What is primary productivity?"
+    "text": "What is primary productivity?",
+    "explain": "Primary productivity is the rate at which producers capture energy and store it in biomass.",
+    "bullet_points": [
+      "Rate of energy capture by producers.",
+      "Forms the base of ecosystem energy flow.",
+      "Measured over time."
+    ]
   },
   {
     "id": "u8-ar-17",
     "difficulty": "easy",
     "topic": "energy flow through ecosystems",
-    "text": "Why does energy decrease at higher trophic levels?"
+    "text": "Why does energy decrease at higher trophic levels?",
+    "explain": "Energy decreases at higher trophic levels because not all captured energy is transferred; much is lost as heat or used in metabolism.",
+    "bullet_points": [
+      "Energy transfer is inefficient.",
+      "Some energy is lost as heat.",
+      "Less energy is available higher in the food chain."
+    ]
   },
   {
     "id": "u8-ar-18",
     "difficulty": "easy",
     "topic": "energy flow through ecosystems",
-    "text": "What is the water cycle?"
+    "text": "What is the water cycle?",
+    "explain": "The water cycle is the movement of water among reservoirs such as oceans, atmosphere, surface water, and organisms.",
+    "bullet_points": [
+      "Biogeochemical cycle.",
+      "Includes evaporation, condensation, precipitation, and transpiration.",
+      "Cycles matter through ecosystems."
+    ]
   },
   {
     "id": "u8-ar-19",
     "difficulty": "easy",
     "topic": "energy flow through ecosystems",
-    "text": "What is the carbon cycle?"
+    "text": "What is the carbon cycle?",
+    "explain": "The carbon cycle is the movement of carbon among the atmosphere, organisms, water, and land.",
+    "bullet_points": [
+      "Carbon moves through living and nonliving reservoirs.",
+      "Photosynthesis and respiration are key processes.",
+      "Matter cycles while energy flows."
+    ]
   },
   {
     "id": "u8-ar-20",
     "difficulty": "easy",
     "topic": "energy flow through ecosystems",
-    "text": "What is the nitrogen cycle?"
+    "text": "What is the nitrogen cycle?",
+    "explain": "The nitrogen cycle is the movement of nitrogen through the atmosphere, soil, and organisms.",
+    "bullet_points": [
+      "Involves fixation and other steps.",
+      "Microorganisms play major roles.",
+      "Important because organisms need nitrogen for proteins and nucleic acids."
+    ]
   },
   {
     "id": "u8-ar-21",
     "difficulty": "easy",
     "topic": "energy flow through ecosystems",
-    "text": "What is nitrogen fixation?"
+    "text": "What is nitrogen fixation?",
+    "explain": "Nitrogen fixation is the conversion of nitrogen gas into forms organisms can use, such as ammonia.",
+    "bullet_points": [
+      "Converts atmospheric nitrogen into usable forms.",
+      "Often performed by certain bacteria.",
+      "Important step in the nitrogen cycle."
+    ]
   },
   {
     "id": "u8-ar-22",
     "difficulty": "easy",
     "topic": "energy flow through ecosystems",
-    "text": "What is the phosphorus cycle?"
+    "text": "What is the phosphorus cycle?",
+    "explain": "The phosphorus cycle is the movement of phosphorus through rocks, soil, water, and organisms.",
+    "bullet_points": [
+      "Biogeochemical cycle.",
+      "Does not have a major atmospheric reservoir like nitrogen does.",
+      "Important for ATP and nucleic acids."
+    ]
+  },
+  {
+    "id": "u8-ar-23",
+    "difficulty": "easy",
+    "topic": "population ecology",
+    "text": "What is a population?",
+    "explain": "A population is a group of individuals of the same species living in the same area.",
+    "bullet_points": [
+      "Same species.",
+      "Same area.",
+      "Can interbreed."
+    ]
+  },
+  {
+    "id": "u8-ar-24",
+    "difficulty": "easy",
+    "topic": "population ecology",
+    "text": "What is population ecology?",
+    "explain": "Population ecology is the study of how populations change in size and structure over time.",
+    "bullet_points": [
+      "Studies population size and change.",
+      "Includes birth, death, immigration, and emigration.",
+      "Looks at interactions with the environment."
+    ]
+  },
+  {
+    "id": "u8-ar-25",
+    "difficulty": "easy",
+    "topic": "population ecology",
+    "text": "What is exponential growth?",
+    "explain": "Exponential growth is population growth in which the rate of increase remains proportional to the current population size.",
+    "bullet_points": [
+      "Growth accelerates quickly.",
+      "Often occurs when resources are abundant.",
+      "Produces a J-shaped curve."
+    ]
+  },
+  {
+    "id": "u8-ar-26",
+    "difficulty": "easy",
+    "topic": "population ecology",
+    "text": "What is logistic growth?",
+    "explain": "Logistic growth is population growth that slows as the population approaches carrying capacity.",
+    "bullet_points": [
+      "Growth slows near carrying capacity.",
+      "Often produces an S-shaped curve.",
+      "Includes environmental limits."
+    ]
+  },
+  {
+    "id": "u8-ar-27",
+    "difficulty": "easy",
+    "topic": "population ecology",
+    "text": "What is carrying capacity?",
+    "explain": "Carrying capacity is the maximum population size an environment can sustainably support.",
+    "bullet_points": [
+      "Maximum sustainable population size.",
+      "Depends on available resources.",
+      "Represented by K in logistic growth."
+    ]
+  },
+  {
+    "id": "u8-ar-28",
+    "difficulty": "easy",
+    "topic": "population ecology",
+    "text": "What are r-selected species?",
+    "explain": "r-selected species produce many offspring quickly and often invest less in each one.",
+    "bullet_points": [
+      "Many offspring.",
+      "Often small-bodied and reproduce quickly.",
+      "Common in unstable environments."
+    ]
+  },
+  {
+    "id": "u8-ar-29",
+    "difficulty": "easy",
+    "topic": "population ecology",
+    "text": "What are K-selected species?",
+    "explain": "K-selected species produce fewer offspring and invest more in each one.",
+    "bullet_points": [
+      "Fewer offspring.",
+      "Greater parental investment.",
+      "Often found near carrying capacity."
+    ]
+  },
+  {
+    "id": "u8-ar-30",
+    "difficulty": "easy",
+    "topic": "effect of density on populations",
+    "text": "What is population density?",
+    "explain": "Population density is the number of individuals per unit area or volume.",
+    "bullet_points": [
+      "Individuals per area or volume.",
+      "A measure of crowding.",
+      "Can affect resource use and interactions."
+    ]
+  },
+  {
+    "id": "u8-ar-31",
+    "difficulty": "easy",
+    "topic": "effect of density on populations",
+    "text": "What is a density-dependent factor?",
+    "explain": "A density-dependent factor is a limiting factor whose effect becomes stronger as population density increases.",
+    "bullet_points": [
+      "Effect depends on crowding.",
+      "Examples include competition and disease.",
+      "More important at higher densities."
+    ]
+  },
+  {
+    "id": "u8-ar-32",
+    "difficulty": "easy",
+    "topic": "effect of density on populations",
+    "text": "What is a density-independent factor?",
+    "explain": "A density-independent factor is a limiting factor that affects populations regardless of density.",
+    "bullet_points": [
+      "Effect does not depend on crowding.",
+      "Examples include weather events and fires.",
+      "Can affect both small and large populations."
+    ]
+  },
+  {
+    "id": "u8-ar-33",
+    "difficulty": "easy",
+    "topic": "effect of density on populations",
+    "text": "How does resource availability affect population size?",
+    "explain": "Resource availability affects population size because more food, space, or water can support more individuals, while limited resources restrict growth.",
+    "bullet_points": [
+      "Resources influence carrying capacity.",
+      "More resources can support more individuals.",
+      "Scarcity limits growth."
+    ]
+  },
+  {
+    "id": "u8-ar-34",
+    "difficulty": "easy",
+    "topic": "community ecology",
+    "text": "What is a community?",
+    "explain": "A community is all the populations of different species living and interacting in the same area.",
+    "bullet_points": [
+      "Multiple populations.",
+      "Different species in one area.",
+      "Includes interactions among species."
+    ]
+  },
+  {
+    "id": "u8-ar-35",
+    "difficulty": "easy",
+    "topic": "community ecology",
+    "text": "What is species diversity?",
+    "explain": "Species diversity is a measure of both the number of species and their relative abundance in a community.",
+    "bullet_points": [
+      "Includes richness and evenness.",
+      "Helps describe community structure.",
+      "Higher diversity can increase resilience."
+    ]
+  },
+  {
+    "id": "u8-ar-36",
+    "difficulty": "easy",
+    "topic": "community ecology",
+    "text": "What is a niche?",
+    "explain": "A niche is the role of a species in its environment, including how it uses resources and interacts with other organisms.",
+    "bullet_points": [
+      "Ecological role.",
+      "Includes resource use and interactions.",
+      "No two species can occupy the exact same niche indefinitely."
+    ]
+  },
+  {
+    "id": "u8-ar-37",
+    "difficulty": "easy",
+    "topic": "community ecology",
+    "text": "What is competition?",
+    "explain": "Competition is an interaction in which organisms use the same limited resource.",
+    "bullet_points": [
+      "Negative interaction for both competitors.",
+      "Occurs when resources overlap.",
+      "Can shape communities."
+    ]
+  },
+  {
+    "id": "u8-ar-38",
+    "difficulty": "easy",
+    "topic": "community ecology",
+    "text": "What is predation?",
+    "explain": "Predation is an interaction in which one organism kills and eats another.",
+    "bullet_points": [
+      "Predator consumes prey.",
+      "Affects population dynamics.",
+      "Important community interaction."
+    ]
+  },
+  {
+    "id": "u8-ar-39",
+    "difficulty": "easy",
+    "topic": "community ecology",
+    "text": "What is mutualism?",
+    "explain": "Mutualism is a symbiotic relationship in which both species benefit.",
+    "bullet_points": [
+      "Both species benefit.",
+      "A positive-positive interaction.",
+      "A type of symbiosis."
+    ]
+  },
+  {
+    "id": "u8-ar-40",
+    "difficulty": "easy",
+    "topic": "community ecology",
+    "text": "What is commensalism?",
+    "explain": "Commensalism is a relationship in which one species benefits and the other is not significantly helped or harmed.",
+    "bullet_points": [
+      "One benefits, other unaffected.",
+      "A type of symbiosis.",
+      "Not a +/+ or -/- interaction."
+    ]
+  },
+  {
+    "id": "u8-ar-41",
+    "difficulty": "easy",
+    "topic": "community ecology",
+    "text": "What is parasitism?",
+    "explain": "Parasitism is a relationship in which one organism benefits while the host is harmed.",
+    "bullet_points": [
+      "Parasite benefits.",
+      "Host is harmed.",
+      "A type of symbiosis."
+    ]
+  },
+  {
+    "id": "u8-ar-42",
+    "difficulty": "easy",
+    "topic": "community ecology",
+    "text": "What is niche partitioning?",
+    "explain": "Niche partitioning occurs when species use resources in different ways or at different times to reduce competition.",
+    "bullet_points": [
+      "Reduces competition.",
+      "Species divide resource use.",
+      "Helps similar species coexist."
+    ]
+  },
+  {
+    "id": "u8-ar-43",
+    "difficulty": "easy",
+    "topic": "community ecology",
+    "text": "What is a trophic cascade?",
+    "explain": "A trophic cascade is a chain reaction in an ecosystem caused by changes at one trophic level that affect levels above or below it.",
+    "bullet_points": [
+      "One trophic level affects others indirectly.",
+      "Often begins with predators or producers.",
+      "Can reshape the community."
+    ]
+  },
+  {
+    "id": "u8-ar-44",
+    "difficulty": "easy",
+    "topic": "community ecology",
+    "text": "What is Simpson's diversity index?",
+    "explain": "Simpson's diversity index is a quantitative measure used to describe species diversity in a community.",
+    "bullet_points": [
+      "Measures diversity numerically.",
+      "Incorporates richness and evenness.",
+      "Used to compare communities."
+    ]
+  },
+  {
+    "id": "u8-ar-45",
+    "difficulty": "easy",
+    "topic": "biodiversity",
+    "text": "What is biodiversity?",
+    "explain": "Biodiversity is the variety of life in an ecosystem, region, or on Earth as a whole.",
+    "bullet_points": [
+      "Variety of living things.",
+      "Can refer to genes, species, or ecosystems.",
+      "Important for resilience."
+    ]
+  },
+  {
+    "id": "u8-ar-46",
+    "difficulty": "easy",
+    "topic": "biodiversity",
+    "text": "Why is biodiversity important to ecosystem resilience?",
+    "explain": "Biodiversity is important because ecosystems with more different species and interactions are often better able to withstand disturbance.",
+    "bullet_points": [
+      "More diversity often increases resilience.",
+      "Different species can fill different roles.",
+      "Loss of diversity can make ecosystems less stable."
+    ]
+  },
+  {
+    "id": "u8-ar-47",
+    "difficulty": "easy",
+    "topic": "biodiversity",
+    "text": "What is a keystone species?",
+    "explain": "A keystone species is a species whose effect on an ecosystem is disproportionately large relative to its abundance.",
+    "bullet_points": [
+      "Has a very large effect on community structure.",
+      "Not necessarily abundant.",
+      "Removal can cause major changes or collapse."
+    ]
+  },
+  {
+    "id": "u8-ar-48",
+    "difficulty": "easy",
+    "topic": "biodiversity",
+    "text": "What happens when a keystone species is removed?",
+    "explain": "When a keystone species is removed, the ecosystem can change dramatically because important interactions are lost.",
+    "bullet_points": [
+      "Large ecological impact.",
+      "Can alter populations across the community.",
+      "May reduce biodiversity or collapse the system."
+    ]
+  },
+  {
+    "id": "u8-ar-49",
+    "difficulty": "easy",
+    "topic": "disruptions in ecosystems",
+    "text": "What is an invasive species?",
+    "explain": "An invasive species is a nonnative species that spreads and disrupts the ecosystem it enters.",
+    "bullet_points": [
+      "Usually introduced from elsewhere.",
+      "Can outcompete native species.",
+      "Can alter ecosystem dynamics."
+    ]
+  },
+  {
+    "id": "u8-ar-50",
+    "difficulty": "easy",
+    "topic": "disruptions in ecosystems",
+    "text": "How can invasive species affect ecosystems?",
+    "explain": "Invasive species can alter food webs, reduce native populations, and change resource availability or habitat structure.",
+    "bullet_points": [
+      "Can disrupt interactions.",
+      "May lower biodiversity.",
+      "Often lack natural predators in the new environment."
+    ]
+  },
+  {
+    "id": "u8-ar-51",
+    "difficulty": "easy",
+    "topic": "disruptions in ecosystems",
+    "text": "What is an adaptation in ecology?",
+    "explain": "An adaptation is a heritable trait favored by selection because it improves success in a particular environment.",
+    "bullet_points": [
+      "Inherited trait.",
+      "Improves fitness in a certain environment.",
+      "Favored by natural selection."
+    ]
+  },
+  {
+    "id": "u8-ar-52",
+    "difficulty": "easy",
+    "topic": "disruptions in ecosystems",
+    "text": "Are mutations caused by what an organism needs?",
+    "explain": "No. Mutations are random with respect to need; the environment does not direct mutations to help an organism.",
+    "bullet_points": [
+      "Mutations are not purposeful.",
+      "They arise randomly.",
+      "Selection acts on variation after it appears."
+    ]
+  },
+  {
+    "id": "u8-ar-53",
+    "difficulty": "easy",
+    "topic": "disruptions in ecosystems",
+    "text": "What is ecological succession?",
+    "explain": "Ecological succession is the gradual change in species composition of a community over time after a disturbance or the creation of new habitat.",
+    "bullet_points": [
+      "Community changes over time.",
+      "Can follow disturbance or new habitat formation.",
+      "Later communities differ from earlier ones."
+    ]
+  },
+  {
+    "id": "u8-ar-54",
+    "difficulty": "easy",
+    "topic": "disruptions in ecosystems",
+    "text": "What is primary succession?",
+    "explain": "Primary succession is succession that begins on a surface where no soil exists.",
+    "bullet_points": [
+      "Starts without soil.",
+      "Examples include bare rock after lava flow.",
+      "Soil must develop first."
+    ]
+  },
+  {
+    "id": "u8-ar-55",
+    "difficulty": "easy",
+    "topic": "disruptions in ecosystems",
+    "text": "What is secondary succession?",
+    "explain": "Secondary succession is succession that occurs after a disturbance where soil remains.",
+    "bullet_points": [
+      "Soil is already present.",
+      "Faster than primary succession.",
+      "Can follow fire or farming."
+    ]
+  },
+  {
+    "id": "u8-ar-56",
+    "difficulty": "easy",
+    "topic": "disruptions in ecosystems",
+    "text": "What is biomagnification?",
+    "explain": "Biomagnification is the increase in concentration of certain toxins at higher trophic levels in a food chain.",
+    "bullet_points": [
+      "Toxin concentration rises up the food chain.",
+      "Higher-level consumers are most affected.",
+      "Occurs with persistent chemicals."
+    ]
   }
 ]

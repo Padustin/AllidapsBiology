@@ -3,126 +3,660 @@
     "id": "u7-ar-1",
     "difficulty": "easy",
     "topic": "introduction to natural selection",
-    "text": "What is natural selection?"
+    "text": "What is natural selection?",
+    "explain": "Natural selection is the process by which individuals with heritable traits that improve survival or reproduction leave more offspring.",
+    "bullet_points": [
+      "Acts on heritable variation.",
+      "Favorable traits become more common over time.",
+      "A major mechanism of evolution."
+    ]
   },
   {
     "id": "u7-ar-2",
     "difficulty": "easy",
     "topic": "introduction to natural selection",
-    "text": "What is variation in a population?"
+    "text": "What is variation in a population?",
+    "explain": "Variation is the presence of differences in traits among individuals in a population.",
+    "bullet_points": [
+      "Individuals are not identical.",
+      "Variation can be genetic or environmental.",
+      "Natural selection acts on heritable variation."
+    ]
   },
   {
     "id": "u7-ar-3",
     "difficulty": "easy",
     "topic": "introduction to natural selection",
-    "text": "What is adaptation?"
+    "text": "What is adaptation?",
+    "explain": "An adaptation is a heritable trait that increases fitness in a particular environment.",
+    "bullet_points": [
+      "Inherited trait.",
+      "Improves survival or reproduction.",
+      "Environment-specific advantage."
+    ]
   },
   {
     "id": "u7-ar-4",
     "difficulty": "easy",
     "topic": "introduction to natural selection",
-    "text": "What is fitness in evolution?"
+    "text": "What is fitness in evolution?",
+    "explain": "Fitness is reproductive success, or how well an organism passes its genes to the next generation.",
+    "bullet_points": [
+      "Measured by reproductive success.",
+      "Not just strength or health.",
+      "Higher fitness means more successful reproduction."
+    ]
   },
   {
     "id": "u7-ar-5",
     "difficulty": "easy",
     "topic": "natural selection",
-    "text": "Why is phenotypic variation important for natural selection?"
+    "text": "Why is phenotypic variation important for natural selection?",
+    "explain": "Phenotypic variation is important because natural selection can only favor or eliminate traits that vary among individuals.",
+    "bullet_points": [
+      "Selection needs differences among individuals.",
+      "Variation affects survival and reproduction.",
+      "Heritable variation can change populations over time."
+    ]
   },
   {
     "id": "u7-ar-6",
     "difficulty": "easy",
     "topic": "natural selection",
-    "text": "What does heritable mean?"
+    "text": "What does heritable mean?",
+    "explain": "Heritable means a trait can be passed from parents to offspring through genes.",
+    "bullet_points": [
+      "Genetically inherited.",
+      "Can be acted on by natural selection.",
+      "Different from purely environmental traits."
+    ]
   },
   {
     "id": "u7-ar-7",
     "difficulty": "easy",
     "topic": "natural selection",
-    "text": "What is differential survival?"
+    "text": "What is differential survival?",
+    "explain": "Differential survival means some individuals survive better than others because of their traits.",
+    "bullet_points": [
+      "Not all individuals survive equally well.",
+      "Trait differences can affect survival.",
+      "Part of natural selection."
+    ]
   },
   {
     "id": "u7-ar-8",
     "difficulty": "easy",
     "topic": "natural selection",
-    "text": "What is differential reproduction?"
+    "text": "What is differential reproduction?",
+    "explain": "Differential reproduction means some individuals leave more offspring than others because of their traits.",
+    "bullet_points": [
+      "Some individuals reproduce more successfully.",
+      "Traits can influence mating or offspring number.",
+      "Changes allele frequencies over time."
+    ]
   },
   {
     "id": "u7-ar-9",
     "difficulty": "easy",
     "topic": "natural selection",
-    "text": "How can the environment affect the direction of natural selection?"
+    "text": "How can the environment affect the direction of natural selection?",
+    "explain": "The environment affects the direction of natural selection because traits that are beneficial in one environment may not be beneficial in another.",
+    "bullet_points": [
+      "Environment changes which traits are favored.",
+      "Selection depends on conditions.",
+      "A trait can be helpful in one context and harmful in another."
+    ]
   },
   {
     "id": "u7-ar-10",
     "difficulty": "easy",
     "topic": "artificial selection",
-    "text": "What is artificial selection?"
+    "text": "What is artificial selection?",
+    "explain": "Artificial selection is the process by which humans choose which organisms reproduce based on desired traits.",
+    "bullet_points": [
+      "Human-directed selection.",
+      "Changes traits in populations.",
+      "Used in crops and domesticated animals."
+    ]
   },
   {
     "id": "u7-ar-11",
     "difficulty": "easy",
     "topic": "artificial selection",
-    "text": "How is artificial selection different from natural selection?"
+    "text": "How is artificial selection different from natural selection?",
+    "explain": "Artificial selection is driven by human choices, while natural selection is driven by environmental pressures and reproductive success.",
+    "bullet_points": [
+      "Artificial selection is human-controlled.",
+      "Natural selection is environment-driven.",
+      "Both can change populations over time."
+    ]
   },
   {
     "id": "u7-ar-12",
     "difficulty": "easy",
     "topic": "artificial selection",
-    "text": "Why can artificial selection change a population quickly?"
+    "text": "Why can artificial selection change a population quickly?",
+    "explain": "Artificial selection can change a population quickly because humans intentionally breed individuals with desired traits over multiple generations.",
+    "bullet_points": [
+      "Humans choose who reproduces.",
+      "Selected traits become more common quickly.",
+      "Often reduces diversity in some cases."
+    ]
   },
   {
     "id": "u7-ar-13",
     "difficulty": "easy",
     "topic": "population genetics",
-    "text": "What is population genetics?"
+    "text": "What is population genetics?",
+    "explain": "Population genetics is the study of how allele frequencies change in populations over time.",
+    "bullet_points": [
+      "Focuses on allele frequencies.",
+      "Examines changes in populations.",
+      "Helps explain evolution mathematically."
+    ]
   },
   {
     "id": "u7-ar-14",
     "difficulty": "easy",
     "topic": "population genetics",
-    "text": "What is allele frequency?"
+    "text": "What is allele frequency?",
+    "explain": "Allele frequency is the proportion of a specific allele in a population.",
+    "bullet_points": [
+      "Proportion of one allele form.",
+      "Used in population genetics.",
+      "Can change over time."
+    ]
   },
   {
     "id": "u7-ar-15",
     "difficulty": "easy",
     "topic": "population genetics",
-    "text": "What is gene flow?"
+    "text": "What is gene flow?",
+    "explain": "Gene flow is the transfer of alleles into or out of a population when individuals or gametes move between populations.",
+    "bullet_points": [
+      "Movement of alleles between populations.",
+      "Can reduce differences between populations.",
+      "Affects allele frequencies."
+    ]
   },
   {
     "id": "u7-ar-16",
     "difficulty": "easy",
     "topic": "population genetics",
-    "text": "What is genetic drift?"
+    "text": "What is genetic drift?",
+    "explain": "Genetic drift is a random change in allele frequencies, especially important in small populations.",
+    "bullet_points": [
+      "Random, not caused by fitness differences.",
+      "More pronounced in small populations.",
+      "Can reduce genetic variation."
+    ]
   },
   {
     "id": "u7-ar-17",
     "difficulty": "easy",
     "topic": "population genetics",
-    "text": "What is the bottleneck effect?"
+    "text": "What is the bottleneck effect?",
+    "explain": "The bottleneck effect is a form of genetic drift that occurs when a population is drastically reduced in size.",
+    "bullet_points": [
+      "Population size drops sharply.",
+      "Random survivors determine future allele frequencies.",
+      "Usually reduces genetic diversity."
+    ]
   },
   {
     "id": "u7-ar-18",
     "difficulty": "easy",
     "topic": "population genetics",
-    "text": "What is the founder effect?"
+    "text": "What is the founder effect?",
+    "explain": "The founder effect is a form of genetic drift that occurs when a small group starts a new population with allele frequencies different from the original population.",
+    "bullet_points": [
+      "Small group founds a new population.",
+      "Allele frequencies may differ from the source population.",
+      "A form of genetic drift."
+    ]
   },
   {
     "id": "u7-ar-19",
     "difficulty": "easy",
     "topic": "hardy-weinberg equilibrium",
-    "text": "What is Hardy-Weinberg equilibrium?"
+    "text": "What is Hardy-Weinberg equilibrium?",
+    "explain": "Hardy-Weinberg equilibrium is a model describing a population in which allele frequencies do not change from generation to generation.",
+    "bullet_points": [
+      "Model of a non-evolving population.",
+      "Allele frequencies stay constant.",
+      "Provides a null hypothesis for evolution."
+    ]
   },
   {
     "id": "u7-ar-20",
     "difficulty": "easy",
     "topic": "hardy-weinberg equilibrium",
-    "text": "What are the conditions for Hardy-Weinberg equilibrium?"
+    "text": "What are the conditions for Hardy-Weinberg equilibrium?",
+    "explain": "The conditions are a very large population, no migration, no mutation, random mating, and no natural selection.",
+    "bullet_points": [
+      "Large population.",
+      "No migration, mutation, or natural selection.",
+      "Random mating."
+    ]
   },
   {
     "id": "u7-ar-21",
     "difficulty": "easy",
     "topic": "hardy-weinberg equilibrium",
-    "text": "What is the Hardy-Weinberg equation?"
+    "text": "Why is Hardy-Weinberg equilibrium useful?",
+    "explain": "It is useful because it provides a baseline model for detecting whether evolution is occurring in a population.",
+    "bullet_points": [
+      "Null model.",
+      "Lets scientists compare expectation to observation.",
+      "Deviation suggests evolutionary forces are acting."
+    ]
+  },
+  {
+    "id": "u7-ar-22",
+    "difficulty": "easy",
+    "topic": "hardy-weinberg equilibrium",
+    "text": "What do p and q represent in Hardy-Weinberg calculations?",
+    "explain": "In Hardy-Weinberg calculations, p and q represent allele frequencies.",
+    "bullet_points": [
+      "p and q are allele frequencies.",
+      "Often p + q = 1.",
+      "Used to calculate expected genotype frequencies."
+    ]
+  },
+  {
+    "id": "u7-ar-23",
+    "difficulty": "easy",
+    "topic": "evidence of evolution",
+    "text": "What is fossil evidence?",
+    "explain": "Fossil evidence is information from preserved remains or traces of past organisms that helps show how organisms have changed over time.",
+    "bullet_points": [
+      "Records past life.",
+      "Shows change over time.",
+      "Supports evolution."
+    ]
+  },
+  {
+    "id": "u7-ar-24",
+    "difficulty": "easy",
+    "topic": "evidence of evolution",
+    "text": "What are homologous structures?",
+    "explain": "Homologous structures are structures with similar underlying anatomy inherited from a common ancestor, even if they have different functions.",
+    "bullet_points": [
+      "Similar structure due to common ancestry.",
+      "May have different functions.",
+      "Evidence for evolution."
+    ]
+  },
+  {
+    "id": "u7-ar-25",
+    "difficulty": "easy",
+    "topic": "evidence of evolution",
+    "text": "What are vestigial structures?",
+    "explain": "Vestigial structures are reduced or apparently nonfunctional remnants of structures that were functional in ancestors.",
+    "bullet_points": [
+      "Reduced ancestral structures.",
+      "Evidence of common ancestry.",
+      "May have little or no current function."
+    ]
+  },
+  {
+    "id": "u7-ar-26",
+    "difficulty": "easy",
+    "topic": "evidence of evolution",
+    "text": "How can DNA sequences provide evidence for evolution?",
+    "explain": "DNA sequences provide evidence for evolution because closely related organisms usually have more similar DNA sequences than distantly related organisms.",
+    "bullet_points": [
+      "More similarity usually means closer relationship.",
+      "Molecular evidence supports common ancestry.",
+      "DNA can be compared directly."
+    ]
+  },
+  {
+    "id": "u7-ar-27",
+    "difficulty": "easy",
+    "topic": "evidence of evolution",
+    "text": "What is radiometric dating?",
+    "explain": "Radiometric dating is a method of estimating the age of rocks or fossils using the decay of radioactive isotopes.",
+    "bullet_points": [
+      "Uses isotope decay.",
+      "Helps estimate age.",
+      "Supports timelines in evolution."
+    ]
+  },
+  {
+    "id": "u7-ar-28",
+    "difficulty": "easy",
+    "topic": "common ancestry",
+    "text": "What does common ancestry mean?",
+    "explain": "Common ancestry means different species share an ancestor in the past.",
+    "bullet_points": [
+      "Species can be related through shared ancestors.",
+      "Explains similarities among organisms.",
+      "A core idea in evolution."
+    ]
+  },
+  {
+    "id": "u7-ar-29",
+    "difficulty": "easy",
+    "topic": "common ancestry",
+    "text": "What cellular features support common ancestry of eukaryotes?",
+    "explain": "Features such as membrane-bound organelles, linear chromosomes, and genes with introns support common ancestry of eukaryotes.",
+    "bullet_points": [
+      "Shared eukaryotic cell traits.",
+      "Support common ancestry.",
+      "Examples include organelles and introns."
+    ]
+  },
+  {
+    "id": "u7-ar-30",
+    "difficulty": "easy",
+    "topic": "common ancestry",
+    "text": "Why do all living organisms using DNA support common ancestry?",
+    "explain": "The near-universal use of DNA and the genetic code supports common ancestry because it suggests living organisms inherited these systems from ancient ancestors.",
+    "bullet_points": [
+      "Shared information system.",
+      "Supports relatedness of life.",
+      "Evidence at the molecular level."
+    ]
+  },
+  {
+    "id": "u7-ar-31",
+    "difficulty": "easy",
+    "topic": "continuing evolution",
+    "text": "What does it mean to say evolution is ongoing?",
+    "explain": "It means populations continue to change genetically over time and evolution has not stopped.",
+    "bullet_points": [
+      "Evolution still occurs today.",
+      "Populations can keep changing.",
+      "Seen in modern organisms."
+    ]
+  },
+  {
+    "id": "u7-ar-32",
+    "difficulty": "easy",
+    "topic": "continuing evolution",
+    "text": "How does antibiotic resistance show evolution?",
+    "explain": "Antibiotic resistance shows evolution because bacteria with resistance alleles survive and reproduce when antibiotics are present, making resistance more common.",
+    "bullet_points": [
+      "Selection favors resistant bacteria.",
+      "Allele frequencies change over time.",
+      "A modern example of evolution."
+    ]
+  },
+  {
+    "id": "u7-ar-33",
+    "difficulty": "easy",
+    "topic": "continuing evolution",
+    "text": "How can pesticide resistance evolve?",
+    "explain": "Pesticide resistance evolves when individuals with resistance survive pesticide exposure and leave more offspring.",
+    "bullet_points": [
+      "Selection favors resistant individuals.",
+      "Resistance alleles become more common.",
+      "Population changes over generations."
+    ]
+  },
+  {
+    "id": "u7-ar-34",
+    "difficulty": "easy",
+    "topic": "continuing evolution",
+    "text": "What is directional selection?",
+    "explain": "Directional selection is natural selection that favors one extreme phenotype over others.",
+    "bullet_points": [
+      "One extreme is favored.",
+      "Population mean shifts.",
+      "Can change trait distribution over time."
+    ]
+  },
+  {
+    "id": "u7-ar-35",
+    "difficulty": "easy",
+    "topic": "continuing evolution",
+    "text": "What is stabilizing selection?",
+    "explain": "Stabilizing selection favors intermediate phenotypes and acts against extremes.",
+    "bullet_points": [
+      "Intermediate phenotype favored.",
+      "Extremes selected against.",
+      "Can reduce variation."
+    ]
+  },
+  {
+    "id": "u7-ar-36",
+    "difficulty": "easy",
+    "topic": "continuing evolution",
+    "text": "What is disruptive selection?",
+    "explain": "Disruptive selection favors both extreme phenotypes over intermediate ones.",
+    "bullet_points": [
+      "Both extremes favored.",
+      "Intermediate phenotype selected against.",
+      "Can increase variation or lead to divergence."
+    ]
+  },
+  {
+    "id": "u7-ar-37",
+    "difficulty": "easy",
+    "topic": "phylogeny",
+    "text": "What is a phylogeny?",
+    "explain": "A phylogeny is a hypothesis about the evolutionary relationships among organisms.",
+    "bullet_points": [
+      "Evolutionary history or relationship pattern.",
+      "Often shown as a tree.",
+      "Based on multiple lines of evidence."
+    ]
+  },
+  {
+    "id": "u7-ar-38",
+    "difficulty": "easy",
+    "topic": "phylogeny",
+    "text": "What is a cladogram?",
+    "explain": "A cladogram is a branching diagram that shows hypothesized relationships among organisms based on shared derived traits.",
+    "bullet_points": [
+      "Branching relationship diagram.",
+      "Uses shared traits.",
+      "Shows relative relatedness."
+    ]
+  },
+  {
+    "id": "u7-ar-39",
+    "difficulty": "easy",
+    "topic": "phylogeny",
+    "text": "What is a node on a phylogenetic tree?",
+    "explain": "A node is a branch point representing a common ancestor.",
+    "bullet_points": [
+      "Branch point on a tree.",
+      "Represents an ancestor.",
+      "Shows divergence of lineages."
+    ]
+  },
+  {
+    "id": "u7-ar-40",
+    "difficulty": "easy",
+    "topic": "phylogeny",
+    "text": "What is a clade?",
+    "explain": "A clade is a group that includes a common ancestor and all of its descendants.",
+    "bullet_points": [
+      "Ancestor plus all descendants.",
+      "A monophyletic group.",
+      "Important concept in phylogeny."
+    ]
+  },
+  {
+    "id": "u7-ar-41",
+    "difficulty": "easy",
+    "topic": "phylogeny",
+    "text": "What is an outgroup?",
+    "explain": "An outgroup is a lineage outside the group being studied that is used for comparison when building a phylogenetic tree.",
+    "bullet_points": [
+      "Comparison group.",
+      "Outside the main group of interest.",
+      "Helps identify ancestral vs derived traits."
+    ]
+  },
+  {
+    "id": "u7-ar-42",
+    "difficulty": "easy",
+    "topic": "speciation",
+    "text": "What is speciation?",
+    "explain": "Speciation is the formation of new species.",
+    "bullet_points": [
+      "New species arise.",
+      "Usually involves reproductive isolation.",
+      "A key part of macroevolution."
+    ]
+  },
+  {
+    "id": "u7-ar-43",
+    "difficulty": "easy",
+    "topic": "speciation",
+    "text": "What is reproductive isolation?",
+    "explain": "Reproductive isolation occurs when populations can no longer exchange genes successfully.",
+    "bullet_points": [
+      "Stops or reduces gene flow.",
+      "Important for speciation.",
+      "Can be prezygotic or postzygotic."
+    ]
+  },
+  {
+    "id": "u7-ar-44",
+    "difficulty": "easy",
+    "topic": "speciation",
+    "text": "What is allopatric speciation?",
+    "explain": "Allopatric speciation occurs when populations become geographically isolated and diverge.",
+    "bullet_points": [
+      "Geographic isolation involved.",
+      "Gene flow is reduced or stopped.",
+      "Populations evolve separately."
+    ]
+  },
+  {
+    "id": "u7-ar-45",
+    "difficulty": "easy",
+    "topic": "speciation",
+    "text": "What is sympatric speciation?",
+    "explain": "Sympatric speciation occurs when new species arise without geographic separation.",
+    "bullet_points": [
+      "No geographic barrier required.",
+      "Can result from polyploidy or niche differences.",
+      "Populations diverge while overlapping."
+    ]
+  },
+  {
+    "id": "u7-ar-46",
+    "difficulty": "easy",
+    "topic": "speciation",
+    "text": "What is a prezygotic barrier?",
+    "explain": "A prezygotic barrier prevents fertilization from occurring.",
+    "bullet_points": [
+      "Acts before zygote formation.",
+      "Prevents mating or fertilization.",
+      "Examples include timing and behavioral differences."
+    ]
+  },
+  {
+    "id": "u7-ar-47",
+    "difficulty": "easy",
+    "topic": "speciation",
+    "text": "What is a postzygotic barrier?",
+    "explain": "A postzygotic barrier acts after fertilization and reduces hybrid survival or fertility.",
+    "bullet_points": [
+      "Acts after zygote forms.",
+      "Hybrids may be weak or infertile.",
+      "Helps maintain species separation."
+    ]
+  },
+  {
+    "id": "u7-ar-48",
+    "difficulty": "easy",
+    "topic": "variations in populations",
+    "text": "Why is genetic diversity important in a population?",
+    "explain": "Genetic diversity is important because it increases the chance that some individuals can survive environmental changes.",
+    "bullet_points": [
+      "More variation means more possible beneficial traits.",
+      "Helps populations respond to change.",
+      "Low diversity can increase extinction risk."
+    ]
+  },
+  {
+    "id": "u7-ar-49",
+    "difficulty": "easy",
+    "topic": "variations in populations",
+    "text": "How can low genetic diversity affect a population?",
+    "explain": "Low genetic diversity can make a population less resilient to disease, environmental change, and other pressures.",
+    "bullet_points": [
+      "Population may be less adaptable.",
+      "Higher risk during environmental change.",
+      "Can increase chance of decline or extinction."
+    ]
+  },
+  {
+    "id": "u7-ar-50",
+    "difficulty": "easy",
+    "topic": "variations in populations",
+    "text": "Why can an allele be helpful in one environment but harmful in another?",
+    "explain": "An allele can be helpful in one environment but harmful in another because selective pressures differ among environments.",
+    "bullet_points": [
+      "Fitness depends on environment.",
+      "No trait is universally best.",
+      "Selection is context dependent."
+    ]
+  },
+  {
+    "id": "u7-ar-51",
+    "difficulty": "easy",
+    "topic": "variations in populations",
+    "text": "What is heterozygote advantage?",
+    "explain": "Heterozygote advantage occurs when the heterozygous genotype has higher fitness than either homozygous genotype.",
+    "bullet_points": [
+      "Heterozygote has greatest fitness.",
+      "Can help maintain multiple alleles.",
+      "A form of balancing selection."
+    ]
+  },
+  {
+    "id": "u7-ar-52",
+    "difficulty": "easy",
+    "topic": "origins of life on earth",
+    "text": "What kind of evidence supports scientific models of the origin of life on Earth?",
+    "explain": "Evidence includes geological evidence, the age of Earth, early fossil evidence, and chemistry showing that organic molecules can form under prebiotic conditions.",
+    "bullet_points": [
+      "Uses multiple lines of evidence.",
+      "Includes geology and early fossils.",
+      "Supports scientific models rather than proving one exact path."
+    ]
+  },
+  {
+    "id": "u7-ar-53",
+    "difficulty": "easy",
+    "topic": "origins of life on earth",
+    "text": "What is the Miller-Urey experiment?",
+    "explain": "The Miller-Urey experiment tested whether simple organic molecules could form from inorganic molecules under simulated early Earth conditions.",
+    "bullet_points": [
+      "Modeled early Earth conditions.",
+      "Produced organic molecules.",
+      "Supports chemical origins of life's building blocks."
+    ]
+  },
+  {
+    "id": "u7-ar-54",
+    "difficulty": "easy",
+    "topic": "origins of life on earth",
+    "text": "What is the RNA world hypothesis?",
+    "explain": "The RNA world hypothesis proposes that early life may have relied on RNA to both store information and catalyze reactions.",
+    "bullet_points": [
+      "RNA may have come before DNA-protein systems.",
+      "RNA can store information and act as a catalyst.",
+      "One scientific model for early life."
+    ]
+  },
+  {
+    "id": "u7-ar-55",
+    "difficulty": "easy",
+    "topic": "origins of life on earth",
+    "text": "What is a protobiont?",
+    "explain": "A protobiont is an abiotically formed, membrane-like structure that could have been a precursor to early cells.",
+    "bullet_points": [
+      "Cell-like structure.",
+      "Not a true living cell.",
+      "May have helped compartmentalize molecules."
+    ]
   }
 ]

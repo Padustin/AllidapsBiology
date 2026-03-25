@@ -3,114 +3,648 @@
     "id": "u1-ar-1",
     "difficulty": "easy",
     "topic": "structure of water and hydrogen bonding",
-    "text": "What is polarity?"
+    "text": "What is polarity?",
+    "explain": "Polarity is an unequal distribution of charge across a molecule. In water, oxygen is slightly negative and the hydrogens are slightly positive.",
+    "bullet_points": [
+      "Unequal distribution of charge.",
+      "Water is polar because oxygen pulls electrons more strongly.",
+      "Partial charges allow water molecules to interact strongly."
+    ]
   },
   {
     "id": "u1-ar-2",
     "difficulty": "easy",
     "topic": "structure of water and hydrogen bonding",
-    "text": "What is a hydrogen bond?"
+    "text": "What is a hydrogen bond?",
+    "explain": "A hydrogen bond is a weak attraction between a partially positive hydrogen atom and a partially negative atom on another molecule or another part of a molecule.",
+    "bullet_points": [
+      "It is weaker than a covalent bond.",
+      "It forms because of partial charges.",
+      "Hydrogen bonds are common between water molecules."
+    ]
   },
   {
     "id": "u1-ar-3",
     "difficulty": "easy",
     "topic": "structure of water and hydrogen bonding",
-    "text": "Why is water able to form hydrogen bonds with other water molecules?"
+    "text": "Why is water able to form hydrogen bonds with other water molecules?",
+    "explain": "Water can form hydrogen bonds because it is polar. The partially positive hydrogens of one water molecule are attracted to the partially negative oxygen of another.",
+    "bullet_points": [
+      "Water is polar.",
+      "Opposite partial charges attract.",
+      "Hydrogen bonds form between neighboring water molecules."
+    ]
   },
   {
     "id": "u1-ar-4",
     "difficulty": "easy",
     "topic": "structure of water and hydrogen bonding",
-    "text": "What is cohesion?"
+    "text": "What is cohesion?",
+    "explain": "Cohesion is the attraction between molecules of the same substance. In water, hydrogen bonding causes water molecules to stick to each other.",
+    "bullet_points": [
+      "Attraction between like molecules.",
+      "In water, caused by hydrogen bonds.",
+      "Helps water move in continuous columns through plants."
+    ]
   },
   {
     "id": "u1-ar-5",
     "difficulty": "easy",
     "topic": "structure of water and hydrogen bonding",
-    "text": "What is adhesion?"
+    "text": "What is adhesion?",
+    "explain": "Adhesion is the attraction between molecules of different substances. Water can stick to other polar surfaces, such as the walls of xylem tissue.",
+    "bullet_points": [
+      "Attraction between different substances.",
+      "Water adheres to other polar materials.",
+      "Helps support capillary action."
+    ]
   },
   {
     "id": "u1-ar-6",
     "difficulty": "easy",
     "topic": "structure of water and hydrogen bonding",
-    "text": "What is surface tension?"
+    "text": "What is surface tension?",
+    "explain": "Surface tension is the resistance of a liquid surface to being broken. In water, it results from strong cohesion among water molecules at the surface.",
+    "bullet_points": [
+      "Caused by cohesion among water molecules.",
+      "Makes the surface behave like a thin film.",
+      "Depends on hydrogen bonding in water."
+    ]
   },
   {
     "id": "u1-ar-7",
     "difficulty": "easy",
     "topic": "structure of water and hydrogen bonding",
-    "text": "What is capillary action?"
+    "text": "What is capillary action?",
+    "explain": "Capillary action is the upward movement of water through narrow spaces because of both cohesion between water molecules and adhesion between water and another surface.",
+    "bullet_points": [
+      "Uses both cohesion and adhesion.",
+      "Occurs in narrow tubes or spaces.",
+      "Helps water move through plant tissues."
+    ]
   },
   {
     "id": "u1-ar-8",
     "difficulty": "easy",
     "topic": "structure of water and hydrogen bonding",
-    "text": "Why does water have a high specific heat?"
+    "text": "Why does water have a high specific heat?",
+    "explain": "Water has a high specific heat because hydrogen bonds absorb energy before the water molecules speed up enough to change temperature greatly.",
+    "bullet_points": [
+      "Water resists temperature change.",
+      "Hydrogen bonds must absorb energy first.",
+      "Helps stabilize temperatures in organisms and environments."
+    ]
   },
   {
     "id": "u1-ar-9",
     "difficulty": "easy",
     "topic": "structure of water and hydrogen bonding",
-    "text": "Why does water have a high heat of vaporization?"
+    "text": "Why does water have a high heat of vaporization?",
+    "explain": "Water has a high heat of vaporization because many hydrogen bonds must be broken for water molecules to evaporate.",
+    "bullet_points": [
+      "Evaporation requires breaking hydrogen bonds.",
+      "This takes a large amount of energy.",
+      "Helps cooling by evaporation, such as sweating."
+    ]
   },
   {
     "id": "u1-ar-10",
     "difficulty": "easy",
     "topic": "structure of water and hydrogen bonding",
-    "text": "Why is ice less dense than liquid water?"
+    "text": "Why is ice less dense than liquid water?",
+    "explain": "Ice is less dense than liquid water because hydrogen bonds hold water molecules in a more spread-out lattice when water freezes.",
+    "bullet_points": [
+      "Frozen water forms an open structure.",
+      "Molecules are farther apart in ice.",
+      "That lower density allows ice to float."
+    ]
   },
   {
     "id": "u1-ar-11",
     "difficulty": "easy",
     "topic": "elements of life",
-    "text": "What are the four major elements that make up most living matter?"
+    "text": "What are the four major elements that make up most living matter?",
+    "explain": "The four major elements are carbon, hydrogen, oxygen, and nitrogen. Together they make up most of the mass of biological molecules.",
+    "bullet_points": [
+      "Carbon, hydrogen, oxygen, and nitrogen.",
+      "Often abbreviated CHON.",
+      "These elements make up most biological matter."
+    ]
   },
   {
     "id": "u1-ar-12",
     "difficulty": "easy",
     "topic": "elements of life",
-    "text": "What are trace elements?"
+    "text": "What are trace elements?",
+    "explain": "Trace elements are elements required by organisms in very small amounts. Even though they are needed only in tiny quantities, they can still be essential for life.",
+    "bullet_points": [
+      "Needed in small amounts.",
+      "Still essential for normal function.",
+      "Examples include iron and iodine."
+    ]
   },
   {
     "id": "u1-ar-13",
     "difficulty": "easy",
     "topic": "elements of life",
-    "text": "Why is carbon especially important in biology?"
+    "text": "Why is carbon especially important in biology?",
+    "explain": "Carbon is especially important because it can form four covalent bonds, allowing it to build stable chains, rings, and complex organic molecules.",
+    "bullet_points": [
+      "Carbon has four valence electrons.",
+      "It can bond to many different atoms, including itself.",
+      "This allows great molecular diversity."
+    ]
   },
   {
     "id": "u1-ar-14",
     "difficulty": "easy",
     "topic": "elements of life",
-    "text": "Why is nitrogen important in living organisms?"
+    "text": "Why is nitrogen important in living organisms?",
+    "explain": "Nitrogen is important because it is a component of amino acids and nucleotides. Organisms need it to build proteins and nucleic acids.",
+    "bullet_points": [
+      "Found in amino acids.",
+      "Found in nucleotides.",
+      "Important for proteins and DNA/RNA."
+    ]
   },
   {
     "id": "u1-ar-15",
     "difficulty": "easy",
     "topic": "elements of life",
-    "text": "Why is phosphorus important in living organisms?"
+    "text": "Why is phosphorus important in living organisms?",
+    "explain": "Phosphorus is important because it is part of nucleotides, ATP, and phospholipids. It helps cells store energy and build membranes and nucleic acids.",
+    "bullet_points": [
+      "Found in ATP.",
+      "Found in DNA and RNA.",
+      "Found in phospholipids of membranes."
+    ]
   },
   {
     "id": "u1-ar-16",
     "difficulty": "easy",
     "topic": "elements of life",
-    "text": "Why is sulfur important in living organisms?"
+    "text": "Why is sulfur important in living organisms?",
+    "explain": "Sulfur is important because it is present in some amino acids and helps stabilize the structure of certain proteins through disulfide bonds.",
+    "bullet_points": [
+      "Found in some amino acids, such as cysteine.",
+      "Can help form disulfide bridges.",
+      "Contributes to protein structure."
+    ]
   },
   {
     "id": "u1-ar-17",
     "difficulty": "easy",
     "topic": "introduction to macromolecules",
-    "text": "What is a monomer?"
+    "text": "What is a monomer?",
+    "explain": "A monomer is a small molecular subunit that can be joined to other similar subunits to build a larger molecule.",
+    "bullet_points": [
+      "Small building block.",
+      "Joins with other subunits.",
+      "Used to build larger biological molecules."
+    ]
   },
   {
     "id": "u1-ar-18",
     "difficulty": "easy",
     "topic": "introduction to macromolecules",
-    "text": "What is a polymer?"
+    "text": "What is a polymer?",
+    "explain": "A polymer is a large molecule made of many repeating subunits called monomers.",
+    "bullet_points": [
+      "Large molecule.",
+      "Made from repeated monomers.",
+      "Examples include proteins and nucleic acids."
+    ]
   },
   {
     "id": "u1-ar-19",
     "difficulty": "easy",
     "topic": "introduction to macromolecules",
-    "text": "What is a macromolecule?"
+    "text": "What is a macromolecule?",
+    "explain": "A macromolecule is a large biological molecule. In AP Biology, the major macromolecule groups are carbohydrates, lipids, proteins, and nucleic acids.",
+    "bullet_points": [
+      "Large biological molecule.",
+      "Four major groups are carbohydrates, lipids, proteins, and nucleic acids.",
+      "Many are built from smaller subunits."
+    ]
+  },
+  {
+    "id": "u1-ar-20",
+    "difficulty": "easy",
+    "topic": "introduction to macromolecules",
+    "text": "What is dehydration synthesis?",
+    "explain": "Dehydration synthesis is a reaction that joins smaller molecules together by removing a water molecule.",
+    "bullet_points": [
+      "Builds larger molecules from smaller ones.",
+      "Removes water.",
+      "Forms covalent bonds between subunits."
+    ]
+  },
+  {
+    "id": "u1-ar-21",
+    "difficulty": "easy",
+    "topic": "introduction to macromolecules",
+    "text": "What is hydrolysis?",
+    "explain": "Hydrolysis is a reaction that breaks a larger molecule into smaller parts by adding water.",
+    "bullet_points": [
+      "Breaks polymers into smaller units.",
+      "Adds water.",
+      "Common in digestion."
+    ]
+  },
+  {
+    "id": "u1-ar-22",
+    "difficulty": "easy",
+    "topic": "carbohydrates",
+    "text": "What is a carbohydrate?",
+    "explain": "A carbohydrate is a biological molecule made mainly of carbon, hydrogen, and oxygen that functions in energy storage, structure, or cell recognition.",
+    "bullet_points": [
+      "Contains carbon, hydrogen, and oxygen.",
+      "Includes sugars and polysaccharides.",
+      "Can be used for energy or structure."
+    ]
+  },
+  {
+    "id": "u1-ar-23",
+    "difficulty": "easy",
+    "topic": "carbohydrates",
+    "text": "What is a monosaccharide?",
+    "explain": "A monosaccharide is a single sugar unit and is the monomer of many carbohydrates.",
+    "bullet_points": [
+      "Single sugar molecule.",
+      "Simple carbohydrate.",
+      "Examples include glucose and fructose."
+    ]
+  },
+  {
+    "id": "u1-ar-24",
+    "difficulty": "easy",
+    "topic": "carbohydrates",
+    "text": "What is a disaccharide?",
+    "explain": "A disaccharide is a carbohydrate made of two monosaccharides joined by a glycosidic linkage.",
+    "bullet_points": [
+      "Two sugars joined together.",
+      "Formed by dehydration synthesis.",
+      "Examples include sucrose and lactose."
+    ]
+  },
+  {
+    "id": "u1-ar-25",
+    "difficulty": "easy",
+    "topic": "carbohydrates",
+    "text": "What is a polysaccharide?",
+    "explain": "A polysaccharide is a carbohydrate made of many monosaccharides linked together.",
+    "bullet_points": [
+      "Many sugar subunits.",
+      "Can serve storage or structural roles.",
+      "Examples include starch, glycogen, cellulose, and chitin."
+    ]
+  },
+  {
+    "id": "u1-ar-26",
+    "difficulty": "easy",
+    "topic": "carbohydrates",
+    "text": "What is starch?",
+    "explain": "Starch is a polysaccharide used by plants to store glucose for later use.",
+    "bullet_points": [
+      "Plant storage polysaccharide.",
+      "Built from glucose.",
+      "Can be broken down for energy."
+    ]
+  },
+  {
+    "id": "u1-ar-27",
+    "difficulty": "easy",
+    "topic": "carbohydrates",
+    "text": "What is glycogen?",
+    "explain": "Glycogen is a highly branched polysaccharide used by animals to store glucose.",
+    "bullet_points": [
+      "Animal storage polysaccharide.",
+      "Highly branched.",
+      "Stored mainly in liver and muscle cells."
+    ]
+  },
+  {
+    "id": "u1-ar-28",
+    "difficulty": "easy",
+    "topic": "carbohydrates",
+    "text": "What is cellulose?",
+    "explain": "Cellulose is a structural polysaccharide in plant cell walls. Its glucose subunits are linked in a way that gives plant tissues strength.",
+    "bullet_points": [
+      "Structural carbohydrate in plants.",
+      "Found in cell walls.",
+      "Humans cannot digest its beta linkages."
+    ]
+  },
+  {
+    "id": "u1-ar-29",
+    "difficulty": "easy",
+    "topic": "carbohydrates",
+    "text": "What is chitin?",
+    "explain": "Chitin is a structural polysaccharide found in fungal cell walls and in the exoskeletons of arthropods.",
+    "bullet_points": [
+      "Structural polysaccharide.",
+      "Found in fungi and arthropods.",
+      "Provides support and protection."
+    ]
+  },
+  {
+    "id": "u1-ar-30",
+    "difficulty": "easy",
+    "topic": "carbohydrates",
+    "text": "What is a glycosidic linkage?",
+    "explain": "A glycosidic linkage is the covalent bond that joins monosaccharides together in a carbohydrate.",
+    "bullet_points": [
+      "Joins sugar monomers.",
+      "Forms during dehydration synthesis.",
+      "Found in disaccharides and polysaccharides."
+    ]
+  },
+  {
+    "id": "u1-ar-31",
+    "difficulty": "easy",
+    "topic": "lipids",
+    "text": "What is a lipid?",
+    "explain": "A lipid is a mostly nonpolar biological molecule used in long-term energy storage, membranes, signaling, or waterproofing.",
+    "bullet_points": [
+      "Usually hydrophobic or mostly nonpolar.",
+      "Includes fats, phospholipids, and steroids.",
+      "Functions in energy storage, membranes, and signaling."
+    ]
+  },
+  {
+    "id": "u1-ar-32",
+    "difficulty": "easy",
+    "topic": "lipids",
+    "text": "What is a triglyceride?",
+    "explain": "A triglyceride is a lipid made of one glycerol molecule and three fatty acids. It is a major form of long-term energy storage.",
+    "bullet_points": [
+      "One glycerol plus three fatty acids.",
+      "Stores energy.",
+      "Common in fats and oils."
+    ]
+  },
+  {
+    "id": "u1-ar-33",
+    "difficulty": "easy",
+    "topic": "lipids",
+    "text": "What is a fatty acid?",
+    "explain": "A fatty acid is a hydrocarbon chain with a carboxyl group. Fatty acids are components of triglycerides and phospholipids.",
+    "bullet_points": [
+      "Long hydrocarbon chain.",
+      "Has a carboxyl group.",
+      "Used to build some lipids."
+    ]
+  },
+  {
+    "id": "u1-ar-34",
+    "difficulty": "easy",
+    "topic": "lipids",
+    "text": "What is the difference between saturated and unsaturated fatty acids?",
+    "explain": "Saturated fatty acids have no carbon-carbon double bonds, while unsaturated fatty acids have one or more double bonds that create bends in the chain.",
+    "bullet_points": [
+      "Saturated = no double bonds.",
+      "Unsaturated = one or more double bonds.",
+      "Unsaturated fatty acids usually increase membrane fluidity."
+    ]
+  },
+  {
+    "id": "u1-ar-35",
+    "difficulty": "easy",
+    "topic": "lipids",
+    "text": "What is a phospholipid?",
+    "explain": "A phospholipid is a lipid with a glycerol backbone, two fatty acids, and a phosphate-containing head. Phospholipids are the main molecules in cell membranes.",
+    "bullet_points": [
+      "Has a hydrophilic phosphate head.",
+      "Has hydrophobic fatty acid tails.",
+      "Forms bilayers in membranes."
+    ]
+  },
+  {
+    "id": "u1-ar-36",
+    "difficulty": "easy",
+    "topic": "lipids",
+    "text": "What does amphipathic mean?",
+    "explain": "Amphipathic means having both a hydrophilic region and a hydrophobic region in the same molecule.",
+    "bullet_points": [
+      "Has both water-attracting and water-repelling parts.",
+      "Phospholipids are amphipathic.",
+      "This property helps membranes form."
+    ]
+  },
+  {
+    "id": "u1-ar-37",
+    "difficulty": "easy",
+    "topic": "lipids",
+    "text": "What is a steroid?",
+    "explain": "A steroid is a lipid made of four fused carbon rings. Steroids can function as hormones or as structural molecules such as cholesterol.",
+    "bullet_points": [
+      "Four fused carbon rings.",
+      "A type of lipid.",
+      "Includes hormones and cholesterol."
+    ]
+  },
+  {
+    "id": "u1-ar-38",
+    "difficulty": "easy",
+    "topic": "lipids",
+    "text": "What is cholesterol?",
+    "explain": "Cholesterol is a steroid that helps maintain membrane stability and fluidity in animal cells.",
+    "bullet_points": [
+      "A membrane component in animal cells.",
+      "Helps regulate membrane fluidity.",
+      "A type of steroid lipid."
+    ]
+  },
+  {
+    "id": "u1-ar-39",
+    "difficulty": "easy",
+    "topic": "nucleic acids",
+    "text": "What is a nucleic acid?",
+    "explain": "A nucleic acid is a biological molecule that stores or transmits genetic information. DNA and RNA are the two main nucleic acids.",
+    "bullet_points": [
+      "Stores or transmits genetic information.",
+      "DNA and RNA are nucleic acids.",
+      "Built from nucleotide monomers."
+    ]
+  },
+  {
+    "id": "u1-ar-40",
+    "difficulty": "easy",
+    "topic": "nucleic acids",
+    "text": "What is a nucleotide?",
+    "explain": "A nucleotide is the monomer of nucleic acids. It contains a sugar, a phosphate group, and a nitrogenous base.",
+    "bullet_points": [
+      "Monomer of DNA and RNA.",
+      "Contains sugar, phosphate, and base.",
+      "Links together to form nucleic acids."
+    ]
+  },
+  {
+    "id": "u1-ar-41",
+    "difficulty": "easy",
+    "topic": "nucleic acids",
+    "text": "What is the sugar-phosphate backbone?",
+    "explain": "The sugar-phosphate backbone is the repeating chain of sugars and phosphates that forms the structural side of a nucleic acid strand.",
+    "bullet_points": [
+      "Made of alternating sugars and phosphates.",
+      "Forms the outside of DNA or RNA strands.",
+      "Bases project from this backbone."
+    ]
+  },
+  {
+    "id": "u1-ar-42",
+    "difficulty": "easy",
+    "topic": "nucleic acids",
+    "text": "What is complementary base pairing?",
+    "explain": "Complementary base pairing is the specific pairing of nitrogenous bases. In DNA, adenine pairs with thymine and guanine pairs with cytosine.",
+    "bullet_points": [
+      "Specific base pairing rules.",
+      "A pairs with T in DNA and U in RNA.",
+      "G pairs with C."
+    ]
+  },
+  {
+    "id": "u1-ar-43",
+    "difficulty": "easy",
+    "topic": "nucleic acids",
+    "text": "What is a purine?",
+    "explain": "A purine is a nitrogenous base with a double-ring structure. Adenine and guanine are purines.",
+    "bullet_points": [
+      "Double-ring base.",
+      "Adenine and guanine are purines.",
+      "Purines pair with pyrimidines."
+    ]
+  },
+  {
+    "id": "u1-ar-44",
+    "difficulty": "easy",
+    "topic": "nucleic acids",
+    "text": "What is a pyrimidine?",
+    "explain": "A pyrimidine is a nitrogenous base with a single-ring structure. Cytosine, thymine, and uracil are pyrimidines.",
+    "bullet_points": [
+      "Single-ring base.",
+      "Cytosine, thymine, and uracil are pyrimidines.",
+      "Pyrimidines pair with purines."
+    ]
+  },
+  {
+    "id": "u1-ar-45",
+    "difficulty": "easy",
+    "topic": "proteins",
+    "text": "What is a protein?",
+    "explain": "A protein is a polymer of amino acids that performs structural, transport, signaling, movement, defense, or enzymatic functions.",
+    "bullet_points": [
+      "Made of amino acids.",
+      "Folds into a specific shape.",
+      "Function depends on structure."
+    ]
+  },
+  {
+    "id": "u1-ar-46",
+    "difficulty": "easy",
+    "topic": "proteins",
+    "text": "What is an amino acid?",
+    "explain": "An amino acid is the monomer of a protein. Each amino acid has an amino group, a carboxyl group, a hydrogen, and an R group attached to a central carbon.",
+    "bullet_points": [
+      "Protein monomer.",
+      "Has amino group and carboxyl group.",
+      "The R group differs among amino acids."
+    ]
+  },
+  {
+    "id": "u1-ar-47",
+    "difficulty": "easy",
+    "topic": "proteins",
+    "text": "What is a peptide bond?",
+    "explain": "A peptide bond is the covalent bond that joins amino acids together in a polypeptide.",
+    "bullet_points": [
+      "Joins amino acids.",
+      "Forms during dehydration synthesis.",
+      "Found in proteins and polypeptides."
+    ]
+  },
+  {
+    "id": "u1-ar-48",
+    "difficulty": "easy",
+    "topic": "proteins",
+    "text": "What is a polypeptide?",
+    "explain": "A polypeptide is a chain of amino acids joined by peptide bonds. One or more polypeptides can make up a functional protein.",
+    "bullet_points": [
+      "Chain of amino acids.",
+      "Joined by peptide bonds.",
+      "May fold into a functional protein."
+    ]
+  },
+  {
+    "id": "u1-ar-49",
+    "difficulty": "easy",
+    "topic": "proteins",
+    "text": "What is primary structure in a protein?",
+    "explain": "Primary structure is the linear sequence of amino acids in a polypeptide.",
+    "bullet_points": [
+      "Amino acid sequence.",
+      "Held together by peptide bonds.",
+      "Determines higher levels of protein structure."
+    ]
+  },
+  {
+    "id": "u1-ar-50",
+    "difficulty": "easy",
+    "topic": "proteins",
+    "text": "What is secondary structure in a protein?",
+    "explain": "Secondary structure is local folding of a polypeptide into shapes such as alpha helices and beta pleated sheets due to hydrogen bonding in the backbone.",
+    "bullet_points": [
+      "Includes alpha helices and beta sheets.",
+      "Stabilized by hydrogen bonds.",
+      "Local folding pattern."
+    ]
+  },
+  {
+    "id": "u1-ar-51",
+    "difficulty": "easy",
+    "topic": "proteins",
+    "text": "What is tertiary structure in a protein?",
+    "explain": "Tertiary structure is the overall three-dimensional shape of a single polypeptide formed by interactions among side chains.",
+    "bullet_points": [
+      "Overall 3D shape of one polypeptide.",
+      "Depends on R-group interactions.",
+      "Important for protein function."
+    ]
+  },
+  {
+    "id": "u1-ar-52",
+    "difficulty": "easy",
+    "topic": "proteins",
+    "text": "What is quaternary structure in a protein?",
+    "explain": "Quaternary structure is the arrangement of multiple polypeptide subunits in a single functional protein.",
+    "bullet_points": [
+      "Involves more than one polypeptide.",
+      "Subunits interact to form a functional protein.",
+      "Not all proteins have quaternary structure."
+    ]
+  },
+  {
+    "id": "u1-ar-53",
+    "difficulty": "easy",
+    "topic": "proteins",
+    "text": "What is denaturation?",
+    "explain": "Denaturation is the loss of a protein’s normal shape, often caused by changes in temperature, pH, or salt concentration, which can reduce or destroy function.",
+    "bullet_points": [
+      "Protein loses its proper shape.",
+      "Can be caused by heat or pH changes.",
+      "Usually affects function."
+    ]
+  },
+  {
+    "id": "u1-ar-54",
+    "difficulty": "easy",
+    "topic": "proteins",
+    "text": "What is an enzyme?",
+    "explain": "An enzyme is a biological catalyst, usually a protein, that speeds up a reaction by lowering activation energy.",
+    "bullet_points": [
+      "Biological catalyst.",
+      "Usually a protein.",
+      "Speeds reactions by lowering activation energy."
+    ]
   }
 ]
