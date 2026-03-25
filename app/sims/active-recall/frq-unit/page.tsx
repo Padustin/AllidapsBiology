@@ -76,7 +76,7 @@ export default function UnitFrqPage() {
                 return (
                   <div key={part.label} style={{ border: "1px solid #e2e8f0", borderRadius: 8, padding: 10, background: "#ffffff" }}>
                     <div style={{ fontWeight: 800 }}>
-                      {part.label}) {part.verb}: {part.prompt}
+                      {part.label}) {part.prompt}
                     </div>
                     {isRevealed && (
                       <div style={{ marginTop: 8, paddingTop: 8, borderTop: "1px dashed #cbd5e1" }}>
