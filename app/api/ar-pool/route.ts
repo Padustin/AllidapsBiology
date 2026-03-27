@@ -17,7 +17,7 @@ export async function GET(req: Request) {
     const difficulty = url.searchParams.get("difficulty") || "";
 
     const datasetsDir = path.join(process.cwd(), "app", "sims", "active-recall", "datasets");
-    const files = fs.readdirSync(datasetsDir).filter((f) => f.endsWith(".json"));
+    const files = fs.readdirSync(datasetsDir).filter((f) => /^unit\d+\.json$/i.test(f));
     const ids: string[] = [];
 
     const unitNum = parseUnitNumber(unit);

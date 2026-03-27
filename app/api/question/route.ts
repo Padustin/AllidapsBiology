@@ -39,7 +39,7 @@ export async function POST(req: Request) {
     const path = await Promise.resolve().then(() => require('path'));
     const datasetsDir = path.join(process.cwd(), 'app', 'sims', 'active-recall', 'datasets');
     if (fs.existsSync(datasetsDir)) {
-      const files = fs.readdirSync(datasetsDir).filter((f: string) => f.endsWith('.json'));
+      const files = fs.readdirSync(datasetsDir).filter((f: string) => /^unit\d+\.json$/i.test(f));
       const allQuestions: any[] = [];
 
       // If a specific dataset file was requested, read only that file when it exists
