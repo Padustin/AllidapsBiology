@@ -6,123 +6,131 @@ import type { ReactNode } from "react";
 
 export default function SimsLayout({ children }: { children: ReactNode }) {
   const pathname = usePathname();
-  const pageBg = "#f1f5f9";
-  const cardBg = "#f8fafc";
-  const border = "#e2e8f0";
-  const text = "#334155";
-  const heading = "#0f172a";
-  const activeBg = "#ede9fe";
-  const activeBorder = "#c4b5fd";
-  const activeText = "#5b21b6";
 
-  const navItemStyle: React.CSSProperties = {
-    display: "block",
-    padding: "12px 14px",
-    borderRadius: 0,
-    borderTop: `1px solid ${border}`,
-    borderBottom: `1px solid ${border}`,
-    borderLeft: "none",
-    borderRight: "none",
-    background: "white",
-    color: heading,
-    textDecoration: "none",
-    fontWeight: 700,
-    width: "100%",
-  };
-
-  function getNavItemStyle(href: string): React.CSSProperties {
+  function navClass(href: string) {
     const isActive = pathname === href;
-    return {
-      ...navItemStyle,
-      background: isActive ? activeBg : navItemStyle.background,
-      borderTop: isActive ? `1px solid ${activeBorder}` : navItemStyle.borderTop,
-      borderBottom: isActive ? `1px solid ${activeBorder}` : navItemStyle.borderBottom,
-      color: isActive ? activeText : navItemStyle.color,
-    };
+    if (isActive) {
+      return "block rounded-xl border border-sky-200 bg-sky-50 px-3 py-2.5 text-sm font-semibold text-sky-900 shadow-sm";
+    }
+    return "block rounded-xl border border-transparent px-3 py-2.5 text-sm font-medium text-slate-700 transition-colors hover:border-slate-200 hover:bg-white hover:text-slate-900";
   }
 
-  function getSectionSummaryStyle(isActive: boolean): React.CSSProperties {
-    return {
-      fontWeight: 800,
-      marginBottom: 8,
-      color: isActive ? activeText : heading,
-    };
+  function sectionTitleClass(isActive: boolean) {
+    return isActive ? "mb-2 text-xs font-bold uppercase tracking-wide text-sky-700" : "mb-2 text-xs font-bold uppercase tracking-wide text-slate-500";
   }
 
   return (
-    <div style={{ background: pageBg, height: "100dvh", overflow: "hidden" }}>
-      <div
-        style={{
-          width: "100%",
-          padding: 0,
-          fontFamily: "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
-          color: text,
-        }}
-      >
-          <div style={{ display: "grid", gridTemplateColumns: "260px minmax(0, 1fr)", gap: 0, height: "100dvh", width: "100%", alignItems: "stretch" }}>
-          {/* Sidebar */}
-          <aside
-            style={{
-              borderRight: `1px solid ${border}`,
-              padding: 0,
-              background: cardBg,
-              height: "100dvh",
-              alignSelf: "stretch",
-              display: "flex",
-              flexDirection: "column",
-              overflow: "auto",
-            }}
-          >
-            <div style={{ fontWeight: 900, color: heading, fontSize: 20, marginBottom: 12, lineHeight: 1.1, padding: "14px 14px 0" }}>
-              Allidaps Biology
+    <div className="h-dvh overflow-hidden bg-slate-50">
+      <div className="grid h-dvh w-full grid-cols-[290px_minmax(0,1fr)]">
+        <aside className="hidden h-dvh flex-col border-r border-slate-200 bg-slate-100/70 p-4 md:flex">
+          <div className="dna-title-card relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+            <svg
+              aria-hidden="true"
+              className="dna-flow"
+              viewBox="0 0 520 120"
+              preserveAspectRatio="none"
+            >
+              <defs>
+                <linearGradient id="dnaA" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stopColor="#38bdf8" />
+                  <stop offset="100%" stopColor="#2563eb" />
+                </linearGradient>
+                <linearGradient id="dnaB" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stopColor="#0ea5e9" />
+                  <stop offset="100%" stopColor="#1d4ed8" />
+                </linearGradient>
+                <symbol id="dna-segment" viewBox="0 0 240 120">
+                  <path
+                    d="M0 20 C30 20, 30 100, 60 100 C90 100, 90 20, 120 20 C150 20, 150 100, 180 100 C210 100, 210 20, 240 20"
+                    fill="none"
+                    stroke="url(#dnaA)"
+                    strokeWidth="3.6"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M0 100 C30 100, 30 20, 60 20 C90 20, 90 100, 120 100 C150 100, 150 20, 180 20 C210 20, 210 100, 240 100"
+                    fill="none"
+                    stroke="url(#dnaB)"
+                    strokeWidth="3.6"
+                    strokeLinecap="round"
+                  />
+
+                  <line x1="15" y1="28" x2="15" y2="92" className="dna-rung-front" />
+                  <line x1="45" y1="48" x2="45" y2="72" className="dna-rung-back" />
+                  <line x1="75" y1="76" x2="75" y2="44" className="dna-rung-back" />
+                  <line x1="105" y1="94" x2="105" y2="26" className="dna-rung-front" />
+                  <line x1="135" y1="76" x2="135" y2="44" className="dna-rung-back" />
+                  <line x1="165" y1="48" x2="165" y2="72" className="dna-rung-back" />
+                  <line x1="195" y1="28" x2="195" y2="92" className="dna-rung-front" />
+                  <line x1="225" y1="22" x2="225" y2="98" className="dna-rung-front" />
+
+                  <circle cx="15" cy="28" r="2.3" className="dna-node" />
+                  <circle cx="15" cy="92" r="2.3" className="dna-node" />
+                  <circle cx="105" cy="94" r="2.3" className="dna-node" />
+                  <circle cx="105" cy="26" r="2.3" className="dna-node" />
+                  <circle cx="195" cy="28" r="2.3" className="dna-node" />
+                  <circle cx="195" cy="92" r="2.3" className="dna-node" />
+                  <circle cx="225" cy="22" r="2.3" className="dna-node" />
+                  <circle cx="225" cy="98" r="2.3" className="dna-node" />
+                </symbol>
+              </defs>
+              <use href="#dna-segment" x="-220" y="0" />
+              <use href="#dna-segment" x="0" y="0" />
+              <use href="#dna-segment" x="220" y="0" />
+              <use href="#dna-segment" x="440" y="0" />
+              <use href="#dna-segment" x="660" y="0" />
+            </svg>
+            <p className="relative z-20 text-2xl font-extrabold leading-tight text-slate-900">Allidaps Biology</p>
+          </div>
+
+          <nav className="mt-4 space-y-4 overflow-auto pr-1">
+            <section>
+              <p className={sectionTitleClass(pathname.startsWith("/sims/active-recall"))}>Active Recall</p>
+              <div className="space-y-1.5">
+                <Link href="/sims/active-recall/ap" className={navClass("/sims/active-recall/ap")}>All-Unit MCQ Practice</Link>
+                <Link href="/sims/active-recall/unit" className={navClass("/sims/active-recall/unit")}>Unit MCQ Practice</Link>
+                <Link href="/sims/active-recall/frq-all" className={navClass("/sims/active-recall/frq-all")}>All-Unit FRQ Practice</Link>
+                <Link href="/sims/active-recall/frq-unit" className={navClass("/sims/active-recall/frq-unit")}>Unit FRQ Practice</Link>
+              </div>
+            </section>
+
+            <section>
+              <p className={sectionTitleClass(pathname.startsWith("/sims/chi-square"))}>Labs</p>
+              <div className="space-y-1.5">
+                <Link href="/sims/chi-square" className={navClass("/sims/chi-square")}>Chi-Square Visual Lab</Link>
+                <Link href="/sims/chi-square/explanation" className={navClass("/sims/chi-square/explanation")}>Chi-Square Concept Guide</Link>
+              </div>
+            </section>
+
+            <section>
+              <p className={sectionTitleClass(pathname.startsWith("/sims/simulations"))}>Simulation</p>
+              <div className="space-y-1.5">
+                <Link href="/sims/simulations" className={navClass("/sims/simulations")}>Cell Systems Simulation</Link>
+              </div>
+            </section>
+
+            <section>
+              <p className={sectionTitleClass(pathname.startsWith("/sims/feedback"))}>Support</p>
+              <div className="space-y-1.5">
+                <Link href="/sims/feedback" className={navClass("/sims/feedback")}>Share Feedback</Link>
+              </div>
+            </section>
+          </nav>
+
+          <p className="mt-auto px-2 pt-3 text-xs text-slate-500">Built by Justin A Padilla</p>
+        </aside>
+
+        <main className="h-dvh min-w-0 overflow-auto">
+          <header className="sticky top-0 z-10 border-b border-slate-200 bg-white/90 px-4 py-3 backdrop-blur md:hidden">
+            <div className="flex items-center justify-between gap-3">
+              <p className="text-base font-bold text-slate-900">Allidaps Biology</p>
+              <Link href="/sims/active-recall" className="rounded-lg border border-slate-300 px-3 py-1.5 text-sm font-medium text-slate-700">
+                Study Menu
+              </Link>
             </div>
-
-            <div style={{ display: "grid", gap: 10 }}>
-              <div>
-                <div style={{ ...getSectionSummaryStyle(pathname.startsWith("/sims/simulations")), padding: "0 14px" }}>Simulations</div>
-                <div style={{ display: "grid", gap: 0, marginTop: 6 }}>
-                  <Link href="/sims/simulations" style={getNavItemStyle("/sims/simulations")}>Complete Cell Simulation</Link>
-                </div>
-              </div>
-
-              <div>
-                <div style={{ ...getSectionSummaryStyle(pathname.startsWith("/sims/active-recall")), padding: "0 14px" }}>Study!!</div>
-                <div style={{ display: "grid", gap: 0, marginTop: 6 }}>
-                  <Link href="/sims/active-recall/ap" style={getNavItemStyle("/sims/active-recall/ap")}>All Unit MCQ's</Link>
-                  <Link href="/sims/active-recall/unit" style={getNavItemStyle("/sims/active-recall/unit")}>Unit Specific MCQ's</Link>
-                  <Link href="/sims/active-recall/frq-all" style={getNavItemStyle("/sims/active-recall/frq-all")}>All Unit FRQ's</Link>
-                  <Link href="/sims/active-recall/frq-unit" style={getNavItemStyle("/sims/active-recall/frq-unit")}>Unit Specific FRQ's(BEST)</Link>
-                </div>
-              </div>
-
-              <div>
-                <div style={{ ...getSectionSummaryStyle(pathname.startsWith("/sims/chi-square")), padding: "0 14px" }}>Chi-Squares</div>
-                <div style={{ display: "grid", gap: 0, marginTop: 6 }}>
-                  <Link href="/sims/chi-square" style={getNavItemStyle("/sims/chi-square")}>
-                    Visual Lab
-                  </Link>
-                  <Link href="/sims/chi-square/explanation" style={getNavItemStyle("/sims/chi-square/explanation")}>
-                    Explanation
-                  </Link>
-                </div>
-              </div>
-
-              <div>
-                <div style={{ ...getSectionSummaryStyle(pathname.startsWith("/sims/feedback")), padding: "0 14px" }}>Feedback</div>
-                <div style={{ display: "grid", gap: 0, marginTop: 6 }}>
-                  <Link href="/sims/feedback" style={getNavItemStyle("/sims/feedback")}>Share feedback</Link>
-                </div>
-              </div>
-            </div>
-
-            <div style={{ marginTop: "auto", padding: "12px 14px 14px", fontSize: 12, color: text, lineHeight: 1.35 }}>
-              Made by Justin A Padilla
-            </div>
-          </aside>
-
-          {/* Main content */}
-          <main style={{ padding: 0, minWidth: 0, height: "100dvh", alignSelf: "stretch", overflow: "auto" }}>{children}</main>
-        </div>
+          </header>
+          <div className="mx-auto w-full max-w-[1500px] p-4 sm:p-6">{children}</div>
+        </main>
       </div>
     </div>
   );

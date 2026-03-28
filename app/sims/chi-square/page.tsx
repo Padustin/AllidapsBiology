@@ -233,7 +233,7 @@ export default function Page() {
   ];
 
   return (
-    <div style={{ background: pageBg, minHeight: "100vh" }}>
+    <div className="study-screen" style={{ background: pageBg, minHeight: "100vh" }}>
       <div
         style={{
           width: "100%",
@@ -244,17 +244,16 @@ export default function Page() {
         }}
       >
         <h1 style={{ fontSize: 28, fontWeight: 800, marginBottom: 6, color: heading }}>
-          Chi-Square Visual Lab (AP Bio)
+          Chi-Square Visual Lab
         </h1>
         <p style={{ marginTop: 0, color: text }}>
-          Enter observed counts and an expected ratio. The chart and table show{" "}
-          <b>where χ² comes from</b>.
+          Enter observed counts and an expected ratio, then compare the visual output and contribution table to see exactly how χ² is built.
         </p>
 
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "360px 1fr",
+            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
             gap: 16,
             alignItems: "start",
           }}
@@ -263,7 +262,7 @@ export default function Page() {
           <div
             style={{
               border: `1px solid ${border}`,
-              borderRadius: 0,
+              borderRadius: 18,
               padding: 14,
               background: cardBg,
             }}
@@ -414,7 +413,7 @@ export default function Page() {
             <div
               style={{
                 border: `1px solid ${border}`,
-                borderRadius: 0,
+                borderRadius: 18,
                 padding: 14,
                 background: cardBg,
               }}

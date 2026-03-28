@@ -971,7 +971,7 @@ export default function CompleteCellSimulationPage() {
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: "#f1f5f9", padding: 20, color: "#0f172a" }}>
+    <div className="study-screen" style={{ minHeight: "100vh", background: "linear-gradient(180deg, #f8fbff 0%, #eef4fb 100%)", padding: 20, color: "#0f172a" }}>
       <style>{`
         .fade-in-up {
           animation: fadeInUp 240ms ease-out;
@@ -982,14 +982,17 @@ export default function CompleteCellSimulationPage() {
         }
       `}</style>
 
-      <div style={{ width: "100%", margin: 0, display: "grid", gap: 14 }}>
+      <div className="hero-card" style={{ width: "100%", margin: 0, display: "grid", gap: 14, padding: 18 }}>
         <h1 style={{ margin: 0, fontSize: 34, lineHeight: 1.06, fontWeight: 900, letterSpacing: -0.3 }}>Complete Cell Simulation</h1>
+        <p style={{ margin: 0, color: "#475569", maxWidth: 820, lineHeight: 1.5 }}>
+          Explore organelles, pathway dynamics, and central dogma flow with interactive controls designed for focused AP Biology review.
+        </p>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
           <button
             type="button"
             onClick={replayCentralDogma}
             style={{
-              border: "1px solid #1d4ed8",
+              border: "1px solid #0369a1",
               background: "#2563eb",
               color: "#ffffff",
               borderRadius: 12,
@@ -1007,7 +1010,7 @@ export default function CompleteCellSimulationPage() {
               onChange={(event) => setDogmaMode(event.target.checked ? "guided" : "plain")}
               style={{ width: 16, height: 16, cursor: "pointer" }}
             />
-            <span>Show Explanation</span>
+            <span>Show guided explanation overlays</span>
           </label>
         </div>
 

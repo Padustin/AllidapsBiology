@@ -59,8 +59,8 @@ export default function AllUnitFrqPage() {
   }, [difficulty]);
 
   return (
-    <div style={{ padding: 18, width: "100%", fontFamily: "\"Helvetica Neue\", Helvetica, Arial, sans-serif" }}>
-      <h1 style={{ fontSize: 24, fontWeight: 800 }}>All Unit FRQ's</h1>
+    <div className="study-screen" style={{ padding: 18, width: "100%", fontFamily: "\"Helvetica Neue\", Helvetica, Arial, sans-serif" }}>
+      <h1 style={{ fontSize: 24, fontWeight: 800 }}>All-Unit FRQ Practice</h1>
 
       <div style={{ marginTop: 12, display: "flex", gap: 8, alignItems: "center" }}>
         <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
@@ -77,7 +77,7 @@ export default function AllUnitFrqPage() {
       <div style={{ marginTop: 12 }}>
         {!question && <div style={{ color: "#475569" }}>{loadError || "Loading FRQ..."}</div>}
         {question && (
-          <div style={{ border: "1px solid #e2e8f0", padding: 12, width: "100%" }}>
+          <div className="soft-card" style={{ border: "1px solid #e2e8f0", padding: 12, width: "100%", borderRadius: 16 }}>
             {question.topic && <div style={{ marginBottom: 8, color: "#334155", fontWeight: 700 }}>Topic: {question.topic}</div>}
             <div style={{ fontWeight: 800 }}>{question.text}</div>
             
@@ -175,7 +175,7 @@ export default function AllUnitFrqPage() {
                 </button>
               </div>
             </div>
-            <div style={{ marginTop: 16, padding: 12, background: "#fefce8", border: "1px solid #fde047", borderRadius: 10, color: "#713f12", fontSize: 14 }}>
+            <div className="tip-card" style={{ marginTop: 16, padding: 12, background: "#fefce8", border: "1px solid #fde047", borderRadius: 10, color: "#713f12", fontSize: 14 }}>
               <span style={{ fontWeight: 800 }}>Padilla tip</span> — When you practice the FRQ questions, try to either write your answers down or say them out loud rather than just answering them in your head.
             </div>
           </div>

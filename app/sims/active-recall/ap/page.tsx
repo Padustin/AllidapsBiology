@@ -126,8 +126,8 @@ export default function Page() {
   }, [seen]);
 
   return (
-    <div style={{ padding: 18, width: "100%", fontFamily: "\"Helvetica Neue\", Helvetica, Arial, sans-serif", color: text }}>
-      <h1 style={{ fontSize: 24, fontWeight: 800, color: heading }}>All Unit MCQ's</h1>
+    <div className="study-screen" style={{ padding: 18, width: "100%", fontFamily: "\"Helvetica Neue\", Helvetica, Arial, sans-serif", color: text }}>
+      <h1 style={{ fontSize: 24, fontWeight: 800, color: heading }}>All-Unit MCQ Review</h1>
 
       <div style={{ marginTop: 12, display: "flex", gap: 8, alignItems: "center" }}>
         <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
@@ -146,7 +146,7 @@ export default function Page() {
             <button onClick={previous} disabled={previousQuestions.length === 0} style={{ padding: "8px 12px", borderRadius: 12, border: `none`, background: "transparent", fontWeight: 700, opacity: previousQuestions.length > 0 ? 1 : 0.45, cursor: previousQuestions.length > 0 ? "pointer" : "not-allowed" }}>Previous question</button>
           </div>
           <div style={{ padding: 6, border: `1px solid ${border}`, borderRadius: 12, background: "white" }}>
-            <button onClick={() => { void next(); }} style={{ padding: "8px 12px", borderRadius: 12, border: `none`, background: "transparent", fontWeight: 700 }}>New question</button>
+            <button onClick={() => { void next(); }} style={{ padding: "8px 12px", borderRadius: 12, border: `none`, background: "transparent", fontWeight: 700 }}>Load new question</button>
           </div>
         </div>
       </div>
@@ -154,7 +154,7 @@ export default function Page() {
       <div style={{ marginTop: 12 }}>
         {!question && <div style={{ color: "#475569" }}>{loadError || "Loading question..."}</div>}
         {question && (
-          <div style={{ border: `1px solid ${border}`, padding: 14, borderRadius: 0, background: cardBg, width: "100%" }}>
+          <div className="soft-card" style={{ border: `1px solid ${border}`, padding: 14, borderRadius: 16, background: cardBg, width: "100%" }}>
               {question.experiment && (
                 <div style={{ marginBottom: 10, background: '#ffffff', padding: 10, borderRadius: 8, border: `1px solid ${border}` }}>
                   <div style={{ fontWeight: 700 }}>Experiment</div>
@@ -256,7 +256,7 @@ export default function Page() {
               )}
             </div>
         )}
-        <div style={{ marginTop: 16, padding: 12, background: "#fefce8", border: "1px solid #fde047", borderRadius: 10, color: "#713f12", fontSize: 14 }}>
+        <div className="tip-card" style={{ marginTop: 16, padding: 12, background: "#fefce8", border: "1px solid #fde047", borderRadius: 10, color: "#713f12", fontSize: 14 }}>
           <span style={{ fontWeight: 800 }}>Padilla tip</span> — If there are any vocabulary words that you are unfamiliar with, Google them! It will help you understand the biological system better and makes sure it doesn&#39;t come back to haunt you on the exam.
         </div>
       </div>

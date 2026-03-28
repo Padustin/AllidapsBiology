@@ -145,8 +145,8 @@ export default function Page() {
   }, [seen]);
 
   return (
-    <div style={{ padding: 18, width: "100%", fontFamily: "\"Helvetica Neue\", Helvetica, Arial, sans-serif" }}>
-      <h1 style={{ fontSize: 24, fontWeight: 800 }}>Unit Specific MCQ's</h1>
+    <div className="study-screen" style={{ padding: 18, width: "100%", fontFamily: "\"Helvetica Neue\", Helvetica, Arial, sans-serif" }}>
+      <h1 style={{ fontSize: 24, fontWeight: 800 }}>Unit MCQ Review</h1>
       <div style={{ marginTop: 12, display: "flex", gap: 8, alignItems: "center" }}>
         <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
           <label style={{ fontWeight: 700 }}>Difficulty</label>
@@ -177,7 +177,7 @@ export default function Page() {
             <button onClick={previous} disabled={previousQuestions.length === 0} style={{ padding: "8px 12px", borderRadius: 8, background: "transparent", border: "none", opacity: previousQuestions.length > 0 ? 1 : 0.45, cursor: previousQuestions.length > 0 ? "pointer" : "not-allowed" }}>Previous question</button>
           </div>
           <div style={{ padding: 6, border: "1px solid #e2e8f0", borderRadius: 12, background: "white" }}>
-            <button onClick={() => { void next(); }} disabled={!unit || !difficulty} style={{ padding: "8px 12px", borderRadius: 8, background: "transparent", border: "none", opacity: unit && difficulty ? 1 : 0.45, cursor: unit && difficulty ? "pointer" : "not-allowed" }}>New question</button>
+            <button onClick={() => { void next(); }} disabled={!unit || !difficulty} style={{ padding: "8px 12px", borderRadius: 8, background: "transparent", border: "none", opacity: unit && difficulty ? 1 : 0.45, cursor: unit && difficulty ? "pointer" : "not-allowed" }}>Load new question</button>
           </div>
         </div>
       </div>
@@ -185,7 +185,7 @@ export default function Page() {
       <div style={{ marginTop: 12 }}>
         {!question && <div style={{ color: "#475569" }}>{loadError || "Click \"New question\" to begin."}</div>}
         {question && (
-          <div style={{ border: "1px solid #e2e8f0", padding: 12, borderRadius: 0, width: "100%" }}>
+          <div className="soft-card" style={{ border: "1px solid #e2e8f0", padding: 12, borderRadius: 16, width: "100%" }}>
               {question.experiment && (
                 <div style={{ marginBottom: 10, background: '#fff', padding: 8, borderRadius: 8, border: '1px solid #e2e8f0' }}>
                   <div style={{ fontWeight: 700 }}>Experiment</div>
@@ -287,7 +287,7 @@ export default function Page() {
               )}
             </div>
         )}
-        <div style={{ marginTop: 16, padding: 12, background: "#fefce8", border: "1px solid #fde047", borderRadius: 10, color: "#713f12", fontSize: 14 }}>
+        <div className="tip-card" style={{ marginTop: 16, padding: 12, background: "#fefce8", border: "1px solid #fde047", borderRadius: 10, color: "#713f12", fontSize: 14 }}>
           <span style={{ fontWeight: 800 }}>Padilla tip</span> — If there are any vocabulary words that you are unfamiliar with, Google them! It will help you understand the biological system better and makes sure it doesn&#39;t come back to haunt you on the exam.
         </div>
       </div>

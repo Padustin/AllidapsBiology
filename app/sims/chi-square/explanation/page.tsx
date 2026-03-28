@@ -15,8 +15,8 @@ export default function Page() {
   const df = labels.length - 1;
 
   return (
-    <div style={{ display: "grid", gap: 16, color: text }}>
-      <div style={{ border: `1px solid ${border}`, borderRadius: 0, padding: 14, background: cardBg }}>
+    <div className="study-screen" style={{ display: "grid", gap: 16, color: text }}>
+      <div style={{ border: `1px solid ${border}`, borderRadius: 18, padding: 14, background: cardBg }}>
         <h1 style={{ margin: 0, fontSize: 26, fontWeight: 900, color: heading }}>
           Chi-Square Explanation (AP Bio)
         </h1>
@@ -25,7 +25,7 @@ export default function Page() {
         </p>
       </div>
 
-      <div style={{ border: `1px solid ${border}`, borderRadius: 0, padding: 14, background: cardBg }}>
+      <div style={{ border: `1px solid ${border}`, borderRadius: 18, padding: 14, background: cardBg }}>
         <h2 style={{ marginTop: 0, color: heading }}>Important definitions to understand</h2>
         <ul style={{ lineHeight: 1.55 }}>
           <li><b>Null hypothesis (H₀):</b> a hypothesis that states that the variables (or things being changed in an experiment) will not result in a real difference; deviations are due to random chance.</li>
@@ -45,7 +45,7 @@ export default function Page() {
         </ul>
       </div>
 
-      <div style={{ border: `1px solid ${border}`, borderRadius: 0, padding: 14, background: cardBg }}>
+      <div style={{ border: `1px solid ${border}`, borderRadius: 18, padding: 14, background: cardBg }}>
         <h2 style={{ marginTop: 0, color: heading }}>The formula</h2>
         <div
           style={{
@@ -71,7 +71,7 @@ export default function Page() {
         <p style={{ marginTop: 10 }}>Compute each category's contribution using the fraction above, then add them.</p>
       </div>
 
-      <div style={{ border: `1px solid ${border}`, borderRadius: 0, padding: 14, background: cardBg }}>
+      <div style={{ border: `1px solid ${border}`, borderRadius: 18, padding: 14, background: cardBg }}>
         <h2 style={{ marginTop: 0, color: heading }}>Simple example — coin toss</h2>
         <p>Suppose you expect a fair coin (50/50) but observe 60 heads and 40 tails (N = 100).</p>
 
@@ -141,7 +141,7 @@ export default function Page() {
           </div>
         </div>
         
-        <div style={{ border: `1px solid ${border}`, borderRadius: 0, padding: 14, background: "#fff" }}>
+        <div style={{ border: `1px solid ${border}`, borderRadius: 18, padding: 14, background: "#fff" }}>
           <h3 style={{ marginTop: 0, color: heading }}>Relating these definitions to the coin toss example</h3>
           <ul style={{ lineHeight: 1.5 }}>
             <li><b>Null hypothesis (H₀):</b> a hypothesis that states that the variables (or things being changed in an experiment) will not result in a real difference; deviations are due to random chance. For the coin toss example H₀ is: the coin is fair (50/50).</li>
