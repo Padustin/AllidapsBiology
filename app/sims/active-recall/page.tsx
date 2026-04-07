@@ -7,7 +7,7 @@ export default function ActiveRecallPage() {
   return (
     <main className="grid gap-5">
       <PageHero
-        eyebrow="Active Recall"
+        eyebrow="Practice!"
         title="Choose your practice mode"
         description="Pick an AP Biology practice path based on your goal: broad review, unit focus, or FRQ training."
         actions={
@@ -32,7 +32,7 @@ export default function ActiveRecallPage() {
         />
         <ToolCard
           title="All-Unit FRQ Practice"
-          description="Build free-response confidence with broad AP-style and active recall FRQ prompts."
+          description="Build free-response confidence with broad AP-style and practice FRQ prompts."
           href="/sims/active-recall/frq-all"
           tone="teal"
         />

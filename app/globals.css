@@ -113,8 +113,12 @@ body {
   height: 100%;
   opacity: 0.9;
   filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.2));
+}
+
+.dna-track {
   transform: translateX(0);
-  animation: dna-flow-move 14s linear infinite;
+  animation: dna-flow-move 8s linear infinite;
+  will-change: transform;
 }
 
 .dna-rung-front {
@@ -143,7 +147,7 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .dna-flow {
+  .dna-track {
     animation: none;
   }
 }

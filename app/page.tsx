@@ -1,37 +1,29 @@
-import Image from "next/image";
 import Link from "next/link";
-import { PageHero, ToolCard } from "./components/ui/study-kit";
+import { ToolCard } from "./components/ui/study-kit";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_12%_18%,#dff4ea_0%,#f7f8fc_36%,#eef5ff_66%,#e8f5f8_100%)] px-5 py-10 sm:px-8">
       <main className="mx-auto grid w-full max-w-6xl gap-5">
-        <section className="grid gap-5 rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-[0_16px_48px_rgba(15,23,42,0.10)] backdrop-blur sm:p-8">
-          <div className="grid items-center gap-6 lg:grid-cols-[1fr_auto]">
-            <PageHero
-              eyebrow="Allidaps Biology"
-              title="Study AP Biology with confidence"
-              description="Use focused active-recall practice, AP-style review sets, visual chi-square labs, and an immersive cell simulation to prep smarter every day."
-              actions={
-                <>
-                  <Link href="/sims/active-recall" className="rounded-xl border border-sky-700 bg-sky-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-700">
-                    Start studying
-                  </Link>
-                  <Link href="/sims/simulations" className="rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50">
-                    Open cell simulation
-                  </Link>
-                </>
-              }
-            />
-            <div className="mx-auto rounded-3xl border border-slate-200 bg-white p-3 shadow-sm">
-              <Image src="/icon.png" alt="Allidaps Biology icon" width={180} height={180} priority />
-            </div>
+        <section className="grid gap-4 py-2 sm:py-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-emerald-700">Allidaps Biology</p>
+          <h1 className="text-balance text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">Study AP Biology with confidence</h1>
+          <p className="max-w-3xl text-pretty text-slate-600 sm:text-lg">
+            Use focused active-recall practice, AP-style review sets, visual chi-square labs, and an immersive cell simulation to prep smarter every day.
+          </p>
+          <div className="mt-1 flex flex-wrap items-center gap-3">
+            <Link href="/sims/active-recall" className="rounded-xl border border-sky-700 bg-sky-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-700">
+              Start studying
+            </Link>
+            <Link href="/sims/simulations" className="rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50">
+              Open cell simulation
+            </Link>
           </div>
         </section>
 
         <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           <ToolCard
-            title="Active Recall"
+            title="Practice!"
             description="Practice fixed AP Biology question sets with instant feedback and clear explanations."
             href="/sims/active-recall/unit"
             tone="blue"

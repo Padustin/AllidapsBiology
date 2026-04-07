@@ -74,18 +74,20 @@ export default function SimsLayout({ children }: { children: ReactNode }) {
                   <circle cx="225" cy="98" r="2.3" className="dna-node" />
                 </symbol>
               </defs>
-              <use href="#dna-segment" x="-220" y="0" />
-              <use href="#dna-segment" x="0" y="0" />
-              <use href="#dna-segment" x="220" y="0" />
-              <use href="#dna-segment" x="440" y="0" />
-              <use href="#dna-segment" x="660" y="0" />
+              <g className="dna-track">
+                <use href="#dna-segment" x="-220" y="0" />
+                <use href="#dna-segment" x="0" y="0" />
+                <use href="#dna-segment" x="220" y="0" />
+                <use href="#dna-segment" x="440" y="0" />
+                <use href="#dna-segment" x="660" y="0" />
+              </g>
             </svg>
             <p className="relative z-20 text-2xl font-extrabold leading-tight text-slate-900">Allidaps Biology</p>
           </div>
 
           <nav className="mt-4 space-y-4 overflow-auto pr-1">
             <section>
-              <p className={sectionTitleClass(pathname.startsWith("/sims/active-recall"))}>Active Recall</p>
+              <p className={sectionTitleClass(pathname.startsWith("/sims/active-recall"))}>Practice!</p>
               <div className="space-y-1.5">
                 <Link href="/sims/active-recall/ap" className={navClass("/sims/active-recall/ap")}>All-Unit MCQ Practice</Link>
                 <Link href="/sims/active-recall/unit" className={navClass("/sims/active-recall/unit")}>Unit MCQ Practice</Link>
@@ -95,7 +97,7 @@ export default function SimsLayout({ children }: { children: ReactNode }) {
             </section>
 
             <section>
-              <p className={sectionTitleClass(pathname.startsWith("/sims/chi-square"))}>Labs</p>
+              <p className={sectionTitleClass(pathname.startsWith("/sims/chi-square"))}>AP Biology Statistics</p>
               <div className="space-y-1.5">
                 <Link href="/sims/chi-square" className={navClass("/sims/chi-square")}>Chi-Square Visual Lab</Link>
                 <Link href="/sims/chi-square/explanation" className={navClass("/sims/chi-square/explanation")}>Chi-Square Concept Guide</Link>

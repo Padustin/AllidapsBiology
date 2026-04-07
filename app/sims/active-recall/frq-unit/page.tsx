@@ -69,7 +69,7 @@ export default function UnitFrqPage() {
           <div style={{ padding: 6, border: "1px solid #e2e8f0", borderRadius: 12, background: "white" }}>
             <select value={difficulty} onChange={(e) => setDifficulty(e.target.value)} style={{ padding: 6, border: "none", background: "transparent" }}>
               <option value="AP Style">AP Style</option>
-              <option value="Active Recall">Active Recall</option>
+              <option value="Active Recall">Practice!</option>
             </select>
           </div>
         </div>
@@ -188,7 +188,7 @@ export default function UnitFrqPage() {
               </div>
             </div>
             <div className="tip-card" style={{ marginTop: 16, padding: 12, background: "#fefce8", border: "1px solid #fde047", borderRadius: 10, color: "#713f12", fontSize: 14 }}>
-              <span style={{ fontWeight: 800 }}>Padilla tip</span> — When you practice the FRQ questions, try to either write your answers down or say them out loud rather than just answering them in your head.
+              <span style={{ fontWeight: 800 }}>Tip</span> — When you practice the FRQ questions, try to either write your answers down or say them out loud rather than just answering them in your head.
             </div>
           </div>
         )}

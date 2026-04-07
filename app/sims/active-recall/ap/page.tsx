@@ -257,7 +257,7 @@ export default function Page() {
             </div>
         )}
         <div className="tip-card" style={{ marginTop: 16, padding: 12, background: "#fefce8", border: "1px solid #fde047", borderRadius: 10, color: "#713f12", fontSize: 14 }}>
-          <span style={{ fontWeight: 800 }}>Padilla tip</span> — If there are any vocabulary words that you are unfamiliar with, Google them! It will help you understand the biological system better and makes sure it doesn&#39;t come back to haunt you on the exam.
+          <span style={{ fontWeight: 800 }}>Tip</span> — If there are any vocabulary words that you are unfamiliar with, Google them! It will help you understand the biological system better and makes sure it doesn&#39;t come back to haunt you on the exam.
         </div>
       </div>
     </div>
