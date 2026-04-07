@@ -971,7 +971,7 @@ export default function CompleteCellSimulationPage() {
   };
 
   return (
-    <div className="study-screen" style={{ minHeight: "100vh", background: "linear-gradient(180deg, #f8fbff 0%, #eef4fb 100%)", padding: 20, color: "#0f172a" }}>
+    <div className="study-screen px-3 py-3 sm:px-4 sm:py-4" style={{ minHeight: "100vh", background: "linear-gradient(180deg, #f8fbff 0%, #eef4fb 100%)", color: "#0f172a" }}>
       <style>{`
         .fade-in-up {
           animation: fadeInUp 240ms ease-out;
@@ -982,12 +982,12 @@ export default function CompleteCellSimulationPage() {
         }
       `}</style>
 
-      <div className="hero-card" style={{ width: "100%", margin: 0, display: "grid", gap: 14, padding: 18 }}>
-        <h1 style={{ margin: 0, fontSize: 34, lineHeight: 1.06, fontWeight: 900, letterSpacing: -0.3 }}>Complete Cell Simulation</h1>
+      <div className="hero-card" style={{ width: "100%", margin: 0, display: "grid", gap: 14, padding: 14 }}>
+        <h1 className="text-[clamp(1.9rem,5vw,2.5rem)]" style={{ margin: 0, lineHeight: 1.06, fontWeight: 900, letterSpacing: -0.3 }}>Complete Cell Simulation</h1>
         <p style={{ margin: 0, color: "#475569", maxWidth: 820, lineHeight: 1.5 }}>
           Explore organelles, pathway dynamics, and central dogma flow with interactive controls designed for focused AP Biology review.
         </p>
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8 }}>
           <button
             type="button"
             onClick={replayCentralDogma}
@@ -999,11 +999,13 @@ export default function CompleteCellSimulationPage() {
               padding: "10px 14px",
               fontWeight: 800,
               cursor: "pointer",
+              width: "100%",
             }}
+            className="sm:w-auto"
           >
             Central Dogma simulation
           </button>
-          <label style={{ marginTop: 10, display: "inline-flex", alignItems: "center", gap: 8, fontWeight: 700, cursor: "pointer" }}>
+          <label style={{ display: "inline-flex", alignItems: "center", gap: 8, fontWeight: 700, cursor: "pointer", flexWrap: "wrap" }}>
             <input
               type="checkbox"
               checked={dogmaMode === "guided"}

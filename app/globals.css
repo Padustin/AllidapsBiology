@@ -137,6 +137,97 @@ body {
   fill: rgba(29, 78, 216, 0.5);
 }
 
+.mobile-sims-nav {
+  display: flex;
+  gap: 0.6rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+  scrollbar-width: none;
+}
+
+.mobile-sims-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.study-toolbar,
+.study-toolbar-group,
+.study-toolbar-actions,
+.study-action-row,
+.choice-row {
+  min-width: 0;
+}
+
+@media (max-width: 767px) {
+  .study-screen {
+    font-size: 0.96rem;
+  }
+
+  .study-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .study-toolbar-group,
+  .study-toolbar-actions,
+  .study-action-row,
+  .choice-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .study-toolbar-group > *,
+  .study-toolbar-actions > *,
+  .study-action-row > * {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .choice-row > .choice-main {
+    flex: 1 1 100%;
+  }
+
+  .choice-row > .choice-icon,
+  .choice-row > .choice-secondary {
+    flex: 1 1 calc(50% - 0.25rem);
+  }
+
+  .study-toolbar select,
+  .study-toolbar button,
+  .study-action-row button,
+  .choice-row button {
+    min-height: 44px;
+  }
+
+  .dna-title-card {
+    min-height: 76px;
+  }
+
+  .dna-flow {
+    width: 260%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .study-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .study-toolbar-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-left: auto;
+  }
+}
+
 @keyframes dna-flow-move {
   from {
     transform: translateX(0);

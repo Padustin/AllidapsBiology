@@ -3,19 +3,19 @@ import { ToolCard } from "./components/ui/study-kit";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_12%_18%,#dff4ea_0%,#f7f8fc_36%,#eef5ff_66%,#e8f5f8_100%)] px-5 py-10 sm:px-8">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_12%_18%,#dff4ea_0%,#f7f8fc_36%,#eef5ff_66%,#e8f5f8_100%)] px-4 py-7 sm:px-8 sm:py-10">
       <main className="mx-auto grid w-full max-w-6xl gap-5">
         <section className="grid gap-4 py-2 sm:py-4">
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-emerald-700">Allidaps Biology</p>
-          <h1 className="text-balance text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">Study AP Biology with confidence</h1>
-          <p className="max-w-3xl text-pretty text-slate-600 sm:text-lg">
+          <h1 className="text-balance text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">Study AP Biology with confidence</h1>
+          <p className="max-w-3xl text-pretty text-sm text-slate-600 sm:text-lg">
             Use focused active-recall practice, AP-style review sets, visual chi-square labs, and an immersive cell simulation to prep smarter every day.
           </p>
-          <div className="mt-1 flex flex-wrap items-center gap-3">
-            <Link href="/sims/active-recall" className="rounded-xl border border-sky-700 bg-sky-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-700">
+          <div className="mt-1 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <Link href="/sims/active-recall" className="w-full rounded-xl border border-sky-700 bg-sky-600 px-4 py-3 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-sky-700 sm:w-auto sm:py-2.5">
               Start studying
             </Link>
-            <Link href="/sims/simulations" className="rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50">
+            <Link href="/sims/simulations" className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-center text-sm font-semibold text-slate-700 transition hover:bg-slate-50 sm:w-auto sm:py-2.5">
               Open cell simulation
             </Link>
           </div>

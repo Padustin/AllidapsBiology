@@ -10,15 +10,15 @@ type PageHeroProps = {
 
 export function PageHero({ eyebrow, title, description, actions }: PageHeroProps) {
   return (
-    <section className="rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm backdrop-blur sm:p-8">
+    <section className="rounded-2xl border border-slate-200 bg-white/90 p-5 shadow-sm backdrop-blur sm:p-8">
       {eyebrow ? (
         <p className="mb-3 inline-flex rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-emerald-700">
           {eyebrow}
         </p>
       ) : null}
-      <h1 className="text-balance text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">{title}</h1>
+      <h1 className="text-balance text-2xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">{title}</h1>
       {description ? <p className="mt-3 max-w-3xl text-pretty text-slate-600 sm:text-lg">{description}</p> : null}
-      {actions ? <div className="mt-5 flex flex-wrap items-center gap-3">{actions}</div> : null}
+      {actions ? <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">{actions}</div> : null}
     </section>
   );
 }
@@ -41,7 +41,7 @@ export function ToolCard({ title, description, href, tone = "slate" }: ToolCardP
   return (
     <Link
       href={href}
-      className={`group rounded-2xl border p-5 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md ${toneMap[tone]}`}
+      className={`group rounded-2xl border p-5 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md sm:p-6 ${toneMap[tone]}`}
     >
       <p className="text-lg font-bold tracking-tight text-slate-900">{title}</p>
       <p className="mt-2 text-sm leading-relaxed text-slate-600">{description}</p>
@@ -68,7 +68,7 @@ export function PrimaryButton({ children, ...props }: React.ButtonHTMLAttributes
   return (
     <button
       {...props}
-      className={`rounded-xl border border-sky-700 bg-sky-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-sky-700 hover:shadow disabled:cursor-not-allowed disabled:opacity-50 ${props.className || ""}`}
+      className={`w-full rounded-xl border border-sky-700 bg-sky-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-sky-700 hover:shadow sm:w-auto disabled:cursor-not-allowed disabled:opacity-50 ${props.className || ""}`}
     >
       {children}
     </button>
@@ -79,7 +79,7 @@ export function SecondaryButton({ children, ...props }: React.ButtonHTMLAttribut
   return (
     <button
       {...props}
-      className={`rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 shadow-sm transition-all duration-200 hover:bg-slate-50 hover:shadow disabled:cursor-not-allowed disabled:opacity-50 ${props.className || ""}`}
+      className={`w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 shadow-sm transition-all duration-200 hover:bg-slate-50 hover:shadow sm:w-auto disabled:cursor-not-allowed disabled:opacity-50 ${props.className || ""}`}
     >
       {children}
     </button>

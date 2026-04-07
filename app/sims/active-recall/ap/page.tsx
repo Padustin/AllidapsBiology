@@ -129,11 +129,11 @@ export default function Page() {
     <div className="study-screen" style={{ padding: 18, width: "100%", fontFamily: "\"Helvetica Neue\", Helvetica, Arial, sans-serif", color: text }}>
       <h1 style={{ fontSize: 24, fontWeight: 800, color: heading }}>All-Unit MCQ Review</h1>
 
-      <div style={{ marginTop: 12, display: "flex", gap: 8, alignItems: "center" }}>
-        <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+      <div className="study-toolbar" style={{ marginTop: 12, display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
+        <div className="study-toolbar-group" style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
           <label style={{ fontWeight: 700 }}>Difficulty</label>
-          <div style={{ padding: 6, border: `1px solid ${border}`, borderRadius: 12, background: "white" }}>
-            <select value={difficulty} onChange={(e) => setDifficulty(e.target.value)} style={{ padding: 6, border: "none", background: "transparent" }}>
+          <div style={{ padding: 6, border: `1px solid ${border}`, borderRadius: 12, background: "white", minWidth: 0 }}>
+            <select value={difficulty} onChange={(e) => setDifficulty(e.target.value)} style={{ padding: 6, border: "none", background: "transparent", width: "100%" }}>
               <option value="easy">Easy (definitions)</option>
               <option value="hard">Hard (application)</option>
               <option value="analysis">Analysis (experiment/system)</option>
@@ -141,7 +141,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div style={{ marginLeft: "auto", display: "flex", gap: 8, alignItems: "center" }}>
+        <div className="study-toolbar-actions" style={{ marginLeft: "auto", display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
           <div style={{ padding: 6, border: `1px solid ${border}`, borderRadius: 12, background: "white" }}>
             <button onClick={previous} disabled={previousQuestions.length === 0} style={{ padding: "8px 12px", borderRadius: 12, border: `none`, background: "transparent", fontWeight: 700, opacity: previousQuestions.length > 0 ? 1 : 0.45, cursor: previousQuestions.length > 0 ? "pointer" : "not-allowed" }}>Previous question</button>
           </div>
@@ -191,8 +191,9 @@ export default function Page() {
 
                   return (
                     <div key={i}>
-                      <div style={{ display: "flex", gap: 8, alignItems: "stretch" }}>
+                      <div className="choice-row" style={{ display: "flex", gap: 8, alignItems: "stretch", flexWrap: "wrap" }}>
                         <button
+                          className="choice-main"
                           onClick={() => {
                             setSelected(i);
                             setVisibleExplanations({ [i]: true });
@@ -203,6 +204,7 @@ export default function Page() {
                           {String.fromCharCode(65 + i)}. {c}
                         </button>
                         <button
+                          className="choice-icon"
                           onClick={() => setCrossedOut((s) => ({ ...s, [i]: !s[i] }))}
                           aria-label={crossedOut[i] ? "Uncross option" : "Cross out option"}
                           style={{
@@ -220,6 +222,7 @@ export default function Page() {
                         </button>
                         {selected !== null && (
                           <button
+                            className="choice-secondary"
                             onClick={() => setVisibleExplanations((s) => ({ ...s, [i]: !s[i] }))}
                             style={{
                               padding: "10px 12px",

@@ -63,19 +63,19 @@ export default function UnitFrqPage() {
   return (
     <div className="study-screen" style={{ padding: 18, width: "100%", fontFamily: "\"Helvetica Neue\", Helvetica, Arial, sans-serif" }}>
       <h1 style={{ fontSize: 24, fontWeight: 800 }}>Unit FRQ Practice</h1>
-      <div style={{ marginTop: 12, display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
-        <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+      <div className="study-toolbar" style={{ marginTop: 12, display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
+        <div className="study-toolbar-group" style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
           <label style={{ fontWeight: 700 }}>Difficulty</label>
-          <div style={{ padding: 6, border: "1px solid #e2e8f0", borderRadius: 12, background: "white" }}>
-            <select value={difficulty} onChange={(e) => setDifficulty(e.target.value)} style={{ padding: 6, border: "none", background: "transparent" }}>
+          <div style={{ padding: 6, border: "1px solid #e2e8f0", borderRadius: 12, background: "white", minWidth: 0 }}>
+            <select value={difficulty} onChange={(e) => setDifficulty(e.target.value)} style={{ padding: 6, border: "none", background: "transparent", width: "100%" }}>
               <option value="AP Style">AP Style</option>
               <option value="Active Recall">Practice!</option>
             </select>
           </div>
         </div>
-        <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-          <div style={{ padding: 6, border: "1px solid #e2e8f0", borderRadius: 12, background: "white" }}>
-            <select value={unit} onChange={(e) => setUnit(e.target.value)} style={{ padding: 6, border: "none", background: "transparent" }}>
+        <div className="study-toolbar-group" style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
+          <div style={{ padding: 6, border: "1px solid #e2e8f0", borderRadius: 12, background: "white", minWidth: 0 }}>
+            <select value={unit} onChange={(e) => setUnit(e.target.value)} style={{ padding: 6, border: "none", background: "transparent", width: "100%" }}>
               {UNITS.map((u) => (
                 <option key={u} value={u}>
                   {u}
@@ -175,7 +175,7 @@ export default function UnitFrqPage() {
                 <span style={{ fontWeight: 800 }}>Teacher note:</span> {question.explain}
               </div>
             )}
-            <div style={{ marginTop: 12, display: "flex", gap: 8 }}>
+            <div className="study-action-row" style={{ marginTop: 12, display: "flex", gap: 8, flexWrap: "wrap" }}>
               <div style={{ padding: 6, border: "1px solid #e2e8f0", borderRadius: 12, background: "white" }}>
                 <button onClick={previousFrq} disabled={previousQuestions.length === 0} style={{ padding: "8px 12px", borderRadius: 8, border: "none", background: "transparent", cursor: previousQuestions.length > 0 ? "pointer" : "not-allowed", fontWeight: 600, opacity: previousQuestions.length > 0 ? 1 : 0.45 }}>
                   Previous question

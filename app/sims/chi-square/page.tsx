@@ -238,12 +238,13 @@ export default function Page() {
         style={{
           width: "100%",
           margin: 0,
-          padding: 18,
+          padding: 12,
           fontFamily: "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
           color: text,
         }}
+        className="sm:p-[18px]"
       >
-        <h1 style={{ fontSize: 28, fontWeight: 800, marginBottom: 6, color: heading }}>
+        <h1 style={{ fontSize: 28, fontWeight: 800, marginBottom: 6, color: heading }} className="text-[clamp(1.75rem,4.6vw,2rem)]">
           Chi-Square Visual Lab
         </h1>
         <p style={{ marginTop: 0, color: text }}>
@@ -251,9 +252,9 @@ export default function Page() {
         </p>
 
         <div
+          className="grid items-start gap-4 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.25fr)]"
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
             gap: 16,
             alignItems: "start",
           }}
@@ -285,7 +286,7 @@ export default function Page() {
               }}
             />
 
-            <div style={{ marginTop: 14, display: "flex", gap: 10, alignItems: "center" }}>
+            <div style={{ marginTop: 14, display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
               <label style={{ fontWeight: 700 }}>α</label>
               <select
                 value={alpha}
@@ -306,7 +307,7 @@ export default function Page() {
               </div>
             </div>
 
-            <div style={{ marginTop: 16, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <div style={{ marginTop: 16, display: "flex", justifyContent: "space-between", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
               <h3 style={{ margin: 0, fontSize: 16, color: heading }}>Categories</h3>
               <button
                 onClick={addCategory}
@@ -325,7 +326,7 @@ export default function Page() {
 
             <div style={{ marginTop: 10, display: "grid", gap: 10 }}>
               {cats.map((c, i) => (
-                <div key={i} style={{ display: "grid", gridTemplateColumns: "1fr 110px 34px", gap: 8 }}>
+                <div key={i} className="grid gap-2 sm:grid-cols-[minmax(0,1fr)_110px_40px]" style={{ display: "grid", gap: 8 }}>
                   <input
                     value={c.name}
                     onChange={(e) => updateCat(i, { name: e.target.value })}

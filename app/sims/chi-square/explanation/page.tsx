@@ -17,7 +17,7 @@ export default function Page() {
   return (
     <div className="study-screen" style={{ display: "grid", gap: 16, color: text }}>
       <div style={{ border: `1px solid ${border}`, borderRadius: 18, padding: 14, background: cardBg }}>
-        <h1 style={{ margin: 0, fontSize: 26, fontWeight: 900, color: heading }}>
+        <h1 style={{ margin: 0, fontSize: 26, fontWeight: 900, color: heading }} className="text-[clamp(1.65rem,4.4vw,2rem)]">
           Chi-Square Explanation (AP Bio)
         </h1>
         <p style={{ marginTop: 10, lineHeight: 1.45 }}>
@@ -75,7 +75,7 @@ export default function Page() {
         <h2 style={{ marginTop: 0, color: heading }}>Simple example — coin toss</h2>
         <p>Suppose you expect a fair coin (50/50) but observe 60 heads and 40 tails (N = 100).</p>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+        <div className="grid gap-3 md:grid-cols-2" style={{ display: "grid", gap: 12 }}>
           <div style={{ border: `1px solid ${border}`, borderRadius: 14, padding: 12, background: "white" }}>
             <div style={{ fontWeight: 900, color: heading, marginBottom: 6 }}>Observed</div>
             {O.map((v, i) => (
