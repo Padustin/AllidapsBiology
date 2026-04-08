@@ -9,6 +9,88 @@ export const UNITS = [
   "Unit 8. Ecology",
 ];
 
+export const DIFFICULTY_ORDER = ["easy", "hard", "analysis"] as const;
+
+export const DIFFICULTY_META = {
+  easy: {
+    label: "Foundation",
+    description: "Key vocabulary and core concepts",
+    tone: "amber",
+  },
+  hard: {
+    label: "AP-Style",
+    description: "Conceptual multiple-choice with realistic distractors",
+    tone: "blue",
+  },
+  analysis: {
+    label: "Experiment",
+    description: "Graphs, setups, and data interpretation",
+    tone: "teal",
+  },
+} as const;
+
+export const DIFFICULTY_LABELS: Record<string, string> = {
+  easy: DIFFICULTY_META.easy.label,
+  hard: DIFFICULTY_META.hard.label,
+  analysis: DIFFICULTY_META.analysis.label,
+};
+
+export const DIFFICULTY_OPTIONS = DIFFICULTY_ORDER.map((value) => ({
+  value,
+  label: DIFFICULTY_LABELS[value],
+}));
+
+export function getDifficultyDescription(value: string) {
+  if (value in DIFFICULTY_META) {
+    return DIFFICULTY_META[value as keyof typeof DIFFICULTY_META].description;
+  }
+
+  return "Focused AP Biology practice.";
+}
+
+export function getDifficultyTone(value: string) {
+  if (value in DIFFICULTY_META) {
+    return DIFFICULTY_META[value as keyof typeof DIFFICULTY_META].tone;
+  }
+
+  return "slate";
+}
+
+export const FRQ_VARIANT_META = {
+  ap: {
+    label: "FRQ",
+    description: "Free-response practice with structured prompts and scoring notes",
+    tone: "blue",
+  },
+  "active-recall": {
+    label: "Foundation",
+    description: "Shorter response checks for rapid concept recall",
+    tone: "amber",
+  },
+} as const;
+
+export const FRQ_VARIANT_OPTIONS = Object.entries(FRQ_VARIANT_META).map(([value, meta]) => ({
+  value,
+  label: meta.label,
+  description: meta.description,
+}));
+
+export function getFrqVariantDescription(value: string) {
+  if (value in FRQ_VARIANT_META) {
+    return FRQ_VARIANT_META[value as keyof typeof FRQ_VARIANT_META].description;
+  }
+
+  return "Free-response practice for AP Biology.";
+}
+
+export function getFrqVariantTone(value: string) {
+  if (value in FRQ_VARIANT_META) {
+    return FRQ_VARIANT_META[value as keyof typeof FRQ_VARIANT_META].tone;
+  }
+
+  return "slate";
+}
+
 export const SAMPLE_TOPICS: Record<string, string[]> = {
   [UNITS[0]]: ["Water properties", "pH and buffers"],
   [UNITS[1]]: ["Membrane structure", "Organelles"],

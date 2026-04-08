@@ -1,8 +1,29 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import {
+  PageHeader,
+  PrimaryButton,
+  SectionCard,
+  StatCard,
+  SurfaceItem,
+  SurfaceList,
+} from "../../components/ui/study-kit";
+
+type FeedbackCategory = "bug" | "content" | "design" | "feature" | "other";
+
+const CATEGORY_OPTIONS: Array<{ value: FeedbackCategory; label: string; description: string }> = [
+  { value: "bug", label: "Bug report", description: "Something is broken, missing, or behaving unexpectedly." },
+  { value: "content", label: "Content issue", description: "A question, explanation, or prompt feels weak, unclear, or inaccurate." },
+  { value: "design", label: "Design or UX", description: "Navigation, layout, labels, or flow felt confusing or clunky." },
+  { value: "feature", label: "Feature request", description: "You want a new tool, mode, page, or workflow." },
+  { value: "other", label: "Other", description: "Anything else worth passing along." },
+];
 
 export default function FeedbackPage() {
+  const [category, setCategory] = useState<FeedbackCategory>("content");
+  const [page, setPage] = useState("");
+  const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [statusMessage, setStatusMessage] = useState("");
@@ -16,7 +37,12 @@ export default function FeedbackPage() {
       const response = await fetch("/api/feedback", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message }),
+        body: JSON.stringify({
+          category,
+          page,
+          email,
+          message,
+        }),
       });
 
       const data = (await response.json()) as { error?: string };
@@ -28,7 +54,10 @@ export default function FeedbackPage() {
 
       setStatus("success");
       setStatusMessage("Thanks, your feedback was sent.");
+      setPage("");
+      setEmail("");
       setMessage("");
+      setCategory("content");
     } catch {
       setStatus("error");
       setStatusMessage("Could not send feedback. Please try again.");
@@ -36,57 +65,106 @@ export default function FeedbackPage() {
   }
 
   return (
-    <div
-      style={{
-        width: "100%",
-        margin: 0,
-        border: "1px solid #e2e8f0",
-        background: "#ffffff",
-        borderRadius: 0,
-        padding: 20,
-      }}
-    >
-      <h1 style={{ margin: 0, fontSize: 30, lineHeight: 1.1, color: "#0f172a" }}>Feedback</h1>
-      <p style={{ marginTop: 12, color: "#334155", lineHeight: 1.5 }}>
-        I appreciate every single person who is using my website to better their understanding of biology. This website is still in beta, so I encourage you to send me feedback on anything I should add or change. All feedback is meaningful and completely anonymous.
-      </p>
+    <main className="grid gap-6 lg:gap-8">
+      <PageHeader
+        eyebrow="Feedback"
+        title="Help improve the AP Biology platform."
+        description="Use this form to report bugs, flag weak content, request features, or call out anything that felt confusing. Anonymous feedback is fine, and a reply email is optional."
+        aside={
+          <div className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
+            <StatCard label="Best for" value="Real friction" detail="Tell me where the site cost you time or clarity" tone="rose" />
+            <StatCard label="Useful details" value="Page + issue" detail="Specific routes, prompts, or workflows help the most" tone="amber" />
+            <StatCard label="Reply email" value="Optional" detail="Leave it blank if you want to stay anonymous" tone="blue" />
+          </div>
+        }
+      />
 
-      <form onSubmit={handleSubmit} style={{ marginTop: 16, display: "grid", gap: 12 }}>
-        <label style={{ display: "grid", gap: 6, color: "#0f172a", fontWeight: 700 }}>
-          Feedback
-          <textarea
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            required
-            minLength={10}
-            rows={6}
-            style={{ padding: "10px 12px", borderRadius: 10, border: "1px solid #cbd5e1", fontSize: 15, resize: "vertical" }}
-          />
-        </label>
+      <section className="grid gap-4 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)]">
+        <SectionCard
+          title="Send feedback"
+          description="Short, specific notes are the most useful. If something felt unclear, mention the page and what you expected to happen instead."
+          tone="rose"
+        >
+          <form onSubmit={handleSubmit} className="grid gap-4">
+            <div className="grid gap-4 md:grid-cols-2">
+              <label className="grid gap-2 text-sm font-semibold text-slate-900">
+                Feedback type
+                <div className="rounded-xl border border-slate-200 bg-white px-3 py-2">
+                  <select value={category} onChange={(event) => setCategory(event.target.value as FeedbackCategory)} className="w-full bg-transparent text-sm font-medium text-slate-900 outline-none">
+                    {CATEGORY_OPTIONS.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </label>
 
-        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <button
-            type="submit"
-            disabled={status === "sending"}
-            style={{
-              border: "1px solid #1d4ed8",
-              background: "#2563eb",
-              color: "#ffffff",
-              borderRadius: 10,
-              padding: "10px 14px",
-              fontWeight: 800,
-              cursor: status === "sending" ? "default" : "pointer",
-              opacity: status === "sending" ? 0.75 : 1,
-            }}
-          >
-            {status === "sending" ? "Sending..." : "Send feedback"}
-          </button>
+              <label className="grid gap-2 text-sm font-semibold text-slate-900">
+                Page or route
+                <input
+                  value={page}
+                  onChange={(event) => setPage(event.target.value)}
+                  placeholder="Examples: /sims/active-recall/ap or Cell Simulation"
+                  className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-[#1f5a32] focus:ring-2 focus:ring-[#1f5a32]/20"
+                />
+              </label>
+            </div>
 
-          {statusMessage ? (
-            <div style={{ color: status === "success" ? "#166534" : "#991b1b", fontWeight: 700 }}>{statusMessage}</div>
-          ) : null}
-        </div>
-      </form>
-    </div>
+            <label className="grid gap-2 text-sm font-semibold text-slate-900">
+              Optional reply email
+              <input
+                type="email"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+                placeholder="Leave blank if you do not want a reply"
+                className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-[#1f5a32] focus:ring-2 focus:ring-[#1f5a32]/20"
+              />
+            </label>
+
+            <label className="grid gap-2 text-sm font-semibold text-slate-900">
+              What happened, what felt weak, or what should change?
+              <textarea
+                value={message}
+                onChange={(event) => setMessage(event.target.value)}
+                required
+                minLength={10}
+                rows={8}
+                placeholder="Examples: The explanation after question 3 never clarified why choice B was wrong. The FRQ page needs a clearer way to switch between Foundation and FRQ mode. The graph-slope tool should show one worked example before the calculator."
+                className="rounded-xl border border-slate-200 bg-white px-3 py-3 text-sm text-slate-900 outline-none transition focus:border-[#1f5a32] focus:ring-2 focus:ring-[#1f5a32]/20"
+              />
+            </label>
+
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+              <PrimaryButton type="submit" disabled={status === "sending"}>
+                {status === "sending" ? "Sending..." : "Send feedback"}
+              </PrimaryButton>
+              {statusMessage ? (
+                <div className={`text-sm font-semibold ${status === "success" ? "text-[#1f5a32]" : "text-slate-700"}`}>{statusMessage}</div>
+              ) : null}
+            </div>
+          </form>
+        </SectionCard>
+
+        <SectionCard
+          title="What makes feedback useful"
+          description="You do not need to write a lot. Just make it concrete enough that the problem is reproducible or the request is clear."
+          tone="amber"
+        >
+          <SurfaceList>
+            {CATEGORY_OPTIONS.map((option) => (
+              <SurfaceItem key={option.value}>
+                <h2 className="text-base font-semibold tracking-tight text-slate-950">{option.label}</h2>
+                <p className="mt-2 text-sm leading-6 text-slate-600">{option.description}</p>
+              </SurfaceItem>
+            ))}
+            <SurfaceItem>
+              <h2 className="text-base font-semibold tracking-tight text-slate-950">Good examples</h2>
+              <p className="mt-2 text-sm leading-6 text-slate-600">"The all-unit MCQ page still felt too bare on mobile." "This FRQ scoring note did not explain why the evidence mattered." "The statistics center needs a starter example before the formula board."</p>
+            </SurfaceItem>
+          </SurfaceList>
+        </SectionCard>
+      </section>
+    </main>
   );
 }

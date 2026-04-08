@@ -2,6 +2,10 @@ import fs from "fs";
 import path from "path";
 import { NextResponse } from "next/server";
 
+function isQuestionDatasetFile(fileName: string) {
+  return /^unit\d+\.json$/i.test(fileName);
+}
+
 function parseUnitNumber(unitLabel: string) {
   if (!unitLabel) return null;
   const m = unitLabel.match(/Unit\s*(\d+)/i);
@@ -17,7 +21,7 @@ export async function GET(req: Request) {
     const difficulty = url.searchParams.get("difficulty") || "";
 
     const datasetsDir = path.join(process.cwd(), "app", "sims", "active-recall", "datasets");
-    const files = fs.readdirSync(datasetsDir).filter((f) => /^unit\d+\.json$/i.test(f));
+  const files = fs.readdirSync(datasetsDir).filter((f) => isQuestionDatasetFile(f));
     const ids: string[] = [];
 
     const unitNum = parseUnitNumber(unit);

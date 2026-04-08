@@ -1,0 +1,794 @@
+[
+  {
+    "id": "u1-frq-img-1",
+    "unit": 1,
+    "category": "AP-Style FRQ",
+    "topic": "water properties and hydrogen bonding",
+    "image": "images/u1_water_heating.png",
+    "image_alt": "Line graph comparing temperature change in water and ethanol during equal heating.",
+    "verbs": [
+      "Describe",
+      "Explain",
+      "Predict",
+      "Justify"
+    ],
+    "prompt": [
+      "Describe the difference in the temperature change of water and ethanol shown in the graph.",
+      "Explain how the molecular structure of water accounts for the trend.",
+      "Predict how replacing water with a liquid that forms fewer hydrogen bonds would affect the graph.",
+      "Justify your prediction using evidence from the graph and principles of intermolecular interactions."
+    ],
+    "explanation": "Students must connect the slower temperature increase in water to hydrogen bonding and high specific heat rather than to bond-breaking inside the water molecule.",
+    "sample_answer": "Water increases in temperature more slowly than ethanol during the same heating period. Water molecules form many hydrogen bonds with one another, so more energy is required to increase their kinetic energy. A liquid with fewer hydrogen bonds would warm more quickly, producing a steeper curve more like ethanol. The graph supports this because water shows a smaller temperature increase at every time point despite equal heating.",
+    "scoring_guidelines": [
+      "1 point for describing that water warms more slowly / has a smaller temperature increase.",
+      "1 point for explaining that hydrogen bonds increase the specific heat of water by requiring more energy input.",
+      "1 point for predicting that a liquid with fewer hydrogen bonds would show a steeper increase in temperature.",
+      "1 point for justifying with graph evidence plus a correct molecular explanation."
+    ],
+    "common_mistakes": [
+      "Saying covalent O\u2013H bonds are breaking during heating.",
+      "Claiming water has low specific heat.",
+      "Giving a prediction without referring to the graph."
+    ]
+  },
+  {
+    "id": "u1-frq-img-2",
+    "unit": 1,
+    "category": "AP-Style FRQ",
+    "topic": "dehydration synthesis and polymer formation",
+    "image": "images/u1_dehydration_synthesis.png",
+    "image_alt": "Diagram showing two amino acids forming a dipeptide while water is released.",
+    "verbs": [
+      "Identify",
+      "Describe",
+      "Explain",
+      "Compare"
+    ],
+    "prompt": [
+      "Identify the type of reaction shown in the diagram.",
+      "Describe what happens to water during the reaction.",
+      "Explain how the reaction contributes to the formation of biological polymers.",
+      "Compare this reaction to the reaction used to break polymers into monomers."
+    ],
+    "explanation": "The diagram should cue dehydration synthesis, peptide bond formation, and the contrast with hydrolysis.",
+    "sample_answer": "The reaction is dehydration synthesis, also called a condensation reaction. Water is released as the amino acids are joined. This reaction links monomers together to build polymers such as proteins. In contrast, hydrolysis adds water to break covalent bonds and separate polymers into smaller units or monomers.",
+    "scoring_guidelines": [
+      "1 point for identifying dehydration synthesis / condensation.",
+      "1 point for describing that water is removed or released as the bond forms.",
+      "1 point for explaining that repeated dehydration reactions build polymers from monomers.",
+      "1 point for comparing to hydrolysis as the addition of water to break bonds."
+    ],
+    "common_mistakes": [
+      "Calling the reaction hydrolysis.",
+      "Saying water is produced by breaking the peptide bond.",
+      "Comparing polymers without discussing water."
+    ]
+  },
+  {
+    "id": "u1-frq-img-3",
+    "unit": 1,
+    "category": "AP-Style FRQ",
+    "topic": "buffers and pH stability",
+    "image": "images/u1_buffer_graph.png",
+    "image_alt": "Graph showing pH changes in pure water and a buffered solution as acid is added.",
+    "verbs": [
+      "Analyze",
+      "Explain",
+      "Predict",
+      "Support"
+    ],
+    "prompt": [
+      "Analyze the effect of acid addition on the pH of the two solutions shown.",
+      "Explain why the buffered solution changes less than the unbuffered solution.",
+      "Predict what would happen if the buffer concentration were reduced by half.",
+      "Support your prediction with evidence from the graph."
+    ],
+    "explanation": "This FRQ targets interpretation of a buffer graph and the mechanism by which buffers resist pH change.",
+    "sample_answer": "The pH of both solutions decreases as acid is added, but the buffered solution decreases much less. Buffers resist pH change because they can accept added hydrogen ions or donate hydrogen ions when conditions change. If the buffer concentration were reduced, the buffered solution would show a larger drop in pH because fewer buffer molecules would be available to absorb added H+. The graph supports this because the stronger buffer already changes less than water under the same acid additions.",
+    "scoring_guidelines": [
+      "1 point for analyzing that both decrease but the buffer decreases less.",
+      "1 point for explaining that buffers stabilize pH by binding or releasing H+.",
+      "1 point for predicting a larger pH drop with a lower buffer concentration.",
+      "1 point for supporting with graph evidence."
+    ],
+    "common_mistakes": [
+      "Saying the buffer keeps pH completely constant.",
+      "Explaining the trend only as 'it is stronger' with no H+ mechanism.",
+      "Ignoring the comparison to the unbuffered solution."
+    ]
+  },
+  {
+    "id": "u2-frq-img-1",
+    "unit": 2,
+    "category": "AP-Style FRQ",
+    "topic": "membrane permeability and diffusion",
+    "image": "images/u2_diffusion_graph.png",
+    "image_alt": "Graph comparing diffusion of a small molecule and a large molecule across a phospholipid bilayer over time.",
+    "verbs": [
+      "Describe",
+      "Explain",
+      "Infer",
+      "Justify"
+    ],
+    "prompt": [
+      "Describe the difference between the diffusion of the two molecules shown in the graph.",
+      "Explain why the two molecules move across the membrane at different rates.",
+      "Infer what feature of the membrane is limiting movement of the large molecule.",
+      "Justify your inference using the data."
+    ],
+    "explanation": "The image is meant to force students to use bilayer permeability and the relationship between molecule size and passive transport.",
+    "sample_answer": "The small molecule diffuses out of the vesicle much more rapidly than the large molecule. Small nonpolar or smaller molecules can pass through the phospholipid bilayer more easily, whereas larger molecules cross more slowly or may require transport proteins. The membrane\u2019s hydrophobic core limits movement of the large molecule. This is supported by the graph because the large molecule shows only a small percent outside the vesicle even after the same amount of time.",
+    "scoring_guidelines": [
+      "1 point for describing that the small molecule diffuses faster / to a greater extent.",
+      "1 point for explaining the difference using size and membrane permeability.",
+      "1 point for inferring that the bilayer core limits movement of the large molecule.",
+      "1 point for justifying with specific graph evidence."
+    ],
+    "common_mistakes": [
+      "Saying the large molecule diffuses faster because it has more mass.",
+      "Ignoring the role of the hydrophobic interior of the membrane.",
+      "Describing the axes incorrectly."
+    ]
+  },
+  {
+    "id": "u2-frq-img-2",
+    "unit": 2,
+    "category": "AP-Style FRQ",
+    "topic": "endomembrane system and protein trafficking",
+    "image": "images/u2_secretory_pathway.png",
+    "image_alt": "Diagram of the secretory pathway from nucleus to rough ER to Golgi to vesicle to cell membrane.",
+    "verbs": [
+      "Sequence",
+      "Explain",
+      "Predict",
+      "Construct"
+    ],
+    "prompt": [
+      "Sequence the major steps by which a secreted protein moves through the cell as shown in the diagram.",
+      "Explain why rough ER and Golgi apparatus are both needed for secretion.",
+      "Predict how a toxin that disrupts Golgi function would affect exported proteins.",
+      "Construct a claim about which organelle would accumulate protein if vesicle fusion with the membrane were blocked."
+    ],
+    "explanation": "Students need to connect organelle structure to function and reason about what would accumulate when transport is blocked.",
+    "sample_answer": "A secreted protein is transcribed in the nucleus, translated on ribosomes bound to the rough ER, modified and packaged through the Golgi, moved in transport vesicles, and then released at the cell membrane by exocytosis. Rough ER is needed for initial synthesis and entry into the endomembrane system, while the Golgi modifies, sorts, and packages proteins. If Golgi function were disrupted, proteins would not be processed or properly targeted for export. If vesicle fusion were blocked, proteins would accumulate in secretory vesicles near the plasma membrane because they could be packaged but not released.",
+    "scoring_guidelines": [
+      "1 point for correctly sequencing rough ER to Golgi to vesicle to membrane for secretion.",
+      "1 point for explaining distinct roles of rough ER and Golgi.",
+      "1 point for predicting loss of proper processing / export when Golgi is disrupted.",
+      "1 point for constructing the claim that vesicles would accumulate if fusion were blocked."
+    ],
+    "common_mistakes": [
+      "Saying proteins are translated inside the Golgi.",
+      "Skipping the role of transport vesicles.",
+      "Claiming nucleus secretes proteins directly."
+    ]
+  },
+  {
+    "id": "u2-frq-img-3",
+    "unit": 2,
+    "category": "AP-Style FRQ",
+    "topic": "surface area-to-volume ratio",
+    "image": "images/u2_sav_ratio.png",
+    "image_alt": "Bar graph showing decreasing surface area-to-volume ratio as cube size increases.",
+    "verbs": [
+      "Describe",
+      "Explain",
+      "Calculate",
+      "Connect"
+    ],
+    "prompt": [
+      "Describe the relationship between cell size and surface area-to-volume ratio shown in the graph.",
+      "Explain why this relationship is important for exchange across the plasma membrane.",
+      "Calculate which of the three cubes would be expected to exchange materials most efficiently.",
+      "Connect the graph to why many cells remain small or develop internal membrane systems."
+    ],
+    "explanation": "This FRQ uses a simple quantitative graph to connect SA:V to transport efficiency and cell organization.",
+    "sample_answer": "As cell size increases, the surface area-to-volume ratio decreases. This matters because the plasma membrane provides surface for exchange, while volume reflects the metabolic demands of the cell. The 1 cm cube would exchange materials most efficiently because it has the highest surface area-to-volume ratio. Cells often remain small, increase surface area, or develop internal membranes to maintain efficient transport and support cellular functions.",
+    "scoring_guidelines": [
+      "1 point for describing that SA:V decreases with increasing size.",
+      "1 point for explaining why a lower SA:V limits exchange efficiency.",
+      "1 point for calculating / identifying the 1 cm cube as most efficient.",
+      "1 point for connecting the graph to cell size limits or internal membranes."
+    ],
+    "common_mistakes": [
+      "Choosing the largest cube because it has the most total surface area.",
+      "Explaining only surface area or only volume, not the ratio.",
+      "Not connecting the pattern to cellular function."
+    ]
+  },
+  {
+    "id": "u3-frq-img-1",
+    "unit": 3,
+    "category": "AP-Style FRQ",
+    "topic": "enzyme structure and temperature",
+    "image": "images/u3_enzyme_temp.png",
+    "image_alt": "Graph of relative enzyme activity across temperature, showing an optimum and decline at high temperature.",
+    "verbs": [
+      "Describe",
+      "Explain",
+      "Predict",
+      "Justify"
+    ],
+    "prompt": [
+      "Describe the overall pattern of enzyme activity shown in the graph.",
+      "Explain why activity increases at first and then decreases sharply at higher temperatures.",
+      "Predict the effect of exposing the enzyme to 70\u00b0C and then returning it to 30\u00b0C.",
+      "Justify whether the enzyme would be expected to regain its original activity."
+    ],
+    "explanation": "Students should distinguish increased collision frequency at moderate temperatures from denaturation at high temperatures.",
+    "sample_answer": "Enzyme activity increases with temperature up to an optimum and then decreases sharply at high temperature. The initial increase occurs because molecules collide more often as kinetic energy rises. The later decrease occurs because high temperature denatures the enzyme and changes the shape of the active site. If the enzyme is exposed to 70\u00b0C and then returned to 30\u00b0C, it would probably not regain all of its original activity because denaturation often alters protein structure irreversibly.",
+    "scoring_guidelines": [
+      "1 point for describing the increase to an optimum followed by a sharp decline.",
+      "1 point for explaining increased collisions at moderate temperatures.",
+      "1 point for explaining decline using denaturation / altered active site shape.",
+      "1 point for justifying the prediction about reduced recovery after 70\u00b0C exposure."
+    ],
+    "common_mistakes": [
+      "Saying the substrate denatures instead of the enzyme.",
+      "Explaining the drop only as 'less energy' at high temperature.",
+      "Predicting full recovery with no structural reasoning."
+    ]
+  },
+  {
+    "id": "u3-frq-img-2",
+    "unit": 3,
+    "category": "AP-Style FRQ",
+    "topic": "photosynthesis and limiting factors",
+    "image": "images/u3_photosynthesis_light.png",
+    "image_alt": "Graph showing photosynthetic rate rising with light intensity and then leveling off.",
+    "verbs": [
+      "Analyze",
+      "Explain",
+      "Predict",
+      "Evaluate"
+    ],
+    "prompt": [
+      "Analyze the relationship between light intensity and photosynthetic rate shown in the graph.",
+      "Explain why the rate levels off at high light intensity.",
+      "Predict how increasing carbon dioxide concentration would affect the plateau region.",
+      "Evaluate whether light is the limiting factor at the highest light intensities."
+    ],
+    "explanation": "This FRQ is about limiting factors and interpretation of a saturation curve.",
+    "sample_answer": "Photosynthetic rate increases as light intensity increases and then reaches a plateau. At low intensities, light is limiting, so more light increases the light-dependent reactions. At high intensities, another factor such as carbon dioxide concentration, enzyme availability, or temperature becomes limiting. Increasing carbon dioxide concentration would likely raise the plateau if carbon dioxide is the limiting factor. Therefore, light is not the limiting factor at the highest intensities shown.",
+    "scoring_guidelines": [
+      "1 point for analyzing the increase followed by leveling off.",
+      "1 point for explaining that another factor becomes limiting at high light.",
+      "1 point for predicting that higher CO2 could increase the plateau.",
+      "1 point for evaluating that light is not limiting at the highest intensities."
+    ],
+    "common_mistakes": [
+      "Saying light stops photosynthesis at high intensity.",
+      "Claiming ATP is no longer needed at the plateau.",
+      "Using 'more light always means more photosynthesis' without discussing limits."
+    ]
+  },
+  {
+    "id": "u3-frq-img-3",
+    "unit": 3,
+    "category": "AP-Style FRQ",
+    "topic": "cellular respiration and ETC inhibition",
+    "image": "images/u3_respiration_inhibitor.png",
+    "image_alt": "Graph showing dissolved oxygen decreasing in untreated cells but staying high when an ETC inhibitor is added.",
+    "verbs": [
+      "Identify",
+      "Explain",
+      "Predict",
+      "Support"
+    ],
+    "prompt": [
+      "Identify which treatment shows a lower rate of cellular respiration.",
+      "Explain why the oxygen trend in the graph supports your answer.",
+      "Predict how ATP production would change in the inhibited cells.",
+      "Support your prediction by referring to the role of oxygen in aerobic respiration."
+    ],
+    "explanation": "The image is designed so students must infer ETC inhibition from oxygen consumption data.",
+    "sample_answer": "The cells treated with the ETC inhibitor show a lower rate of cellular respiration. The oxygen concentration stays much higher in that treatment, indicating the cells are using less oxygen over time. ATP production would decrease because oxygen serves as the final electron acceptor in the electron transport chain. If the ETC is inhibited, oxidative phosphorylation is reduced and less ATP is produced.",
+    "scoring_guidelines": [
+      "1 point for identifying the inhibitor treatment as having lower respiration.",
+      "1 point for explaining that less oxygen consumption indicates less aerobic respiration.",
+      "1 point for predicting decreased ATP production.",
+      "1 point for supporting with oxygen\u2019s role as the final electron acceptor."
+    ],
+    "common_mistakes": [
+      "Choosing untreated cells because their oxygen level is lower.",
+      "Stating oxygen is produced during cellular respiration.",
+      "Discussing photosynthesis instead of respiration."
+    ]
+  },
+  {
+    "id": "u4-frq-img-1",
+    "unit": 4,
+    "category": "AP-Style FRQ",
+    "topic": "signal transduction",
+    "image": "images/u4_signal_cascade.png",
+    "image_alt": "Diagram of a signal transduction pathway from ligand to receptor to second messenger to kinase cascade to response.",
+    "verbs": [
+      "Describe",
+      "Explain",
+      "Predict",
+      "Compare"
+    ],
+    "prompt": [
+      "Describe the order of events shown in the signaling pathway.",
+      "Explain how signal amplification can occur in the pathway.",
+      "Predict the effect of a mutation that prevents second messenger production.",
+      "Compare the likely cellular response before and after the mutation."
+    ],
+    "explanation": "Students should connect pathway steps to amplification and the consequence of blocking an early step.",
+    "sample_answer": "A ligand binds a receptor, which triggers production of a second messenger, activates a kinase cascade, and produces a cellular response. Signal amplification occurs because one activated component can activate many molecules in the next step. If second messenger production were blocked, the downstream kinase cascade would not be activated efficiently. As a result, the cellular response would be greatly reduced or absent compared with the normal pathway.",
+    "scoring_guidelines": [
+      "1 point for describing the pathway in the correct order.",
+      "1 point for explaining amplification through branching or repeated activation.",
+      "1 point for predicting loss or reduction of downstream signaling when the second messenger is blocked.",
+      "1 point for comparing the normal response to the mutated condition."
+    ],
+    "common_mistakes": [
+      "Skipping the receptor entirely.",
+      "Confusing a second messenger with a transcription factor in every pathway.",
+      "Saying amplification means the ligand concentration increases."
+    ]
+  },
+  {
+    "id": "u4-frq-img-2",
+    "unit": 4,
+    "category": "AP-Style FRQ",
+    "topic": "cell cycle regulation",
+    "image": "images/u4_checkpoint_graph.png",
+    "image_alt": "Bar graph showing percent of cells entering mitosis under control, DNA damage, and DNA damage plus mutant p53 conditions.",
+    "verbs": [
+      "Analyze",
+      "Explain",
+      "Infer",
+      "Justify"
+    ],
+    "prompt": [
+      "Analyze how DNA damage affects entry into mitosis in the graph.",
+      "Explain the role of p53 suggested by the data.",
+      "Infer what could happen to genomic stability if the mutant p53 allele is present.",
+      "Justify your inference using the graph."
+    ],
+    "explanation": "This FRQ asks students to reason from checkpoint data to a tumor-suppressor function.",
+    "sample_answer": "DNA damage greatly decreases the percent of cells entering mitosis in normal cells. However, when mutant p53 is present, cells with DNA damage enter mitosis at a much higher rate. This suggests that p53 normally helps stop the cell cycle when DNA is damaged. If mutant p53 is present, genomic stability would decrease because damaged DNA could be replicated and passed to daughter cells. The graph supports this because the DNA-damage-plus-mutant-p53 condition resembles the control more than the normal DNA-damage response.",
+    "scoring_guidelines": [
+      "1 point for analyzing that DNA damage reduces mitosis but mutant p53 weakens that reduction.",
+      "1 point for explaining that p53 helps enforce a checkpoint after DNA damage.",
+      "1 point for inferring increased mutation accumulation / genomic instability with mutant p53.",
+      "1 point for justifying with graph evidence."
+    ],
+    "common_mistakes": [
+      "Calling p53 an oncogene that speeds division.",
+      "Saying DNA damage directly increases mitosis.",
+      "Ignoring the mutant p53 condition."
+    ]
+  },
+  {
+    "id": "u4-frq-img-3",
+    "unit": 4,
+    "category": "AP-Style FRQ",
+    "topic": "homeostasis and negative feedback",
+    "image": "images/u4_homeostasis_glucose.png",
+    "image_alt": "Graph of blood glucose concentration rising after a meal and then returning toward a set point over time.",
+    "verbs": [
+      "Describe",
+      "Explain",
+      "Predict",
+      "Model"
+    ],
+    "prompt": [
+      "Describe the change in blood glucose shown after the meal.",
+      "Explain how negative feedback could return blood glucose toward the set point.",
+      "Predict what would happen to the graph if insulin signaling were impaired.",
+      "Model which direction the blood glucose curve would shift relative to the dashed set-point line."
+    ],
+    "explanation": "This question targets homeostatic regulation and the logic of negative feedback loops.",
+    "sample_answer": "Blood glucose rises above the set point after the meal and then gradually returns toward the normal level. Negative feedback can restore balance because increased glucose triggers insulin release, which promotes glucose uptake and storage, reducing blood glucose. If insulin signaling were impaired, the glucose level would remain elevated longer and return more slowly toward the set point. The curve would stay above the dashed line for a greater portion of the time period.",
+    "scoring_guidelines": [
+      "1 point for describing the rise and return toward the set point.",
+      "1 point for explaining negative feedback using insulin-mediated glucose reduction.",
+      "1 point for predicting prolonged elevation if insulin signaling is impaired.",
+      "1 point for modeling / stating that the curve remains above the set point longer."
+    ],
+    "common_mistakes": [
+      "Saying negative feedback causes glucose to keep increasing.",
+      "Using glucagon instead of insulin for the post-meal rise.",
+      "Ignoring the idea of a set point."
+    ]
+  },
+  {
+    "id": "u5-frq-img-1",
+    "unit": 5,
+    "category": "AP-Style FRQ",
+    "topic": "pedigree analysis",
+    "image": "images/u5_pedigree.png",
+    "image_alt": "Pedigree showing affected individuals in three generations, including both sexes.",
+    "verbs": [
+      "Identify",
+      "Describe",
+      "Predict",
+      "Justify"
+    ],
+    "prompt": [
+      "Identify the most likely mode of inheritance shown in the pedigree.",
+      "Describe one piece of evidence from the pedigree that supports your conclusion.",
+      "Predict the probability that an unaffected carrier parent could have an affected child in this pattern.",
+      "Justify your prediction using inheritance principles."
+    ],
+    "explanation": "The pedigree was arranged to support an autosomal recessive interpretation with affected individuals of both sexes and skipping generations.",
+    "sample_answer": "The pedigree is most consistent with autosomal recessive inheritance. Affected individuals appear in both sexes, and the trait can appear in offspring even when it is not present in every generation. If two unaffected carrier parents mate, the probability of an affected child is 25%. This is because each parent can contribute a recessive allele, producing an aa genotype in one out of four expected offspring.",
+    "scoring_guidelines": [
+      "1 point for identifying autosomal recessive inheritance.",
+      "1 point for describing valid pedigree evidence such as affected individuals of both sexes / skipped generation pattern.",
+      "1 point for predicting a 25% affected probability for two carriers.",
+      "1 point for justifying with a correct Mendelian explanation."
+    ],
+    "common_mistakes": [
+      "Choosing sex-linked inheritance because both sexes appear.",
+      "Assuming every unaffected individual is homozygous dominant.",
+      "Giving a percentage with no genotype reasoning."
+    ]
+  },
+  {
+    "id": "u5-frq-img-2",
+    "unit": 5,
+    "category": "AP-Style FRQ",
+    "topic": "chromosomal inheritance and nondisjunction",
+    "image": "images/u5_karyotype_trisomy.png",
+    "image_alt": "Simplified karyotype showing an extra copy of chromosome 21.",
+    "verbs": [
+      "Describe",
+      "Explain",
+      "Predict",
+      "Connect"
+    ],
+    "prompt": [
+      "Describe the chromosomal abnormality shown in the karyotype.",
+      "Explain how this abnormality can arise during meiosis.",
+      "Predict the chromosome number of the resulting zygote.",
+      "Connect the image to why changes in chromosome number can alter phenotype."
+    ],
+    "explanation": "This FRQ targets karyotype interpretation and meiotic nondisjunction.",
+    "sample_answer": "The karyotype shows trisomy 21, meaning there are three copies of chromosome 21 instead of two. This can result from nondisjunction during meiosis, when homologous chromosomes or sister chromatids fail to separate properly. The resulting zygote would have 47 chromosomes total. An abnormal chromosome number changes gene dosage, so extra copies of genes can disrupt development and produce characteristic phenotypic effects.",
+    "scoring_guidelines": [
+      "1 point for describing the abnormality as trisomy 21 / an extra chromosome 21.",
+      "1 point for explaining nondisjunction during meiosis.",
+      "1 point for predicting a total of 47 chromosomes.",
+      "1 point for connecting altered chromosome number to altered gene dosage / phenotype."
+    ],
+    "common_mistakes": [
+      "Calling the abnormality a mutation in one gene.",
+      "Saying mitosis in a body cell always causes the original zygote to have 47 chromosomes.",
+      "Giving the correct count without explaining nondisjunction."
+    ]
+  },
+  {
+    "id": "u5-frq-img-3",
+    "unit": 5,
+    "category": "AP-Style FRQ",
+    "topic": "crossing over and genetic variation",
+    "image": "images/u5_crossing_over.png",
+    "image_alt": "Diagram comparing homologous chromosomes before and after crossing over.",
+    "verbs": [
+      "Describe",
+      "Explain",
+      "Predict",
+      "Evaluate"
+    ],
+    "prompt": [
+      "Describe the chromosomal event shown in the diagram.",
+      "Explain how the event contributes to genetic variation in gametes.",
+      "Predict how the number of recombinant gametes would change if crossing over frequency increased.",
+      "Evaluate whether crossing over produces variation without changing chromosome number."
+    ],
+    "explanation": "Students should identify crossing over in prophase I and link it to recombinant chromatids.",
+    "sample_answer": "The diagram shows crossing over between homologous chromosomes. During prophase I of meiosis, non-sister chromatids exchange corresponding DNA segments, creating recombinant chromatids with new allele combinations. If crossing over frequency increased, the proportion of recombinant gametes would also increase. Crossing over increases genetic variation by rearranging alleles, but it does not normally change chromosome number because chromosomes are exchanged rather than gained or lost.",
+    "scoring_guidelines": [
+      "1 point for describing crossing over between homologous chromosomes / non-sister chromatids.",
+      "1 point for explaining that it creates new allele combinations in gametes.",
+      "1 point for predicting more recombinant gametes with more crossing over.",
+      "1 point for evaluating that variation increases without changing chromosome number."
+    ],
+    "common_mistakes": [
+      "Placing crossing over in meiosis II.",
+      "Saying crossing over creates new alleles rather than new combinations of existing alleles.",
+      "Confusing recombination with nondisjunction."
+    ]
+  },
+  {
+    "id": "u6-frq-img-1",
+    "unit": 6,
+    "category": "AP-Style FRQ",
+    "topic": "operon regulation",
+    "image": "images/u6_lac_operon.png",
+    "image_alt": "Graph showing beta-galactosidase activity increasing as lactose concentration increases.",
+    "verbs": [
+      "Describe",
+      "Explain",
+      "Predict",
+      "Justify"
+    ],
+    "prompt": [
+      "Describe the trend in enzyme activity shown as lactose concentration changes.",
+      "Explain the molecular mechanism responsible for the trend.",
+      "Predict how the graph would change if the lac repressor were nonfunctional.",
+      "Justify your prediction using the regulation of transcription."
+    ],
+    "explanation": "This FRQ is centered on inducible gene regulation and the role of the lac repressor.",
+    "sample_answer": "Beta-galactosidase activity increases as lactose concentration increases. Lactose acts as an inducer by binding the repressor and preventing it from blocking the operator, which allows transcription of the operon. If the lac repressor were nonfunctional, enzyme activity would remain high even when lactose concentration is low because repression would not occur. This prediction is justified because transcription would proceed without the repressor blocking RNA polymerase access.",
+    "scoring_guidelines": [
+      "1 point for describing the increase in enzyme activity with more lactose.",
+      "1 point for explaining inducer binding to the repressor / relief of repression.",
+      "1 point for predicting constitutively high activity with a nonfunctional repressor.",
+      "1 point for justifying with correct transcriptional regulation logic."
+    ],
+    "common_mistakes": [
+      "Saying lactose directly activates RNA polymerase.",
+      "Confusing the operator with the promoter.",
+      "Predicting no change with a repressor mutation."
+    ]
+  },
+  {
+    "id": "u6-frq-img-2",
+    "unit": 6,
+    "category": "AP-Style FRQ",
+    "topic": "epigenetic regulation",
+    "image": "images/u6_methylation.png",
+    "image_alt": "Diagram of a DNA region with methyl groups added in a promoter region.",
+    "verbs": [
+      "Identify",
+      "Explain",
+      "Predict",
+      "Support"
+    ],
+    "prompt": [
+      "Identify the type of DNA modification shown in the image.",
+      "Explain how the modification affects transcription.",
+      "Predict the effect of increased methylation on mRNA production from the gene.",
+      "Support your prediction using the relationship between chromatin accessibility and gene expression."
+    ],
+    "explanation": "The image is specifically tied to DNA methylation and reduced transcriptional access.",
+    "sample_answer": "The image shows DNA methylation. Increased methylation in a promoter region generally decreases transcription because it is associated with less accessible chromatin and reduced binding of transcription machinery. Therefore, mRNA production from the gene would decrease. This is supported by the relationship between chromatin accessibility and transcription: genes in tightly packed chromatin are usually expressed less.",
+    "scoring_guidelines": [
+      "1 point for identifying DNA methylation.",
+      "1 point for explaining that methylation reduces transcription or access to DNA.",
+      "1 point for predicting reduced mRNA production.",
+      "1 point for supporting with chromatin accessibility reasoning."
+    ],
+    "common_mistakes": [
+      "Confusing methylation with histone acetylation.",
+      "Saying methylation always increases expression.",
+      "Discussing translation instead of transcription."
+    ]
+  },
+  {
+    "id": "u6-frq-img-3",
+    "unit": 6,
+    "category": "AP-Style FRQ",
+    "topic": "post-transcriptional regulation",
+    "image": "images/u6_mrna_protein.png",
+    "image_alt": "Graph showing stable mRNA levels while protein levels decline after treatment.",
+    "verbs": [
+      "Analyze",
+      "Explain",
+      "Propose",
+      "Justify"
+    ],
+    "prompt": [
+      "Analyze the relationship between mRNA level and protein level shown in the graph.",
+      "Explain one mechanism that could produce the pattern.",
+      "Propose an additional experiment that would test your explanation.",
+      "Justify why your proposed experiment would distinguish between transcriptional and translational regulation."
+    ],
+    "explanation": "This FRQ forces students to recognize post-transcriptional or translational regulation from mismatched mRNA and protein data.",
+    "sample_answer": "The mRNA level remains approximately constant while protein level declines over time. This suggests that the treatment affects translation or protein stability rather than transcription. One mechanism could be microRNA-mediated inhibition of translation. A useful additional experiment would be to measure ribosome occupancy on the mRNA or compare protein production in the presence and absence of microRNA inhibitors. This would distinguish transcriptional from translational regulation because transcription appears unchanged in the graph, so changes in ribosome loading or protein output would specifically test translation.",
+    "scoring_guidelines": [
+      "1 point for analyzing that mRNA stays stable while protein decreases.",
+      "1 point for explaining a valid post-transcriptional / translational mechanism.",
+      "1 point for proposing a testable additional experiment.",
+      "1 point for justifying how the experiment distinguishes the level of regulation."
+    ],
+    "common_mistakes": [
+      "Claiming transcription decreased despite stable mRNA.",
+      "Proposing an experiment unrelated to translation or protein stability.",
+      "Ignoring the graph evidence in the justification."
+    ]
+  },
+  {
+    "id": "u7-frq-img-1",
+    "unit": 7,
+    "category": "AP-Style FRQ",
+    "topic": "phylogenetic relationships",
+    "image": "images/u7_cladogram.png",
+    "image_alt": "Cladogram showing relationships among fish, mouse, lizard, and bird with derived characters marked.",
+    "verbs": [
+      "Describe",
+      "Infer",
+      "Explain",
+      "Justify"
+    ],
+    "prompt": [
+      "Describe the evolutionary relationships shown in the cladogram.",
+      "Infer which two taxa share the most recent common ancestor.",
+      "Explain what the derived character 'amniotic egg' indicates about the branching pattern.",
+      "Justify your inference using evidence from the cladogram."
+    ],
+    "explanation": "This question requires students to read a cladogram rather than rely on memorized similarity.",
+    "sample_answer": "The cladogram shows fish branching off earlier, with mouse, lizard, and bird sharing more recent common ancestry. Lizard and bird share the most recent common ancestor in this diagram. The derived character 'amniotic egg' indicates that taxa above that branch inherited that trait from a common ancestor. This inference is justified because lizard and bird are joined by a more recent node than either shares with mouse or fish.",
+    "scoring_guidelines": [
+      "1 point for describing the branching pattern correctly.",
+      "1 point for inferring lizard and bird as the closest pair in the diagram.",
+      "1 point for explaining that a derived character marks a lineage where a trait evolved and was inherited by descendants.",
+      "1 point for justifying with recency of the shared node."
+    ],
+    "common_mistakes": [
+      "Choosing the organisms that look most alike instead of reading the nodes.",
+      "Treating one modern species as the ancestor of another.",
+      "Saying derived characters appear independently on every branch."
+    ]
+  },
+  {
+    "id": "u7-frq-img-2",
+    "unit": 7,
+    "category": "AP-Style FRQ",
+    "topic": "evolutionary mechanisms",
+    "image": "images/u7_allele_frequency.png",
+    "image_alt": "Graph showing allele frequency remaining near 0.5 for several generations and then increasing sharply to about 0.78.",
+    "verbs": [
+      "Analyze",
+      "Hypothesize",
+      "Predict",
+      "Defend"
+    ],
+    "prompt": [
+      "Analyze the change in allele frequency shown across generations.",
+      "Hypothesize one evolutionary mechanism that could account for the sharp shift after generation 3.",
+      "Predict how the graph might differ if the population were extremely small.",
+      "Defend whether the data are more consistent with selection or complete Hardy-Weinberg equilibrium."
+    ],
+    "explanation": "This FRQ is about interpreting allele-frequency change and using Hardy-Weinberg logic.",
+    "sample_answer": "The allele frequency remains near 0.5 for the first several generations and then rises sharply after generation 3. One plausible mechanism is natural selection favoring allele A after an environmental change, though gene flow could also shift allele frequencies. If the population were extremely small, larger random fluctuations due to genetic drift would be expected. The data are not consistent with complete Hardy-Weinberg equilibrium because allele frequencies are changing over time rather than remaining constant.",
+    "scoring_guidelines": [
+      "1 point for analyzing stability followed by a sharp increase.",
+      "1 point for hypothesizing a valid mechanism such as selection or gene flow.",
+      "1 point for predicting greater random fluctuation in a small population due to drift.",
+      "1 point for defending that the pattern is not Hardy-Weinberg equilibrium."
+    ],
+    "common_mistakes": [
+      "Saying Hardy-Weinberg predicts changing allele frequencies.",
+      "Using mutation alone as the only likely explanation for the large rapid shift.",
+      "Not distinguishing selection from drift."
+    ]
+  },
+  {
+    "id": "u7-frq-img-3",
+    "unit": 7,
+    "category": "AP-Style FRQ",
+    "topic": "homologous vs analogous structures",
+    "image": "images/u7_homologous_analogous.png",
+    "image_alt": "Diagram contrasting homologous structures with analogous structures.",
+    "verbs": [
+      "Compare",
+      "Explain",
+      "Apply",
+      "Justify"
+    ],
+    "prompt": [
+      "Compare homologous structures with analogous structures as shown in the diagram.",
+      "Explain which type of structure provides stronger evidence of common ancestry.",
+      "Apply the diagram to infer whether similar function always indicates close relatedness.",
+      "Justify your answer with evolutionary reasoning."
+    ],
+    "explanation": "This FRQ addresses common misconceptions about similarity, common ancestry, and convergent evolution.",
+    "sample_answer": "Homologous structures share an underlying anatomical pattern because they were inherited from a common ancestor, whereas analogous structures perform similar functions but evolved independently. Homologous structures provide stronger evidence of common ancestry. Similar function does not always indicate close relatedness because analogous structures can arise through convergent evolution in unrelated lineages. This is justified by the fact that selection can favor similar adaptations in different organisms even when their structures evolved from different ancestral origins.",
+    "scoring_guidelines": [
+      "1 point for correctly comparing homologous and analogous structures.",
+      "1 point for explaining that homologous structures are stronger evidence of common ancestry.",
+      "1 point for applying the diagram to conclude that similar function alone does not prove close relatedness.",
+      "1 point for justifying with convergent evolution / independent origins."
+    ],
+    "common_mistakes": [
+      "Saying analogous structures are inherited from a common ancestor.",
+      "Assuming similar function always means close relationship.",
+      "Describing only function without discussing origin."
+    ]
+  },
+  {
+    "id": "u8-frq-img-1",
+    "unit": 8,
+    "category": "AP-Style FRQ",
+    "topic": "population dynamics",
+    "image": "images/u8_logistic_growth.png",
+    "image_alt": "Graph showing logistic growth approaching a carrying capacity.",
+    "verbs": [
+      "Describe",
+      "Explain",
+      "Predict",
+      "Justify"
+    ],
+    "prompt": [
+      "Describe the pattern of population growth shown in the graph.",
+      "Explain why the population growth rate changes as the population approaches carrying capacity.",
+      "Predict what would happen if resource availability increased substantially.",
+      "Justify how the carrying capacity line in the graph supports your prediction."
+    ],
+    "explanation": "Students should identify logistic growth and tie slowing growth to density-dependent limits.",
+    "sample_answer": "The graph shows logistic growth: the population grows rapidly at first and then levels off near carrying capacity. As the population approaches carrying capacity, density-dependent factors such as competition for food, space, and other resources reduce the growth rate. If resource availability increased substantially, the carrying capacity would likely increase and the population could level off at a higher size. The carrying-capacity line supports this prediction because it represents the maximum sustainable population under current conditions.",
+    "scoring_guidelines": [
+      "1 point for describing logistic growth with leveling near carrying capacity.",
+      "1 point for explaining reduced growth using density-dependent limiting factors.",
+      "1 point for predicting a higher carrying capacity with more resources.",
+      "1 point for justifying using the carrying-capacity concept from the graph."
+    ],
+    "common_mistakes": [
+      "Calling the graph exponential growth all the way through.",
+      "Saying carrying capacity is a fixed property that never changes.",
+      "Discussing only birth rate without resource limitation."
+    ]
+  },
+  {
+    "id": "u8-frq-img-2",
+    "unit": 8,
+    "category": "AP-Style FRQ",
+    "topic": "community interactions and food webs",
+    "image": "images/u8_food_web.png",
+    "image_alt": "Food web showing energy transfer among grass, rabbit, mouse, snake, and hawk.",
+    "verbs": [
+      "Identify",
+      "Explain",
+      "Predict",
+      "Support"
+    ],
+    "prompt": [
+      "Identify one organism in the food web whose population would most likely decrease if grass biomass declined sharply.",
+      "Explain how the decline in grass could affect two higher trophic levels.",
+      "Predict one indirect effect on hawks if the snake population decreased.",
+      "Support your prediction using the connections in the food web."
+    ],
+    "explanation": "This FRQ makes the student use the web directly to reason through direct and indirect ecological effects.",
+    "sample_answer": "A sharp decline in grass would likely decrease rabbit and mouse populations because both depend directly on grass. Reduced rabbit and mouse abundance would then reduce food available to snakes and hawks at higher trophic levels. If snake population decreased, hawks could experience either reduced food availability or a shift toward greater dependence on mice. This prediction is supported by the food web because hawks are connected to both snake and mouse, so changes in one prey population can alter energy flow to the hawk population.",
+    "scoring_guidelines": [
+      "1 point for identifying a valid directly affected consumer such as rabbit or mouse.",
+      "1 point for explaining effects on two higher trophic levels.",
+      "1 point for predicting a valid indirect effect on hawks after snake decline.",
+      "1 point for supporting with explicit food-web links."
+    ],
+    "common_mistakes": [
+      "Saying hawks eat grass directly.",
+      "Treating the web like a single linear chain only.",
+      "Predicting effects without naming the trophic links."
+    ]
+  },
+  {
+    "id": "u8-frq-img-3",
+    "unit": 8,
+    "category": "AP-Style FRQ",
+    "topic": "life history and survivorship",
+    "image": "images/u8_survivorship.png",
+    "image_alt": "Graph showing Type I, Type II, and Type III survivorship curves.",
+    "verbs": [
+      "Describe",
+      "Compare",
+      "Predict",
+      "Relate"
+    ],
+    "prompt": [
+      "Describe the survivorship pattern of each curve shown.",
+      "Compare the life-history strategy of organisms with Type I and Type III curves.",
+      "Predict which curve best matches a species that produces many offspring with little parental care.",
+      "Relate the graph to how natural selection can favor different reproductive strategies in different environments."
+    ],
+    "explanation": "This FRQ uses survivorship curves to connect ecology, parental investment, and natural selection.",
+    "sample_answer": "Type I shows high survivorship until old age, Type II shows a relatively constant death rate across the life span, and Type III shows high early mortality with greater survivorship among the few individuals that survive. Type I organisms typically produce fewer offspring and invest more parental care, whereas Type III organisms produce many offspring with little parental investment. A species with many offspring and little parental care best matches Type III. Natural selection can favor different strategies depending on environmental pressures, resource availability, and the probability that offspring will survive to reproduce.",
+    "scoring_guidelines": [
+      "1 point for correctly describing the three survivorship patterns.",
+      "1 point for comparing Type I and Type III life-history strategies.",
+      "1 point for predicting Type III for many offspring / low parental care.",
+      "1 point for relating the graph to selection for different reproductive strategies."
+    ],
+    "common_mistakes": [
+      "Reversing Type I and Type III.",
+      "Describing survivorship without linking to parental care.",
+      "Assuming one survivorship strategy is universally superior."
+    ]
+  }
+]

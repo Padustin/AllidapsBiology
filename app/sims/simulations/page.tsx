@@ -1,6 +1,7 @@
 "use client";
 
 import React, { type CSSProperties, useEffect, useRef, useState } from "react";
+import { PageHeader, SecondaryLink, SectionCard, StatCard } from "../../components/ui/study-kit";
 
 type OrganelleKey =
   | "nucleolus"
@@ -360,7 +361,7 @@ function CentralDogmaOverlay({
           <path
             d={matureLeftCapPath}
             fill="none"
-            stroke="#22c55e"
+            stroke="#1f5a32"
             strokeWidth="6"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -885,9 +886,9 @@ function DetailPanel({ selected, onBack }: { selected: OrganelleKey; onBack: () 
               borderRadius: 999,
               width: 34,
               height: 34,
-              border: stepIndex === index ? "1px solid #0f172a" : "1px solid #cbd5e1",
-              background: stepIndex === index ? "#0f172a" : "#ffffff",
-              color: stepIndex === index ? "#ffffff" : "#0f172a",
+              border: stepIndex === index ? "1px solid #1f5a32" : "1px solid #cbd5e1",
+              background: stepIndex === index ? "#e5e7eb" : "#ffffff",
+              color: stepIndex === index ? "#1f5a32" : "#0f172a",
               fontWeight: 700,
               cursor: "pointer",
             }}
@@ -896,7 +897,7 @@ function DetailPanel({ selected, onBack }: { selected: OrganelleKey; onBack: () 
           </button>
         ))}
 
-        <button onClick={() => setStepIndex((s) => Math.min(s + 1, max))} style={{ border: "1px solid #1d4ed8", background: "#2563eb", color: "#ffffff", borderRadius: 10, padding: "8px 12px", fontWeight: 700, cursor: "pointer" }}>
+        <button onClick={() => setStepIndex((s) => Math.min(s + 1, max))} style={{ border: "1px solid #1f5a32", background: "#e5e7eb", color: "#1f5a32", borderRadius: 10, padding: "8px 12px", fontWeight: 700, cursor: "pointer" }}>
           Next
         </button>
         <button onClick={() => setStepIndex(0)} style={{ border: "1px solid #94a3b8", background: "#ffffff", color: "#0f172a", borderRadius: 10, padding: "8px 12px", fontWeight: 700, cursor: "pointer" }}>
@@ -971,7 +972,7 @@ export default function CompleteCellSimulationPage() {
   };
 
   return (
-    <div className="study-screen px-3 py-3 sm:px-4 sm:py-4" style={{ minHeight: "100vh", background: "linear-gradient(180deg, #f8fbff 0%, #eef4fb 100%)", color: "#0f172a" }}>
+    <main className="grid gap-6 lg:gap-8" style={{ color: "#0f172a" }}>
       <style>{`
         .fade-in-up {
           animation: fadeInUp 240ms ease-out;
@@ -982,56 +983,71 @@ export default function CompleteCellSimulationPage() {
         }
       `}</style>
 
-      <div className="hero-card" style={{ width: "100%", margin: 0, display: "grid", gap: 14, padding: 14 }}>
-        <h1 className="text-[clamp(1.9rem,5vw,2.5rem)]" style={{ margin: 0, lineHeight: 1.06, fontWeight: 900, letterSpacing: -0.3 }}>Complete Cell Simulation</h1>
-        <p style={{ margin: 0, color: "#475569", maxWidth: 820, lineHeight: 1.5 }}>
-          Explore organelles, pathway dynamics, and central dogma flow with interactive controls designed for focused AP Biology review.
-        </p>
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8 }}>
-          <button
-            type="button"
-            onClick={replayCentralDogma}
-            style={{
-              border: "1px solid #0369a1",
-              background: "#2563eb",
-              color: "#ffffff",
-              borderRadius: 12,
-              padding: "10px 14px",
-              fontWeight: 800,
-              cursor: "pointer",
-              width: "100%",
-            }}
-            className="sm:w-auto"
-          >
-            Central Dogma simulation
-          </button>
-          <label style={{ display: "inline-flex", alignItems: "center", gap: 8, fontWeight: 700, cursor: "pointer", flexWrap: "wrap" }}>
-            <input
-              type="checkbox"
-              checked={dogmaMode === "guided"}
-              onChange={(event) => setDogmaMode(event.target.checked ? "guided" : "plain")}
-              style={{ width: 16, height: 16, cursor: "pointer" }}
-            />
-            <span>Show guided explanation overlays</span>
-          </label>
-        </div>
+      <PageHeader
+        eyebrow="Cell Simulation"
+        title="Explore the cell as a working system."
+        description="Click organelles, inspect their roles, and run the central dogma overlay when you want a visual walkthrough of transcription, translation, and protein flow inside the cell."
+        actions={<SecondaryLink href="/sims/active-recall">Back to practice</SecondaryLink>}
+        aside={
+          <div className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
+            <StatCard label="Best for" value="Visual review" detail="Useful when structure and location matter" tone="blue" />
+            <StatCard label="Overlay mode" value={dogmaMode === "guided" ? "Guided" : "Plain"} detail="Toggle extra explanation on top of the animation" tone="teal" />
+            <StatCard label="Selected view" value={selected ? ORGANELLES[selected].name : "Whole cell"} detail={selected ? "Detail panel is open" : "Interactive cell map is active"} tone="amber" />
+          </div>
+        }
+      />
 
-        {!selected ? (
-          <CellImageMap
-            key={cellRenderKey}
-            selected={selected}
-            onSelect={handleSelect}
-            dogmaRun={dogmaRun}
-            showDogma={showDogma}
-            ribosomeTarget={dogmaRibosomeTarget}
-            matureOrangeLength={matureOrangeLength}
-            aminoAcidCount={aminoAcidCount}
-            dogmaMode={dogmaMode}
-          />
-        ) : (
-          <DetailPanel selected={selected} onBack={handleBackToCell} />
-        )}
-      </div>
-    </div>
+      <SectionCard
+        title={selected ? ORGANELLES[selected].name : "Interactive model"}
+        description={selected ? "Use the back button inside the detail panel to return to the full cell map." : "Click any organelle to inspect its role, or run the central dogma overlay for a guided pathway view."}
+        tone="teal"
+      >
+        <div className="grid gap-4">
+          <div className="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+            <button
+              type="button"
+              onClick={replayCentralDogma}
+              style={{
+                border: "1px solid #1f5a32",
+                background: "#e5e7eb",
+                color: "#1f5a32",
+                borderRadius: 12,
+                padding: "10px 14px",
+                fontWeight: 800,
+                cursor: "pointer",
+              }}
+            >
+              Run central dogma overlay
+            </button>
+
+            <label style={{ display: "inline-flex", alignItems: "center", gap: 8, fontWeight: 700, cursor: "pointer", flexWrap: "wrap" }}>
+              <input
+                type="checkbox"
+                checked={dogmaMode === "guided"}
+                onChange={(event) => setDogmaMode(event.target.checked ? "guided" : "plain")}
+                style={{ width: 16, height: 16, cursor: "pointer" }}
+              />
+              <span>Show guided explanation overlays</span>
+            </label>
+          </div>
+
+          {!selected ? (
+            <CellImageMap
+              key={cellRenderKey}
+              selected={selected}
+              onSelect={handleSelect}
+              dogmaRun={dogmaRun}
+              showDogma={showDogma}
+              ribosomeTarget={dogmaRibosomeTarget}
+              matureOrangeLength={matureOrangeLength}
+              aminoAcidCount={aminoAcidCount}
+              dogmaMode={dogmaMode}
+            />
+          ) : (
+            <DetailPanel selected={selected} onBack={handleBackToCell} />
+          )}
+        </div>
+      </SectionCard>
+    </main>
   );
 }

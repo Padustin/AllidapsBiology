@@ -1,11 +1,38 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { UNITS } from "../shared";
+import { Suspense, useEffect, useState } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
+import {
+  LoadingSkeleton,
+  ModeBadge,
+  PageHeader,
+  PrimaryButton,
+  SecondaryButton,
+  SecondaryLink,
+  SectionCard,
+  StatCard,
+  TipCard,
+} from "../../../components/ui/study-kit";
+import { DIFFICULTY_OPTIONS, UNITS, getDifficultyDescription, getDifficultyTone } from "../shared";
+import { getRedoQuestionIds, readStudyProgressSnapshot, recordMcqAttempt, STUDY_PROGRESS_EVENT } from "../progress";
+import { buildSimilarityAvoidIds } from "../question-rotation";
 
-export default function Page() {
-  const [difficulty, setDifficulty] = useState("");
-  const [unit, setUnit] = useState("");
+type SessionTone = "blue" | "teal" | "amber" | "slate" | "rose";
+
+function normalizeTone(value: string): SessionTone {
+  const tone = getDifficultyTone(value);
+  if (tone === "blue" || tone === "teal" || tone === "amber" || tone === "slate" || tone === "rose") {
+    return tone;
+  }
+  return "slate";
+}
+
+function PageContent() {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const isCompactMcq = pathname.startsWith("/sims/mcq");
+  const [difficulty, setDifficulty] = useState<string>(DIFFICULTY_OPTIONS[0]?.value ?? "");
+  const [unit, setUnit] = useState(UNITS[0] ?? "");
   const [question, setQuestion] = useState<any | null>(null);
   const [previousQuestions, setPreviousQuestions] = useState<any[]>([]);
   const [loadError, setLoadError] = useState<string | null>(null);
@@ -13,17 +40,50 @@ export default function Page() {
   const [crossedOut, setCrossedOut] = useState<Record<number, boolean>>({});
   const [visibleExplanations, setVisibleExplanations] = useState<Record<number, boolean>>({});
   const [seen, setSeen] = useState<Record<string, Record<string, true>>>({});
-  const [poolSize, setPoolSize] = useState<number>(0);
+  const [poolIds, setPoolIds] = useState<string[]>([]);
+  const [redoMissedOnly, setRedoMissedOnly] = useState(() => searchParams.get("redo") === "1");
+  const [redoCount, setRedoCount] = useState(0);
+  const [progressSnapshot, setProgressSnapshot] = useState<any | null>(null);
   const STORAGE_KEY = "ar-seen";
 
-  async function next(attempt = 0) {
+  const difficultyLabel = DIFFICULTY_OPTIONS.find((option) => option.value === difficulty)?.label ?? difficulty;
+  const difficultyDescription = getDifficultyDescription(difficulty);
+  const difficultyTone = normalizeTone(difficulty);
+
+  function refreshProgress() {
+    setProgressSnapshot(readStudyProgressSnapshot());
+    setRedoCount(unit && difficulty ? getRedoQuestionIds({ unit, difficulty }).length : 0);
+  }
+
+  async function refreshPool(nextUnit = unit, nextDifficulty = difficulty) {
+    if (!nextUnit || !nextDifficulty) {
+      setPoolIds([]);
+      return [];
+    }
+    try {
+      const res = await fetch(`/api/ar-pool?mode=unit&unit=${encodeURIComponent(nextUnit)}&difficulty=${encodeURIComponent(nextDifficulty)}`);
+      const data = await res.json();
+      const ids = Array.isArray(data?.ids) ? data.ids.map((id: unknown) => String(id)) : [];
+      setPoolIds(ids);
+      return ids;
+    } catch {
+      setPoolIds([]);
+      return [];
+    }
+  }
+
+  useEffect(() => {
+    setProgressSnapshot(readStudyProgressSnapshot());
+  }, []);
+
+  async function next(poolIdsOverride?: string[]) {
     const currentQuestion = question;
     if (!unit || !difficulty) {
       setQuestion(null);
       setSelected(null);
       setCrossedOut({});
       setVisibleExplanations({});
-      setLoadError("Select a unit and difficulty first to begin.");
+      setLoadError("Choose a unit and mode to begin.");
       return;
     }
     setQuestion(null);
@@ -31,43 +91,106 @@ export default function Page() {
     setCrossedOut({});
     setVisibleExplanations({});
     setLoadError(null);
-    const MAX_ATTEMPTS = 6;
     const scopeKey = `${unit}::${difficulty}`;
     const scopeSeen = (seen && seen[scopeKey]) || {};
-    const scopeSeenCount = Object.keys(scopeSeen).length;
-    const mustAvoidSeen = poolSize > 0 && scopeSeenCount < poolSize;
+    const currentQuestionId = currentQuestion?.id ? String(currentQuestion.id) : null;
+    const historyIds = new Set(previousQuestions.map((prev) => String(prev?.id || "")));
+    const activePoolIds = poolIdsOverride || poolIds;
+    const liveRedoIds = redoMissedOnly ? getRedoQuestionIds({ unit, difficulty }) : [];
+    if (redoMissedOnly && liveRedoIds.length === 0) {
+      setLoadError("No missed questions are queued for this unit and mode yet.");
+      return;
+    }
+    const filteredRedoIds = liveRedoIds.filter(
+      (questionId) => questionId !== currentQuestion?.id && !previousQuestions.some((prev) => prev?.id === questionId),
+    );
+    if (redoMissedOnly && liveRedoIds.length > 0 && filteredRedoIds.length === 0) {
+      setRedoMissedOnly(false);
+      setTimeout(() => {
+        void next();
+      }, 0);
+      return;
+    }
+
+    const unseenPoolIds = !redoMissedOnly
+      ? activePoolIds.filter((questionId) => questionId !== currentQuestionId && !historyIds.has(questionId) && !scopeSeen[questionId])
+      : [];
+    const shouldRestartFreshRound = !redoMissedOnly && activePoolIds.length > 0 && unseenPoolIds.length === 0 && Object.keys(scopeSeen).length > 0;
+    const freshRoundIds = shouldRestartFreshRound ? activePoolIds.filter((questionId) => questionId !== currentQuestionId) : [];
+    const requestQuestionIds = redoMissedOnly
+      ? filteredRedoIds.length > 0
+        ? filteredRedoIds
+        : liveRedoIds
+      : unseenPoolIds.length > 0
+        ? unseenPoolIds
+        : freshRoundIds.length > 0
+          ? freshRoundIds
+          : undefined;
+    const { recentQuestionIds, avoidSimilarToQuestionIds } = buildSimilarityAvoidIds({
+      currentQuestion,
+      previousQuestions,
+      seenQuestionIds: Object.keys(scopeSeen),
+      shouldRestartFreshRound,
+    });
+
     try {
-      const res = await fetch('/api/question', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ mode: 'unit', unit, difficulty }),
+      const res = await fetch("/api/question", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          mode: "unit",
+          unit,
+          difficulty,
+          questionIds: requestQuestionIds,
+          recentQuestionIds,
+          avoidSimilarToQuestionIds,
+        }),
       });
       const data = await res.json();
-      if (data?.question) {
-        const q = data.question;
-        if (q.id && scopeSeen[q.id] && mustAvoidSeen) {
-          if (attempt < MAX_ATTEMPTS) return next(attempt + 1);
-          setSeen((s) => ({ ...s, [scopeKey]: {} }));
+      if (!res.ok) {
+        if (res.status === 429) {
+          setLoadError("Questions are loading too quickly right now. Please wait a moment and try again.");
+          return;
         }
-        if (q.id) setSeen((s) => ({ ...s, [scopeKey]: { ...(s[scopeKey] || {}), [q.id]: true } }));
-        if (currentQuestion) setPreviousQuestions((prev) => [...prev, currentQuestion]);
-        // ensure per-choice explanations
-        try { const mod = (await import("../shared")).ensureChoiceExplanations; setQuestion(mod(q)); } catch (e) { setQuestion(q); }
+        throw new Error(typeof data?.error === "string" ? data.error : "Failed to load question.");
+      }
+      if (data?.question) {
+        const nextQuestion = data.question;
+        if (!redoMissedOnly && nextQuestion.id) {
+          const nextQuestionId = String(nextQuestion.id);
+          setSeen((current) => ({
+            ...current,
+            [scopeKey]: shouldRestartFreshRound
+              ? { [nextQuestionId]: true }
+              : { ...(current[scopeKey] || {}), [nextQuestionId]: true },
+          }));
+        }
+        if (currentQuestion) {
+          if (shouldRestartFreshRound) {
+            setPreviousQuestions([currentQuestion]);
+          } else {
+            setPreviousQuestions((prev) => [...prev, currentQuestion]);
+          }
+        }
+        try {
+          const { ensureChoiceExplanations } = await import("../shared");
+          setQuestion(ensureChoiceExplanations(nextQuestion));
+        } catch {
+          setQuestion(nextQuestion);
+        }
         return;
       }
-    } catch (e) {
+    } catch {
       setLoadError("Unable to load questions right now. Please try again.");
       return;
     }
 
-    if (poolSize > 0) {
-      if (attempt < MAX_ATTEMPTS) return next(attempt + 1);
-      setSeen((s) => ({ ...s, [scopeKey]: {} }));
-      setLoadError("You have completed this set for now. A fresh round will start automatically.");
+    if (activePoolIds.length > 0) {
+      setLoadError("Unable to load a new question right now. Please try again.");
       return;
     }
 
-    setLoadError("No fixed questions are available for this unit and difficulty yet.");
+    setLoadError("No fixed questions are available for this unit and mode yet.");
   }
 
   function previous() {
@@ -84,216 +207,359 @@ export default function Page() {
   }
 
   useEffect(() => {
-    // load seen map from localStorage
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
       if (raw) {
         const parsed = JSON.parse(raw);
-        // migrate older flat format (id: true) into scoped format under current scope
         const scopeKey = `${unit}::${difficulty}`;
-        const isFlat = Object.values(parsed).every((v: any) => v === true || v === false);
+        const isFlat = Object.values(parsed).every((value: any) => value === true || value === false);
         if (isFlat) {
           setSeen({ [scopeKey]: parsed });
         } else {
           setSeen(parsed);
         }
       }
-    } catch (e) {}
-    // fetch pool for current scope, then request first question
-    (async () => {
-      try {
-        const res = await fetch(`/api/ar-pool?mode=unit&unit=${encodeURIComponent(unit)}&difficulty=${encodeURIComponent(difficulty)}`);
-        const data = await res.json();
-        setPoolSize(data?.size || 0);
-      } catch (e) {
-        setPoolSize(0);
-      }
-      next();
+    } catch {
+      // ignore storage read issues
+    }
+    void (async () => {
+      const ids = await refreshPool();
+      await next(ids);
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     if (!unit || !difficulty) {
-      setPoolSize(0);
+      setPoolIds([]);
       setPreviousQuestions([]);
       setQuestion(null);
       setSelected(null);
       setCrossedOut({});
       setVisibleExplanations({});
-      setLoadError("Select a unit and difficulty first to begin.");
+      setLoadError("Choose a unit and mode to begin.");
       return;
     }
-    // when unit or difficulty changes, refresh pool and load a fresh question
-    (async () => {
+    void (async () => {
       setPreviousQuestions([]);
-      try {
-        const res = await fetch(`/api/ar-pool?mode=unit&unit=${encodeURIComponent(unit)}&difficulty=${encodeURIComponent(difficulty)}`);
-        const data = await res.json();
-        setPoolSize(data?.size || 0);
-      } catch (e) {
-        setPoolSize(0);
-      }
-      next();
+      const ids = await refreshPool();
+      await next(ids);
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [unit, difficulty]);
 
-  // persist seen into localStorage
   useEffect(() => {
-    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(seen)); } catch (e) {}
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(seen));
+    } catch {
+      // ignore storage write issues
+    }
   }, [seen]);
 
+  useEffect(() => {
+    refreshProgress();
+    const handleRefresh = () => refreshProgress();
+    window.addEventListener(STUDY_PROGRESS_EVENT, handleRefresh as EventListener);
+    window.addEventListener("storage", handleRefresh);
+    return () => {
+      window.removeEventListener(STUDY_PROGRESS_EVENT, handleRefresh as EventListener);
+      window.removeEventListener("storage", handleRefresh);
+    };
+  }, [unit, difficulty]);
+
+  function choiceExplain(index: number) {
+    if (!question) return null;
+    if (question.choice_explanations && question.choice_explanations[index]) return question.choice_explanations[index];
+    if (index === question.correct) return question.explain || "Correct option.";
+    return "Incorrect. This option is not the best choice.";
+  }
+
+  if (progressSnapshot === null) {
+    if (isCompactMcq) {
+      return (
+        <main className="grid gap-4">
+          <LoadingSkeleton title="Loading question" lines={5} />
+        </main>
+      );
+    }
+
+    return (
+      <main className="grid gap-4">
+        <PageHeader
+          eyebrow="Unit MCQ Review"
+          title="Target one AP Biology unit at a time."
+          description="Choose a unit, choose a mode, and use explanations plus the redo queue to close specific content gaps fast."
+          actions={<SecondaryLink href="/sims/active-recall">Back to dashboard</SecondaryLink>}
+        />
+        <LoadingSkeleton title="Loading review" lines={5} />
+      </main>
+    );
+  }
+
   return (
-    <div className="study-screen" style={{ padding: 18, width: "100%", fontFamily: "\"Helvetica Neue\", Helvetica, Arial, sans-serif" }}>
-      <h1 style={{ fontSize: 24, fontWeight: 800 }}>Unit MCQ Review</h1>
-      <div className="study-toolbar" style={{ marginTop: 12, display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
-        <div className="study-toolbar-group" style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
-          <label style={{ fontWeight: 700 }}>Difficulty</label>
-          <div style={{ padding: 6, border: "1px solid #e2e8f0", borderRadius: 12, background: "white", minWidth: 0 }}>
-            <select value={difficulty} onChange={(e) => setDifficulty(e.target.value)} style={{ padding: 6, border: "none", background: "transparent", width: "100%" }}>
-              <option value="" disabled>Select difficulty...</option>
-              <option value="easy">Easy (definitions)</option>
-              <option value="hard">Hard (application)</option>
-              <option value="analysis">Analysis (experiment/system)</option>
-            </select>
+    <main className={isCompactMcq ? "grid gap-4" : "grid gap-6 lg:gap-8"}>
+      {!isCompactMcq ? (
+      <PageHeader
+        eyebrow="Unit MCQ Review"
+        title="Target one AP Biology unit at a time."
+        description="Use this route for reteaching, quiz prep, or focused repair when you know which chapter is costing you points."
+        actions={
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <SecondaryLink href="/sims/active-recall">Back to dashboard</SecondaryLink>
+            <SecondaryLink href="/sims/active-recall/ap">Switch to mixed review</SecondaryLink>
+          </div>
+        }
+        aside={
+          <div className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
+            <StatCard label="Selected unit" value={unit || "Choose a unit"} detail="One unit at a time for cleaner repair" tone="blue" />
+            <StatCard label="Current mode" value={difficultyLabel || "Choose a mode"} detail={difficultyDescription} tone={difficultyTone === "slate" ? "neutral" : difficultyTone} />
+            <StatCard label="Redo queue" value={redoCount} detail={redoMissedOnly ? "Redo missed questions is on" : "Available for this unit and mode"} tone="amber" />
+          </div>
+        }
+      />
+      ) : null}
+
+      {!isCompactMcq ? (
+      <SectionCard
+        title="Session setup"
+        description="Pick the unit, choose the level of pressure, and let the session keep feeding you one question at a time without recycling near-duplicates."
+        tone={difficultyTone}
+      >
+        <div className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_minmax(300px,0.8fr)]">
+          <div className="grid gap-4 md:grid-cols-3">
+            <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+              <label className="text-sm font-semibold text-slate-900">Unit</label>
+              <p className="mt-1 text-sm text-slate-500">Stay inside one chapter when you want cleaner repetition and more obvious improvement.</p>
+              <div className="mt-3 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">
+                <select value={unit} onChange={(event) => setUnit(event.target.value)} className="w-full bg-transparent text-sm font-medium text-slate-900 outline-none">
+                  {UNITS.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+              <label className="text-sm font-semibold text-slate-900">Mode</label>
+              <p className="mt-1 text-sm text-slate-500">Switch between direct recall, harder conceptual pressure, and experiment interpretation.</p>
+              <div className="mt-3 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">
+                <select value={difficulty} onChange={(event) => setDifficulty(event.target.value)} className="w-full bg-transparent text-sm font-medium text-slate-900 outline-none">
+                  {DIFFICULTY_OPTIONS.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="mt-3">
+                <ModeBadge label={difficultyLabel} tone={difficultyTone === "slate" ? "neutral" : difficultyTone} />
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+              <label className="text-sm font-semibold text-slate-900">Redo queue</label>
+              <p className="mt-1 text-sm text-slate-500">Use this when you want the session to revisit the questions you are still missing in this exact unit and mode.</p>
+              <label className="mt-4 flex cursor-pointer items-start gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-3">
+                <input type="checkbox" checked={redoMissedOnly} onChange={(event) => setRedoMissedOnly(event.target.checked)} className="mt-1 h-4 w-4" />
+                <span>
+                  <span className="block text-sm font-semibold text-slate-900">Redo missed questions only</span>
+                  <span className="mt-1 block text-sm text-slate-500">{redoCount} questions currently queued for this selection.</span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <div className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
+            <StatCard label="Questions completed" value={progressSnapshot.totalAttempts ?? 0} detail="All recorded MCQ attempts" />
+            <StatCard label="Current streak" value={progressSnapshot.currentStreak ?? 0} detail="Consecutive correct answers" tone="teal" />
+            <StatCard label="Missed queue" value={redoCount} detail="Available for this unit and mode right now" tone="amber" />
           </div>
         </div>
+      </SectionCard>
+      ) : (
+        <div className="rounded-[1.2rem] border border-slate-200 bg-white p-4 shadow-sm">
+          <div className="grid gap-3 md:grid-cols-3">
+            <div className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">
+              <label className="mb-2 block text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Unit</label>
+              <select value={unit} onChange={(event) => setUnit(event.target.value)} className="w-full bg-transparent text-sm font-medium text-slate-900 outline-none">
+                {UNITS.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+            </div>
 
-        <div className="study-toolbar-group" style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
-          <label style={{ fontWeight: 700 }}>Unit</label>
-          <div style={{ padding: 6, border: "1px solid #e2e8f0", borderRadius: 12, background: "white", minWidth: 0 }}>
-            <select value={unit} onChange={(e) => setUnit(e.target.value)} style={{ padding: 6, border: "none", background: "transparent", width: "100%" }}>
-              <option value="" disabled>Select a unit...</option>
-              {UNITS.map((u) => (
-                <option key={u} value={u}>{u}</option>
-              ))}
-            </select>
+            <div className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">
+              <label className="mb-2 block text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Mode</label>
+              <select value={difficulty} onChange={(event) => setDifficulty(event.target.value)} className="w-full bg-transparent text-sm font-medium text-slate-900 outline-none">
+                {DIFFICULTY_OPTIONS.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <label className="flex cursor-pointer items-start gap-3 rounded-xl border border-slate-200 bg-slate-50 px-3 py-3">
+              <input type="checkbox" checked={redoMissedOnly} onChange={(event) => setRedoMissedOnly(event.target.checked)} className="mt-1 h-4 w-4" />
+              <span>
+                <span className="block text-sm font-semibold text-slate-900">Redo missed only</span>
+                <span className="mt-1 block text-sm text-slate-500">{redoCount} queued for this selection.</span>
+              </span>
+            </label>
           </div>
         </div>
+      )}
 
-        <div className="study-toolbar-actions" style={{ marginLeft: "auto", display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
-          <div style={{ padding: 6, border: "1px solid #e2e8f0", borderRadius: 12, background: "white" }}>
-            <button onClick={previous} disabled={previousQuestions.length === 0} style={{ padding: "8px 12px", borderRadius: 8, background: "transparent", border: "none", opacity: previousQuestions.length > 0 ? 1 : 0.45, cursor: previousQuestions.length > 0 ? "pointer" : "not-allowed" }}>Previous question</button>
+      {!question && loadError ? (
+        <SectionCard title="Question unavailable" description={loadError} tone="rose">
+          <div className="flex flex-wrap gap-3">
+            <PrimaryButton onClick={() => void next()}>Try again</PrimaryButton>
+            <SecondaryButton onClick={() => setRedoMissedOnly(false)} disabled={!redoMissedOnly}>
+              Turn off redo mode
+            </SecondaryButton>
           </div>
-          <div style={{ padding: 6, border: "1px solid #e2e8f0", borderRadius: 12, background: "white" }}>
-            <button onClick={() => { void next(); }} disabled={!unit || !difficulty} style={{ padding: "8px 12px", borderRadius: 8, background: "transparent", border: "none", opacity: unit && difficulty ? 1 : 0.45, cursor: unit && difficulty ? "pointer" : "not-allowed" }}>Load new question</button>
-          </div>
-        </div>
-      </div>
+        </SectionCard>
+      ) : null}
 
-      <div style={{ marginTop: 12 }}>
-        {!question && <div style={{ color: "#475569" }}>{loadError || "Click \"New question\" to begin."}</div>}
-        {question && (
-          <div className="soft-card" style={{ border: "1px solid #e2e8f0", padding: 12, borderRadius: 16, width: "100%" }}>
-              {question.experiment && (
-                <div style={{ marginBottom: 10, background: '#fff', padding: 8, borderRadius: 8, border: '1px solid #e2e8f0' }}>
-                  <div style={{ fontWeight: 700 }}>Experiment</div>
-                  <div style={{ marginTop: 6 }}>{question.experiment}</div>
-                </div>
-              )}
-              <div style={{ fontWeight: 800 }}>{question.text}</div>
-              <div style={{ marginTop: 10, display: "grid", gap: 8 }}>
-                {question.choices.map((c: string, i: number) => {
-                  const isSelected = selected === i;
+      {!question && !loadError ? <LoadingSkeleton title="Loading question" lines={4} /> : null}
+
+      {question ? (
+        <SectionCard
+          title="Question"
+          description="Cross out distractors, answer once, then check the explanation panel for the reasoning behind each option."
+          tone={difficultyTone}
+        >
+          <div className="grid gap-4">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-slate-700">
+                {unit}
+              </span>
+              <ModeBadge label={difficultyLabel} tone={difficultyTone === "slate" ? "neutral" : difficultyTone} />
+              {question.topic ? (
+                <span className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-slate-700">
+                  {question.topic}
+                </span>
+              ) : null}
+            </div>
+
+            {question.experiment ? (
+              <div className="rounded-[1.2rem] border border-slate-200 bg-white p-4 shadow-sm">
+                <div className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Experiment</div>
+                <p className="mt-2 text-sm leading-6 text-slate-700">{question.experiment}</p>
+              </div>
+            ) : null}
+
+            {question.image ? (
+              <div className="overflow-hidden rounded-[1.2rem] border border-slate-200 bg-white p-3 shadow-sm">
+                <img
+                  src={question.image.startsWith("/") ? question.image : `/${question.image}`}
+                  alt={question.image_alt || "Question image"}
+                  className="max-h-[320px] w-full rounded-xl object-contain"
+                />
+                {question.image_alt ? <p className="mt-3 text-sm text-slate-500">{question.image_alt}</p> : null}
+              </div>
+            ) : null}
+
+            <div className="rounded-[1.2rem] border border-slate-200 bg-white p-5 shadow-sm">
+              <h2 className="text-lg font-semibold tracking-tight text-slate-950">{question.text}</h2>
+
+              <div className="mt-5 grid gap-3">
+                {question.choices?.map((choice: string, index: number) => {
                   const isDisabled = selected !== null;
-                  const isCorrectChoice = i === question.correct;
-                  const isWrongSelected = selected === i && i !== question.correct;
-                  const bg = selected !== null
+                  const isCorrectChoice = index === question.correct;
+                  const isWrongSelected = selected === index && !isCorrectChoice;
+                  const choiceClass = selected !== null
                     ? isCorrectChoice
-                      ? "#dcfce7"
+                      ? "border-slate-300 bg-slate-100 text-[#1f5a32]"
                       : isWrongSelected
-                        ? "#fee2e2"
-                        : "#fff"
-                    : "#fff";
-                  const choiceBorder = selected !== null
-                    ? isCorrectChoice
-                      ? "1px solid #16a34a"
-                      : isWrongSelected
-                        ? "1px solid #ef4444"
-                        : "1px solid #e2e8f0"
-                    : "1px solid #e2e8f0";
-
-                  function choiceExplain(idx: number) {
-                    if (question.choice_explanations && question.choice_explanations[idx]) return question.choice_explanations[idx];
-                    if (idx === question.correct) return question.explain || "Correct option.";
-                    return "Incorrect. This option is not the best choice.";
-                  }
+                        ? "border-slate-300 bg-slate-100"
+                        : "border-slate-200 bg-white"
+                    : "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50";
 
                   return (
-                    <div key={i}>
-                      <div className="choice-row" style={{ display: "flex", gap: 8, alignItems: "stretch", flexWrap: "wrap" }}>
+                    <div key={index} className="grid gap-2">
+                      <div className="flex flex-col gap-2 sm:flex-row">
                         <button
-                          className="choice-main"
                           onClick={() => {
-                            setSelected(i);
-                            setVisibleExplanations({ [i]: true });
+                            setSelected(index);
+                            setVisibleExplanations({ [index]: true });
+                            recordMcqAttempt(question, { selectedIndex: index, mode: "unit", unit });
+                            refreshProgress();
                           }}
                           disabled={isDisabled}
-                          style={{ textAlign: "left", padding: 8, borderRadius: 8, border: choiceBorder, background: bg, flex: 1, textDecoration: crossedOut[i] ? "line-through" : "none", opacity: crossedOut[i] ? 0.55 : 1 }}
+                          className={`flex-1 rounded-2xl border px-4 py-3 text-left text-sm text-slate-800 shadow-sm transition ${choiceClass} ${crossedOut[index] ? "opacity-55 line-through" : ""}`}
                         >
-                          {String.fromCharCode(65 + i)}. {c}
+                          <span className="font-semibold text-slate-950">{String.fromCharCode(65 + index)}.</span> {choice}
                         </button>
+
                         <button
-                          className="choice-icon"
-                          onClick={() => setCrossedOut((s) => ({ ...s, [i]: !s[i] }))}
-                          aria-label={crossedOut[i] ? "Uncross option" : "Cross out option"}
-                          style={{
-                            width: 36,
-                            height: 36,
-                            borderRadius: 999,
-                            border: `1px solid ${crossedOut[i] ? "#fca5a5" : "#e2e8f0"}`,
-                            background: crossedOut[i] ? "#fee2e2" : "white",
-                            color: "#0f172a",
-                            fontWeight: 800,
-                            lineHeight: 1,
-                          }}
+                          onClick={() => setCrossedOut((current) => ({ ...current, [index]: !current[index] }))}
+                          aria-label={crossedOut[index] ? "Uncross option" : "Cross out option"}
+                          className={`rounded-2xl border px-4 py-3 text-sm font-semibold shadow-sm transition ${crossedOut[index] ? "border-slate-300 bg-slate-100 text-slate-800" : "border-slate-200 bg-white text-slate-700 hover:bg-slate-50"}`}
                         >
-                          X
+                          {crossedOut[index] ? "Undo" : "Cross out"}
                         </button>
-                        {selected !== null && (
+
+                        {selected !== null ? (
                           <button
-                            className="choice-secondary"
-                            onClick={() => setVisibleExplanations((s) => ({ ...s, [i]: !s[i] }))}
-                            style={{
-                              padding: "8px 12px",
-                              borderRadius: 8,
-                              border: `1px solid ${visibleExplanations[i] ? "#93c5fd" : "#e2e8f0"}`,
-                              background: visibleExplanations[i] ? "#dbeafe" : "white",
-                              color: "#0f172a",
-                            }}
+                            onClick={() => setVisibleExplanations((current) => ({ ...current, [index]: !current[index] }))}
+                            className={`rounded-2xl border px-4 py-3 text-sm font-semibold shadow-sm transition ${visibleExplanations[index] ? "border-slate-300 bg-slate-100 text-[#1f5a32]" : "border-slate-200 bg-white text-slate-700 hover:bg-slate-50"}`}
                           >
-                            Explanation
+                            {visibleExplanations[index] ? "Hide explanation" : "Show explanation"}
                           </button>
-                        )}
+                        ) : null}
                       </div>
 
-                      {visibleExplanations[i] && selected !== null && (
-                        <div style={{ marginTop: 6, padding: 8, background: "#f8fafc", borderRadius: 6, border: "1px solid #e6eef6", color: i === question.correct ? "#064e3b" : "#334155" }}>
-                          {choiceExplain(i)}
+                      {visibleExplanations[index] && selected !== null ? (
+                        <div className={`rounded-2xl border px-4 py-3 text-sm leading-6 ${isCorrectChoice ? "border-slate-300 bg-slate-100 text-[#1f5a32]" : "border-slate-200 bg-slate-50 text-slate-700"}`}>
+                          {choiceExplain(index)}
                         </div>
-                      )}
+                      ) : null}
                     </div>
                   );
                 })}
               </div>
-              {selected !== null && (
-                <div style={{ marginTop: 12 }}>
-                  <div style={{ fontWeight: 800 }}>{selected === question.correct ? "Correct" : "Incorrect"}</div>
-                  <div style={{ marginTop: 6 }}>{/* summary explanation shown above per-choice when available */}</div>
-                  <div style={{ marginTop: 10 }}>
-                    <div style={{ padding: 6, border: "1px solid #e2e8f0", borderRadius: 12, background: "white", display: "inline-block" }}>
-                      <button onClick={() => { void next(); }} style={{ padding: 8, borderRadius: 8, border: "none", background: "transparent" }}>Next</button>
-                    </div>
-                  </div>
+
+              {selected !== null ? (
+                <div className={`mt-5 rounded-2xl border px-4 py-4 ${selected === question.correct ? "border-slate-300 bg-slate-100" : "border-slate-300 bg-slate-100"}`}>
+                  <div className="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">Result</div>
+                  <div className="mt-2 text-lg font-semibold tracking-tight text-slate-950">{selected === question.correct ? "Correct" : "Incorrect"}</div>
+                  <p className="mt-2 text-sm leading-6 text-slate-700">Per-choice explanations are shown above so you can compare the correct reasoning against the distractors instead of memorizing the answer key.</p>
                 </div>
-              )}
+              ) : null}
+
+              <div className="mt-5 flex flex-wrap gap-3">
+                <SecondaryButton onClick={previous} disabled={previousQuestions.length === 0}>
+                  Previous question
+                </SecondaryButton>
+                <PrimaryButton onClick={() => void next()} disabled={selected === null}>
+                  Next question
+                </PrimaryButton>
+              </div>
             </div>
-        )}
-        <div className="tip-card" style={{ marginTop: 16, padding: 12, background: "#fefce8", border: "1px solid #fde047", borderRadius: 10, color: "#713f12", fontSize: 14 }}>
-          <span style={{ fontWeight: 800 }}>Tip</span> — If there are any vocabulary words that you are unfamiliar with, Google them! It will help you understand the biological system better and makes sure it doesn&#39;t come back to haunt you on the exam.
-        </div>
-      </div>
-    </div>
+          </div>
+        </SectionCard>
+      ) : null}
+
+      {!isCompactMcq ? <TipCard label="Study tip">If a term or process is slowing you down, define it out loud in one sentence before moving to the next question. That keeps review active instead of passive.</TipCard> : null}
+    </main>
+  );
+}
+
+export default function Page() {
+  return (
+    <Suspense
+      fallback={
+        <main className="grid gap-4">
+          <LoadingSkeleton title="Loading review" lines={5} />
+        </main>
+      }
+    >
+      <PageContent />
+    </Suspense>
   );
 }

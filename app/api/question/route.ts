@@ -1,35 +1,11 @@
 import { NextResponse } from 'next/server'
+import { areQuestionsTooSimilar, getQuestionTopicKey } from '../../sims/active-recall/question-similarity';
 
-// Simple in-memory rate limiter for development use.
-// IP -> { count, windowStart }
-const RATE = new Map();
-
-// Note: caching of AI-generated questions disabled to ensure fresh output during testing
-const WINDOW_MS = 60 * 1000; // 1 minute
-const MAX_PER_WINDOW = 20; // requests per IP per window
-
-function getIp(req: Request) {
-  const fwd = req.headers.get('x-forwarded-for');
-  const real = req.headers.get('x-real-ip');
-  return (fwd || real || 'local').split(',')[0].trim();
+function isQuestionDatasetFile(fileName: string) {
+  return /^unit\d+\.json$/i.test(fileName);
 }
 
 export async function POST(req: Request) {
-  const now = Date.now();
-  const ip = getIp(req);
-
-  // rate limit
-  const state = RATE.get(ip) || { count: 0, windowStart: now };
-  if (now - state.windowStart > WINDOW_MS) {
-    state.count = 0;
-    state.windowStart = now;
-  }
-  state.count += 1;
-  RATE.set(ip, state);
-  if (state.count > MAX_PER_WINDOW) {
-    return NextResponse.json({ error: 'Rate limit exceeded' }, { status: 429 });
-  }
-
   const body = await req.json().catch(() => ({}));
   const { unit = null, difficulty = 'easy' } = body;
 
@@ -39,7 +15,7 @@ export async function POST(req: Request) {
     const path = await Promise.resolve().then(() => require('path'));
     const datasetsDir = path.join(process.cwd(), 'app', 'sims', 'active-recall', 'datasets');
     if (fs.existsSync(datasetsDir)) {
-      const files = fs.readdirSync(datasetsDir).filter((f: string) => /^unit\d+\.json$/i.test(f));
+      const files = fs.readdirSync(datasetsDir).filter((f: string) => isQuestionDatasetFile(f));
       const allQuestions: any[] = [];
 
       // If a specific dataset file was requested, read only that file when it exists
@@ -89,6 +65,13 @@ export async function POST(req: Request) {
         return q;
       });
 
+      const questionsById = new Map<string, any>();
+      for (const question of candidates) {
+        if (question?.id) {
+          questionsById.set(String(question.id), question);
+        }
+      }
+
       // If unit specified (e.g., "Unit 1. Chemistry of Life"), filter by id prefix convention (u<unit>-...)
       if (unit && typeof unit === 'string' && /Unit\s*\d+/i.test(unit)) {
         const m = unit.match(/Unit\s*(\d+)/i);
@@ -101,6 +84,64 @@ export async function POST(req: Request) {
       // Filter by difficulty if present
       if (difficulty) {
         candidates = candidates.filter((q: any) => q.difficulty === difficulty);
+      }
+
+      if (Array.isArray(body.questionIds) && body.questionIds.length > 0) {
+        const allowedIds = new Set(body.questionIds.map((id: unknown) => String(id)));
+        candidates = candidates.filter((q: any) => q?.id && allowedIds.has(String(q.id)));
+      }
+
+      // In analysis mode, surface image-based questions first when they exist
+      // in the remaining candidate pool so users can actually encounter them.
+      if (difficulty === 'analysis') {
+        const imageCandidates = candidates.filter((q: any) => typeof q?.image === 'string' && q.image.length > 0);
+        if (imageCandidates.length > 0) {
+          candidates = imageCandidates;
+        }
+      }
+
+      const recentQuestionIds = Array.isArray(body.recentQuestionIds)
+        ? body.recentQuestionIds.map((id: unknown) => String(id))
+        : [];
+      const recentQuestions = recentQuestionIds
+        .map((id: string) => questionsById.get(id))
+        .filter(Boolean);
+
+      const avoidSimilarToQuestionIds = Array.isArray(body.avoidSimilarToQuestionIds)
+        ? body.avoidSimilarToQuestionIds.map((id: unknown) => String(id))
+        : [];
+      const avoidSimilarQuestions = Array.from(
+        new Map(
+          avoidSimilarToQuestionIds
+            .map((id: string) => {
+              const question = questionsById.get(id);
+              return question ? [id, question] : null;
+            })
+            .filter(Boolean) as Array<[string, any]>
+        ).values()
+      );
+
+      const dissimilarCandidates = avoidSimilarQuestions.length > 0
+        ? candidates.filter((candidate: any) => !avoidSimilarQuestions.some((previousQuestion) => areQuestionsTooSimilar(candidate, previousQuestion)))
+        : candidates;
+
+      const recentTopicKeys = new Set(
+        recentQuestions
+          .map((question: any) => getQuestionTopicKey(question))
+          .filter(Boolean)
+      );
+
+      const topicSpacedCandidates = recentTopicKeys.size > 0
+        ? dissimilarCandidates.filter((candidate: any) => {
+            const topicKey = getQuestionTopicKey(candidate);
+            return !topicKey || !recentTopicKeys.has(topicKey);
+          })
+        : dissimilarCandidates;
+
+      if (topicSpacedCandidates.length > 0) {
+        candidates = topicSpacedCandidates;
+      } else if (dissimilarCandidates.length > 0) {
+        candidates = dissimilarCandidates;
       }
 
       if (candidates.length > 0) {

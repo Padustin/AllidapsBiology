@@ -1,4 +1,29 @@
 
+import Link from "next/link";
+
+const MATH_FONT = '"Cambria Math", "Times New Roman", serif';
+
+function Fraction({ numerator, denominator, borderColor, compact = false }: { numerator: React.ReactNode; denominator: React.ReactNode; borderColor: string; compact?: boolean }) {
+  return (
+    <span
+      style={{
+        display: "inline-flex",
+        flexDirection: "column",
+        alignItems: "center",
+        lineHeight: compact ? 1.05 : 1.1,
+        whiteSpace: "nowrap",
+        fontFamily: MATH_FONT,
+        fontWeight: 700,
+        verticalAlign: "middle",
+      }}
+    >
+      <span style={{ padding: compact ? "0 4px" : "0 6px" }}>{numerator}</span>
+      <span style={{ width: "100%", borderTop: `${compact ? 1 : 2}px solid ${borderColor}`, margin: compact ? "1px 0" : "2px 0" }} />
+      <span style={{ padding: compact ? "0 4px" : "0 6px" }}>{denominator}</span>
+    </span>
+  );
+}
+
 export default function Page() {
   const border = "#e2e8f0";
   const cardBg = "#f8fafc";
@@ -18,11 +43,17 @@ export default function Page() {
     <div className="study-screen" style={{ display: "grid", gap: 16, color: text }}>
       <div style={{ border: `1px solid ${border}`, borderRadius: 18, padding: 14, background: cardBg }}>
         <h1 style={{ margin: 0, fontSize: 26, fontWeight: 900, color: heading }} className="text-[clamp(1.65rem,4.4vw,2rem)]">
-          Chi-Square Explanation (AP Bio)
+          Chi-Square Concept Guide
         </h1>
         <p style={{ marginTop: 10, lineHeight: 1.45 }}>
-          Chi-square (χ²) tests whether observed counts differ from expected counts more than you'd expect by chance.
+          Use this as the chi-square-specific companion to the AP Bio Math & Stats Center. Chi-square (χ²) tests whether observed counts differ from expected counts more than you'd expect by chance.
         </p>
+        <Link
+          href="/sims/chi-square"
+          style={{ display: "inline-flex", marginTop: 10, color: heading, fontWeight: 800, textDecoration: "none" }}
+        >
+          Back to the quantitative center
+        </Link>
       </div>
 
       <div style={{ border: `1px solid ${border}`, borderRadius: 18, padding: 14, background: cardBg }}>
@@ -33,11 +64,7 @@ export default function Page() {
           <li><b>Expected (E):</b> the counts you'd expect if H₀ were true.</li>
           <li>
             <b>χ² statistic:</b> sum of{" "}
-            <span style={{ display: "inline-flex", flexDirection: "column", alignItems: "center", lineHeight: 1.05, verticalAlign: "middle" }}>
-              <span style={{ padding: "0 4px" }}>(O−E)²</span>
-              <span style={{ width: "100%", borderTop: `1px solid ${heading}`, margin: "1px 0" }} />
-              <span style={{ padding: "0 4px" }}>E</span>
-            </span>
+            <Fraction numerator="(O−E)²" denominator="E" borderColor={heading} compact />
             {" "}across categories; larger values mean observed counts are farther from expectations.
           </li>
           <li><b>Degrees of freedom (df):</b> number of categories − 1.</li>
@@ -53,7 +80,7 @@ export default function Page() {
             borderRadius: 14,
             padding: 12,
             background: "white",
-            fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace",
+            fontFamily: MATH_FONT,
             fontSize: 16,
             display: "flex",
             alignItems: "center",
@@ -62,11 +89,7 @@ export default function Page() {
           }}
         >
           <span>χ² = Σ</span>
-          <span style={{ display: "inline-flex", flexDirection: "column", alignItems: "center", lineHeight: 1.15 }}>
-            <span style={{ padding: "0 6px" }}>(O − E)²</span>
-            <span style={{ width: "100%", borderTop: `2px solid ${heading}`, margin: "2px 0" }} />
-            <span style={{ padding: "0 6px" }}>E</span>
-          </span>
+          <Fraction numerator="(O − E)²" denominator="E" borderColor={heading} />
         </div>
         <p style={{ marginTop: 10 }}>Compute each category's contribution using the fraction above, then add them.</p>
       </div>
@@ -103,11 +126,7 @@ export default function Page() {
                   <th style={{ borderBottom: `1px solid ${border}`, padding: 8 }}>O</th>
                   <th style={{ borderBottom: `1px solid ${border}`, padding: 8 }}>E</th>
                   <th style={{ borderBottom: `1px solid ${border}`, padding: 8 }}>
-                    <span style={{ display: "inline-flex", flexDirection: "column", alignItems: "center", lineHeight: 1.1 }}>
-                      <span>(O−E)²</span>
-                      <span style={{ width: "100%", borderTop: `1px solid ${heading}`, margin: "1px 0" }} />
-                      <span>E</span>
-                    </span>
+                    <Fraction numerator="(O−E)²" denominator="E" borderColor={heading} compact />
                   </th>
                 </tr>
               </thead>
@@ -119,11 +138,7 @@ export default function Page() {
                     <td style={{ borderBottom: `1px solid ${border}`, padding: 8 }}>{E[i].toFixed(0)}</td>
                     <td style={{ borderBottom: `1px solid ${border}`, padding: 8 }}>
                       <span style={{ display: "inline-flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
-                        <span style={{ display: "inline-flex", flexDirection: "column", alignItems: "center", lineHeight: 1.05 }}>
-                          <span style={{ padding: "0 4px" }}>({o}−{E[i].toFixed(0)})²</span>
-                          <span style={{ width: "100%", borderTop: `1px solid ${heading}`, margin: "1px 0" }} />
-                          <span style={{ padding: "0 4px" }}>{E[i].toFixed(0)}</span>
-                        </span>
+                        <Fraction numerator={`(${o}−${E[i].toFixed(0)})²`} denominator={E[i].toFixed(0)} borderColor={heading} compact />
                         <span>= {contrib[i].toFixed(3)}</span>
                       </span>
                     </td>
@@ -147,7 +162,7 @@ export default function Page() {
             <li><b>Null hypothesis (H₀):</b> a hypothesis that states that the variables (or things being changed in an experiment) will not result in a real difference; deviations are due to random chance. For the coin toss example H₀ is: the coin is fair (50/50).</li>
             <li><b>Observed (O):</b> 60 heads, 40 tails — these are the counts you actually recorded.</li>
             <li><b>Expected (E):</b> 50 heads, 50 tails if the coin is fair.</li>
-            <li><b>χ²:</b> computes how far 60/40 is from 50/50 by summing (O−E)² over E for heads and tails.</li>
+            <li><b>χ²:</b> computes how far 60/40 is from 50/50 by summing <Fraction numerator="(O−E)²" denominator="E" borderColor={heading} compact /> for heads and tails.</li>
             <li><b>df:</b> categories − 1 = 1 for a two-outcome coin toss.</li>
             <li><b>p-value:</b> the probability of seeing a 60/40 (or more extreme) result if the coin is fair; a small p suggests the coin may not be fair.</li>
           </ul>
