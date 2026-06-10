@@ -22,7 +22,6 @@ const CATEGORY_OPTIONS: Array<{ value: FeedbackCategory; label: string; descript
 
 export default function FeedbackPage() {
   const [category, setCategory] = useState<FeedbackCategory>("content");
-  const [page, setPage] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
@@ -39,7 +38,6 @@ export default function FeedbackPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           category,
-          page,
           email,
           message,
         }),
@@ -54,7 +52,7 @@ export default function FeedbackPage() {
 
       setStatus("success");
       setStatusMessage("Thanks, your feedback was sent.");
-      setPage("");
+      // ...existing code...
       setEmail("");
       setMessage("");
       setCategory("content");
@@ -66,19 +64,6 @@ export default function FeedbackPage() {
 
   return (
     <main className="grid gap-6 lg:gap-8">
-      <PageHeader
-        eyebrow="Feedback"
-        title="Help improve the AP Biology platform."
-        description="Use this form to report bugs, flag weak content, request features, or call out anything that felt confusing. Anonymous feedback is fine, and a reply email is optional."
-        aside={
-          <div className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
-            <StatCard label="Best for" value="Real friction" detail="Tell me where the site cost you time or clarity" tone="rose" />
-            <StatCard label="Useful details" value="Page + issue" detail="Specific routes, prompts, or workflows help the most" tone="amber" />
-            <StatCard label="Reply email" value="Optional" detail="Leave it blank if you want to stay anonymous" tone="blue" />
-          </div>
-        }
-      />
-
       <section className="grid gap-4 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)]">
         <SectionCard
           title="Send feedback"
@@ -99,16 +84,6 @@ export default function FeedbackPage() {
                   </select>
                 </div>
               </label>
-
-              <label className="grid gap-2 text-sm font-semibold text-slate-900">
-                Page or route
-                <input
-                  value={page}
-                  onChange={(event) => setPage(event.target.value)}
-                  placeholder="Examples: /sims/active-recall/ap or Cell Simulation"
-                  className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-[#1f5a32] focus:ring-2 focus:ring-[#1f5a32]/20"
-                />
-              </label>
             </div>
 
             <label className="grid gap-2 text-sm font-semibold text-slate-900">
@@ -118,7 +93,7 @@ export default function FeedbackPage() {
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
                 placeholder="Leave blank if you do not want a reply"
-                className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-[#1f5a32] focus:ring-2 focus:ring-[#1f5a32]/20"
+                className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-[#5d6bff] focus:ring-2 focus:ring-[#5d6bff]/20"
               />
             </label>
 
@@ -131,7 +106,7 @@ export default function FeedbackPage() {
                 minLength={10}
                 rows={8}
                 placeholder="Examples: The explanation after question 3 never clarified why choice B was wrong. The FRQ page needs a clearer way to switch between Foundation and FRQ mode. The graph-slope tool should show one worked example before the calculator."
-                className="rounded-xl border border-slate-200 bg-white px-3 py-3 text-sm text-slate-900 outline-none transition focus:border-[#1f5a32] focus:ring-2 focus:ring-[#1f5a32]/20"
+                className="rounded-xl border border-slate-200 bg-white px-3 py-3 text-sm text-slate-900 outline-none transition focus:border-[#5d6bff] focus:ring-2 focus:ring-[#5d6bff]/20"
               />
             </label>
 
@@ -140,7 +115,7 @@ export default function FeedbackPage() {
                 {status === "sending" ? "Sending..." : "Send feedback"}
               </PrimaryButton>
               {statusMessage ? (
-                <div className={`text-sm font-semibold ${status === "success" ? "text-[#1f5a32]" : "text-slate-700"}`}>{statusMessage}</div>
+                <div className={`text-sm font-semibold ${status === "success" ? "text-[#5b46d8]" : "text-slate-700"}`}>{statusMessage}</div>
               ) : null}
             </div>
           </form>

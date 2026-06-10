@@ -17,6 +17,11 @@ const NAV_ITEMS: NavItem[] = [
     matches: (pathname) => pathname === "/",
   },
   {
+    href: "/study",
+    label: "Study",
+    matches: (pathname) => pathname.startsWith("/study"),
+  },
+  {
     href: "/sims/active-recall",
     label: "Practice",
     matches: (pathname) => pathname.startsWith("/sims/active-recall") && !pathname.startsWith("/sims/active-recall/frq"),
@@ -50,7 +55,7 @@ const NAV_ITEMS: NavItem[] = [
 
 function navLinkClass(isActive: boolean) {
   if (isActive) {
-    return "rounded-full bg-[#1f5a32] px-4 py-2 text-sm font-semibold text-white shadow-sm";
+    return "accent-gradient rounded-full px-4 py-2 text-sm font-semibold text-white shadow-sm";
   }
 
   return "rounded-full border border-transparent px-4 py-2 text-sm font-medium text-slate-600 transition hover:border-slate-200 hover:bg-white hover:text-slate-900";
@@ -79,7 +84,7 @@ export function AppShell({ children }: { children: ReactNode }) {
           </nav>
 
           <div className="hidden shrink-0 items-center gap-3 xl:flex">
-            <div className="rounded-full bg-[#1f5a32] px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-white">
+            <div className="accent-gradient rounded-full px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-white">
               Built for AP Bio students
             </div>
             <div className="rounded-full border border-slate-300 bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-600">
@@ -105,7 +110,7 @@ export function AppShell({ children }: { children: ReactNode }) {
             Built by Justin A Padilla. Designed for fast AP Biology review, targeted practice, and clearer explanations.
           </div>
           <div className="flex flex-wrap items-center gap-4 text-sm">
-            <Link href="/sims/feedback" className="font-medium text-slate-700 transition hover:text-[#1f5a32]">
+            <Link href="/sims/feedback" className="font-medium text-slate-700 transition hover:text-[color:var(--accent-text)]">
               Share feedback
             </Link>
             <span>Updated 2026</span>

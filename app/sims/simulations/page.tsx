@@ -1,7 +1,7 @@
 "use client";
 
 import React, { type CSSProperties, useEffect, useRef, useState } from "react";
-import { PageHeader, SecondaryLink, SectionCard, StatCard } from "../../components/ui/study-kit";
+import { SectionCard } from "../../components/ui/study-kit";
 
 type OrganelleKey =
   | "nucleolus"
@@ -361,7 +361,7 @@ function CentralDogmaOverlay({
           <path
             d={matureLeftCapPath}
             fill="none"
-            stroke="#1f5a32"
+            stroke="#5d6bff"
             strokeWidth="6"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -886,9 +886,9 @@ function DetailPanel({ selected, onBack }: { selected: OrganelleKey; onBack: () 
               borderRadius: 999,
               width: 34,
               height: 34,
-              border: stepIndex === index ? "1px solid #1f5a32" : "1px solid #cbd5e1",
-              background: stepIndex === index ? "#e5e7eb" : "#ffffff",
-              color: stepIndex === index ? "#1f5a32" : "#0f172a",
+              border: stepIndex === index ? "1px solid #5d6bff" : "1px solid #cbd5e1",
+              background: stepIndex === index ? "#eef2ff" : "#ffffff",
+              color: stepIndex === index ? "#5b46d8" : "#0f172a",
               fontWeight: 700,
               cursor: "pointer",
             }}
@@ -897,7 +897,7 @@ function DetailPanel({ selected, onBack }: { selected: OrganelleKey; onBack: () 
           </button>
         ))}
 
-        <button onClick={() => setStepIndex((s) => Math.min(s + 1, max))} style={{ border: "1px solid #1f5a32", background: "#e5e7eb", color: "#1f5a32", borderRadius: 10, padding: "8px 12px", fontWeight: 700, cursor: "pointer" }}>
+        <button onClick={() => setStepIndex((s) => Math.min(s + 1, max))} style={{ border: "1px solid #5d6bff", background: "#eef2ff", color: "#5b46d8", borderRadius: 10, padding: "8px 12px", fontWeight: 700, cursor: "pointer" }}>
           Next
         </button>
         <button onClick={() => setStepIndex(0)} style={{ border: "1px solid #94a3b8", background: "#ffffff", color: "#0f172a", borderRadius: 10, padding: "8px 12px", fontWeight: 700, cursor: "pointer" }}>
@@ -983,20 +983,6 @@ export default function CompleteCellSimulationPage() {
         }
       `}</style>
 
-      <PageHeader
-        eyebrow="Cell Simulation"
-        title="Explore the cell as a working system."
-        description="Click organelles, inspect their roles, and run the central dogma overlay when you want a visual walkthrough of transcription, translation, and protein flow inside the cell."
-        actions={<SecondaryLink href="/sims/active-recall">Back to practice</SecondaryLink>}
-        aside={
-          <div className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
-            <StatCard label="Best for" value="Visual review" detail="Useful when structure and location matter" tone="blue" />
-            <StatCard label="Overlay mode" value={dogmaMode === "guided" ? "Guided" : "Plain"} detail="Toggle extra explanation on top of the animation" tone="teal" />
-            <StatCard label="Selected view" value={selected ? ORGANELLES[selected].name : "Whole cell"} detail={selected ? "Detail panel is open" : "Interactive cell map is active"} tone="amber" />
-          </div>
-        }
-      />
-
       <SectionCard
         title={selected ? ORGANELLES[selected].name : "Interactive model"}
         description={selected ? "Use the back button inside the detail panel to return to the full cell map." : "Click any organelle to inspect its role, or run the central dogma overlay for a guided pathway view."}
@@ -1008,9 +994,9 @@ export default function CompleteCellSimulationPage() {
               type="button"
               onClick={replayCentralDogma}
               style={{
-                border: "1px solid #1f5a32",
-                background: "#e5e7eb",
-                color: "#1f5a32",
+                border: "1px solid #5d6bff",
+                background: "#eef2ff",
+                color: "#5b46d8",
                 borderRadius: 12,
                 padding: "10px 14px",
                 fontWeight: 800,

@@ -1,0 +1,402 @@
+[
+  {
+    "id": "stats-sav-1",
+    "difficulty": "hard",
+    "topic": "surface area : volume",
+    "text": "A cube-shaped cell has side length 1. What is its surface-area-to-volume ratio?",
+    "choices": [
+      "6",
+      "12",
+      "1",
+      "3"
+    ],
+    "correct": 0,
+    "explain": "For a cube, surface area = 6s\u00b2 and volume = s\u00b3. The ratio is therefore 6s\u00b2/s\u00b3 = 6/s = 6.",
+    "choice_explanations": [
+      "Correct. SA:V for a cube of side 1 is 6/1 = 6.",
+      "Incorrect. 12 would come from misapplying the formula and is not the SA:V ratio for a side length of 1.",
+      "Incorrect. 1 is not the SA:V ratio; it reflects the cell's volume or side length rather than surface area per volume.",
+      "Incorrect. This applies the formula incorrectly and underestimates the ratio."
+    ]
+  },
+  {
+    "id": "stats-sav-2",
+    "difficulty": "hard",
+    "topic": "surface area : volume",
+    "text": "A cube-shaped cell has side length 2. What is its surface-area-to-volume ratio?",
+    "choices": [
+      "24",
+      "1.5",
+      "8",
+      "3"
+    ],
+    "correct": 3,
+    "explain": "For a cube, surface area = 6s\u00b2 and volume = s\u00b3. The ratio is therefore 6s\u00b2/s\u00b3 = 6/s = 3.",
+    "choice_explanations": [
+      "Incorrect. 24 is the surface area, not the ratio.",
+      "Incorrect. This applies the formula incorrectly and underestimates the ratio.",
+      "Incorrect. 8 is not the SA:V ratio; it reflects the cell's volume or side length rather than surface area per volume.",
+      "Correct. SA:V for a cube of side 2 is 6/2 = 3."
+    ]
+  },
+  {
+    "id": "stats-sav-3",
+    "difficulty": "hard",
+    "topic": "surface area : volume",
+    "text": "A cube-shaped cell has side length 3. What is its surface-area-to-volume ratio?",
+    "choices": [
+      "54",
+      "2",
+      "27",
+      "1"
+    ],
+    "correct": 1,
+    "explain": "For a cube, surface area = 6s\u00b2 and volume = s\u00b3. The ratio is therefore 6s\u00b2/s\u00b3 = 6/s = 2.",
+    "choice_explanations": [
+      "Incorrect. 54 is the surface area, not the ratio.",
+      "Correct. SA:V for a cube of side 3 is 6/3 = 2.",
+      "Incorrect. 27 is not the SA:V ratio; it reflects the cell's volume or side length rather than surface area per volume.",
+      "Incorrect. This applies the formula incorrectly and underestimates the ratio."
+    ]
+  },
+  {
+    "id": "stats-sav-4",
+    "difficulty": "hard",
+    "topic": "surface area : volume",
+    "text": "A cube-shaped cell has side length 4. What is its surface-area-to-volume ratio?",
+    "choices": [
+      "64",
+      "96",
+      "1.5",
+      "0.75"
+    ],
+    "correct": 2,
+    "explain": "For a cube, surface area = 6s\u00b2 and volume = s\u00b3. The ratio is therefore 6s\u00b2/s\u00b3 = 6/s = 1.5.",
+    "choice_explanations": [
+      "Incorrect. 64 is not the SA:V ratio; it reflects the cell's volume or side length rather than surface area per volume.",
+      "Incorrect. 96 is the surface area, not the ratio.",
+      "Correct. SA:V for a cube of side 4 is 6/4 = 1.5.",
+      "Incorrect. This applies the formula incorrectly and underestimates the ratio."
+    ]
+  },
+  {
+    "id": "stats-sav-5",
+    "difficulty": "hard",
+    "topic": "surface area : volume",
+    "text": "A cube-shaped cell has side length 6. What is its surface-area-to-volume ratio?",
+    "choices": [
+      "0.5",
+      "216",
+      "1",
+      "6"
+    ],
+    "correct": 2,
+    "explain": "For a cube, surface area = 6s\u00b2 and volume = s\u00b3. The ratio is therefore 6s\u00b2/s\u00b3 = 6/s = 1.",
+    "choice_explanations": [
+      "Incorrect. This applies the formula incorrectly and underestimates the ratio.",
+      "Incorrect. 216 is the surface area, not the ratio.",
+      "Correct. SA:V for a cube of side 6 is 6/6 = 1.",
+      "Incorrect. 6 is not the SA:V ratio; it reflects the cell's volume or side length rather than surface area per volume."
+    ]
+  },
+  {
+    "id": "stats-sav-6",
+    "difficulty": "hard",
+    "topic": "surface area : volume",
+    "text": "A cube-shaped cell has side length 8. What is its surface-area-to-volume ratio?",
+    "choices": [
+      "512",
+      "0.75",
+      "384",
+      "0.38"
+    ],
+    "correct": 1,
+    "explain": "For a cube, surface area = 6s\u00b2 and volume = s\u00b3. The ratio is therefore 6s\u00b2/s\u00b3 = 6/s = 0.75.",
+    "choice_explanations": [
+      "Incorrect. 512 is not the SA:V ratio; it reflects the cell's volume or side length rather than surface area per volume.",
+      "Correct. SA:V for a cube of side 8 is 6/8 = 0.75.",
+      "Incorrect. 384 is the surface area, not the ratio.",
+      "Incorrect. This applies the formula incorrectly and underestimates the ratio."
+    ]
+  },
+  {
+    "id": "stats-sav-7",
+    "difficulty": "hard",
+    "topic": "surface area : volume",
+    "text": "A spherical or cube-like cell doubles its linear dimension while keeping the same general shape. Which change best describes what happens?",
+    "choices": [
+      "Surface area stays the same, but volume doubles.",
+      "Surface area increases 8\u00d7, volume increases 4\u00d7, so SA:V increases.",
+      "Surface area increases 4\u00d7, volume increases 8\u00d7, so SA:V decreases.",
+      "Surface area and volume both increase 2\u00d7, so SA:V stays the same."
+    ],
+    "correct": 2,
+    "explain": "When linear dimensions double, area-related measures scale by the square and volume-related measures scale by the cube. Because volume grows faster than surface area, the SA:V ratio falls.",
+    "choice_explanations": [
+      "Incorrect. Both surface area and volume change when size changes.",
+      "Incorrect. This reverses how area and volume scale.",
+      "Correct. Area scales by the square and volume by the cube, so the ratio falls as size increases.",
+      "Incorrect. Linear dimensions do not scale area and volume the same way."
+    ]
+  },
+  {
+    "id": "stats-sav-8",
+    "difficulty": "hard",
+    "topic": "surface area : volume",
+    "text": "A student compares two geometrically similar cells, one with side length 2 and one with side length 4. Which cell has the higher SA:V ratio?",
+    "choices": [
+      "They have the same ratio because their shapes match",
+      "The larger cell with side length 4",
+      "The answer cannot be predicted without mass",
+      "The smaller cell with side length 2"
+    ],
+    "correct": 3,
+    "explain": "For similar shapes, SA:V is inversely related to size. The smaller cell therefore has the higher ratio and more exchange surface per unit volume.",
+    "choice_explanations": [
+      "Incorrect. Same shape does not mean same ratio when size differs.",
+      "Incorrect. Larger similar shapes always have lower SA:V.",
+      "Incorrect. Mass is not needed once size and shape are known.",
+      "Correct. The smaller but similarly shaped cell has the higher SA:V ratio."
+    ]
+  },
+  {
+    "id": "stats-sav-9",
+    "difficulty": "hard",
+    "topic": "surface area : volume",
+    "text": "Why does a larger cell usually face greater difficulty exchanging materials fast enough for its needs?",
+    "choices": [
+      "Volume increases faster than surface area as size increases.",
+      "Only small cells can contain DNA.",
+      "Larger cells lose the ability to use membranes.",
+      "Surface area increases faster than volume as size increases."
+    ],
+    "correct": 0,
+    "explain": "As cells get larger, their internal demand scales with volume while exchange capacity scales with surface area. That mismatch is why large cells struggle more with transport.",
+    "choice_explanations": [
+      "Correct. Volume outpaces surface area during growth, so exchange becomes harder relative to demand.",
+      "Incorrect. DNA content is not the reason for the SA:V constraint.",
+      "Incorrect. Larger cells still use membranes.",
+      "Incorrect. This would predict the opposite problem."
+    ]
+  },
+  {
+    "id": "stats-sav-10",
+    "difficulty": "hard",
+    "topic": "surface area : volume",
+    "text": "Why does early embryonic cleavage often increase total exchange efficiency even when the embryo's total mass changes little at first?",
+    "choices": [
+      "Each daughter cell has less DNA, so diffusion becomes unnecessary.",
+      "The total volume of the embryo becomes zero during cleavage.",
+      "Many smaller cells together provide more total surface area relative to volume.",
+      "Cleavage causes cells to stop using membranes."
+    ],
+    "correct": 2,
+    "explain": "Dividing one large cell into many smaller cells increases total membrane surface relative to the same total volume, which improves exchange efficiency.",
+    "choice_explanations": [
+      "Incorrect. Diffusion still matters in cleavage-stage embryos.",
+      "Incorrect. The embryo retains volume; it is being partitioned into smaller cells.",
+      "Correct. Many small cells collectively provide more exchange surface for the same total bulk.",
+      "Incorrect. Cleavage does not eliminate membranes."
+    ]
+  },
+  {
+    "id": "stats-sav-11",
+    "difficulty": "hard",
+    "topic": "surface area : volume",
+    "text": "Which adaptation most directly increases surface area for absorption without greatly increasing volume in intestinal cells?",
+    "choices": [
+      "A larger central vacuole",
+      "A thicker cell wall",
+      "A larger nucleus",
+      "Microvilli on the plasma membrane"
+    ],
+    "correct": 3,
+    "explain": "Microvilli are folds of the plasma membrane that greatly expand surface area while adding little volume. That directly improves absorption efficiency.",
+    "choice_explanations": [
+      "Incorrect. A larger vacuole increases volume more than exchange surface.",
+      "Incorrect. Thicker walls can actually slow diffusion distances.",
+      "Incorrect. A larger nucleus does not solve the absorption problem.",
+      "Correct. Microvilli increase exchange surface without proportionally increasing cell volume."
+    ]
+  },
+  {
+    "id": "stats-sav-12",
+    "difficulty": "hard",
+    "topic": "surface area : volume",
+    "text": "Root hair cells are long, thin projections from plant roots. How does this shape help them function?",
+    "choices": [
+      "It eliminates the need for transport proteins.",
+      "It increases surface area relative to volume, improving water and mineral uptake.",
+      "It increases volume faster than surface area, maximizing storage.",
+      "It decreases membrane surface so the cell can conserve energy."
+    ],
+    "correct": 1,
+    "explain": "Long, thin projections add membrane surface while keeping volume relatively low. That high SA:V ratio helps root hairs absorb water and ions efficiently from the soil.",
+    "choice_explanations": [
+      "Incorrect. Transport proteins are still needed.",
+      "Correct. Root hairs are a classic example of shape increasing exchange surface.",
+      "Incorrect. The benefit is exchange efficiency, not maximizing storage volume.",
+      "Incorrect. Root hairs function by increasing, not decreasing, membrane area."
+    ]
+  },
+  {
+    "id": "stats-sav-13",
+    "difficulty": "hard",
+    "topic": "surface area : volume",
+    "text": "A flatworm lacks a specialized circulatory system. Which feature helps make that possible?",
+    "choices": [
+      "Its tissues generate positive pressure potential to move gases.",
+      "Its genes eliminate the need for oxygen.",
+      "Its thin body keeps diffusion distances short and maintains a high effective SA:V ratio.",
+      "Its cells have no membranes to slow transport."
+    ],
+    "correct": 2,
+    "explain": "Thin, flattened body plans expose a large area to the environment and keep internal cells close to the surface. That allows diffusion to supply many needs without a circulatory system.",
+    "choice_explanations": [
+      "Incorrect. Pressure potential is not how flatworms transport gases.",
+      "Incorrect. Flatworms still require oxygen and other materials.",
+      "Correct. A thin body plan supports diffusion by maximizing exchange surface and minimizing distance.",
+      "Incorrect. Cells still require membranes."
+    ]
+  },
+  {
+    "id": "stats-sav-14",
+    "difficulty": "hard",
+    "topic": "surface area : volume",
+    "text": "Which change would best help a large cell maintain exchange efficiency if its volume cannot be reduced?",
+    "choices": [
+      "Making the membrane thicker",
+      "Increasing membrane folding to raise surface area",
+      "Reducing the number of transport proteins",
+      "Removing mitochondria to lower ATP demand"
+    ],
+    "correct": 1,
+    "explain": "If volume must stay high, the most direct way to improve SA:V-related exchange is to increase surface area. Folding the membrane adds area without requiring a proportional rise in volume.",
+    "choice_explanations": [
+      "Incorrect. A thicker membrane can increase diffusion distance.",
+      "Correct. More membrane folding increases exchange area.",
+      "Incorrect. Fewer transport proteins would usually reduce transport capacity further.",
+      "Incorrect. Removing mitochondria does not address the geometric transport limitation."
+    ]
+  },
+  {
+    "id": "stats-sav-15",
+    "difficulty": "hard",
+    "topic": "surface area : volume",
+    "text": "Alveoli in the lungs are divided into many tiny sacs rather than one large hollow chamber. Why is that advantageous?",
+    "choices": [
+      "Many small sacs provide a much greater total surface area for gas exchange.",
+      "Gas exchange works only across spherical membranes.",
+      "A single large chamber would contain too much oxygen for hemoglobin to bind.",
+      "Smaller sacs eliminate the need for blood flow."
+    ],
+    "correct": 0,
+    "explain": "Breaking the lung surface into many small sacs maximizes total surface area for diffusion. This is the same SA:V logic seen at the cellular level: many small units exchange faster relative to their volume than one large unit.",
+    "choice_explanations": [
+      "Correct. Many small compartments dramatically increase total exchange surface.",
+      "Incorrect. Shape can vary; the key advantage is high total surface area.",
+      "Incorrect. Oxygen capacity is not the geometric reason for the design.",
+      "Incorrect. Blood flow is still essential for transport."
+    ]
+  },
+  {
+    "id": "stats-sav-16",
+    "difficulty": "hard",
+    "topic": "surface area : volume",
+    "text": "Two populations of cells have the same total volume. Population A contains one large cell, whereas Population B contains many smaller cells. Which statement is most likely true?",
+    "choices": [
+      "Both populations have identical total surface area because total volume is equal.",
+      "Surface area cannot be compared unless the cells have different genes.",
+      "Population B has more total surface area available for exchange.",
+      "Population A has more total surface area because it has fewer membranes."
+    ],
+    "correct": 2,
+    "explain": "For a fixed total volume, dividing material into many smaller cells increases total membrane area. That is why many small cells usually exchange materials more efficiently than one large cell of the same combined volume.",
+    "choice_explanations": [
+      "Incorrect. Equal volume does not imply equal surface area.",
+      "Incorrect. This is a geometry question, not a genetics question.",
+      "Correct. Splitting the same volume into smaller units increases total surface area.",
+      "Incorrect. Fewer large surfaces provide less total area relative to the same volume."
+    ]
+  },
+  {
+    "id": "stats-sav-17",
+    "difficulty": "hard",
+    "topic": "surface area : volume",
+    "text": "A student claims that a larger bacterial cell must always grow faster because it has more surface area. What is the best rebuttal?",
+    "choices": [
+      "More surface area alone is not enough; its volume increases even faster, reducing SA:V.",
+      "Larger cells do not have membranes, so surface area is irrelevant.",
+      "Surface area only matters in multicellular organisms.",
+      "Growth rate is determined solely by chromosome number."
+    ],
+    "correct": 0,
+    "explain": "Although a larger cell has more absolute surface area, it also has disproportionately more volume. Because volume grows faster than surface area, the larger cell has less exchange surface per unit volume.",
+    "choice_explanations": [
+      "Correct. The ratio, not surface area alone, is what matters for exchange efficiency.",
+      "Incorrect. Large bacterial cells still have membranes.",
+      "Incorrect. SA:V matters for single cells too.",
+      "Incorrect. Chromosome number is not the geometric issue being tested."
+    ]
+  },
+  {
+    "id": "stats-sav-18",
+    "difficulty": "hard",
+    "topic": "surface area : volume",
+    "text": "If a cube-shaped cell changes from side length 3 to side length 6, what happens to its SA:V ratio?",
+    "choices": [
+      "It becomes 9 because the surface area becomes 9 times greater.",
+      "It is cut in half, from 2 to 1.",
+      "It stays the same because the shape did not change.",
+      "It doubles, from 2 to 4."
+    ],
+    "correct": 1,
+    "explain": "For cubes, SA:V = 6/s. At side length 3, the ratio is 2; at side length 6, the ratio is 1. Doubling the side length therefore halves the ratio.",
+    "choice_explanations": [
+      "Incorrect. This confuses area scaling with the ratio itself.",
+      "Correct. Using 6/s shows the ratio drops from 2 to 1.",
+      "Incorrect. Same shape does not mean same ratio when size changes.",
+      "Incorrect. The ratio decreases rather than increases as size doubles."
+    ]
+  },
+  {
+    "id": "stats-sav-19",
+    "difficulty": "hard",
+    "topic": "surface area : volume",
+    "text": "Why might multicellular organisms use specialized exchange surfaces such as gills or villi instead of relying on each cell to become very large?",
+    "choices": [
+      "Large cells cannot contain organelles.",
+      "Specialized surfaces eliminate the need for diffusion.",
+      "Very large cells would automatically have better SA:V ratios.",
+      "Specialized folded surfaces provide high area for exchange without the transport problems of giant cells."
+    ],
+    "correct": 3,
+    "explain": "Multicellular organisms solve transport demands by building highly folded tissues with large surface area, while keeping individual cells relatively small. That preserves efficient exchange without violating SA:V constraints.",
+    "choice_explanations": [
+      "Incorrect. Large cells can still contain organelles; transport efficiency is the bigger issue.",
+      "Incorrect. Diffusion is still required across those surfaces.",
+      "Incorrect. Giant cells have lower, not higher, SA:V ratios.",
+      "Correct. Specialized surfaces increase total exchange area while cells themselves remain small enough for efficient transport."
+    ]
+  },
+  {
+    "id": "stats-sav-20",
+    "difficulty": "hard",
+    "topic": "surface area : volume",
+    "text": "A cube-shaped protist and a long, thin protist have the same volume. Which is more likely to exchange materials faster with the environment, and why?",
+    "choices": [
+      "The cube-shaped protist, because compact shapes always maximize exchange.",
+      "Both equally, because equal volume guarantees equal surface area.",
+      "The cube-shaped protist, because thin cells cannot support membranes.",
+      "The long, thin protist, because its shape can provide more surface area for the same volume."
+    ],
+    "correct": 3,
+    "explain": "Exchange rate depends strongly on surface area relative to volume. For the same volume, a long, thin or highly folded shape can expose more surface area than a compact cube-like shape.",
+    "choice_explanations": [
+      "Incorrect. Compact shapes reduce surface area relative to many elongated or folded forms.",
+      "Incorrect. Volume equality does not force surface area equality.",
+      "Incorrect. Thin cells still have functional membranes.",
+      "Correct. Shape affects surface area even when volume is held constant."
+    ]
+  }
+]

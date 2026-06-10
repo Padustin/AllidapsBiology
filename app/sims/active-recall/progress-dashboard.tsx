@@ -62,7 +62,7 @@ function UnitAccuracyList({ rows, breakdownByUnit }: { rows: AccuracyRow[]; brea
         <div key={row.label} className="rounded-[1.2rem] border border-slate-200 bg-white px-4 py-4 shadow-sm">
           <div className="flex items-start justify-between gap-3">
             <div>
-              className="h-2 rounded-full bg-[#1f5a32] transition-all"
+              <p className="text-base font-semibold text-slate-900">{row.label}</p>
               <p className="text-xs text-slate-500">{row.total > 0 ? `${row.correct}/${row.total} correct` : "No attempts yet"}</p>
             </div>
             <div className="flex flex-col items-end gap-2">
@@ -77,7 +77,7 @@ function UnitAccuracyList({ rows, breakdownByUnit }: { rows: AccuracyRow[]; brea
           </div>
           <div className="mt-3 h-2 rounded-full bg-slate-100">
             <div
-              className="h-2 rounded-full bg-[#1f5a32] transition-all"
+              className="accent-gradient h-2 rounded-full transition-all"
               style={{ width: `${Math.max(6, Math.round((row.accuracy || 0) * 100))}%`, opacity: row.total > 0 ? 1 : 0.25 }}
             />
           </div>
@@ -139,26 +139,22 @@ export function ProgressDashboard() {
   return (
     <section className="grid gap-4 xl:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
       <div className="grid gap-4">
-        <SectionCard
-          title="Turn practice into an actual study system"
-          description="The dashboard tracks whether you are getting more accurate, whether weak units are improving, and whether missed topics are narrowing down."
-          tone="blue"
-        >
-          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-            <StatCard label="Questions completed" value={snapshot.totalAttempts} detail="All recorded MCQ attempts" />
-            <StatCard label="Overall accuracy" value={formatPercent(snapshot.totalAccuracy)} detail={`${snapshot.totalCorrect} correct, ${snapshot.totalIncorrect} incorrect`} />
-            <StatCard label="Current streak" value={snapshot.currentStreak} detail="Consecutive correct answers" />
-            <StatCard label="Redo queue" value={snapshot.redoMissedCount} detail="Questions still missed on the latest attempt" />
-            <StatCard
-              label="Best unit"
-              value={bestUnit ? bestUnit.label : "No data yet"}
-              detail={bestUnit ? `${formatPercent(bestUnit.accuracy)} accuracy` : "Answer questions to rank units."}
-            />
-            <StatCard
-              label="Weakest unit"
-              value={worstUnit ? worstUnit.label : "No data yet"}
-              detail={worstUnit ? `${formatPercent(worstUnit.accuracy)} accuracy` : "Answer questions to rank units."}
-            />
+        <SectionCard tone="blue">
+          <div className="grid gap-3 sm:grid-cols-2">
+            <div className="rounded-3xl border border-slate-300 bg-slate-100 px-4 py-4 shadow-sm">
+              <span className="accent-gradient inline-flex items-center rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-white">
+                Best unit
+              </span>
+              <div className="mt-3 text-2xl font-semibold tracking-tight text-slate-950">{bestUnit ? bestUnit.label : "No data yet"}</div>
+              <div className="mt-1 text-sm text-slate-600">{bestUnit ? `${formatPercent(bestUnit.accuracy)} accuracy` : "Answer questions to rank units."}</div>
+            </div>
+            <div className="rounded-3xl border border-slate-300 bg-slate-100 px-4 py-4 shadow-sm">
+              <span className="accent-gradient inline-flex items-center rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-white">
+                Weakest unit
+              </span>
+              <div className="mt-3 text-2xl font-semibold tracking-tight text-slate-950">{worstUnit ? worstUnit.label : "No data yet"}</div>
+              <div className="mt-1 text-sm text-slate-600">{worstUnit ? `${formatPercent(worstUnit.accuracy)} accuracy` : "Answer questions to rank units."}</div>
+            </div>
           </div>
         </SectionCard>
 
@@ -187,12 +183,12 @@ export function ProgressDashboard() {
                 <SurfaceItem key={`${topic.unit}-${topic.topic}`} className="border-slate-300 bg-slate-100/95">
                   <div className="flex items-start justify-between gap-3">
                     <div>
-                      <p className="text-sm font-semibold text-[#1f5a32]">{topic.topic}</p>
-                      <p className="mt-1 text-xs uppercase tracking-[0.16em] text-[#1f5a32]">{topic.unit}</p>
+                      <p className="text-sm font-semibold text-[color:var(--accent-text)]">{topic.topic}</p>
+                      <p className="mt-1 text-xs uppercase tracking-[0.16em] text-[color:var(--accent-text)]/80">{topic.unit}</p>
                     </div>
-                    <div className="text-right text-sm font-semibold text-[#1f5a32]">
+                    <div className="text-right text-sm font-semibold text-[color:var(--accent-text)]">
                       <div>{topic.misses} misses</div>
-                      <div className="text-xs text-[#1f5a32]">{formatPercent(topic.accuracy)} accuracy</div>
+                      <div className="text-xs text-[color:var(--accent-text)]/80">{formatPercent(topic.accuracy)} accuracy</div>
                     </div>
                   </div>
                 </SurfaceItem>

@@ -1,0 +1,402 @@
+[
+  {
+    "id": "stats-water-1",
+    "difficulty": "hard",
+    "topic": "water potential",
+    "text": "A plant cell has a total water potential of -6.7 bars, and the surrounding solution has a water potential of -4.8 bars. Which prediction is best?",
+    "choices": [
+      "Water will move into the cell because water moves from higher water potential to lower water potential.",
+      "No water movement will occur because both values are negative.",
+      "Water will move out of the cell because the cell has the more negative value.",
+      "Water movement cannot be predicted unless the cell volume is known."
+    ],
+    "correct": 0,
+    "explain": "Water moves from higher water potential to lower water potential. Here the outside solution (-4.8 bars) is higher than the cell (-6.7 bars), so net water movement will be into the cell.",
+    "choice_explanations": [
+      "Correct. Net water movement follows the gradient from higher water potential to lower water potential.",
+      "Incorrect. Negative values can still be compared; equal values are what matter for no net movement.",
+      "Incorrect. More negative means lower water potential, so water moves toward that side, not away from it.",
+      "Incorrect. Total water potential already tells you the direction, so extra information is not required here."
+    ]
+  },
+  {
+    "id": "stats-water-2",
+    "difficulty": "hard",
+    "topic": "water potential",
+    "text": "A plant cell has a total water potential of -2.1 bars, and the surrounding solution has a water potential of -3.4 bars. Which prediction is best?",
+    "choices": [
+      "Water will move toward the side with more solute regardless of total water potential.",
+      "No water movement will occur because both values are below zero.",
+      "Water will move out of the cell because the cell has the higher water potential.",
+      "Water will move into the cell because the outside solution is more negative."
+    ],
+    "correct": 2,
+    "explain": "The cell's water potential (-2.1 bars) is higher than the surrounding solution (-3.4 bars). Water therefore moves out of the cell, from the higher value to the lower value.",
+    "choice_explanations": [
+      "Incorrect. Solute concentration matters only through its effect on total water potential.",
+      "Incorrect. Negative values can still be compared; equal values are what matter for no net movement.",
+      "Correct. Net water movement follows the gradient from higher water potential to lower water potential.",
+      "Incorrect. A more negative outside solution means lower water potential outside, so water leaves the cell."
+    ]
+  },
+  {
+    "id": "stats-water-3",
+    "difficulty": "hard",
+    "topic": "water potential",
+    "text": "A plant cell has a total water potential of -5.0 bars, and the surrounding solution has a water potential of -5.0 bars. Which prediction is best?",
+    "choices": [
+      "Water movement cannot be compared when both values are negative.",
+      "Water will move out of the cell because pressure potential always dominates solute potential.",
+      "There will be no net water movement because the two water potentials are equal.",
+      "Water will move into the cell because cells always take in water when the values are negative."
+    ],
+    "correct": 2,
+    "explain": "Net water movement depends on the difference in total water potential. Because the cell and the solution both have -5.0 bars, neither side has a higher value, so there is no net movement.",
+    "choice_explanations": [
+      "Incorrect. Negative water potentials are compared the same way as any other numbers.",
+      "Incorrect. Pressure potential is only part of the total; equal totals mean no net movement.",
+      "Correct. Net water movement follows the gradient from higher water potential to lower water potential.",
+      "Incorrect. Negative values do not automatically cause inward movement; only a gradient does."
+    ]
+  },
+  {
+    "id": "stats-water-4",
+    "difficulty": "hard",
+    "topic": "water potential",
+    "text": "A plant cell has a total water potential of -8.2 bars, and the surrounding solution has a water potential of -6.1 bars. Which prediction is best?",
+    "choices": [
+      "No water movement will occur because both values are negative.",
+      "Water movement cannot be predicted unless the cell volume is known.",
+      "Water will move into the cell because water moves from higher water potential to lower water potential.",
+      "Water will move out of the cell because the cell has the more negative value."
+    ],
+    "correct": 2,
+    "explain": "Water moves from higher water potential to lower water potential. Here the outside solution (-6.1 bars) is higher than the cell (-8.2 bars), so net water movement will be into the cell.",
+    "choice_explanations": [
+      "Incorrect. Negative values can still be compared; equal values are what matter for no net movement.",
+      "Incorrect. Total water potential already tells you the direction, so extra information is not required here.",
+      "Correct. Net water movement follows the gradient from higher water potential to lower water potential.",
+      "Incorrect. More negative means lower water potential, so water moves toward that side, not away from it."
+    ]
+  },
+  {
+    "id": "stats-water-5",
+    "difficulty": "hard",
+    "topic": "water potential",
+    "text": "A plant cell has a total water potential of -1.5 bars, and the surrounding solution has a water potential of -2.0 bars. Which prediction is best?",
+    "choices": [
+      "Water will move out of the cell because the cell has the higher water potential.",
+      "No water movement will occur because both values are below zero.",
+      "Water will move toward the side with more solute regardless of total water potential.",
+      "Water will move into the cell because the outside solution is more negative."
+    ],
+    "correct": 0,
+    "explain": "The cell's water potential (-1.5 bars) is higher than the surrounding solution (-2.0 bars). Water therefore moves out of the cell, from the higher value to the lower value.",
+    "choice_explanations": [
+      "Correct. Net water movement follows the gradient from higher water potential to lower water potential.",
+      "Incorrect. Negative values can still be compared; equal values are what matter for no net movement.",
+      "Incorrect. Solute concentration matters only through its effect on total water potential.",
+      "Incorrect. A more negative outside solution means lower water potential outside, so water leaves the cell."
+    ]
+  },
+  {
+    "id": "stats-water-6",
+    "difficulty": "hard",
+    "topic": "water potential",
+    "text": "A cell contains a solution with i = 1, C = 0.2 M, temperature = 298 K, and pressure potential \u03c8p = 0.7 bars. What is the cell's total water potential?",
+    "choices": [
+      "-4.95 bars",
+      "0.7 bars",
+      "4.95 bars",
+      "-4.25 bars"
+    ],
+    "correct": 3,
+    "explain": "First calculate solute potential: \u03c8s = \u2212iCRT = \u2212(1)(0.0831)(0.2)(298) \u2248 -4.95 bars. Then add pressure potential: \u03c8 = \u03c8s + \u03c8p = -4.95 + 0.7 = -4.25 bars.",
+    "choice_explanations": [
+      "Incorrect. This is only the solute potential; it leaves out pressure potential.",
+      "Incorrect. This is only the pressure potential term, not the total.",
+      "Incorrect. This removes the negative sign from \u03c8s and treats solute potential as positive.",
+      "Correct. Total water potential equals \u03c8s + \u03c8p, giving -4.25 bars."
+    ]
+  },
+  {
+    "id": "stats-water-7",
+    "difficulty": "hard",
+    "topic": "water potential",
+    "text": "A cell contains a solution with i = 2, C = 0.1 M, temperature = 300 K, and pressure potential \u03c8p = 0.0 bars. What is the cell's total water potential?",
+    "choices": [
+      "-4.99 bars",
+      "-9.98 bars",
+      "4.99 bars",
+      "0.0 bars"
+    ],
+    "correct": 0,
+    "explain": "Here \u03c8s = \u2212iCRT = \u2212(2)(0.0831)(0.1)(300) \u2248 \u22124.99 bars. Because \u03c8p = 0.0 bars, the total water potential is the same as \u03c8s: \u22124.99 bars.",
+    "choice_explanations": [
+      "Correct. When pressure potential is zero, the total equals the solute potential.",
+      "Incorrect. This doubles the solute term instead of adding the actual pressure term of zero.",
+      "Incorrect. This drops the negative sign and treats \u03c8s as positive.",
+      "Incorrect. Zero is the pressure term here, not the total water potential."
+    ]
+  },
+  {
+    "id": "stats-water-8",
+    "difficulty": "hard",
+    "topic": "water potential",
+    "text": "A cell contains a solution with i = 1, C = 0.3 M, temperature = 295 K, and pressure potential \u03c8p = 1.2 bars. What is the cell's total water potential?",
+    "choices": [
+      "7.35 bars",
+      "-7.35 bars",
+      "1.2 bars",
+      "-6.15 bars"
+    ],
+    "correct": 3,
+    "explain": "First calculate solute potential: \u03c8s = \u2212iCRT = \u2212(1)(0.0831)(0.3)(295) \u2248 -7.35 bars. Then add pressure potential: \u03c8 = \u03c8s + \u03c8p = -7.35 + 1.2 = -6.15 bars.",
+    "choice_explanations": [
+      "Incorrect. This removes the negative sign from \u03c8s and treats solute potential as positive.",
+      "Incorrect. This is only the solute potential; it leaves out pressure potential.",
+      "Incorrect. This is only the pressure potential term, not the total.",
+      "Correct. Total water potential equals \u03c8s + \u03c8p, giving -6.15 bars."
+    ]
+  },
+  {
+    "id": "stats-water-9",
+    "difficulty": "hard",
+    "topic": "water potential",
+    "text": "A cell contains a solution with i = 1, C = 0.15 M, temperature = 310 K, and pressure potential \u03c8p = 0.5 bars. What is the cell's total water potential?",
+    "choices": [
+      "3.86 bars",
+      "-3.86 bars",
+      "0.5 bars",
+      "-3.36 bars"
+    ],
+    "correct": 3,
+    "explain": "First calculate solute potential: \u03c8s = \u2212iCRT = \u2212(1)(0.0831)(0.15)(310) \u2248 -3.86 bars. Then add pressure potential: \u03c8 = \u03c8s + \u03c8p = -3.86 + 0.5 = -3.36 bars.",
+    "choice_explanations": [
+      "Incorrect. This removes the negative sign from \u03c8s and treats solute potential as positive.",
+      "Incorrect. This is only the solute potential; it leaves out pressure potential.",
+      "Incorrect. This is only the pressure potential term, not the total.",
+      "Correct. Total water potential equals \u03c8s + \u03c8p, giving -3.36 bars."
+    ]
+  },
+  {
+    "id": "stats-water-10",
+    "difficulty": "hard",
+    "topic": "water potential",
+    "text": "A cell contains a solution with i = 2, C = 0.05 M, temperature = 298 K, and pressure potential \u03c8p = 0.3 bars. What is the cell's total water potential?",
+    "choices": [
+      "-2.48 bars",
+      "-2.18 bars",
+      "0.3 bars",
+      "2.48 bars"
+    ],
+    "correct": 1,
+    "explain": "First calculate solute potential: \u03c8s = \u2212iCRT = \u2212(2)(0.0831)(0.05)(298) \u2248 -2.48 bars. Then add pressure potential: \u03c8 = \u03c8s + \u03c8p = -2.48 + 0.3 = -2.18 bars.",
+    "choice_explanations": [
+      "Incorrect. This is only the solute potential; it leaves out pressure potential.",
+      "Correct. Total water potential equals \u03c8s + \u03c8p, giving -2.18 bars.",
+      "Incorrect. This is only the pressure potential term, not the total.",
+      "Incorrect. This removes the negative sign from \u03c8s and treats solute potential as positive."
+    ]
+  },
+  {
+    "id": "stats-water-11",
+    "difficulty": "hard",
+    "topic": "water potential",
+    "text": "A cell's solute concentration increases while temperature and pressure potential stay the same. What happens to the cell's water potential?",
+    "choices": [
+      "It becomes positive because solute adds energy to the water.",
+      "It stays exactly the same because pressure potential did not change.",
+      "It becomes less negative because more solute raises \u03c8.",
+      "It becomes more negative because \u03c8s decreases."
+    ],
+    "correct": 3,
+    "explain": "Because \u03c8s = \u2212iCRT, increasing C makes \u03c8s more negative. If \u03c8p is unchanged, total water potential also becomes more negative.",
+    "choice_explanations": [
+      "Incorrect. More solute lowers water potential rather than making it positive.",
+      "Incorrect. Pressure potential is not the only contributor to total \u03c8.",
+      "Incorrect. More solute does the opposite; it lowers water potential.",
+      "Correct. More solute lowers \u03c8 by making the solute term more negative."
+    ]
+  },
+  {
+    "id": "stats-water-12",
+    "difficulty": "hard",
+    "topic": "water potential",
+    "text": "A plant cell's pressure potential increases while solute potential stays constant. Which outcome is most likely?",
+    "choices": [
+      "The total water potential decreases.",
+      "The solute potential becomes zero.",
+      "Water can no longer move across the membrane.",
+      "The total water potential increases."
+    ],
+    "correct": 3,
+    "explain": "Pressure potential is added to solute potential in the total water potential equation. If \u03c8s stays the same and \u03c8p rises, the total water potential increases.",
+    "choice_explanations": [
+      "Incorrect. Increasing \u03c8p pushes the total upward, not downward.",
+      "Incorrect. Pressure potential does not erase solute potential.",
+      "Incorrect. Water movement is still possible whenever a gradient exists.",
+      "Correct. A higher \u03c8p raises the total \u03c8 of the cell."
+    ]
+  },
+  {
+    "id": "stats-water-13",
+    "difficulty": "hard",
+    "topic": "water potential",
+    "text": "Temperature rises while i, C, and \u03c8p stay the same. How does this affect \u03c8s?",
+    "choices": [
+      "\u03c8s becomes positive.",
+      "\u03c8s becomes more negative.",
+      "\u03c8s does not change because only concentration matters.",
+      "\u03c8s becomes less negative."
+    ],
+    "correct": 1,
+    "explain": "In \u03c8s = \u2212iCRT, temperature is multiplied by the other terms. Raising T makes the magnitude of the negative solute potential larger, so \u03c8s becomes more negative.",
+    "choice_explanations": [
+      "Incorrect. The leading negative sign remains, so \u03c8s does not become positive.",
+      "Correct. Higher T makes the negative product larger in magnitude.",
+      "Incorrect. Temperature is part of the equation for \u03c8s.",
+      "Incorrect. The equation shows the opposite trend."
+    ]
+  },
+  {
+    "id": "stats-water-14",
+    "difficulty": "hard",
+    "topic": "water potential",
+    "text": "A cell is placed in distilled water with \u03c8 = 0 bars. The cell's water potential is -3.0 bars. What is the immediate net movement of water?",
+    "choices": [
+      "No net movement",
+      "The direction cannot be predicted without knowing cell wall thickness",
+      "Out of the cell",
+      "Into the cell"
+    ],
+    "correct": 3,
+    "explain": "Water moves from higher to lower water potential. Distilled water at 0 bars is higher than the cell at -3.0 bars, so water moves into the cell.",
+    "choice_explanations": [
+      "Incorrect. The values are not equal, so there is a gradient.",
+      "Incorrect. The gradient alone predicts the initial direction.",
+      "Incorrect. Water does not move from lower \u03c8 to higher \u03c8.",
+      "Correct. The outside solution has the higher \u03c8, so water enters the cell."
+    ]
+  },
+  {
+    "id": "stats-water-15",
+    "difficulty": "hard",
+    "topic": "water potential",
+    "text": "A student says that water always moves toward the side with more solute. Why is that statement incomplete?",
+    "choices": [
+      "Because solute has no effect on water movement.",
+      "Because only pressure potential matters in plant cells.",
+      "Because water moves from lower to higher water potential.",
+      "Because total water potential depends on both solute potential and pressure potential."
+    ],
+    "correct": 3,
+    "explain": "Solute concentration affects \u03c8s, but the direction of movement depends on total water potential, which also includes pressure potential. Two sides can differ in solute concentration yet still have movement determined by the summed \u03c8 values.",
+    "choice_explanations": [
+      "Incorrect. Solute absolutely matters through \u03c8s.",
+      "Incorrect. Pressure potential matters, but so does solute potential.",
+      "Incorrect. Water moves from higher \u03c8 to lower \u03c8, not the reverse.",
+      "Correct. Total \u03c8, not solute alone, determines net movement."
+    ]
+  },
+  {
+    "id": "stats-water-16",
+    "difficulty": "hard",
+    "topic": "water potential",
+    "text": "A student places a plant cell into a solution with lower water potential than the cell. Which result is most likely if the gradient persists?",
+    "choices": [
+      "The cell will remain unchanged because plant cells prevent osmosis.",
+      "The cell wall will dissolve immediately.",
+      "The cell will gain water and become more turgid.",
+      "The cell will lose water and may plasmolyze."
+    ],
+    "correct": 3,
+    "explain": "If the outside solution has lower water potential, water leaves the cell. In plant cells, continued water loss causes the membrane to pull away from the wall, which is plasmolysis.",
+    "choice_explanations": [
+      "Incorrect. Plant cells still undergo osmosis even though the cell wall limits bursting.",
+      "Incorrect. The cell wall does not dissolve because of this gradient.",
+      "Incorrect. Gaining water would require the outside solution to have higher water potential.",
+      "Correct. Water exits the cell down the water-potential gradient, which can lead to plasmolysis."
+    ]
+  },
+  {
+    "id": "stats-water-17",
+    "difficulty": "hard",
+    "topic": "water potential",
+    "text": "A flaccid plant cell is transferred to a hypotonic solution. Which change best explains why it becomes turgid?",
+    "choices": [
+      "The cell synthesizes more solute to raise its water potential.",
+      "Water leaves the cell, decreasing solute potential.",
+      "The plasma membrane becomes impermeable to water.",
+      "Water enters the cell, increasing pressure potential."
+    ],
+    "correct": 3,
+    "explain": "In a hypotonic environment, the outside has higher water potential, so water enters the cell. As the vacuole expands against the cell wall, pressure potential rises and the cell becomes turgid.",
+    "choice_explanations": [
+      "Incorrect. Making more solute would tend to lower the cell's \u03c8 rather than explaining immediate turgor.",
+      "Incorrect. Losing water would make the cell more flaccid, not turgid.",
+      "Incorrect. Water must continue crossing the membrane for the change to happen.",
+      "Correct. Turgidity develops as incoming water increases \u03c8p inside the cell."
+    ]
+  },
+  {
+    "id": "stats-water-18",
+    "difficulty": "hard",
+    "topic": "water potential",
+    "text": "Two beakers contain the same solute concentration, but one solution is under positive pressure and the other is open to the atmosphere. Which solution has the higher water potential?",
+    "choices": [
+      "The solution under positive pressure",
+      "The direction cannot be predicted because pressure is unrelated to water potential",
+      "They must have equal \u03c8 because their solute concentrations match",
+      "The open solution, because pressure always lowers \u03c8"
+    ],
+    "correct": 0,
+    "explain": "When solute concentration is the same, the solution under positive pressure has the higher total water potential because \u03c8 = \u03c8s + \u03c8p. Adding positive pressure raises the total.",
+    "choice_explanations": [
+      "Correct. Positive pressure increases total water potential.",
+      "Incorrect. Pressure is one of the two terms in the water potential equation.",
+      "Incorrect. Equal solute potential does not guarantee equal total \u03c8 if pressure differs.",
+      "Incorrect. Positive pressure raises \u03c8; it does not lower it."
+    ]
+  },
+  {
+    "id": "stats-water-19",
+    "difficulty": "hard",
+    "topic": "water potential",
+    "text": "A plant tissue sample has \u03c8s = -5.5 bars and \u03c8p = 1.5 bars. It is placed in a solution with \u03c8 = -3.0 bars. What should happen initially?",
+    "choices": [
+      "Water moves into the tissue because the tissue's total \u03c8 is -4.0 bars.",
+      "Water moves out of the tissue because its solute potential is more negative than the solution.",
+      "Water movement cannot occur until pressure potential becomes zero.",
+      "No net water movement occurs because pressure potential offsets solute potential completely."
+    ],
+    "correct": 0,
+    "explain": "The tissue's total water potential is \u03c8 = -5.5 + 1.5 = -4.0 bars. The outside solution is -3.0 bars, which is higher, so water moves into the tissue from higher \u03c8 to lower \u03c8.",
+    "choice_explanations": [
+      "Correct. Comparing totals shows the outside solution has higher \u03c8 than the tissue.",
+      "Incorrect. Direction depends on total \u03c8, not solute potential by itself.",
+      "Incorrect. Water movement can occur at any nonzero gradient.",
+      "Incorrect. The totals are not equal, so there is a gradient."
+    ]
+  },
+  {
+    "id": "stats-water-20",
+    "difficulty": "hard",
+    "topic": "water potential",
+    "text": "Why can a turgid plant cell have a less negative total water potential than the same cell when it is flaccid, even if solute concentration stays similar?",
+    "choices": [
+      "Because the cell wall removes solute from the vacuole.",
+      "Because osmosis stops in turgid cells.",
+      "Because greater pressure potential raises the total \u03c8.",
+      "Because water potential only applies to animal cells."
+    ],
+    "correct": 2,
+    "explain": "If solute concentration is similar, the main difference between a flaccid and a turgid cell is pressure potential. A more turgid cell has higher \u03c8p, so its total water potential is less negative.",
+    "choice_explanations": [
+      "Incorrect. The cell wall does not solve the change by removing solute.",
+      "Incorrect. Osmosis can still occur; the point is that the gradient is reduced.",
+      "Correct. Raising \u03c8p increases the summed water potential.",
+      "Incorrect. Water potential applies broadly, including plant cells."
+    ]
+  }
+]

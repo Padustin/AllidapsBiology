@@ -1,0 +1,402 @@
+[
+  {
+    "id": "stats-p-1",
+    "difficulty": "hard",
+    "topic": "p-value",
+    "text": "In an enzyme activity experiment, the statistical analysis produced p = 0.03. Which interpretation is best?",
+    "choices": [
+      "The p-value shows the size of the biological effect, so a lower p-value always means a larger effect.",
+      "The p-value tells how likely the experiment is to be replicated exactly by another lab.",
+      "The p-value is the probability that the null hypothesis is true, so the null hypothesis has a probability of 0.03.",
+      "The difference is statistically significant at \u03b1 = 0.05, so the null hypothesis is rejected."
+    ],
+    "correct": 3,
+    "explain": "A p-value of 0.03 means that, if the null hypothesis were true, data at least this extreme would occur about 3% of the time. Because 0.03 is below 0.05, the difference is considered statistically significant at \u03b1 = 0.05.",
+    "choice_explanations": [
+      "Incorrect. Statistical significance and effect size are not the same thing. A tiny effect can have a small p-value if the data are precise enough.",
+      "Incorrect. Replication depends on many factors; the p-value is not a direct probability of exact replication.",
+      "Incorrect. A p-value is not the probability that the null hypothesis is true; it is the probability of getting data this extreme if the null hypothesis were true.",
+      "Correct. The key AP Biology decision is whether the p-value is below the chosen \u03b1 level; if it is, reject the null hypothesis."
+    ]
+  },
+  {
+    "id": "stats-p-2",
+    "difficulty": "hard",
+    "topic": "p-value",
+    "text": "In a stomatal density comparison, the statistical analysis produced p = 0.18. Which interpretation is best?",
+    "choices": [
+      "The p-value tells how likely the experiment is to be replicated exactly by another lab.",
+      "The p-value is the probability that the null hypothesis is true, so the null hypothesis has a probability of 0.18.",
+      "The p-value shows the size of the biological effect, so a lower p-value always means a larger effect.",
+      "The difference is not statistically significant at \u03b1 = 0.05, so the null hypothesis is retained."
+    ],
+    "correct": 3,
+    "explain": "A p-value of 0.18 means the observed difference could easily occur by chance if the null hypothesis were true. Because 0.18 is well above 0.05, the data are not statistically significant at \u03b1 = 0.05.",
+    "choice_explanations": [
+      "Incorrect. Replication depends on many factors; the p-value is not a direct probability of exact replication.",
+      "Incorrect. A p-value is not the probability that the null hypothesis is true; it is the probability of getting data this extreme if the null hypothesis were true.",
+      "Incorrect. Statistical significance and effect size are not the same thing. A tiny effect can have a small p-value if the data are precise enough.",
+      "Correct. The key AP Biology decision is whether the p-value is below the chosen \u03b1 level; if it is, reject the null hypothesis."
+    ]
+  },
+  {
+    "id": "stats-p-3",
+    "difficulty": "hard",
+    "topic": "p-value",
+    "text": "In a fertilizer trial, the statistical analysis produced p = 0.049. Which interpretation is best?",
+    "choices": [
+      "The p-value is the probability that the null hypothesis is true, so the null hypothesis has a probability of 0.049.",
+      "The p-value shows the size of the biological effect, so a lower p-value always means a larger effect.",
+      "The difference is statistically significant at \u03b1 = 0.05 because the p-value is just below the cutoff.",
+      "The p-value tells how likely the experiment is to be replicated exactly by another lab."
+    ],
+    "correct": 2,
+    "explain": "At \u03b1 = 0.05, any p-value below 0.05 is treated as statistically significant. A p-value of 0.049 is barely below the cutoff, so the null hypothesis would be rejected even though the result is close to the threshold.",
+    "choice_explanations": [
+      "Incorrect. A p-value is not the probability that the null hypothesis is true; it is the probability of getting data this extreme if the null hypothesis were true.",
+      "Incorrect. Statistical significance and effect size are not the same thing. A tiny effect can have a small p-value if the data are precise enough.",
+      "Correct. The key AP Biology decision is whether the p-value is below the chosen \u03b1 level; if it is, reject the null hypothesis.",
+      "Incorrect. Replication depends on many factors; the p-value is not a direct probability of exact replication."
+    ]
+  },
+  {
+    "id": "stats-p-4",
+    "difficulty": "hard",
+    "topic": "p-value",
+    "text": "In a transpiration study, the statistical analysis produced p = 0.07. Which interpretation is best?",
+    "choices": [
+      "The p-value is the probability that the null hypothesis is true, so the null hypothesis has a probability of 0.07.",
+      "The difference is not statistically significant at \u03b1 = 0.05 because the p-value is above the cutoff.",
+      "The p-value shows the size of the biological effect, so a lower p-value always means a larger effect.",
+      "The p-value tells how likely the experiment is to be replicated exactly by another lab."
+    ],
+    "correct": 1,
+    "explain": "A p-value of 0.07 means the data are not rare enough under the null hypothesis to reject it at \u03b1 = 0.05. The result might still be biologically interesting, but it is not statistically significant by that criterion.",
+    "choice_explanations": [
+      "Incorrect. A p-value is not the probability that the null hypothesis is true; it is the probability of getting data this extreme if the null hypothesis were true.",
+      "Correct. The key AP Biology decision is whether the p-value is below the chosen \u03b1 level; if it is, reject the null hypothesis.",
+      "Incorrect. Statistical significance and effect size are not the same thing. A tiny effect can have a small p-value if the data are precise enough.",
+      "Incorrect. Replication depends on many factors; the p-value is not a direct probability of exact replication."
+    ]
+  },
+  {
+    "id": "stats-p-5",
+    "difficulty": "hard",
+    "topic": "p-value",
+    "text": "Four labs test whether a toxin lowers seed germination. Their p-values are 0.12, 0.08, 0.03, and 0.21. Which statement is most accurate?",
+    "choices": [
+      "The largest p-value provides the strongest evidence because it is based on the greatest probability.",
+      "All of the p-values provide equally strong evidence because they were produced by hypothesis tests.",
+      "The lab with p = 0.03 provides the strongest statistical evidence against the null hypothesis.",
+      "Any p-value above 0 means the null hypothesis must be accepted."
+    ],
+    "correct": 2,
+    "explain": "A smaller p-value means the observed data would be less likely if the null hypothesis were true. That does not by itself prove causation, but it does provide stronger statistical evidence against the null hypothesis than a larger p-value does.",
+    "choice_explanations": [
+      "Incorrect. A large p-value means the data are more compatible with the null hypothesis, not less.",
+      "Incorrect. Hypothesis tests can produce very different strengths of evidence depending on the p-value.",
+      "Correct. Among comparable tests, the smallest p-value represents the data least consistent with the null hypothesis.",
+      "Incorrect. A positive p-value does not force acceptance of the null hypothesis; it may or may not be below \u03b1."
+    ]
+  },
+  {
+    "id": "stats-p-6",
+    "difficulty": "hard",
+    "topic": "p-value",
+    "text": "Four classes test whether caffeine changes Daphnia heart rate. Their p-values are 0.15, 0.051, 0.009, and 0.11. Which statement is most accurate?",
+    "choices": [
+      "Any p-value above 0 means the null hypothesis must be accepted.",
+      "The class with p = 0.009 provides the strongest statistical evidence against the null hypothesis.",
+      "All of the p-values provide equally strong evidence because they were produced by hypothesis tests.",
+      "The largest p-value provides the strongest evidence because it is based on the greatest probability."
+    ],
+    "correct": 1,
+    "explain": "A smaller p-value means the observed data would be less likely if the null hypothesis were true. That does not by itself prove causation, but it does provide stronger statistical evidence against the null hypothesis than a larger p-value does.",
+    "choice_explanations": [
+      "Incorrect. A positive p-value does not force acceptance of the null hypothesis; it may or may not be below \u03b1.",
+      "Correct. Among comparable tests, the smallest p-value represents the data least consistent with the null hypothesis.",
+      "Incorrect. Hypothesis tests can produce very different strengths of evidence depending on the p-value.",
+      "Incorrect. A large p-value means the data are more compatible with the null hypothesis, not less."
+    ]
+  },
+  {
+    "id": "stats-p-7",
+    "difficulty": "hard",
+    "topic": "p-value",
+    "text": "Three groups compare leaf area between sun and shade plants and obtain p-values of 0.20, 0.04, and 0.07. Which statement is most accurate?",
+    "choices": [
+      "The group with p = 0.04 has the best statistical support for a real difference at \u03b1 = 0.05.",
+      "Any p-value above 0 means the null hypothesis must be accepted.",
+      "All of the p-values provide equally strong evidence because they were produced by hypothesis tests.",
+      "The largest p-value provides the strongest evidence because it is based on the greatest probability."
+    ],
+    "correct": 0,
+    "explain": "A smaller p-value means the observed data would be less likely if the null hypothesis were true. That does not by itself prove causation, but it does provide stronger statistical evidence against the null hypothesis than a larger p-value does.",
+    "choice_explanations": [
+      "Correct. Among comparable tests, the smallest p-value represents the data least consistent with the null hypothesis.",
+      "Incorrect. A positive p-value does not force acceptance of the null hypothesis; it may or may not be below \u03b1.",
+      "Incorrect. Hypothesis tests can produce very different strengths of evidence depending on the p-value.",
+      "Incorrect. A large p-value means the data are more compatible with the null hypothesis, not less."
+    ]
+  },
+  {
+    "id": "stats-p-8",
+    "difficulty": "hard",
+    "topic": "p-value",
+    "text": "Three researchers compare mutation rates after UV exposure and obtain p-values of 0.002, 0.03, and 0.40. Which statement is most accurate?",
+    "choices": [
+      "All of the p-values provide equally strong evidence because they were produced by hypothesis tests.",
+      "The largest p-value provides the strongest evidence because it is based on the greatest probability.",
+      "Any p-value above 0 means the null hypothesis must be accepted.",
+      "The p = 0.002 result is least compatible with the null hypothesis."
+    ],
+    "correct": 3,
+    "explain": "A smaller p-value means the observed data would be less likely if the null hypothesis were true. That does not by itself prove causation, but it does provide stronger statistical evidence against the null hypothesis than a larger p-value does.",
+    "choice_explanations": [
+      "Incorrect. Hypothesis tests can produce very different strengths of evidence depending on the p-value.",
+      "Incorrect. A large p-value means the data are more compatible with the null hypothesis, not less.",
+      "Incorrect. A positive p-value does not force acceptance of the null hypothesis; it may or may not be below \u03b1.",
+      "Correct. Among comparable tests, the smallest p-value represents the data least consistent with the null hypothesis."
+    ]
+  },
+  {
+    "id": "stats-p-9",
+    "difficulty": "hard",
+    "topic": "p-value",
+    "text": "A student says, 'p = 0.04 means there is a 96% chance the treatment worked.' Which response is best?",
+    "choices": [
+      "The student is incorrect because p = 0.04 refers to how unusual the data are if the null hypothesis is true, not the probability that the treatment worked.",
+      "A p-value above 0.05 proves that the null hypothesis is true.",
+      "A p-value only matters when there are more than two treatment groups.",
+      "The p-value directly measures the size of the biological effect, so the statement is acceptable if the effect seems small."
+    ],
+    "correct": 0,
+    "explain": "P-values measure how compatible the data are with the null hypothesis. They do not directly tell you the probability that a hypothesis is true, the size of the effect, or whether an effect is biologically important.",
+    "choice_explanations": [
+      "Correct. The best response correctly states what a p-value means and avoids overclaiming.",
+      "Incorrect. A large p-value means the data are compatible with the null hypothesis, not that the null hypothesis has been proven true.",
+      "Incorrect. P-values are relevant in many kinds of comparisons, including simple two-group comparisons.",
+      "Incorrect. Effect size and p-value are different ideas; a p-value does not quantify the size of the effect."
+    ]
+  },
+  {
+    "id": "stats-p-10",
+    "difficulty": "hard",
+    "topic": "p-value",
+    "text": "A lab reports p = 0.30 after testing whether a mutation changes enzyme function. Which response is best?",
+    "choices": [
+      "The p-value directly measures the size of the biological effect, so the statement is acceptable if the effect seems small.",
+      "A p-value only matters when there are more than two treatment groups.",
+      "The data do not provide strong enough evidence to reject the null hypothesis at \u03b1 = 0.05.",
+      "A p-value above 0.05 proves that the null hypothesis is true."
+    ],
+    "correct": 2,
+    "explain": "P-values measure how compatible the data are with the null hypothesis. They do not directly tell you the probability that a hypothesis is true, the size of the effect, or whether an effect is biologically important.",
+    "choice_explanations": [
+      "Incorrect. Effect size and p-value are different ideas; a p-value does not quantify the size of the effect.",
+      "Incorrect. P-values are relevant in many kinds of comparisons, including simple two-group comparisons.",
+      "Correct. The best response correctly states what a p-value means and avoids overclaiming.",
+      "Incorrect. A large p-value means the data are compatible with the null hypothesis, not that the null hypothesis has been proven true."
+    ]
+  },
+  {
+    "id": "stats-p-11",
+    "difficulty": "hard",
+    "topic": "p-value",
+    "text": "A researcher gets p = 0.001 when comparing bacterial counts with and without an antibiotic. Which response is best?",
+    "choices": [
+      "The observed difference would be very unlikely if there were truly no effect of the antibiotic.",
+      "The p-value directly measures the size of the biological effect, so the statement is acceptable if the effect seems small.",
+      "A p-value above 0.05 proves that the null hypothesis is true.",
+      "A p-value only matters when there are more than two treatment groups."
+    ],
+    "correct": 0,
+    "explain": "P-values measure how compatible the data are with the null hypothesis. They do not directly tell you the probability that a hypothesis is true, the size of the effect, or whether an effect is biologically important.",
+    "choice_explanations": [
+      "Correct. The best response correctly states what a p-value means and avoids overclaiming.",
+      "Incorrect. Effect size and p-value are different ideas; a p-value does not quantify the size of the effect.",
+      "Incorrect. A large p-value means the data are compatible with the null hypothesis, not that the null hypothesis has been proven true.",
+      "Incorrect. P-values are relevant in many kinds of comparisons, including simple two-group comparisons."
+    ]
+  },
+  {
+    "id": "stats-p-12",
+    "difficulty": "hard",
+    "topic": "p-value",
+    "text": "A class finds p = 0.06 and claims the treatment definitely has no biological effect. Which response is best?",
+    "choices": [
+      "A p-value above 0.05 proves that the null hypothesis is true.",
+      "A p-value only matters when there are more than two treatment groups.",
+      "The p-value directly measures the size of the biological effect, so the statement is acceptable if the effect seems small.",
+      "That claim is too strong because a non-significant p-value means the data were not strong enough to reject the null hypothesis, not that the effect is impossible."
+    ],
+    "correct": 3,
+    "explain": "P-values measure how compatible the data are with the null hypothesis. They do not directly tell you the probability that a hypothesis is true, the size of the effect, or whether an effect is biologically important.",
+    "choice_explanations": [
+      "Incorrect. A large p-value means the data are compatible with the null hypothesis, not that the null hypothesis has been proven true.",
+      "Incorrect. P-values are relevant in many kinds of comparisons, including simple two-group comparisons.",
+      "Incorrect. Effect size and p-value are different ideas; a p-value does not quantify the size of the effect.",
+      "Correct. The best response correctly states what a p-value means and avoids overclaiming."
+    ]
+  },
+  {
+    "id": "stats-p-13",
+    "difficulty": "hard",
+    "topic": "p-value",
+    "text": "A result has p = 0.04. It is tested once at \u03b1 = 0.05 and once at \u03b1 = 0.01. Which statement is correct?",
+    "choices": [
+      "The result is significant whenever the p-value is greater than \u03b1.",
+      "A result can only be significant if the p-value equals \u03b1 exactly.",
+      "Changing \u03b1 never changes the significance decision for the same data set.",
+      "The result is significant at \u03b1 = 0.05 but not at \u03b1 = 0.01."
+    ],
+    "correct": 3,
+    "explain": "The decision rule is straightforward: reject the null hypothesis when p < \u03b1. If \u03b1 becomes more lenient, some results that were previously non-significant can become significant, but only if the p-value falls below the new threshold.",
+    "choice_explanations": [
+      "Incorrect. Significance requires p to be less than \u03b1, not greater than \u03b1.",
+      "Incorrect. The p-value does not have to equal \u03b1; it only needs to be below it.",
+      "Incorrect. The chosen \u03b1 level absolutely can change whether a result is considered significant.",
+      "Correct. Significance depends on comparing the same p-value to the chosen \u03b1 level."
+    ]
+  },
+  {
+    "id": "stats-p-14",
+    "difficulty": "hard",
+    "topic": "p-value",
+    "text": "A result has p = 0.008. It is evaluated at \u03b1 = 0.05 and \u03b1 = 0.01. Which statement is correct?",
+    "choices": [
+      "The result is significant whenever the p-value is greater than \u03b1.",
+      "Changing \u03b1 never changes the significance decision for the same data set.",
+      "A result can only be significant if the p-value equals \u03b1 exactly.",
+      "The result is significant at both \u03b1 = 0.05 and \u03b1 = 0.01."
+    ],
+    "correct": 3,
+    "explain": "The decision rule is straightforward: reject the null hypothesis when p < \u03b1. If \u03b1 becomes more lenient, some results that were previously non-significant can become significant, but only if the p-value falls below the new threshold.",
+    "choice_explanations": [
+      "Incorrect. Significance requires p to be less than \u03b1, not greater than \u03b1.",
+      "Incorrect. The chosen \u03b1 level absolutely can change whether a result is considered significant.",
+      "Incorrect. The p-value does not have to equal \u03b1; it only needs to be below it.",
+      "Correct. Significance depends on comparing the same p-value to the chosen \u03b1 level."
+    ]
+  },
+  {
+    "id": "stats-p-15",
+    "difficulty": "hard",
+    "topic": "p-value",
+    "text": "A result has p = 0.12. It is evaluated at \u03b1 = 0.05 and \u03b1 = 0.10. Which statement is correct?",
+    "choices": [
+      "Changing \u03b1 never changes the significance decision for the same data set.",
+      "The result is not significant at either \u03b1 = 0.05 or \u03b1 = 0.10.",
+      "The result is significant whenever the p-value is greater than \u03b1.",
+      "A result can only be significant if the p-value equals \u03b1 exactly."
+    ],
+    "correct": 1,
+    "explain": "The decision rule is straightforward: reject the null hypothesis when p < \u03b1. If \u03b1 becomes more lenient, some results that were previously non-significant can become significant, but only if the p-value falls below the new threshold.",
+    "choice_explanations": [
+      "Incorrect. The chosen \u03b1 level absolutely can change whether a result is considered significant.",
+      "Correct. Significance depends on comparing the same p-value to the chosen \u03b1 level.",
+      "Incorrect. Significance requires p to be less than \u03b1, not greater than \u03b1.",
+      "Incorrect. The p-value does not have to equal \u03b1; it only needs to be below it."
+    ]
+  },
+  {
+    "id": "stats-p-16",
+    "difficulty": "hard",
+    "topic": "p-value",
+    "text": "A result has p = 0.095. It is evaluated at \u03b1 = 0.05 and \u03b1 = 0.10. Which statement is correct?",
+    "choices": [
+      "Changing \u03b1 never changes the significance decision for the same data set.",
+      "A result can only be significant if the p-value equals \u03b1 exactly.",
+      "The result is not significant at \u03b1 = 0.05 but is significant at \u03b1 = 0.10.",
+      "The result is significant whenever the p-value is greater than \u03b1."
+    ],
+    "correct": 2,
+    "explain": "The decision rule is straightforward: reject the null hypothesis when p < \u03b1. If \u03b1 becomes more lenient, some results that were previously non-significant can become significant, but only if the p-value falls below the new threshold.",
+    "choice_explanations": [
+      "Incorrect. The chosen \u03b1 level absolutely can change whether a result is considered significant.",
+      "Incorrect. The p-value does not have to equal \u03b1; it only needs to be below it.",
+      "Correct. Significance depends on comparing the same p-value to the chosen \u03b1 level.",
+      "Incorrect. Significance requires p to be less than \u03b1, not greater than \u03b1."
+    ]
+  },
+  {
+    "id": "stats-p-17",
+    "difficulty": "hard",
+    "topic": "p-value",
+    "text": "Two experiments report the same p-value of 0.02, but one has a huge biological effect and the other a tiny effect. Which statement is best?",
+    "choices": [
+      "If two tests have the same p-value, they must also have the same sample size and the same effect size.",
+      "The p-value alone does not tell you which experiment had the larger effect size.",
+      "The experiment with the lower mean must have had the smaller p-value, so the p-values cannot really be equal.",
+      "A p-value of 0.02 always means the treatment changed the response by exactly 2%."
+    ],
+    "correct": 1,
+    "explain": "A p-value describes how incompatible the data are with the null hypothesis, not how large the effect is. Different experiments can reach the same p-value with different sample sizes, different variability, and very different effect sizes.",
+    "choice_explanations": [
+      "Incorrect. P-values matter in both significant and non-significant results because they quantify compatibility with the null hypothesis.",
+      "Correct. This answer avoids one of the most common p-value misconceptions.",
+      "Incorrect. A p-value above 0.05 does not prove the null hypothesis; it only means the data were not strong enough to reject it.",
+      "Incorrect. Hypothesis testing does not mathematically prove either hypothesis true."
+    ]
+  },
+  {
+    "id": "stats-p-18",
+    "difficulty": "hard",
+    "topic": "p-value",
+    "text": "A researcher says, 'Because my result was not significant, I have shown the null hypothesis is correct.' Which critique is best?",
+    "choices": [
+      "A non-significant result means the study did not provide enough evidence to reject the null hypothesis; it does not prove the null hypothesis is correct.",
+      "The claim is fine because significance testing is designed to prove one of the two hypotheses is true.",
+      "The claim is fine because any p-value above 0.05 proves the null hypothesis.",
+      "The critique is wrong because p-values are only used when the result is significant."
+    ],
+    "correct": 0,
+    "explain": "Hypothesis tests are asymmetric: they can provide evidence against the null hypothesis, but failing to reject the null does not prove it true. The study may simply lack enough evidence, power, or precision.",
+    "choice_explanations": [
+      "Correct. This answer avoids one of the most common p-value misconceptions.",
+      "Incorrect. Hypothesis testing does not mathematically prove either hypothesis true.",
+      "Incorrect. A p-value above 0.05 does not prove the null hypothesis; it only means the data were not strong enough to reject it.",
+      "Incorrect. P-values matter in both significant and non-significant results because they quantify compatibility with the null hypothesis."
+    ]
+  },
+  {
+    "id": "stats-p-19",
+    "difficulty": "hard",
+    "topic": "p-value",
+    "text": "A study finds p = 0.048 for a very small difference in mean chlorophyll concentration. Which statement is best?",
+    "choices": [
+      "Because the p-value is close to 0.05, the result should automatically be treated as biologically trivial.",
+      "The p-value proves the treatment changed chlorophyll concentration by 4.8%.",
+      "The difference is statistically significant at \u03b1 = 0.05, but the p-value alone does not tell whether the effect is biologically large or important.",
+      "A p-value below 0.05 means there is less than a 5% chance that any measurement error occurred."
+    ],
+    "correct": 2,
+    "explain": "A p-value below 0.05 supports rejecting the null hypothesis, but it says nothing by itself about effect size or biological importance. A statistically significant result can still represent a small effect.",
+    "choice_explanations": [
+      "Incorrect. This either confuses p-value with biological importance or reverses the effect of variability.",
+      "Incorrect. Equal mean differences do not guarantee equal p-values because variability and sample size matter too.",
+      "Correct. This answer uses the p-value properly without confusing it with effect size, error rate, or proof.",
+      "Incorrect. P-values are directly affected by variability and can absolutely be calculated in such experiments."
+    ]
+  },
+  {
+    "id": "stats-p-20",
+    "difficulty": "hard",
+    "topic": "p-value",
+    "text": "Two versions of the same experiment give the same mean difference, but Experiment 1 has very low variability and Experiment 2 has very high variability. Which experiment is more likely to produce the smaller p-value?",
+    "choices": [
+      "Both experiments must have the same p-value because the mean difference is the same.",
+      "Experiment 2, because higher variability always forces the p-value downward.",
+      "Experiment 1, because lower variability makes the same mean difference easier to detect statistically.",
+      "Neither experiment can have a p-value because variability and p-values are unrelated."
+    ],
+    "correct": 2,
+    "explain": "With the same mean difference, lower variability makes the signal clearer relative to the noise. That usually leads to stronger statistical evidence and therefore a smaller p-value.",
+    "choice_explanations": [
+      "Incorrect. Equal mean differences do not guarantee equal p-values because variability and sample size matter too.",
+      "Incorrect. This either confuses p-value with biological importance or reverses the effect of variability.",
+      "Correct. This answer uses the p-value properly without confusing it with effect size, error rate, or proof.",
+      "Incorrect. P-values are directly affected by variability and can absolutely be calculated in such experiments."
+    ]
+  }
+]

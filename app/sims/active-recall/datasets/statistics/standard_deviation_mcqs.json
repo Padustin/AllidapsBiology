@@ -1,0 +1,602 @@
+[
+  {
+    "id": "stats-sd-1",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "Two classes measure stomatal density. Both have the same mean, but Class A has a much larger standard deviation. Which interpretation is best?",
+    "choices": [
+      "The group with the larger standard deviation must also have the larger mean.",
+      "A larger standard deviation means the data are more tightly clustered.",
+      "Standard deviation tells how far the mean is from the true population mean.",
+      "Class A's measurements are more spread out around the mean."
+    ],
+    "correct": 3,
+    "explain": "Standard deviation measures the spread of individual data points around the mean. A small standard deviation means the values are tightly clustered, while a large standard deviation means the values are more dispersed and less consistent.",
+    "choice_explanations": [
+      "Incorrect. Mean and standard deviation describe different features of a data set; one can change without the other changing.",
+      "Incorrect. Larger standard deviation means more spread, not tighter clustering.",
+      "Incorrect. That idea is closer to uncertainty in the estimate of the mean, not to standard deviation.",
+      "Correct. This is exactly what standard deviation is intended to describe: variability around the mean."
+    ]
+  },
+  {
+    "id": "stats-sd-2",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "A data set has a very small standard deviation. Which interpretation is best?",
+    "choices": [
+      "Most data points are clustered relatively close to the mean.",
+      "Standard deviation tells how far the mean is from the true population mean.",
+      "A larger standard deviation means the data are more tightly clustered.",
+      "The group with the larger standard deviation must also have the larger mean."
+    ],
+    "correct": 0,
+    "explain": "Standard deviation measures the spread of individual data points around the mean. A small standard deviation means the values are tightly clustered, while a large standard deviation means the values are more dispersed and less consistent.",
+    "choice_explanations": [
+      "Correct. This is exactly what standard deviation is intended to describe: variability around the mean.",
+      "Incorrect. That idea is closer to uncertainty in the estimate of the mean, not to standard deviation.",
+      "Incorrect. Larger standard deviation means more spread, not tighter clustering.",
+      "Incorrect. Mean and standard deviation describe different features of a data set; one can change without the other changing."
+    ]
+  },
+  {
+    "id": "stats-sd-3",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "Two groups have the same mean growth rate, but Group X has the larger standard deviation. Which interpretation is best?",
+    "choices": [
+      "A larger standard deviation means the data are more tightly clustered.",
+      "Group X is less consistent because its individual values vary more around the mean.",
+      "The group with the larger standard deviation must also have the larger mean.",
+      "Standard deviation tells how far the mean is from the true population mean."
+    ],
+    "correct": 1,
+    "explain": "Standard deviation measures the spread of individual data points around the mean. A small standard deviation means the values are tightly clustered, while a large standard deviation means the values are more dispersed and less consistent.",
+    "choice_explanations": [
+      "Incorrect. Larger standard deviation means more spread, not tighter clustering.",
+      "Correct. This is exactly what standard deviation is intended to describe: variability around the mean.",
+      "Incorrect. Mean and standard deviation describe different features of a data set; one can change without the other changing.",
+      "Incorrect. That idea is closer to uncertainty in the estimate of the mean, not to standard deviation."
+    ]
+  },
+  {
+    "id": "stats-sd-4",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "A student's repeated heart-rate measurements have a standard deviation of 0.4, while another student's have a standard deviation of 4.0. Which interpretation is best?",
+    "choices": [
+      "Standard deviation tells how far the mean is from the true population mean.",
+      "The first student's measurements are much less variable.",
+      "The group with the larger standard deviation must also have the larger mean.",
+      "A larger standard deviation means the data are more tightly clustered."
+    ],
+    "correct": 1,
+    "explain": "Standard deviation measures the spread of individual data points around the mean. A small standard deviation means the values are tightly clustered, while a large standard deviation means the values are more dispersed and less consistent.",
+    "choice_explanations": [
+      "Incorrect. That idea is closer to uncertainty in the estimate of the mean, not to standard deviation.",
+      "Correct. This is exactly what standard deviation is intended to describe: variability around the mean.",
+      "Incorrect. Mean and standard deviation describe different features of a data set; one can change without the other changing.",
+      "Incorrect. Larger standard deviation means more spread, not tighter clustering."
+    ]
+  },
+  {
+    "id": "stats-sd-5",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "A population sample has a mean of 12 and a standard deviation of 6. Which interpretation is best?",
+    "choices": [
+      "The data are more spread out than they would be if the standard deviation were 2.",
+      "The group with the larger standard deviation must also have the larger mean.",
+      "Standard deviation tells how far the mean is from the true population mean.",
+      "A larger standard deviation means the data are more tightly clustered."
+    ],
+    "correct": 0,
+    "explain": "Standard deviation measures the spread of individual data points around the mean. A small standard deviation means the values are tightly clustered, while a large standard deviation means the values are more dispersed and less consistent.",
+    "choice_explanations": [
+      "Correct. This is exactly what standard deviation is intended to describe: variability around the mean.",
+      "Incorrect. Mean and standard deviation describe different features of a data set; one can change without the other changing.",
+      "Incorrect. That idea is closer to uncertainty in the estimate of the mean, not to standard deviation.",
+      "Incorrect. Larger standard deviation means more spread, not tighter clustering."
+    ]
+  },
+  {
+    "id": "stats-sd-6",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "A class adds one extreme outlier to an otherwise tight data set. Which statement is most accurate?",
+    "choices": [
+      "Standard deviation can be interpreted only for categorical data, not numerical measurements.",
+      "The standard deviation will usually increase because the values are now spread farther from the mean.",
+      "Standard deviation changes only when the mean changes, not when the spread changes.",
+      "Standard deviation depends only on sample size, so outliers and scaling do not affect it."
+    ],
+    "correct": 1,
+    "explain": "Standard deviation responds to how far data points lie from the mean. Outliers usually increase it, removing outliers usually decreases it, adding the same constant to all values leaves the spread unchanged, and multiplying all values scales the spread.",
+    "choice_explanations": [
+      "Incorrect. Standard deviation is a measure for quantitative, not categorical, data.",
+      "Correct. This statement correctly describes how standard deviation behaves when the data themselves are manipulated.",
+      "Incorrect. Spread can change even when the mean does not, and standard deviation tracks that spread.",
+      "Incorrect. Sample size can matter indirectly, but standard deviation is fundamentally about spread, and outliers or scaling can definitely affect it."
+    ]
+  },
+  {
+    "id": "stats-sd-7",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "Every value in a data set is increased by 5 units. Which statement is most accurate?",
+    "choices": [
+      "The mean changes, but the standard deviation stays the same because the spread does not change.",
+      "Standard deviation can be interpreted only for categorical data, not numerical measurements.",
+      "Standard deviation changes only when the mean changes, not when the spread changes.",
+      "Standard deviation depends only on sample size, so outliers and scaling do not affect it."
+    ],
+    "correct": 0,
+    "explain": "Standard deviation responds to how far data points lie from the mean. Outliers usually increase it, removing outliers usually decreases it, adding the same constant to all values leaves the spread unchanged, and multiplying all values scales the spread.",
+    "choice_explanations": [
+      "Correct. This statement correctly describes how standard deviation behaves when the data themselves are manipulated.",
+      "Incorrect. Standard deviation is a measure for quantitative, not categorical, data.",
+      "Incorrect. Spread can change even when the mean does not, and standard deviation tracks that spread.",
+      "Incorrect. Sample size can matter indirectly, but standard deviation is fundamentally about spread, and outliers or scaling can definitely affect it."
+    ]
+  },
+  {
+    "id": "stats-sd-8",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "Every value in a data set is doubled. Which statement is most accurate?",
+    "choices": [
+      "Standard deviation changes only when the mean changes, not when the spread changes.",
+      "Standard deviation can be interpreted only for categorical data, not numerical measurements.",
+      "Standard deviation depends only on sample size, so outliers and scaling do not affect it.",
+      "The standard deviation increases because the distances from the mean are also doubled."
+    ],
+    "correct": 3,
+    "explain": "Standard deviation responds to how far data points lie from the mean. Outliers usually increase it, removing outliers usually decreases it, adding the same constant to all values leaves the spread unchanged, and multiplying all values scales the spread.",
+    "choice_explanations": [
+      "Incorrect. Spread can change even when the mean does not, and standard deviation tracks that spread.",
+      "Incorrect. Standard deviation is a measure for quantitative, not categorical, data.",
+      "Incorrect. Sample size can matter indirectly, but standard deviation is fundamentally about spread, and outliers or scaling can definitely affect it.",
+      "Correct. This statement correctly describes how standard deviation behaves when the data themselves are manipulated."
+    ]
+  },
+  {
+    "id": "stats-sd-9",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "A data set is split into two groups with the same mean, but one group has several values far from the center. Which statement is most accurate?",
+    "choices": [
+      "That group will have the larger standard deviation.",
+      "Standard deviation changes only when the mean changes, not when the spread changes.",
+      "Standard deviation can be interpreted only for categorical data, not numerical measurements.",
+      "Standard deviation depends only on sample size, so outliers and scaling do not affect it."
+    ],
+    "correct": 0,
+    "explain": "Standard deviation responds to how far data points lie from the mean. Outliers usually increase it, removing outliers usually decreases it, adding the same constant to all values leaves the spread unchanged, and multiplying all values scales the spread.",
+    "choice_explanations": [
+      "Correct. This statement correctly describes how standard deviation behaves when the data themselves are manipulated.",
+      "Incorrect. Spread can change even when the mean does not, and standard deviation tracks that spread.",
+      "Incorrect. Standard deviation is a measure for quantitative, not categorical, data.",
+      "Incorrect. Sample size can matter indirectly, but standard deviation is fundamentally about spread, and outliers or scaling can definitely affect it."
+    ]
+  },
+  {
+    "id": "stats-sd-10",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "A student removes the single most extreme value from a highly variable data set. Which statement is most accurate?",
+    "choices": [
+      "The standard deviation will usually decrease because one major source of spread has been removed.",
+      "Standard deviation changes only when the mean changes, not when the spread changes.",
+      "Standard deviation depends only on sample size, so outliers and scaling do not affect it.",
+      "Standard deviation can be interpreted only for categorical data, not numerical measurements."
+    ],
+    "correct": 0,
+    "explain": "Standard deviation responds to how far data points lie from the mean. Outliers usually increase it, removing outliers usually decreases it, adding the same constant to all values leaves the spread unchanged, and multiplying all values scales the spread.",
+    "choice_explanations": [
+      "Correct. This statement correctly describes how standard deviation behaves when the data themselves are manipulated.",
+      "Incorrect. Spread can change even when the mean does not, and standard deviation tracks that spread.",
+      "Incorrect. Sample size can matter indirectly, but standard deviation is fundamentally about spread, and outliers or scaling can definitely affect it.",
+      "Incorrect. Standard deviation is a measure for quantitative, not categorical, data."
+    ]
+  },
+  {
+    "id": "stats-sd-11",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "A histogram shows one treatment with a tall, narrow peak near the mean and another with a flatter, wider spread. Which conclusion is best supported?",
+    "choices": [
+      "Standard deviation bars directly test statistical significance the same way a p-value does.",
+      "The flatter, wider distribution has the larger standard deviation.",
+      "The group with the larger standard deviation must have collected more samples.",
+      "Longer standard-deviation bars show the mean is higher rather than more variable."
+    ],
+    "correct": 1,
+    "explain": "When standard deviation is shown on a graph, it represents the spread of individual observations around the mean. Longer standard-deviation bars reflect greater variability, not automatically a larger mean or a formal significance test.",
+    "choice_explanations": [
+      "Incorrect. Standard deviation describes spread; it is not itself a p-value or significance test.",
+      "Correct. The answer properly connects standard deviation to spread and consistency.",
+      "Incorrect. More samples do not automatically produce a larger standard deviation.",
+      "Incorrect. Standard deviation bars show variability, not simply the magnitude of the mean."
+    ]
+  },
+  {
+    "id": "stats-sd-12",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "Two experiments have equal means, but one has values ranging from 9 to 11 and the other from 2 to 18. Which conclusion is best supported?",
+    "choices": [
+      "The second experiment has the larger standard deviation.",
+      "Standard deviation bars directly test statistical significance the same way a p-value does.",
+      "The group with the larger standard deviation must have collected more samples.",
+      "Longer standard-deviation bars show the mean is higher rather than more variable."
+    ],
+    "correct": 0,
+    "explain": "When standard deviation is shown on a graph, it represents the spread of individual observations around the mean. Longer standard-deviation bars reflect greater variability, not automatically a larger mean or a formal significance test.",
+    "choice_explanations": [
+      "Correct. The answer properly connects standard deviation to spread and consistency.",
+      "Incorrect. Standard deviation describes spread; it is not itself a p-value or significance test.",
+      "Incorrect. More samples do not automatically produce a larger standard deviation.",
+      "Incorrect. Standard deviation bars show variability, not simply the magnitude of the mean."
+    ]
+  },
+  {
+    "id": "stats-sd-13",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "A set of leaf-length measurements is tightly clustered around the mean with no large deviations. Which conclusion is best supported?",
+    "choices": [
+      "The group with the larger standard deviation must have collected more samples.",
+      "Standard deviation bars directly test statistical significance the same way a p-value does.",
+      "Its standard deviation should be relatively small.",
+      "Longer standard-deviation bars show the mean is higher rather than more variable."
+    ],
+    "correct": 2,
+    "explain": "When standard deviation is shown on a graph, it represents the spread of individual observations around the mean. Longer standard-deviation bars reflect greater variability, not automatically a larger mean or a formal significance test.",
+    "choice_explanations": [
+      "Incorrect. More samples do not automatically produce a larger standard deviation.",
+      "Incorrect. Standard deviation describes spread; it is not itself a p-value or significance test.",
+      "Correct. The answer properly connects standard deviation to spread and consistency.",
+      "Incorrect. Standard deviation bars show variability, not simply the magnitude of the mean."
+    ]
+  },
+  {
+    "id": "stats-sd-14",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "A scientist wants the most consistent treatment response among replicates. Which conclusion is best supported?",
+    "choices": [
+      "Longer standard-deviation bars show the mean is higher rather than more variable.",
+      "The group with the larger standard deviation must have collected more samples.",
+      "The treatment with the smaller standard deviation is usually the more consistent one.",
+      "Standard deviation bars directly test statistical significance the same way a p-value does."
+    ],
+    "correct": 2,
+    "explain": "When standard deviation is shown on a graph, it represents the spread of individual observations around the mean. Longer standard-deviation bars reflect greater variability, not automatically a larger mean or a formal significance test.",
+    "choice_explanations": [
+      "Incorrect. Standard deviation bars show variability, not simply the magnitude of the mean.",
+      "Incorrect. More samples do not automatically produce a larger standard deviation.",
+      "Correct. The answer properly connects standard deviation to spread and consistency.",
+      "Incorrect. Standard deviation describes spread; it is not itself a p-value or significance test."
+    ]
+  },
+  {
+    "id": "stats-sd-15",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "A graph reports mean \u00b1 standard deviation for two groups, and one group's error bars are much longer. Which conclusion is best supported?",
+    "choices": [
+      "That group shows greater variability among individual observations.",
+      "Longer standard-deviation bars show the mean is higher rather than more variable.",
+      "Standard deviation bars directly test statistical significance the same way a p-value does.",
+      "The group with the larger standard deviation must have collected more samples."
+    ],
+    "correct": 0,
+    "explain": "When standard deviation is shown on a graph, it represents the spread of individual observations around the mean. Longer standard-deviation bars reflect greater variability, not automatically a larger mean or a formal significance test.",
+    "choice_explanations": [
+      "Correct. The answer properly connects standard deviation to spread and consistency.",
+      "Incorrect. Standard deviation bars show variability, not simply the magnitude of the mean.",
+      "Incorrect. Standard deviation describes spread; it is not itself a p-value or significance test.",
+      "Incorrect. More samples do not automatically produce a larger standard deviation."
+    ]
+  },
+  {
+    "id": "stats-sd-16",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "About 68% of values in an approximately normal distribution fall within one standard deviation of the mean. Which statement is most accurate?",
+    "choices": [
+      "If two groups have the same mean, they must have the same standard deviation.",
+      "One standard deviation around the mean captures most, but not all, of the data.",
+      "Standard deviation measures how many samples were collected rather than how spread out they are.",
+      "A larger standard deviation means the population mean must be wrong."
+    ],
+    "correct": 1,
+    "explain": "Standard deviation is about variation around the mean. It can be zero only if every value is identical, and two groups can share the same mean while having very different spreads.",
+    "choice_explanations": [
+      "Incorrect. The same average can arise from either tightly clustered or widely spread data.",
+      "Correct. The best answer correctly uses standard deviation as a measure of variability.",
+      "Incorrect. Sample size and variability are different concepts.",
+      "Incorrect. A large standard deviation says the data are spread out, not that the mean is 'wrong.'"
+    ]
+  },
+  {
+    "id": "stats-sd-17",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "Two groups have the same mean and similar sample sizes. One has a larger standard deviation. Which statement is most accurate?",
+    "choices": [
+      "Standard deviation measures how many samples were collected rather than how spread out they are.",
+      "That group's individual data points are more variable, even though the average is the same.",
+      "A larger standard deviation means the population mean must be wrong.",
+      "If two groups have the same mean, they must have the same standard deviation."
+    ],
+    "correct": 1,
+    "explain": "Standard deviation is about variation around the mean. It can be zero only if every value is identical, and two groups can share the same mean while having very different spreads.",
+    "choice_explanations": [
+      "Incorrect. Sample size and variability are different concepts.",
+      "Correct. The best answer correctly uses standard deviation as a measure of variability.",
+      "Incorrect. A large standard deviation says the data are spread out, not that the mean is 'wrong.'",
+      "Incorrect. The same average can arise from either tightly clustered or widely spread data."
+    ]
+  },
+  {
+    "id": "stats-sd-18",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "A student argues that a standard deviation of zero would mean every observation was identical. Which statement is most accurate?",
+    "choices": [
+      "That statement is correct because zero spread means no value differs from the mean.",
+      "Standard deviation measures how many samples were collected rather than how spread out they are.",
+      "A larger standard deviation means the population mean must be wrong.",
+      "If two groups have the same mean, they must have the same standard deviation."
+    ],
+    "correct": 0,
+    "explain": "Standard deviation is about variation around the mean. It can be zero only if every value is identical, and two groups can share the same mean while having very different spreads.",
+    "choice_explanations": [
+      "Correct. The best answer correctly uses standard deviation as a measure of variability.",
+      "Incorrect. Sample size and variability are different concepts.",
+      "Incorrect. A large standard deviation says the data are spread out, not that the mean is 'wrong.'",
+      "Incorrect. The same average can arise from either tightly clustered or widely spread data."
+    ]
+  },
+  {
+    "id": "stats-sd-19",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "A plant population has a mean height of 20 cm and a standard deviation of 1 cm, while another has the same mean but a standard deviation of 5 cm. Which statement is most accurate?",
+    "choices": [
+      "A larger standard deviation means the population mean must be wrong.",
+      "The second population has much greater variability in individual heights.",
+      "If two groups have the same mean, they must have the same standard deviation.",
+      "Standard deviation measures how many samples were collected rather than how spread out they are."
+    ],
+    "correct": 1,
+    "explain": "Standard deviation is about variation around the mean. It can be zero only if every value is identical, and two groups can share the same mean while having very different spreads.",
+    "choice_explanations": [
+      "Incorrect. A large standard deviation says the data are spread out, not that the mean is 'wrong.'",
+      "Correct. The best answer correctly uses standard deviation as a measure of variability.",
+      "Incorrect. The same average can arise from either tightly clustered or widely spread data.",
+      "Incorrect. Sample size and variability are different concepts."
+    ]
+  },
+  {
+    "id": "stats-sd-20",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "Replicate enzyme-rate trials produce nearly identical results each time. Which statement is most accurate?",
+    "choices": [
+      "The standard deviation should be very small because the data are highly consistent.",
+      "A larger standard deviation means the population mean must be wrong.",
+      "Standard deviation measures how many samples were collected rather than how spread out they are.",
+      "If two groups have the same mean, they must have the same standard deviation."
+    ],
+    "correct": 0,
+    "explain": "Standard deviation is about variation around the mean. It can be zero only if every value is identical, and two groups can share the same mean while having very different spreads.",
+    "choice_explanations": [
+      "Correct. The best answer correctly uses standard deviation as a measure of variability.",
+      "Incorrect. A large standard deviation says the data are spread out, not that the mean is 'wrong.'",
+      "Incorrect. Sample size and variability are different concepts.",
+      "Incorrect. The same average can arise from either tightly clustered or widely spread data."
+    ]
+  },
+  {
+    "id": "stats-sd-21",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "A researcher compares two treatments and wants to know which produced more predictable outcomes among individual organisms. Which interpretation is best?",
+    "choices": [
+      "The treatment with the smaller standard deviation produced the more predictable outcomes.",
+      "The group with the larger standard deviation is automatically the better treatment because it shows more biological diversity.",
+      "A smaller standard deviation means the mean is closer to zero.",
+      "Standard deviation and standard error always mean the same thing, so either term can be used interchangeably."
+    ],
+    "correct": 0,
+    "explain": "Standard deviation is useful for judging how variable the individual data points are. Smaller standard deviation means more consistency around the mean, while larger standard deviation means more spread and often more overlap among observations.",
+    "choice_explanations": [
+      "Correct. This answer accurately uses standard deviation to interpret consistency, overlap, or the difference from standard error.",
+      "Incorrect. Larger variability is not automatically better; it usually means less consistency.",
+      "Incorrect. Standard deviation says nothing about whether the mean is numerically closer to zero.",
+      "Incorrect. Standard deviation and standard error are related but not interchangeable."
+    ]
+  },
+  {
+    "id": "stats-sd-22",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "A graph shows Treatment A with mean 10 \u00b1 1 SD and Treatment B with mean 10 \u00b1 4 SD. Which interpretation is best?",
+    "choices": [
+      "The group with the larger standard deviation is automatically the better treatment because it shows more biological diversity.",
+      "Standard deviation and standard error always mean the same thing, so either term can be used interchangeably.",
+      "Treatment B has more variable individual outcomes despite having the same mean.",
+      "A smaller standard deviation means the mean is closer to zero."
+    ],
+    "correct": 2,
+    "explain": "Standard deviation is useful for judging how variable the individual data points are. Smaller standard deviation means more consistency around the mean, while larger standard deviation means more spread and often more overlap among observations.",
+    "choice_explanations": [
+      "Incorrect. Larger variability is not automatically better; it usually means less consistency.",
+      "Incorrect. Standard deviation and standard error are related but not interchangeable.",
+      "Correct. This answer accurately uses standard deviation to interpret consistency, overlap, or the difference from standard error.",
+      "Incorrect. Standard deviation says nothing about whether the mean is numerically closer to zero."
+    ]
+  },
+  {
+    "id": "stats-sd-23",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "A data set becomes more tightly clustered around its mean after a protocol is improved. Which interpretation is best?",
+    "choices": [
+      "Its standard deviation should decrease.",
+      "Standard deviation and standard error always mean the same thing, so either term can be used interchangeably.",
+      "The group with the larger standard deviation is automatically the better treatment because it shows more biological diversity.",
+      "A smaller standard deviation means the mean is closer to zero."
+    ],
+    "correct": 0,
+    "explain": "Standard deviation is useful for judging how variable the individual data points are. Smaller standard deviation means more consistency around the mean, while larger standard deviation means more spread and often more overlap among observations.",
+    "choice_explanations": [
+      "Correct. This answer accurately uses standard deviation to interpret consistency, overlap, or the difference from standard error.",
+      "Incorrect. Standard deviation and standard error are related but not interchangeable.",
+      "Incorrect. Larger variability is not automatically better; it usually means less consistency.",
+      "Incorrect. Standard deviation says nothing about whether the mean is numerically closer to zero."
+    ]
+  },
+  {
+    "id": "stats-sd-24",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "A student confuses standard deviation with standard error. Which interpretation is best?",
+    "choices": [
+      "Standard deviation describes spread among individual data points, whereas standard error focuses on uncertainty in the estimate of the mean.",
+      "The group with the larger standard deviation is automatically the better treatment because it shows more biological diversity.",
+      "Standard deviation and standard error always mean the same thing, so either term can be used interchangeably.",
+      "A smaller standard deviation means the mean is closer to zero."
+    ],
+    "correct": 0,
+    "explain": "Standard deviation is useful for judging how variable the individual data points are. Smaller standard deviation means more consistency around the mean, while larger standard deviation means more spread and often more overlap among observations.",
+    "choice_explanations": [
+      "Correct. This answer accurately uses standard deviation to interpret consistency, overlap, or the difference from standard error.",
+      "Incorrect. Larger variability is not automatically better; it usually means less consistency.",
+      "Incorrect. Standard deviation and standard error are related but not interchangeable.",
+      "Incorrect. Standard deviation says nothing about whether the mean is numerically closer to zero."
+    ]
+  },
+  {
+    "id": "stats-sd-25",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "An experiment has a moderate mean difference between groups, but each group has a very large standard deviation. Which interpretation is best?",
+    "choices": [
+      "The group with the larger standard deviation is automatically the better treatment because it shows more biological diversity.",
+      "Standard deviation and standard error always mean the same thing, so either term can be used interchangeably.",
+      "The large spread means the individual measurements overlap a lot, which can make the difference harder to interpret.",
+      "A smaller standard deviation means the mean is closer to zero."
+    ],
+    "correct": 2,
+    "explain": "Standard deviation is useful for judging how variable the individual data points are. Smaller standard deviation means more consistency around the mean, while larger standard deviation means more spread and often more overlap among observations.",
+    "choice_explanations": [
+      "Incorrect. Larger variability is not automatically better; it usually means less consistency.",
+      "Incorrect. Standard deviation and standard error are related but not interchangeable.",
+      "Correct. This answer accurately uses standard deviation to interpret consistency, overlap, or the difference from standard error.",
+      "Incorrect. Standard deviation says nothing about whether the mean is numerically closer to zero."
+    ]
+  },
+  {
+    "id": "stats-sd-26",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "A data set with mean 50 has values 49, 50, 50, 50, and 51. Another data set with the same mean has values 30, 40, 50, 60, and 70. Which statement is most accurate?",
+    "choices": [
+      "The first data set has the larger standard deviation because it has more values near the mean.",
+      "The second data set has the larger standard deviation because its values lie much farther from the mean overall.",
+      "Standard deviation cannot be compared across two data sets unless they have different means.",
+      "Both data sets have the same standard deviation because they have the same mean."
+    ],
+    "correct": 1,
+    "explain": "Both data sets share the same mean, but the second one is far more spread out. Standard deviation increases as data points sit farther from the mean, so the second set has the larger standard deviation.",
+    "choice_explanations": [
+      "Incorrect. This choice does not actually describe or change the spread of the data in the relevant way.",
+      "Correct. This answer focuses on spread around the mean, which is exactly what standard deviation measures.",
+      "Incorrect. This option uses unrelated statistical vocabulary instead of addressing variability around the mean.",
+      "Incorrect. This distractor confuses standard deviation with another idea, such as the mean or statistical significance."
+    ]
+  },
+  {
+    "id": "stats-sd-27",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "A class reports the mean test score as 82 \u00b1 9 SD. Which interpretation is best?",
+    "choices": [
+      "The class average is uncertain because standard deviation measures error in the mean.",
+      "The scores varied quite a bit around the mean of 82.",
+      "The true population mean must be either 73 or 91.",
+      "Exactly 9 students scored above the mean and 9 below it."
+    ],
+    "correct": 1,
+    "explain": "Writing a mean as 82 \u00b1 9 SD indicates a spread of scores around the mean, not a pair of guaranteed endpoints or a count of students. A standard deviation of 9 suggests the scores were not tightly clustered.",
+    "choice_explanations": [
+      "Incorrect. This option uses unrelated statistical vocabulary instead of addressing variability around the mean.",
+      "Correct. This answer focuses on spread around the mean, which is exactly what standard deviation measures.",
+      "Incorrect. This distractor confuses standard deviation with another idea, such as the mean or statistical significance.",
+      "Incorrect. This choice does not actually describe or change the spread of the data in the relevant way."
+    ]
+  },
+  {
+    "id": "stats-sd-28",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "Two treatments produce identical means, but one has a much smaller standard deviation and a much narrower 95% confidence interval. Which statement is most accurate?",
+    "choices": [
+      "A narrower confidence interval proves the standard deviation was zero.",
+      "The treatment with the smaller standard deviation must have had the larger mean before rounding.",
+      "Standard deviation and confidence interval always move in opposite directions.",
+      "That treatment produced both less variable individual outcomes and a more precise estimate of the mean."
+    ],
+    "correct": 3,
+    "explain": "Standard deviation and confidence interval describe related but different ideas: variability among individual values and precision of the estimated mean. A smaller standard deviation often helps make the confidence interval narrower as well.",
+    "choice_explanations": [
+      "Incorrect. This choice does not actually describe or change the spread of the data in the relevant way.",
+      "Incorrect. This distractor confuses standard deviation with another idea, such as the mean or statistical significance.",
+      "Incorrect. This option uses unrelated statistical vocabulary instead of addressing variability around the mean.",
+      "Correct. This answer focuses on spread around the mean, which is exactly what standard deviation measures."
+    ]
+  },
+  {
+    "id": "stats-sd-29",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "A researcher wants to compare how spread out two sets of repeated measurements are before doing any significance test. Which statistic is most directly useful?",
+    "choices": [
+      "The expected ratio, because it tells how widely values are dispersed.",
+      "Standard deviation, because it directly summarizes variability around the mean.",
+      "The p-value, because it directly measures spread within one group.",
+      "The degrees of freedom, because they determine how many values are near the mean."
+    ],
+    "correct": 1,
+    "explain": "If the goal is simply to describe how spread out repeated measurements are, standard deviation is the most direct statistic. P-values and degrees of freedom answer different questions.",
+    "choice_explanations": [
+      "Incorrect. This option uses unrelated statistical vocabulary instead of addressing variability around the mean.",
+      "Correct. This answer focuses on spread around the mean, which is exactly what standard deviation measures.",
+      "Incorrect. This distractor confuses standard deviation with another idea, such as the mean or statistical significance.",
+      "Incorrect. This choice does not actually describe or change the spread of the data in the relevant way."
+    ]
+  },
+  {
+    "id": "stats-sd-30",
+    "difficulty": "hard",
+    "topic": "standard deviation",
+    "text": "A treatment group's results are tightly clustered except for one very high reading caused by equipment error. Which action would most likely reduce the standard deviation the most?",
+    "choices": [
+      "Adding a constant to every data point.",
+      "Comparing the group to a new alpha level of 0.05.",
+      "Renaming the groups without changing the values.",
+      "Removing the erroneous outlier after justifying that it was a measurement error."
+    ],
+    "correct": 3,
+    "explain": "A single extreme outlier can dramatically increase standard deviation because it lies far from the mean. If the value is a justified measurement error, removing it would usually reduce the spread the most.",
+    "choice_explanations": [
+      "Incorrect. This distractor confuses standard deviation with another idea, such as the mean or statistical significance.",
+      "Incorrect. This option uses unrelated statistical vocabulary instead of addressing variability around the mean.",
+      "Incorrect. This choice does not actually describe or change the spread of the data in the relevant way.",
+      "Correct. This answer focuses on spread around the mean, which is exactly what standard deviation measures."
+    ]
+  }
+]

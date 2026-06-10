@@ -11,7 +11,6 @@ import {
   SecondaryLink,
   SectionCard,
   StatCard,
-  TipCard,
 } from "../../../components/ui/study-kit";
 import { getRedoQuestionIds, readStudyProgressSnapshot, recordMcqAttempt, STUDY_PROGRESS_EVENT } from "../progress";
 import { buildSimilarityAvoidIds } from "../question-rotation";
@@ -29,7 +28,10 @@ function normalizeTone(value: string): SessionTone {
 
 function PageContent() {
   const searchParams = useSearchParams();
-  const [difficulty, setDifficulty] = useState("easy");
+  const [difficulty, setDifficulty] = useState(() => {
+    const requestedDifficulty = searchParams.get("difficulty") || "easy";
+    return DIFFICULTY_OPTIONS.some((option) => option.value === requestedDifficulty) ? requestedDifficulty : "easy";
+  });
   const [question, setQuestion] = useState<any | null>(null);
   const [previousQuestions, setPreviousQuestions] = useState<any[]>([]);
   const [loadError, setLoadError] = useState<string | null>(null);
@@ -46,6 +48,16 @@ function PageContent() {
   const difficultyLabel = DIFFICULTY_OPTIONS.find((option) => option.value === difficulty)?.label ?? difficulty;
   const difficultyDescription = getDifficultyDescription(difficulty);
   const difficultyTone = normalizeTone(difficulty);
+
+  useEffect(() => {
+    const requestedDifficulty = searchParams.get("difficulty");
+    if (!requestedDifficulty || requestedDifficulty === difficulty) {
+      return;
+    }
+    if (DIFFICULTY_OPTIONS.some((option) => option.value === requestedDifficulty)) {
+      setDifficulty(requestedDifficulty);
+    }
+  }, [difficulty, searchParams]);
 
   function refreshProgress() {
     setProgressSnapshot(readStudyProgressSnapshot());
@@ -255,7 +267,12 @@ function PageContent() {
           eyebrow="All-Unit MCQ Review"
           title="Mixed AP Biology multiple-choice across the full course."
           description="Choose a mode, then work through one question at a time with per-choice explanations and a redo queue for misses."
-          actions={<SecondaryLink href="/sims/active-recall">Back to dashboard</SecondaryLink>}
+          actions={
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <SecondaryLink href="/sims/active-recall">Back to dashboard</SecondaryLink>
+              <SecondaryLink href="/sims/mcq?difficulty=statistics">Open statistics MCQs</SecondaryLink>
+            </div>
+          }
         />
         <LoadingSkeleton title="Loading review" lines={5} />
       </main>
@@ -272,6 +289,7 @@ function PageContent() {
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <SecondaryLink href="/sims/active-recall">Back to dashboard</SecondaryLink>
             <SecondaryLink href="/sims/active-recall/unit">Switch to unit review</SecondaryLink>
+            <SecondaryLink href="/sims/mcq?difficulty=statistics">Open statistics MCQs</SecondaryLink>
           </div>
         }
         aside={
@@ -292,7 +310,7 @@ function PageContent() {
           <div className="grid gap-4 md:grid-cols-2">
             <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
               <label className="text-sm font-semibold text-slate-900">Mode</label>
-              <p className="mt-1 text-sm text-slate-500">Switch between fast recall, harder multiple-choice, and experiment interpretation.</p>
+              <p className="mt-1 text-sm text-slate-500">Switch between fast recall, harder multiple-choice, experiment interpretation, and quantitative statistics review.</p>
               <div className="mt-3 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">
                 <select value={difficulty} onChange={(event) => setDifficulty(event.target.value)} className="w-full bg-transparent text-sm font-medium text-slate-900 outline-none">
                   {DIFFICULTY_OPTIONS.map((option) => (
@@ -314,7 +332,7 @@ function PageContent() {
                 <input type="checkbox" checked={redoMissedOnly} onChange={(event) => setRedoMissedOnly(event.target.checked)} className="mt-1 h-4 w-4" />
                 <span>
                   <span className="block text-sm font-semibold text-slate-900">Redo missed questions only</span>
-                  <span className="mt-1 block text-sm text-slate-500">{redoCount} questions currently queued for this mode.</span>
+                  <span className="mt-1 block text-sm text-slate-500">{`${redoCount} questions currently queued for this mode.`}</span>
                 </span>
               </label>
             </div>
@@ -344,7 +362,6 @@ function PageContent() {
       {question ? (
         <SectionCard
           title="Question"
-          description="Cross out distractors if you need to narrow the field, then use the explanation toggle to inspect why each option worked or failed."
           tone={difficultyTone}
         >
           <div className="grid gap-4">
@@ -383,12 +400,13 @@ function PageContent() {
                   const isDisabled = selected !== null;
                   const isCorrectChoice = index === question.correct;
                   const isWrongSelected = selected === index && !isCorrectChoice;
+                  const labelClass = selected !== null ? (isCorrectChoice ? "text-emerald-950" : isWrongSelected ? "text-rose-950" : "text-slate-950") : "text-slate-950";
                   const choiceClass = selected !== null
                     ? isCorrectChoice
-                      ? "border-slate-300 bg-slate-100 text-[#1f5a32]"
+                      ? "border-emerald-300 bg-emerald-50 text-emerald-900"
                       : isWrongSelected
-                        ? "border-slate-300 bg-slate-100"
-                        : "border-slate-200 bg-white"
+                        ? "border-rose-300 bg-rose-50 text-rose-900"
+                        : "border-slate-200 bg-white text-slate-600"
                     : "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50";
 
                   return (
@@ -398,13 +416,13 @@ function PageContent() {
                           onClick={() => {
                             setSelected(index);
                             setVisibleExplanations({ [index]: true });
-                            recordMcqAttempt(question, { selectedIndex: index, mode: "ap" });
+                            recordMcqAttempt(question, { selectedIndex: index, mode: "ap", unit: difficulty === "statistics" ? String(question.topic || "Statistics") : undefined });
                             refreshProgress();
                           }}
                           disabled={isDisabled}
                           className={`flex-1 rounded-2xl border px-4 py-3 text-left text-sm text-slate-800 shadow-sm transition ${choiceClass} ${crossedOut[index] ? "opacity-55 line-through" : ""}`}
                         >
-                          <span className="font-semibold text-slate-950">{String.fromCharCode(65 + index)}.</span> {choice}
+                          <span className={`font-semibold ${labelClass}`}>{String.fromCharCode(65 + index)}.</span> {choice}
                         </button>
 
                         <button
@@ -418,7 +436,7 @@ function PageContent() {
                         {selected !== null ? (
                           <button
                             onClick={() => setVisibleExplanations((current) => ({ ...current, [index]: !current[index] }))}
-                            className={`rounded-2xl border px-4 py-3 text-sm font-semibold shadow-sm transition ${visibleExplanations[index] ? "border-slate-300 bg-slate-100 text-[#1f5a32]" : "border-slate-200 bg-white text-slate-700 hover:bg-slate-50"}`}
+                            className={`rounded-2xl border px-4 py-3 text-sm font-semibold shadow-sm transition ${visibleExplanations[index] ? (isCorrectChoice ? "border-emerald-300 bg-emerald-50 text-emerald-900" : "border-rose-300 bg-rose-50 text-rose-900") : "border-slate-200 bg-white text-slate-700 hover:bg-slate-50"}`}
                           >
                             {visibleExplanations[index] ? "Hide explanation" : "Show explanation"}
                           </button>
@@ -426,7 +444,7 @@ function PageContent() {
                       </div>
 
                       {visibleExplanations[index] && selected !== null ? (
-                        <div className={`rounded-2xl border px-4 py-3 text-sm leading-6 ${isCorrectChoice ? "border-slate-300 bg-slate-100 text-[#1f5a32]" : "border-slate-200 bg-slate-50 text-slate-700"}`}>
+                        <div className={`rounded-2xl border px-4 py-3 text-sm leading-6 ${isCorrectChoice ? "border-emerald-300 bg-emerald-50 text-emerald-900" : isWrongSelected ? "border-rose-300 bg-rose-50 text-rose-900" : "border-slate-200 bg-slate-50 text-slate-700"}`}>
                           {choiceExplain(index)}
                         </div>
                       ) : null}
@@ -434,14 +452,6 @@ function PageContent() {
                   );
                 })}
               </div>
-
-              {selected !== null ? (
-                <div className={`mt-5 rounded-2xl border px-4 py-4 ${selected === question.correct ? "border-slate-300 bg-slate-100" : "border-slate-300 bg-slate-100"}`}>
-                  <div className="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">Result</div>
-                  <div className="mt-2 text-lg font-semibold tracking-tight text-slate-950">{selected === question.correct ? "Correct" : "Incorrect"}</div>
-                  <p className="mt-2 text-sm leading-6 text-slate-700">Per-choice explanations are shown above so you can compare the correct reasoning against the distractors, not just the final answer.</p>
-                </div>
-              ) : null}
 
               <div className="mt-5 flex flex-wrap gap-3">
                 <SecondaryButton onClick={previous} disabled={previousQuestions.length === 0}>
@@ -456,7 +466,7 @@ function PageContent() {
         </SectionCard>
       ) : null}
 
-      <TipCard label="Study tip">Say why the correct option is right and why one distractor is wrong before moving on. That is usually where AP-style gains show up.</TipCard>
+      {/* TipCard removed as requested */}
     </main>
   );
 }

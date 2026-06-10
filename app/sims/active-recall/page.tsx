@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import {
   EmptyState,
-  FeatureCard,
   ModeBadge,
   PageHeader,
   PrimaryLink,
@@ -60,27 +59,40 @@ export default function ActiveRecallPage() {
     <main className="grid gap-6 lg:gap-8">
       <PageHeader
         eyebrow="Practice Dashboard"
-        title="Choose the next kind of AP Biology practice you actually need."
-        description="Use focused unit repair when content is shaky, mixed review when you want pressure, and FRQs when you need biological reasoning to hold up in writing."
+        title=""
+        align="start"
         actions={
-          <>
-            <PrimaryLink href="/sims/mcq">Start with unit MCQs</PrimaryLink>
-            <SecondaryLink href="/sims/mcq">Open mixed AP review</SecondaryLink>
-          </>
+          <div className="grid w-full gap-4 md:grid-cols-2 xl:max-w-5xl">
+            <PrimaryLink href="/sims/mcq" className="min-h-20 w-full rounded-[1.35rem] px-8 py-5 text-lg">
+              Unit specific MCQs
+            </PrimaryLink>
+            <PrimaryLink href="/sims/mcq" className="min-h-20 w-full rounded-[1.35rem] px-8 py-5 text-lg">
+              Unit specific FRQs
+            </PrimaryLink>
+            <PrimaryLink href="/sims/mcq?unit=all" className="min-h-20 w-full rounded-[1.35rem] px-8 py-5 text-lg">
+              All unit MCQ
+            </PrimaryLink>
+            <PrimaryLink href="/sims/frq?unit=all&variant=ap" className="min-h-20 w-full rounded-[1.35rem] px-8 py-5 text-lg">
+              All unit FRQ
+            </PrimaryLink>
+            <PrimaryLink href="/sims/mcq?difficulty=statistics" className="min-h-20 w-full rounded-[1.35rem] px-8 py-5 text-lg md:col-span-2 md:mx-auto md:max-w-[28rem]">
+              Statistic MCQs
+            </PrimaryLink>
+          </div>
         }
         aside={
           <div className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
             <div className="rounded-[1.35rem] border border-slate-300 bg-slate-100/95 p-4 shadow-sm">
               <ModeBadge label={DIFFICULTY_META.easy.label} tone="amber" />
-              <p className="mt-3 text-sm leading-6 text-[#1f5a32]">{DIFFICULTY_META.easy.description}. Best for rebuilding certainty before you add pressure.</p>
+              <p className="mt-3 text-sm leading-6 text-slate-950">{DIFFICULTY_META.easy.description}. Best for rebuilding certainty before you add pressure.</p>
             </div>
             <div className="rounded-[1.35rem] border border-slate-300 bg-slate-100/95 p-4 shadow-sm">
               <ModeBadge label={DIFFICULTY_META.hard.label} tone="blue" />
-              <p className="mt-3 text-sm leading-6 text-[#1f5a32]">{DIFFICULTY_META.hard.description}. Best when you want realistic distractors and faster exam decisions.</p>
+              <p className="mt-3 text-sm leading-6 text-slate-950">{DIFFICULTY_META.hard.description}. Best when you want realistic distractors and faster exam decisions.</p>
             </div>
             <div className="rounded-[1.35rem] border border-slate-300 bg-slate-100/95 p-4 shadow-sm">
               <ModeBadge label={DIFFICULTY_META.analysis.label} tone="teal" />
-              <p className="mt-3 text-sm leading-6 text-[#1f5a32]">{DIFFICULTY_META.analysis.description}. Best for figures, setups, graphs, and data interpretation.</p>
+              <p className="mt-3 text-sm leading-6 text-slate-950">{DIFFICULTY_META.analysis.description}. Best for figures, setups, graphs, and data interpretation.</p>
             </div>
           </div>
         }
@@ -90,8 +102,16 @@ export default function ActiveRecallPage() {
         <EmptyState
           title="Your first study loop should feel obvious."
           description="Start with one unit, let the dashboard expose the weak spots, then move into mixed AP review and FRQs once recall starts to stabilize."
-          action={<PrimaryLink href="/sims/mcq">Start with unit MCQs</PrimaryLink>}
-          secondaryAction={<SecondaryLink href="/sims/mcq">Jump to mixed AP review</SecondaryLink>}
+          action={
+            <PrimaryLink href="/sims/mcq" className="min-h-14 rounded-2xl px-6 py-3.5 text-base">
+              Start with unit MCQs
+            </PrimaryLink>
+          }
+          secondaryAction={
+            <SecondaryLink href="/sims/mcq" className="min-h-14 rounded-2xl px-6 py-3.5 text-base">
+              Jump to mixed AP review
+            </SecondaryLink>
+          }
           preview={
             <div className="grid gap-3">
               {onboardingSteps.map((item) => (
@@ -107,51 +127,6 @@ export default function ActiveRecallPage() {
       ) : null}
 
       <ProgressDashboard />
-
-      <SectionCard
-        title="Choose the next session"
-        description="Unit MCQs are the best first move. Mixed review adds pressure. FRQs are where recall has to hold up as written biological reasoning."
-        tone="slate"
-      >
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          <FeatureCard
-            eyebrow="Focused repair"
-            title="Unit MCQ review"
-            description="Best for reteaching, next-day quizzes, or fixing one content area before you add more pressure."
-            detail="Choose a unit, then run Foundation, AP-Style, or Experiment sets inside the page."
-            href="/sims/mcq"
-            tone="amber"
-            cta="Open unit review"
-          />
-          <FeatureCard
-            eyebrow="Full-course pressure"
-            title="All-unit MCQ review"
-            description="Best once one-unit work feels steadier and you want harder mixed AP-style decisions across the course."
-            detail="Useful for elimination practice, switching speed, and broader exam stamina."
-            href="/sims/mcq"
-            tone="blue"
-            cta="Open mixed review"
-          />
-          <FeatureCard
-            eyebrow="Written repair"
-            title="Unit FRQ practice"
-            description="Best when one unit keeps breaking your explanations and you need direct written-response repair on that content."
-            detail="Use shorter Foundation prompts or fuller FRQ-style responses inside the route."
-            href="/sims/active-recall/frq-unit"
-            tone="amber"
-            cta="Open unit FRQs"
-          />
-          <FeatureCard
-            eyebrow="Synthesis and stimulus"
-            title="All-unit FRQ practice"
-            description="Best once you want broad AP-style writing, stimulus interpretation, and explanation practice across units."
-            detail="Includes longer prompts and image-backed FRQ sets for mixed transfer work."
-            href="/sims/active-recall/frq-all"
-            tone="teal"
-            cta="Open mixed FRQs"
-          />
-        </div>
-      </SectionCard>
 
       <section className="grid gap-4 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
         <SectionCard

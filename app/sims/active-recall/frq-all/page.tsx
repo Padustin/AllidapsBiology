@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import { Suspense, useEffect, useState } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
 import {
   LoadingSkeleton,
   ModeBadge,
@@ -15,10 +15,11 @@ import {
   VerbBadge,
 } from "../../../components/ui/study-kit";
 import { buildSimilarityAvoidIds } from "../question-rotation";
-import { FRQ_VARIANT_OPTIONS, getFrqVariantDescription, getFrqVariantTone } from "../shared";
+import { FRQ_VARIANT_OPTIONS, UNITS, getFrqVariantDescription, getFrqVariantTone } from "../shared";
 
 type VariantValue = "ap" | "active-recall";
 type SessionTone = "blue" | "teal" | "amber" | "slate" | "rose";
+const ALL_UNITS_VALUE = "__all_units__";
 type FrqPart = { label: string; verb: string; prompt: string };
 type FrqAnswer = { answer?: string; bullet_points?: string[] };
 type FrqQuestion = {
@@ -41,10 +42,19 @@ function normalizeTone(value: string): SessionTone {
   return "slate";
 }
 
-export default function AllUnitFrqPage() {
+function getRequestedFrqUnit(value: string | null) {
+  if (!value || value === "all" || value === ALL_UNITS_VALUE) {
+    return ALL_UNITS_VALUE;
+  }
+  return UNITS.find((unitOption) => unitOption === value) ?? ALL_UNITS_VALUE;
+}
+
+function AllUnitFrqPageContent() {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const isCompactFrq = pathname.startsWith("/sims/frq");
-  const [variant, setVariant] = useState<VariantValue>("ap");
+  const [selectedUnit, setSelectedUnit] = useState(() => getRequestedFrqUnit(searchParams.get("unit")));
+  const [variant, setVariant] = useState<VariantValue>(() => (searchParams.get("variant") === "active-recall" ? "active-recall" : "ap"));
   const [question, setQuestion] = useState<FrqQuestion | null>(null);
   const [previousQuestions, setPreviousQuestions] = useState<FrqQuestion[]>([]);
   const [loadError, setLoadError] = useState<string | null>(null);
@@ -54,6 +64,28 @@ export default function AllUnitFrqPage() {
   const variantDescription = getFrqVariantDescription(variant);
   const variantTone = normalizeTone(variant);
   const hasReveal = Object.values(revealedParts).some(Boolean);
+  const isUnitScoped = isCompactFrq && selectedUnit !== ALL_UNITS_VALUE;
+
+  useEffect(() => {
+    const requestedVariant = searchParams.get("variant");
+    if (!requestedVariant || requestedVariant === variant) {
+      return;
+    }
+    if (requestedVariant === "ap" || requestedVariant === "active-recall") {
+      setVariant(requestedVariant);
+    }
+  }, [searchParams, variant]);
+
+  useEffect(() => {
+    const requestedUnitParam = searchParams.get("unit");
+    if (!requestedUnitParam) {
+      return;
+    }
+    const requestedUnit = getRequestedFrqUnit(requestedUnitParam);
+    if (requestedUnit !== selectedUnit) {
+      setSelectedUnit(requestedUnit);
+    }
+  }, [searchParams, selectedUnit]);
 
   async function nextFrq() {
     const currentQuestion = question;
@@ -69,7 +101,8 @@ export default function AllUnitFrqPage() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          mode: "all",
+          mode: isUnitScoped ? "unit" : "all",
+          unit: isUnitScoped ? selectedUnit : null,
           difficulty: variant,
           recentQuestionIds,
           avoidSimilarToQuestionIds,
@@ -81,7 +114,7 @@ export default function AllUnitFrqPage() {
         setQuestion(data.question);
         return;
       }
-      setLoadError("No free-response prompts are available yet.");
+      setLoadError(isUnitScoped ? "No free-response prompts are available for this unit yet." : "No free-response prompts are available yet.");
     } catch {
       setLoadError("Unable to load free-response prompts right now. Please try again.");
     }
@@ -102,7 +135,7 @@ export default function AllUnitFrqPage() {
     setPreviousQuestions([]);
     void nextFrq();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [variant]);
+  }, [selectedUnit, variant]);
 
   return (
     <main className={isCompactFrq ? "grid gap-4" : "grid gap-6 lg:gap-8"}>
@@ -110,7 +143,7 @@ export default function AllUnitFrqPage() {
       <PageHeader
         eyebrow="All-Unit FRQ Practice"
         title="Write across the full AP Biology course."
-        description="Use shorter Foundation prompts for rapid retrieval or full FRQ mode when you want structured written reasoning, stimulus interpretation, and scoring guidance."
+        description="Choose the writing difficulty you want, from shorter Foundation prompts to full FRQ practice with structured reasoning, stimulus interpretation, and scoring guidance."
         actions={
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <SecondaryLink href="/sims/active-recall">Back to dashboard</SecondaryLink>
@@ -119,7 +152,7 @@ export default function AllUnitFrqPage() {
         }
         aside={
           <div className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
-            <StatCard label="Current mode" value={variantLabel} detail={variantDescription} tone={variantTone === "slate" ? "neutral" : variantTone} />
+            <StatCard label="Current difficulty" value={variantLabel} detail={variantDescription} tone={variantTone === "slate" ? "neutral" : variantTone} />
             <StatCard label="Question history" value={previousQuestions.length} detail="Prompts you can still step back to" tone="amber" />
             <StatCard label="Reveal style" value="Part-by-part" detail="Reveal scoring notes only when you are ready" tone="teal" />
           </div>
@@ -130,13 +163,13 @@ export default function AllUnitFrqPage() {
       {!isCompactFrq ? (
       <SectionCard
         title="Session setup"
-        description="Choose the style of writing practice you want, then move prompt by prompt without repeating near-duplicate questions back-to-back."
+        description="Choose the difficulty of writing practice you want, then move prompt by prompt without repeating near-duplicate questions back-to-back."
         tone={variantTone}
       >
         <div className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_minmax(300px,0.8fr)]">
           <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-            <label className="text-sm font-semibold text-slate-900">Prompt type</label>
-            <p className="mt-1 text-sm text-slate-500">Switch between shorter concept-recall responses and fuller FRQ-style prompts with structured scoring notes.</p>
+            <label className="text-sm font-semibold text-slate-900">Difficulty</label>
+            <p className="mt-1 text-sm text-slate-500">Switch between shorter Foundation responses and fuller FRQ-style prompts with structured scoring notes.</p>
             <div className="mt-3 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">
               <select value={variant} onChange={(event) => setVariant(event.target.value as VariantValue)} className="w-full bg-transparent text-sm font-medium text-slate-900 outline-none">
                 {FRQ_VARIANT_OPTIONS.map((option) => (
@@ -152,23 +185,39 @@ export default function AllUnitFrqPage() {
           </div>
 
           <div className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
-            <StatCard label="Prompt focus" value={variant === "ap" ? "Structured FRQ" : "Fast retrieval"} detail={variant === "ap" ? "Longer responses with scoring notes" : "Shorter concept checks"} />
+            <StatCard label="Prompt focus" value={variant === "ap" ? "Structured FRQ" : "Fast retrieval"} detail={variant === "ap" ? "Higher writing load with scoring notes" : "Lower writing load with rapid concept checks"} />
             <StatCard label="Current history" value={previousQuestions.length} detail="Previous prompts available in this session" tone="blue" />
             <StatCard label="Reveal pattern" value="On demand" detail="Keep answers hidden until you choose to reveal them" tone="amber" />
           </div>
         </div>
       </SectionCard>
       ) : (
-        <div className="rounded-[1.2rem] border border-slate-200 bg-white p-4 shadow-sm">
-          <label className="mb-2 block text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Prompt type</label>
-          <div className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">
-            <select value={variant} onChange={(event) => setVariant(event.target.value as VariantValue)} className="w-full bg-transparent text-sm font-medium text-slate-900 outline-none">
-              {FRQ_VARIANT_OPTIONS.map((option) => (
-                <option key={option.value} value={option.value}>
-                  {option.label}
-                </option>
-              ))}
-            </select>
+        <div className="grid gap-3 rounded-[1.2rem] border border-slate-200 bg-white p-4 shadow-sm">
+          <div>
+            <label className="mb-2 block text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Unit</label>
+            <div className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">
+              <select value={selectedUnit} onChange={(event) => setSelectedUnit(event.target.value)} className="w-full bg-transparent text-sm font-medium text-slate-900 outline-none">
+                <option value={ALL_UNITS_VALUE}>All units</option>
+                {UNITS.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label className="mb-2 block text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Difficulty</label>
+            <div className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">
+              <select value={variant} onChange={(event) => setVariant(event.target.value as VariantValue)} className="w-full bg-transparent text-sm font-medium text-slate-900 outline-none">
+                {FRQ_VARIANT_OPTIONS.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
         </div>
       )}
@@ -191,6 +240,11 @@ export default function AllUnitFrqPage() {
         >
           <div className="grid gap-4">
             <div className="flex flex-wrap items-center gap-2">
+              {isUnitScoped ? (
+                <span className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-slate-700">
+                  {selectedUnit}
+                </span>
+              ) : null}
               <ModeBadge label={variantLabel} tone={variantTone === "slate" ? "neutral" : variantTone} />
               {question.topic ? (
                 <span className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-slate-700">
@@ -206,7 +260,6 @@ export default function AllUnitFrqPage() {
                   alt={question.image_alt || "FRQ image"}
                   className="max-h-[420px] w-full rounded-xl object-contain"
                 />
-                {question.image_alt ? <p className="mt-3 text-sm text-slate-500">{question.image_alt}</p> : null}
               </div>
             ) : null}
 
@@ -272,8 +325,8 @@ export default function AllUnitFrqPage() {
 
               {hasReveal && question.explain && question.parts && question.parts.length > 0 ? (
                 <div className="mt-5 rounded-2xl border border-slate-300 bg-slate-100 p-4">
-                  <div className="text-sm font-semibold uppercase tracking-[0.16em] text-[#1f5a32]">Teacher note</div>
-                  <p className="mt-2 text-sm leading-6 text-[#1f5a32]">{question.explain}</p>
+                  <div className="text-sm font-semibold uppercase tracking-[0.16em] text-[color:var(--accent-text)]">Teacher note</div>
+                  <p className="mt-2 text-sm leading-6 text-[color:var(--accent-text)]">{question.explain}</p>
                 </div>
               ) : null}
 
@@ -290,5 +343,19 @@ export default function AllUnitFrqPage() {
 
       {!isCompactFrq ? <TipCard label="Study tip">Write or say your answer before revealing the scoring notes. FRQ practice only helps if you force the reasoning out first.</TipCard> : null}
     </main>
+  );
+}
+
+export default function AllUnitFrqPage() {
+  return (
+    <Suspense
+      fallback={
+        <main className="grid gap-4">
+          <LoadingSkeleton title="Loading prompt" lines={4} />
+        </main>
+      }
+    >
+      <AllUnitFrqPageContent />
+    </Suspense>
   );
 }

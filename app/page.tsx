@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   FeatureCard,
   ModeBadge,
@@ -31,37 +32,105 @@ const START_POINTS = [
   {
     eyebrow: "Best first move",
     title: "Unit MCQ review",
-    description: "Target one unit, choose the mode that fits your day, and close gaps without bouncing around the course.",
-    detail: "Includes Foundation, AP-Style, and Experiment sets.",
-    href: "/sims/active-recall/unit",
-    tone: "amber" as const,
+    href: "/sims/mcq",
+    tone: "accent" as const,
+    preview: (
+      <div className="rounded-[1.1rem] border border-slate-200 bg-white p-4 shadow-sm">
+        <div className="inline-flex items-center rounded-full border border-[color:var(--accent-text)]/20 bg-slate-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-[color:var(--accent-text)]">
+          Unit 2 Preview
+        </div>
+        <p className="mt-3 text-sm font-semibold leading-6 text-slate-950">
+          Which cell structure is most directly responsible for modifying, sorting, and packaging proteins for secretion?
+        </p>
+        <div className="mt-3 grid gap-2">
+          {[
+            "A. Ribosome",
+            "B. Golgi apparatus",
+            "C. Lysosome",
+            "D. Cytoskeleton",
+          ].map((choice) => (
+            <div key={choice} className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-700">
+              {choice}
+            </div>
+          ))}
+        </div>
+      </div>
+    ),
     cta: "Start focused review",
   },
   {
     eyebrow: "Mixed course review",
     title: "All-unit MCQ review",
-    description: "Train switching speed, elimination, and endurance with mixed AP-style questions across all eight units.",
-    detail: "Best after single-unit practice stops feeling shaky.",
-    href: "/sims/active-recall/ap",
-    tone: "blue" as const,
+    href: "/sims/mcq?unit=all",
+    tone: "accent" as const,
+    preview: (
+      <div className="rounded-[1.1rem] border border-slate-200 bg-white p-4 shadow-sm">
+        <div className="inline-flex items-center rounded-full border border-[color:var(--accent-text)]/20 bg-slate-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-[color:var(--accent-text)]">
+          Mixed AP Preview
+        </div>
+        <p className="mt-3 text-sm font-semibold leading-6 text-slate-950">
+          A population shows logistic growth and then levels near carrying capacity. Which factor most likely explains the plateau?
+        </p>
+        <div className="mt-3 grid gap-2">
+          {[
+            "A. Unlimited resources",
+            "B. Increased mutation rate",
+            "C. Density-dependent limits",
+            "D. Elimination of competition",
+          ].map((choice) => (
+            <div key={choice} className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-700">
+              {choice}
+            </div>
+          ))}
+        </div>
+      </div>
+    ),
     cta: "Open mixed review",
   },
   {
     eyebrow: "Written reasoning",
     title: "FRQ practice",
-    description: "Turn recall into biological explanation with structured prompts, scoring notes, and image-backed free response sets.",
-    detail: "Use unit or all-unit FRQs depending on what is breaking down.",
-    href: "/sims/active-recall/frq-all",
-    tone: "teal" as const,
+    href: "/sims/frq",
+    tone: "accent" as const,
+    preview: (
+      <div className="overflow-hidden rounded-[1.1rem] border border-slate-200 bg-white shadow-sm">
+        <div className="border-b border-slate-200 bg-slate-50 p-3">
+          <div className="mb-2 inline-flex items-center rounded-full border border-[color:var(--accent-text)]/20 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-[color:var(--accent-text)]">
+            Image stimulus
+          </div>
+          <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+            <Image
+              src="/images/unit5_pedigree_autosomal_dominant.png"
+              alt="Preview image for free-response practice"
+              width={960}
+              height={640}
+              className="h-40 w-full object-contain bg-white"
+            />
+          </div>
+        </div>
+        <div className="grid gap-3 p-4">
+          <div className="inline-flex items-center rounded-full border border-[color:var(--accent-text)]/20 bg-slate-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-[color:var(--accent-text)]">
+            FRQ Preview
+          </div>
+          <p className="text-sm font-semibold leading-6 text-slate-950">
+            A pedigree tracks an inherited trait across multiple generations.
+          </p>
+          <div className="grid gap-2 text-sm leading-6 text-slate-700">
+            <div className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">A. Identify the most likely inheritance pattern shown in the pedigree.</div>
+            <div className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">B. Justify your conclusion using evidence from the individuals shown.</div>
+          </div>
+        </div>
+      </div>
+    ),
     cta: "Start FRQ work",
   },
   {
     eyebrow: "Quantitative review",
     title: "Math and statistics center",
-    description: "Practice chi-square, Hardy-Weinberg, water potential, graph slope, error bars, and other common AP Bio calculations in one place.",
-    detail: "Built for the quantitative questions that slow students down.",
     href: "/sims/chi-square",
-    tone: "slate" as const,
+    tone: "accent" as const,
+    previewImageSrc: "/images/unit7_hardy_weinberg_bars.png",
+    previewImageAlt: "Preview image for the math and statistics center",
     cta: "Open statistics tools",
   },
 ];
@@ -88,14 +157,22 @@ export default function Home() {
   return (
     <main className="grid gap-8 lg:gap-10">
       <PageHeader
-        eyebrow="AP Biology Study Platform"
-        title="Study AP Biology with a plan that tells you what to do next."
-        description="Move from targeted unit repair to mixed AP pressure, FRQ writing, and quantitative review without guessing where to start or what to practice after that."
+        title="The Complete AP Bio Study Tool"
+        align="start"
         actions={
           <>
             <PrimaryLink href="/sims/active-recall">Open study dashboard</PrimaryLink>
             <SecondaryLink href="/sims/chi-square">Open statistics center</SecondaryLink>
           </>
+        }
+        background={
+          <Image
+            src="/icon.png"
+            alt="A logo background"
+            width={800}
+            height={800}
+            className="pointer-events-none opacity-10 h-[20rem] w-[20rem] sm:h-[24rem] sm:w-[24rem] md:h-[28rem] md:w-[28rem] object-contain translate-x-12 -translate-y-6"
+          />
         }
       />
 

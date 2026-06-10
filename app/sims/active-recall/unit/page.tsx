@@ -13,11 +13,13 @@ import {
   StatCard,
   TipCard,
 } from "../../../components/ui/study-kit";
-import { DIFFICULTY_OPTIONS, UNITS, getDifficultyDescription, getDifficultyTone } from "../shared";
+import { DIFFICULTY_OPTIONS, STATISTICS_UNIT_OPTIONS, UNITS, getDifficultyDescription, getDifficultyTone, isPlaceholderDifficulty } from "../shared";
 import { getRedoQuestionIds, readStudyProgressSnapshot, recordMcqAttempt, STUDY_PROGRESS_EVENT } from "../progress";
 import { buildSimilarityAvoidIds } from "../question-rotation";
 
 type SessionTone = "blue" | "teal" | "amber" | "slate" | "rose";
+const ALL_UNITS_VALUE = "__all_units__";
+const ALL_STATISTICS_TOPICS_VALUE = "__all_statistics_topics__";
 
 function normalizeTone(value: string): SessionTone {
   const tone = getDifficultyTone(value);
@@ -27,12 +29,43 @@ function normalizeTone(value: string): SessionTone {
   return "slate";
 }
 
+function inferQuestionUnitLabel(questionId?: string) {
+  if (!questionId) return "All units";
+  const match = String(questionId).match(/^u(\d+)-/i);
+  if (!match) return "All units";
+  const index = Number(match[1]) - 1;
+  return UNITS[index] ?? `Unit ${match[1]}`;
+}
+
+function getAvailableUnitOptions(difficulty: string) {
+  return isPlaceholderDifficulty(difficulty) ? STATISTICS_UNIT_OPTIONS : UNITS;
+}
+
+function getRequestedUnit(value: string | null, difficulty: string) {
+  const availableUnitOptions = getAvailableUnitOptions(difficulty);
+  if (!value) {
+    return isPlaceholderDifficulty(difficulty) ? ALL_STATISTICS_TOPICS_VALUE : (UNITS[0] ?? ALL_UNITS_VALUE);
+  }
+  if (isPlaceholderDifficulty(difficulty) && (value === "all" || value === ALL_STATISTICS_TOPICS_VALUE)) {
+    return ALL_STATISTICS_TOPICS_VALUE;
+  }
+  if (!isPlaceholderDifficulty(difficulty) && (value === "all" || value === ALL_UNITS_VALUE)) {
+    return ALL_UNITS_VALUE;
+  }
+  return availableUnitOptions.find((unitOption) => unitOption === value) ?? (isPlaceholderDifficulty(difficulty) ? ALL_STATISTICS_TOPICS_VALUE : (UNITS[0] ?? ALL_UNITS_VALUE));
+}
+
+function getRequestedDifficulty(value: string | null) {
+  if (!value) return DIFFICULTY_OPTIONS[0]?.value ?? "";
+  return DIFFICULTY_OPTIONS.find((option) => option.value === value)?.value ?? (DIFFICULTY_OPTIONS[0]?.value ?? "");
+}
+
 function PageContent() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const isCompactMcq = pathname.startsWith("/sims/mcq");
-  const [difficulty, setDifficulty] = useState<string>(DIFFICULTY_OPTIONS[0]?.value ?? "");
-  const [unit, setUnit] = useState(UNITS[0] ?? "");
+  const [difficulty, setDifficulty] = useState<string>(() => getRequestedDifficulty(searchParams.get("difficulty")));
+  const [unit, setUnit] = useState(() => getRequestedUnit(searchParams.get("unit"), getRequestedDifficulty(searchParams.get("difficulty"))));
   const [question, setQuestion] = useState<any | null>(null);
   const [previousQuestions, setPreviousQuestions] = useState<any[]>([]);
   const [loadError, setLoadError] = useState<string | null>(null);
@@ -49,19 +82,59 @@ function PageContent() {
   const difficultyLabel = DIFFICULTY_OPTIONS.find((option) => option.value === difficulty)?.label ?? difficulty;
   const difficultyDescription = getDifficultyDescription(difficulty);
   const difficultyTone = normalizeTone(difficulty);
+  const isPlaceholderMode = isPlaceholderDifficulty(difficulty);
+  const availableUnitOptions = getAvailableUnitOptions(difficulty);
+  const isAllUnits = unit === ALL_UNITS_VALUE;
+  const isAllStatisticsTopics = isPlaceholderMode && unit === ALL_STATISTICS_TOPICS_VALUE;
+  const isMixedSelection = isAllUnits || isAllStatisticsTopics;
+  const selectedUnitLabel = isAllUnits ? "All units" : isAllStatisticsTopics ? "All statistics topics" : unit;
+  const questionUnitLabel = isAllUnits ? inferQuestionUnitLabel(question?.id) : isAllStatisticsTopics ? String(question?.topic || "All statistics topics") : selectedUnitLabel;
+
+  useEffect(() => {
+    const rawDifficulty = searchParams.get("difficulty");
+    if (rawDifficulty) {
+      const requestedDifficulty = getRequestedDifficulty(rawDifficulty);
+      if (requestedDifficulty !== difficulty) {
+        setDifficulty(requestedDifficulty);
+      }
+    }
+
+    const rawUnit = searchParams.get("unit");
+    if (rawUnit) {
+      const requestedUnit = getRequestedUnit(rawUnit, rawDifficulty ? getRequestedDifficulty(rawDifficulty) : difficulty);
+      if (requestedUnit !== unit) {
+        setUnit(requestedUnit);
+      }
+    }
+  }, [difficulty, searchParams, unit]);
+
+  useEffect(() => {
+    const normalizedUnit = getRequestedUnit(unit, difficulty);
+    if (normalizedUnit !== unit) {
+      setUnit(normalizedUnit);
+    }
+  }, [difficulty, unit]);
 
   function refreshProgress() {
     setProgressSnapshot(readStudyProgressSnapshot());
-    setRedoCount(unit && difficulty ? getRedoQuestionIds({ unit, difficulty }).length : 0);
+    setRedoCount(difficulty ? getRedoQuestionIds(isMixedSelection ? { difficulty } : { unit, difficulty }).length : 0);
   }
 
   async function refreshPool(nextUnit = unit, nextDifficulty = difficulty) {
-    if (!nextUnit || !nextDifficulty) {
+    if (!nextDifficulty) {
       setPoolIds([]);
       return [];
     }
     try {
-      const res = await fetch(`/api/ar-pool?mode=unit&unit=${encodeURIComponent(nextUnit)}&difficulty=${encodeURIComponent(nextDifficulty)}`);
+      const isAllUnitsSelection = nextUnit === ALL_UNITS_VALUE || (isPlaceholderDifficulty(nextDifficulty) && nextUnit === ALL_STATISTICS_TOPICS_VALUE);
+      const params = new URLSearchParams({
+        mode: isAllUnitsSelection ? "ap" : "unit",
+        difficulty: nextDifficulty,
+      });
+      if (!isAllUnitsSelection) {
+        params.set("unit", nextUnit);
+      }
+      const res = await fetch(`/api/ar-pool?${params.toString()}`);
       const data = await res.json();
       const ids = Array.isArray(data?.ids) ? data.ids.map((id: unknown) => String(id)) : [];
       setPoolIds(ids);
@@ -78,12 +151,12 @@ function PageContent() {
 
   async function next(poolIdsOverride?: string[]) {
     const currentQuestion = question;
-    if (!unit || !difficulty) {
+    if (!difficulty) {
       setQuestion(null);
       setSelected(null);
       setCrossedOut({});
       setVisibleExplanations({});
-      setLoadError("Choose a unit and mode to begin.");
+      setLoadError("Choose a mode to begin.");
       return;
     }
     setQuestion(null);
@@ -91,14 +164,14 @@ function PageContent() {
     setCrossedOut({});
     setVisibleExplanations({});
     setLoadError(null);
-    const scopeKey = `${unit}::${difficulty}`;
+    const scopeKey = `${selectedUnitLabel}::${difficulty}`;
     const scopeSeen = (seen && seen[scopeKey]) || {};
     const currentQuestionId = currentQuestion?.id ? String(currentQuestion.id) : null;
     const historyIds = new Set(previousQuestions.map((prev) => String(prev?.id || "")));
     const activePoolIds = poolIdsOverride || poolIds;
-    const liveRedoIds = redoMissedOnly ? getRedoQuestionIds({ unit, difficulty }) : [];
+    const liveRedoIds = redoMissedOnly ? getRedoQuestionIds(isMixedSelection ? { difficulty } : { unit, difficulty }) : [];
     if (redoMissedOnly && liveRedoIds.length === 0) {
-      setLoadError("No missed questions are queued for this unit and mode yet.");
+      setLoadError(isMixedSelection ? "No missed questions are queued for this mode yet." : "No missed questions are queued for this unit and mode yet.");
       return;
     }
     const filteredRedoIds = liveRedoIds.filter(
@@ -138,8 +211,8 @@ function PageContent() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          mode: "unit",
-          unit,
+          mode: isMixedSelection ? "ap" : "unit",
+          unit: isMixedSelection ? null : unit,
           difficulty,
           questionIds: requestQuestionIds,
           recentQuestionIds,
@@ -190,7 +263,7 @@ function PageContent() {
       return;
     }
 
-    setLoadError("No fixed questions are available for this unit and mode yet.");
+    setLoadError(isMixedSelection ? "No fixed questions are available for this mode yet." : "No fixed questions are available for this unit and mode yet.");
   }
 
   function previous() {
@@ -211,7 +284,7 @@ function PageContent() {
       const raw = localStorage.getItem(STORAGE_KEY);
       if (raw) {
         const parsed = JSON.parse(raw);
-        const scopeKey = `${unit}::${difficulty}`;
+        const scopeKey = `${selectedUnitLabel}::${difficulty}`;
         const isFlat = Object.values(parsed).every((value: any) => value === true || value === false);
         if (isFlat) {
           setSeen({ [scopeKey]: parsed });
@@ -230,14 +303,14 @@ function PageContent() {
   }, []);
 
   useEffect(() => {
-    if (!unit || !difficulty) {
+    if (!difficulty) {
       setPoolIds([]);
       setPreviousQuestions([]);
       setQuestion(null);
       setSelected(null);
       setCrossedOut({});
       setVisibleExplanations({});
-      setLoadError("Choose a unit and mode to begin.");
+      setLoadError("Choose a mode to begin.");
       return;
     }
     void (async () => {
@@ -289,7 +362,12 @@ function PageContent() {
           eyebrow="Unit MCQ Review"
           title="Target one AP Biology unit at a time."
           description="Choose a unit, choose a mode, and use explanations plus the redo queue to close specific content gaps fast."
-          actions={<SecondaryLink href="/sims/active-recall">Back to dashboard</SecondaryLink>}
+          actions={
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <SecondaryLink href="/sims/active-recall">Back to dashboard</SecondaryLink>
+              <SecondaryLink href="/sims/mcq?difficulty=statistics">Open statistics MCQs</SecondaryLink>
+            </div>
+          }
         />
         <LoadingSkeleton title="Loading review" lines={5} />
       </main>
@@ -307,13 +385,14 @@ function PageContent() {
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <SecondaryLink href="/sims/active-recall">Back to dashboard</SecondaryLink>
             <SecondaryLink href="/sims/active-recall/ap">Switch to mixed review</SecondaryLink>
+            <SecondaryLink href="/sims/mcq?difficulty=statistics">Open statistics MCQs</SecondaryLink>
           </div>
         }
         aside={
           <div className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
-            <StatCard label="Selected unit" value={unit || "Choose a unit"} detail="One unit at a time for cleaner repair" tone="blue" />
+            <StatCard label="Selected unit" value={selectedUnitLabel || "Choose a unit"} detail={isAllStatisticsTopics ? "Mixed across all statistics topics" : isPlaceholderMode ? "One statistics topic at a time for targeted quantitative practice" : isAllUnits ? "Mixed across the full course" : "One unit at a time for cleaner repair"} tone="blue" />
             <StatCard label="Current mode" value={difficultyLabel || "Choose a mode"} detail={difficultyDescription} tone={difficultyTone === "slate" ? "neutral" : difficultyTone} />
-            <StatCard label="Redo queue" value={redoCount} detail={redoMissedOnly ? "Redo missed questions is on" : "Available for this unit and mode"} tone="amber" />
+            <StatCard label="Redo queue" value={redoCount} detail={redoMissedOnly ? "Redo missed questions is on" : isMixedSelection ? "Available for this mode across the mixed pool" : "Available for this unit and mode"} tone="amber" />
           </div>
         }
       />
@@ -322,17 +401,19 @@ function PageContent() {
       {!isCompactMcq ? (
       <SectionCard
         title="Session setup"
-        description="Pick the unit, choose the level of pressure, and let the session keep feeding you one question at a time without recycling near-duplicates."
+        description="Pick one unit or all units, choose the level of pressure, and let the session keep feeding you one question at a time without recycling near-duplicates."
         tone={difficultyTone}
       >
         <div className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_minmax(300px,0.8fr)]">
           <div className="grid gap-4 md:grid-cols-3">
             <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
               <label className="text-sm font-semibold text-slate-900">Unit</label>
-              <p className="mt-1 text-sm text-slate-500">Stay inside one chapter when you want cleaner repetition and more obvious improvement.</p>
+              <p className="mt-1 text-sm text-slate-500">{isPlaceholderMode ? "Choose one statistics topic or mix all statistics topics together." : "Stay inside one chapter when you want cleaner repetition, or switch to all units for a mixed bank."}</p>
               <div className="mt-3 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">
                 <select value={unit} onChange={(event) => setUnit(event.target.value)} className="w-full bg-transparent text-sm font-medium text-slate-900 outline-none">
-                  {UNITS.map((option) => (
+                  {isPlaceholderMode ? <option value={ALL_STATISTICS_TOPICS_VALUE}>All statistics topics</option> : null}
+                  {!isPlaceholderMode ? <option value={ALL_UNITS_VALUE}>All units</option> : null}
+                  {availableUnitOptions.map((option) => (
                     <option key={option} value={option}>
                       {option}
                     </option>
@@ -343,7 +424,7 @@ function PageContent() {
 
             <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
               <label className="text-sm font-semibold text-slate-900">Mode</label>
-              <p className="mt-1 text-sm text-slate-500">Switch between direct recall, harder conceptual pressure, and experiment interpretation.</p>
+              <p className="mt-1 text-sm text-slate-500">Switch between direct recall, harder conceptual pressure, experiment interpretation, and quantitative statistics review.</p>
               <div className="mt-3 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">
                 <select value={difficulty} onChange={(event) => setDifficulty(event.target.value)} className="w-full bg-transparent text-sm font-medium text-slate-900 outline-none">
                   {DIFFICULTY_OPTIONS.map((option) => (
@@ -360,12 +441,12 @@ function PageContent() {
 
             <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
               <label className="text-sm font-semibold text-slate-900">Redo queue</label>
-              <p className="mt-1 text-sm text-slate-500">Use this when you want the session to revisit the questions you are still missing in this exact unit and mode.</p>
+              <p className="mt-1 text-sm text-slate-500">Use this when you want the session to revisit the questions you are still missing in this exact selection.</p>
               <label className="mt-4 flex cursor-pointer items-start gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-3">
                 <input type="checkbox" checked={redoMissedOnly} onChange={(event) => setRedoMissedOnly(event.target.checked)} className="mt-1 h-4 w-4" />
                 <span>
                   <span className="block text-sm font-semibold text-slate-900">Redo missed questions only</span>
-                  <span className="mt-1 block text-sm text-slate-500">{redoCount} questions currently queued for this selection.</span>
+                  <span className="mt-1 block text-sm text-slate-500">{`${redoCount} questions currently queued for this selection.`}</span>
                 </span>
               </label>
             </div>
@@ -384,7 +465,9 @@ function PageContent() {
             <div className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">
               <label className="mb-2 block text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Unit</label>
               <select value={unit} onChange={(event) => setUnit(event.target.value)} className="w-full bg-transparent text-sm font-medium text-slate-900 outline-none">
-                {UNITS.map((option) => (
+                {isPlaceholderMode ? <option value={ALL_STATISTICS_TOPICS_VALUE}>All statistics topics</option> : null}
+                {!isPlaceholderMode ? <option value={ALL_UNITS_VALUE}>All units</option> : null}
+                {availableUnitOptions.map((option) => (
                   <option key={option} value={option}>
                     {option}
                   </option>
@@ -430,13 +513,12 @@ function PageContent() {
       {question ? (
         <SectionCard
           title="Question"
-          description="Cross out distractors, answer once, then check the explanation panel for the reasoning behind each option."
           tone={difficultyTone}
         >
           <div className="grid gap-4">
             <div className="flex flex-wrap items-center gap-2">
               <span className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-slate-700">
-                {unit}
+                {questionUnitLabel}
               </span>
               <ModeBadge label={difficultyLabel} tone={difficultyTone === "slate" ? "neutral" : difficultyTone} />
               {question.topic ? (
@@ -472,12 +554,13 @@ function PageContent() {
                   const isDisabled = selected !== null;
                   const isCorrectChoice = index === question.correct;
                   const isWrongSelected = selected === index && !isCorrectChoice;
+                  const labelClass = selected !== null ? (isCorrectChoice ? "text-emerald-950" : isWrongSelected ? "text-rose-950" : "text-slate-950") : "text-slate-950";
                   const choiceClass = selected !== null
                     ? isCorrectChoice
-                      ? "border-slate-300 bg-slate-100 text-[#1f5a32]"
+                      ? "border-emerald-300 bg-emerald-50 text-emerald-900"
                       : isWrongSelected
-                        ? "border-slate-300 bg-slate-100"
-                        : "border-slate-200 bg-white"
+                        ? "border-rose-300 bg-rose-50 text-rose-900"
+                        : "border-slate-200 bg-white text-slate-600"
                     : "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50";
 
                   return (
@@ -487,13 +570,13 @@ function PageContent() {
                           onClick={() => {
                             setSelected(index);
                             setVisibleExplanations({ [index]: true });
-                            recordMcqAttempt(question, { selectedIndex: index, mode: "unit", unit });
+                            recordMcqAttempt(question, { selectedIndex: index, mode: "unit", unit: isPlaceholderMode ? String(question?.topic || selectedUnitLabel) : isAllUnits ? undefined : unit });
                             refreshProgress();
                           }}
                           disabled={isDisabled}
                           className={`flex-1 rounded-2xl border px-4 py-3 text-left text-sm text-slate-800 shadow-sm transition ${choiceClass} ${crossedOut[index] ? "opacity-55 line-through" : ""}`}
                         >
-                          <span className="font-semibold text-slate-950">{String.fromCharCode(65 + index)}.</span> {choice}
+                          <span className={`font-semibold ${labelClass}`}>{String.fromCharCode(65 + index)}.</span> {choice}
                         </button>
 
                         <button
@@ -507,7 +590,7 @@ function PageContent() {
                         {selected !== null ? (
                           <button
                             onClick={() => setVisibleExplanations((current) => ({ ...current, [index]: !current[index] }))}
-                            className={`rounded-2xl border px-4 py-3 text-sm font-semibold shadow-sm transition ${visibleExplanations[index] ? "border-slate-300 bg-slate-100 text-[#1f5a32]" : "border-slate-200 bg-white text-slate-700 hover:bg-slate-50"}`}
+                            className={`rounded-2xl border px-4 py-3 text-sm font-semibold shadow-sm transition ${visibleExplanations[index] ? (isCorrectChoice ? "border-emerald-300 bg-emerald-50 text-emerald-900" : "border-rose-300 bg-rose-50 text-rose-900") : "border-slate-200 bg-white text-slate-700 hover:bg-slate-50"}`}
                           >
                             {visibleExplanations[index] ? "Hide explanation" : "Show explanation"}
                           </button>
@@ -515,7 +598,7 @@ function PageContent() {
                       </div>
 
                       {visibleExplanations[index] && selected !== null ? (
-                        <div className={`rounded-2xl border px-4 py-3 text-sm leading-6 ${isCorrectChoice ? "border-slate-300 bg-slate-100 text-[#1f5a32]" : "border-slate-200 bg-slate-50 text-slate-700"}`}>
+                        <div className={`rounded-2xl border px-4 py-3 text-sm leading-6 ${isCorrectChoice ? "border-emerald-300 bg-emerald-50 text-emerald-900" : isWrongSelected ? "border-rose-300 bg-rose-50 text-rose-900" : "border-slate-200 bg-slate-50 text-slate-700"}`}>
                           {choiceExplain(index)}
                         </div>
                       ) : null}
@@ -523,14 +606,6 @@ function PageContent() {
                   );
                 })}
               </div>
-
-              {selected !== null ? (
-                <div className={`mt-5 rounded-2xl border px-4 py-4 ${selected === question.correct ? "border-slate-300 bg-slate-100" : "border-slate-300 bg-slate-100"}`}>
-                  <div className="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">Result</div>
-                  <div className="mt-2 text-lg font-semibold tracking-tight text-slate-950">{selected === question.correct ? "Correct" : "Incorrect"}</div>
-                  <p className="mt-2 text-sm leading-6 text-slate-700">Per-choice explanations are shown above so you can compare the correct reasoning against the distractors instead of memorizing the answer key.</p>
-                </div>
-              ) : null}
 
               <div className="mt-5 flex flex-wrap gap-3">
                 <SecondaryButton onClick={previous} disabled={previousQuestions.length === 0}>

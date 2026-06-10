@@ -1,0 +1,402 @@
+[
+  {
+    "id": "stats-hw-1",
+    "difficulty": "hard",
+    "topic": "Hardy-Weinberg",
+    "text": "In a large population assumed to be in Hardy-Weinberg equilibrium, the recessive phenotype frequency is 0.16. What is the expected heterozygote carrier frequency?",
+    "choices": [
+      "0.6",
+      "0.16",
+      "0.48",
+      "0.36"
+    ],
+    "correct": 2,
+    "explain": "The recessive phenotype frequency equals q\u00b2, so q = \u221a0.16 = 0.4 and p = 0.6. The heterozygote frequency is 2pq = 2(0.6)(0.4) = 0.48. The most common mistake is stopping after finding q or p instead of calculating 2pq.",
+    "choice_explanations": [
+      "Incorrect. 0.6 is the dominant allele frequency p, not a genotype frequency.",
+      "Incorrect. 0.16 is q\u00b2, the recessive genotype frequency, not the heterozygote frequency.",
+      "Correct. In Hardy-Weinberg equilibrium, carriers are the heterozygotes, and their frequency is 2pq = 0.48.",
+      "Incorrect. 0.36 is p\u00b2, the homozygous dominant genotype frequency."
+    ]
+  },
+  {
+    "id": "stats-hw-2",
+    "difficulty": "hard",
+    "topic": "Hardy-Weinberg",
+    "text": "In a large population assumed to be in Hardy-Weinberg equilibrium, the recessive phenotype frequency is 0.09. What is the expected heterozygote carrier frequency?",
+    "choices": [
+      "0.09",
+      "0.49",
+      "0.7",
+      "0.42"
+    ],
+    "correct": 3,
+    "explain": "The recessive phenotype frequency equals q\u00b2, so q = \u221a0.09 = 0.3 and p = 0.7. The heterozygote frequency is 2pq = 2(0.7)(0.3) = 0.42. The most common mistake is stopping after finding q or p instead of calculating 2pq.",
+    "choice_explanations": [
+      "Incorrect. 0.09 is q\u00b2, the recessive genotype frequency, not the heterozygote frequency.",
+      "Incorrect. 0.49 is p\u00b2, the homozygous dominant genotype frequency.",
+      "Incorrect. 0.7 is the dominant allele frequency p, not a genotype frequency.",
+      "Correct. In Hardy-Weinberg equilibrium, carriers are the heterozygotes, and their frequency is 2pq = 0.42."
+    ]
+  },
+  {
+    "id": "stats-hw-3",
+    "difficulty": "hard",
+    "topic": "Hardy-Weinberg",
+    "text": "In a large population assumed to be in Hardy-Weinberg equilibrium, the recessive phenotype frequency is 0.04. What is the expected heterozygote carrier frequency?",
+    "choices": [
+      "0.04",
+      "0.32",
+      "0.8",
+      "0.64"
+    ],
+    "correct": 1,
+    "explain": "The recessive phenotype frequency equals q\u00b2, so q = \u221a0.04 = 0.2 and p = 0.8. The heterozygote frequency is 2pq = 2(0.8)(0.2) = 0.32. The most common mistake is stopping after finding q or p instead of calculating 2pq.",
+    "choice_explanations": [
+      "Incorrect. 0.04 is q\u00b2, the recessive genotype frequency, not the heterozygote frequency.",
+      "Correct. In Hardy-Weinberg equilibrium, carriers are the heterozygotes, and their frequency is 2pq = 0.32.",
+      "Incorrect. 0.8 is the dominant allele frequency p, not a genotype frequency.",
+      "Incorrect. 0.64 is p\u00b2, the homozygous dominant genotype frequency."
+    ]
+  },
+  {
+    "id": "stats-hw-4",
+    "difficulty": "hard",
+    "topic": "Hardy-Weinberg",
+    "text": "In a large population assumed to be in Hardy-Weinberg equilibrium, the recessive phenotype frequency is 0.25. What is the expected heterozygote carrier frequency?",
+    "choices": [
+      "0.75",
+      "0.50",
+      "0.125",
+      "0.25"
+    ],
+    "correct": 1,
+    "explain": "If q\u00b2 = 0.25, then q = 0.50 and p = 0.50. The heterozygote frequency is 2pq = 2(0.50)(0.50) = 0.50. The tempting error is to report q\u00b2 or the dominant phenotype instead of 2pq.",
+    "choice_explanations": [
+      "Incorrect. 0.75 is the dominant phenotype frequency, not the carrier frequency.",
+      "Correct. Carriers are heterozygotes, and here 2pq = 0.50.",
+      "Incorrect. 0.125 would come from using the formula incorrectly; it is not 2pq.",
+      "Incorrect. 0.25 is q\u00b2, the recessive genotype frequency."
+    ]
+  },
+  {
+    "id": "stats-hw-5",
+    "difficulty": "hard",
+    "topic": "Hardy-Weinberg",
+    "text": "In a large population assumed to be in Hardy-Weinberg equilibrium, the recessive phenotype frequency is 0.01. What is the expected heterozygote carrier frequency?",
+    "choices": [
+      "0.81",
+      "0.18",
+      "0.01",
+      "0.9"
+    ],
+    "correct": 1,
+    "explain": "The recessive phenotype frequency equals q\u00b2, so q = \u221a0.01 = 0.1 and p = 0.9. The heterozygote frequency is 2pq = 2(0.9)(0.1) = 0.18. The most common mistake is stopping after finding q or p instead of calculating 2pq.",
+    "choice_explanations": [
+      "Incorrect. 0.81 is p\u00b2, the homozygous dominant genotype frequency.",
+      "Correct. In Hardy-Weinberg equilibrium, carriers are the heterozygotes, and their frequency is 2pq = 0.18.",
+      "Incorrect. 0.01 is q\u00b2, the recessive genotype frequency, not the heterozygote frequency.",
+      "Incorrect. 0.9 is the dominant allele frequency p, not a genotype frequency."
+    ]
+  },
+  {
+    "id": "stats-hw-6",
+    "difficulty": "hard",
+    "topic": "Hardy-Weinberg",
+    "text": "A recessive trait appears in 36% of individuals in a population at Hardy-Weinberg equilibrium. What fraction of the population is expected to show the dominant phenotype?",
+    "choices": [
+      "0.16",
+      "0.48",
+      "0.64",
+      "0.4"
+    ],
+    "correct": 2,
+    "explain": "If 36% show the recessive phenotype, then q\u00b2 = 0.36. After finding q = 0.6 and p = 0.4, the dominant phenotype must include both AA and Aa, so its frequency is p\u00b2 + 2pq = 0.64.",
+    "choice_explanations": [
+      "Incorrect. 0.16 counts only homozygous dominant individuals and ignores heterozygotes.",
+      "Incorrect. 0.48 is only the carrier class, not all individuals with the dominant phenotype.",
+      "Correct. The dominant phenotype includes both homozygous dominant and heterozygous individuals, so its total frequency is 0.64.",
+      "Incorrect. 0.4 is only the dominant allele frequency, not the phenotype frequency."
+    ]
+  },
+  {
+    "id": "stats-hw-7",
+    "difficulty": "hard",
+    "topic": "Hardy-Weinberg",
+    "text": "A recessive trait appears in 9% of individuals in a population at Hardy-Weinberg equilibrium. What fraction of the population is expected to show the dominant phenotype?",
+    "choices": [
+      "0.7",
+      "0.42",
+      "0.49",
+      "0.91"
+    ],
+    "correct": 3,
+    "explain": "If 9% show the recessive phenotype, then q\u00b2 = 0.09. After finding q = 0.3 and p = 0.7, the dominant phenotype must include both AA and Aa, so its frequency is p\u00b2 + 2pq = 0.91.",
+    "choice_explanations": [
+      "Incorrect. 0.7 is only the dominant allele frequency, not the phenotype frequency.",
+      "Incorrect. 0.42 is only the carrier class, not all individuals with the dominant phenotype.",
+      "Incorrect. 0.49 counts only homozygous dominant individuals and ignores heterozygotes.",
+      "Correct. The dominant phenotype includes both homozygous dominant and heterozygous individuals, so its total frequency is 0.91."
+    ]
+  },
+  {
+    "id": "stats-hw-8",
+    "difficulty": "hard",
+    "topic": "Hardy-Weinberg",
+    "text": "A recessive trait appears in 4% of individuals in a population at Hardy-Weinberg equilibrium. What fraction of the population is expected to show the dominant phenotype?",
+    "choices": [
+      "0.32",
+      "0.96",
+      "0.64",
+      "0.8"
+    ],
+    "correct": 1,
+    "explain": "If 4% show the recessive phenotype, then q\u00b2 = 0.04. After finding q = 0.2 and p = 0.8, the dominant phenotype must include both AA and Aa, so its frequency is p\u00b2 + 2pq = 0.96.",
+    "choice_explanations": [
+      "Incorrect. 0.32 is only the carrier class, not all individuals with the dominant phenotype.",
+      "Correct. The dominant phenotype includes both homozygous dominant and heterozygous individuals, so its total frequency is 0.96.",
+      "Incorrect. 0.64 counts only homozygous dominant individuals and ignores heterozygotes.",
+      "Incorrect. 0.8 is only the dominant allele frequency, not the phenotype frequency."
+    ]
+  },
+  {
+    "id": "stats-hw-9",
+    "difficulty": "hard",
+    "topic": "Hardy-Weinberg",
+    "text": "In a population of 400 organisms, 36 show the recessive phenotype. If the population is in Hardy-Weinberg equilibrium, how many heterozygous carriers are expected?",
+    "choices": [
+      "36",
+      "196",
+      "168",
+      "280"
+    ],
+    "correct": 2,
+    "explain": "The recessive phenotype count tells you q\u00b2 = 36/400 = 0.09. That gives q = 0.3 and p = 0.7, so the carrier frequency is 2pq = 0.42. Multiplying by 400 gives about 168 heterozygotes.",
+    "choice_explanations": [
+      "Incorrect. 36 is the number of recessive homozygotes, not the number of carriers.",
+      "Incorrect. This is approximately the homozygous dominant count p\u00b2N, not the heterozygote count.",
+      "Correct. Once q\u00b2 is identified from the recessive phenotype count, the expected carrier count is 2pq \u00d7 N = 168.",
+      "Incorrect. Multiplying p by N gives the expected number of dominant alleles per individual if misused, not the number of heterozygotes."
+    ]
+  },
+  {
+    "id": "stats-hw-10",
+    "difficulty": "hard",
+    "topic": "Hardy-Weinberg",
+    "text": "In a population of 500 organisms, 80 show the recessive phenotype. If the population is in Hardy-Weinberg equilibrium, how many heterozygous carriers are expected?",
+    "choices": [
+      "80",
+      "300",
+      "180",
+      "240"
+    ],
+    "correct": 3,
+    "explain": "The recessive phenotype count tells you q\u00b2 = 80/500 = 0.16. That gives q = 0.4 and p = 0.6, so the carrier frequency is 2pq = 0.48. Multiplying by 500 gives about 240 heterozygotes.",
+    "choice_explanations": [
+      "Incorrect. 80 is the number of recessive homozygotes, not the number of carriers.",
+      "Incorrect. Multiplying p by N gives the expected number of dominant alleles per individual if misused, not the number of heterozygotes.",
+      "Incorrect. This is approximately the homozygous dominant count p\u00b2N, not the heterozygote count.",
+      "Correct. Once q\u00b2 is identified from the recessive phenotype count, the expected carrier count is 2pq \u00d7 N = 240."
+    ]
+  },
+  {
+    "id": "stats-hw-11",
+    "difficulty": "hard",
+    "topic": "Hardy-Weinberg",
+    "text": "In a population of 1000 organisms, 40 show the recessive phenotype. If the population is in Hardy-Weinberg equilibrium, how many heterozygous carriers are expected?",
+    "choices": [
+      "800",
+      "320",
+      "40",
+      "640"
+    ],
+    "correct": 1,
+    "explain": "The recessive phenotype count tells you q\u00b2 = 40/1000 = 0.04. That gives q = 0.2 and p = 0.8, so the carrier frequency is 2pq = 0.32. Multiplying by 1000 gives about 320 heterozygotes.",
+    "choice_explanations": [
+      "Incorrect. Multiplying p by N gives the expected number of dominant alleles per individual if misused, not the number of heterozygotes.",
+      "Correct. Once q\u00b2 is identified from the recessive phenotype count, the expected carrier count is 2pq \u00d7 N = 320.",
+      "Incorrect. 40 is the number of recessive homozygotes, not the number of carriers.",
+      "Incorrect. This is approximately the homozygous dominant count p\u00b2N, not the heterozygote count."
+    ]
+  },
+  {
+    "id": "stats-hw-12",
+    "difficulty": "hard",
+    "topic": "Hardy-Weinberg",
+    "text": "After a pesticide treatment, insects with genotype aa die before reproducing much more often than AA or Aa. Which Hardy-Weinberg condition is clearly being violated?",
+    "choices": [
+      "Large population size",
+      "Random mating",
+      "No mutation",
+      "No natural selection"
+    ],
+    "correct": 3,
+    "explain": "Differential survival of aa individuals means genotype affects fitness, which is exactly what natural selection is. When one genotype reproduces less successfully than others, Hardy-Weinberg equilibrium cannot be assumed because allele frequencies can change across generations.",
+    "choice_explanations": [
+      "Incorrect. Population size might matter in other cases, but the evidence here specifically points to selection.",
+      "Incorrect. The scenario is about survival differences, not mate choice.",
+      "Incorrect. No new allele is described, so mutation is not the issue here.",
+      "Correct. Unequal survival among genotypes is direct evidence that natural selection is occurring."
+    ]
+  },
+  {
+    "id": "stats-hw-13",
+    "difficulty": "hard",
+    "topic": "Hardy-Weinberg",
+    "text": "A storm leaves only 12 lizards on a small island, and the next generation shows a different allele frequency even though no genotype had a survival advantage. Which Hardy-Weinberg assumption was most directly violated?",
+    "choices": [
+      "No mutation",
+      "Random mating",
+      "Large population size",
+      "No migration"
+    ],
+    "correct": 2,
+    "explain": "When a population becomes very small, random sampling effects become strong. That is genetic drift, and it violates the Hardy-Weinberg assumption that the population is large enough for chance fluctuations to be negligible.",
+    "choice_explanations": [
+      "Incorrect. Mutation is not needed to explain the allele-frequency shift in a very small population.",
+      "Incorrect. Mate choice is not the main issue described here.",
+      "Correct. A tiny post-storm population is especially vulnerable to drift because random chance can change allele frequencies.",
+      "Incorrect. The prompt does not describe movement into or out of the population."
+    ]
+  },
+  {
+    "id": "stats-hw-14",
+    "difficulty": "hard",
+    "topic": "Hardy-Weinberg",
+    "text": "Each spring, pollen from a neighboring field enters a plant population and introduces new alleles. Which Hardy-Weinberg condition is not met?",
+    "choices": [
+      "Large population size",
+      "No natural selection",
+      "No migration",
+      "Random mating"
+    ],
+    "correct": 2,
+    "explain": "Movement of alleles between populations is gene flow. Hardy-Weinberg equilibrium assumes no migration because incoming alleles can change p and q even if everything else stays the same.",
+    "choice_explanations": [
+      "Incorrect. The scenario focuses on incoming alleles, not on the census size of the local population.",
+      "Incorrect. Nothing suggests one genotype has higher fitness than another.",
+      "Correct. Pollen entering from another population is migration, which changes allele frequencies through gene flow.",
+      "Incorrect. The prompt does not mention mate choice or assortative mating."
+    ]
+  },
+  {
+    "id": "stats-hw-15",
+    "difficulty": "hard",
+    "topic": "Hardy-Weinberg",
+    "text": "Individuals choose mates that share the same color pattern, causing many more homozygotes than expected but little immediate change in p or q. Which Hardy-Weinberg condition is violated?",
+    "choices": [
+      "No mutation",
+      "No natural selection",
+      "No migration",
+      "Random mating"
+    ],
+    "correct": 3,
+    "explain": "Assortative mating does not have to change allele frequencies immediately, but it does change genotype frequencies by increasing homozygosity. That is why nonrandom mating violates Hardy-Weinberg even when p and q initially stay similar.",
+    "choice_explanations": [
+      "Incorrect. The scenario involves mate choice, not the appearance of new alleles.",
+      "Incorrect. The prompt focuses on who mates with whom, not on survival or reproductive advantage.",
+      "Incorrect. No movement between populations is described.",
+      "Correct. Preferential mating by phenotype is a direct violation of random mating."
+    ]
+  },
+  {
+    "id": "stats-hw-16",
+    "difficulty": "hard",
+    "topic": "Hardy-Weinberg",
+    "text": "A DNA replication error creates a new allele at a gene that previously had only A and a. Which Hardy-Weinberg assumption is broken?",
+    "choices": [
+      "No mutation",
+      "No migration",
+      "Large population size",
+      "Random mating"
+    ],
+    "correct": 0,
+    "explain": "Mutation introduces new alleles into the gene pool. Hardy-Weinberg equilibrium assumes mutation is negligible because new alleles can alter allele frequencies over time.",
+    "choice_explanations": [
+      "Correct. A new allele appearing by replication error is the definition of mutation.",
+      "Incorrect. No movement between populations is involved.",
+      "Incorrect. Population size is not the process generating the new allele.",
+      "Incorrect. Mate choice has nothing to do with the origin of the new allele."
+    ]
+  },
+  {
+    "id": "stats-hw-17",
+    "difficulty": "hard",
+    "topic": "Hardy-Weinberg",
+    "text": "A population is in Hardy-Weinberg equilibrium for a particular gene. Which statement must be true for that generation?",
+    "choices": [
+      "Genotype frequencies match p\u00b2, 2pq, and q\u00b2 based on the allele frequencies in that population.",
+      "The population will never evolve in the future.",
+      "All dominant alleles are more common than recessive alleles.",
+      "Natural selection is absent for every gene in the genome."
+    ],
+    "correct": 0,
+    "explain": "Hardy-Weinberg equilibrium is a model for a single gene in a single population at a given time. If the population is in equilibrium for that gene, the observed genotype frequencies should fit the p\u00b2 : 2pq : q\u00b2 expectation derived from the allele frequencies.",
+    "choice_explanations": [
+      "Correct. The hallmark of Hardy-Weinberg equilibrium is that genotype frequencies fit the expected proportions for the current p and q values.",
+      "Incorrect. Equilibrium describes the current generation under stated assumptions, not a guarantee about all future generations.",
+      "Incorrect. A recessive allele can be common; dominance does not determine allele frequency.",
+      "Incorrect. The model can apply to one gene even if selection acts elsewhere in the genome."
+    ]
+  },
+  {
+    "id": "stats-hw-18",
+    "difficulty": "hard",
+    "topic": "Hardy-Weinberg",
+    "text": "Researchers calculate p = 0.7 and q = 0.3 in a population of 1,000 fish. Which result would most strongly suggest that this population is NOT in Hardy-Weinberg equilibrium?",
+    "choices": [
+      "Observed genotypes: 485 AA, 425 Aa, 90 aa",
+      "Observed genotypes: 560 AA, 80 Aa, 360 aa",
+      "Observed genotypes: 490 AA, 420 Aa, 90 aa",
+      "Observed genotypes: 500 AA, 410 Aa, 90 aa"
+    ],
+    "correct": 1,
+    "explain": "With p = 0.7 and q = 0.3, the expected genotype frequencies are p\u00b2 = 0.49, 2pq = 0.42, and q\u00b2 = 0.09, which correspond to about 490 AA, 420 Aa, and 90 aa in 1,000 fish. The first option is far from those expected values, especially because it has a major heterozygote deficit and aa excess.",
+    "choice_explanations": [
+      "Incorrect. These values are also close to the expectation and could plausibly arise from sampling error.",
+      "Correct. These counts deviate strongly from the expected Hardy-Weinberg counts and would suggest the assumptions are not being met.",
+      "Incorrect. These counts are exactly the Hardy-Weinberg expectation for p = 0.7 and q = 0.3.",
+      "Incorrect. These values are close to the expectation and would not strongly suggest disequilibrium."
+    ]
+  },
+  {
+    "id": "stats-hw-19",
+    "difficulty": "hard",
+    "topic": "Hardy-Weinberg",
+    "text": "A biologist estimates that q\u00b2 = 0.04 for a recessive disease allele. Which conclusion is valid if the population truly is in Hardy-Weinberg equilibrium?",
+    "choices": [
+      "The dominant phenotype frequency is 0.64.",
+      "The frequency of the dominant allele is 0.8.",
+      "The recessive allele frequency is 0.04.",
+      "The frequency of carriers is 0.04."
+    ],
+    "correct": 1,
+    "explain": "If q\u00b2 = 0.04, then q = 0.20 and p = 0.80. That makes carrier frequency 2pq = 0.32 and dominant phenotype frequency 0.96, so only the first statement is correct.",
+    "choice_explanations": [
+      "Incorrect. 0.64 is p\u00b2, the homozygous dominant frequency, not the full dominant phenotype frequency.",
+      "Correct. Taking the square root gives q = 0.20, so p must be 0.80.",
+      "Incorrect. The recessive allele frequency is q = 0.20, not 0.04.",
+      "Incorrect. 0.04 is q\u00b2, not 2pq. The carrier frequency would be 0.32."
+    ]
+  },
+  {
+    "id": "stats-hw-20",
+    "difficulty": "hard",
+    "topic": "Hardy-Weinberg",
+    "text": "Which change would alter genotype frequencies without necessarily changing allele frequencies in the very next generation?",
+    "choices": [
+      "One genotype survives drought much better than the others.",
+      "A new mutation creates allele a from allele A.",
+      "Immigration introduces additional recessive alleles into the population.",
+      "Individuals begin mating assortatively with others of the same phenotype."
+    ],
+    "correct": 3,
+    "explain": "Nonrandom mating can reshuffle how alleles are paired into genotypes, often increasing homozygosity, without immediately changing the underlying allele frequencies. Mutation, migration, and selection can all directly change allele frequencies.",
+    "choice_explanations": [
+      "Incorrect. Differential survival changes allele frequencies through selection.",
+      "Incorrect. Mutation changes allele frequencies by creating new alleles.",
+      "Incorrect. Migration changes allele frequencies by adding alleles from another population.",
+      "Correct. Assortative mating changes the genotype distribution first by altering how alleles pair up in zygotes."
+    ]
+  }
+]

@@ -31,12 +31,12 @@ const BORDER = "#d6dde2";
 const TEXT = "#334155";
 const HEADING = "#0f172a";
 const SUBTLE = "#64748b";
-const SKY = "#1f5a32";
-const SKY_DARK = "#1f5a32";
+const SKY = "#5d6bff";
+const SKY_DARK = "#5b46d8";
 const AMBER = "#64748b";
 const AMBER_DARK = "#334155";
-const EMERALD = "#1f5a32";
-const EMERALD_DARK = "#1f5a32";
+const EMERALD = "#6d5efc";
+const EMERALD_DARK = "#5b46d8";
 const ROSE = "#94a3b8";
 const ROSE_DARK = "#334155";
 const MATH_FONT = '"Cambria Math", "Times New Roman", serif';
@@ -249,6 +249,34 @@ function badgeStyle(background: string, color: string) {
   } as const;
 }
 
+function metricValueStyle(fontSize: number) {
+  return {
+    marginTop: 8,
+    fontSize: `clamp(0.95rem, 1.7vw, ${fontSize}px)`,
+    fontWeight: 900,
+    color: HEADING,
+    lineHeight: 1.05,
+    whiteSpace: "nowrap" as const,
+    textAlign: "center" as const,
+    width: "100%",
+    minWidth: 0,
+  } as const;
+}
+
+function metricLabelStyle() {
+  return {
+    fontSize: 10,
+    fontWeight: 800,
+    textTransform: "uppercase" as const,
+    letterSpacing: "0.08em",
+    color: SUBTLE,
+    whiteSpace: "nowrap" as const,
+    textAlign: "center" as const,
+    width: "100%",
+    minWidth: 0,
+  } as const;
+}
+
 function MathText({ children, color = "currentColor" }: { children: React.ReactNode; color?: string }) {
   return (
     <span
@@ -441,6 +469,8 @@ export default function QuantitativeCenter() {
   const [y2, setY2] = useState(10);
   const [xUnits, setXUnits] = useState("minutes");
   const [yUnits, setYUnits] = useState("mL oxygen");
+
+  const [standardDeviationInput, setStandardDeviationInput] = useState("12, 15, 13, 17, 14");
 
   const [sampleAInput, setSampleAInput] = useState("8.1, 8.4, 7.9, 8.3, 8.2");
   const [sampleBInput, setSampleBInput] = useState("7.2, 7.5, 7.4, 7.6, 7.3");
@@ -651,6 +681,20 @@ export default function QuantitativeCenter() {
     };
   }, [x1, x2, xUnits, y1, y2, yUnits]);
 
+  const standardDeviationSummary = useMemo(() => summarizeSamples(parseNumberList(standardDeviationInput)), [standardDeviationInput]);
+
+  const standardDeviationExplanation = useMemo(() => {
+    if (!standardDeviationSummary) {
+      return "Enter replicate values to calculate the mean, variance, and sample standard deviation.";
+    }
+
+    if (standardDeviationSummary.n === 1) {
+      return "With only one value, the spread is treated as zero. Add more replicates to measure variability.";
+    }
+
+    return `These values average ${formatNumber(standardDeviationSummary.mean, 2)} with a sample standard deviation of ${formatNumber(standardDeviationSummary.sd, 2)}. Larger SD means the replicates are more spread out around the mean.`;
+  }, [standardDeviationSummary]);
+
   const sampleASummary = useMemo(() => summarizeSamples(parseNumberList(sampleAInput)), [sampleAInput]);
   const sampleBSummary = useMemo(() => summarizeSamples(parseNumberList(sampleBInput)), [sampleBInput]);
 
@@ -766,16 +810,27 @@ export default function QuantitativeCenter() {
                 </h1>
                 <p style={{ margin: 0, maxWidth: 860, fontSize: 16, lineHeight: 1.6, color: TEXT }}>
                   Use this page when AP Biology numbers are slowing you down. It pulls chi-square, allele frequencies,
-                  water movement, scaling, graph rates, confidence intervals, and p-values into one guided review space.
+                  water movement, scaling, graph rates, standard deviation, confidence intervals, and p-values into one guided review space.
                 </p>
 
                 <div style={{ marginTop: 18, display: "flex", gap: 10, flexWrap: "wrap" }}>
-                  <a href="/sims/active-recall" style={anchorPillStyle()}>Practice dashboard</a>
+                  <a
+                    href="/sims/mcq?difficulty=statistics"
+                    style={{
+                      ...anchorPillStyle(),
+                      background: SKY,
+                      border: `1px solid ${SKY}`,
+                      color: "#ffffff",
+                    }}
+                  >
+                    Practice AP Bio Statistic MCQs
+                  </a>
                   <a href="#chi-square" style={anchorPillStyle()}>Chi-square</a>
                   <a href="#hardy-weinberg" style={anchorPillStyle()}>Hardy-Weinberg</a>
                   <a href="#water-potential" style={anchorPillStyle()}>Water potential</a>
                   <a href="#surface-area" style={anchorPillStyle()}>Surface area : volume</a>
                   <a href="#graph-slope" style={anchorPillStyle()}>Rate and slope</a>
+                  <a href="#standard-deviation" style={anchorPillStyle()}>Standard deviation</a>
                   <a href="#confidence-intervals" style={anchorPillStyle()}>Confidence intervals</a>
                   <a href="#p-values" style={anchorPillStyle()}>P-values in plain English</a>
                 </div>
@@ -817,23 +872,39 @@ export default function QuantitativeCenter() {
                       </MathText>
                     </div>
                     <div style={badgeStyle("#e2e8f0", HEADING)}>
+                      <MathText>SD = √</MathText>
+                      <MathFraction
+                        numerator={
+                          <>
+                            Σ(x − mean)<MathSup>2</MathSup>
+                          </>
+                        }
+                        denominator={<>n − 1</>}
+                        compact
+                      />
+                    </div>
+                    <div style={badgeStyle("#e2e8f0", HEADING)}>
                       <MathText>95% CI ≈ mean ± 1.96 × SEM</MathText>
                     </div>
                   </div>
                 </div>
-
-                <div style={panelStyle("rgba(255,255,255,0.86)")}>
-                  <div style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", color: SKY_DARK }}>Why it matters</div>
-                  <ul style={{ margin: "10px 0 0 18px", padding: 0, color: TEXT, lineHeight: 1.6 }}>
-                    <li>Chi-square tells you whether a deviation is bigger than chance.</li>
-                    <li>Hardy-Weinberg turns phenotype clues into allele-frequency answers.</li>
-                    <li>Water potential lets you predict direction of water movement instead of guessing.</li>
-                    <li>Surface-area-to-volume explains why cell size limits matter.</li>
-                    <li>Slope is the rate on AP Bio graphs.</li>
-                    <li>Confidence intervals and p-values help you talk about uncertainty correctly.</li>
-                  </ul>
-                </div>
               </div>
+            </div>
+
+            <div style={{ marginTop: 16, ...panelStyle("rgba(255,255,255,0.86)") }}>
+              <div style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", color: SKY_DARK }}>Why it matters</div>
+              <ul
+                className="grid gap-x-8 gap-y-2 md:grid-cols-2 xl:grid-cols-3"
+                style={{ margin: "10px 0 0 18px", paddingLeft: 18, color: TEXT, lineHeight: 1.6, listStyleType: "disc", listStylePosition: "outside" }}
+              >
+                <li>Chi-square tells you whether a deviation is bigger than chance.</li>
+                <li>Hardy-Weinberg turns phenotype clues into allele-frequency answers.</li>
+                <li>Water potential lets you predict direction of water movement instead of guessing.</li>
+                <li>Surface-area-to-volume explains why cell size limits matter.</li>
+                <li>Slope is the rate on AP Bio graphs.</li>
+                <li>Standard deviation shows how spread out replicate measurements are around the mean.</li>
+                <li>Confidence intervals and p-values help you talk about uncertainty correctly.</li>
+              </ul>
             </div>
           </section>
 
@@ -1041,7 +1112,7 @@ export default function QuantitativeCenter() {
                               <tr key={`${row.name}-table`}>
                                 <td style={{ borderBottom: `1px solid ${BORDER}`, padding: 8 }}>{row.name}</td>
                                 <td style={{ borderBottom: `1px solid ${BORDER}`, padding: 8, color: "#475569", fontWeight: 800 }}>{row.observed}</td>
-                                <td style={{ borderBottom: `1px solid ${BORDER}`, padding: 8, color: "#1f5a32", fontWeight: 800 }}>{formatNumber(row.expected, 2)}</td>
+                                <td style={{ borderBottom: `1px solid ${BORDER}`, padding: 8, color: "#5b46d8", fontWeight: 800 }}>{formatNumber(row.expected, 2)}</td>
                                 <td style={{ borderBottom: `1px solid ${BORDER}`, padding: 8 }}>{formatNumber(row.contribution, 3)}</td>
                               </tr>
                             ))}
@@ -1115,16 +1186,16 @@ export default function QuantitativeCenter() {
 
                       <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3" style={{ display: "grid", gap: 12, marginTop: 14 }}>
                         <div style={panelStyle("white")}>
-                          <div style={{ fontSize: 12, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.08em", color: SUBTLE }}>p</div>
-                          <div style={{ marginTop: 8, fontSize: 28, fontWeight: 900, color: HEADING }}>{formatNumber(hardySummary.p, 3)}</div>
+                          <div style={metricLabelStyle()}>p</div>
+                          <div style={metricValueStyle(28)}>{formatNumber(hardySummary.p, 3)}</div>
                         </div>
                         <div style={panelStyle("white")}>
-                          <div style={{ fontSize: 12, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.08em", color: SUBTLE }}>q</div>
-                          <div style={{ marginTop: 8, fontSize: 28, fontWeight: 900, color: HEADING }}>{formatNumber(hardySummary.q, 3)}</div>
+                          <div style={metricLabelStyle()}>q</div>
+                          <div style={metricValueStyle(28)}>{formatNumber(hardySummary.q, 3)}</div>
                         </div>
                         <div style={panelStyle("white")}>
-                          <div style={{ fontSize: 12, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.08em", color: SUBTLE }}>carriers (2pq)</div>
-                          <div style={{ marginTop: 8, fontSize: 28, fontWeight: 900, color: HEADING }}>{formatNumber(hardySummary.twoPQ, 3)}</div>
+                          <div style={metricLabelStyle()}>carriers (2pq)</div>
+                          <div style={metricValueStyle(28)}>{formatNumber(hardySummary.twoPQ, 3)}</div>
                         </div>
                       </div>
 
@@ -1223,22 +1294,22 @@ export default function QuantitativeCenter() {
                 </div>
 
                 <div style={panelStyle()}>
-                  <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4" style={{ display: "grid", gap: 12 }}>
+                  <div className="grid gap-3 sm:grid-cols-2" style={{ display: "grid", gap: 12 }}>
                     <div style={panelStyle("white")}>
-                      <div style={{ fontSize: 12, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.08em", color: SUBTLE }}>Temperature (K)</div>
-                      <div style={{ marginTop: 8, fontSize: 24, fontWeight: 900, color: HEADING }}>{formatNumber(waterSummary.temperatureK, 1)}</div>
+                      <div style={metricLabelStyle()}>Temperature (K)</div>
+                      <div style={metricValueStyle(24)}>{formatNumber(waterSummary.temperatureK, 1)}</div>
                     </div>
                     <div style={panelStyle("white")}>
-                      <div style={{ fontSize: 12, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.08em", color: SUBTLE }}>ψₛ</div>
-                      <div style={{ marginTop: 8, fontSize: 24, fontWeight: 900, color: HEADING }}>{formatNumber(waterSummary.solutePotential, 2)}</div>
+                      <div style={metricLabelStyle()}>ψₛ</div>
+                      <div style={metricValueStyle(24)}>{formatNumber(waterSummary.solutePotential, 2)}</div>
                     </div>
                     <div style={panelStyle("white")}>
-                      <div style={{ fontSize: 12, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.08em", color: SUBTLE }}>ψₚ</div>
-                      <div style={{ marginTop: 8, fontSize: 24, fontWeight: 900, color: HEADING }}>{formatNumber(waterPressure, 2)}</div>
+                      <div style={metricLabelStyle()}>ψₚ</div>
+                      <div style={metricValueStyle(24)}>{formatNumber(waterPressure, 2)}</div>
                     </div>
                     <div style={panelStyle("white")}>
-                      <div style={{ fontSize: 12, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.08em", color: SUBTLE }}>Cell ψ total</div>
-                      <div style={{ marginTop: 8, fontSize: 24, fontWeight: 900, color: HEADING }}>{formatNumber(waterSummary.totalWaterPotential, 2)}</div>
+                      <div style={metricLabelStyle()}>Cell ψ total</div>
+                      <div style={metricValueStyle(24)}>{formatNumber(waterSummary.totalWaterPotential, 2)}</div>
                     </div>
                   </div>
 
@@ -1381,6 +1452,75 @@ export default function QuantitativeCenter() {
                       <p style={{ margin: "12px 0 0", color: TEXT, lineHeight: 1.55 }}>
                         AP shortcut: when the graph is roughly linear over a segment, slope is the rate over that interval. Always include units.
                       </p>
+                    </>
+                  )}
+                </div>
+              </div>
+            </SectionShell>
+
+            <SectionShell
+              id="standard-deviation"
+              eyebrow="Spread and variation"
+              title="Standard deviation calculator"
+              description="Paste one set of replicate values to measure how tightly the data cluster around the mean. Use this when AP Bio asks you to describe variation instead of just reporting an average."
+            >
+              <div className="grid gap-4 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]" style={{ display: "grid", gap: 16 }}>
+                <div style={panelStyle()}>
+                  <div>
+                    <label style={{ display: "block", marginBottom: 6, fontWeight: 800, color: HEADING }}>Replicate values</label>
+                    <textarea value={standardDeviationInput} onChange={(event) => setStandardDeviationInput(event.target.value)} style={textareaStyle()} />
+                  </div>
+
+                  <div style={{ marginTop: 14, ...panelStyle("white") }}>
+                    <div style={{ fontWeight: 900, color: HEADING }}>Formula cue</div>
+                    <div style={{ marginTop: 10 }}>
+                      <div style={badgeStyle("#e2e8f0", HEADING)}>
+                        <MathText>SD = √</MathText>
+                        <MathFraction
+                          numerator={
+                            <>
+                              Σ(x − mean)<MathSup>2</MathSup>
+                            </>
+                          }
+                          denominator={<>n − 1</>}
+                          compact
+                        />
+                      </div>
+                    </div>
+                    <p style={{ margin: "8px 0 0", color: TEXT, lineHeight: 1.55 }}>
+                      Use the sample standard deviation formula so the spread is based on <MathText>n − 1</MathText> in the denominator. That is the version most often used for experimental replicates.
+                    </p>
+                  </div>
+                </div>
+
+                <div style={panelStyle()}>
+                  {!standardDeviationSummary ? (
+                    <div style={{ ...panelStyle("#f1f5f9"), color: ROSE_DARK, fontWeight: 800 }}>Enter at least one valid number.</div>
+                  ) : (
+                    <>
+                      <div className="grid gap-3 sm:grid-cols-2" style={{ display: "grid", gap: 12 }}>
+                        <div style={panelStyle("white")}>
+                          <div style={metricLabelStyle()}>n</div>
+                          <div style={metricValueStyle(26)}>{standardDeviationSummary.n}</div>
+                        </div>
+                        <div style={panelStyle("white")}>
+                          <div style={metricLabelStyle()}>Mean</div>
+                          <div style={metricValueStyle(26)}>{formatNumber(standardDeviationSummary.mean, 2)}</div>
+                        </div>
+                        <div style={panelStyle("white")}>
+                          <div style={metricLabelStyle()}>Variance</div>
+                          <div style={metricValueStyle(26)}>{formatNumber(standardDeviationSummary.sd * standardDeviationSummary.sd, 2)}</div>
+                        </div>
+                        <div style={panelStyle("white")}>
+                          <div style={metricLabelStyle()}>SD</div>
+                          <div style={metricValueStyle(26)}>{formatNumber(standardDeviationSummary.sd, 2)}</div>
+                        </div>
+                      </div>
+
+                      <div style={{ marginTop: 14, ...panelStyle(MUTED_BG) }}>
+                        <div style={{ fontWeight: 900, color: HEADING }}>Interpretation</div>
+                        <p style={{ margin: "8px 0 0", color: TEXT, lineHeight: 1.6 }}>{standardDeviationExplanation}</p>
+                      </div>
                     </>
                   )}
                 </div>

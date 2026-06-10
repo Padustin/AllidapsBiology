@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { ButtonHTMLAttributes, HTMLAttributes, ReactNode } from "react";
 
@@ -5,7 +6,7 @@ function cx(...classes: Array<string | false | null | undefined>) {
   return classes.filter(Boolean).join(" ");
 }
 
-type Tone = "blue" | "teal" | "amber" | "slate" | "rose";
+type Tone = "blue" | "teal" | "amber" | "slate" | "rose" | "green" | "accent";
 
 const toneMap: Record<Tone, string> = {
   blue: "border-slate-300 bg-slate-100/95 hover:border-slate-400 hover:bg-slate-200/85",
@@ -13,40 +14,50 @@ const toneMap: Record<Tone, string> = {
   amber: "border-slate-300 bg-slate-100/95 hover:border-slate-400 hover:bg-slate-200/85",
   slate: "border-slate-300 bg-slate-100/85 hover:border-slate-400 hover:bg-slate-200/75",
   rose: "border-slate-300 bg-slate-100 hover:border-slate-400 hover:bg-slate-200/70",
+  green: "accent-gradient hover:opacity-95",
+  accent: "border-[color:var(--accent-text)]/20 bg-white hover:border-[color:var(--accent-text)]/35 hover:bg-slate-50",
 };
 
 const badgeMap: Record<Tone | "neutral", string> = {
-  blue: "bg-[#1f5a32] text-white",
-  teal: "bg-[#1f5a32] text-white",
-  amber: "bg-[#1f5a32] text-white",
+  blue: "accent-gradient text-white",
+  teal: "accent-gradient text-white",
+  amber: "accent-gradient text-white",
   rose: "border border-slate-300 bg-slate-100 text-slate-800",
   slate: "border border-slate-300 bg-slate-100 text-slate-700",
+  green: "accent-gradient text-white",
+  accent: "border border-[color:var(--accent-text)]/20 bg-white text-[color:var(--accent-text)]",
   neutral: "border border-slate-300 bg-slate-100 text-slate-700",
 };
 
 type PageHeroProps = {
   eyebrow?: string;
-  title: string;
+  title: ReactNode;
   description?: string;
   actions?: ReactNode;
+  background?: ReactNode;
   aside?: ReactNode;
+  align?: "start" | "end";
 };
 
-export function PageHeader({ eyebrow, title, description, actions, aside }: PageHeroProps) {
+export function PageHeader({ eyebrow, title, description, actions, aside, align = "end", background }: PageHeroProps) {
+  const hasIntro = Boolean(title || description);
   return (
-    <section className="hero-card overflow-hidden border border-slate-200 p-6 sm:p-8">
-      <div className="grid gap-6 xl:grid-cols-[minmax(0,1.15fr)_minmax(280px,0.85fr)] xl:items-end">
+    <section className="hero-card overflow-hidden p-8 sm:p-10 relative">
+      {background ? <div className="pointer-events-none absolute inset-0 flex justify-end items-start">{background}</div> : null}
+      <div className={`relative z-10 grid gap-6 xl:grid-cols-[minmax(0,1.15fr)_minmax(280px,0.85fr)] ${align === "start" ? "xl:items-start" : "xl:items-end"}`}>
         <div>
           {eyebrow ? (
-            <p className="mb-4 inline-flex rounded-full bg-[#1f5a32] px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white">
+            <p className="accent-gradient mb-4 inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white">
               {eyebrow}
             </p>
           ) : null}
-          <h1 className="text-balance text-[clamp(2rem,4.6vw,3.75rem)] font-semibold leading-[0.98] tracking-tight text-slate-950" style={{ fontFamily: "var(--font-display)" }}>
-            {title}
-          </h1>
+          {title ? (
+            <h1 className="text-balance max-w-3xl whitespace-normal text-[clamp(2.5rem,6vw,4.5rem)] font-semibold leading-[1.02] tracking-tight text-slate-950" style={{ fontFamily: "var(--font-display)" }}>
+              {title}
+            </h1>
+          ) : null}
           {description ? <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600 sm:text-lg">{description}</p> : null}
-          {actions ? <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">{actions}</div> : null}
+          {actions ? <div className={`${hasIntro ? "mt-6" : "mt-0"} flex flex-col gap-3 sm:flex-row sm:flex-wrap`}>{actions}</div> : null}
         </div>
         {aside ? <div className="grid gap-3">{aside}</div> : null}
       </div>
@@ -82,9 +93,14 @@ type ToolCardProps = {
   cta?: string;
   detail?: string;
   tone?: Tone;
+  preview?: ReactNode;
+  previewImageSrc?: string;
+  previewImageAlt?: string;
 };
 
-export function FeatureCard({ title, description, href, eyebrow, cta = "Open", detail, tone = "slate" }: ToolCardProps) {
+export function FeatureCard({ title, description, href, eyebrow, cta = "Open", detail, tone = "slate", preview, previewImageSrc, previewImageAlt }: ToolCardProps) {
+  const isGreenTone = tone === "green";
+  const isAccentTone = tone === "accent";
   return (
     <Link
       href={href}
@@ -93,11 +109,25 @@ export function FeatureCard({ title, description, href, eyebrow, cta = "Open", d
         toneMap[tone],
       )}
     >
-      {eyebrow ? <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">{eyebrow}</p> : null}
-      <p className="mt-2 text-xl font-semibold tracking-tight text-slate-950">{title}</p>
-      <p className="mt-3 text-sm leading-6 text-slate-600">{description}</p>
-      {detail ? <p className="mt-3 text-sm font-medium text-slate-500">{detail}</p> : null}
-      <p className="mt-5 text-sm font-semibold text-slate-950 transition group-hover:text-[#1f5a32]">{cta}</p>
+      {eyebrow ? <p className={cx("text-xs font-semibold uppercase tracking-[0.18em]", isGreenTone ? "text-white/75" : isAccentTone ? "text-[color:var(--accent-text)]" : "text-slate-500")}>{eyebrow}</p> : null}
+      <p className={cx("mt-2 text-xl font-semibold tracking-tight", isGreenTone ? "text-white" : isAccentTone ? "text-[color:var(--accent-text)]" : "text-slate-950")}>{title}</p>
+      <p className={cx("mt-3 text-sm leading-6", isGreenTone ? "text-white/90" : "text-slate-600")}>{description}</p>
+      {detail ? <p className={cx("mt-3 text-sm font-medium", isGreenTone ? "text-white/80" : "text-slate-500")}>{detail}</p> : null}
+      {preview ? (
+        <div className="mt-4">{preview}</div>
+      ) : null}
+      {previewImageSrc && !preview ? (
+        <div className="mt-4 overflow-hidden rounded-[1.1rem] border border-slate-200 bg-slate-100/80 shadow-sm">
+          <Image
+            src={previewImageSrc}
+            alt={previewImageAlt || title}
+            width={960}
+            height={640}
+            className="h-36 w-full object-cover"
+          />
+        </div>
+      ) : null}
+      <p className={cx("mt-5 text-sm font-semibold transition", isGreenTone ? "text-white group-hover:text-white/85" : isAccentTone ? "text-[color:var(--accent-text)] group-hover:text-[color:var(--accent-text)]/85" : "text-slate-950 group-hover:text-[color:var(--accent-text)]")}>{cta}</p>
     </Link>
   );
 }
@@ -185,7 +215,7 @@ type TipCardProps = {
 
 export function TipCard({ label = "Tip", children }: TipCardProps) {
   return (
-    <div className="rounded-2xl bg-[#1f5a32] px-4 py-3 text-sm text-white shadow-sm">
+    <div className="accent-gradient rounded-2xl px-4 py-3 text-sm text-white shadow-sm">
       <span className="font-bold text-white">{label}</span>
       <span className="ml-2">{children}</span>
     </div>
@@ -216,7 +246,7 @@ export function PrimaryLink({ href, children, className }: LinkProps) {
     <Link
       href={href}
       className={cx(
-        "inline-flex items-center justify-center rounded-xl bg-[#1f5a32] px-4 py-2.5 text-sm font-semibold !text-white visited:!text-white shadow-sm transition hover:opacity-90",
+        "accent-gradient inline-flex items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold !text-white visited:!text-white shadow-sm transition hover:opacity-90",
         className,
       )}
     >
@@ -238,7 +268,7 @@ export function PrimaryButton({ children, ...props }: ButtonHTMLAttributes<HTMLB
     <button
       {...props}
       className={cx(
-        "inline-flex w-full items-center justify-center rounded-xl bg-[#1f5a32] px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:opacity-90 sm:w-auto disabled:cursor-not-allowed disabled:opacity-50",
+        "accent-gradient inline-flex w-full items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:opacity-90 sm:w-auto disabled:cursor-not-allowed disabled:opacity-50",
         props.className,
       )}
     >

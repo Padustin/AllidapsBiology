@@ -1,0 +1,402 @@
+[
+  {
+    "id": "stats-ci-1",
+    "difficulty": "hard",
+    "topic": "95% confidence interval",
+    "text": "Two plant groups have mean heights with 95% confidence intervals that do not overlap. Which interpretation is best?",
+    "choices": [
+      "The 95% confidence interval proves the sample mean is exactly at the center of the population distribution.",
+      "The 95% confidence interval shows the range that contains 95% of individual organisms in the sample.",
+      "The 95% confidence interval is unrelated to uncertainty, so its width does not matter.",
+      "The difference between the groups is likely statistically significant."
+    ],
+    "correct": 3,
+    "explain": "In AP Biology, 95% confidence intervals are used as a visual way to judge uncertainty around a mean. Non-overlapping intervals suggest a real difference between means, while wider intervals indicate greater uncertainty or less precision in the estimate.",
+    "choice_explanations": [
+      "Incorrect. A confidence interval does not prove the exact location of the population mean.",
+      "Incorrect. Confidence intervals describe uncertainty around the mean, not the spread of individual data points.",
+      "Incorrect. Width matters a lot because it reflects the precision of the estimate.",
+      "Correct. This statement matches how 95% confidence intervals are interpreted in AP Biology graphs and experimental results."
+    ]
+  },
+  {
+    "id": "stats-ci-2",
+    "difficulty": "hard",
+    "topic": "95% confidence interval",
+    "text": "Two treatment groups have 95% confidence intervals that overlap substantially. Which interpretation is best?",
+    "choices": [
+      "The data do not provide strong AP Bio-style evidence of a statistically significant difference between the means.",
+      "The 95% confidence interval is unrelated to uncertainty, so its width does not matter.",
+      "The 95% confidence interval proves the sample mean is exactly at the center of the population distribution.",
+      "The 95% confidence interval shows the range that contains 95% of individual organisms in the sample."
+    ],
+    "correct": 0,
+    "explain": "In AP Biology, 95% confidence intervals are used as a visual way to judge uncertainty around a mean. Non-overlapping intervals suggest a real difference between means, while wider intervals indicate greater uncertainty or less precision in the estimate.",
+    "choice_explanations": [
+      "Correct. This statement matches how 95% confidence intervals are interpreted in AP Biology graphs and experimental results.",
+      "Incorrect. Width matters a lot because it reflects the precision of the estimate.",
+      "Incorrect. A confidence interval does not prove the exact location of the population mean.",
+      "Incorrect. Confidence intervals describe uncertainty around the mean, not the spread of individual data points."
+    ]
+  },
+  {
+    "id": "stats-ci-3",
+    "difficulty": "hard",
+    "topic": "95% confidence interval",
+    "text": "A sample mean is shown with a very wide 95% confidence interval. Which interpretation is best?",
+    "choices": [
+      "The 95% confidence interval shows the range that contains 95% of individual organisms in the sample.",
+      "The 95% confidence interval proves the sample mean is exactly at the center of the population distribution.",
+      "The estimate of the population mean is relatively imprecise.",
+      "The 95% confidence interval is unrelated to uncertainty, so its width does not matter."
+    ],
+    "correct": 2,
+    "explain": "In AP Biology, 95% confidence intervals are used as a visual way to judge uncertainty around a mean. Non-overlapping intervals suggest a real difference between means, while wider intervals indicate greater uncertainty or less precision in the estimate.",
+    "choice_explanations": [
+      "Incorrect. Confidence intervals describe uncertainty around the mean, not the spread of individual data points.",
+      "Incorrect. A confidence interval does not prove the exact location of the population mean.",
+      "Correct. This statement matches how 95% confidence intervals are interpreted in AP Biology graphs and experimental results.",
+      "Incorrect. Width matters a lot because it reflects the precision of the estimate."
+    ]
+  },
+  {
+    "id": "stats-ci-4",
+    "difficulty": "hard",
+    "topic": "95% confidence interval",
+    "text": "A larger sample size is collected from the same population with similar variability. Which interpretation is best?",
+    "choices": [
+      "The 95% confidence interval proves the sample mean is exactly at the center of the population distribution.",
+      "The 95% confidence interval would usually become narrower.",
+      "The 95% confidence interval is unrelated to uncertainty, so its width does not matter.",
+      "The 95% confidence interval shows the range that contains 95% of individual organisms in the sample."
+    ],
+    "correct": 1,
+    "explain": "In AP Biology, 95% confidence intervals are used as a visual way to judge uncertainty around a mean. Non-overlapping intervals suggest a real difference between means, while wider intervals indicate greater uncertainty or less precision in the estimate.",
+    "choice_explanations": [
+      "Incorrect. A confidence interval does not prove the exact location of the population mean.",
+      "Correct. This statement matches how 95% confidence intervals are interpreted in AP Biology graphs and experimental results.",
+      "Incorrect. Width matters a lot because it reflects the precision of the estimate.",
+      "Incorrect. Confidence intervals describe uncertainty around the mean, not the spread of individual data points."
+    ]
+  },
+  {
+    "id": "stats-ci-5",
+    "difficulty": "hard",
+    "topic": "95% confidence interval",
+    "text": "A researcher says, 'There is a 95% chance that this one calculated interval contains the true mean.' Which response is most accurate?",
+    "choices": [
+      "Any two means with overlapping 95% confidence intervals must be exactly the same.",
+      "That wording is not the best interpretation; 95% confidence means that if the sampling process were repeated many times, about 95% of the intervals produced would contain the true mean.",
+      "A 95% confidence interval is the range that contains 95% of all future sample means exactly.",
+      "Confidence intervals can only be used when the sample size is 95."
+    ],
+    "correct": 1,
+    "explain": "Confidence intervals provide a range of plausible values for the true population mean based on sample data. They are about precision and uncertainty, not about capturing 95% of individual values or requiring a sample size of 95.",
+    "choice_explanations": [
+      "Incorrect. Overlap does not prove that two means are exactly equal; it simply weakens the evidence for a difference.",
+      "Correct. This response uses the proper idea behind repeated sampling and population-mean estimation.",
+      "Incorrect. Confidence intervals do not guarantee the location of future sample means in that way.",
+      "Incorrect. The '95%' refers to the confidence level, not the sample size."
+    ]
+  },
+  {
+    "id": "stats-ci-6",
+    "difficulty": "hard",
+    "topic": "95% confidence interval",
+    "text": "A class reports a mean photosynthesis rate of 12 with a 95% confidence interval of 10 to 14. Which response is most accurate?",
+    "choices": [
+      "Any two means with overlapping 95% confidence intervals must be exactly the same.",
+      "Confidence intervals can only be used when the sample size is 95.",
+      "The interval indicates a plausible range for the population mean based on the sample.",
+      "A 95% confidence interval is the range that contains 95% of all future sample means exactly."
+    ],
+    "correct": 2,
+    "explain": "Confidence intervals provide a range of plausible values for the true population mean based on sample data. They are about precision and uncertainty, not about capturing 95% of individual values or requiring a sample size of 95.",
+    "choice_explanations": [
+      "Incorrect. Overlap does not prove that two means are exactly equal; it simply weakens the evidence for a difference.",
+      "Incorrect. The '95%' refers to the confidence level, not the sample size.",
+      "Correct. This response uses the proper idea behind repeated sampling and population-mean estimation.",
+      "Incorrect. Confidence intervals do not guarantee the location of future sample means in that way."
+    ]
+  },
+  {
+    "id": "stats-ci-7",
+    "difficulty": "hard",
+    "topic": "95% confidence interval",
+    "text": "One group has a 95% confidence interval of 18 to 22 and another has 24 to 28. Which response is most accurate?",
+    "choices": [
+      "Any two means with overlapping 95% confidence intervals must be exactly the same.",
+      "The lack of overlap supports the claim that the group means are likely different.",
+      "A 95% confidence interval is the range that contains 95% of all future sample means exactly.",
+      "Confidence intervals can only be used when the sample size is 95."
+    ],
+    "correct": 1,
+    "explain": "Confidence intervals provide a range of plausible values for the true population mean based on sample data. They are about precision and uncertainty, not about capturing 95% of individual values or requiring a sample size of 95.",
+    "choice_explanations": [
+      "Incorrect. Overlap does not prove that two means are exactly equal; it simply weakens the evidence for a difference.",
+      "Correct. This response uses the proper idea behind repeated sampling and population-mean estimation.",
+      "Incorrect. Confidence intervals do not guarantee the location of future sample means in that way.",
+      "Incorrect. The '95%' refers to the confidence level, not the sample size."
+    ]
+  },
+  {
+    "id": "stats-ci-8",
+    "difficulty": "hard",
+    "topic": "95% confidence interval",
+    "text": "One data set has a 95% confidence interval of 7.9 to 8.1 and another has 5.0 to 11.0. Which response is most accurate?",
+    "choices": [
+      "Any two means with overlapping 95% confidence intervals must be exactly the same.",
+      "Confidence intervals can only be used when the sample size is 95.",
+      "The first estimate is much more precise.",
+      "A 95% confidence interval is the range that contains 95% of all future sample means exactly."
+    ],
+    "correct": 2,
+    "explain": "Confidence intervals provide a range of plausible values for the true population mean based on sample data. They are about precision and uncertainty, not about capturing 95% of individual values or requiring a sample size of 95.",
+    "choice_explanations": [
+      "Incorrect. Overlap does not prove that two means are exactly equal; it simply weakens the evidence for a difference.",
+      "Incorrect. The '95%' refers to the confidence level, not the sample size.",
+      "Correct. This response uses the proper idea behind repeated sampling and population-mean estimation.",
+      "Incorrect. Confidence intervals do not guarantee the location of future sample means in that way."
+    ]
+  },
+  {
+    "id": "stats-ci-9",
+    "difficulty": "hard",
+    "topic": "95% confidence interval",
+    "text": "In a graph of mean bacterial growth, Treatment A has a higher mean than Treatment B, but the 95% confidence intervals overlap heavily. Which conclusion is best supported?",
+    "choices": [
+      "The visual evidence for a significant difference is weak despite the different means.",
+      "Confidence intervals are only useful for raw counts and cannot be used with biological means.",
+      "A wider confidence interval shows the sample mean is more accurate because it includes more possible values.",
+      "Confidence interval overlap or width says nothing about uncertainty as long as the means are different."
+    ],
+    "correct": 0,
+    "explain": "When reading AP Biology graphs, you use both the mean and the 95% confidence interval. The mean shows the center of the estimate, while the interval shows how certain or uncertain that estimate is. Narrower intervals indicate greater precision, and non-overlap strengthens the case for a real difference.",
+    "choice_explanations": [
+      "Correct. This conclusion properly uses both the mean and the width or overlap of the 95% confidence intervals.",
+      "Incorrect. Confidence intervals are commonly used with means in biological data.",
+      "Incorrect. A wider interval is less precise, not more accurate.",
+      "Incorrect. The overlap and width are exactly what make confidence intervals useful for interpreting uncertainty."
+    ]
+  },
+  {
+    "id": "stats-ci-10",
+    "difficulty": "hard",
+    "topic": "95% confidence interval",
+    "text": "In a graph of transpiration rate, the means are close, but the 95% confidence intervals do not overlap. Which conclusion is best supported?",
+    "choices": [
+      "Confidence intervals are only useful for raw counts and cannot be used with biological means.",
+      "Even a modest difference in means may be statistically meaningful if the uncertainty around each mean is low enough.",
+      "A wider confidence interval shows the sample mean is more accurate because it includes more possible values.",
+      "Confidence interval overlap or width says nothing about uncertainty as long as the means are different."
+    ],
+    "correct": 1,
+    "explain": "When reading AP Biology graphs, you use both the mean and the 95% confidence interval. The mean shows the center of the estimate, while the interval shows how certain or uncertain that estimate is. Narrower intervals indicate greater precision, and non-overlap strengthens the case for a real difference.",
+    "choice_explanations": [
+      "Incorrect. Confidence intervals are commonly used with means in biological data.",
+      "Correct. This conclusion properly uses both the mean and the width or overlap of the 95% confidence intervals.",
+      "Incorrect. A wider interval is less precise, not more accurate.",
+      "Incorrect. The overlap and width are exactly what make confidence intervals useful for interpreting uncertainty."
+    ]
+  },
+  {
+    "id": "stats-ci-11",
+    "difficulty": "hard",
+    "topic": "95% confidence interval",
+    "text": "A scientist increases the number of replicate plants from 5 to 50 while the mean and variability pattern stay similar. Which conclusion is best supported?",
+    "choices": [
+      "The 95% confidence interval around the mean should usually shrink because the estimate becomes more stable.",
+      "A wider confidence interval shows the sample mean is more accurate because it includes more possible values.",
+      "Confidence interval overlap or width says nothing about uncertainty as long as the means are different.",
+      "Confidence intervals are only useful for raw counts and cannot be used with biological means."
+    ],
+    "correct": 0,
+    "explain": "When reading AP Biology graphs, you use both the mean and the 95% confidence interval. The mean shows the center of the estimate, while the interval shows how certain or uncertain that estimate is. Narrower intervals indicate greater precision, and non-overlap strengthens the case for a real difference.",
+    "choice_explanations": [
+      "Correct. This conclusion properly uses both the mean and the width or overlap of the 95% confidence intervals.",
+      "Incorrect. A wider interval is less precise, not more accurate.",
+      "Incorrect. The overlap and width are exactly what make confidence intervals useful for interpreting uncertainty.",
+      "Incorrect. Confidence intervals are commonly used with means in biological data."
+    ]
+  },
+  {
+    "id": "stats-ci-12",
+    "difficulty": "hard",
+    "topic": "95% confidence interval",
+    "text": "Two groups have the same mean leaf mass, but one group's 95% confidence interval is much wider. Which conclusion is best supported?",
+    "choices": [
+      "That group provides a less precise estimate of the population mean.",
+      "Confidence interval overlap or width says nothing about uncertainty as long as the means are different.",
+      "A wider confidence interval shows the sample mean is more accurate because it includes more possible values.",
+      "Confidence intervals are only useful for raw counts and cannot be used with biological means."
+    ],
+    "correct": 0,
+    "explain": "When reading AP Biology graphs, you use both the mean and the 95% confidence interval. The mean shows the center of the estimate, while the interval shows how certain or uncertain that estimate is. Narrower intervals indicate greater precision, and non-overlap strengthens the case for a real difference.",
+    "choice_explanations": [
+      "Correct. This conclusion properly uses both the mean and the width or overlap of the 95% confidence intervals.",
+      "Incorrect. The overlap and width are exactly what make confidence intervals useful for interpreting uncertainty.",
+      "Incorrect. A wider interval is less precise, not more accurate.",
+      "Incorrect. Confidence intervals are commonly used with means in biological data."
+    ]
+  },
+  {
+    "id": "stats-ci-13",
+    "difficulty": "hard",
+    "topic": "95% confidence interval",
+    "text": "A class repeats the same experiment with more replicates and less measurement error. Which statement is most accurate?",
+    "choices": [
+      "The 95% confidence interval should generally become narrower because the estimate is more precise.",
+      "The 95% confidence interval is controlled only by the mean, so changing variability or sample size would not affect it.",
+      "Any confidence interval that is wider must come from a larger sample size.",
+      "A 95% confidence interval directly proves the exact size of the treatment effect."
+    ],
+    "correct": 0,
+    "explain": "Confidence interval width depends on how much uncertainty surrounds the sample mean. More variability usually widens the interval, while more replicates usually narrow it.",
+    "choice_explanations": [
+      "Correct. This statement correctly links confidence interval behavior to sample size, variability, or evidence for a difference.",
+      "Incorrect. Confidence intervals reflect uncertainty, so sample size and variability matter.",
+      "Incorrect. This overinterprets what intervals can tell you; they are about means and uncertainty, not identical variability or every individual.",
+      "Incorrect. Interval width and overlap are exactly what make confidence intervals useful."
+    ]
+  },
+  {
+    "id": "stats-ci-14",
+    "difficulty": "hard",
+    "topic": "95% confidence interval",
+    "text": "A class repeats the same experiment with much more variable data but the same sample size. Which statement is most accurate?",
+    "choices": [
+      "Confidence intervals respond only to the choice of 95%, not to the data.",
+      "The confidence interval should become narrower because more variation makes the mean easier to estimate.",
+      "The 95% confidence interval should generally become wider because the uncertainty around the mean has increased.",
+      "The confidence interval should stay exactly the same because the sample size did not change."
+    ],
+    "correct": 2,
+    "explain": "If the data become more spread out, the estimate of the mean becomes less precise. That added uncertainty usually widens the 95% confidence interval even when sample size stays the same.",
+    "choice_explanations": [
+      "Incorrect. Interval width and overlap are exactly what make confidence intervals useful.",
+      "Incorrect. Confidence intervals reflect uncertainty, so sample size and variability matter.",
+      "Correct. This statement correctly links confidence interval behavior to sample size, variability, or evidence for a difference.",
+      "Incorrect. This overinterprets what intervals can tell you; they are about means and uncertainty, not identical variability or every individual."
+    ]
+  },
+  {
+    "id": "stats-ci-15",
+    "difficulty": "hard",
+    "topic": "95% confidence interval",
+    "text": "A treatment group's 95% confidence interval does not include the control group's mean. Which statement is most accurate?",
+    "choices": [
+      "The treatment and control must have identical variability because one mean lies outside the other interval.",
+      "The treatment effect cannot be significant unless the intervals are the exact same width.",
+      "The treatment mean is likely meaningfully different from the control mean.",
+      "This proves that every individual in the treatment group exceeded every individual in the control group."
+    ],
+    "correct": 2,
+    "explain": "If the control mean lies outside the treatment group's interval, that visually supports the idea that the groups differ. It does not prove anything about every individual observation, but it does support a meaningful mean difference.",
+    "choice_explanations": [
+      "Incorrect. Confidence intervals reflect uncertainty, so sample size and variability matter.",
+      "Incorrect. Interval width and overlap are exactly what make confidence intervals useful.",
+      "Correct. This statement correctly links confidence interval behavior to sample size, variability, or evidence for a difference.",
+      "Incorrect. This overinterprets what intervals can tell you; they are about means and uncertainty, not identical variability or every individual."
+    ]
+  },
+  {
+    "id": "stats-ci-16",
+    "difficulty": "hard",
+    "topic": "95% confidence interval",
+    "text": "A graph shows nearly identical means and broad, overlapping 95% confidence intervals for two treatments. Which statement is most accurate?",
+    "choices": [
+      "Confidence intervals should be ignored whenever the means are close together.",
+      "Broad overlapping intervals prove that the two population means are exactly equal.",
+      "The treatments must be significantly different because the intervals cover many possible values.",
+      "The graph does not provide strong evidence that the treatments differ."
+    ],
+    "correct": 3,
+    "explain": "Nearly identical means combined with broad overlapping intervals indicate both little apparent separation and high uncertainty. That combination does not support a strong claim of a difference.",
+    "choice_explanations": [
+      "Incorrect. Interval width and overlap are exactly what make confidence intervals useful.",
+      "Incorrect. Confidence intervals reflect uncertainty, so sample size and variability matter.",
+      "Incorrect. This overinterprets what intervals can tell you; they are about means and uncertainty, not identical variability or every individual.",
+      "Correct. This statement correctly links confidence interval behavior to sample size, variability, or evidence for a difference."
+    ]
+  },
+  {
+    "id": "stats-ci-17",
+    "difficulty": "hard",
+    "topic": "95% confidence interval",
+    "text": "A graph shows Group A with mean 15 and 95% CI of 14.8 to 15.2, and Group B with mean 16 and 95% CI of 15.8 to 16.2. Which statement is best supported?",
+    "choices": [
+      "The groups cannot be compared because confidence intervals are too narrow.",
+      "The means are probably the same because both intervals are centered near whole numbers.",
+      "The groups are likely different, and both means are estimated with high precision.",
+      "The graph shows the range that contains 95% of all individual organisms in each group."
+    ],
+    "correct": 2,
+    "explain": "The intervals are narrow, which indicates precise estimates, and they do not overlap, which supports a real difference between the means.",
+    "choice_explanations": [
+      "Incorrect. This distractor either misreads what interval width means or confuses confidence intervals with individual-data ranges.",
+      "Incorrect. Sharing a mean or using the same graph does not force equal precision or equal groups.",
+      "Correct. This answer uses confidence intervals to reason about both uncertainty and comparisons between group means.",
+      "Incorrect. Confidence intervals are useful here, but the reasoning in this option misstates what they represent."
+    ]
+  },
+  {
+    "id": "stats-ci-18",
+    "difficulty": "hard",
+    "topic": "95% confidence interval",
+    "text": "Two studies estimate the same mean enzyme rate. Study A has a 95% confidence interval of 19 to 21, and Study B has a 95% confidence interval of 10 to 30. Which statement is best supported?",
+    "choices": [
+      "Confidence intervals cannot be used to compare precision between studies.",
+      "Both studies are equally precise because they have the same mean.",
+      "Study A gives the more precise estimate of the enzyme rate.",
+      "Study B is more precise because its interval covers more possible true means."
+    ],
+    "correct": 2,
+    "explain": "Narrower intervals indicate greater precision. Even though both studies have the same mean, Study A estimates that mean much more tightly.",
+    "choice_explanations": [
+      "Incorrect. Confidence intervals are useful here, but the reasoning in this option misstates what they represent.",
+      "Incorrect. Sharing a mean or using the same graph does not force equal precision or equal groups.",
+      "Correct. This answer uses confidence intervals to reason about both uncertainty and comparisons between group means.",
+      "Incorrect. This distractor either misreads what interval width means or confuses confidence intervals with individual-data ranges."
+    ]
+  },
+  {
+    "id": "stats-ci-19",
+    "difficulty": "hard",
+    "topic": "95% confidence interval",
+    "text": "A teacher tells students that two means must be significantly different whenever their 95% confidence intervals just barely touch at one point. Which evaluation is best?",
+    "choices": [
+      "The teacher is wrong because confidence intervals never help evaluate differences between means.",
+      "The teacher is completely correct because touching intervals always prove a strong difference.",
+      "That rule is too absolute; touching intervals provide much weaker visual evidence than clearly separated intervals.",
+      "The teacher is correct only if both sample sizes are exactly 95."
+    ],
+    "correct": 2,
+    "explain": "In AP Biology, non-overlap is commonly used as evidence for a difference, but intervals that merely touch are a borderline situation and should not be treated as the same as clearly separate intervals.",
+    "choice_explanations": [
+      "Incorrect. Sharing a mean or using the same graph does not force equal precision or equal groups.",
+      "Incorrect. This distractor either misreads what interval width means or confuses confidence intervals with individual-data ranges.",
+      "Correct. This answer uses confidence intervals to reason about both uncertainty and comparisons between group means.",
+      "Incorrect. Confidence intervals are useful here, but the reasoning in this option misstates what they represent."
+    ]
+  },
+  {
+    "id": "stats-ci-20",
+    "difficulty": "hard",
+    "topic": "95% confidence interval",
+    "text": "A graph shows Treatment A with a lower mean than Treatment B, but Treatment A's 95% confidence interval is much narrower. Which statement is most accurate?",
+    "choices": [
+      "Treatment A's lower mean is estimated more precisely, but precision alone does not determine which treatment has the higher mean.",
+      "Treatment B must be more precise because its mean is larger.",
+      "Treatment A must actually have the higher true mean because its interval is narrower.",
+      "Confidence interval width changes the ranking of the means themselves."
+    ],
+    "correct": 0,
+    "explain": "Confidence interval width tells you about precision, not which mean is numerically higher. A narrower interval means the estimate is tighter, but it does not change the order of the means.",
+    "choice_explanations": [
+      "Correct. This answer uses confidence intervals to reason about both uncertainty and comparisons between group means.",
+      "Incorrect. Sharing a mean or using the same graph does not force equal precision or equal groups.",
+      "Incorrect. This distractor either misreads what interval width means or confuses confidence intervals with individual-data ranges.",
+      "Incorrect. Confidence intervals are useful here, but the reasoning in this option misstates what they represent."
+    ]
+  }
+]

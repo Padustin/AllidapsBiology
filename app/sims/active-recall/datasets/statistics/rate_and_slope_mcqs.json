@@ -1,0 +1,402 @@
+[
+  {
+    "id": "stats-slope-1",
+    "difficulty": "hard",
+    "topic": "rate and slope",
+    "text": "A student measures a response variable in mL oxygen over time in minutes. Between the points (2, 4) and (6, 12), what is the slope of the line segment?",
+    "choices": [
+      "2",
+      "0.5",
+      "8",
+      "4"
+    ],
+    "correct": 0,
+    "explain": "Slope is \u0394y/\u0394x = (12 \u2212 4) / (6 \u2212 2) = 8/4 = 2. In AP Biology, that slope represents the rate of change over that interval.",
+    "choice_explanations": [
+      "Correct. The slope is 2 mL oxygen per minute because slope is change in y divided by change in x.",
+      "Incorrect. This inverts the fraction and calculates \u0394x/\u0394y instead of \u0394y/\u0394x.",
+      "Incorrect. This is \u0394y alone, not the rate.",
+      "Incorrect. This is \u0394x alone, not the slope."
+    ]
+  },
+  {
+    "id": "stats-slope-2",
+    "difficulty": "hard",
+    "topic": "rate and slope",
+    "text": "A student measures a response variable in cm over time in hours. Between the points (1, 10) and (5, 2), what is the slope of the line segment?",
+    "choices": [
+      "-8",
+      "-2",
+      "4",
+      "-0.5"
+    ],
+    "correct": 1,
+    "explain": "Slope is \u0394y/\u0394x = (2 \u2212 10) / (5 \u2212 1) = -8/4 = -2. In AP Biology, that slope represents the rate of change over that interval.",
+    "choice_explanations": [
+      "Incorrect. This is \u0394y alone, not the rate.",
+      "Correct. The slope is -2 cm per hour because slope is change in y divided by change in x.",
+      "Incorrect. This is \u0394x alone, not the slope.",
+      "Incorrect. This inverts the fraction and calculates \u0394x/\u0394y instead of \u0394y/\u0394x."
+    ]
+  },
+  {
+    "id": "stats-slope-3",
+    "difficulty": "hard",
+    "topic": "rate and slope",
+    "text": "A student measures a response variable in leaf disks floating over time in minutes. Between the points (0, 3) and (4, 3), what is the slope of the line segment?",
+    "choices": [
+      "-0.75",
+      "3",
+      "4",
+      "0"
+    ],
+    "correct": 3,
+    "explain": "The y-value stays at 3 while x increases from 0 to 4, so \u0394y = 0. That makes slope = \u0394y/\u0394x = 0/4 = 0. A horizontal segment means the variable is constant over that interval.",
+    "choice_explanations": [
+      "Incorrect. A negative slope would require y to decrease, but it does not change here.",
+      "Incorrect. 3 is the y-value, not the rate of change.",
+      "Incorrect. 4 is the change in x, not the slope.",
+      "Correct. No change in y means a slope of 0."
+    ]
+  },
+  {
+    "id": "stats-slope-4",
+    "difficulty": "hard",
+    "topic": "rate and slope",
+    "text": "A student measures a response variable in mm over time in days. Between the points (3, 1) and (9, 19), what is the slope of the line segment?",
+    "choices": [
+      "0.333",
+      "3",
+      "6",
+      "18"
+    ],
+    "correct": 1,
+    "explain": "Slope is \u0394y/\u0394x = (19 \u2212 1) / (9 \u2212 3) = 18/6 = 3. In AP Biology, that slope represents the rate of change over that interval.",
+    "choice_explanations": [
+      "Incorrect. This inverts the fraction and calculates \u0394x/\u0394y instead of \u0394y/\u0394x.",
+      "Correct. The slope is 3 mm per day because slope is change in y divided by change in x.",
+      "Incorrect. This is \u0394x alone, not the slope.",
+      "Incorrect. This is \u0394y alone, not the rate."
+    ]
+  },
+  {
+    "id": "stats-slope-5",
+    "difficulty": "hard",
+    "topic": "rate and slope",
+    "text": "A student measures a response variable in bubbles over time in seconds. Between the points (2, 18) and (8, 6), what is the slope of the line segment?",
+    "choices": [
+      "-0.5",
+      "-2",
+      "-12",
+      "6"
+    ],
+    "correct": 1,
+    "explain": "Slope is \u0394y/\u0394x = (6 \u2212 18) / (8 \u2212 2) = -12/6 = -2. In AP Biology, that slope represents the rate of change over that interval.",
+    "choice_explanations": [
+      "Incorrect. This inverts the fraction and calculates \u0394x/\u0394y instead of \u0394y/\u0394x.",
+      "Correct. The slope is -2 bubbles per second because slope is change in y divided by change in x.",
+      "Incorrect. This is \u0394y alone, not the rate.",
+      "Incorrect. This is \u0394x alone, not the slope."
+    ]
+  },
+  {
+    "id": "stats-slope-6",
+    "difficulty": "hard",
+    "topic": "rate and slope",
+    "text": "A graph is summarized by the following interval slopes: 0-2 min: slope 2; 2-4 min: slope 6; 4-6 min: slope 3; 6-8 min: slope 1. During which interval is the rate of change greatest?",
+    "choices": [
+      "0-2 min",
+      "4-6 min",
+      "6-8 min",
+      "2-4 min"
+    ],
+    "correct": 3,
+    "explain": "The greatest rate of change corresponds to the largest numerical slope value. Among the listed intervals, 2-4 min has the highest slope of 6.",
+    "choice_explanations": [
+      "Incorrect. This interval changes, but not at the greatest rate.",
+      "Incorrect. This interval does not have the highest slope value in the table.",
+      "Incorrect. This interval is not the largest slope listed.",
+      "Correct. 2-4 min has the largest slope value of 6."
+    ]
+  },
+  {
+    "id": "stats-slope-7",
+    "difficulty": "hard",
+    "topic": "rate and slope",
+    "text": "A graph is summarized by the following interval slopes: 0-5 min: slope 0.4; 5-10 min: slope 0.9; 10-15 min: slope 0.1; 15-20 min: slope -0.2. During which interval is the rate of change greatest?",
+    "choices": [
+      "5-10 min",
+      "10-15 min",
+      "0-5 min",
+      "15-20 min"
+    ],
+    "correct": 0,
+    "explain": "The greatest rate of change corresponds to the largest numerical slope value. Among the listed intervals, 5-10 min has the highest slope of 0.9.",
+    "choice_explanations": [
+      "Correct. 5-10 min has the largest slope value of 0.9.",
+      "Incorrect. This interval does not have the highest slope value in the table.",
+      "Incorrect. This interval changes, but not at the greatest rate.",
+      "Incorrect. This interval is not the largest slope listed."
+    ]
+  },
+  {
+    "id": "stats-slope-8",
+    "difficulty": "hard",
+    "topic": "rate and slope",
+    "text": "A graph is summarized by the following interval slopes: 0-1 h: slope 12; 1-2 h: slope 7; 2-3 h: slope 7; 3-4 h: slope 4. During which interval is the rate of change greatest?",
+    "choices": [
+      "0-1 h",
+      "1-2 h",
+      "2-3 h",
+      "3-4 h"
+    ],
+    "correct": 0,
+    "explain": "The greatest rate of change corresponds to the largest numerical slope value. Among the listed intervals, 0-1 h has the highest slope of 12.",
+    "choice_explanations": [
+      "Correct. 0-1 h has the largest slope value of 12.",
+      "Incorrect. This interval does not have the highest slope value in the table.",
+      "Incorrect. This interval is not the largest slope listed.",
+      "Incorrect. This interval changes, but not at the greatest rate."
+    ]
+  },
+  {
+    "id": "stats-slope-9",
+    "difficulty": "hard",
+    "topic": "rate and slope",
+    "text": "A graph is summarized by the following interval slopes: 0-30 s: slope 0.05; 30-60 s: slope 0.02; 60-90 s: slope 0.08; 90-120 s: slope 0.01. During which interval is the rate of change greatest?",
+    "choices": [
+      "0-30 s",
+      "90-120 s",
+      "30-60 s",
+      "60-90 s"
+    ],
+    "correct": 3,
+    "explain": "The greatest rate of change corresponds to the largest numerical slope value. Among the listed intervals, 60-90 s has the highest slope of 0.08.",
+    "choice_explanations": [
+      "Incorrect. This interval is not the largest slope listed.",
+      "Incorrect. This interval does not have the highest slope value in the table.",
+      "Incorrect. This interval changes, but not at the greatest rate.",
+      "Correct. 60-90 s has the largest slope value of 0.08."
+    ]
+  },
+  {
+    "id": "stats-slope-10",
+    "difficulty": "hard",
+    "topic": "rate and slope",
+    "text": "A graph is summarized by the following interval slopes: 0-10 min: slope -3; 10-20 min: slope -7; 20-30 min: slope -1; 30-40 min: slope 2. During which interval is the rate of change greatest?",
+    "choices": [
+      "0-10 min",
+      "30-40 min",
+      "10-20 min",
+      "20-30 min"
+    ],
+    "correct": 1,
+    "explain": "The greatest rate of change corresponds to the largest numerical slope value. Among the listed intervals, 30-40 min has the highest slope of 2.",
+    "choice_explanations": [
+      "Incorrect. This interval does not have the highest slope value in the table.",
+      "Correct. 30-40 min has the largest slope value of 2.",
+      "Incorrect. This interval is not the largest slope listed.",
+      "Incorrect. This interval changes, but not at the greatest rate."
+    ]
+  },
+  {
+    "id": "stats-slope-11",
+    "difficulty": "hard",
+    "topic": "rate and slope",
+    "text": "A line relating oxygen concentration (mg/L) to time (minutes) has a slope of -0.50. Which interpretation is best?",
+    "choices": [
+      "The graph proves the organism has died.",
+      "Oxygen concentration increases by 0.50 minutes each mg/L.",
+      "There is no change in oxygen concentration.",
+      "Oxygen concentration decreases by 0.50 mg/L each minute."
+    ],
+    "correct": 3,
+    "explain": "A slope of -0.50 mg/L per minute means oxygen concentration drops by 0.50 mg/L for each minute that passes. The negative sign indicates direction, not an error or a reversal of the axes.",
+    "choice_explanations": [
+      "Incorrect. A negative slope alone cannot justify that broad biological conclusion.",
+      "Incorrect. This swaps the axes and incorrectly treats time as the dependent variable.",
+      "Incorrect. A slope of -0.50 is not zero; it indicates decline.",
+      "Correct. A negative slope on oxygen concentration versus time means oxygen concentration is decreasing each minute."
+    ]
+  },
+  {
+    "id": "stats-slope-12",
+    "difficulty": "hard",
+    "topic": "rate and slope",
+    "text": "A graph of population size versus time has a slope of 0 over a selected interval. What does that indicate for that interval?",
+    "choices": [
+      "Population size stayed constant over that interval.",
+      "The graph has no x-axis units.",
+      "The population size was zero.",
+      "The population was at carrying capacity in every possible environment."
+    ],
+    "correct": 0,
+    "explain": "A slope of 0 means the dependent variable did not change while the independent variable increased over that interval. Zero slope does not automatically mean the value itself was zero or that the system was at carrying capacity.",
+    "choice_explanations": [
+      "Correct. Zero slope means no change in the y-value across that part of the graph.",
+      "Incorrect. A slope can be zero even when both axes are clearly defined.",
+      "Incorrect. The variable could be constant at any value, not necessarily zero.",
+      "Incorrect. A flat interval does not prove the same environmental interpretation in all situations."
+    ]
+  },
+  {
+    "id": "stats-slope-13",
+    "difficulty": "hard",
+    "topic": "rate and slope",
+    "text": "A student reports that the slope of a photosynthesis graph is 2.0. Which additional information is most necessary before the rate statement is complete?",
+    "choices": [
+      "The value of the y-intercept",
+      "The color of the line on the graph",
+      "The units on the x- and y-axes",
+      "The species name of the plant"
+    ],
+    "correct": 2,
+    "explain": "Slope is a rate, so its meaning depends on the units attached to both axes. Without units, '2.0' does not tell you what is changing per what interval.",
+    "choice_explanations": [
+      "Incorrect. The y-intercept is a different feature of the graph.",
+      "Incorrect. Line color has no effect on the numerical meaning of slope.",
+      "Correct. Units are necessary to turn a slope into a usable biological rate statement.",
+      "Incorrect. The species might matter biologically, but not for interpreting the mathematical rate."
+    ]
+  },
+  {
+    "id": "stats-slope-14",
+    "difficulty": "hard",
+    "topic": "rate and slope",
+    "text": "Two intervals on a respiration graph have slopes of 1.2 and 0.4 mL CO\u2082/min. What can be concluded?",
+    "choices": [
+      "Respiration rate was 0.8 mL CO\u2082 total in the first interval.",
+      "The graph must be nonlinear.",
+      "Respiration rate was three times higher during the interval with slope 1.2.",
+      "The first interval lasted three times longer."
+    ],
+    "correct": 2,
+    "explain": "Because 1.2 is three times 0.4, the rate of CO\u2082 production during the first interval was threefold higher. Slope compares rate, not total amount unless interval lengths are also known.",
+    "choice_explanations": [
+      "Incorrect. The difference in slopes is about rate, not total CO\u2082 produced.",
+      "Incorrect. Different slopes do not by themselves prove nonlinearity.",
+      "Correct. The larger slope means a proportionally faster rate.",
+      "Incorrect. Interval length is not given and cannot be inferred from slope alone."
+    ]
+  },
+  {
+    "id": "stats-slope-15",
+    "difficulty": "hard",
+    "topic": "rate and slope",
+    "text": "A graph of nitrate concentration versus time has a negative slope. Which statement best fits that result?",
+    "choices": [
+      "Nitrate concentration is moving backward in time.",
+      "The experiment has no independent variable.",
+      "Nitrate concentration is declining over time in the sampled system.",
+      "The dependent variable cannot be measured."
+    ],
+    "correct": 2,
+    "explain": "A negative slope means the y-value decreases as the x-value increases. On a nitrate-versus-time graph, that means nitrate concentration is going down over time.",
+    "choice_explanations": [
+      "Incorrect. Time still moves forward; the graph just shows the dependent variable decreasing.",
+      "Incorrect. A negative slope says nothing about whether an independent variable exists.",
+      "Correct. The sign of the slope tells you the direction of change in the measured variable.",
+      "Incorrect. The variable is measurable; the slope is calculated from those measurements."
+    ]
+  },
+  {
+    "id": "stats-slope-16",
+    "difficulty": "hard",
+    "topic": "rate and slope",
+    "text": "A student uses the first and last points of a curved enzyme activity graph to calculate one average slope for the entire experiment. Why can that be misleading?",
+    "choices": [
+      "Because slopes can only be calculated on bar graphs, not curves.",
+      "Because a curved graph means the y-axis has no units.",
+      "Because the reaction rate may change across different intervals, so one overall slope can hide faster and slower phases.",
+      "Because endpoint values are never allowed in biology."
+    ],
+    "correct": 2,
+    "explain": "An average slope across a curved graph can hide important interval-specific changes because the rate is not constant throughout the experiment. In AP Biology, slope-based reasoning is strongest when the interval is specified.",
+    "choice_explanations": [
+      "Incorrect. Slopes can be calculated on a curve over a selected interval.",
+      "Incorrect. Curvature does not remove axis units.",
+      "Correct. A single overall slope can miss how the rate speeds up or slows down across separate intervals.",
+      "Incorrect. Endpoints are allowed; the problem is averaging across changing rates."
+    ]
+  },
+  {
+    "id": "stats-slope-17",
+    "difficulty": "hard",
+    "topic": "rate and slope",
+    "text": "On a graph of transpiration over time, the line is steep from 0 to 10 minutes and nearly flat from 10 to 20 minutes. What is the best comparison?",
+    "choices": [
+      "Transpiration rate was higher during the first 10 minutes than during the second 10 minutes.",
+      "The plant had the same total transpiration in both intervals.",
+      "Transpiration stopped completely after 10 minutes.",
+      "The graph cannot be interpreted without the y-intercept."
+    ],
+    "correct": 0,
+    "explain": "Steeper slope means a faster rate of change, so the first interval represents faster transpiration. A nearly flat slope indicates slower change, but not automatically zero change.",
+    "choice_explanations": [
+      "Correct. The steeper interval represents a higher transpiration rate.",
+      "Incorrect. Rate and total amount are not the same thing.",
+      "Incorrect. Nearly flat is slower, not necessarily zero.",
+      "Incorrect. The y-intercept is not needed for this interval comparison."
+    ]
+  },
+  {
+    "id": "stats-slope-18",
+    "difficulty": "hard",
+    "topic": "rate and slope",
+    "text": "A graph shows bacterial density rising from 2 to 10 units over 4 hours, then from 10 to 12 units over the next 4 hours. Which statement is best supported?",
+    "choices": [
+      "The second interval added more bacteria because it started at a higher density.",
+      "Growth rate was identical in both intervals because both intervals lasted 4 hours.",
+      "The graph proves the population entered a death phase in the second interval.",
+      "Growth rate was higher during the first interval because the slope was steeper."
+    ],
+    "correct": 3,
+    "explain": "The first interval has slope (10\u22122)/4 = 2 units per hour, whereas the second has slope (12\u221210)/4 = 0.5 units per hour. Since the first interval's slope is greater, growth was faster there.",
+    "choice_explanations": [
+      "Incorrect. Starting value does not determine rate; slope does.",
+      "Incorrect. Equal time intervals can still have very different slopes.",
+      "Incorrect. Slower growth is not the same as a death phase.",
+      "Correct. Comparing interval slopes shows the rate was higher in the first interval."
+    ]
+  },
+  {
+    "id": "stats-slope-19",
+    "difficulty": "hard",
+    "topic": "rate and slope",
+    "text": "Two students calculate slopes from the same graph. One uses points 2 and 6 minutes; the other uses 6 and 10 minutes. Their answers differ. What is the best explanation?",
+    "choices": [
+      "The rate changed across the graph, so different intervals can have different slopes.",
+      "One of the students must have reversed the axes.",
+      "Slope is only valid if the graph is perfectly horizontal.",
+      "Different intervals should always have identical slopes."
+    ],
+    "correct": 0,
+    "explain": "If the graph is not perfectly linear, slopes from different intervals can legitimately differ because the system's rate changes over time. Different answers are not automatically errors.",
+    "choice_explanations": [
+      "Correct. Different intervals on a changing graph can have different rates and therefore different slopes.",
+      "Incorrect. Different answers do not automatically mean someone reversed the axes.",
+      "Incorrect. Slope is valid on slanted or curved graphs when an interval is specified.",
+      "Incorrect. Only a perfectly linear graph would keep the same slope everywhere."
+    ]
+  },
+  {
+    "id": "stats-slope-20",
+    "difficulty": "hard",
+    "topic": "rate and slope",
+    "text": "A graph of dissolved oxygen versus light intensity becomes less steep at high light levels. What does the flattening most directly suggest?",
+    "choices": [
+      "Increasing light still affects oxygen production, but the rate of increase is slowing.",
+      "The independent variable switched from light to time.",
+      "The line can no longer have a slope.",
+      "Oxygen production has become negative."
+    ],
+    "correct": 0,
+    "explain": "A flatter but still positive graph means oxygen production is still increasing, but each additional unit of light causes a smaller increase than before. The slope shrinks, so the rate of increase slows.",
+    "choice_explanations": [
+      "Correct. The process is still increasing, but the smaller slope means diminishing gains.",
+      "Incorrect. The independent variable remains light intensity.",
+      "Incorrect. Any nonvertical line segment still has a slope.",
+      "Incorrect. A smaller positive slope is not a negative slope."
+    ]
+  }
+]

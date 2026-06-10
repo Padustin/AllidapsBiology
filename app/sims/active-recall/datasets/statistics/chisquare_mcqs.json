@@ -1,0 +1,402 @@
+[
+  {
+    "id": "stats-chi-1",
+    "difficulty": "hard",
+    "topic": "chi-square",
+    "text": "In a monohybrid cross, the expected ratio is 3:1. In a sample of 160, the observed counts are 118 purple, 42 white. Which conclusion from a chi-square analysis is best supported?",
+    "choices": [
+      "The chi-square value would be relatively small, so the data are likely consistent with the expected ratio.",
+      "Chi-square cannot be used because the categories are biological traits rather than numerical measurements.",
+      "The p-value would have to equal 0.05 because an expected ratio was provided.",
+      "The null hypothesis must be rejected because the observed counts do not match the expected counts exactly."
+    ],
+    "correct": 0,
+    "explain": "Chi-square asks whether the deviations from expected counts are larger than you would expect by chance. Here the observed counts are very close to the expected counts of 120, 40, so each (O\u2212E)^2/E term stays small. That produces a small chi-square value and a relatively large p-value, so the null hypothesis would usually be retained.",
+    "choice_explanations": [
+      "Correct. Small deviations from the expected counts produce a small chi-square statistic and support the idea that chance alone could explain the difference.",
+      "Incorrect. Chi-square is specifically meant for categorical count data such as phenotypes, habitat choices, or sex categories.",
+      "Incorrect. A p-value is calculated from the size of the deviation and the degrees of freedom; it is not fixed just because an expected ratio exists.",
+      "Incorrect. Chi-square does not require an exact match; it tests whether the mismatch is bigger than random sampling would usually produce."
+    ]
+  },
+  {
+    "id": "stats-chi-2",
+    "difficulty": "hard",
+    "topic": "chi-square",
+    "text": "In a codominance cross, the expected ratio is 1:2:1. In a sample of 80, the observed counts are 18 red, 44 pink, 18 white. Which conclusion from a chi-square analysis is best supported?",
+    "choices": [
+      "The null hypothesis must be rejected because the observed counts do not match the expected counts exactly.",
+      "The chi-square value would be relatively small, so the data are likely consistent with the expected ratio.",
+      "Chi-square cannot be used because the categories are biological traits rather than numerical measurements.",
+      "The p-value would have to equal 0.05 because an expected ratio was provided."
+    ],
+    "correct": 1,
+    "explain": "Chi-square asks whether the deviations from expected counts are larger than you would expect by chance. Here the observed counts are very close to the expected counts of 20, 40, 20, so each (O\u2212E)^2/E term stays small. That produces a small chi-square value and a relatively large p-value, so the null hypothesis would usually be retained.",
+    "choice_explanations": [
+      "Incorrect. Chi-square does not require an exact match; it tests whether the mismatch is bigger than random sampling would usually produce.",
+      "Correct. Small deviations from the expected counts produce a small chi-square statistic and support the idea that chance alone could explain the difference.",
+      "Incorrect. Chi-square is specifically meant for categorical count data such as phenotypes, habitat choices, or sex categories.",
+      "Incorrect. A p-value is calculated from the size of the deviation and the degrees of freedom; it is not fixed just because an expected ratio exists."
+    ]
+  },
+  {
+    "id": "stats-chi-3",
+    "difficulty": "hard",
+    "topic": "chi-square",
+    "text": "In a sex-ratio survey, the expected ratio is 1:1. In a sample of 200, the observed counts are 103 female, 97 male. Which conclusion from a chi-square analysis is best supported?",
+    "choices": [
+      "The p-value would have to equal 0.05 because an expected ratio was provided.",
+      "The null hypothesis must be rejected because the observed counts do not match the expected counts exactly.",
+      "The chi-square value would be relatively small, so the data are likely consistent with the expected ratio.",
+      "Chi-square cannot be used because the categories are biological traits rather than numerical measurements."
+    ],
+    "correct": 2,
+    "explain": "Chi-square asks whether the deviations from expected counts are larger than you would expect by chance. Here the observed counts are very close to the expected counts of 100, 100, so each (O\u2212E)^2/E term stays small. That produces a small chi-square value and a relatively large p-value, so the null hypothesis would usually be retained.",
+    "choice_explanations": [
+      "Incorrect. A p-value is calculated from the size of the deviation and the degrees of freedom; it is not fixed just because an expected ratio exists.",
+      "Incorrect. Chi-square does not require an exact match; it tests whether the mismatch is bigger than random sampling would usually produce.",
+      "Correct. Small deviations from the expected counts produce a small chi-square statistic and support the idea that chance alone could explain the difference.",
+      "Incorrect. Chi-square is specifically meant for categorical count data such as phenotypes, habitat choices, or sex categories."
+    ]
+  },
+  {
+    "id": "stats-chi-4",
+    "difficulty": "hard",
+    "topic": "chi-square",
+    "text": "In a habitat-choice trial, the expected ratio is 1:1. In a sample of 60, the observed counts are 28 light side, 32 dark side. Which conclusion from a chi-square analysis is best supported?",
+    "choices": [
+      "The chi-square value would be relatively small, so the data are likely consistent with the expected ratio.",
+      "Chi-square cannot be used because the categories are biological traits rather than numerical measurements.",
+      "The null hypothesis must be rejected because the observed counts do not match the expected counts exactly.",
+      "The p-value would have to equal 0.05 because an expected ratio was provided."
+    ],
+    "correct": 0,
+    "explain": "Chi-square asks whether the deviations from expected counts are larger than you would expect by chance. Here the observed counts are very close to the expected counts of 30, 30, so each (O\u2212E)^2/E term stays small. That produces a small chi-square value and a relatively large p-value, so the null hypothesis would usually be retained.",
+    "choice_explanations": [
+      "Correct. Small deviations from the expected counts produce a small chi-square statistic and support the idea that chance alone could explain the difference.",
+      "Incorrect. Chi-square is specifically meant for categorical count data such as phenotypes, habitat choices, or sex categories.",
+      "Incorrect. Chi-square does not require an exact match; it tests whether the mismatch is bigger than random sampling would usually produce.",
+      "Incorrect. A p-value is calculated from the size of the deviation and the degrees of freedom; it is not fixed just because an expected ratio exists."
+    ]
+  },
+  {
+    "id": "stats-chi-5",
+    "difficulty": "hard",
+    "topic": "chi-square",
+    "text": "In a hatchling sex-ratio study, the expected ratio is 1:1. In a sample of 200, the observed counts are 140 female, 60 male. What is the best inference from a chi-square test?",
+    "choices": [
+      "The null hypothesis should be retained because the expected ratio was based on biology.",
+      "Chi-square cannot detect this difference because the categories are not all equally common.",
+      "The observed counts prove that the expected model is impossible in every future sample.",
+      "The chi-square value would be fairly large, so the null hypothesis would likely be rejected."
+    ],
+    "correct": 3,
+    "explain": "The observed counts are far from the expected counts of 100, 100, so the (O\u2212E)^2/E terms are large. A large chi-square statistic corresponds to a small p-value, meaning that chance alone is unlikely to explain the difference. In that case, the null hypothesis would usually be rejected.",
+    "choice_explanations": [
+      "Incorrect. Having a biological expectation does not guarantee that the data fit it; chi-square tests whether the data are close enough.",
+      "Incorrect. Chi-square works with unequal expected ratios such as 3:1 or 1:2:1 as long as expected counts are appropriate.",
+      "Incorrect. Rejecting a null hypothesis means the data are unlikely under that model, not that the model is logically impossible in all future samples.",
+      "Correct. Big deviations from expected counts make the chi-square statistic large and make random chance a weak explanation."
+    ]
+  },
+  {
+    "id": "stats-chi-6",
+    "difficulty": "hard",
+    "topic": "chi-square",
+    "text": "In a monohybrid cross, the expected ratio is 3:1. In a sample of 160, the observed counts are 90 purple, 70 white. What is the best inference from a chi-square test?",
+    "choices": [
+      "Chi-square cannot detect this difference because the categories are not all equally common.",
+      "The observed counts prove that the expected model is impossible in every future sample.",
+      "The null hypothesis should be retained because the expected ratio was based on biology.",
+      "The chi-square value would be fairly large, so the null hypothesis would likely be rejected."
+    ],
+    "correct": 3,
+    "explain": "The observed counts are far from the expected counts of 120, 40, so the (O\u2212E)^2/E terms are large. A large chi-square statistic corresponds to a small p-value, meaning that chance alone is unlikely to explain the difference. In that case, the null hypothesis would usually be rejected.",
+    "choice_explanations": [
+      "Incorrect. Chi-square works with unequal expected ratios such as 3:1 or 1:2:1 as long as expected counts are appropriate.",
+      "Incorrect. Rejecting a null hypothesis means the data are unlikely under that model, not that the model is logically impossible in all future samples.",
+      "Incorrect. Having a biological expectation does not guarantee that the data fit it; chi-square tests whether the data are close enough.",
+      "Correct. Big deviations from expected counts make the chi-square statistic large and make random chance a weak explanation."
+    ]
+  },
+  {
+    "id": "stats-chi-7",
+    "difficulty": "hard",
+    "topic": "chi-square",
+    "text": "In a habitat-choice trial, the expected ratio is 1:1. In a sample of 80, the observed counts are 62 moist chamber, 18 dry chamber. What is the best inference from a chi-square test?",
+    "choices": [
+      "The null hypothesis should be retained because the expected ratio was based on biology.",
+      "The chi-square value would be fairly large, so the null hypothesis would likely be rejected.",
+      "The observed counts prove that the expected model is impossible in every future sample.",
+      "Chi-square cannot detect this difference because the categories are not all equally common."
+    ],
+    "correct": 1,
+    "explain": "The observed counts are far from the expected counts of 40, 40, so the (O\u2212E)^2/E terms are large. A large chi-square statistic corresponds to a small p-value, meaning that chance alone is unlikely to explain the difference. In that case, the null hypothesis would usually be rejected.",
+    "choice_explanations": [
+      "Incorrect. Having a biological expectation does not guarantee that the data fit it; chi-square tests whether the data are close enough.",
+      "Correct. Big deviations from expected counts make the chi-square statistic large and make random chance a weak explanation.",
+      "Incorrect. Rejecting a null hypothesis means the data are unlikely under that model, not that the model is logically impossible in all future samples.",
+      "Incorrect. Chi-square works with unequal expected ratios such as 3:1 or 1:2:1 as long as expected counts are appropriate."
+    ]
+  },
+  {
+    "id": "stats-chi-8",
+    "difficulty": "hard",
+    "topic": "chi-square",
+    "text": "In a codominance cross, the expected ratio is 1:2:1. In a sample of 100, the observed counts are 10 red, 65 pink, 25 white. What is the best inference from a chi-square test?",
+    "choices": [
+      "The null hypothesis should be retained because the expected ratio was based on biology.",
+      "Chi-square cannot detect this difference because the categories are not all equally common.",
+      "The observed counts prove that the expected model is impossible in every future sample.",
+      "The chi-square value would be fairly large, so the null hypothesis would likely be rejected."
+    ],
+    "correct": 3,
+    "explain": "The observed counts are far from the expected counts of 25, 50, 25, so the (O\u2212E)^2/E terms are large. A large chi-square statistic corresponds to a small p-value, meaning that chance alone is unlikely to explain the difference. In that case, the null hypothesis would usually be rejected.",
+    "choice_explanations": [
+      "Incorrect. Having a biological expectation does not guarantee that the data fit it; chi-square tests whether the data are close enough.",
+      "Incorrect. Chi-square works with unequal expected ratios such as 3:1 or 1:2:1 as long as expected counts are appropriate.",
+      "Incorrect. Rejecting a null hypothesis means the data are unlikely under that model, not that the model is logically impossible in all future samples.",
+      "Correct. Big deviations from expected counts make the chi-square statistic large and make random chance a weak explanation."
+    ]
+  },
+  {
+    "id": "stats-chi-9",
+    "difficulty": "hard",
+    "topic": "chi-square",
+    "text": "A chi-square goodness-of-fit test is being used for 2 phenotypic categories. Which degrees of freedom should be used when comparing the calculated chi-square value to a critical-value table?",
+    "choices": [
+      "2",
+      "1",
+      "3",
+      "0"
+    ],
+    "correct": 1,
+    "explain": "For AP Biology chi-square problems, degrees of freedom equal the number of categories minus 1. With 2 categories, once 1 categories are known, the last one is fixed by the total, so there are only 1 independent categories.",
+    "choice_explanations": [
+      "Incorrect. This choice confuses the number of categories with the degrees of freedom; you still subtract 1.",
+      "Correct. For a chi-square goodness-of-fit test in AP Biology, df = number of categories \u2212 1, so df = 2 \u2212 1 = 1.",
+      "Incorrect. Degrees of freedom are determined by the number of categories, not by adding an extra category.",
+      "Incorrect. This subtracts too much and underestimates the number of independent categories."
+    ]
+  },
+  {
+    "id": "stats-chi-10",
+    "difficulty": "hard",
+    "topic": "chi-square",
+    "text": "A chi-square goodness-of-fit test is being used for 3 phenotypic categories. Which degrees of freedom should be used when comparing the calculated chi-square value to a critical-value table?",
+    "choices": [
+      "4",
+      "1",
+      "3",
+      "2"
+    ],
+    "correct": 3,
+    "explain": "For AP Biology chi-square problems, degrees of freedom equal the number of categories minus 1. With 3 categories, once 2 categories are known, the last one is fixed by the total, so there are only 2 independent categories.",
+    "choice_explanations": [
+      "Incorrect. Degrees of freedom are determined by the number of categories, not by adding an extra category.",
+      "Incorrect. This subtracts too much and underestimates the number of independent categories.",
+      "Incorrect. This choice confuses the number of categories with the degrees of freedom; you still subtract 1.",
+      "Correct. For a chi-square goodness-of-fit test in AP Biology, df = number of categories \u2212 1, so df = 3 \u2212 1 = 2."
+    ]
+  },
+  {
+    "id": "stats-chi-11",
+    "difficulty": "hard",
+    "topic": "chi-square",
+    "text": "A chi-square goodness-of-fit test is being used for 4 phenotypic categories. Which degrees of freedom should be used when comparing the calculated chi-square value to a critical-value table?",
+    "choices": [
+      "4",
+      "5",
+      "2",
+      "3"
+    ],
+    "correct": 3,
+    "explain": "For AP Biology chi-square problems, degrees of freedom equal the number of categories minus 1. With 4 categories, once 3 categories are known, the last one is fixed by the total, so there are only 3 independent categories.",
+    "choice_explanations": [
+      "Incorrect. This choice confuses the number of categories with the degrees of freedom; you still subtract 1.",
+      "Incorrect. Degrees of freedom are determined by the number of categories, not by adding an extra category.",
+      "Incorrect. This subtracts too much and underestimates the number of independent categories.",
+      "Correct. For a chi-square goodness-of-fit test in AP Biology, df = number of categories \u2212 1, so df = 4 \u2212 1 = 3."
+    ]
+  },
+  {
+    "id": "stats-chi-12",
+    "difficulty": "hard",
+    "topic": "chi-square",
+    "text": "A chi-square goodness-of-fit test is being used for 5 phenotypic categories. Which degrees of freedom should be used when comparing the calculated chi-square value to a critical-value table?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 1,
+    "explain": "For AP Biology chi-square problems, degrees of freedom equal the number of categories minus 1. With 5 categories, once 4 categories are known, the last one is fixed by the total, so there are only 4 independent categories.",
+    "choice_explanations": [
+      "Incorrect. This subtracts too much and underestimates the number of independent categories.",
+      "Correct. For a chi-square goodness-of-fit test in AP Biology, df = number of categories \u2212 1, so df = 5 \u2212 1 = 4.",
+      "Incorrect. This choice confuses the number of categories with the degrees of freedom; you still subtract 1.",
+      "Incorrect. Degrees of freedom are determined by the number of categories, not by adding an extra category."
+    ]
+  },
+  {
+    "id": "stats-chi-13",
+    "difficulty": "hard",
+    "topic": "chi-square",
+    "text": "A chi-square test gives \u03c7\u00b2 = 1.2 with df = 2 at \u03b1 = 0.05. The critical value is 5.991. Which interpretation is best?",
+    "choices": [
+      "Reject the null hypothesis because any chi-square value above 1 is significant.",
+      "Fail to reject the null hypothesis because the calculated chi-square does not exceed the critical value.",
+      "Reject the null hypothesis because the critical value is larger than the calculated value.",
+      "Fail to reject the null hypothesis because degrees of freedom determine significance by themselves."
+    ],
+    "correct": 1,
+    "explain": "Because 1.2 does not exceed the critical value of 5.991, the deviation between observed and expected counts is not large enough to be considered statistically significant at \u03b1 = 0.05. The data remain consistent with chance, so the null hypothesis is retained.",
+    "choice_explanations": [
+      "Incorrect. Whether a chi-square value is significant depends on df and the critical value, not on whether it is simply above 1.",
+      "Correct. If the calculated chi-square is not larger than the critical value, the result is not statistically significant at that \u03b1 level.",
+      "Incorrect. The logic is reversed; you reject only when the calculated value is larger than the critical value.",
+      "Incorrect. Degrees of freedom matter for choosing the critical value, but they do not determine significance without the calculated statistic."
+    ]
+  },
+  {
+    "id": "stats-chi-14",
+    "difficulty": "hard",
+    "topic": "chi-square",
+    "text": "A chi-square test gives \u03c7\u00b2 = 7.8 with df = 3 at \u03b1 = 0.05. The critical value is 7.815. Which interpretation is best?",
+    "choices": [
+      "Fail to reject the null hypothesis because degrees of freedom determine significance by themselves.",
+      "Fail to reject the null hypothesis because the calculated chi-square does not exceed the critical value.",
+      "Reject the null hypothesis because the critical value is larger than the calculated value.",
+      "Reject the null hypothesis because any chi-square value above 1 is significant."
+    ],
+    "correct": 1,
+    "explain": "Because 7.8 does not exceed the critical value of 7.815, the deviation between observed and expected counts is not large enough to be considered statistically significant at \u03b1 = 0.05. The data remain consistent with chance, so the null hypothesis is retained.",
+    "choice_explanations": [
+      "Incorrect. Degrees of freedom matter for choosing the critical value, but they do not determine significance without the calculated statistic.",
+      "Correct. If the calculated chi-square is not larger than the critical value, the result is not statistically significant at that \u03b1 level.",
+      "Incorrect. The logic is reversed; you reject only when the calculated value is larger than the critical value.",
+      "Incorrect. Whether a chi-square value is significant depends on df and the critical value, not on whether it is simply above 1."
+    ]
+  },
+  {
+    "id": "stats-chi-15",
+    "difficulty": "hard",
+    "topic": "chi-square",
+    "text": "A chi-square test gives \u03c7\u00b2 = 8.2 with df = 3 at \u03b1 = 0.05. The critical value is 7.815. Which interpretation is best?",
+    "choices": [
+      "Fail to reject the null hypothesis because chi-square tests never allow rejection at \u03b1 = 0.05.",
+      "Fail to reject the null hypothesis because any chi-square value can happen by chance.",
+      "Reject the null hypothesis because the calculated chi-square exceeds the critical value.",
+      "Reject the null hypothesis because degrees of freedom are greater than 1."
+    ],
+    "correct": 2,
+    "explain": "Because 8.2 is greater than the critical value of 7.815, the observed counts are farther from expectation than random sampling alone would usually produce at \u03b1 = 0.05. That means the p-value is below 0.05 and the null hypothesis should be rejected.",
+    "choice_explanations": [
+      "Incorrect. Chi-square tests absolutely can lead to rejection at \u03b1 = 0.05 when the statistic is large enough.",
+      "Incorrect. The whole point of the test is to decide whether the observed deviation is too large to attribute to chance alone.",
+      "Correct. In chi-square testing, you reject the null hypothesis when the calculated value is greater than the critical value for the chosen df and \u03b1.",
+      "Incorrect. Degrees of freedom do not cause rejection by themselves; the comparison between calculated and critical values does."
+    ]
+  },
+  {
+    "id": "stats-chi-16",
+    "difficulty": "hard",
+    "topic": "chi-square",
+    "text": "A chi-square test gives \u03c7\u00b2 = 4.7 with df = 1 at \u03b1 = 0.05. The critical value is 3.841. Which interpretation is best?",
+    "choices": [
+      "Fail to reject the null hypothesis because chi-square tests never allow rejection at \u03b1 = 0.05.",
+      "Fail to reject the null hypothesis because any chi-square value can happen by chance.",
+      "Reject the null hypothesis because degrees of freedom are greater than 1.",
+      "Reject the null hypothesis because the calculated chi-square exceeds the critical value."
+    ],
+    "correct": 3,
+    "explain": "Because 4.7 is greater than the critical value of 3.841, the observed counts are farther from expectation than random sampling alone would usually produce at \u03b1 = 0.05. That means the p-value is below 0.05 and the null hypothesis should be rejected.",
+    "choice_explanations": [
+      "Incorrect. Chi-square tests absolutely can lead to rejection at \u03b1 = 0.05 when the statistic is large enough.",
+      "Incorrect. The whole point of the test is to decide whether the observed deviation is too large to attribute to chance alone.",
+      "Incorrect. Degrees of freedom do not cause rejection by themselves; the comparison between calculated and critical values does.",
+      "Correct. In chi-square testing, you reject the null hypothesis when the calculated value is greater than the critical value for the chosen df and \u03b1."
+    ]
+  },
+  {
+    "id": "stats-chi-17",
+    "difficulty": "hard",
+    "topic": "chi-square",
+    "text": "A chi-square test is being performed for a 1:2:1 ratio in 80 offspring. The observed counts are 18 red, 44 pink, and 18 white. The expected counts are 20 red, 40 pink, and 20 white. Which category contributes the most to the total chi-square value?",
+    "choices": [
+      "Pink contributes the most because its (O\u2212E)^2/E term is largest.",
+      "Red contributes the most because any category below expectation always dominates chi-square.",
+      "White contributes the most because it is equally far from expectation as pink.",
+      "Red and white together are the only contributors because the middle category is closest to the expected ratio."
+    ],
+    "correct": 0,
+    "explain": "Pink differs from expectation by 4 while red and white each differ by only 2. After dividing by the expected counts, pink still has the largest (O\u2212E)^2/E value, so it contributes the most to the total chi-square.",
+    "choice_explanations": [
+      "Correct. The biggest contributor is the category with the largest (O\u2212E)^2/E term, not just the biggest raw count.",
+      "Incorrect. Raw count alone does not determine chi-square contribution; the question is how large the deviation is relative to the expected count.",
+      "Incorrect. This is a tempting shortcut, but chi-square contributions depend on the actual calculation, not on a blanket rule about low or middle counts.",
+      "Incorrect. Expected counts are central to the formula, so ignoring them leads to the wrong interpretation."
+    ]
+  },
+  {
+    "id": "stats-chi-18",
+    "difficulty": "hard",
+    "topic": "chi-square",
+    "text": "A chi-square test is being performed for a 3:1 ratio in 160 offspring. The observed counts are 100 purple and 60 white. The expected counts are 120 purple and 40 white. Which category contributes the most to the total chi-square value?",
+    "choices": [
+      "White contributes the most because the same absolute deviation is divided by a smaller expected count.",
+      "Neither category contributes more because chi-square ignores expected counts.",
+      "Both categories contribute equally because the deviations are both 20.",
+      "Purple contributes the most because it has the larger observed count."
+    ],
+    "correct": 0,
+    "explain": "Both categories deviate by 20, but white has the smaller expected count. Since chi-square uses (O\u2212E)^2/E, dividing by the smaller expected value makes the white category contribute more than the purple category.",
+    "choice_explanations": [
+      "Correct. The biggest contributor is the category with the largest (O\u2212E)^2/E term, not just the biggest raw count.",
+      "Incorrect. Expected counts are central to the formula, so ignoring them leads to the wrong interpretation.",
+      "Incorrect. This is a tempting shortcut, but chi-square contributions depend on the actual calculation, not on a blanket rule about low or middle counts.",
+      "Incorrect. Raw count alone does not determine chi-square contribution; the question is how large the deviation is relative to the expected count."
+    ]
+  },
+  {
+    "id": "stats-chi-19",
+    "difficulty": "hard",
+    "topic": "chi-square",
+    "text": "A chi-square test is being performed for a 9:3:3:1 ratio in 160 offspring. The observed counts are 85, 30, 25, and 20. The expected counts are 90, 30, 30, and 10. Which category contributes the most to the total chi-square value?",
+    "choices": [
+      "The second category contributes the most because middle categories always dominate a 9:3:3:1 cross.",
+      "The first category contributes the most because its observed count is the highest.",
+      "The fourth category contributes the most because a deviation of 10 is especially large relative to an expected count of 10.",
+      "The third category contributes the most because any nonzero deviation contributes more than a perfect match in the fourth category."
+    ],
+    "correct": 2,
+    "explain": "The fourth category differs from expectation by 10 even though its expected count is only 10, so its (O\u2212E)^2/E term is very large. That is why a small category with a big relative deviation can dominate the total chi-square.",
+    "choice_explanations": [
+      "Incorrect. This is a tempting shortcut, but chi-square contributions depend on the actual calculation, not on a blanket rule about low or middle counts.",
+      "Incorrect. Raw count alone does not determine chi-square contribution; the question is how large the deviation is relative to the expected count.",
+      "Correct. The biggest contributor is the category with the largest (O\u2212E)^2/E term, not just the biggest raw count.",
+      "Incorrect. Expected counts are central to the formula, so ignoring them leads to the wrong interpretation."
+    ]
+  },
+  {
+    "id": "stats-chi-20",
+    "difficulty": "hard",
+    "topic": "chi-square",
+    "text": "A chi-square test is being performed for a 1:1 habitat-choice trial in 50 pill bugs. The observed counts are 35 in the moist chamber and 15 in the dry chamber, while the expected counts are 25 and 25. Which statement is correct about the contributions to chi-square?",
+    "choices": [
+      "The two categories contribute equally because their deviations from expectation are equal in magnitude and their expected counts are the same.",
+      "Neither category contributes because chi-square only works with three or more categories.",
+      "The moist chamber contributes more because it has the larger observed count.",
+      "The dry chamber contributes more because lower counts always contribute more to chi-square."
+    ],
+    "correct": 0,
+    "explain": "In a 1:1 test, if one category is 10 above expectation, the other must be 10 below expectation. Because both categories have the same expected count of 25, their (O\u2212E)^2/E values are identical, so they contribute equally.",
+    "choice_explanations": [
+      "Correct. The biggest contributor is the category with the largest (O\u2212E)^2/E term, not just the biggest raw count.",
+      "Incorrect. Expected counts are central to the formula, so ignoring them leads to the wrong interpretation.",
+      "Incorrect. Raw count alone does not determine chi-square contribution; the question is how large the deviation is relative to the expected count.",
+      "Incorrect. This is a tempting shortcut, but chi-square contributions depend on the actual calculation, not on a blanket rule about low or middle counts."
+    ]
+  }
+]

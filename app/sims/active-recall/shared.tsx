@@ -9,7 +9,33 @@ export const UNITS = [
   "Unit 8. Ecology",
 ];
 
-export const DIFFICULTY_ORDER = ["easy", "hard", "analysis"] as const;
+export const STATISTICS_UNIT_OPTIONS = [
+  "Hardy-Weinberg",
+  "Water potential",
+  "Surface area : volume",
+  "Rate and slope",
+  "Chi-square",
+  "P-value",
+  "95% confidence interval",
+  "Standard deviation",
+];
+
+export const STATISTICS_TOPIC_TO_DATASET_FILE = {
+  "hardy-weinberg": "hardy_weinberg_mcqs.json",
+  "water potential": "water_potential_mcqs.json",
+  "surface area : volume": "surface_area_volume_mcqs.json",
+  "rate and slope": "rate_and_slope_mcqs.json",
+  "chi-square": "chisquare_mcqs.json",
+  "p-value": "pvalue_mcqs.json",
+  "95% confidence interval": "95_confidence_interval_mcqs.json",
+  "standard deviation": "standard_deviation_mcqs.json",
+} as const;
+
+export function normalizeStatisticsTopic(value: string | null | undefined) {
+  return String(value || "").trim().toLowerCase();
+}
+
+export const DIFFICULTY_ORDER = ["easy", "hard", "analysis", "statistics"] as const;
 
 export const DIFFICULTY_META = {
   easy: {
@@ -27,13 +53,23 @@ export const DIFFICULTY_META = {
     description: "Graphs, setups, and data interpretation",
     tone: "teal",
   },
+  statistics: {
+    label: "Statistics",
+    description: "Quantitative AP Biology MCQs across Hardy-Weinberg, chi-square, p-values, confidence intervals, and more",
+    tone: "rose",
+  },
 } as const;
 
 export const DIFFICULTY_LABELS: Record<string, string> = {
   easy: DIFFICULTY_META.easy.label,
   hard: DIFFICULTY_META.hard.label,
   analysis: DIFFICULTY_META.analysis.label,
+  statistics: DIFFICULTY_META.statistics.label,
 };
+
+export function isPlaceholderDifficulty(value: string) {
+  return value === "statistics";
+}
 
 export const DIFFICULTY_OPTIONS = DIFFICULTY_ORDER.map((value) => ({
   value,
@@ -58,7 +94,7 @@ export function getDifficultyTone(value: string) {
 
 export const FRQ_VARIANT_META = {
   ap: {
-    label: "FRQ",
+    label: "AP-Style",
     description: "Free-response practice with structured prompts and scoring notes",
     tone: "blue",
   },

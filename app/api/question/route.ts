@@ -1,8 +1,17 @@
 import { NextResponse } from 'next/server'
 import { areQuestionsTooSimilar, getQuestionTopicKey } from '../../sims/active-recall/question-similarity';
+import { STATISTICS_TOPIC_TO_DATASET_FILE, normalizeStatisticsTopic } from '../../sims/active-recall/shared';
 
 function isQuestionDatasetFile(fileName: string) {
   return /^unit\d+\.json$/i.test(fileName);
+}
+
+function readQuestionArray(fs: any, filePath: string) {
+  const raw = fs.readFileSync(filePath, 'utf8');
+  const parsed = JSON.parse(raw);
+  return Array.isArray(parsed)
+    ? parsed
+    : (parsed && Array.isArray(parsed.questions) ? parsed.questions : []);
 }
 
 export async function POST(req: Request) {
@@ -15,36 +24,48 @@ export async function POST(req: Request) {
     const path = await Promise.resolve().then(() => require('path'));
     const datasetsDir = path.join(process.cwd(), 'app', 'sims', 'active-recall', 'datasets');
     if (fs.existsSync(datasetsDir)) {
-      const files = fs.readdirSync(datasetsDir).filter((f: string) => isQuestionDatasetFile(f));
       const allQuestions: any[] = [];
 
-      // If a specific dataset file was requested, read only that file when it exists
-      if (body.dataset) {
-        const df = String(body.dataset);
-        const matchFile = files.find((fn: string) => fn === df || fn === `${df}.json`);
-        if (matchFile) {
+      if (difficulty === 'statistics') {
+        const statsDir = path.join(datasetsDir, 'statistics');
+        const requestedTopic = normalizeStatisticsTopic(typeof unit === 'string' ? unit : null);
+        const requestedFiles = requestedTopic
+          ? [STATISTICS_TOPIC_TO_DATASET_FILE[requestedTopic as keyof typeof STATISTICS_TOPIC_TO_DATASET_FILE]].filter(Boolean)
+          : Object.values(STATISTICS_TOPIC_TO_DATASET_FILE);
+
+        for (const fileName of new Set(requestedFiles)) {
           try {
-            const raw = fs.readFileSync(path.join(datasetsDir, matchFile), 'utf8');
-            const parsed = JSON.parse(raw);
-            const arr = Array.isArray(parsed)
-              ? parsed
-              : (parsed && Array.isArray(parsed.questions) ? parsed.questions : []);
-            if (arr.length > 0) allQuestions.push(...arr);
+            const arr = readQuestionArray(fs, path.join(statsDir, fileName));
+            if (arr.length > 0) {
+              allQuestions.push(...arr.map((question: any) => ({ ...question, difficulty: 'statistics' })));
+            }
           } catch (e) {
-            // ignore
+            // ignore bad files
           }
         }
       } else {
-        for (const f of files) {
-          try {
-            const raw = fs.readFileSync(path.join(datasetsDir, f), 'utf8');
-            const parsed = JSON.parse(raw);
-            const arr = Array.isArray(parsed)
-              ? parsed
-              : (parsed && Array.isArray(parsed.questions) ? parsed.questions : []);
-            if (arr.length > 0) allQuestions.push(...arr);
-          } catch (e) {
-            // ignore bad files
+        const files = fs.readdirSync(datasetsDir).filter((f: string) => isQuestionDatasetFile(f));
+
+        // If a specific dataset file was requested, read only that file when it exists
+        if (body.dataset) {
+          const df = String(body.dataset);
+          const matchFile = files.find((fn: string) => fn === df || fn === `${df}.json`);
+          if (matchFile) {
+            try {
+              const arr = readQuestionArray(fs, path.join(datasetsDir, matchFile));
+              if (arr.length > 0) allQuestions.push(...arr);
+            } catch (e) {
+              // ignore
+            }
+          }
+        } else {
+          for (const f of files) {
+            try {
+              const arr = readQuestionArray(fs, path.join(datasetsDir, f));
+              if (arr.length > 0) allQuestions.push(...arr);
+            } catch (e) {
+              // ignore bad files
+            }
           }
         }
       }
@@ -73,11 +94,16 @@ export async function POST(req: Request) {
       }
 
       // If unit specified (e.g., "Unit 1. Chemistry of Life"), filter by id prefix convention (u<unit>-...)
-      if (unit && typeof unit === 'string' && /Unit\s*\d+/i.test(unit)) {
+      if (difficulty !== 'statistics' && unit && typeof unit === 'string' && /Unit\s*\d+/i.test(unit)) {
         const m = unit.match(/Unit\s*(\d+)/i);
         if (m) {
           const unitNum = Number(m[1]);
           candidates = candidates.filter((q: any) => typeof q.id === 'string' && q.id.startsWith(`u${unitNum}-`));
+        }
+      } else if (difficulty === 'statistics' && unit && typeof unit === 'string') {
+        const topicKey = normalizeStatisticsTopic(unit);
+        if (topicKey) {
+          candidates = candidates.filter((q: any) => normalizeStatisticsTopic(q?.topic) === topicKey);
         }
       }
 
@@ -149,16 +175,17 @@ export async function POST(req: Request) {
 
         // In AP mode, stratify by unit so every unit has equal chance regardless of pool size
         if (body.mode === 'ap') {
-          const byUnit: Record<string, any[]> = {};
+          const groupedCandidates: Record<string, any[]> = {};
           for (const q of candidates) {
-            const m = typeof q.id === 'string' ? q.id.match(/^u(\d+)-/i) : null;
-            const unitKey = m ? m[1] : 'unknown';
-            if (!byUnit[unitKey]) byUnit[unitKey] = [];
-            byUnit[unitKey].push(q);
+            const groupKey = difficulty === 'statistics'
+              ? (normalizeStatisticsTopic(q?.topic) || 'statistics')
+              : ((typeof q.id === 'string' ? q.id.match(/^u(\d+)-/i)?.[1] : null) || 'unknown');
+            if (!groupedCandidates[groupKey]) groupedCandidates[groupKey] = [];
+            groupedCandidates[groupKey].push(q);
           }
-          const units = Object.keys(byUnit);
-          const pickedUnit = units[Math.floor(Math.random() * units.length)];
-          const pool = byUnit[pickedUnit];
+          const groups = Object.keys(groupedCandidates);
+          const pickedGroup = groups[Math.floor(Math.random() * groups.length)];
+          const pool = groupedCandidates[pickedGroup];
           choice = pool[Math.floor(Math.random() * pool.length)];
         } else {
           choice = candidates[Math.floor(Math.random() * candidates.length)];
