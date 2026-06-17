@@ -32,6 +32,7 @@ const START_POINTS = [
   {
     eyebrow: "Best first move",
     title: "Unit MCQ review",
+    description: "Practice unit-focused MCQs to strengthen one chapter.",
     href: "/sims/mcq",
     tone: "accent" as const,
     preview: (
@@ -61,6 +62,7 @@ const START_POINTS = [
   {
     eyebrow: "Mixed course review",
     title: "All-unit MCQ review",
+    description: "Mixed-unit practice with exam-style multiple-choice questions.",
     href: "/sims/mcq?unit=all",
     tone: "accent" as const,
     preview: (
@@ -90,6 +92,7 @@ const START_POINTS = [
   {
     eyebrow: "Written reasoning",
     title: "FRQ practice",
+    description: "Free-response practice with image stimuli and structured prompts.",
     href: "/sims/frq",
     tone: "accent" as const,
     preview: (
@@ -127,6 +130,7 @@ const START_POINTS = [
   {
     eyebrow: "Quantitative review",
     title: "Math and statistics center",
+    description: "Work on chi-square, Hardy-Weinberg, and other quantitative tools.",
     href: "/sims/chi-square",
     tone: "accent" as const,
     previewImageSrc: "/images/unit7_hardy_weinberg_bars.png",
