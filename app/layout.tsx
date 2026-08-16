@@ -6,7 +6,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { AppShell } from './components/ui/app-shell';
 
 export const metadata: Metadata = {
-  title: 'Allidaps Biology',
+  title: 'Padilla Biology',
   description: 'AP Biology practice with targeted review, FRQs, statistics tools, and visual study support.',
   icons: {
     icon: '/icon.png',
