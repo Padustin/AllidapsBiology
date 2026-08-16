@@ -70,7 +70,7 @@ export function AppShell({ children }: { children: ReactNode }) {
         <div className="mx-auto flex w-full max-w-[1400px] items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
           <div className="min-w-0">
             <Link href="/" className="block">
-              <div className="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500">Allidaps Biology</div>
+              <div className="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500">Padilla Biology</div>
               <div className="mt-1 text-lg font-semibold tracking-tight text-slate-950">AP Biology study platform</div>
             </Link>
           </div>
