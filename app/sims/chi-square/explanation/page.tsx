@@ -25,10 +25,10 @@ function Fraction({ numerator, denominator, borderColor, compact = false }: { nu
 }
 
 export default function Page() {
-  const border = "#e2e8f0";
-  const cardBg = "#f8fafc";
-  const text = "#334155";
-  const heading = "#0f172a";
+  const border = "var(--border)";
+  const cardBg = "var(--surface-muted)";
+  const text = "var(--ink-muted)";
+  const heading = "var(--ink)";
 
   // Simple coin toss example (more intuitive than genetic ratios)
   const O = [60, 40]; // Heads, Tails
@@ -41,22 +41,22 @@ export default function Page() {
 
   return (
     <div className="study-screen" style={{ display: "grid", gap: 16, color: text }}>
-      <div style={{ border: `1px solid ${border}`, borderRadius: 18, padding: 14, background: cardBg }}>
-        <h1 style={{ margin: 0, fontSize: 26, fontWeight: 900, color: heading }} className="text-[clamp(1.65rem,4.4vw,2rem)]">
-          Chi-Square Concept Guide
+      <div style={{ border: `1px solid ${border}`, borderRadius: 12, padding: 14, background: cardBg }}>
+        <h1 style={{ margin: 0, fontSize: 24, fontWeight: 600, color: heading, fontFamily: "var(--font-serif)" }} className="text-[clamp(1.5rem,3.4vw,1.75rem)]">
+          Chi-square concept guide
         </h1>
         <p style={{ marginTop: 10, lineHeight: 1.45 }}>
-          Use this as the chi-square-specific companion to the AP Bio Math & Stats Center. Chi-square (χ²) tests whether observed counts differ from expected counts more than you'd expect by chance.
+          Use this as the chi-square-specific companion to the AP Bio Math &amp; Stats Center. Chi-square (χ²) tests whether observed counts differ from expected counts more than you'd expect by chance.
         </p>
         <Link
           href="/sims/chi-square"
-          style={{ display: "inline-flex", marginTop: 10, color: heading, fontWeight: 800, textDecoration: "none" }}
+          style={{ display: "inline-flex", marginTop: 10, color: "var(--brand-dark)", fontWeight: 600, textDecoration: "none" }}
         >
-          Back to the quantitative center
+          ← Back to the quantitative center
         </Link>
       </div>
 
-      <div style={{ border: `1px solid ${border}`, borderRadius: 18, padding: 14, background: cardBg }}>
+      <div style={{ border: `1px solid ${border}`, borderRadius: 12, padding: 14, background: cardBg }}>
         <h2 style={{ marginTop: 0, color: heading }}>Important definitions to understand</h2>
         <ul style={{ lineHeight: 1.55 }}>
           <li><b>Null hypothesis (H₀):</b> a hypothesis that states that the variables (or things being changed in an experiment) will not result in a real difference; deviations are due to random chance.</li>
@@ -72,14 +72,14 @@ export default function Page() {
         </ul>
       </div>
 
-      <div style={{ border: `1px solid ${border}`, borderRadius: 18, padding: 14, background: cardBg }}>
+      <div style={{ border: `1px solid ${border}`, borderRadius: 12, padding: 14, background: cardBg }}>
         <h2 style={{ marginTop: 0, color: heading }}>The formula</h2>
         <div
           style={{
             border: `1px solid ${border}`,
-            borderRadius: 14,
+            borderRadius: 10,
             padding: 12,
-            background: "white",
+            background: "var(--surface)",
             fontFamily: MATH_FONT,
             fontSize: 16,
             display: "flex",
@@ -94,29 +94,29 @@ export default function Page() {
         <p style={{ marginTop: 10 }}>Compute each category's contribution using the fraction above, then add them.</p>
       </div>
 
-      <div style={{ border: `1px solid ${border}`, borderRadius: 18, padding: 14, background: cardBg }}>
+      <div style={{ border: `1px solid ${border}`, borderRadius: 12, padding: 14, background: cardBg }}>
         <h2 style={{ marginTop: 0, color: heading }}>Simple example — coin toss</h2>
         <p>Suppose you expect a fair coin (50/50) but observe 60 heads and 40 tails (N = 100).</p>
 
         <div className="grid gap-3 md:grid-cols-2" style={{ display: "grid", gap: 12 }}>
-          <div style={{ border: `1px solid ${border}`, borderRadius: 14, padding: 12, background: "white" }}>
-            <div style={{ fontWeight: 900, color: heading, marginBottom: 6 }}>Observed</div>
+          <div style={{ border: `1px solid ${border}`, borderRadius: 10, padding: 12, background: "var(--surface)" }}>
+            <div style={{ fontWeight: 700, color: heading, marginBottom: 6 }}>Observed</div>
             {O.map((v, i) => (
               <div key={i}>{labels[i]}: <b>{v}</b></div>
             ))}
             <div style={{ marginTop: 6 }}>Total N: <b>{total}</b></div>
           </div>
 
-          <div style={{ border: `1px solid ${border}`, borderRadius: 14, padding: 12, background: "white" }}>
-            <div style={{ fontWeight: 900, color: heading, marginBottom: 6 }}>Expected (50:50)</div>
+          <div style={{ border: `1px solid ${border}`, borderRadius: 10, padding: 12, background: "var(--surface)" }}>
+            <div style={{ fontWeight: 700, color: heading, marginBottom: 6 }}>Expected (50:50)</div>
             {E.map((v, i) => (
               <div key={i}>{labels[i]}: <b>{v.toFixed(0)}</b></div>
             ))}
           </div>
         </div>
 
-        <div style={{ marginTop: 12, border: `1px solid ${border}`, borderRadius: 14, padding: 12, background: "white" }}>
-          <div style={{ fontWeight: 900, color: heading, marginBottom: 8 }}>Compute χ² contributions</div>
+        <div style={{ marginTop: 12, border: `1px solid ${border}`, borderRadius: 10, padding: 12, background: "var(--surface)" }}>
+          <div style={{ fontWeight: 700, color: heading, marginBottom: 8 }}>Compute χ² contributions</div>
 
           <div style={{ overflowX: "auto" }}>
             <table style={{ width: "100%", borderCollapse: "collapse" }}>
@@ -156,7 +156,7 @@ export default function Page() {
           </div>
         </div>
         
-        <div style={{ border: `1px solid ${border}`, borderRadius: 18, padding: 14, background: "#fff" }}>
+        <div style={{ border: `1px solid ${border}`, borderRadius: 12, padding: 14, background: "var(--surface)" }}>
           <h3 style={{ marginTop: 0, color: heading }}>Relating these definitions to the coin toss example</h3>
           <ul style={{ lineHeight: 1.5 }}>
             <li><b>Null hypothesis (H₀):</b> a hypothesis that states that the variables (or things being changed in an experiment) will not result in a real difference; deviations are due to random chance. For the coin toss example H₀ is: the coin is fair (50/50).</li>

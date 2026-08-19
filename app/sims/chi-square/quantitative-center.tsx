@@ -24,21 +24,21 @@ type SectionShellProps = {
   children: React.ReactNode;
 };
 
-const PAGE_BG = "#f3f5f4";
-const CARD_BG = "#ffffff";
-const MUTED_BG = "#eef1ef";
-const BORDER = "#d6dde2";
-const TEXT = "#334155";
-const HEADING = "#0f172a";
-const SUBTLE = "#64748b";
-const SKY = "#5d6bff";
-const SKY_DARK = "#5b46d8";
-const AMBER = "#64748b";
-const AMBER_DARK = "#334155";
-const EMERALD = "#6d5efc";
-const EMERALD_DARK = "#5b46d8";
-const ROSE = "#94a3b8";
-const ROSE_DARK = "#334155";
+const PAGE_BG = "var(--bg)";
+const CARD_BG = "var(--surface)";
+const MUTED_BG = "var(--surface-muted)";
+const BORDER = "var(--border)";
+const TEXT = "var(--ink-muted)";
+const HEADING = "var(--ink)";
+const SUBTLE = "var(--ink-faint)";
+const SKY = "var(--brand)";
+const SKY_DARK = "var(--brand-dark)";
+const AMBER = "var(--ink-muted)";
+const AMBER_DARK = "var(--ink)";
+const EMERALD = "var(--experiment)";
+const EMERALD_DARK = "var(--experiment)";
+const ROSE = "var(--ink-faint)";
+const ROSE_DARK = "var(--ink)";
 const MATH_FONT = '"Cambria Math", "Times New Roman", serif';
 
 const CRITICAL_VALUES = [
@@ -180,9 +180,9 @@ function sectionStyle() {
   return {
     background: CARD_BG,
     border: `1px solid ${BORDER}`,
-    borderRadius: 26,
+    borderRadius: 16,
     padding: 18,
-    boxShadow: "0 10px 28px rgba(15, 23, 42, 0.06)",
+    boxShadow: "var(--shadow-card)",
     scrollMarginTop: 86,
   } as const;
 }
@@ -191,7 +191,7 @@ function panelStyle(background = MUTED_BG) {
   return {
     background,
     border: `1px solid ${BORDER}`,
-    borderRadius: 18,
+    borderRadius: 12,
     padding: 14,
   } as const;
 }
@@ -200,9 +200,9 @@ function inputStyle() {
   return {
     width: "100%",
     padding: 10,
-    borderRadius: 12,
+    borderRadius: 8,
     border: `1px solid ${BORDER}`,
-    background: "white",
+    background: CARD_BG,
     color: HEADING,
   } as const;
 }
@@ -221,14 +221,15 @@ function anchorPillStyle() {
     display: "inline-flex",
     alignItems: "center",
     gap: 8,
-    padding: "10px 12px",
-    borderRadius: 999,
+    padding: "8px 12px",
+    borderRadius: 8,
     border: `1px solid ${BORDER}`,
-    background: "rgba(255,255,255,0.86)",
+    background: CARD_BG,
     color: HEADING,
-    fontWeight: 700,
+    fontWeight: 600,
+    fontSize: 14,
     textDecoration: "none",
-    boxShadow: "0 6px 18px rgba(15, 23, 42, 0.05)",
+    boxShadow: "var(--shadow-sm)",
   } as const;
 }
 
@@ -334,8 +335,8 @@ function MathFraction({
 function SectionShell({ id, eyebrow, title, description, children }: SectionShellProps) {
   return (
     <section id={id} style={sectionStyle()}>
-      <p style={{ margin: 0, fontSize: 12, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", color: SKY_DARK }}>{eyebrow}</p>
-      <h2 style={{ marginTop: 8, marginBottom: 6, fontSize: 28, fontWeight: 900, color: HEADING }}>{title}</h2>
+      <p style={{ margin: 0, fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: SKY_DARK }}>{eyebrow}</p>
+      <h2 style={{ marginTop: 8, marginBottom: 6, fontSize: 22, fontWeight: 600, color: HEADING, fontFamily: "var(--font-serif)" }}>{title}</h2>
       <p style={{ margin: 0, maxWidth: 780, color: TEXT, lineHeight: 1.55 }}>{description}</p>
       <div style={{ marginTop: 16 }}>{children}</div>
     </section>
@@ -368,8 +369,8 @@ function ChiSquareBarRow({
             <span>Observed</span>
             <span>{observed}</span>
           </div>
-          <div style={{ height: 12, borderRadius: 999, overflow: "hidden", background: "#e2e8f0" }}>
-            <div style={{ width: observedWidth, height: "100%", borderRadius: 999, background: "#475569" }} />
+          <div style={{ height: 10, borderRadius: 999, overflow: "hidden", background: "var(--surface-muted)" }}>
+            <div style={{ width: observedWidth, height: "100%", borderRadius: 999, background: "var(--ink-muted)" }} />
           </div>
         </div>
         <div>
@@ -377,7 +378,7 @@ function ChiSquareBarRow({
             <span>Expected</span>
             <span>{formatNumber(expected, 2)}</span>
           </div>
-          <div style={{ height: 12, borderRadius: 999, overflow: "hidden", background: "#e5e7eb" }}>
+          <div style={{ height: 10, borderRadius: 999, overflow: "hidden", background: "var(--surface-muted)" }}>
             <div style={{ width: expectedWidth, height: "100%", borderRadius: 999, background: EMERALD }} />
           </div>
         </div>
@@ -793,27 +794,26 @@ export default function QuantitativeCenter() {
           <section
             style={{
               border: `1px solid ${BORDER}`,
-              borderRadius: 30,
+              borderRadius: 16,
               padding: 20,
-              background:
-                "linear-gradient(135deg, rgba(14,165,233,0.18) 0%, rgba(255,255,255,0.98) 36%, rgba(249,115,22,0.14) 70%, rgba(16,185,129,0.12) 100%)",
-              boxShadow: "0 14px 36px rgba(15, 23, 42, 0.08)",
+              background: CARD_BG,
+              boxShadow: "var(--shadow-card)",
             }}
           >
             <div className="grid gap-4 xl:grid-cols-[minmax(0,1.15fr)_360px]" style={{ display: "grid", gap: 16 }}>
               <div>
-                <p style={{ margin: 0, fontSize: 12, fontWeight: 800, letterSpacing: "0.16em", textTransform: "uppercase", color: SKY_DARK }}>
-                  Statistics Center
+                <p style={{ margin: 0, fontSize: 12, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: SKY_DARK }}>
+                  Statistics center
                 </p>
-                <h1 style={{ marginTop: 10, marginBottom: 10, fontSize: 38, lineHeight: 1.03, fontWeight: 950, color: HEADING }} className="text-[clamp(2rem,5vw,3rem)]">
-                  AP Biology Math and Statistics Center
+                <h1 style={{ marginTop: 10, marginBottom: 10, fontSize: 28, lineHeight: 1.15, fontWeight: 600, color: HEADING, fontFamily: "var(--font-serif)" }} className="text-[clamp(1.75rem,3.4vw,2.25rem)]">
+                  AP Biology math and statistics center
                 </h1>
                 <p style={{ margin: 0, maxWidth: 860, fontSize: 16, lineHeight: 1.6, color: TEXT }}>
                   Use this page when AP Biology numbers are slowing you down. It pulls chi-square, allele frequencies,
                   water movement, scaling, graph rates, standard deviation, confidence intervals, and p-values into one guided review space.
                 </p>
 
-                <div style={{ marginTop: 18, display: "flex", gap: 10, flexWrap: "wrap" }}>
+                <div style={{ marginTop: 16 }}>
                   <a
                     href="/sims/mcq?difficulty=statistics"
                     style={{
@@ -823,25 +823,33 @@ export default function QuantitativeCenter() {
                       color: "#ffffff",
                     }}
                   >
-                    Practice AP Bio Statistic MCQs
+                    Practice AP Bio statistics MCQs
                   </a>
-                  <a href="#chi-square" style={anchorPillStyle()}>Chi-square</a>
-                  <a href="#hardy-weinberg" style={anchorPillStyle()}>Hardy-Weinberg</a>
-                  <a href="#water-potential" style={anchorPillStyle()}>Water potential</a>
-                  <a href="#surface-area" style={anchorPillStyle()}>Surface area : volume</a>
-                  <a href="#graph-slope" style={anchorPillStyle()}>Rate and slope</a>
-                  <a href="#standard-deviation" style={anchorPillStyle()}>Standard deviation</a>
-                  <a href="#confidence-intervals" style={anchorPillStyle()}>Confidence intervals</a>
-                  <a href="#p-values" style={anchorPillStyle()}>P-values in plain English</a>
                 </div>
 
+                <nav aria-label="Jump to a topic" style={{ marginTop: 16, display: "flex", flexWrap: "wrap", gap: "6px 16px", borderTop: `1px solid ${BORDER}`, paddingTop: 14 }}>
+                  {[
+                    ["#chi-square", "Chi-square"],
+                    ["#hardy-weinberg", "Hardy-Weinberg"],
+                    ["#water-potential", "Water potential"],
+                    ["#surface-area", "Surface area : volume"],
+                    ["#graph-slope", "Rate and slope"],
+                    ["#standard-deviation", "Standard deviation"],
+                    ["#confidence-intervals", "Confidence intervals"],
+                    ["#p-values", "P-values in plain English"],
+                  ].map(([href, label]) => (
+                    <a key={href} href={href} style={{ fontSize: 14, fontWeight: 600, color: SKY_DARK, textDecoration: "none" }}>
+                      {label}
+                    </a>
+                  ))}
+                </nav>
               </div>
 
               <div style={{ display: "grid", gap: 12 }}>
-                <div style={panelStyle("rgba(255,255,255,0.86)")}>
-                  <div style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", color: SKY_DARK }}>Formula board</div>
-                  <div style={{ marginTop: 12, display: "grid", gap: 10 }}>
-                    <div style={badgeStyle("#e5e7eb", SKY_DARK)}>
+                <div style={panelStyle()}>
+                  <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: SUBTLE }}>Formula board</div>
+                  <div style={{ marginTop: 12, display: "grid", gap: 8 }}>
+                    <div style={badgeStyle(CARD_BG, SKY_DARK)}>
                       <MathText>
                         χ<MathSup>2</MathSup> = Σ{" "}
                         <MathFraction
@@ -855,23 +863,23 @@ export default function QuantitativeCenter() {
                         />
                       </MathText>
                     </div>
-                    <div style={badgeStyle("#e5e7eb", EMERALD_DARK)}>
+                    <div style={badgeStyle(CARD_BG, EMERALD_DARK)}>
                       <MathText>
                         p<MathSup>2</MathSup> + 2pq + q<MathSup>2</MathSup> = 1
                       </MathText>
                     </div>
-                    <div style={badgeStyle("#e2e8f0", AMBER_DARK)}>
+                    <div style={badgeStyle(CARD_BG, AMBER_DARK)}>
                       <MathText>
                         ψ = ψ<MathSub>s</MathSub> + ψ<MathSub>p</MathSub>
                       </MathText>
                     </div>
-                    <div style={badgeStyle("#e2e8f0", ROSE_DARK)}>
+                    <div style={badgeStyle(CARD_BG, ROSE_DARK)}>
                       <MathText>
                         rate ={" "}
                         <MathFraction numerator="Δy" denominator="Δx" compact />
                       </MathText>
                     </div>
-                    <div style={badgeStyle("#e2e8f0", HEADING)}>
+                    <div style={badgeStyle(CARD_BG, HEADING)}>
                       <MathText>SD = √</MathText>
                       <MathFraction
                         numerator={
@@ -883,7 +891,7 @@ export default function QuantitativeCenter() {
                         compact
                       />
                     </div>
-                    <div style={badgeStyle("#e2e8f0", HEADING)}>
+                    <div style={badgeStyle(CARD_BG, HEADING)}>
                       <MathText>95% CI ≈ mean ± 1.96 × SEM</MathText>
                     </div>
                   </div>
@@ -891,8 +899,8 @@ export default function QuantitativeCenter() {
               </div>
             </div>
 
-            <div style={{ marginTop: 16, ...panelStyle("rgba(255,255,255,0.86)") }}>
-              <div style={{ fontSize: 13, fontWeight: 800, letterSpacing: "0.08em", textTransform: "uppercase", color: SKY_DARK }}>Why it matters</div>
+            <div style={{ marginTop: 16, ...panelStyle() }}>
+              <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: SUBTLE }}>Why it matters</div>
               <ul
                 className="grid gap-x-8 gap-y-2 md:grid-cols-2 xl:grid-cols-3"
                 style={{ margin: "10px 0 0 18px", paddingLeft: 18, color: TEXT, lineHeight: 1.6, listStyleType: "disc", listStylePosition: "outside" }}

@@ -357,15 +357,16 @@ function PageContent() {
     }
 
     return (
-      <main className="grid gap-4">
+      <main className="grid gap-6">
         <PageHeader
-          eyebrow="Unit MCQ Review"
+          eyebrow="Unit MCQ review"
+          align="start"
           title="Target one AP Biology unit at a time."
           description="Choose a unit, choose a mode, and use explanations plus the redo queue to close specific content gaps fast."
           actions={
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <SecondaryLink href="/sims/active-recall">Back to dashboard</SecondaryLink>
-              <SecondaryLink href="/sims/mcq?difficulty=statistics">Open statistics MCQs</SecondaryLink>
+              <SecondaryLink href="/sims/active-recall">Back to practice</SecondaryLink>
+              <SecondaryLink href="/sims/mcq?difficulty=statistics">Statistics MCQs</SecondaryLink>
             </div>
           }
         />
@@ -375,42 +376,31 @@ function PageContent() {
   }
 
   return (
-    <main className={isCompactMcq ? "grid gap-4" : "grid gap-6 lg:gap-8"}>
+    <main className={isCompactMcq ? "grid gap-4" : "grid gap-6"}>
       {!isCompactMcq ? (
       <PageHeader
-        eyebrow="Unit MCQ Review"
+        eyebrow="Unit MCQ review"
+        align="start"
         title="Target one AP Biology unit at a time."
         description="Use this route for reteaching, quiz prep, or focused repair when you know which chapter is costing you points."
         actions={
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <SecondaryLink href="/sims/active-recall">Back to dashboard</SecondaryLink>
+            <SecondaryLink href="/sims/active-recall">Back to practice</SecondaryLink>
             <SecondaryLink href="/sims/active-recall/ap">Switch to mixed review</SecondaryLink>
-            <SecondaryLink href="/sims/mcq?difficulty=statistics">Open statistics MCQs</SecondaryLink>
-          </div>
-        }
-        aside={
-          <div className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
-            <StatCard label="Selected unit" value={selectedUnitLabel || "Choose a unit"} detail={isAllStatisticsTopics ? "Mixed across all statistics topics" : isPlaceholderMode ? "One statistics topic at a time for targeted quantitative practice" : isAllUnits ? "Mixed across the full course" : "One unit at a time for cleaner repair"} tone="blue" />
-            <StatCard label="Current mode" value={difficultyLabel || "Choose a mode"} detail={difficultyDescription} tone={difficultyTone === "slate" ? "neutral" : difficultyTone} />
-            <StatCard label="Redo queue" value={redoCount} detail={redoMissedOnly ? "Redo missed questions is on" : isMixedSelection ? "Available for this mode across the mixed pool" : "Available for this unit and mode"} tone="amber" />
+            <SecondaryLink href="/sims/mcq?difficulty=statistics">Statistics MCQs</SecondaryLink>
           </div>
         }
       />
       ) : null}
 
       {!isCompactMcq ? (
-      <SectionCard
-        title="Session setup"
-        description="Pick one unit or all units, choose the level of pressure, and let the session keep feeding you one question at a time without recycling near-duplicates."
-        tone={difficultyTone}
-      >
+      <SectionCard title="Session setup" description="Pick one unit or all units, choose the level of pressure, and work one question at a time.">
         <div className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_minmax(300px,0.8fr)]">
-          <div className="grid gap-4 md:grid-cols-3">
-            <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-              <label className="text-sm font-semibold text-slate-900">Unit</label>
-              <p className="mt-1 text-sm text-slate-500">{isPlaceholderMode ? "Choose one statistics topic or mix all statistics topics together." : "Stay inside one chapter when you want cleaner repetition, or switch to all units for a mixed bank."}</p>
-              <div className="mt-3 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">
-                <select value={unit} onChange={(event) => setUnit(event.target.value)} className="w-full bg-transparent text-sm font-medium text-slate-900 outline-none">
+          <div className="grid gap-3 md:grid-cols-3">
+            <div className="rounded-[var(--radius-md)] border border-[color:var(--border)] bg-[color:var(--surface)] p-4">
+              <label className="text-sm font-semibold text-[color:var(--ink)]">Unit</label>
+              <div className="mt-2.5 rounded-[var(--radius-sm)] border border-[color:var(--border)] bg-[color:var(--surface-muted)] px-3 py-2">
+                <select value={unit} onChange={(event) => setUnit(event.target.value)} className="w-full bg-transparent text-sm font-medium text-[color:var(--ink)] outline-none">
                   {isPlaceholderMode ? <option value={ALL_STATISTICS_TOPICS_VALUE}>All statistics topics</option> : null}
                   {!isPlaceholderMode ? <option value={ALL_UNITS_VALUE}>All units</option> : null}
                   {availableUnitOptions.map((option) => (
@@ -422,11 +412,10 @@ function PageContent() {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-              <label className="text-sm font-semibold text-slate-900">Mode</label>
-              <p className="mt-1 text-sm text-slate-500">Switch between direct recall, harder conceptual pressure, experiment interpretation, and quantitative statistics review.</p>
-              <div className="mt-3 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">
-                <select value={difficulty} onChange={(event) => setDifficulty(event.target.value)} className="w-full bg-transparent text-sm font-medium text-slate-900 outline-none">
+            <div className="rounded-[var(--radius-md)] border border-[color:var(--border)] bg-[color:var(--surface)] p-4">
+              <label className="text-sm font-semibold text-[color:var(--ink)]">Mode</label>
+              <div className="mt-2.5 rounded-[var(--radius-sm)] border border-[color:var(--border)] bg-[color:var(--surface-muted)] px-3 py-2">
+                <select value={difficulty} onChange={(event) => setDifficulty(event.target.value)} className="w-full bg-transparent text-sm font-medium text-[color:var(--ink)] outline-none">
                   {DIFFICULTY_OPTIONS.map((option) => (
                     <option key={option.value} value={option.value}>
                       {option.label}
@@ -434,37 +423,36 @@ function PageContent() {
                   ))}
                 </select>
               </div>
-              <div className="mt-3">
+              <div className="mt-2.5">
                 <ModeBadge label={difficultyLabel} tone={difficultyTone === "slate" ? "neutral" : difficultyTone} />
               </div>
             </div>
 
-            <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-              <label className="text-sm font-semibold text-slate-900">Redo queue</label>
-              <p className="mt-1 text-sm text-slate-500">Use this when you want the session to revisit the questions you are still missing in this exact selection.</p>
-              <label className="mt-4 flex cursor-pointer items-start gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-3">
-                <input type="checkbox" checked={redoMissedOnly} onChange={(event) => setRedoMissedOnly(event.target.checked)} className="mt-1 h-4 w-4" />
+            <div className="rounded-[var(--radius-md)] border border-[color:var(--border)] bg-[color:var(--surface)] p-4">
+              <label className="text-sm font-semibold text-[color:var(--ink)]">Redo queue</label>
+              <label className="mt-2.5 flex cursor-pointer items-start gap-2.5 rounded-[var(--radius-sm)] border border-[color:var(--border)] bg-[color:var(--surface-muted)] p-3">
+                <input type="checkbox" checked={redoMissedOnly} onChange={(event) => setRedoMissedOnly(event.target.checked)} className="mt-0.5 h-4 w-4 accent-[color:var(--brand)]" />
                 <span>
-                  <span className="block text-sm font-semibold text-slate-900">Redo missed questions only</span>
-                  <span className="mt-1 block text-sm text-slate-500">{`${redoCount} questions currently queued for this selection.`}</span>
+                  <span className="block text-sm font-semibold text-[color:var(--ink)]">Redo missed only</span>
+                  <span className="mt-0.5 block text-xs text-[color:var(--ink-faint)]">{redoCount} queued</span>
                 </span>
               </label>
             </div>
           </div>
 
-          <div className="grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
+          <div className="grid gap-2.5 sm:grid-cols-3 xl:grid-cols-1">
             <StatCard label="Questions completed" value={progressSnapshot.totalAttempts ?? 0} detail="All recorded MCQ attempts" />
             <StatCard label="Current streak" value={progressSnapshot.currentStreak ?? 0} detail="Consecutive correct answers" tone="teal" />
-            <StatCard label="Missed queue" value={redoCount} detail="Available for this unit and mode right now" tone="amber" />
+            <StatCard label="Missed queue" value={redoCount} detail="Available right now" tone="amber" />
           </div>
         </div>
       </SectionCard>
       ) : (
-        <div className="rounded-[1.2rem] border border-slate-200 bg-white p-4 shadow-sm">
-          <div className="grid gap-3 md:grid-cols-3">
-            <div className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">
-              <label className="mb-2 block text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Unit</label>
-              <select value={unit} onChange={(event) => setUnit(event.target.value)} className="w-full bg-transparent text-sm font-medium text-slate-900 outline-none">
+        <div className="rounded-[var(--radius-lg)] border border-[color:var(--border)] bg-[color:var(--surface)] p-3">
+          <div className="grid gap-2.5 md:grid-cols-3">
+            <div className="rounded-[var(--radius-sm)] border border-[color:var(--border)] bg-[color:var(--surface-muted)] px-3 py-2">
+              <label className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[color:var(--ink-faint)]">Unit</label>
+              <select value={unit} onChange={(event) => setUnit(event.target.value)} className="w-full bg-transparent text-sm font-medium text-[color:var(--ink)] outline-none">
                 {isPlaceholderMode ? <option value={ALL_STATISTICS_TOPICS_VALUE}>All statistics topics</option> : null}
                 {!isPlaceholderMode ? <option value={ALL_UNITS_VALUE}>All units</option> : null}
                 {availableUnitOptions.map((option) => (
@@ -475,9 +463,9 @@ function PageContent() {
               </select>
             </div>
 
-            <div className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">
-              <label className="mb-2 block text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Mode</label>
-              <select value={difficulty} onChange={(event) => setDifficulty(event.target.value)} className="w-full bg-transparent text-sm font-medium text-slate-900 outline-none">
+            <div className="rounded-[var(--radius-sm)] border border-[color:var(--border)] bg-[color:var(--surface-muted)] px-3 py-2">
+              <label className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[color:var(--ink-faint)]">Mode</label>
+              <select value={difficulty} onChange={(event) => setDifficulty(event.target.value)} className="w-full bg-transparent text-sm font-medium text-[color:var(--ink)] outline-none">
                 {DIFFICULTY_OPTIONS.map((option) => (
                   <option key={option.value} value={option.value}>
                     {option.label}
@@ -486,11 +474,11 @@ function PageContent() {
               </select>
             </div>
 
-            <label className="flex cursor-pointer items-start gap-3 rounded-xl border border-slate-200 bg-slate-50 px-3 py-3">
-              <input type="checkbox" checked={redoMissedOnly} onChange={(event) => setRedoMissedOnly(event.target.checked)} className="mt-1 h-4 w-4" />
+            <label className="flex cursor-pointer items-center gap-2.5 rounded-[var(--radius-sm)] border border-[color:var(--border)] bg-[color:var(--surface-muted)] px-3 py-2.5">
+              <input type="checkbox" checked={redoMissedOnly} onChange={(event) => setRedoMissedOnly(event.target.checked)} className="h-4 w-4 accent-[color:var(--brand)]" />
               <span>
-                <span className="block text-sm font-semibold text-slate-900">Redo missed only</span>
-                <span className="mt-1 block text-sm text-slate-500">{redoCount} queued for this selection.</span>
+                <span className="block text-sm font-semibold text-[color:var(--ink)]">Redo missed</span>
+                <span className="block text-xs text-[color:var(--ink-faint)]">{redoCount} queued</span>
               </span>
             </label>
           </div>
@@ -511,116 +499,112 @@ function PageContent() {
       {!question && !loadError ? <LoadingSkeleton title="Loading question" lines={4} /> : null}
 
       {question ? (
-        <SectionCard
-          title="Question"
-          tone={difficultyTone}
-        >
+        <SectionCard title="Question">
           <div className="grid gap-4">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-slate-700">
+              <span className="inline-flex items-center rounded-full border border-[color:var(--border)] bg-[color:var(--surface-muted)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.1em] text-[color:var(--ink-muted)]">
                 {questionUnitLabel}
               </span>
               <ModeBadge label={difficultyLabel} tone={difficultyTone === "slate" ? "neutral" : difficultyTone} />
               {question.topic ? (
-                <span className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-slate-700">
+                <span className="inline-flex items-center rounded-full border border-[color:var(--border)] bg-[color:var(--surface-muted)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.1em] text-[color:var(--ink-muted)]">
                   {question.topic}
                 </span>
               ) : null}
             </div>
 
             {question.experiment ? (
-              <div className="rounded-[1.2rem] border border-slate-200 bg-white p-4 shadow-sm">
-                <div className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Experiment</div>
-                <p className="mt-2 text-sm leading-6 text-slate-700">{question.experiment}</p>
+              <div className="rounded-[var(--radius-md)] border border-[color:var(--border)] bg-[color:var(--surface-muted)] p-4">
+                <div className="text-xs font-semibold uppercase tracking-[0.12em] text-[color:var(--ink-faint)]">Experiment</div>
+                <p className="mt-1.5 text-sm leading-6 text-[color:var(--ink)]">{question.experiment}</p>
               </div>
             ) : null}
 
             {question.image ? (
-              <div className="overflow-hidden rounded-[1.2rem] border border-slate-200 bg-white p-3 shadow-sm">
+              <div className="overflow-hidden rounded-[var(--radius-md)] border border-[color:var(--border)] bg-white p-3">
                 <img
                   src={question.image.startsWith("/") ? question.image : `/${question.image}`}
                   alt={question.image_alt || "Question image"}
-                  className="max-h-[320px] w-full rounded-xl object-contain"
+                  className="max-h-[320px] w-full rounded-[var(--radius-sm)] object-contain"
+                  loading="lazy"
                 />
-                {question.image_alt ? <p className="mt-3 text-sm text-slate-500">{question.image_alt}</p> : null}
+                {question.image_alt ? <p className="mt-2.5 text-sm text-[color:var(--ink-faint)]">{question.image_alt}</p> : null}
               </div>
             ) : null}
 
-            <div className="rounded-[1.2rem] border border-slate-200 bg-white p-5 shadow-sm">
-              <h2 className="text-lg font-semibold tracking-tight text-slate-950">{question.text}</h2>
+            <h2 className="text-lg font-semibold leading-7 tracking-tight text-[color:var(--ink)]">{question.text}</h2>
 
-              <div className="mt-5 grid gap-3">
-                {question.choices?.map((choice: string, index: number) => {
-                  const isDisabled = selected !== null;
-                  const isCorrectChoice = index === question.correct;
-                  const isWrongSelected = selected === index && !isCorrectChoice;
-                  const labelClass = selected !== null ? (isCorrectChoice ? "text-emerald-950" : isWrongSelected ? "text-rose-950" : "text-slate-950") : "text-slate-950";
-                  const choiceClass = selected !== null
-                    ? isCorrectChoice
-                      ? "border-emerald-300 bg-emerald-50 text-emerald-900"
-                      : isWrongSelected
-                        ? "border-rose-300 bg-rose-50 text-rose-900"
-                        : "border-slate-200 bg-white text-slate-600"
-                    : "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50";
+            <div className="grid gap-2.5" role="radiogroup" aria-label="Answer choices">
+              {question.choices?.map((choice: string, index: number) => {
+                const isDisabled = selected !== null;
+                const isCorrectChoice = index === question.correct;
+                const isWrongSelected = selected === index && !isCorrectChoice;
+                const choiceClass = selected !== null
+                  ? isCorrectChoice
+                    ? "border-[color:var(--success)]/40 bg-[color:var(--success-soft)] text-[color:var(--ink)]"
+                    : isWrongSelected
+                      ? "border-[color:var(--danger)]/40 bg-[color:var(--danger-soft)] text-[color:var(--ink)]"
+                      : "border-[color:var(--border)] bg-[color:var(--surface)] text-[color:var(--ink-muted)]"
+                  : "border-[color:var(--border)] bg-[color:var(--surface)] hover:border-[color:var(--border-strong)] hover:bg-[color:var(--surface-muted)]";
 
-                  return (
-                    <div key={index} className="grid gap-2">
-                      <div className="flex flex-col gap-2 sm:flex-row">
-                        <button
-                          onClick={() => {
-                            setSelected(index);
-                            setVisibleExplanations({ [index]: true });
-                            recordMcqAttempt(question, { selectedIndex: index, mode: "unit", unit: isPlaceholderMode ? String(question?.topic || selectedUnitLabel) : isAllUnits ? undefined : unit });
-                            refreshProgress();
-                          }}
-                          disabled={isDisabled}
-                          className={`flex-1 rounded-2xl border px-4 py-3 text-left text-sm text-slate-800 shadow-sm transition ${choiceClass} ${crossedOut[index] ? "opacity-55 line-through" : ""}`}
-                        >
-                          <span className={`font-semibold ${labelClass}`}>{String.fromCharCode(65 + index)}.</span> {choice}
-                        </button>
+                return (
+                  <div key={index} className="grid gap-1.5">
+                    <div className="flex items-stretch gap-2">
+                      <button
+                        onClick={() => {
+                          setSelected(index);
+                          setVisibleExplanations({ [index]: true });
+                          recordMcqAttempt(question, { selectedIndex: index, mode: "unit", unit: isPlaceholderMode ? String(question?.topic || selectedUnitLabel) : isAllUnits ? undefined : unit });
+                          refreshProgress();
+                        }}
+                        disabled={isDisabled}
+                        aria-pressed={selected === index}
+                        className={`min-h-[44px] flex-1 rounded-[var(--radius-md)] border px-4 py-3 text-left text-sm leading-6 shadow-[var(--shadow-sm)] transition disabled:cursor-default ${choiceClass} ${crossedOut[index] ? "opacity-50 line-through" : ""}`}
+                      >
+                        <span className="font-semibold">{String.fromCharCode(65 + index)}.</span> {choice}
+                      </button>
 
+                      {!isDisabled ? (
                         <button
                           onClick={() => setCrossedOut((current) => ({ ...current, [index]: !current[index] }))}
-                          aria-label={crossedOut[index] ? "Uncross option" : "Cross out option"}
-                          className={`rounded-2xl border px-4 py-3 text-sm font-semibold shadow-sm transition ${crossedOut[index] ? "border-slate-300 bg-slate-100 text-slate-800" : "border-slate-200 bg-white text-slate-700 hover:bg-slate-50"}`}
+                          aria-label={crossedOut[index] ? `Uncross option ${String.fromCharCode(65 + index)}` : `Cross out option ${String.fromCharCode(65 + index)}`}
+                          className={`min-h-[44px] w-11 shrink-0 rounded-[var(--radius-md)] border text-sm font-semibold transition ${crossedOut[index] ? "border-[color:var(--border-strong)] bg-[color:var(--surface-muted)] text-[color:var(--ink)]" : "border-[color:var(--border)] bg-[color:var(--surface)] text-[color:var(--ink-faint)] hover:bg-[color:var(--surface-muted)]"}`}
                         >
-                          {crossedOut[index] ? "Undo" : "Cross out"}
+                          {crossedOut[index] ? "↩" : "✕"}
                         </button>
-
-                        {selected !== null ? (
-                          <button
-                            onClick={() => setVisibleExplanations((current) => ({ ...current, [index]: !current[index] }))}
-                            className={`rounded-2xl border px-4 py-3 text-sm font-semibold shadow-sm transition ${visibleExplanations[index] ? (isCorrectChoice ? "border-emerald-300 bg-emerald-50 text-emerald-900" : "border-rose-300 bg-rose-50 text-rose-900") : "border-slate-200 bg-white text-slate-700 hover:bg-slate-50"}`}
-                          >
-                            {visibleExplanations[index] ? "Hide explanation" : "Show explanation"}
-                          </button>
-                        ) : null}
-                      </div>
-
-                      {visibleExplanations[index] && selected !== null ? (
-                        <div className={`rounded-2xl border px-4 py-3 text-sm leading-6 ${isCorrectChoice ? "border-emerald-300 bg-emerald-50 text-emerald-900" : isWrongSelected ? "border-rose-300 bg-rose-50 text-rose-900" : "border-slate-200 bg-slate-50 text-slate-700"}`}>
-                          {choiceExplain(index)}
-                        </div>
-                      ) : null}
+                      ) : (
+                        <button
+                          onClick={() => setVisibleExplanations((current) => ({ ...current, [index]: !current[index] }))}
+                          className="shrink-0 rounded-[var(--radius-md)] border border-[color:var(--border)] bg-[color:var(--surface)] px-3 text-xs font-semibold text-[color:var(--ink-muted)] transition hover:bg-[color:var(--surface-muted)]"
+                        >
+                          {visibleExplanations[index] ? "Hide why" : "Why?"}
+                        </button>
+                      )}
                     </div>
-                  );
-                })}
-              </div>
 
-              <div className="mt-5 flex flex-wrap gap-3">
-                <SecondaryButton onClick={previous} disabled={previousQuestions.length === 0}>
-                  Previous question
-                </SecondaryButton>
-                <PrimaryButton onClick={() => void next()} disabled={selected === null}>
-                  Next question
-                </PrimaryButton>
-              </div>
+                    {visibleExplanations[index] && selected !== null ? (
+                      <div className={`rounded-[var(--radius-md)] border px-4 py-2.5 text-sm leading-6 ${isCorrectChoice ? "border-[color:var(--success)]/30 bg-[color:var(--success-soft)] text-[color:var(--ink)]" : isWrongSelected ? "border-[color:var(--danger)]/30 bg-[color:var(--danger-soft)] text-[color:var(--ink)]" : "border-[color:var(--border)] bg-[color:var(--surface-muted)] text-[color:var(--ink-muted)]"}`}>
+                        {choiceExplain(index)}
+                      </div>
+                    ) : null}
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="flex flex-wrap gap-3 border-t border-[color:var(--border)] pt-4">
+              <SecondaryButton onClick={previous} disabled={previousQuestions.length === 0}>
+                Previous question
+              </SecondaryButton>
+              <PrimaryButton onClick={() => void next()} disabled={selected === null}>
+                Next question
+              </PrimaryButton>
             </div>
           </div>
         </SectionCard>
       ) : null}
 
-      {!isCompactMcq ? <TipCard label="Study tip">If a term or process is slowing you down, define it out loud in one sentence before moving to the next question. That keeps review active instead of passive.</TipCard> : null}
+      {!isCompactMcq ? <TipCard label="Study tip">If a term or process is slowing you down, define it out loud in one sentence before moving to the next question.</TipCard> : null}
     </main>
   );
 }

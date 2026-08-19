@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { ButtonHTMLAttributes, HTMLAttributes, ReactNode } from "react";
+import type { ButtonHTMLAttributes, ReactNode } from "react";
 
 function cx(...classes: Array<string | false | null | undefined>) {
   return classes.filter(Boolean).join(" ");
@@ -8,25 +8,18 @@ function cx(...classes: Array<string | false | null | undefined>) {
 
 type Tone = "blue" | "teal" | "amber" | "slate" | "rose" | "green" | "accent";
 
-const toneMap: Record<Tone, string> = {
-  blue: "border-slate-300 bg-slate-100/95 hover:border-slate-400 hover:bg-slate-200/85",
-  teal: "border-slate-300 bg-slate-100/95 hover:border-slate-400 hover:bg-slate-200/85",
-  amber: "border-slate-300 bg-slate-100/95 hover:border-slate-400 hover:bg-slate-200/85",
-  slate: "border-slate-300 bg-slate-100/85 hover:border-slate-400 hover:bg-slate-200/75",
-  rose: "border-slate-300 bg-slate-100 hover:border-slate-400 hover:bg-slate-200/70",
-  green: "accent-gradient hover:opacity-95",
-  accent: "border-[color:var(--accent-text)]/20 bg-white hover:border-[color:var(--accent-text)]/35 hover:bg-slate-50",
-};
-
-const badgeMap: Record<Tone | "neutral", string> = {
-  blue: "accent-gradient text-white",
-  teal: "accent-gradient text-white",
-  amber: "accent-gradient text-white",
-  rose: "border border-slate-300 bg-slate-100 text-slate-800",
-  slate: "border border-slate-300 bg-slate-100 text-slate-700",
-  green: "accent-gradient text-white",
-  accent: "border border-[color:var(--accent-text)]/20 bg-white text-[color:var(--accent-text)]",
-  neutral: "border border-slate-300 bg-slate-100 text-slate-700",
+// Each tone maps to one flat, muted color used consistently for that meaning
+// across the app (amber = Foundation, blue = AP-Style, teal = Experiment,
+// rose = Statistics, green = brand emphasis, slate = neutral). No gradients,
+// no per-component reinvention of the palette.
+const TONE_COLOR: Record<Tone, { text: string; soft: string; solid: string; border: string; cssVar: string }> = {
+  amber: { text: "text-[color:var(--foundation)]", soft: "bg-[color:var(--foundation-soft)]", solid: "bg-[color:var(--foundation)]", border: "border-[color:var(--foundation)]/25", cssVar: "var(--foundation)" },
+  blue: { text: "text-[color:var(--info)]", soft: "bg-[color:var(--info-soft)]", solid: "bg-[color:var(--info)]", border: "border-[color:var(--info)]/25", cssVar: "var(--info)" },
+  teal: { text: "text-[color:var(--experiment)]", soft: "bg-[color:var(--experiment-soft)]", solid: "bg-[color:var(--experiment)]", border: "border-[color:var(--experiment)]/25", cssVar: "var(--experiment)" },
+  rose: { text: "text-[color:var(--statistics)]", soft: "bg-[color:var(--statistics-soft)]", solid: "bg-[color:var(--statistics)]", border: "border-[color:var(--statistics)]/25", cssVar: "var(--statistics)" },
+  green: { text: "text-[color:var(--success)]", soft: "bg-[color:var(--success-soft)]", solid: "bg-[color:var(--success)]", border: "border-[color:var(--success)]/25", cssVar: "var(--success)" },
+  accent: { text: "text-[color:var(--brand-dark)]", soft: "bg-[color:var(--brand-soft)]", solid: "bg-[color:var(--brand)]", border: "border-[color:var(--brand)]/25", cssVar: "var(--brand)" },
+  slate: { text: "text-[color:var(--ink-muted)]", soft: "bg-[color:var(--surface-muted)]", solid: "bg-[color:var(--ink-muted)]", border: "border-[color:var(--border-strong)]", cssVar: "var(--border-strong)" },
 };
 
 type PageHeroProps = {
@@ -34,30 +27,32 @@ type PageHeroProps = {
   title: ReactNode;
   description?: string;
   actions?: ReactNode;
-  background?: ReactNode;
   aside?: ReactNode;
   align?: "start" | "end";
 };
 
-export function PageHeader({ eyebrow, title, description, actions, aside, align = "end", background }: PageHeroProps) {
+export function PageHeader({ eyebrow, title, description, actions, aside, align = "end" }: PageHeroProps) {
   const hasIntro = Boolean(title || description);
   return (
-    <section className="hero-card overflow-hidden p-8 sm:p-10 relative">
-      {background ? <div className="pointer-events-none absolute inset-0 flex justify-end items-start">{background}</div> : null}
-      <div className={`relative z-10 grid gap-6 xl:grid-cols-[minmax(0,1.15fr)_minmax(280px,0.85fr)] ${align === "start" ? "xl:items-start" : "xl:items-end"}`}>
+    <section className="relative overflow-hidden rounded-[var(--radius-lg)] border border-[color:var(--border)] bg-[color:var(--surface)] p-6 shadow-[var(--shadow-sm)] sm:p-8">
+      <div className="blob-decoration" aria-hidden="true" />
+      <div className={`relative z-[1] grid gap-6 xl:grid-cols-[minmax(0,1.2fr)_minmax(260px,0.8fr)] ${align === "start" ? "xl:items-start" : "xl:items-end"}`}>
         <div>
           {eyebrow ? (
-            <p className="accent-gradient mb-4 inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white">
+            <p className="mb-3 inline-flex items-center rounded-full bg-[color:var(--brand-soft)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-[color:var(--brand-dark)]">
               {eyebrow}
             </p>
           ) : null}
           {title ? (
-            <h1 className="text-balance max-w-3xl whitespace-normal text-[clamp(2.5rem,6vw,4.5rem)] font-semibold leading-[1.02] tracking-tight text-slate-950" style={{ fontFamily: "var(--font-display)" }}>
+            <h1
+              className="text-balance max-w-2xl whitespace-normal text-[clamp(1.85rem,3.6vw,2.6rem)] font-semibold leading-[1.1] tracking-tight text-[color:var(--ink)]"
+              style={{ fontFamily: "var(--font-serif)" }}
+            >
               {title}
             </h1>
           ) : null}
-          {description ? <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600 sm:text-lg">{description}</p> : null}
-          {actions ? <div className={`${hasIntro ? "mt-6" : "mt-0"} flex flex-col gap-3 sm:flex-row sm:flex-wrap`}>{actions}</div> : null}
+          {description ? <p className="mt-3 max-w-2xl text-base leading-7 text-[color:var(--ink-muted)]">{description}</p> : null}
+          {actions ? <div className={`${hasIntro ? "mt-5" : "mt-0"} flex flex-col gap-3 sm:flex-row sm:flex-wrap`}>{actions}</div> : null}
         </div>
         {aside ? <div className="grid gap-3">{aside}</div> : null}
       </div>
@@ -75,19 +70,27 @@ type SectionCardProps = {
   className?: string;
 };
 
-export function SectionCard({ title, description, tone = "slate", children, className }: SectionCardProps) {
+export function SectionCard({ title, description, tone, children, className }: SectionCardProps) {
+  const accent = tone ? TONE_COLOR[tone] : null;
   return (
-    <section className={cx("rounded-[1.35rem] border p-5 shadow-sm sm:p-6", toneMap[tone], className)}>
-      {title ? <h2 className="text-xl font-semibold tracking-tight text-slate-950">{title}</h2> : null}
-      {description ? <p className={cx(title ? "mt-2" : "mb-4", "text-sm leading-6 text-slate-600 sm:text-base")}>{description}</p> : null}
-      <div className={cx(title || description ? "mt-5" : "", "grid gap-4")}>{children}</div>
+    <section
+      className={cx(
+        "rounded-[var(--radius-lg)] border border-[color:var(--border)] bg-[color:var(--surface)] p-5 shadow-[var(--shadow-card)] sm:p-6",
+        accent ? "border-l-[3px]" : null,
+        className,
+      )}
+      style={accent ? { borderLeftColor: accent.cssVar } : undefined}
+    >
+      {title ? <h2 className="text-lg font-semibold tracking-tight text-[color:var(--ink)]" style={{ fontFamily: "var(--font-serif)" }}>{title}</h2> : null}
+      {description ? <p className={cx(title ? "mt-1.5" : "mb-4", "text-sm leading-6 text-[color:var(--ink-muted)]")}>{description}</p> : null}
+      <div className={cx(title || description ? "mt-4" : "", "grid gap-4")}>{children}</div>
     </section>
   );
 }
 
 type ToolCardProps = {
   title: string;
-  description: string;
+  description?: string;
   href: string;
   eyebrow?: string;
   cta?: string;
@@ -98,36 +101,29 @@ type ToolCardProps = {
   previewImageAlt?: string;
 };
 
-export function FeatureCard({ title, description, href, eyebrow, cta = "Open", detail, tone = "slate", preview, previewImageSrc, previewImageAlt }: ToolCardProps) {
-  const isGreenTone = tone === "green";
-  const isAccentTone = tone === "accent";
+export function FeatureCard({ title, description, href, eyebrow, cta = "Open", detail, tone, preview, previewImageSrc, previewImageAlt }: ToolCardProps) {
+  const accent = tone ? TONE_COLOR[tone] : null;
   return (
     <Link
       href={href}
-      className={cx(
-        "group rounded-[1.35rem] border p-5 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md sm:p-6",
-        toneMap[tone],
-      )}
+      className="pop-hover group relative overflow-hidden rounded-[var(--radius-lg)] border border-[color:var(--border)] bg-[color:var(--surface)] p-5 pt-6 shadow-[var(--shadow-sm)] hover:border-[color:var(--border-strong)] sm:p-6 sm:pt-7"
     >
-      {eyebrow ? <p className={cx("text-xs font-semibold uppercase tracking-[0.18em]", isGreenTone ? "text-white/75" : isAccentTone ? "text-[color:var(--accent-text)]" : "text-slate-500")}>{eyebrow}</p> : null}
-      <p className={cx("mt-2 text-xl font-semibold tracking-tight", isGreenTone ? "text-white" : isAccentTone ? "text-[color:var(--accent-text)]" : "text-slate-950")}>{title}</p>
-      <p className={cx("mt-3 text-sm leading-6", isGreenTone ? "text-white/90" : "text-slate-600")}>{description}</p>
-      {detail ? <p className={cx("mt-3 text-sm font-medium", isGreenTone ? "text-white/80" : "text-slate-500")}>{detail}</p> : null}
-      {preview ? (
-        <div className="mt-4">{preview}</div>
-      ) : null}
+      <span
+        className="absolute inset-x-0 top-0 h-1.5"
+        style={{ background: accent ? accent.cssVar : "var(--brand)" }}
+        aria-hidden="true"
+      />
+      {eyebrow ? <p className={cx("text-xs font-semibold uppercase tracking-[0.14em]", accent ? accent.text : "text-[color:var(--ink-faint)]")}>{eyebrow}</p> : null}
+      <p className="mt-2 text-lg font-semibold tracking-tight text-[color:var(--ink)]" style={{ fontFamily: "var(--font-serif)" }}>{title}</p>
+      {description ? <p className="mt-2 text-sm leading-6 text-[color:var(--ink-muted)]">{description}</p> : null}
+      {detail ? <p className="mt-2 text-sm font-medium text-[color:var(--ink-faint)]">{detail}</p> : null}
+      {preview ? <div className="mt-4">{preview}</div> : null}
       {previewImageSrc && !preview ? (
-        <div className="mt-4 overflow-hidden rounded-[1.1rem] border border-slate-200 bg-slate-100/80 shadow-sm">
-          <Image
-            src={previewImageSrc}
-            alt={previewImageAlt || title}
-            width={960}
-            height={640}
-            className="h-36 w-full object-cover"
-          />
+        <div className="mt-4 overflow-hidden rounded-[var(--radius-md)] border border-[color:var(--border)] bg-[color:var(--surface-muted)]">
+          <Image src={previewImageSrc} alt={previewImageAlt || title} width={960} height={640} className="h-36 w-full object-cover" />
         </div>
       ) : null}
-      <p className={cx("mt-5 text-sm font-semibold transition", isGreenTone ? "text-white group-hover:text-white/85" : isAccentTone ? "text-[color:var(--accent-text)] group-hover:text-[color:var(--accent-text)]/85" : "text-slate-950 group-hover:text-[color:var(--accent-text)]")}>{cta}</p>
+      <p className="mt-4 text-sm font-semibold text-[color:var(--brand-dark)] transition group-hover:text-[color:var(--brand)]">{cta} &rarr;</p>
     </Link>
   );
 }
@@ -144,17 +140,12 @@ type StatCardProps = {
 };
 
 export function StatCard({ label, value, detail, tone = "neutral" }: StatCardProps) {
-  const isGreenTone = tone === "blue" || tone === "teal" || tone === "amber";
-  const toneClass = tone === "neutral" ? "border border-slate-300 bg-slate-100" : badgeMap[tone];
-  const labelClass = isGreenTone ? "text-[11px] font-semibold uppercase tracking-[0.16em] text-white/75" : "text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500";
-  const valueClass = isGreenTone ? "mt-2 text-2xl font-semibold tracking-tight text-white" : "mt-2 text-2xl font-semibold tracking-tight text-slate-950";
-  const detailClass = isGreenTone ? "mt-1 text-sm text-white/80" : "mt-1 text-sm text-slate-600";
-
+  const accent = tone !== "neutral" ? TONE_COLOR[tone as Tone] : null;
   return (
-    <div className={cx("rounded-3xl px-4 py-4 shadow-sm", toneClass)}>
-      <div className={labelClass}>{label}</div>
-      <div className={valueClass}>{value}</div>
-      {detail ? <div className={detailClass}>{detail}</div> : null}
+    <div className={cx("rounded-[var(--radius-md)] border px-4 py-3.5", accent ? `${accent.soft} ${accent.border}` : "border-[color:var(--border)] bg-[color:var(--surface-muted)]")}>
+      <div className={cx("text-[11px] font-semibold uppercase tracking-[0.12em]", accent ? accent.text : "text-[color:var(--ink-faint)]")}>{label}</div>
+      <div className="mt-1.5 text-xl font-semibold tracking-tight text-[color:var(--ink)]">{value}</div>
+      {detail ? <div className="mt-0.5 text-sm text-[color:var(--ink-muted)]">{detail}</div> : null}
     </div>
   );
 }
@@ -170,19 +161,19 @@ type EmptyStateProps = {
 
 export function EmptyState({ title, description, action, secondaryAction, preview, className }: EmptyStateProps) {
   return (
-    <div className={cx("rounded-[1.35rem] border border-slate-300 bg-slate-50 p-6 shadow-sm", className)}>
+    <div className={cx("rounded-[var(--radius-lg)] border border-[color:var(--border)] bg-[color:var(--surface)] p-6", className)}>
       <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(220px,0.8fr)] lg:items-center">
         <div>
-          <h2 className="text-xl font-semibold tracking-tight text-slate-950">{title}</h2>
-          <p className="mt-2 text-sm leading-6 text-slate-600 sm:text-base">{description}</p>
+          <h2 className="text-lg font-semibold tracking-tight text-[color:var(--ink)]" style={{ fontFamily: "var(--font-serif)" }}>{title}</h2>
+          <p className="mt-2 text-sm leading-6 text-[color:var(--ink-muted)]">{description}</p>
           {(action || secondaryAction) ? (
-            <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               {action}
               {secondaryAction}
             </div>
           ) : null}
         </div>
-        {preview ? <div className="rounded-[1.2rem] border border-slate-300 bg-slate-100 p-4">{preview}</div> : null}
+        {preview ? <div className="rounded-[var(--radius-md)] border border-[color:var(--border)] bg-[color:var(--surface-muted)] p-4">{preview}</div> : null}
       </div>
     </div>
   );
@@ -196,14 +187,15 @@ type LoadingSkeletonProps = {
 
 export function LoadingSkeleton({ title = "Loading", lines = 4, className }: LoadingSkeletonProps) {
   return (
-    <div className={cx("rounded-[1.35rem] border border-slate-300 bg-slate-50 p-6 shadow-sm", className)}>
-      <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">{title}</div>
+    <div className={cx("rounded-[var(--radius-lg)] border border-[color:var(--border)] bg-[color:var(--surface)] p-6", className)} role="status" aria-live="polite">
+      <div className="text-sm font-semibold uppercase tracking-[0.14em] text-[color:var(--ink-faint)]">{title}</div>
       <div className="mt-4 grid gap-3">
         <div className="skeleton-line h-6 w-2/5" />
         {Array.from({ length: lines }).map((_, index) => (
           <div key={index} className={cx("skeleton-line h-4", index === lines - 1 ? "w-3/4" : "w-full")} />
         ))}
       </div>
+      <span className="sr-only">Loading…</span>
     </div>
   );
 }
@@ -215,9 +207,8 @@ type TipCardProps = {
 
 export function TipCard({ label = "Tip", children }: TipCardProps) {
   return (
-    <div className="accent-gradient rounded-2xl px-4 py-3 text-sm text-white shadow-sm">
-      <span className="font-bold text-white">{label}</span>
-      <span className="ml-2">{children}</span>
+    <div className="rounded-[var(--radius-md)] border border-[color:var(--border)] border-l-[3px] border-l-[color:var(--brand)] bg-[color:var(--brand-soft)] px-4 py-3 text-sm leading-6 text-[color:var(--ink)]">
+      <span className="font-semibold text-[color:var(--brand-dark)]">💡 {label}:</span> <span>{children}</span>
     </div>
   );
 }
@@ -228,11 +219,20 @@ type BadgeProps = {
 };
 
 export function ModeBadge({ label, tone = "neutral" }: BadgeProps) {
-  return <span className={cx("inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em]", badgeMap[tone])}>{label}</span>;
+  const accent = tone !== "neutral" ? TONE_COLOR[tone as Tone] : TONE_COLOR.slate;
+  return (
+    <span className={cx("inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.1em]", accent.soft, accent.text)}>
+      {label}
+    </span>
+  );
 }
 
 export function VerbBadge({ label }: { label: string }) {
-  return <span className="inline-flex items-center rounded-full border border-slate-300 bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-slate-700">{label}</span>;
+  return (
+    <span className="inline-flex items-center rounded-full border border-[color:var(--border)] bg-[color:var(--surface-muted)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.1em] text-[color:var(--ink-muted)]">
+      {label}
+    </span>
+  );
 }
 
 type LinkProps = {
@@ -246,7 +246,7 @@ export function PrimaryLink({ href, children, className }: LinkProps) {
     <Link
       href={href}
       className={cx(
-        "accent-gradient inline-flex items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold !text-white visited:!text-white shadow-sm transition hover:opacity-90",
+        "accent-gradient inline-flex items-center justify-center gap-1.5 rounded-full px-5 py-2.5 text-sm font-semibold !text-white visited:!text-white shadow-[var(--shadow-pop)] transition hover:brightness-110 active:scale-[0.98]",
         className,
       )}
     >
@@ -257,7 +257,13 @@ export function PrimaryLink({ href, children, className }: LinkProps) {
 
 export function SecondaryLink({ href, children, className }: LinkProps) {
   return (
-    <Link href={href} className={cx("inline-flex items-center justify-center rounded-xl border border-slate-300 bg-slate-50 px-4 py-2.5 text-sm font-semibold text-slate-700 shadow-sm transition hover:bg-slate-100", className)}>
+    <Link
+      href={href}
+      className={cx(
+        "inline-flex items-center justify-center rounded-full border-2 border-[color:var(--border)] bg-[color:var(--surface)] px-5 py-2.5 text-sm font-semibold text-[color:var(--ink)] shadow-[var(--shadow-sm)] transition hover:border-[color:var(--brand)] hover:text-[color:var(--brand-dark)] active:scale-[0.98]",
+        className,
+      )}
+    >
       {children}
     </Link>
   );
@@ -268,7 +274,7 @@ export function PrimaryButton({ children, ...props }: ButtonHTMLAttributes<HTMLB
     <button
       {...props}
       className={cx(
-        "accent-gradient inline-flex w-full items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:opacity-90 sm:w-auto disabled:cursor-not-allowed disabled:opacity-50",
+        "accent-gradient inline-flex w-full items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold text-white shadow-[var(--shadow-pop)] transition hover:brightness-110 active:scale-[0.98] sm:w-auto disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:brightness-100",
         props.className,
       )}
     >
@@ -281,7 +287,10 @@ export function SecondaryButton({ children, ...props }: ButtonHTMLAttributes<HTM
   return (
     <button
       {...props}
-      className={cx("inline-flex w-full items-center justify-center rounded-xl border border-slate-300 bg-slate-50 px-4 py-2.5 text-sm font-semibold text-slate-700 shadow-sm transition hover:bg-slate-100 sm:w-auto disabled:cursor-not-allowed disabled:opacity-50", props.className)}
+      className={cx(
+        "inline-flex w-full items-center justify-center rounded-full border-2 border-[color:var(--border)] bg-[color:var(--surface)] px-5 py-2.5 text-sm font-semibold text-[color:var(--ink)] shadow-[var(--shadow-sm)] transition hover:border-[color:var(--brand)] hover:text-[color:var(--brand-dark)] active:scale-[0.98] sm:w-auto disabled:cursor-not-allowed disabled:opacity-50",
+        props.className,
+      )}
     >
       {children}
     </button>
@@ -293,5 +302,5 @@ export function SurfaceList({ children, className }: { children: ReactNode; clas
 }
 
 export function SurfaceItem({ children, className }: { children: ReactNode; className?: string }) {
-  return <div className={cx("rounded-2xl border border-slate-200 bg-white p-4 shadow-sm", className)}>{children}</div>;
+  return <div className={cx("rounded-[var(--radius-md)] border border-[color:var(--border)] bg-[color:var(--surface)] p-4", className)}>{children}</div>;
 }

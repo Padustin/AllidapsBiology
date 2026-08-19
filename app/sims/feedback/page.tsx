@@ -5,7 +5,6 @@ import {
   PageHeader,
   PrimaryButton,
   SectionCard,
-  StatCard,
   SurfaceItem,
   SurfaceList,
 } from "../../components/ui/study-kit";
@@ -52,7 +51,6 @@ export default function FeedbackPage() {
 
       setStatus("success");
       setStatusMessage("Thanks, your feedback was sent.");
-      // ...existing code...
       setEmail("");
       setMessage("");
       setCategory("content");
@@ -63,41 +61,37 @@ export default function FeedbackPage() {
   }
 
   return (
-    <main className="grid gap-6 lg:gap-8">
-      <section className="grid gap-4 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)]">
-        <SectionCard
-          title="Send feedback"
-          description="Short, specific notes are the most useful. If something felt unclear, mention the page and what you expected to happen instead."
-          tone="rose"
-        >
-          <form onSubmit={handleSubmit} className="grid gap-4">
-            <div className="grid gap-4 md:grid-cols-2">
-              <label className="grid gap-2 text-sm font-semibold text-slate-900">
-                Feedback type
-                <div className="rounded-xl border border-slate-200 bg-white px-3 py-2">
-                  <select value={category} onChange={(event) => setCategory(event.target.value as FeedbackCategory)} className="w-full bg-transparent text-sm font-medium text-slate-900 outline-none">
-                    {CATEGORY_OPTIONS.map((option) => (
-                      <option key={option.value} value={option.value}>
-                        {option.label}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              </label>
-            </div>
+    <main className="grid gap-8">
+      <PageHeader eyebrow="Feedback" align="start" title="Send feedback" description="Short, specific notes are the most useful. If something felt unclear, mention the page and what you expected to happen instead." />
 
-            <label className="grid gap-2 text-sm font-semibold text-slate-900">
+      <section className="grid gap-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(300px,0.85fr)]">
+        <SectionCard>
+          <form onSubmit={handleSubmit} className="grid gap-4">
+            <label className="grid gap-2 text-sm font-semibold text-[color:var(--ink)]">
+              Feedback type
+              <div className="rounded-[var(--radius-sm)] border border-[color:var(--border)] bg-[color:var(--surface-muted)] px-3 py-2">
+                <select value={category} onChange={(event) => setCategory(event.target.value as FeedbackCategory)} className="w-full bg-transparent text-sm font-medium text-[color:var(--ink)] outline-none">
+                  {CATEGORY_OPTIONS.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </label>
+
+            <label className="grid gap-2 text-sm font-semibold text-[color:var(--ink)]">
               Optional reply email
               <input
                 type="email"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
                 placeholder="Leave blank if you do not want a reply"
-                className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-[#5d6bff] focus:ring-2 focus:ring-[#5d6bff]/20"
+                className="rounded-[var(--radius-sm)] border border-[color:var(--border)] bg-[color:var(--surface)] px-3 py-2 text-sm text-[color:var(--ink)] outline-none transition focus:border-[color:var(--brand)] focus:ring-2 focus:ring-[color:var(--brand-soft)]"
               />
             </label>
 
-            <label className="grid gap-2 text-sm font-semibold text-slate-900">
+            <label className="grid gap-2 text-sm font-semibold text-[color:var(--ink)]">
               What happened, what felt weak, or what should change?
               <textarea
                 value={message}
@@ -105,8 +99,8 @@ export default function FeedbackPage() {
                 required
                 minLength={10}
                 rows={8}
-                placeholder="Examples: The explanation after question 3 never clarified why choice B was wrong. The FRQ page needs a clearer way to switch between Foundation and FRQ mode. The graph-slope tool should show one worked example before the calculator."
-                className="rounded-xl border border-slate-200 bg-white px-3 py-3 text-sm text-slate-900 outline-none transition focus:border-[#5d6bff] focus:ring-2 focus:ring-[#5d6bff]/20"
+                placeholder="Examples: The explanation after question 3 never clarified why choice B was wrong. The FRQ page needs a clearer way to switch between Foundation and FRQ mode."
+                className="rounded-[var(--radius-sm)] border border-[color:var(--border)] bg-[color:var(--surface)] px-3 py-3 text-sm text-[color:var(--ink)] outline-none transition focus:border-[color:var(--brand)] focus:ring-2 focus:ring-[color:var(--brand-soft)]"
               />
             </label>
 
@@ -115,28 +109,22 @@ export default function FeedbackPage() {
                 {status === "sending" ? "Sending..." : "Send feedback"}
               </PrimaryButton>
               {statusMessage ? (
-                <div className={`text-sm font-semibold ${status === "success" ? "text-[#5b46d8]" : "text-slate-700"}`}>{statusMessage}</div>
+                <div role="status" className={`text-sm font-semibold ${status === "success" ? "text-[color:var(--success)]" : "text-[color:var(--danger)]"}`}>
+                  {statusMessage}
+                </div>
               ) : null}
             </div>
           </form>
         </SectionCard>
 
-        <SectionCard
-          title="What makes feedback useful"
-          description="You do not need to write a lot. Just make it concrete enough that the problem is reproducible or the request is clear."
-          tone="amber"
-        >
+        <SectionCard title="What makes feedback useful" description="You do not need to write a lot — just make it concrete enough that the problem is reproducible or the request is clear.">
           <SurfaceList>
             {CATEGORY_OPTIONS.map((option) => (
               <SurfaceItem key={option.value}>
-                <h2 className="text-base font-semibold tracking-tight text-slate-950">{option.label}</h2>
-                <p className="mt-2 text-sm leading-6 text-slate-600">{option.description}</p>
+                <h2 className="text-sm font-semibold tracking-tight text-[color:var(--ink)]">{option.label}</h2>
+                <p className="mt-1.5 text-sm leading-6 text-[color:var(--ink-muted)]">{option.description}</p>
               </SurfaceItem>
             ))}
-            <SurfaceItem>
-              <h2 className="text-base font-semibold tracking-tight text-slate-950">Good examples</h2>
-              <p className="mt-2 text-sm leading-6 text-slate-600">"The all-unit MCQ page still felt too bare on mobile." "This FRQ scoring note did not explain why the evidence mattered." "The statistics center needs a starter example before the formula board."</p>
-            </SurfaceItem>
           </SurfaceList>
         </SectionCard>
       </section>

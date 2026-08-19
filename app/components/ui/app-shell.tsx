@@ -10,6 +10,8 @@ type NavItem = {
   matches: (pathname: string) => boolean;
 };
 
+// Grouped by what a student is trying to do, not by every route that exists.
+// MCQ / FRQ / statistics modes all live one click inside "Practice" already.
 const NAV_ITEMS: NavItem[] = [
   {
     href: "/",
@@ -18,28 +20,17 @@ const NAV_ITEMS: NavItem[] = [
   },
   {
     href: "/study",
-    label: "Study",
+    label: "Units",
     matches: (pathname) => pathname.startsWith("/study"),
   },
   {
     href: "/sims/active-recall",
     label: "Practice",
-    matches: (pathname) => pathname.startsWith("/sims/active-recall") && !pathname.startsWith("/sims/active-recall/frq"),
-  },
-  {
-    href: "/sims/mcq",
-    label: "MCQ",
-    matches: (pathname) => pathname.startsWith("/sims/mcq"),
-  },
-  {
-    href: "/sims/frq",
-    label: "FRQ",
-    matches: (pathname) => pathname.startsWith("/sims/frq") || pathname.startsWith("/sims/active-recall/frq"),
-  },
-  {
-    href: "/sims/chi-square",
-    label: "Statistics",
-    matches: (pathname) => pathname.startsWith("/sims/chi-square"),
+    matches: (pathname) =>
+      pathname.startsWith("/sims/active-recall") ||
+      pathname.startsWith("/sims/mcq") ||
+      pathname.startsWith("/sims/frq") ||
+      pathname.startsWith("/sims/chi-square"),
   },
   {
     href: "/sims/simulations",
@@ -55,10 +46,10 @@ const NAV_ITEMS: NavItem[] = [
 
 function navLinkClass(isActive: boolean) {
   if (isActive) {
-    return "accent-gradient rounded-full px-4 py-2 text-sm font-semibold text-white shadow-sm";
+    return "accent-gradient rounded-full px-3.5 py-2 text-sm font-semibold text-white shadow-[var(--shadow-sm)]";
   }
 
-  return "rounded-full border border-transparent px-4 py-2 text-sm font-medium text-slate-600 transition hover:border-slate-200 hover:bg-white hover:text-slate-900";
+  return "rounded-full px-3.5 py-2 text-sm font-medium text-[color:var(--ink-muted)] transition hover:bg-[color:var(--surface-muted)] hover:text-[color:var(--ink)]";
 }
 
 export function AppShell({ children }: { children: ReactNode }) {
@@ -66,55 +57,60 @@ export function AppShell({ children }: { children: ReactNode }) {
 
   return (
     <div className="min-h-screen">
-      <header className="sticky top-0 z-50 border-b border-[color:var(--border)] bg-[color:var(--surface)]/90 backdrop-blur">
-        <div className="mx-auto flex w-full max-w-[1400px] items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
-          <div className="min-w-0">
-            <Link href="/" className="block">
-              <div className="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500">Padilla Biology</div>
-              <div className="mt-1 text-lg font-semibold tracking-tight text-slate-950">AP Biology study platform</div>
-            </Link>
-          </div>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-[60] focus:rounded-[var(--radius-sm)] focus:bg-[color:var(--brand)] focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
+      >
+        Skip to content
+      </a>
 
-          <nav className="hidden items-center gap-2 lg:flex" aria-label="Primary navigation">
+      <header className="sticky top-0 z-50 border-b border-[color:var(--border)] bg-[color:var(--bg)]/95 backdrop-blur">
+        <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between gap-6 px-4 py-3.5 sm:px-6 lg:px-8">
+          <Link href="/" className="flex items-center gap-2.5">
+            <span
+              className="accent-gradient flex h-8 w-8 shrink-0 items-center justify-center rounded-[var(--radius-sm)] text-base shadow-[var(--shadow-sm)]"
+              aria-hidden="true"
+            >
+              🧬
+            </span>
+            <div className="text-base font-semibold tracking-tight text-[color:var(--ink)]" style={{ fontFamily: "var(--font-serif)" }}>
+              Padilla Biology
+            </div>
+          </Link>
+
+          <nav className="hidden items-center gap-1 md:flex" aria-label="Primary navigation">
             {NAV_ITEMS.map((item) => (
               <Link key={item.href} href={item.href} className={navLinkClass(item.matches(pathname))}>
                 {item.label}
               </Link>
             ))}
           </nav>
-
-          <div className="hidden shrink-0 items-center gap-3 xl:flex">
-            <div className="accent-gradient rounded-full px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-white">
-              Built for AP Bio students
-            </div>
-            <div className="rounded-full border border-slate-300 bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-600">
-              Updated content and explanations
-            </div>
-          </div>
         </div>
 
-        <div className="mx-auto flex w-full max-w-[1400px] gap-2 overflow-x-auto px-4 pb-4 sm:px-6 lg:hidden lg:px-8" aria-label="Mobile navigation">
+        <nav
+          className="flex w-full gap-1.5 overflow-x-auto border-t border-[color:var(--border)] px-4 py-2 sm:px-6 md:hidden"
+          aria-label="Primary navigation"
+        >
           {NAV_ITEMS.map((item) => (
             <Link key={item.href} href={item.href} className={`${navLinkClass(item.matches(pathname))} shrink-0`}>
               {item.label}
             </Link>
           ))}
-        </div>
+        </nav>
       </header>
 
-      <div className="mx-auto w-full max-w-[1400px] px-4 py-6 sm:px-6 sm:py-8 lg:px-8">{children}</div>
+      <div id="main-content" className="mx-auto w-full max-w-[1200px] px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
+        {children}
+      </div>
 
-      <footer className="border-t border-[color:var(--border)] bg-white/80">
-        <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-3 px-4 py-5 text-sm text-slate-600 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-          <div>
-            Built by Justin A Padilla. Designed for fast AP Biology review, targeted practice, and clearer explanations.
-          </div>
-          <div className="flex flex-wrap items-center gap-4 text-sm">
-            <Link href="/sims/feedback" className="font-medium text-slate-700 transition hover:text-[color:var(--accent-text)]">
+      <footer className="border-t border-[color:var(--border)]">
+        <div className="mx-auto flex w-full max-w-[1200px] flex-col gap-2 px-4 py-6 text-sm text-[color:var(--ink-muted)] sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+          <p>Built by Justin A Padilla for AP Biology review and practice.</p>
+          <div className="flex flex-wrap items-center gap-4">
+            <Link href="/sims/feedback" className="font-medium text-[color:var(--brand-dark)] hover:underline">
               Share feedback
             </Link>
-            <span>Updated 2026</span>
-            <span>Practice only; always verify class-specific expectations with your teacher</span>
+            <span>Practice only — confirm class-specific expectations with your teacher.</span>
           </div>
         </div>
       </footer>

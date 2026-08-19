@@ -1,109 +1,107 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import reviewData from "./all-units-review-notes.json";
-import {
-	PageHeader,
-	SectionCard,
-} from "../components/ui/study-kit";
+import { PageHeader, SectionCard } from "../components/ui/study-kit";
 
-function buttonClass(isActive: boolean) {
-	if (isActive) {
-		return "accent-gradient rounded-2xl px-4 py-3 text-left text-sm font-semibold text-white shadow-sm transition hover:opacity-95";
-	}
+function unitButtonClass(isActive: boolean) {
+  if (isActive) {
+    return "rounded-[var(--radius-md)] bg-[color:var(--brand)] px-4 py-3 text-left text-sm font-semibold text-white";
+  }
 
-	return "rounded-2xl border border-slate-300 bg-slate-50 px-4 py-3 text-left text-sm font-semibold text-slate-700 shadow-sm transition hover:border-slate-400 hover:bg-slate-100";
+  return "rounded-[var(--radius-md)] border border-[color:var(--border)] bg-[color:var(--surface)] px-4 py-3 text-left text-sm font-semibold text-[color:var(--ink)] transition hover:border-[color:var(--border-strong)] hover:bg-[color:var(--surface-muted)]";
+}
+
+function getUnitFromParam(param: string | null) {
+  if (!param) return null;
+  const match = reviewData.units.find((unit) => unit.unit === `Unit ${param}` || unit.unit.replace(/\D/g, "") === param.replace(/\D/g, ""));
+  return match ?? null;
+}
+
+function StudyPageContent() {
+  const searchParams = useSearchParams();
+  const [selectedUnitNumber, setSelectedUnitNumber] = useState(
+    () => getUnitFromParam(searchParams.get("unit"))?.unit ?? reviewData.units[0]?.unit ?? "Unit 1",
+  );
+
+  useEffect(() => {
+    const fromParam = getUnitFromParam(searchParams.get("unit"));
+    if (fromParam && fromParam.unit !== selectedUnitNumber) {
+      setSelectedUnitNumber(fromParam.unit);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams]);
+
+  const selectedUnit = reviewData.units.find((unit) => unit.unit === selectedUnitNumber) ?? reviewData.units[0];
+
+  return (
+    <div className="grid gap-8">
+      <PageHeader
+        eyebrow="Study guides"
+        align="start"
+        title="AP Biology study guides"
+        description={`Select a unit to load its review notes, common mix-ups, and must-know terms. ${reviewData.source}`}
+      />
+
+      <section>
+        <h2 className="sr-only">Choose a unit</h2>
+        <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+          {reviewData.units.map((unit) => {
+            const isActive = unit.unit === selectedUnit.unit;
+            return (
+              <button
+                key={unit.unit}
+                type="button"
+                className={unitButtonClass(isActive)}
+                onClick={() => setSelectedUnitNumber(unit.unit)}
+                aria-pressed={isActive}
+              >
+                <div className={`text-xs uppercase tracking-[0.12em] ${isActive ? "text-white/80" : "text-[color:var(--ink-faint)]"}`}>{unit.unit}</div>
+                <div className="mt-1 text-[15px] leading-5">{unit.title}</div>
+              </button>
+            );
+          })}
+        </div>
+      </section>
+
+      <SectionCard title={`${selectedUnit.unit}: ${selectedUnit.title}`} description="Core review notes for this unit.">
+        <ul className="grid gap-2.5 pl-5 text-[15px] leading-7 text-[color:var(--ink)] marker:text-[color:var(--brand)]" style={{ listStyleType: "disc" }}>
+          {selectedUnit.review_notes.map((note) => (
+            <li key={note}>{note}</li>
+          ))}
+        </ul>
+      </SectionCard>
+
+      <div className="grid gap-6 lg:grid-cols-2">
+        <SectionCard title="Don't mix these up" description="High-probability confusions for this unit.">
+          <ul className="grid gap-2.5">
+            {selectedUnit.dont_mix_these_up.map((item) => (
+              <li key={item} className="rounded-[var(--radius-md)] border border-[color:var(--border)] bg-[color:var(--surface-muted)] px-4 py-2.5 text-sm leading-6 text-[color:var(--ink)]">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </SectionCard>
+
+        <SectionCard title="Must-know terms" description="Quick vocabulary scan before you start practicing.">
+          <div className="flex flex-wrap gap-2">
+            {selectedUnit.must_know_terms.map((term) => (
+              <span key={term} className="rounded-full border border-[color:var(--border)] bg-[color:var(--surface)] px-3 py-1.5 text-sm font-medium text-[color:var(--ink)]">
+                {term}
+              </span>
+            ))}
+          </div>
+        </SectionCard>
+      </div>
+    </div>
+  );
 }
 
 export default function StudyPage() {
-	const [selectedUnitNumber, setSelectedUnitNumber] = useState(reviewData.units[0]?.unit ?? "Unit 1");
-
-	const selectedUnit = reviewData.units.find((unit) => unit.unit === selectedUnitNumber) ?? reviewData.units[0];
-
-	return (
-		<div className="grid gap-6">
-			<PageHeader
-				eyebrow="Study"
-				title="AP Biology Study Guides"
-				description={`Select a unit to load the matching study guide from the course review set. ${reviewData.source}`}
-			/>
-
-			<SectionCard
-				title="Choose a unit"
-				description="Use the buttons below to switch the study guide instantly."
-				tone="accent"
-			>
-				<div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-					{reviewData.units.map((unit) => {
-						const isActive = unit.unit === selectedUnit.unit;
-
-						return (
-							<button
-								key={unit.unit}
-								type="button"
-								className={buttonClass(isActive)}
-								onClick={() => setSelectedUnitNumber(unit.unit)}
-							>
-								<div className="text-xs uppercase tracking-[0.16em] opacity-80">{unit.unit}</div>
-								<div className="mt-1 text-base leading-5">{unit.title}</div>
-								<div className="mt-2 text-xs font-medium opacity-80">MCQ weight: {unit.exam_weight_mcq}</div>
-							</button>
-						);
-					})}
-				</div>
-			</SectionCard>
-
-			<SectionCard
-				title={`${selectedUnit.unit}: ${selectedUnit.title}`}
-				description="Core review notes pulled directly from the selected unit guide."
-				tone="slate"
-			>
-				<ol className="grid gap-5">
-					<li className="rounded-[1.2rem] border border-slate-200 bg-white p-5 shadow-sm">
-						<strong className="text-base tracking-tight text-slate-950">
-							{selectedUnit.unit}. {selectedUnit.title}
-						</strong>
-						<ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-700 marker:text-amber-600 sm:text-base">
-							{selectedUnit.review_notes.map((note) => (
-								<li key={note}>{note}</li>
-							))}
-						</ul>
-					</li>
-				</ol>
-			</SectionCard>
-
-			<div className="grid gap-6 xl:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)]">
-				<SectionCard
-					title="Don't Mix These Up"
-					description="High-probability confusions for the selected unit."
-					tone="slate"
-				>
-					<ul className="grid gap-3 text-sm leading-7 text-slate-700 sm:text-base">
-						{selectedUnit.dont_mix_these_up.map((item) => (
-							<li key={item} className="rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
-								{item}
-							</li>
-						))}
-					</ul>
-				</SectionCard>
-
-				<SectionCard
-					title="Must-Know Terms"
-					description="Quick vocabulary scan before you jump into questions."
-					tone="slate"
-				>
-					<div className="flex flex-wrap gap-2">
-						{selectedUnit.must_know_terms.map((term) => (
-							<span
-								key={term}
-								className="rounded-full border border-slate-300 bg-white px-3 py-2 text-sm font-medium text-slate-700 shadow-sm"
-							>
-								{term}
-							</span>
-						))}
-					</div>
-				</SectionCard>
-			</div>
-		</div>
-	);
+  return (
+    <Suspense fallback={<div className="grid gap-8"><PageHeader eyebrow="Study guides" align="start" title="AP Biology study guides" /></div>}>
+      <StudyPageContent />
+    </Suspense>
+  );
 }

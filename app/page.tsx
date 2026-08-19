@@ -1,249 +1,153 @@
-import Image from "next/image";
+import Link from "next/link";
 import {
-  FeatureCard,
-  ModeBadge,
   PageHeader,
   PrimaryLink,
   SecondaryLink,
-  SectionCard,
-  SurfaceItem,
-  SurfaceList,
 } from "./components/ui/study-kit";
+
+type UnitTone = "accent" | "blue" | "teal" | "amber" | "rose" | "green";
+
+const UNITS: { n: number; title: string; weight: string; icon: string; tone: UnitTone }[] = [
+  { n: 1, title: "Chemistry of Life", weight: "8–11%", icon: "🧪", tone: "accent" },
+  { n: 2, title: "Cells", weight: "10–13%", icon: "🔬", tone: "blue" },
+  { n: 3, title: "Cellular Energetics", weight: "12–16%", icon: "⚡", tone: "amber" },
+  { n: 4, title: "Cell Communication and Cell Cycle", weight: "10–15%", icon: "🔄", tone: "teal" },
+  { n: 5, title: "Heredity", weight: "8–11%", icon: "🧬", tone: "rose" },
+  { n: 6, title: "Gene Expression and Regulation", weight: "12–16%", icon: "📖", tone: "green" },
+  { n: 7, title: "Natural Selection", weight: "13–20%", icon: "🦎", tone: "accent" },
+  { n: 8, title: "Ecology", weight: "10–15%", icon: "🌎", tone: "blue" },
+];
+
+const TONE_ACCENT: Record<UnitTone, string> = {
+  accent: "var(--brand)",
+  blue: "var(--info)",
+  teal: "var(--experiment)",
+  amber: "var(--foundation)",
+  rose: "var(--statistics)",
+  green: "var(--success)",
+};
+
+const TONE_SOFT: Record<UnitTone, string> = {
+  accent: "var(--brand-soft)",
+  blue: "var(--info-soft)",
+  teal: "var(--experiment-soft)",
+  amber: "var(--foundation-soft)",
+  rose: "var(--statistics-soft)",
+  green: "var(--success-soft)",
+};
 
 const STUDY_PATH = [
   {
-    step: "01",
-    title: "Repair one unit first",
-    description: "Use unit MCQs when one chapter is weak, a quiz is close, or you need to rebuild confidence fast.",
+    step: "1",
+    title: "Review a unit",
+    description: "Read the unit's key concepts and terms before you practice, or jump straight in if you're already comfortable with the content.",
   },
   {
-    step: "02",
-    title: "Switch into mixed AP pressure",
-    description: "Move to all-unit review once single-unit work feels steady and you want harder exam-style decisions.",
+    step: "2",
+    title: "Practice with explanations",
+    description: "Work through multiple-choice and free-response questions. Every choice has an explanation, not just the correct one.",
   },
   {
-    step: "03",
-    title: "Finish with writing and math",
-    description: "Use FRQs and the statistics center when you want transfer, justification, and data interpretation instead of recognition.",
-  },
-];
-
-const START_POINTS = [
-  {
-    eyebrow: "Best first move",
-    title: "Unit MCQ review",
-    description: "Practice unit-focused MCQs to strengthen one chapter.",
-    href: "/sims/mcq",
-    tone: "accent" as const,
-    preview: (
-      <div className="rounded-[1.1rem] border border-slate-200 bg-white p-4 shadow-sm">
-        <div className="inline-flex items-center rounded-full border border-[color:var(--accent-text)]/20 bg-slate-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-[color:var(--accent-text)]">
-          Unit 2 Preview
-        </div>
-        <p className="mt-3 text-sm font-semibold leading-6 text-slate-950">
-          Which cell structure is most directly responsible for modifying, sorting, and packaging proteins for secretion?
-        </p>
-        <div className="mt-3 grid gap-2">
-          {[
-            "A. Ribosome",
-            "B. Golgi apparatus",
-            "C. Lysosome",
-            "D. Cytoskeleton",
-          ].map((choice) => (
-            <div key={choice} className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-700">
-              {choice}
-            </div>
-          ))}
-        </div>
-      </div>
-    ),
-    cta: "Start focused review",
-  },
-  {
-    eyebrow: "Mixed course review",
-    title: "All-unit MCQ review",
-    description: "Mixed-unit practice with exam-style multiple-choice questions.",
-    href: "/sims/mcq?unit=all",
-    tone: "accent" as const,
-    preview: (
-      <div className="rounded-[1.1rem] border border-slate-200 bg-white p-4 shadow-sm">
-        <div className="inline-flex items-center rounded-full border border-[color:var(--accent-text)]/20 bg-slate-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-[color:var(--accent-text)]">
-          Mixed AP Preview
-        </div>
-        <p className="mt-3 text-sm font-semibold leading-6 text-slate-950">
-          A population shows logistic growth and then levels near carrying capacity. Which factor most likely explains the plateau?
-        </p>
-        <div className="mt-3 grid gap-2">
-          {[
-            "A. Unlimited resources",
-            "B. Increased mutation rate",
-            "C. Density-dependent limits",
-            "D. Elimination of competition",
-          ].map((choice) => (
-            <div key={choice} className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-700">
-              {choice}
-            </div>
-          ))}
-        </div>
-      </div>
-    ),
-    cta: "Open mixed review",
-  },
-  {
-    eyebrow: "Written reasoning",
-    title: "FRQ practice",
-    description: "Free-response practice with image stimuli and structured prompts.",
-    href: "/sims/frq",
-    tone: "accent" as const,
-    preview: (
-      <div className="overflow-hidden rounded-[1.1rem] border border-slate-200 bg-white shadow-sm">
-        <div className="border-b border-slate-200 bg-slate-50 p-3">
-          <div className="mb-2 inline-flex items-center rounded-full border border-[color:var(--accent-text)]/20 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-[color:var(--accent-text)]">
-            Image stimulus
-          </div>
-          <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
-            <Image
-              src="/images/unit5_pedigree_autosomal_dominant.png"
-              alt="Preview image for free-response practice"
-              width={960}
-              height={640}
-              className="h-40 w-full object-contain bg-white"
-            />
-          </div>
-        </div>
-        <div className="grid gap-3 p-4">
-          <div className="inline-flex items-center rounded-full border border-[color:var(--accent-text)]/20 bg-slate-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-[color:var(--accent-text)]">
-            FRQ Preview
-          </div>
-          <p className="text-sm font-semibold leading-6 text-slate-950">
-            A pedigree tracks an inherited trait across multiple generations.
-          </p>
-          <div className="grid gap-2 text-sm leading-6 text-slate-700">
-            <div className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">A. Identify the most likely inheritance pattern shown in the pedigree.</div>
-            <div className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">B. Justify your conclusion using evidence from the individuals shown.</div>
-          </div>
-        </div>
-      </div>
-    ),
-    cta: "Start FRQ work",
-  },
-  {
-    eyebrow: "Quantitative review",
-    title: "Math and statistics center",
-    description: "Work on chi-square, Hardy-Weinberg, and other quantitative tools.",
-    href: "/sims/chi-square",
-    tone: "accent" as const,
-    previewImageSrc: "/images/unit7_hardy_weinberg_bars.png",
-    previewImageAlt: "Preview image for the math and statistics center",
-    cta: "Open statistics tools",
-  },
-];
-
-const MODE_ITEMS = [
-  {
-    label: "Foundation",
-    tone: "amber" as const,
-    description: "Use this when you need clean definitions, core concepts, and faster recall before harder AP-style work.",
-  },
-  {
-    label: "AP-Style",
-    tone: "blue" as const,
-    description: "Use this for conceptual multiple-choice with realistic distractors and the kind of elimination pressure that shows up on tests.",
-  },
-  {
-    label: "Experiment",
-    tone: "teal" as const,
-    description: "Use this for data interpretation, setups, figures, and the reading load that trips students up on exam day.",
+    step: "3",
+    title: "Track what's weak",
+    description: "Your dashboard shows accuracy by unit and flags the topics you keep missing, so you know what to review next.",
   },
 ];
 
 export default function Home() {
   return (
-    <main className="grid gap-8 lg:gap-10">
+    <main className="grid gap-14">
       <PageHeader
-        title="The Complete AP Bio Study Tool"
+        eyebrow="AP Biology"
         align="start"
+        title="Study AP Biology unit by unit, then practice until it sticks."
+        description="Pick a unit, get real explanations on every question, and watch your weak spots turn into strengths."
         actions={
           <>
-            <PrimaryLink href="/sims/active-recall">Open study dashboard</PrimaryLink>
-            <SecondaryLink href="/sims/chi-square">Open statistics center</SecondaryLink>
+            <PrimaryLink href="/sims/active-recall">Start practicing</PrimaryLink>
+            <SecondaryLink href="/study">Browse the units</SecondaryLink>
           </>
-        }
-        background={
-          <Image
-            src="/icon.png"
-            alt="A logo background"
-            width={800}
-            height={800}
-            className="pointer-events-none opacity-10 h-[20rem] w-[20rem] sm:h-[24rem] sm:w-[24rem] md:h-[28rem] md:w-[28rem] object-contain translate-x-12 -translate-y-6"
-          />
         }
       />
 
-      <SectionCard
-        title="Choose your starting point"
-        description="Each route is designed for a different kind of study day, so you can start where your preparation is actually breaking down."
-        tone="blue"
-      >
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {START_POINTS.map((item) => (
-            <FeatureCard key={item.href} {...item} />
+      <section>
+        <div className="mb-5 flex items-baseline justify-between gap-4">
+          <h2 className="text-xl font-semibold tracking-tight text-[color:var(--ink)]" style={{ fontFamily: "var(--font-serif)" }}>
+            Course units
+          </h2>
+          <Link href="/study" className="text-sm font-semibold text-[color:var(--brand-dark)] hover:underline">
+            View study guides &rarr;
+          </Link>
+        </div>
+        <div className="grid gap-2.5 sm:grid-cols-2">
+          {UNITS.map((unit) => (
+            <Link
+              key={unit.n}
+              href={`/study?unit=${unit.n}`}
+              className="pop-hover group flex items-center gap-3.5 rounded-[var(--radius-md)] border border-[color:var(--border)] bg-[color:var(--surface)] px-4 py-3.5 shadow-[var(--shadow-sm)] hover:border-[color:var(--border-strong)]"
+            >
+              <span
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-lg"
+                style={{ background: TONE_SOFT[unit.tone] }}
+                aria-hidden="true"
+              >
+                {unit.icon}
+              </span>
+              <span className="min-w-0 flex-1">
+                <span className="block text-[11px] font-semibold uppercase tracking-[0.1em]" style={{ color: TONE_ACCENT[unit.tone] }}>
+                  Unit {unit.n}
+                </span>
+                <span className="block truncate text-[15px] font-semibold text-[color:var(--ink)]">{unit.title}</span>
+              </span>
+              <span className="shrink-0 text-xs font-medium text-[color:var(--ink-faint)]">{unit.weight}</span>
+            </Link>
           ))}
         </div>
-      </SectionCard>
-
-      <section className="grid gap-4 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
-        <SectionCard
-          title="How the study system works"
-          description="The strongest results come from using the tools in sequence instead of treating them like disconnected tabs."
-          tone="slate"
-        >
-          <SurfaceList className="md:grid-cols-3">
-            {STUDY_PATH.map((item) => (
-              <SurfaceItem key={item.step}>
-                <div className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Step {item.step}</div>
-                <div className="mt-2 text-lg font-semibold tracking-tight text-slate-950">{item.title}</div>
-                <p className="mt-2 text-sm leading-6 text-slate-600">{item.description}</p>
-              </SurfaceItem>
-            ))}
-          </SurfaceList>
-        </SectionCard>
-
-        <SectionCard
-          title="What each MCQ mode is for"
-          description="The labels stay consistent across the site so students know what kind of thinking a session is asking for."
-          tone="amber"
-        >
-          <SurfaceList>
-            {MODE_ITEMS.map((item) => (
-              <SurfaceItem key={item.label}>
-                <ModeBadge label={item.label} tone={item.tone} />
-                <p className="mt-3 text-sm leading-6 text-slate-600">{item.description}</p>
-              </SurfaceItem>
-            ))}
-          </SurfaceList>
-        </SectionCard>
       </section>
 
-      <section className="grid gap-4 lg:grid-cols-2">
-        <FeatureCard
-          eyebrow="Interactive model"
-          title="Explore the cell simulation"
-          description="Walk through organelles, pathways, and central dogma interactions inside a full-cell simulation when you need structure, not just flashcard-style reps."
-          detail="Useful when visual organization helps content stick."
+      <section className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+        <div>
+          <h2 className="mb-5 text-xl font-semibold tracking-tight text-[color:var(--ink)]" style={{ fontFamily: "var(--font-serif)" }}>
+            How to use this site
+          </h2>
+          <ol className="grid gap-5">
+            {STUDY_PATH.map((item) => (
+              <li key={item.step} className="flex gap-4">
+                <span
+                  className="accent-gradient flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-semibold shadow-[var(--shadow-sm)]"
+                  aria-hidden="true"
+                >
+                  {item.step}
+                </span>
+                <div>
+                  <div className="font-semibold text-[color:var(--ink)]">{item.title}</div>
+                  <p className="mt-1 text-sm leading-6 text-[color:var(--ink-muted)]">{item.description}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        <Link
           href="/sims/simulations"
-          tone="slate"
-          cta="Open simulation"
-        />
-        <FeatureCard
-          eyebrow="Help improve the platform"
-          title="Send feedback or request a change"
-          description="If a page is unclear, a question feels weak, or a tool is missing, use the feedback route so the platform can keep improving around real study pain points."
-          detail="Short notes, bug reports, and feature ideas are all useful."
-          href="/sims/feedback"
-          tone="rose"
-          cta="Share feedback"
-        />
+          className="pop-hover group relative flex flex-col justify-between overflow-hidden rounded-[var(--radius-lg)] border border-[color:var(--border)] bg-[color:var(--surface)] p-6 shadow-[var(--shadow-sm)] hover:border-[color:var(--border-strong)]"
+        >
+          <div className="blob-decoration" aria-hidden="true" />
+          <div className="relative z-[1]">
+            <p className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-[color:var(--experiment)]">
+              🧫 Interactive model
+            </p>
+            <p className="mt-2 text-xl font-semibold tracking-tight text-[color:var(--ink)]" style={{ fontFamily: "var(--font-serif)" }}>
+              Explore a full cell simulation
+            </p>
+            <p className="mt-3 text-sm leading-6 text-[color:var(--ink-muted)]">
+              Walk through organelles, the secretory pathway, and central dogma interactions when a diagram alone isn&apos;t enough.
+            </p>
+          </div>
+          <p className="relative z-[1] mt-6 text-sm font-semibold text-[color:var(--brand-dark)] transition group-hover:text-[color:var(--brand)]">
+            Open the simulation &rarr;
+          </p>
+        </Link>
       </section>
     </main>
   );
