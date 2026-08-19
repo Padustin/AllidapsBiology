@@ -14,10 +14,13 @@ function gaussian(x: number, center: number, sigmaLow: number, sigmaHigh: number
 }
 
 // Structural stability is a different thing from reaction rate: cold slows an enzyme down
-// without unfolding it, but heat above ~55°C and extreme pH break the bonds holding its
-// shape together — and unlike a slow rate, that structural damage doesn't reverse.
+// without unfolding it, but heat above ~55°C and extreme pH break the bonds holding its shape
+// together. (Real denaturation is usually permanent — this simulator lets it re-fold when
+// conditions return to normal so you can keep exploring, which the copy below calls out.)
 function foldStability(temperature: number, ph: number) {
-  const tempStability = temperature <= 55 ? 1 : gaussian(temperature, 55, 1, 11);
+  // Tuned so the "denatured" state (foldedness < 0.15, see isDenatured below) actually kicks
+  // in right around 70°C at neutral pH, matching the copy on the temperature slider.
+  const tempStability = temperature <= 55 ? 1 : gaussian(temperature, 55, 1, 7.7);
   const phStability = gaussian(ph, 7, 2.5, 2.5);
   return tempStability * phStability;
 }
@@ -43,33 +46,35 @@ function smoothClosedPath(points: readonly Point[]): string {
   return `${d}Z`;
 }
 
-// The enzyme's folded outline: a kidney-bean shape with a concave notch (the active site).
+// The enzyme's folded outline: a kidney-bean shape with a deep, obvious pocket (the active
+// site) carved into its right side, between two lobes — point 5 is the base of that pocket.
+const ACTIVE_SITE = [146, 98] as const;
 const ENZYME_FOLDED_POINTS: readonly Point[] = [
-  [60, 100],
-  [85, 40],
-  [140, 8],
-  [195, 20],
-  [222, 65],
-  [178, 96],
-  [222, 135],
-  [195, 178],
-  [140, 195],
-  [85, 160],
+  [56, 100],
+  [80, 38],
+  [138, 6],
+  [196, 22],
+  [224, 63],
+  ACTIVE_SITE,
+  [224, 137],
+  [196, 178],
+  [138, 194],
+  [80, 162],
 ];
 
-// Where each point flies apart toward as the protein unravels — pulls the active-site notch
-// open and spreads the whole outline into a loose, irregular tangle.
+// Where each point flies apart toward as the protein unravels — pulls the active-site pocket
+// shut and spreads the whole outline into a loose, irregular tangle.
 const ENZYME_DENATURE_OFFSET: readonly Point[] = [
-  [-30, 10],
-  [-14, -34],
-  [10, -46],
-  [40, -30],
-  [70, -8],
-  [58, 46],
-  [66, 18],
-  [42, 52],
-  [-6, 44],
-  [-34, 30],
+  [-32, 10],
+  [-16, -36],
+  [8, -50],
+  [42, -32],
+  [72, -8],
+  [78, 50],
+  [72, 20],
+  [44, 54],
+  [-6, 46],
+  [-36, 32],
 ];
 
 function enzymeOutline(foldedness: number): string {
@@ -80,6 +85,11 @@ function enzymeOutline(foldedness: number): string {
   });
   return smoothClosedPath(points);
 }
+
+// A rounded wedge that tapers to a point — shaped so it visually plugs into the pocket's
+// V-notch, the way a puzzle piece (or a real substrate's complementary shape) fits a socket.
+// Drawn pointing left (toward negative x) so it can dock nose-first into the active site.
+const WEDGE_PATH = "M -15 0 Q -9 -11 4 -10 Q 15 -8 15 0 Q 15 8 4 10 Q -9 11 -15 0 Z";
 
 function useKineticsModel(substrate: number, temperature: number, ph: number, inhibitor: InhibitorType) {
   return useMemo(() => {
@@ -106,21 +116,39 @@ function EnzymeAnimation({ inhibitor, pulseDuration, foldedness }: { inhibitor: 
   const outlineD = enzymeOutline(foldedness);
   const bandOpacity = Math.max(0, foldedness - 0.2) * 0.3;
 
+  // The active site isn't a fixed point — it's wherever ENZYME_FOLDED_POINTS[5] (the pocket
+  // vertex) actually is right now, which drifts as the outline unravels. Tracking it live keeps
+  // the substrate, socket outline, inhibitor markers, and labels all honest about where the
+  // pocket really is, even mid-unfold, instead of quietly detaching from the real shape.
+  const t = 1 - Math.max(0, Math.min(1, foldedness));
+  const [siteX, siteY] = [ACTIVE_SITE[0] + ENZYME_DENATURE_OFFSET[5][0] * t, ACTIVE_SITE[1] + ENZYME_DENATURE_OFFSET[5][1] * t];
+
+  const substrateAnimation = isDenatured ? "enz-substrate-bounce" : inhibitor === "competitive" ? "enz-substrate-competitive" : "enz-substrate";
+
   return (
-    <div key={`${inhibitor}-${pulseDuration.toFixed(2)}-${isDenatured}`}>
+    <div key={`${inhibitor}-${isDenatured}`}>
       <style>{`
         @keyframes enz-substrate {
-          0% { transform: translateX(0); opacity: 1; }
-          40% { transform: translateX(150px); opacity: 1; }
-          48% { transform: translateX(158px); opacity: 1; }
-          54% { transform: translateX(158px); opacity: 0; }
-          100% { transform: translateX(158px); opacity: 0; }
+          0% { transform: translate(0px, 0px) rotate(0deg); opacity: 1; }
+          38% { transform: translate(-108px, 0px) rotate(0deg); opacity: 1; }
+          46% { transform: translate(-134px, 0px) rotate(0deg); opacity: 1; }
+          54% { transform: translate(-134px, 0px) rotate(0deg); opacity: 0; }
+          100% { transform: translate(-134px, 0px) rotate(0deg); opacity: 0; }
+        }
+        @keyframes enz-substrate-competitive {
+          0% { transform: translate(0px, 0px) rotate(0deg); opacity: 1; }
+          22% { transform: translate(-64px, 0px) rotate(0deg); opacity: 1; }
+          32% { transform: translate(-86px, 18px) rotate(-18deg); opacity: 1; }
+          40% { transform: translate(-108px, 6px) rotate(6deg); opacity: 1; }
+          46% { transform: translate(-134px, 0px) rotate(0deg); opacity: 1; }
+          54% { transform: translate(-134px, 0px) rotate(0deg); opacity: 0; }
+          100% { transform: translate(-134px, 0px) rotate(0deg); opacity: 0; }
         }
         @keyframes enz-substrate-bounce {
-          0% { transform: translateX(0); opacity: 1; }
-          45% { transform: translateX(110px); opacity: 1; }
-          55% { transform: translateX(90px); opacity: 1; }
-          100% { transform: translateX(0); opacity: 1; }
+          0% { transform: translate(0px, 0px); opacity: 1; }
+          42% { transform: translate(-70px, 0px); opacity: 1; }
+          55% { transform: translate(-46px, 6px); opacity: 1; }
+          100% { transform: translate(0px, 0px); opacity: 1; }
         }
         @keyframes enz-flash {
           0%, 44% { opacity: 0; }
@@ -129,16 +157,16 @@ function EnzymeAnimation({ inhibitor, pulseDuration, foldedness }: { inhibitor: 
           100% { opacity: 0; }
         }
         @keyframes enz-product-a {
-          0%, 54% { transform: translate(158px, 0); opacity: 0; }
-          62% { opacity: 1; transform: translate(168px, -8px); }
-          100% { transform: translate(255px, -40px); opacity: 0; }
+          0%, 54% { transform: translate(0px, 0px); opacity: 0; }
+          62% { opacity: 1; transform: translate(14px, -10px); }
+          100% { transform: translate(150px, -70px); opacity: 0; }
         }
         @keyframes enz-product-b {
-          0%, 54% { transform: translate(158px, 0); opacity: 0; }
-          62% { opacity: 1; transform: translate(168px, 8px); }
-          100% { transform: translate(255px, 40px); opacity: 0; }
+          0%, 54% { transform: translate(0px, 0px); opacity: 0; }
+          62% { opacity: 1; transform: translate(14px, 10px); }
+          100% { transform: translate(150px, 70px); opacity: 0; }
         }
-        .enz-substrate { animation: ${isDenatured ? "enz-substrate-bounce" : "enz-substrate"} ${isDenatured ? Math.max(pulseDuration, 1.6) : pulseDuration}s ease-in-out infinite; }
+        .enz-substrate { animation: ${substrateAnimation} ${isDenatured ? Math.max(pulseDuration, 1.6) : pulseDuration}s ease-in-out infinite; }
         .enz-flash { animation: enz-flash ${pulseDuration}s ease-in-out infinite; ${isDenatured ? "display: none;" : ""} }
         .enz-product-a { animation: enz-product-a ${pulseDuration}s ease-in-out infinite; ${isDenatured ? "display: none;" : ""} }
         .enz-product-b { animation: enz-product-b ${pulseDuration}s ease-in-out infinite; ${isDenatured ? "display: none;" : ""} }
@@ -161,7 +189,7 @@ function EnzymeAnimation({ inhibitor, pulseDuration, foldedness }: { inhibitor: 
             <stop offset="55%" stopColor="#d8d2c4" />
             <stop offset="100%" stopColor="#a9a08c" />
           </radialGradient>
-          <radialGradient id="enz-substrate-grad" cx="32%" cy="28%" r="85%">
+          <radialGradient id="enz-substrate-grad" cx="35%" cy="30%" r="90%">
             <stop offset="0%" stopColor="#a9c8f0" />
             <stop offset="100%" stopColor="#2c4f8f" />
           </radialGradient>
@@ -179,8 +207,8 @@ function EnzymeAnimation({ inhibitor, pulseDuration, foldedness }: { inhibitor: 
           </radialGradient>
         </defs>
 
-        {/* enzyme body: a folded kidney-bean shape with a concave active-site notch that
-            unravels toward a loose, spread-out tangle as foldedness drops toward 0 */}
+        {/* enzyme body with a deep active-site pocket carved into its right side, plus a few
+            ribbon bands to suggest secondary structure */}
         <path
           d={outlineD}
           fill={isDenatured ? "url(#enz-body-denatured)" : "url(#enz-body)"}
@@ -189,12 +217,26 @@ function EnzymeAnimation({ inhibitor, pulseDuration, foldedness }: { inhibitor: 
           filter="url(#enz-shadow)"
           style={{ transition: "fill 0.3s ease" }}
         />
-        <path d="M78 55 C110 40, 145 42, 172 58" fill="none" stroke="#2c3f38" strokeWidth="2" opacity={bandOpacity} strokeLinecap="round" />
-        <path d="M72 100 C105 88, 145 88, 178 100" fill="none" stroke="#2c3f38" strokeWidth="2" opacity={bandOpacity} strokeLinecap="round" />
-        <path d="M78 150 C110 163, 145 162, 172 148" fill="none" stroke="#2c3f38" strokeWidth="2" opacity={bandOpacity} strokeLinecap="round" />
+        <path d="M76 52 C108 36, 142 38, 168 55" fill="none" stroke="#2c3f38" strokeWidth="2" opacity={bandOpacity} strokeLinecap="round" />
+        <path d="M68 100 C100 87, 138 87, 172 100" fill="none" stroke="#2c3f38" strokeWidth="2" opacity={bandOpacity} strokeLinecap="round" />
+        <path d="M76 149 C108 163, 142 161, 168 146" fill="none" stroke="#2c3f38" strokeWidth="2" opacity={bandOpacity} strokeLinecap="round" />
+
+        {/* a faint, permanent outline of the substrate's own shape sitting in the pocket —
+            the "socket" a matching substrate fits, visible even before one arrives */}
+        {!isDenatured ? (
+          <path
+            d={WEDGE_PATH}
+            transform={`translate(${siteX} ${siteY})`}
+            fill="none"
+            stroke="#1c2f52"
+            strokeWidth="1.3"
+            strokeDasharray="3 2.5"
+            opacity="0.35"
+          />
+        ) : null}
 
         {!isDenatured && inhibitor === "competitive" ? (
-          <g transform="translate(178 96)">
+          <g transform={`translate(${siteX + 46} ${siteY})`}>
             <polygon points="0,-16 15,-5 9,14 -9,14 -15,-5" fill="url(#enz-inhibitor-grad)" stroke="#5c1a12" strokeWidth="1.4" />
             <text x="0" y="34" textAnchor="middle" fontSize="10" fontWeight="700" fill="#7a2a1f">inhibitor</text>
           </g>
@@ -207,27 +249,27 @@ function EnzymeAnimation({ inhibitor, pulseDuration, foldedness }: { inhibitor: 
           </g>
         ) : null}
 
-        {/* substrate approaching the active site (or bouncing off a denatured enzyme) */}
-        <g transform="translate(30 100)">
-          <circle className="enz-substrate" r="13" fill="url(#enz-substrate-grad)" stroke="#1c2f52" strokeWidth="1.2" />
+        {/* substrate: approaches from outside the pocket's mouth and docks nose-first into it */}
+        <g transform={`translate(${siteX + 134} ${siteY})`}>
+          <path className="enz-substrate" d={WEDGE_PATH} fill="url(#enz-substrate-grad)" stroke="#1c2f52" strokeWidth="1.2" />
         </g>
 
-        {/* catalysis flash */}
-        <circle className="enz-flash" cx="188" cy="100" r="20" fill="#f0c869" opacity="0" />
+        {/* catalysis flash, right at the pocket */}
+        <circle className="enz-flash" cx={siteX} cy={siteY} r="20" fill="#f0c869" opacity="0" />
 
-        {/* products released */}
-        <g transform="translate(30 100)">
+        {/* products released from the pocket */}
+        <g transform={`translate(${siteX} ${siteY})`}>
           <circle className="enz-product-a" r="8.5" fill="url(#enz-product-a-grad)" stroke="#5c0d2e" strokeWidth="1.1" />
         </g>
-        <g transform="translate(30 100)">
+        <g transform={`translate(${siteX} ${siteY})`}>
           <circle className="enz-product-b" r="8.5" fill="url(#enz-product-b-grad)" stroke="#4a2306" strokeWidth="1.1" />
         </g>
 
-        <text x="188" y="100" textAnchor="middle" dominantBaseline="middle" fontSize="9" fontWeight="700" fill="#1f2e2a" opacity={isDenatured ? 0 : 0.75}>
+        <text x={siteX} y={siteY + 34} textAnchor="middle" fontSize="9" fontWeight="700" fill="#1f2e2a" opacity={isDenatured ? 0 : 0.75}>
           active site
         </text>
         {isDenatured ? (
-          <text x="180" y="105" textAnchor="middle" fontSize="11" fontWeight="700" fill="#6b6350">
+          <text x={siteX + 20} y={siteY + 5} textAnchor="middle" fontSize="11" fontWeight="700" fill="#6b6350">
             denatured
           </text>
         ) : null}
@@ -247,26 +289,10 @@ export default function EnzymeKineticsPage() {
   const [temperature, setTemperature] = useState(37);
   const [ph, setPh] = useState(7);
   const [inhibitor, setInhibitor] = useState<InhibitorType>("none");
-  const [denaturedLock, setDenaturedLock] = useState(false);
 
   const { km, vmax, currentRate, foldedness } = useKineticsModel(substrate, temperature, ph, inhibitor);
   const pulseDuration = Math.max(0.4, 3.2 - currentRate / 30);
-  const isDenatured = denaturedLock || foldedness < 0.15;
-  const displayFoldedness = denaturedLock ? 0 : foldedness;
-
-  const updateTemperature = (next: number) => {
-    setTemperature(next);
-    if (foldStability(next, ph) < 0.15) setDenaturedLock(true);
-  };
-  const updatePh = (next: number) => {
-    setPh(next);
-    if (foldStability(temperature, next) < 0.15) setDenaturedLock(true);
-  };
-  const resetEnzyme = () => {
-    setDenaturedLock(false);
-    setTemperature(37);
-    setPh(7);
-  };
+  const isDenatured = foldedness < 0.15;
 
   return (
     <main className="grid gap-8">
@@ -287,25 +313,15 @@ export default function EnzymeKineticsPage() {
 
             <label className="grid gap-2 text-sm font-semibold text-[color:var(--ink)]">
               Temperature: {temperature}°C
-              <input type="range" min={0} max={80} step={1} value={temperature} onChange={(e) => updateTemperature(Number(e.target.value))} style={{ accentColor: "var(--foundation)" }} />
-              <span className="text-xs font-normal text-[color:var(--ink-faint)]">Optimum ≈ 37°C. Above ~70°C the enzyme denatures — permanently.</span>
+              <input type="range" min={0} max={80} step={1} value={temperature} onChange={(e) => setTemperature(Number(e.target.value))} style={{ accentColor: "var(--foundation)" }} />
+              <span className="text-xs font-normal text-[color:var(--ink-faint)]">Optimum ≈ 37°C. Above ~70°C the enzyme&apos;s shape breaks down (denatures).</span>
             </label>
 
             <label className="grid gap-2 text-sm font-semibold text-[color:var(--ink)]">
               pH: {ph.toFixed(1)}
-              <input type="range" min={2} max={12} step={0.5} value={ph} onChange={(e) => updatePh(Number(e.target.value))} style={{ accentColor: "var(--statistics)" }} />
+              <input type="range" min={2} max={12} step={0.5} value={ph} onChange={(e) => setPh(Number(e.target.value))} style={{ accentColor: "var(--statistics)" }} />
               <span className="text-xs font-normal text-[color:var(--ink-faint)]">Optimum ≈ pH 7. Too far from it — either direction — also denatures the enzyme.</span>
             </label>
-
-            {isDenatured ? (
-              <button
-                type="button"
-                onClick={resetEnzyme}
-                className="accent-gradient w-fit rounded-full px-4 py-2 text-sm font-semibold text-white transition"
-              >
-                Reset with a fresh enzyme
-              </button>
-            ) : null}
 
             <div className="grid gap-2">
               <span className="text-sm font-semibold text-[color:var(--ink)]">Inhibitor</span>
@@ -343,13 +359,13 @@ export default function EnzymeKineticsPage() {
             <p className="mb-1 text-sm font-semibold text-[color:var(--ink)]">Substrate binding, in action</p>
             <p className="mb-4 text-xs text-[color:var(--ink-faint)]">
               {isDenatured
-                ? "Denatured: the heat or pH broke the bonds holding the enzyme's shape, so the active site is gone and substrate can no longer bind — like an egg white turning solid and opaque when it's cooked. Bringing temperature and pH back to normal won't refold it; you need a fresh enzyme."
+                ? "Denatured: the heat or pH broke the bonds holding the enzyme's shape, so the pocket the substrate used to fit into is gone. (In a real cell this is usually permanent — here, bring temperature and pH back near normal and it will re-fold, so you can keep exploring.)"
                 : foldedness < 0.55
-                  ? "Starting to unfold — conditions are stressing the enzyme's shape, so binding is getting less reliable."
-                  : "Watch the substrate bind, react, and split into two products — faster conditions mean a faster cycle."}
+                  ? "Starting to unfold — conditions are stressing the enzyme's shape, so the substrate's fit into the active site is getting less reliable."
+                  : "The substrate's shape matches the active site's pocket exactly — that's why only this molecule binds. Watch it dock, react, and split into two products."}
             </p>
 
-            <EnzymeAnimation inhibitor={inhibitor} pulseDuration={pulseDuration} foldedness={displayFoldedness} />
+            <EnzymeAnimation inhibitor={inhibitor} pulseDuration={pulseDuration} foldedness={foldedness} />
 
             <div className="mt-4 flex flex-wrap justify-center gap-4 border-t border-[color:var(--border)] pt-4 text-xs font-semibold text-[color:var(--ink-muted)]">
               <span className="inline-flex items-center gap-1.5">
@@ -374,7 +390,7 @@ export default function EnzymeKineticsPage() {
           <div className="rounded-[var(--radius-md)] border border-[color:var(--border)] bg-[color:var(--surface)] p-4">
             <p className="font-semibold text-[color:var(--ink)]">Competitive inhibitor</p>
             <p className="mt-1.5 text-sm leading-6 text-[color:var(--ink-muted)]">
-              Blocks the active site, so it takes more substrate to reach the same rate — Km goes up. Enough substrate can still out-compete the inhibitor, so Vmax is unchanged.
+              Blocks the entrance to the active site, so it takes more substrate to reach the same rate — Km goes up. Enough substrate can still out-compete the inhibitor, so Vmax is unchanged.
             </p>
           </div>
           <div className="rounded-[var(--radius-md)] border border-[color:var(--border)] bg-[color:var(--surface)] p-4">

@@ -164,7 +164,7 @@ function CellStage({ phase }: { phase: Phase }) {
         </linearGradient>
       </defs>
 
-      <circle cx="250" cy="160" r="140" fill="url(#mit-cyto)" stroke="#4a6d85" strokeWidth="1.8" />
+      {phase.key !== "cytokinesis" ? <circle cx="250" cy="160" r="140" fill="url(#mit-cyto)" stroke="#4a6d85" strokeWidth="1.8" /> : null}
 
       {phase.key === "g1" ? (
         <>
@@ -254,11 +254,15 @@ function CellStage({ phase }: { phase: Phase }) {
 
       {phase.key === "cytokinesis" ? (
         <>
+          {/* a narrowing neck of shared cytoplasm — cytokinesis is the cell actively pinching
+              in two, not already-finished separate cells */}
+          <path d="M195 108 C225 96, 275 96, 305 108 C295 140, 295 180, 305 212 C275 224, 225 224, 195 212 C205 180, 205 140, 195 108 Z" fill="url(#mit-cyto)" stroke="#4a6d85" strokeWidth="1.4" opacity="0.9" />
           <circle cx="165" cy="160" r="75" fill="url(#mit-cyto)" stroke="#4a6d85" strokeWidth="1.8" />
           <circle cx="335" cy="160" r="75" fill="url(#mit-cyto)" stroke="#4a6d85" strokeWidth="1.8" />
+          <path d="M250 92 C238 130, 238 190, 250 228" fill="none" stroke="#2f5170" strokeWidth="2.5" strokeDasharray="5 4" opacity="0.6" />
           <circle cx="165" cy="160" r="35" fill="url(#mit-nucleus)" stroke="#6d4fa8" strokeWidth="1.4" />
           <circle cx="335" cy="160" r="35" fill="url(#mit-nucleus)" stroke="#6d4fa8" strokeWidth="1.4" />
-          <text x="250" y="290" textAnchor="middle" fontSize="14" fontWeight="700" fill="#0369a1">Two separate daughter cells</text>
+          <text x="250" y="290" textAnchor="middle" fontSize="14" fontWeight="700" fill="#0369a1">Cleavage furrow pinches the cytoplasm in two</text>
         </>
       ) : null}
     </svg>
