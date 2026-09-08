@@ -619,7 +619,7 @@ export default function PadillaPage() {
       <main className="grid gap-6 lg:gap-8">
         <PageHeader
           eyebrow="PADILLA"
-          title="Unit 6 Study Guide"
+          title="Unit 7 Study Guide"
           description="This tab is ready for its own custom MCQ bank. Send the exact questions you want and they can be dropped into this route."
         />
       </main>
@@ -630,13 +630,13 @@ export default function PadillaPage() {
     <main className="grid gap-6 lg:gap-8">
       <PageHeader
         eyebrow="PADILLA"
-        title="Unit 6 Study Guide"
-        description="This page was made to help you study for the Unit 6 FRQs on Wednesdays. It includes notes and questions sourced from the slides and review videos Mr. Padilla recommended to us."
+        title="Unit 7 Study Guide"
+        description="This page was made to help you study for the Unit 7 FRQs on Wednesdays. It includes notes and questions sourced from the slides and review videos Mr. Padilla recommended to us."
       />
 
       <SectionCard
         title="Question"
-        description="This page mirrors the MCQ experience and uses a custom Unit 6 question bank for targeted review."
+        description="This page mirrors the MCQ experience and uses a custom Unit 7 question bank for targeted review."
         tone="blue"
       >
         <div className="grid gap-4">
@@ -720,7 +720,7 @@ export default function PadillaPage() {
 
       <SectionCard
         title="Key Notes"
-        description="High-yield Unit 6 review points to scan while the current question stays at the top of the page."
+        description="High-yield Unit 7 review points to scan while the current question stays at the top of the page."
         tone="amber"
       >
         <div className="grid gap-5">

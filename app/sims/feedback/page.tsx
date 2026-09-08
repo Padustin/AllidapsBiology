@@ -19,12 +19,37 @@ const CATEGORY_OPTIONS: Array<{ value: FeedbackCategory; label: string; descript
   { value: "other", label: "Other", description: "Anything else worth passing along." },
 ];
 
+// The "Share feedback" link lives in the footer on every page with no query param, so by the
+// time someone is filling out this form, the page they actually want to talk about is already
+// gone from the URL. document.referrer can't recover it either — Next's <Link> does a
+// client-side route swap, not a full page load, so the browser never updates it after the
+// very first load. AppShell tracks real route changes into sessionStorage instead.
+//
+// Effects fire child-before-parent, so at the moment this component's initializer runs,
+// AppShell's own effect for *this* navigation hasn't written "/sims/feedback" over
+// apbio:currentPath yet — it still holds whatever page we just came from. The apbio:prevPath
+// fallback only matters if this page gets reloaded directly, since currentPath would then
+// already say "/sims/feedback" from before the reload.
+function getReferringPage() {
+  if (typeof window === "undefined") return "";
+  try {
+    const current = sessionStorage.getItem("apbio:currentPath");
+    if (current && current !== "/sims/feedback") return current;
+    const prev = sessionStorage.getItem("apbio:prevPath");
+    if (prev && prev !== "/sims/feedback") return prev;
+    return "";
+  } catch {
+    return "";
+  }
+}
+
 export default function FeedbackPage() {
   const [category, setCategory] = useState<FeedbackCategory>("content");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [statusMessage, setStatusMessage] = useState("");
+  const [referringPage] = useState(getReferringPage);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -39,6 +64,7 @@ export default function FeedbackPage() {
           category,
           email,
           message,
+          page: referringPage,
         }),
       });
 
@@ -67,6 +93,12 @@ export default function FeedbackPage() {
       <section className="grid gap-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(300px,0.85fr)]">
         <SectionCard>
           <form onSubmit={handleSubmit} className="grid gap-4">
+            {referringPage ? (
+              <p className="text-xs text-[color:var(--ink-faint)]">
+                We&apos;ll attach the page you came from: <span className="font-semibold text-[color:var(--ink-muted)]">{referringPage}</span>
+              </p>
+            ) : null}
+
             <label className="grid gap-2 text-sm font-semibold text-[color:var(--ink)]">
               Feedback type
               <div className="rounded-[var(--radius-sm)] border border-[color:var(--border)] bg-[color:var(--surface-muted)] px-3 py-2">

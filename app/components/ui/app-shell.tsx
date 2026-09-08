@@ -63,6 +63,23 @@ export function AppShell({ children }: { children: ReactNode }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Next's <Link> navigations are client-side route swaps, not full page loads, so
+  // document.referrer never updates as someone clicks around the app — it stays stuck at
+  // whatever it was on the very first load. The feedback page ("what page were you looking
+  // at?") needs the actual previous route, so this tracks it in sessionStorage on every
+  // navigation instead.
+  useEffect(() => {
+    try {
+      const previousCurrent = sessionStorage.getItem("apbio:currentPath");
+      if (previousCurrent && previousCurrent !== pathname) {
+        sessionStorage.setItem("apbio:prevPath", previousCurrent);
+      }
+      sessionStorage.setItem("apbio:currentPath", pathname);
+    } catch {
+      // sessionStorage can throw in private browsing contexts — losing this history is fine.
+    }
+  }, [pathname]);
+
   return (
     <div className="min-h-screen">
       <a

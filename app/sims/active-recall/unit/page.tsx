@@ -169,28 +169,33 @@ function PageContent() {
     const currentQuestionId = currentQuestion?.id ? String(currentQuestion.id) : null;
     const historyIds = new Set(previousQuestions.map((prev) => String(prev?.id || "")));
     const activePoolIds = poolIdsOverride || poolIds;
-    const liveRedoIds = redoMissedOnly ? getRedoQuestionIds(isMixedSelection ? { difficulty } : { unit, difficulty }) : [];
-    if (redoMissedOnly && liveRedoIds.length === 0) {
+    // Local override, not just the redoMissedOnly state: if the redo queue turns out to be
+    // exhausted below, we fall back to regular pooled practice within this same call. An
+    // earlier version called setRedoMissedOnly(false) and then re-invoked next() via
+    // setTimeout — but that recursive call was the *same render's* closure, which had
+    // already captured redoMissedOnly as true, so it re-hit this exact branch forever
+    // (a silent, permanent "Loading question" freeze with the checkbox flipping off but
+    // no question ever loading). Resolving it in-line avoids stale closures entirely.
+    let effectiveRedoMissedOnly = redoMissedOnly;
+    const liveRedoIds = effectiveRedoMissedOnly ? getRedoQuestionIds(isMixedSelection ? { difficulty } : { unit, difficulty }) : [];
+    if (effectiveRedoMissedOnly && liveRedoIds.length === 0) {
       setLoadError(isMixedSelection ? "No missed questions are queued for this mode yet." : "No missed questions are queued for this unit and mode yet.");
       return;
     }
     const filteredRedoIds = liveRedoIds.filter(
       (questionId) => questionId !== currentQuestion?.id && !previousQuestions.some((prev) => prev?.id === questionId),
     );
-    if (redoMissedOnly && liveRedoIds.length > 0 && filteredRedoIds.length === 0) {
+    if (effectiveRedoMissedOnly && liveRedoIds.length > 0 && filteredRedoIds.length === 0) {
       setRedoMissedOnly(false);
-      setTimeout(() => {
-        void next();
-      }, 0);
-      return;
+      effectiveRedoMissedOnly = false;
     }
 
-    const unseenPoolIds = !redoMissedOnly
+    const unseenPoolIds = !effectiveRedoMissedOnly
       ? activePoolIds.filter((questionId) => questionId !== currentQuestionId && !historyIds.has(questionId) && !scopeSeen[questionId])
       : [];
-    const shouldRestartFreshRound = !redoMissedOnly && activePoolIds.length > 0 && unseenPoolIds.length === 0 && Object.keys(scopeSeen).length > 0;
+    const shouldRestartFreshRound = !effectiveRedoMissedOnly && activePoolIds.length > 0 && unseenPoolIds.length === 0 && Object.keys(scopeSeen).length > 0;
     const freshRoundIds = shouldRestartFreshRound ? activePoolIds.filter((questionId) => questionId !== currentQuestionId) : [];
-    const requestQuestionIds = redoMissedOnly
+    const requestQuestionIds = effectiveRedoMissedOnly
       ? filteredRedoIds.length > 0
         ? filteredRedoIds
         : liveRedoIds
@@ -229,7 +234,7 @@ function PageContent() {
       }
       if (data?.question) {
         const nextQuestion = data.question;
-        if (!redoMissedOnly && nextQuestion.id) {
+        if (!effectiveRedoMissedOnly && nextQuestion.id) {
           const nextQuestionId = String(nextQuestion.id);
           setSeen((current) => ({
             ...current,
