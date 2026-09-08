@@ -97,26 +97,82 @@ function BarkBackdrop() {
   );
 }
 
+// Every earlier panel only ever shows the current generation's snapshot — this is the one
+// place a student can actually see allele frequency changing over time instead of inferring
+// it from re-reading a single number after each click.
+const TREND_W = 460;
+const TREND_H = 220;
+const TREND_MARGIN = { top: 14, right: 16, bottom: 30, left: 34 };
+const TREND_PLOT_W = TREND_W - TREND_MARGIN.left - TREND_MARGIN.right;
+const TREND_PLOT_H = TREND_H - TREND_MARGIN.top - TREND_MARGIN.bottom;
+
+function GenerationTrendChart({ history }: { history: { gen: number; q: number }[] }) {
+  const maxGen = Math.max(10, history[history.length - 1].gen);
+  const xScale = (g: number) => TREND_MARGIN.left + (g / maxGen) * TREND_PLOT_W;
+  const yScale = (v: number) => TREND_MARGIN.top + TREND_PLOT_H - v * TREND_PLOT_H;
+
+  const qPath = `M ${history.map((pt) => `${xScale(pt.gen).toFixed(1)} ${yScale(pt.q).toFixed(1)}`).join(" L ")}`;
+  const pPath = `M ${history.map((pt) => `${xScale(pt.gen).toFixed(1)} ${yScale(1 - pt.q).toFixed(1)}`).join(" L ")}`;
+  const yTicks = [0, 0.25, 0.5, 0.75, 1];
+  const last = history[history.length - 1];
+
+  return (
+    <svg viewBox={`0 0 ${TREND_W} ${TREND_H}`} style={{ width: "100%", height: "auto", display: "block" }}>
+      {yTicks.map((t) => (
+        <line key={t} x1={TREND_MARGIN.left} x2={TREND_W - TREND_MARGIN.right} y1={yScale(t)} y2={yScale(t)} stroke="#e5e0d3" strokeWidth="1" />
+      ))}
+      <line x1={TREND_MARGIN.left} x2={TREND_MARGIN.left} y1={TREND_MARGIN.top} y2={TREND_MARGIN.top + TREND_PLOT_H} stroke="#6b7280" strokeWidth="1.2" />
+      <line x1={TREND_MARGIN.left} x2={TREND_W - TREND_MARGIN.right} y1={TREND_MARGIN.top + TREND_PLOT_H} y2={TREND_MARGIN.top + TREND_PLOT_H} stroke="#6b7280" strokeWidth="1.2" />
+      {yTicks.map((t) => (
+        <text key={t} x={TREND_MARGIN.left - 6} y={yScale(t) + 3} textAnchor="end" fontSize="9" fill="#6b7280">{t.toFixed(2)}</text>
+      ))}
+      <text x={TREND_MARGIN.left + TREND_PLOT_W / 2} y={TREND_H - 4} textAnchor="middle" fontSize="10" fontWeight="600" fill="#1f2e2a">Generation</text>
+
+      <path d={pPath} fill="none" stroke="#3b2617" strokeWidth="2.4" strokeLinecap="round" />
+      <path d={qPath} fill="none" stroke="#c8933f" strokeWidth="2.4" strokeLinecap="round" />
+
+      <circle cx={xScale(last.gen)} cy={yScale(1 - last.q)} r="4" fill="#3b2617" />
+      <circle cx={xScale(last.gen)} cy={yScale(last.q)} r="4" fill="#c8933f" />
+
+      <g transform={`translate(${TREND_MARGIN.left + 6} ${TREND_MARGIN.top + 4})`}>
+        <circle r="4" fill="#3b2617" />
+        <text x="9" y="3.5" fontSize="10" fontWeight="700" fill="#3b2617">p (A)</text>
+        <circle cx="52" r="4" fill="#c8933f" />
+        <text x="61" y="3.5" fontSize="10" fontWeight="700" fill="#c8933f">q (a)</text>
+      </g>
+    </svg>
+  );
+}
+
 export default function NaturalSelectionPage() {
   const [startP, setStartP] = useState(0.6);
   const [selection, setSelection] = useState(0.3);
-  const [generation, setGeneration] = useState(0);
-  const [q, setQ] = useState(0.4);
+  // The full run, not just the current snapshot — this is what lets the trend chart show
+  // allele frequency actually changing across generations instead of just its latest value.
+  const [history, setHistory] = useState<{ gen: number; q: number }[]>([{ gen: 0, q: 0.4 }]);
 
   const resetWith = (newStartP: number, newSelection: number) => {
     setStartP(newStartP);
     setSelection(newSelection);
-    setGeneration(0);
-    setQ(1 - newStartP);
+    setHistory([{ gen: 0, q: 1 - newStartP }]);
   };
 
   const advance = (steps: number) => {
-    let nextQValue = q;
-    for (let i = 0; i < steps; i++) nextQValue = nextQ(nextQValue, selection);
-    setQ(nextQValue);
-    setGeneration((g) => g + steps);
+    setHistory((h) => {
+      const last = h[h.length - 1];
+      let curQ = last.q;
+      let curGen = last.gen;
+      const newPoints: { gen: number; q: number }[] = [];
+      for (let i = 0; i < steps; i++) {
+        curQ = nextQ(curQ, selection);
+        curGen += 1;
+        newPoints.push({ gen: curGen, q: curQ });
+      }
+      return [...h, ...newPoints];
+    });
   };
 
+  const { gen: generation, q } = history[history.length - 1];
   const p = 1 - q;
   const countAA = Math.round(p * p * POPULATION_SIZE);
   const countAa = Math.round(2 * p * q * POPULATION_SIZE);
@@ -217,6 +273,12 @@ export default function NaturalSelectionPage() {
                 : "Light (aa) moths are more visible to predators against dark bark, so q falls each generation — fast at first, then slower as aa moths become rare and harder to select against further."}
             </TipCard>
           </div>
+        </div>
+      </SectionCard>
+
+      <SectionCard title="Allele frequency across generations" description="Every earlier panel only shows the current generation — this is the trend that produced it.">
+        <div className="rounded-[var(--radius-lg)] border border-[color:var(--border)] bg-[color:var(--surface)] p-4">
+          <GenerationTrendChart history={history} />
         </div>
       </SectionCard>
 

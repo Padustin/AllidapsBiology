@@ -340,6 +340,145 @@ function EnzymeAnimation({
   );
 }
 
+// The Michaelis-Menten curve itself — the thing the page copy promises ("watch how each
+// one reshapes the reaction-rate curve") but that was never actually drawn anywhere.
+// Plots v = Vmax·[S] / (Km + [S]) for the live trial, with a faint reference curve for how
+// the enzyme would behave with no inhibitor at the same temperature and pH, so competitive
+// (curve shifts right, same ceiling) and noncompetitive (same Km, lower ceiling) read as
+// visibly different shapes instead of three numbers on cards.
+const CHART_W = 460;
+const CHART_H = 260;
+const CHART_MARGIN = { top: 16, right: 18, bottom: 40, left: 46 };
+const PLOT_W = CHART_W - CHART_MARGIN.left - CHART_MARGIN.right;
+const PLOT_H = CHART_H - CHART_MARGIN.top - CHART_MARGIN.bottom;
+const S_MAX = 100;
+const V_MAX_SCALE = 110;
+
+function curvePath(vmax: number, km: number, xScale: (s: number) => number, yScale: (v: number) => number) {
+  const points: string[] = [];
+  for (let s = 0; s <= S_MAX; s += 2) {
+    const v = (vmax * s) / (km + s);
+    points.push(`${xScale(s).toFixed(1)} ${yScale(v).toFixed(1)}`);
+  }
+  return `M ${points.join(" L ")}`;
+}
+
+function RateCurveChart({
+  vmax,
+  km,
+  baselineVmax,
+  baselineKm,
+  substrate,
+  currentRate,
+  inhibitor,
+  isDenatured,
+}: {
+  vmax: number;
+  km: number;
+  baselineVmax: number;
+  baselineKm: number;
+  substrate: number;
+  currentRate: number;
+  inhibitor: InhibitorType;
+  isDenatured: boolean;
+}) {
+  const xScale = (s: number) => CHART_MARGIN.left + (s / S_MAX) * PLOT_W;
+  const yScale = (v: number) => CHART_MARGIN.top + PLOT_H - (Math.max(0, v) / V_MAX_SCALE) * PLOT_H;
+
+  const xTicks = [0, 25, 50, 75, 100];
+  const yTicks = [0, 25, 50, 75, 100];
+
+  const showBaseline = inhibitor !== "none" && !isDenatured;
+  // Km is only a meaningful "half-Vmax" landmark while the enzyme actually has some activity
+  // to be half of — a denatured (or otherwise ~inactive) enzyme has no active site left, so
+  // marking a precise Km point on a flat-zero curve would imply a precision that isn't there.
+  const showKm = !isDenatured && vmax > 0.5;
+  const currentX = xScale(substrate);
+  const currentY = yScale(currentRate);
+  const kmX = xScale(km);
+  const kmY = yScale(vmax / 2);
+
+  return (
+    <svg viewBox={`0 0 ${CHART_W} ${CHART_H}`} style={{ width: "100%", height: "auto", display: "block" }}>
+      <defs>
+        <linearGradient id="rate-curve-fill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#2f6b5e" stopOpacity="0.28" />
+          <stop offset="100%" stopColor="#2f6b5e" stopOpacity="0" />
+        </linearGradient>
+      </defs>
+
+      {/* gridlines */}
+      {yTicks.map((t) => (
+        <line key={`y-${t}`} x1={CHART_MARGIN.left} x2={CHART_W - CHART_MARGIN.right} y1={yScale(t)} y2={yScale(t)} stroke="#e5e0d3" strokeWidth="1" />
+      ))}
+      {xTicks.map((t) => (
+        <line key={`x-${t}`} x1={xScale(t)} x2={xScale(t)} y1={CHART_MARGIN.top} y2={CHART_MARGIN.top + PLOT_H} stroke="#e5e0d3" strokeWidth="1" />
+      ))}
+
+      {/* axes */}
+      <line x1={CHART_MARGIN.left} x2={CHART_MARGIN.left} y1={CHART_MARGIN.top} y2={CHART_MARGIN.top + PLOT_H} stroke="#6b7280" strokeWidth="1.4" />
+      <line x1={CHART_MARGIN.left} x2={CHART_W - CHART_MARGIN.right} y1={CHART_MARGIN.top + PLOT_H} y2={CHART_MARGIN.top + PLOT_H} stroke="#6b7280" strokeWidth="1.4" />
+      {xTicks.map((t) => (
+        <text key={t} x={xScale(t)} y={CHART_MARGIN.top + PLOT_H + 16} textAnchor="middle" fontSize="10" fill="#6b7280">{t}</text>
+      ))}
+      {yTicks.map((t) => (
+        <text key={t} x={CHART_MARGIN.left - 8} y={yScale(t) + 3} textAnchor="end" fontSize="10" fill="#6b7280">{t}</text>
+      ))}
+      <text x={CHART_MARGIN.left + PLOT_W / 2} y={CHART_H - 4} textAnchor="middle" fontSize="11" fontWeight="600" fill="#1f2e2a">Substrate concentration [S]</text>
+      <text
+        x="0"
+        y="0"
+        textAnchor="middle"
+        fontSize="11"
+        fontWeight="600"
+        fill="#1f2e2a"
+        transform={`translate(14, ${CHART_MARGIN.top + PLOT_H / 2}) rotate(-90)`}
+      >
+        Reaction rate (v)
+      </text>
+
+      {/* Km guide: dashed lines to where the curve crosses Vmax/2 */}
+      {showKm && km <= S_MAX ? (
+        <>
+          <line x1={kmX} x2={kmX} y1={kmY} y2={CHART_MARGIN.top + PLOT_H} stroke="#7c5bb0" strokeWidth="1.3" strokeDasharray="4 3" />
+          <line x1={CHART_MARGIN.left} x2={kmX} y1={kmY} y2={kmY} stroke="#7c5bb0" strokeWidth="1.3" strokeDasharray="4 3" />
+          <circle cx={kmX} cy={kmY} r="3.5" fill="#7c5bb0" />
+          <text x={kmX} y={CHART_MARGIN.top + PLOT_H + 28} textAnchor="middle" fontSize="10" fontWeight="700" fill="#7c5bb0">Km</text>
+        </>
+      ) : null}
+
+      {/* Vmax asymptote */}
+      {!isDenatured ? (
+        <>
+          <line x1={CHART_MARGIN.left} x2={CHART_W - CHART_MARGIN.right} y1={yScale(vmax)} y2={yScale(vmax)} stroke="#b45309" strokeWidth="1.2" strokeDasharray="2 4" opacity="0.7" />
+          <text x={CHART_W - CHART_MARGIN.right} y={yScale(vmax) - 5} textAnchor="end" fontSize="10" fontWeight="700" fill="#b45309">Vmax</text>
+        </>
+      ) : (
+        <text x={CHART_MARGIN.left + PLOT_W / 2} y={CHART_MARGIN.top + PLOT_H / 2} textAnchor="middle" fontSize="12" fontWeight="700" fill="#8a8270">
+          Enzyme denatured — no activity to plot
+        </text>
+      )}
+
+      {/* reference curve: same temperature/pH, no inhibitor */}
+      {showBaseline ? (
+        <path d={curvePath(baselineVmax, baselineKm, xScale, yScale)} fill="none" stroke="#94a3b8" strokeWidth="2" strokeDasharray="5 4" />
+      ) : null}
+
+      {/* the live curve for this trial */}
+      <path d={`${curvePath(vmax, km, xScale, yScale)} L ${xScale(S_MAX).toFixed(1)} ${(CHART_MARGIN.top + PLOT_H).toFixed(1)} L ${CHART_MARGIN.left} ${(CHART_MARGIN.top + PLOT_H).toFixed(1)} Z`} fill="url(#rate-curve-fill)" stroke="none" />
+      <path d={curvePath(vmax, km, xScale, yScale)} fill="none" stroke="#2f6b5e" strokeWidth="2.6" strokeLinecap="round" />
+
+      {/* current [S], rate marker */}
+      <line x1={currentX} x2={currentX} y1={currentY} y2={CHART_MARGIN.top + PLOT_H} stroke="#1f2e2a" strokeWidth="1.2" strokeDasharray="3 3" opacity="0.55" />
+      <circle cx={currentX} cy={currentY} r="5.5" fill="#f0c869" stroke="#1f2e2a" strokeWidth="1.6" />
+
+      {showBaseline ? (
+        <text x={CHART_MARGIN.left + 4} y={CHART_MARGIN.top + 12} fontSize="10" fontWeight="600" fill="#64748b">- - - no inhibitor (same temp/pH)</text>
+      ) : null}
+    </svg>
+  );
+}
+
 const INHIBITOR_OPTIONS: { value: InhibitorType; label: string }[] = [
   { value: "none", label: "None" },
   { value: "competitive", label: "Competitive" },
@@ -355,6 +494,10 @@ export default function EnzymeKineticsPage() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const { km, vmax, currentRate, foldedness } = useKineticsModel(substrate, temperature, ph, inhibitor);
+  // Same temperature/pH, no inhibitor — the reference curve the chart overlays so a
+  // competitive shift (Km up, same ceiling) and a noncompetitive drop (ceiling down, same Km)
+  // are visibly different shapes rather than three numbers that changed on their own.
+  const baseline = useKineticsModel(substrate, temperature, ph, "none");
   const pulseDuration = Math.max(0.4, 3.2 - currentRate / 30);
   const isDenatured = foldedness < 0.15;
   const canPlay = !isDenatured && substrate > 0 && !isPlaying;
@@ -480,6 +623,36 @@ export default function EnzymeKineticsPage() {
                 Enzyme
               </span>
             </div>
+          </div>
+        </div>
+      </SectionCard>
+
+      <SectionCard
+        title="Reaction rate vs. substrate concentration"
+        description="This is the curve every setting above is reshaping — the amber dot marks the current [S] and rate."
+      >
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(220px,0.7fr)] lg:items-center">
+          <div className="rounded-[var(--radius-lg)] border border-[color:var(--border)] bg-[color:var(--surface)] p-4">
+            <RateCurveChart
+              vmax={vmax}
+              km={km}
+              baselineVmax={baseline.vmax}
+              baselineKm={baseline.km}
+              substrate={substrate}
+              currentRate={currentRate}
+              inhibitor={inhibitor}
+              isDenatured={isDenatured}
+            />
+          </div>
+          <div className="grid gap-3 text-sm leading-6 text-[color:var(--ink-muted)]">
+            <p>
+              The curve rises steeply at low [S], then bends toward a ceiling (<strong className="text-[color:var(--ink)]">Vmax</strong>) as the
+              enzyme&apos;s active sites become saturated — adding more substrate stops helping once nearly every enzyme is already busy.
+            </p>
+            <p>
+              <strong className="text-[color:var(--ink)]">Km</strong> is where the curve crosses half of Vmax. A competitive inhibitor drags the whole
+              curve rightward (same ceiling, more substrate needed to get there); a noncompetitive inhibitor pulls the ceiling down without moving Km.
+            </p>
           </div>
         </div>
       </SectionCard>

@@ -114,12 +114,27 @@ function SingleChromatid({ x, y, rotate = 0, color }: { x: number; y: number; ro
   );
 }
 
-function Centrosome({ x, y, targetX, targetY }: { x: number; y: number; targetX: number; targetY: number }) {
-  const rays = [-28, -14, 0, 14, 28];
+function Centrosome({
+  x,
+  y,
+  targetX,
+  targetY,
+  targets,
+}: {
+  x: number;
+  y: number;
+  targetX?: number;
+  targetY?: number;
+  // Exact kinetochore points to attach to — used once the spindle has actually captured
+  // chromosomes (metaphase, anaphase), so each fiber visibly ends at a real chromosome
+  // instead of fanning out to a generic patch of the cell.
+  targets?: readonly (readonly [number, number])[];
+}) {
+  const rays = targets ?? [-28, -14, 0, 14, 28].map((offset) => [(targetX ?? x) + offset, targetY ?? y] as const);
   return (
     <g>
-      {rays.map((offset) => (
-        <line key={offset} x1={x} y1={y} x2={targetX + offset} y2={targetY} stroke="#8a6a2f" strokeWidth="1.1" opacity="0.4" />
+      {rays.map(([tx, ty], i) => (
+        <line key={i} x1={x} y1={y} x2={tx} y2={ty} stroke="#8a6a2f" strokeWidth="1.3" opacity="0.5" />
       ))}
       <circle cx={x} cy={y} r="7" fill="url(#mit-centrosome)" stroke="#6b5220" strokeWidth="1.2" />
     </g>
@@ -214,8 +229,11 @@ function CellStage({ phase }: { phase: Phase }) {
 
       {phase.key === "metaphase" ? (
         <>
-          <Centrosome x={60} y={160} targetX={250} targetY={150} />
-          <Centrosome x={440} y={160} targetX={250} targetY={170} />
+          {/* both poles send a fiber to each chromosome's kinetochore — the two sister
+              chromatids inside one duplicated chromosome are already committed to opposite
+              poles here, even though they won't visibly separate until anaphase */}
+          <Centrosome x={60} y={160} targets={[[230, 160], [270, 160]]} />
+          <Centrosome x={440} y={160} targets={[[230, 160], [270, 160]]} />
           <line x1="130" y1="160" x2="370" y2="160" stroke="#94a3b8" strokeWidth="2" strokeDasharray="6 5" />
           {CHROMOSOME_COLORS.map((c, i) => (
             <DuplicatedChromosome key={c} x={230 + i * 40} y={160} rotate={0} color={c} />
@@ -226,8 +244,10 @@ function CellStage({ phase }: { phase: Phase }) {
 
       {phase.key === "anaphase" ? (
         <>
-          <Centrosome x={60} y={160} targetX={170} targetY={160} />
-          <Centrosome x={440} y={160} targetX={330} targetY={160} />
+          {/* fibers now terminate exactly on the chromatids they're pulling, tracking the
+              same x positions the chromatids themselves use below */}
+          <Centrosome x={60} y={160} targets={[[165, 160], [147, 160]]} />
+          <Centrosome x={440} y={160} targets={[[335, 160], [353, 160]]} />
           {CHROMOSOME_COLORS.map((c, i) => (
             <SingleChromatid key={`left-${c}`} x={165 - i * 18} y={160} rotate={0} color={c} />
           ))}
@@ -276,6 +296,19 @@ export default function MitosisPage() {
 
   return (
     <main className="grid gap-8">
+      <style>{`
+        @keyframes mitosis-stage-in {
+          from { opacity: 0; transform: scale(0.97); }
+          to { opacity: 1; transform: scale(1); }
+        }
+        .mitosis-stage {
+          animation: mitosis-stage-in 360ms cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .mitosis-stage { animation: none; }
+        }
+      `}</style>
+
       <PageHeader
         eyebrow="Unit 4 · Cell communication and the cell cycle"
         align="start"
@@ -286,7 +319,9 @@ export default function MitosisPage() {
       <SectionCard title={`${phase.group} — ${phase.label}`} description={phase.description}>
         <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(240px,0.8fr)] lg:items-start">
           <div className="rounded-[var(--radius-lg)] border border-[color:var(--border)] bg-[color:var(--surface-muted)] p-4">
-            <CellStage phase={phase} />
+            <div key={phase.key} className="mitosis-stage">
+              <CellStage phase={phase} />
+            </div>
           </div>
 
           <div className="grid gap-4">

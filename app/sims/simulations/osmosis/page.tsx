@@ -108,6 +108,114 @@ function WaterArrows({ direction, wallRadius }: { direction: "in" | "out" | "non
   );
 }
 
+// Small water droplets that continuously loop across the membrane along the same radial
+// lines WaterArrows marks — so net movement reads as an ongoing flow, not a one-time snapshot,
+// without implying real single-file water crossing (osmosis moves water in bulk, this is a
+// teaching cue for direction and rate, not a literal molecule count).
+function FlowingWater({ direction, wallRadius }: { direction: "in" | "out" | "none"; wallRadius: number }) {
+  if (direction === "none") return null;
+  const angles = [20, 100, 180, 260, 340];
+  const outerR = wallRadius + 34;
+  const innerR = wallRadius - 8;
+  const fromR = direction === "in" ? outerR : innerR;
+  const toR = direction === "in" ? innerR : outerR;
+  return (
+    <>
+      {angles.map((deg, i) => {
+        const rad = (deg * Math.PI) / 180;
+        const x1 = 350 + Math.cos(rad) * fromR;
+        const y1 = 220 + Math.sin(rad) * fromR;
+        const x2 = 350 + Math.cos(rad) * toR;
+        const y2 = 220 + Math.sin(rad) * toR;
+        return (
+          <circle key={deg} r="3.2" fill="#5eb3e8" opacity="0">
+            <animateMotion
+              path={`M ${x1.toFixed(1)} ${y1.toFixed(1)} L ${x2.toFixed(1)} ${y2.toFixed(1)}`}
+              dur="1.8s"
+              begin={`${(i * 0.32).toFixed(2)}s`}
+              repeatCount="indefinite"
+            />
+            <animate
+              attributeName="opacity"
+              values="0;0.9;0.9;0"
+              keyTimes="0;0.15;0.8;1"
+              dur="1.8s"
+              begin={`${(i * 0.32).toFixed(2)}s`}
+              repeatCount="indefinite"
+            />
+          </circle>
+        );
+      })}
+    </>
+  );
+}
+
+// A deterministic pseudo-random generator (not Math.random) so solute-dot positions stay put
+// across re-renders — every slider tick re-renders this component, and randomizing positions
+// each time would make the dots appear to teleport instead of drift.
+function pseudoRandom(seed: number) {
+  const x = Math.sin(seed * 12.9898) * 43758.5453;
+  return x - Math.floor(x);
+}
+
+// Solute particles scattered through a region, with count set by concentration — the literal
+// picture of "more dissolved solute" that the tonicity numbers were only ever described in
+// words. Each dot gets a slow, individually-phased drift so the field reads as diffusing
+// rather than frozen.
+function SoluteField({
+  concentration,
+  region,
+  seedOffset,
+  color,
+}: {
+  concentration: number;
+  region: { cx: number; cy: number; rx: number; ry: number; innerRx?: number; innerRy?: number };
+  seedOffset: number;
+  color: string;
+}) {
+  const count = Math.round((concentration / 100) * 34);
+  const dots = Array.from({ length: count }, (_, i) => {
+    const seed = seedOffset + i * 7.13;
+    const angle = pseudoRandom(seed) * Math.PI * 2;
+    const radial = Math.sqrt(pseudoRandom(seed + 1.7));
+    const innerRx = region.innerRx ?? 0;
+    const innerRy = region.innerRy ?? 0;
+    const rx = innerRx + (region.rx - innerRx) * radial;
+    const ry = innerRy + (region.ry - innerRy) * radial;
+    // Rounded to 2 decimals: Math.sin/cos can differ in their last bit between the Node.js
+    // SSR pass and the browser's JS engine, which otherwise trips a hydration mismatch over
+    // a difference smaller than a hundredth of a pixel.
+    const cx = Number((region.cx + Math.cos(angle) * rx).toFixed(2));
+    const cy = Number((region.cy + Math.sin(angle) * ry).toFixed(2));
+    const driftSeed = seedOffset + i;
+    const dx = 3 + pseudoRandom(driftSeed + 3.1) * 3;
+    const dy = 3 + pseudoRandom(driftSeed + 5.2) * 3;
+    const dur = 2.6 + pseudoRandom(driftSeed + 9.4) * 2.2;
+    const delay = pseudoRandom(driftSeed + 1.1) * -dur;
+    return { cx, cy, dx, dy, dur, delay, key: i };
+  });
+
+  return (
+    <>
+      {dots.map((dot) => (
+        <circle
+          key={dot.key}
+          cx={dot.cx}
+          cy={dot.cy}
+          r="3"
+          fill={color}
+          opacity="0.7"
+          style={{
+            animation: `osm-solute-drift ${dot.dur.toFixed(2)}s ease-in-out ${dot.delay.toFixed(2)}s infinite`,
+            ["--dx" as string]: `${dot.dx.toFixed(1)}px`,
+            ["--dy" as string]: `${dot.dy.toFixed(1)}px`,
+          }}
+        />
+      ))}
+    </>
+  );
+}
+
 function CellDiagram({
   cellType,
   membraneRadius,
@@ -115,6 +223,7 @@ function CellDiagram({
   isPlasmolysis,
   waterDirection,
   crenationAmount,
+  externalConcentration,
 }: {
   cellType: CellType;
   membraneRadius: number;
@@ -122,12 +231,23 @@ function CellDiagram({
   isPlasmolysis: boolean;
   waterDirection: "in" | "out" | "none";
   crenationAmount: number;
+  externalConcentration: number;
 }) {
   const shrinkRatio = Math.min(1, membraneRadius / BASE_RADIUS);
   const nucleusR = Math.max(16, membraneRadius * 0.22);
+  const outerBoundaryR = cellType === "plant" ? WALL_RADIUS + 14 : membraneRadius + 16;
 
   return (
     <svg viewBox="0 0 700 440" style={{ width: "100%", maxWidth: 560, margin: "0 auto", display: "block" }}>
+      <style>{`
+        @keyframes osm-solute-drift {
+          0%, 100% { transform: translate(0, 0); }
+          50% { transform: translate(var(--dx), var(--dy)); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          circle[style*="osm-solute-drift"] { animation: none !important; }
+        }
+      `}</style>
       <defs>
         <marker id="waterArrowHead" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
           <path d="M0 0 L8 4 L0 8 Z" fill="#2f6690" />
@@ -150,6 +270,15 @@ function CellDiagram({
           <stop offset="100%" stopColor="#a24a3f" />
         </radialGradient>
       </defs>
+
+      {/* extracellular solute: literal dots for "how concentrated is the outside solution",
+          not just a percentage — density tracks the slider directly */}
+      <SoluteField
+        concentration={externalConcentration}
+        region={{ cx: 350, cy: 220, rx: 335, ry: 195, innerRx: outerBoundaryR, innerRy: outerBoundaryR * 0.72 }}
+        seedOffset={11}
+        color="#c8933f"
+      />
 
       {cellType === "plant" ? (
         <>
@@ -186,6 +315,15 @@ function CellDiagram({
         style={{ transition: "d 0.4s ease" }}
       />
 
+      {/* intracellular solute: the internal concentration is fixed, so this dot field never
+          changes count — only the outside field around it does as the slider moves */}
+      <SoluteField
+        concentration={INTERNAL_CONCENTRATION}
+        region={{ cx: 350, cy: 220, rx: membraneRadius * 0.82, ry: membraneRadius * 0.82 }}
+        seedOffset={47}
+        color="#3f6b8f"
+      />
+
       {/* central vacuole (plant) or a couple of small vesicles (animal), scaled with the cell */}
       <circle cx="350" cy="220" r={Math.max(14, membraneRadius * 0.32)} fill="#a9d6ee" stroke="#4f7fa8" strokeWidth="1.4" opacity="0.7" style={{ transition: "r 0.4s ease" }} />
 
@@ -219,6 +357,7 @@ function CellDiagram({
       ) : null}
 
       <WaterArrows direction={waterDirection} wallRadius={cellType === "plant" ? WALL_RADIUS : membraneRadius} />
+      <FlowingWater direction={waterDirection} wallRadius={cellType === "plant" ? WALL_RADIUS : membraneRadius} />
 
       <text x="350" y="415" textAnchor="middle" fontSize="14" fontWeight="600" fill="var(--ink-muted)">
         {cellType === "plant" ? "Plant cell — rigid wall stays fixed size" : "Animal cell — no wall, membrane alone sets the shape"}
@@ -297,7 +436,15 @@ export default function OsmosisPage() {
           </div>
 
           <div className="rounded-[var(--radius-lg)] border border-[color:var(--border)] bg-[color:var(--surface-muted)] p-4">
-            <CellDiagram cellType={cellType} membraneRadius={membraneRadius} isLysis={isLysis} isPlasmolysis={isPlasmolysis} waterDirection={waterDirection} crenationAmount={crenationAmount} />
+            <CellDiagram
+              cellType={cellType}
+              membraneRadius={membraneRadius}
+              isLysis={isLysis}
+              isPlasmolysis={isPlasmolysis}
+              waterDirection={waterDirection}
+              crenationAmount={crenationAmount}
+              externalConcentration={externalConcentration}
+            />
           </div>
         </div>
       </SectionCard>

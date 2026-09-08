@@ -158,6 +158,74 @@ function cardStyle(): CSSProperties {
   };
 }
 
+// Shared gradients + shadow filter for the organelle "mini sim" detail views. Each mini-sim
+// renders in its own standalone <svg> (the DetailPanel unmounts the main cell map while a
+// detail view is open), so these defs get repeated inline rather than shared across documents —
+// but keeping them as one component means every mini-sim reaches for the same polished palette
+// instead of the flat, shadowless fills those views used to have.
+function MiniSimDefs() {
+  return (
+    <defs>
+      <filter id="miniShadow" x="-40%" y="-40%" width="180%" height="180%">
+        <feDropShadow dx="0" dy="3" stdDeviation="4" floodColor="#0f172a" floodOpacity="0.18" />
+      </filter>
+      <radialGradient id="miniBody" cx="32%" cy="26%" r="85%">
+        <stop offset="0%" stopColor="#fef6e7" />
+        <stop offset="60%" stopColor="#f4e2bf" />
+        <stop offset="100%" stopColor="#d9b877" />
+      </radialGradient>
+      <radialGradient id="miniPink" cx="32%" cy="26%" r="85%">
+        <stop offset="0%" stopColor="#fecdd3" />
+        <stop offset="55%" stopColor="#fb9dae" />
+        <stop offset="100%" stopColor="#be123c" />
+      </radialGradient>
+      <radialGradient id="miniOrange" cx="32%" cy="26%" r="85%">
+        <stop offset="0%" stopColor="#ffd7cc" />
+        <stop offset="55%" stopColor="#f6a583" />
+        <stop offset="100%" stopColor="#9a3412" />
+      </radialGradient>
+      <radialGradient id="miniGreen" cx="32%" cy="26%" r="85%">
+        <stop offset="0%" stopColor="#e4f9cf" />
+        <stop offset="55%" stopColor="#8fce6a" />
+        <stop offset="100%" stopColor="#3f6212" />
+      </radialGradient>
+      <radialGradient id="miniLeafBand" cx="32%" cy="26%" r="85%">
+        <stop offset="0%" stopColor="#6bcf6b" />
+        <stop offset="100%" stopColor="#1f7a3d" />
+      </radialGradient>
+      <radialGradient id="miniBlue" cx="35%" cy="30%" r="90%">
+        <stop offset="0%" stopColor="#bcd9fb" />
+        <stop offset="55%" stopColor="#7fa8e8" />
+        <stop offset="100%" stopColor="#1d4ed8" />
+      </radialGradient>
+      <radialGradient id="miniSkyBlue" cx="32%" cy="26%" r="85%">
+        <stop offset="0%" stopColor="#e0f6ff" />
+        <stop offset="55%" stopColor="#93d8f7" />
+        <stop offset="100%" stopColor="#0369a1" />
+      </radialGradient>
+      <radialGradient id="miniPurple" cx="32%" cy="26%" r="85%">
+        <stop offset="0%" stopColor="#f1e9fb" />
+        <stop offset="60%" stopColor="#c9adf0" />
+        <stop offset="100%" stopColor="#6d28d9" />
+      </radialGradient>
+      <radialGradient id="miniYellow" cx="32%" cy="26%" r="85%">
+        <stop offset="0%" stopColor="#fef3c7" />
+        <stop offset="55%" stopColor="#fbbf24" />
+        <stop offset="100%" stopColor="#92400e" />
+      </radialGradient>
+      <radialGradient id="miniGray" cx="32%" cy="26%" r="85%">
+        <stop offset="0%" stopColor="#f1f5f9" />
+        <stop offset="55%" stopColor="#cbd5e1" />
+        <stop offset="100%" stopColor="#64748b" />
+      </radialGradient>
+      <linearGradient id="miniRibbon" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#38bdf8" />
+        <stop offset="100%" stopColor="#0369a1" />
+      </linearGradient>
+    </defs>
+  );
+}
+
 function CentralDogmaOverlay({
   runId,
   ribosomeTarget,
@@ -675,6 +743,16 @@ function CellImageMap({
             <stop offset="0%" stopColor="#7fa8e8" />
             <stop offset="100%" stopColor="#2c4f8f" />
           </radialGradient>
+          <radialGradient id="lysosomeGradient" cx="35%" cy="28%" r="85%">
+            <stop offset="0%" stopColor="#fecdd3" />
+            <stop offset="55%" stopColor="#f2879b" />
+            <stop offset="100%" stopColor="#9f1239" />
+          </radialGradient>
+          <linearGradient id="centrioleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#fde68a" />
+            <stop offset="50%" stopColor="#facc15" />
+            <stop offset="100%" stopColor="#a16207" />
+          </linearGradient>
           <linearGradient id="mrnaTravelGradient" gradientUnits="userSpaceOnUse" x1="-30" y1="0" x2="30" y2="0">
             <stop offset="0%" stopColor="#f97316" />
             <stop offset="20%" stopColor="#f97316" />
@@ -718,6 +796,42 @@ function CellImageMap({
             stroke="#a9bdd4"
             strokeWidth="1.5"
           />
+        </g>
+
+        {/* cytoskeleton: microtubules radiating out from near the nucleus (the microtubule-
+            organizing center) toward the membrane, plus a thin cortical actin mesh just inside
+            it — the texture a real cytosol has that empty space between organelles was missing */}
+        <g {...gClick("cytoskeleton", "Cytoskeleton")} opacity="0.5">
+          {Array.from({ length: 16 }).map((_, i) => {
+            const angle = (i / 16) * Math.PI * 2;
+            const reach = 0.82 + (i % 3) * 0.06;
+            const ax = 540 * reach;
+            const ay = 335 * reach;
+            const sx = 790 + Math.cos(angle) * 134;
+            const sy = 515 + Math.sin(angle) * 134;
+            const mx = 790 + Math.cos(angle + 0.12) * ax * 0.55;
+            const my = 515 + Math.sin(angle + 0.12) * ay * 0.55;
+            const ex = 790 + Math.cos(angle) * ax;
+            const ey = 515 + Math.sin(angle) * ay;
+            return (
+              <path
+                key={i}
+                d={`M ${sx.toFixed(0)} ${sy.toFixed(0)} Q ${mx.toFixed(0)} ${my.toFixed(0)} ${ex.toFixed(0)} ${ey.toFixed(0)}`}
+                fill="none"
+                stroke="#64748b"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+              />
+            );
+          })}
+          {Array.from({ length: 22 }).map((_, i) => {
+            const angle = (i / 22) * Math.PI * 2;
+            const cx = 790 + Math.cos(angle) * 555;
+            const cy = 515 + Math.sin(angle) * 345;
+            const dx = Math.cos(angle + Math.PI / 2) * 16;
+            const dy = Math.sin(angle + Math.PI / 2) * 16;
+            return <line key={i} x1={cx - dx} y1={cy - dy} x2={cx + dx} y2={cy + dy} stroke="#94a3b8" strokeWidth="1.6" />;
+          })}
         </g>
 
         {/* nucleus (double envelope, chromatin, pores, nucleolus) — its own clickable group,
@@ -842,6 +956,39 @@ function CellImageMap({
           <path d="M1167 653 C1173 673, 1172 699, 1166 718" fill="none" stroke="#ffe3d8" strokeWidth="1.8" strokeLinecap="round" opacity="0.7" />
         </g>
 
+        {/* lysosomes (animal only): small acidic digestive vesicles, usually pictured near the
+            Golgi that buds them off */}
+        {cellType === "animal" ? (
+          <g {...gClick("lysosome", "Lysosome")} filter="url(#organelleShadow)">
+            {([[1004, 552, 21], [1064, 590, 15], [935, 558, 17]] as const).map(([cx, cy, r], i) => (
+              <g key={i}>
+                <circle cx={cx} cy={cy} r={r} fill="url(#lysosomeGradient)" stroke="#881337" strokeWidth="1.8" />
+                <circle cx={cx - r * 0.32} cy={cy - r * 0.32} r={r * 0.28} fill="#fecdd3" opacity="0.55" />
+                <circle cx={cx + r * 0.2} cy={cy + r * 0.1} r={r * 0.16} fill="#7a0d2c" opacity="0.5" />
+              </g>
+            ))}
+          </g>
+        ) : null}
+
+        {/* centrioles (animal only): a perpendicular pair near the nucleus — the microtubule-
+            organizing center that builds the mitotic spindle during division */}
+        {cellType === "animal" ? (
+          <g {...gClick("centriole", "Centriole")} filter="url(#organelleShadow)">
+            <g transform="translate(905 345) rotate(-10)">
+              <rect x="-6.5" y="-27" width="13" height="54" rx="6.5" fill="url(#centrioleGradient)" stroke="#a16207" strokeWidth="1.6" />
+              {Array.from({ length: 6 }).map((_, i) => (
+                <line key={i} x1={-5} y1={-22 + i * 8.5} x2={5} y2={-22 + i * 8.5} stroke="#78350f" strokeWidth="1" opacity="0.4" />
+              ))}
+            </g>
+            <g transform="translate(905 345) rotate(80)">
+              <rect x="-6.5" y="-27" width="13" height="54" rx="6.5" fill="url(#centrioleGradient)" stroke="#a16207" strokeWidth="1.6" />
+              {Array.from({ length: 6 }).map((_, i) => (
+                <line key={i} x1={-5} y1={-22 + i * 8.5} x2={5} y2={-22 + i * 8.5} stroke="#78350f" strokeWidth="1" opacity="0.4" />
+              ))}
+            </g>
+          </g>
+        ) : null}
+
         {/* free ribosomes: large + small subunit, like a textbook particle */}
         <g {...gClick("ribosome", "Ribosomes")}>
           {FREE_RIBOSOME_POINTS.map(({ x, y }, i) => (
@@ -880,6 +1027,19 @@ function CellImageMap({
           <g>
             <text x="790" y="130" textAnchor="middle" fontWeight="700" fontSize="22">Cell membrane</text>
           </g>
+          <g>
+            <text x="300" y="895" textAnchor="middle" fontWeight="700" fontSize="16" fill="#475569" opacity="0.85">Cytoskeleton</text>
+          </g>
+          {cellType === "animal" ? (
+            <>
+              <g>
+                <text x="1004" y="618" textAnchor="middle" fontWeight="700" fontSize="18" fill="#9f1239">Lysosomes</text>
+              </g>
+              <g>
+                <text x="905" y="288" textAnchor="middle" fontWeight="700" fontSize="18" fill="#a16207">Centrioles</text>
+              </g>
+            </>
+          ) : null}
           {cellType === "plant" ? (
             <>
               <g>
@@ -921,11 +1081,14 @@ function NucleusMiniSim({ stepIndex }: { stepIndex: number }) {
   return (
     <div style={cardStyle()}>
       <svg viewBox="0 0 700 240" style={{ width: "100%", height: "auto" }}>
-        <circle cx="350" cy="120" r="92" fill="#f3e8ff" stroke="#9333ea" strokeWidth="4" />
-        <path d="M240 96 C290 70, 330 70, 380 96 C420 118, 460 118, 500 96" fill="none" stroke="#1e293b" strokeWidth="5" />
-        <path d="M240 145 C290 119, 330 119, 380 145 C420 167, 460 167, 500 145" fill="none" stroke="#1e293b" strokeWidth="5" />
-        <ellipse cx={state.x} cy="120" rx="22" ry="16" fill="#2563eb" style={{ transition: "all .25s ease" }} />
-        <path d={`M260 182 C ${280 + state.w / 2} 198, ${320 + state.w / 1.3} 198, ${350 + state.w} 182`} fill="none" stroke="#ef4444" strokeWidth="6" strokeLinecap="round" style={{ transition: "all .25s ease" }} />
+        <MiniSimDefs />
+        <rect x="20" y="20" width="660" height="200" rx="24" fill="#eef4fb" stroke="#c7d5e6" strokeWidth="1.5" />
+        <circle cx="350" cy="120" r="92" fill="url(#miniPurple)" stroke="#6d28d9" strokeWidth="3" filter="url(#miniShadow)" />
+        <circle cx="350" cy="120" r="80" fill="none" stroke="#e6d9fa" strokeWidth="1.4" opacity="0.7" />
+        <path d="M240 96 C290 70, 330 70, 380 96 C420 118, 460 118, 500 96" fill="none" stroke="#1e293b" strokeWidth="5" strokeLinecap="round" />
+        <path d="M240 145 C290 119, 330 119, 380 145 C420 167, 460 167, 500 145" fill="none" stroke="#1e293b" strokeWidth="5" strokeLinecap="round" />
+        <ellipse cx={state.x} cy="120" rx="22" ry="16" fill="url(#miniBlue)" stroke="#1d4ed8" strokeWidth="2" filter="url(#miniShadow)" style={{ transition: "all .25s ease" }} />
+        <path d={`M260 182 C ${280 + state.w / 2} 198, ${320 + state.w / 1.3} 198, ${350 + state.w} 182`} fill="none" stroke="url(#miniPink)" strokeWidth="6" strokeLinecap="round" style={{ transition: "all .25s ease" }} />
       </svg>
     </div>
   );
@@ -942,15 +1105,19 @@ function RibosomeMiniSim({ stepIndex }: { stepIndex: number }) {
   return (
     <div style={cardStyle()}>
       <svg viewBox="0 0 700 240" style={{ width: "100%", height: "auto" }}>
-        <rect x="130" y="150" width="460" height="12" rx="6" fill="#fca5a5" />
-        <ellipse cx="360" cy="112" rx="145" ry="52" fill="#bae6fd" stroke="#0369a1" strokeWidth="4" />
+        <MiniSimDefs />
+        <rect x="20" y="20" width="660" height="200" rx="24" fill="#eef4fb" stroke="#c7d5e6" strokeWidth="1.5" />
+        <rect x="130" y="150" width="460" height="12" rx="6" fill="url(#miniPink)" filter="url(#miniShadow)" />
+        <ellipse cx="360" cy="112" rx="150" ry="46" fill="url(#miniSkyBlue)" stroke="#0369a1" strokeWidth="3" filter="url(#miniShadow)" />
+        <ellipse cx="360" cy="88" rx="108" ry="24" fill="url(#miniBlue)" stroke="#1d4ed8" strokeWidth="2.4" opacity="0.92" />
         <g style={{ transform: `translateX(${state.x - 260}px)`, transition: "transform .25s ease" }}>
           <path d="M260 186 C255 169, 271 159, 281 172 C288 182, 284 193, 274 201" fill="none" stroke="#1d4ed8" strokeWidth="5" strokeLinecap="round" />
-          <circle cx="274" cy="166" r="10" fill="#60a5fa" stroke="#1d4ed8" strokeWidth="3" />
+          <circle cx="274" cy="166" r="10" fill="url(#miniBlue)" stroke="#1d4ed8" strokeWidth="2.5" filter="url(#miniShadow)" />
         </g>
         {new Array(state.aa).fill(0).map((_, i) => (
-          <circle key={i} cx={425 + i * 24} cy={76 - i * 6} r="8" fill="#fbbf24" stroke="#b45309" strokeWidth="2" style={{ transition: "all .25s ease" }} />
+          <circle key={i} cx={425 + i * 24} cy={76 - i * 6} r="8.5" fill="url(#miniYellow)" stroke="#92400e" strokeWidth="1.8" filter="url(#miniShadow)" style={{ transition: "all .25s ease" }} />
         ))}
+        <text x="360" y="222" textAnchor="middle" fontSize="12" fontWeight="700" fill="#0369a1">mRNA feeds through the ribosome; amino acids join into a chain</text>
       </svg>
     </div>
   );
@@ -960,9 +1127,30 @@ function GenericMiniSim({ organelle, stepIndex }: { organelle: OrganelleInfo; st
   return (
     <div style={cardStyle()}>
       <svg viewBox="0 0 700 220" style={{ width: "100%", height: "auto" }}>
-        <rect x="70" y="35" width="560" height="150" rx="20" fill="#f8fafc" stroke={organelle.stroke} strokeWidth="4" />
-        <line x1="120" y1="110" x2="580" y2="110" stroke="#cbd5e1" strokeWidth="6" strokeLinecap="round" />
-        <circle cx={160 + stepIndex * 120} cy="110" r="18" fill={organelle.fill} stroke={organelle.stroke} strokeWidth="4" style={{ transition: "all .25s ease" }} />
+        <MiniSimDefs />
+        <rect x="70" y="35" width="560" height="150" rx="26" fill="url(#miniGray)" opacity="0.25" stroke={organelle.stroke} strokeWidth="3" />
+        <line x1="120" y1="110" x2="580" y2="110" stroke="#94a3b8" strokeWidth="6" strokeLinecap="round" opacity="0.6" />
+        {Array.from({ length: 4 }).map((_, i) => (
+          <circle key={i} cx={160 + i * 120} cy="110" r={i === stepIndex ? 8 : 5} fill="#fff" stroke="#94a3b8" strokeWidth="2" opacity={i <= stepIndex ? 1 : 0.4} />
+        ))}
+        <circle
+          cx={160 + stepIndex * 120}
+          cy="110"
+          r="20"
+          fill={organelle.fill}
+          stroke={organelle.stroke}
+          strokeWidth="3.5"
+          filter="url(#miniShadow)"
+          style={{ transition: "all .3s ease" }}
+        />
+        <circle
+          cx={160 + stepIndex * 120 - 6}
+          cy="104"
+          r="6"
+          fill="#ffffff"
+          opacity="0.4"
+          style={{ transition: "all .3s ease" }}
+        />
       </svg>
     </div>
   );
@@ -979,9 +1167,12 @@ function MitochondrionMiniSim({ stepIndex }: { stepIndex: number }) {
   return (
     <div style={cardStyle()}>
       <svg viewBox="0 0 700 240" style={{ width: "100%", height: "auto" }}>
-        <rect x="60" y="40" width="580" height="160" rx="80" fill="#fecdd3" stroke="#be123c" strokeWidth="4" />
-        <path d="M150 70 C170 110, 170 130, 150 170" fill="none" stroke="#fb7185" strokeWidth="10" strokeLinecap="round" />
-        <path d="M230 60 C250 110, 250 130, 230 180" fill="none" stroke="#fb7185" strokeWidth="10" strokeLinecap="round" />
+        <MiniSimDefs />
+        <rect x="20" y="20" width="660" height="200" rx="24" fill="#fff6f0" stroke="#f0ddd0" strokeWidth="1.5" />
+        <path d="M80 60 C50 90, 50 150, 80 180 C160 210, 480 210, 590 180 C625 150, 625 90, 590 60 C480 30, 160 30, 80 60 Z" fill="url(#miniOrange)" stroke="#7a3229" strokeWidth="2.5" filter="url(#miniShadow)" />
+        <path d="M96 62 C70 90, 70 150, 96 178 C170 204, 470 204, 574 178 C606 150, 606 90, 574 62 C470 36, 170 36, 96 62 Z" fill="none" stroke="#7a3229" strokeWidth="1.2" opacity="0.5" />
+        <path d="M150 70 C170 110, 170 130, 150 170" fill="none" stroke="#ffe3d8" strokeWidth="9" strokeLinecap="round" opacity="0.9" />
+        <path d="M230 60 C250 110, 250 130, 230 180" fill="none" stroke="#ffe3d8" strokeWidth="9" strokeLinecap="round" opacity="0.9" />
         {[330, 390, 450].map((x, i) => (
           <rect
             key={i}
@@ -990,21 +1181,22 @@ function MitochondrionMiniSim({ stepIndex }: { stepIndex: number }) {
             width="26"
             height="36"
             rx="6"
-            fill={step >= 1 ? "#f97316" : "#fda4af"}
+            fill={step >= 1 ? "url(#miniYellow)" : "#fda4af"}
             stroke="#9a3412"
-            strokeWidth="2.5"
+            strokeWidth="2"
+            filter="url(#miniShadow)"
             style={{ transition: "fill .3s ease" }}
           />
         ))}
         <g style={{ opacity: fuelOpacity, transition: "opacity .25s ease" }}>
-          <circle cx="220" cy="120" r="15" fill="#facc15" stroke="#a16207" strokeWidth="3" />
+          <circle cx="220" cy="120" r="16" fill="url(#miniYellow)" stroke="#92400e" strokeWidth="2.5" filter="url(#miniShadow)" />
           <text x="220" y="124" fontSize="10" fontWeight="700" textAnchor="middle" fill="#78350f">NADH</text>
         </g>
         <g style={{ opacity: electronOpacity, transition: "opacity .25s ease" }}>
-          <circle cx={electronX} cy="108" r="6" fill="#fde047" style={{ transition: "cx .6s ease" }} />
+          <circle cx={electronX} cy="108" r="6.5" fill="#fde047" stroke="#a16207" strokeWidth="1.2" style={{ transition: "cx .6s ease" }} />
         </g>
         <g transform="translate(545 120)">
-          <circle r="28" fill="#fecaca" stroke="#be123c" strokeWidth="3" />
+          <circle r="30" fill="url(#miniPink)" stroke="#be123c" strokeWidth="2.5" filter="url(#miniShadow)" />
           <g
             style={{
               transformOrigin: "0px 0px",
@@ -1017,7 +1209,7 @@ function MitochondrionMiniSim({ stepIndex }: { stepIndex: number }) {
           </g>
         </g>
         <g style={{ opacity: atpOpacity, transition: "opacity .3s ease" }}>
-          <circle cx="630" cy="120" r="17" fill="#4ade80" stroke="#166534" strokeWidth="3" />
+          <circle cx="630" cy="120" r="18" fill="url(#miniGreen)" stroke="#166534" strokeWidth="2.5" filter="url(#miniShadow)" />
           <text x="630" y="124" fontSize="9" fontWeight="700" textAnchor="middle" fill="#052e16">ATP</text>
         </g>
       </svg>
@@ -1035,33 +1227,38 @@ function ChloroplastMiniSim({ stepIndex }: { stepIndex: number }) {
   return (
     <div style={cardStyle()}>
       <svg viewBox="0 0 700 240" style={{ width: "100%", height: "auto" }}>
-        <rect x="50" y="40" width="600" height="160" rx="70" fill="#bbf7d0" stroke="#15803d" strokeWidth="4" />
+        <MiniSimDefs />
+        <path d="M90 46 C50 76, 50 164, 90 194 C180 224, 520 224, 610 194 C650 164, 650 76, 610 46 C520 16, 180 16, 90 46 Z" fill="url(#miniGreen)" stroke="#2f4a26" strokeWidth="2.5" filter="url(#miniShadow)" />
+        <path d="M104 52 C68 80, 68 160, 104 188 C186 214, 514 214, 596 188 C630 160, 630 80, 596 52 C514 26, 186 26, 104 52 Z" fill="none" stroke="#2f4a26" strokeWidth="1.2" opacity="0.4" />
         {[0, 1, 2].map((i) => (
-          <ellipse key={i} cx="160" cy={84 + i * 26} rx="55" ry="14" fill="#22c55e" stroke="#166534" strokeWidth="2.5" />
+          <g key={i}>
+            <ellipse cx="160" cy={84 + i * 26} rx="55" ry="14" fill="url(#miniLeafBand)" stroke="#166534" strokeWidth="2" filter="url(#miniShadow)" />
+            <ellipse cx="148" cy={80 + i * 26} rx="20" ry="5" fill="#eafbd7" opacity="0.4" />
+          </g>
         ))}
         <text x="160" y="205" fontSize="12" fontWeight="700" textAnchor="middle" fill="#14532d">Thylakoid</text>
         <text x="470" y="205" fontSize="12" fontWeight="700" textAnchor="middle" fill="#14532d">Stroma</text>
 
         <g style={{ opacity: photonOpacity, transition: "opacity .25s ease" }}>
           <line x1="55" y1="45" x2="90" y2="70" stroke="#fde047" strokeWidth="3.5" strokeLinecap="round" />
-          <circle cx="95" cy="72" r="8" fill="#fde047" stroke="#a16207" strokeWidth="2" />
+          <circle cx="95" cy="72" r="8" fill="#fef3c7" stroke="#a16207" strokeWidth="2" />
         </g>
 
         <g style={{ opacity: productsOpacity, transition: "opacity .3s ease" }}>
-          <circle cx="270" cy="70" r="15" fill="#4ade80" stroke="#166534" strokeWidth="2.5" />
+          <circle cx="270" cy="70" r="15" fill="url(#miniGreen)" stroke="#166534" strokeWidth="2" filter="url(#miniShadow)" />
           <text x="270" y="74" fontSize="9" fontWeight="700" textAnchor="middle" fill="#052e16">ATP</text>
-          <circle cx="270" cy="135" r="17" fill="#60a5fa" stroke="#1d4ed8" strokeWidth="2.5" />
+          <circle cx="270" cy="135" r="17" fill="url(#miniBlue)" stroke="#1d4ed8" strokeWidth="2" filter="url(#miniShadow)" />
           <text x="270" y="139" fontSize="7.5" fontWeight="700" textAnchor="middle" fill="#eff6ff">NADPH</text>
         </g>
 
         <g style={{ opacity: calvinOpacity, transition: "opacity .3s ease" }}>
-          <circle cx="420" cy="175" r="15" fill="#e2e8f0" stroke="#475569" strokeWidth="2.5" />
+          <circle cx="420" cy="175" r="15" fill="url(#miniGray)" stroke="#475569" strokeWidth="2" filter="url(#miniShadow)" />
           <text x="420" y="179" fontSize="8" fontWeight="700" textAnchor="middle" fill="#0f172a">CO2</text>
           <path d="M470 95 a38 38 0 1 1 -1 0" fill="none" stroke="#166534" strokeWidth="4" strokeDasharray="6 5" />
         </g>
 
         <g style={{ opacity: glucoseOpacity, transition: "opacity .3s ease" }}>
-          <circle cx="620" cy="120" r="19" fill="#a3e635" stroke="#3f6212" strokeWidth="3" />
+          <circle cx="620" cy="120" r="19" fill="url(#miniLeafBand)" stroke="#3f6212" strokeWidth="2.5" filter="url(#miniShadow)" />
           <text x="620" y="124" fontSize="7.5" fontWeight="700" textAnchor="middle" fill="#1a2e05">C6H12O6</text>
         </g>
       </svg>
@@ -1078,18 +1275,22 @@ function GolgiMiniSim({ stepIndex }: { stepIndex: number }) {
   return (
     <div style={cardStyle()}>
       <svg viewBox="0 0 700 240" style={{ width: "100%", height: "auto" }}>
+        <MiniSimDefs />
+        <rect x="20" y="20" width="660" height="200" rx="24" fill="#fff5f0" stroke="#f0d9cc" strokeWidth="1.5" />
         {[0, 1, 2, 3].map((i) => (
           <path
             key={i}
             d={`M150 ${70 + i * 30} C300 ${50 + i * 30}, 450 ${50 + i * 30}, 560 ${70 + i * 30}`}
             fill="none"
-            stroke="#ec4899"
-            strokeWidth="10"
+            stroke="url(#miniOrange)"
+            strokeWidth="11"
             strokeLinecap="round"
-            opacity={0.92 - i * 0.1}
+            opacity={0.95 - i * 0.08}
+            filter="url(#miniShadow)"
           />
         ))}
-        <circle cx={cargoX} cy={cargoY} r="15" fill={cargoColor} stroke="#9d174d" strokeWidth="3" style={{ transition: "cx .35s ease, cy .35s ease, fill .3s ease" }} />
+        <circle cx={cargoX} cy={cargoY} r="15" fill={cargoColor} stroke="#9d174d" strokeWidth="2.5" filter="url(#miniShadow)" style={{ transition: "cx .35s ease, cy .35s ease, fill .3s ease" }} />
+        <circle cx={cargoX - 4} cy={cargoY - 4} r="4.5" fill="#fff" opacity="0.5" style={{ transition: "cx .35s ease, cy .35s ease" }} />
         <text x="120" y="225" fontSize="13" fontWeight="700" fill="#9d174d">cis face</text>
         <text x="580" y="225" fontSize="13" fontWeight="700" textAnchor="end" fill="#9d174d">trans face</text>
       </svg>
@@ -1106,13 +1307,18 @@ function RoughERMiniSim({ stepIndex }: { stepIndex: number }) {
   return (
     <div style={cardStyle()}>
       <svg viewBox="0 0 700 240" style={{ width: "100%", height: "auto" }}>
-        <path d="M100 150 C160 120, 220 120, 280 150 C340 120, 400 120, 460 150 C520 120, 560 120, 600 150" fill="none" stroke="#0284c7" strokeWidth="10" strokeLinecap="round" />
-        <circle cx="220" cy="118" r="10" fill="#0f172a" />
+        <MiniSimDefs />
+        <rect x="20" y="20" width="660" height="200" rx="24" fill="#eef7fc" stroke="#c9e1ef" strokeWidth="1.5" />
+        <path d="M100 150 C160 120, 220 120, 280 150 C340 120, 400 120, 460 150 C520 120, 560 120, 600 150" fill="none" stroke="url(#miniSkyBlue)" strokeWidth="11" strokeLinecap="round" filter="url(#miniShadow)" />
+        {[130, 170, 250, 310, 390, 430, 510, 550].map((x, i) => (
+          <circle key={i} cx={x} cy={i % 2 === 0 ? 134 : 128} r="4" fill="url(#miniBlue)" stroke="#1c2f52" strokeWidth="0.7" opacity={0.85} />
+        ))}
+        <circle cx="220" cy="118" r="10" fill="url(#miniBlue)" stroke="#1c2f52" strokeWidth="1.4" filter="url(#miniShadow)" />
         <line x1="220" y1="128" x2="220" y2="188" stroke="#38bdf8" strokeWidth="5" strokeLinecap="round" />
-        <circle cx="220" cy={proteinY} r={proteinRadius} fill="#38bdf8" stroke="#075985" strokeWidth="3" style={{ transition: "all .3s ease" }} />
+        <circle cx="220" cy={proteinY} r={proteinRadius} fill="url(#miniSkyBlue)" stroke="#075985" strokeWidth="2.5" filter="url(#miniShadow)" style={{ transition: "all .3s ease" }} />
         {step >= 2 ? <path d="M206 205 l9 9 l18 -18" fill="none" stroke="#166534" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" /> : null}
         <g style={{ opacity: vesicleOpacity, transition: "opacity .3s ease" }}>
-          <circle cx="480" cy="190" r="20" fill="#7dd3fc" stroke="#0369a1" strokeWidth="3" />
+          <circle cx="480" cy="190" r="20" fill="url(#miniSkyBlue)" stroke="#0369a1" strokeWidth="2.5" filter="url(#miniShadow)" />
           <circle cx="474" cy="184" r="6" fill="#e0f2fe" opacity="0.8" />
         </g>
       </svg>
@@ -1123,20 +1329,22 @@ function RoughERMiniSim({ stepIndex }: { stepIndex: number }) {
 function LysosomeMiniSim({ stepIndex }: { stepIndex: number }) {
   const step = Math.min(stepIndex, 3);
   const cargoScale = [1, 1, 0.55, 0.2][step];
-  const phFill = step >= 1 ? "#fda4af" : "#fecdd3";
   const fragmentsOpacity = step === 3 ? 1 : 0;
 
   return (
     <div style={cardStyle()}>
       <svg viewBox="0 0 700 240" style={{ width: "100%", height: "auto" }}>
-        <circle cx="330" cy="120" r="100" fill={phFill} stroke="#881337" strokeWidth="4" style={{ transition: "fill .3s ease" }} />
-        {step === 0 ? <circle cx="150" cy="120" r="22" fill="#94a3b8" stroke="#475569" strokeWidth="3" /> : null}
+        <MiniSimDefs />
+        <rect x="20" y="20" width="660" height="200" rx="24" fill="#fff5f6" stroke="#f3d6dc" strokeWidth="1.5" />
+        <circle cx="330" cy="120" r="100" fill={step >= 1 ? "url(#miniPink)" : "#fecdd3"} stroke="#881337" strokeWidth="3" filter="url(#miniShadow)" style={{ transition: "fill .3s ease" }} />
+        <circle cx="330" cy="120" r="86" fill="none" stroke="#fecdd3" strokeWidth="1.4" opacity="0.6" />
+        {step === 0 ? <circle cx="150" cy="120" r="22" fill="url(#miniGray)" stroke="#475569" strokeWidth="2.5" filter="url(#miniShadow)" /> : null}
         <g style={{ transform: `scale(${cargoScale})`, transformOrigin: "330px 120px", transition: "transform .3s ease" }}>
-          <circle cx="330" cy="120" r="40" fill="#94a3b8" stroke="#475569" strokeWidth="3" />
+          <circle cx="330" cy="120" r="40" fill="url(#miniGray)" stroke="#475569" strokeWidth="2.5" filter="url(#miniShadow)" />
         </g>
         <g style={{ opacity: fragmentsOpacity, transition: "opacity .3s ease" }}>
           {([[280, 90], [300, 150], [360, 95], [375, 145]] as const).map(([x, y], i) => (
-            <circle key={i} cx={x} cy={y} r="7" fill="#cbd5e1" stroke="#475569" strokeWidth="2" />
+            <circle key={i} cx={x} cy={y} r="7" fill="url(#miniGray)" stroke="#475569" strokeWidth="1.6" />
           ))}
         </g>
       </svg>
