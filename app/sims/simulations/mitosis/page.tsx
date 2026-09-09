@@ -143,9 +143,80 @@ function Centrosome({
 
 const CHROMOSOME_COLORS = ["#b5233f", "#2f5ba8"] as const;
 
+// A deterministic pseudo-random generator (not Math.random) so speck positions stay fixed
+// across re-renders and don't cause a server/client hydration mismatch.
+function pseudoRandom(seed: number) {
+  const x = Math.sin(seed * 12.9898) * 43758.5453;
+  return x - Math.floor(x);
+}
+
+// Small mitochondria + vesicle flecks scattered through the cytosol so the cell reads as a
+// living, textured space rather than an empty gradient circle with a nucleus floating in it —
+// every other simulation in this app has this kind of depth, mitosis was the one that didn't.
+// Points landing inside any "avoid" circle (nucleus, chromosomes, spindle) are skipped.
+function CytoplasmTexture({
+  cx,
+  cy,
+  r,
+  seedOffset,
+  avoid = [],
+}: {
+  cx: number;
+  cy: number;
+  r: number;
+  seedOffset: number;
+  avoid?: { cx: number; cy: number; r: number }[];
+}) {
+  const isAvoided = (x: number, y: number) =>
+    avoid.some((zone) => Math.hypot(x - zone.cx, y - zone.cy) < zone.r);
+
+  const specks: { x: number; y: number; kind: "mito" | "dot"; rotate: number }[] = [];
+  for (let i = 0; i < 26 && specks.length < 9; i++) {
+    const seed = seedOffset + i * 5.37;
+    const angle = pseudoRandom(seed) * Math.PI * 2;
+    const radial = Math.sqrt(pseudoRandom(seed + 1.9)) * (r - 14);
+    const x = cx + Math.cos(angle) * radial;
+    const y = cy + Math.sin(angle) * radial;
+    if (isAvoided(x, y)) continue;
+    specks.push({ x, y, kind: i % 4 === 0 ? "mito" : "dot", rotate: pseudoRandom(seed + 3.3) * 360 });
+  }
+
+  return (
+    <g opacity="0.75">
+      {specks.map((speck, i) =>
+        speck.kind === "mito" ? (
+          <ellipse
+            key={i}
+            cx={speck.x}
+            cy={speck.y}
+            rx="9"
+            ry="5"
+            fill="url(#mit-mito)"
+            stroke="#7a3229"
+            strokeWidth="1"
+            transform={`rotate(${speck.rotate.toFixed(0)} ${speck.x.toFixed(1)} ${speck.y.toFixed(1)})`}
+          />
+        ) : (
+          <circle key={i} cx={speck.x} cy={speck.y} r="2.6" fill="#7fa8d8" opacity="0.6" />
+        ),
+      )}
+    </g>
+  );
+}
+
 function CellStage({ phase }: { phase: Phase }) {
   return (
     <svg viewBox="0 0 500 320" style={{ width: "100%", maxWidth: 460, margin: "0 auto", display: "block" }}>
+      <style>{`
+        @keyframes mit-breathe {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.012); }
+        }
+        .mit-cell-body { animation: mit-breathe 5s ease-in-out infinite; transform-origin: 250px 160px; }
+        @media (prefers-reduced-motion: reduce) {
+          .mit-cell-body { animation: none; }
+        }
+      `}</style>
       <defs>
         <filter id="mit-shadow" x="-60%" y="-60%" width="220%" height="220%">
           <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" floodColor="#0f172a" floodOpacity="0.25" />
@@ -164,6 +235,10 @@ function CellStage({ phase }: { phase: Phase }) {
           <stop offset="0%" stopColor="#f6dc8f" />
           <stop offset="100%" stopColor="#b8912f" />
         </radialGradient>
+        <radialGradient id="mit-mito" cx="32%" cy="26%" r="85%">
+          <stop offset="0%" stopColor="#ffd7cc" />
+          <stop offset="100%" stopColor="#c47461" />
+        </radialGradient>
         {/* userSpaceOnUse (not the default objectBoundingBox) so this still renders on a
             perfectly vertical chromatid path, whose bounding box would otherwise be zero
             pixels wide and make an objectBoundingBox gradient degenerate/invisible */}
@@ -179,7 +254,24 @@ function CellStage({ phase }: { phase: Phase }) {
         </linearGradient>
       </defs>
 
-      {phase.key !== "cytokinesis" ? <circle cx="250" cy="160" r="140" fill="url(#mit-cyto)" stroke="#4a6d85" strokeWidth="1.8" /> : null}
+      {phase.key !== "cytokinesis" ? (
+        <g className="mit-cell-body">
+          <circle cx="250" cy="160" r="140" fill="url(#mit-cyto)" stroke="#4a6d85" strokeWidth="1.8" />
+          <CytoplasmTexture
+            cx={250}
+            cy={160}
+            r={140}
+            seedOffset={phase.key === "prophase" || phase.key === "metaphase" || phase.key === "anaphase" ? 30 : phase.key === "telophase" ? 50 : 10}
+            avoid={
+              phase.key === "telophase"
+                ? [{ cx: 165, cy: 160, r: 62 }, { cx: 335, cy: 160, r: 62 }]
+                : phase.key === "prophase" || phase.key === "metaphase" || phase.key === "anaphase"
+                  ? [{ cx: 250, cy: 160, r: 90 }]
+                  : [{ cx: 250, cy: 160, r: 74 }]
+            }
+          />
+        </g>
+      ) : null}
 
       {phase.key === "g1" ? (
         <>
@@ -279,6 +371,8 @@ function CellStage({ phase }: { phase: Phase }) {
           <path d="M195 108 C225 96, 275 96, 305 108 C295 140, 295 180, 305 212 C275 224, 225 224, 195 212 C205 180, 205 140, 195 108 Z" fill="url(#mit-cyto)" stroke="#4a6d85" strokeWidth="1.4" opacity="0.9" />
           <circle cx="165" cy="160" r="75" fill="url(#mit-cyto)" stroke="#4a6d85" strokeWidth="1.8" />
           <circle cx="335" cy="160" r="75" fill="url(#mit-cyto)" stroke="#4a6d85" strokeWidth="1.8" />
+          <CytoplasmTexture cx={165} cy={160} r={75} seedOffset={70} avoid={[{ cx: 165, cy: 160, r: 38 }]} />
+          <CytoplasmTexture cx={335} cy={160} r={75} seedOffset={90} avoid={[{ cx: 335, cy: 160, r: 38 }]} />
           <path d="M250 92 C238 130, 238 190, 250 228" fill="none" stroke="#2f5170" strokeWidth="2.5" strokeDasharray="5 4" opacity="0.6" />
           <circle cx="165" cy="160" r="35" fill="url(#mit-nucleus)" stroke="#6d4fa8" strokeWidth="1.4" />
           <circle cx="335" cy="160" r="35" fill="url(#mit-nucleus)" stroke="#6d4fa8" strokeWidth="1.4" />

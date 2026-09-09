@@ -868,6 +868,17 @@ function CellImageMap({
         {/* chloroplasts (plant only) — a lopsided lens shape instead of a perfect ellipse */}
         {cellType === "plant" ? (
           <g {...gClick("chloroplast", "Chloroplast")}>
+            {/* invisible hit-circles, one per scattered chloroplast: the three visible blobs
+                sit far apart (corner to corner of the cell), so the group's overall bounding
+                box has empty space at its center — clicking there (what a browser's default
+                click-target math reaches for) would miss every chloroplast entirely */}
+            {([
+              { cx: 290, cy: 700, rx: 58, ry: 36, rotate: -18 },
+              { cx: 700, cy: 200, rx: 54, ry: 34, rotate: 10 },
+              { cx: 1290, cy: 430, rx: 52, ry: 33, rotate: -30 },
+            ] as const).map((c, i) => (
+              <circle key={`hit-${i}`} cx={c.cx} cy={c.cy} r={Math.max(c.rx, c.ry) + 14} fill="transparent" />
+            ))}
             {([
               { cx: 290, cy: 700, rx: 58, ry: 36, rotate: -18 },
               { cx: 700, cy: 200, rx: 54, ry: 34, rotate: 10 },
@@ -891,6 +902,10 @@ function CellImageMap({
 
         {/* smooth ER */}
         <g {...gClick("smoothER", "Smooth endoplasmic reticulum")}>
+          {/* invisible hit-area: every visible stroke here is fill="none", which SVG only
+              treats as clickable exactly on the painted line itself — the open space between
+              the wavy strands (where a click naturally lands) would otherwise miss entirely */}
+          <ellipse cx="497" cy="381" rx="140" ry="90" fill="transparent" />
           <path d="M385 330 C438 302, 494 298, 542 314 C571 324, 594 341, 608 360" fill="none" stroke="#c99552" strokeWidth="10" strokeLinecap="round" />
           <path d="M372 374 C432 349, 495 347, 550 365 C579 374, 603 390, 618 408" fill="none" stroke="#c99552" strokeWidth="10" strokeLinecap="round" />
           <path d="M396 416 C453 396, 511 397, 562 414 C589 423, 612 437, 625 453" fill="none" stroke="#c99552" strokeWidth="10" strokeLinecap="round" />
@@ -903,6 +918,8 @@ function CellImageMap({
 
         {/* rough ER */}
         <g {...gClick("roughER", "Rough endoplasmic reticulum")}>
+          {/* invisible hit-area — same reasoning as smooth ER's, below */}
+          <ellipse cx="558" cy="695" rx="180" ry="95" fill="transparent" />
           <path d="M400 640 C462 614, 526 610, 585 624 C630 634, 669 653, 699 676" fill="none" stroke="#3d7fad" strokeWidth="10.5" strokeLinecap="round" />
           <path d="M386 687 C456 663, 530 661, 598 676 C646 687, 686 706, 718 728" fill="none" stroke="#3d7fad" strokeWidth="10.5" strokeLinecap="round" />
           <path d="M414 733 C480 717, 549 717, 613 731 C657 740, 697 756, 728 775" fill="none" stroke="#3d7fad" strokeWidth="10.5" strokeLinecap="round" />
@@ -991,6 +1008,13 @@ function CellImageMap({
 
         {/* free ribosomes: large + small subunit, like a textbook particle */}
         <g {...gClick("ribosome", "Ribosomes")}>
+          {/* invisible hit-circles, one per scattered ribosome: the 9 points span corner to
+              corner of the cell, so the group's bounding-box center (where a click naturally
+              lands if you're not pixel-precise on one of the tiny ~6px ellipses) is empty
+              cytosol far from any actual ribosome */}
+          {FREE_RIBOSOME_POINTS.map(({ x, y }, i) => (
+            <circle key={`hit-${i}`} cx={x} cy={y} r="13" fill="transparent" />
+          ))}
           {FREE_RIBOSOME_POINTS.map(({ x, y }, i) => (
             <g key={i}>
               <ellipse cx={x} cy={y + 1.5} rx="6.4" ry="5.2" fill="url(#ribosomeGradient)" stroke="#1c2f52" strokeWidth="0.8" />
