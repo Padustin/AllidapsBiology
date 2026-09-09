@@ -27,6 +27,7 @@ type OrganelleInfo = {
   name: string;
   fill: string;
   stroke: string;
+  function: string;
   steps: string[];
 };
 
@@ -54,96 +55,128 @@ const ORGANELLES: Record<OrganelleKey, OrganelleInfo> = {
     name: "Nucleolus",
     fill: "#d946ef",
     stroke: "#86198f",
+    function:
+      "Ribosome assembly: synthesizes ribosomal RNA (rRNA) and combines it with proteins to build ribosomal subunits, which then leave through the nuclear pores to become working ribosomes.",
     steps: ["rRNA synthesis", "Subunit assembly", "Ribosome export", "Cycle reset"],
   },
   nucleus: {
     name: "Nucleus",
     fill: "#a855f7",
     stroke: "#6b21a8",
+    function:
+      "Control center of the cell: stores the cell's DNA, controls gene expression by regulating transcription, and processes RNA before exporting it through nuclear pores to the cytoplasm.",
     steps: ["DNA access", "Transcription", "mRNA processing", "Nuclear export"],
   },
   ribosomes: {
     name: "Ribosomes",
     fill: "#38bdf8",
     stroke: "#0369a1",
+    function:
+      "Translation: read the codons of an mRNA strand and match them to tRNA-carried amino acids, linking those amino acids into a growing polypeptide chain — the actual site where proteins are built.",
     steps: ["mRNA bind", "tRNA match", "Peptide bond", "Release"],
   },
   vesicle: {
     name: "Vesicle",
     fill: "#84cc16",
     stroke: "#3f6212",
+    function:
+      "Intracellular transport: a small membrane-bound sac that buds off one organelle, carries its cargo (proteins, lipids, or waste) across the cytosol, and fuses with the membrane of its destination to deliver it.",
     steps: ["Cargo load", "Budding", "Transport", "Fusion"],
   },
   roughER: {
     name: "Rough endoplasmic reticulum",
     fill: "#0ea5e9",
     stroke: "#075985",
+    function:
+      "Protein synthesis and processing: its surface-bound ribosomes make proteins directly into its interior, where they are folded and quality-checked before being packaged into vesicles bound for the Golgi.",
     steps: ["Protein entry", "Folding", "Quality check", "Vesicle exit"],
   },
   golgi: {
     name: "Golgi apparatus",
     fill: "#ec4899",
     stroke: "#9d174d",
+    function:
+      "The cell's shipping department: receives proteins and lipids from the ER, chemically modifies them (such as adding sugar groups), sorts them by destination, and ships them out in vesicles.",
     steps: ["Receive", "Modify", "Sort", "Ship"],
   },
   cytoskeleton: {
     name: "Cytoskeleton",
     fill: "#64748b",
     stroke: "#334155",
+    function:
+      "Structural framework: a network of protein filaments (microtubules and microfilaments) that gives the cell its shape, anchors organelles in place, and acts as the track motor proteins use to move cargo and separate chromosomes during division.",
     steps: ["Anchor", "Track setup", "Transport", "Reorganize"],
   },
   smoothER: {
     name: "Smooth endoplasmic reticulum",
     fill: "#06b6d4",
     stroke: "#155e75",
+    function:
+      "Lipid metabolism: lacking surface ribosomes, it synthesizes lipids and steroid hormones, detoxifies drugs and other harmful chemicals, and stores calcium ions for cell signaling.",
     steps: ["Lipid synthesis", "Detox", "Storage", "Membrane supply"],
   },
   mitochondrion: {
     name: "Mitochondrion",
     fill: "#f97316",
     stroke: "#9a3412",
+    function:
+      "Cellular respiration: the \"powerhouse of the cell\" — it breaks down fuel from glucose using the electron transport chain and ATP synthase to generate ATP, the energy currency cells use to power their activities.",
     steps: ["Fuel input", "ETC run", "ATP synthase", "ATP output"],
   },
   vacuole: {
     name: "Vacuole",
     fill: "#3b82f6",
     stroke: "#1d4ed8",
+    function:
+      "Storage and support (plant cells): the large central vacuole stores water, ions, and waste products, and its internal pressure against the cell wall (turgor pressure) keeps the plant cell rigid.",
     steps: ["Fill", "Store", "Balance", "Release"],
   },
   cytosol: {
     name: "Cytosol",
     fill: "#94a3b8",
     stroke: "#475569",
+    function:
+      "The cell's internal fluid: the water-based gel that fills the space between organelles, where molecules diffuse and many metabolic reactions — including the first steps of cellular respiration (glycolysis) — take place.",
     steps: ["Molecule mix", "Diffusion", "Reactions", "Redistribute"],
   },
   lysosome: {
     name: "Lysosome",
     fill: "#e11d48",
     stroke: "#881337",
+    function:
+      "Digestion and recycling: packed with acidic enzymes that break down worn-out organelles, engulfed food particles, and foreign invaders, recycling their raw materials back into the cell.",
     steps: ["Cargo intake", "Acidify", "Digest", "Recycle"],
   },
   centriole: {
     name: "Centriole",
     fill: "#facc15",
     stroke: "#a16207",
+    function:
+      "Cell division support: organizes microtubules into the spindle apparatus that pulls duplicated chromosomes apart during mitosis and meiosis.",
     steps: ["Pairing", "Microtubule nucleation", "Spindle setup", "Division assist"],
   },
   membrane: {
     name: "Cell membrane",
     fill: "#64748b",
     stroke: "#334155",
+    function:
+      "Selective barrier: the phospholipid bilayer that separates the cell from its environment, controlling which substances enter or leave, receiving signals through embedded receptor proteins, and maintaining homeostasis.",
     steps: ["Signal receive", "Selective transport", "Gradient control", "Homeostasis"],
   },
   chloroplast: {
     name: "Chloroplast",
     fill: "#22c55e",
     stroke: "#15803d",
+    function:
+      "Photosynthesis (plant cells): captures light energy in its thylakoid membranes to produce ATP and NADPH (the light reactions), then uses that energy in the stroma to fix CO2 into glucose (the Calvin cycle).",
     steps: ["Light capture", "Light reactions (ATP + NADPH)", "Calvin cycle (carbon fixation)", "Glucose output"],
   },
   cellWall: {
     name: "Cell wall",
     fill: "#ca8a04",
     stroke: "#854d0e",
+    function:
+      "Structural protection (plant cells): a rigid layer of cellulose outside the cell membrane that supports the cell, resists the osmotic pressure that would otherwise burst it, and connects neighboring cells through plasmodesmata.",
     steps: ["Structural support", "Turgor pressure maintenance", "Protection from lysis", "Plasmodesmata connections"],
   },
 };
@@ -790,6 +823,13 @@ function CellImageMap({
             strokeWidth="3.5"
             filter="url(#softShadow)"
           />
+        </g>
+
+        {/* cytosol: the fluid interior fill, split out from the membrane ring above so it's
+            its own clickable region — anywhere in the cell's interior not already covered by a
+            more specific organelle (drawn on top of this, later) correctly reads as "Cytosol"
+            instead of always attributing the click to the membrane */}
+        <g {...gClick("cytosol", "Cytosol")}>
           <path
             d="M212 502 C212 317, 362 197, 624 180 C830 167, 1071 192, 1216 289 C1303 347, 1360 423, 1360 503 C1356 609, 1300 706, 1185 779 C1038 873, 810 882, 586 855 C390 831, 265 746, 228 625 C216 587, 208 548, 212 502 Z"
             fill="url(#cytoplasmGlow)"
@@ -853,6 +893,12 @@ function CellImageMap({
           ))}
           <circle cx="742" cy="574" r="10" fill="#4f7fd6" stroke="#2c4f8f" strokeWidth="1.6" opacity="0.95" />
           <circle cx="736" cy="568" r="3" fill="#cfe0f7" opacity="0.85" />
+        </g>
+
+        {/* nucleolus: the dense purple body inside the nucleus, split into its own clickable
+            group (painted on top of the nucleus above) so clicking specifically on it opens the
+            Nucleolus panel instead of always falling back to the surrounding Nucleus */}
+        <g {...gClick("nucleolus", "Nucleolus")}>
           <circle cx="790" cy="515" r="28" fill="url(#nucleolusGradient)" opacity="0.95" />
           <circle cx="780" cy="506" r="8" fill="#c9adf0" opacity="0.5" />
         </g>
@@ -949,6 +995,19 @@ function CellImageMap({
           <circle cx="1168" cy="523" r="4.9" fill="#d97b62" stroke="#8a4a35" strokeWidth="1.4" />
           <circle cx="1194" cy="336" r="5" fill="#e8a894" stroke="#8a4a35" strokeWidth="1.2" />
           <circle cx="1215" cy="356" r="4.3" fill="#e8a894" stroke="#8a4a35" strokeWidth="1.2" />
+        </g>
+
+        {/* transport vesicle: a sac shown mid-bud off the Golgi's trans face, carrying cargo
+            toward its destination — its own clickable organelle rather than only appearing
+            inside the Golgi/rough ER mini-sim animations */}
+        <g {...gClick("vesicle", "Vesicle")}>
+          {/* invisible hit-area covering both the neck (a thin fill="none" stroke, not
+              clickable on its own) and the vesicle body, so the group's overall bounding-box
+              center — where a generic click lands — is guaranteed to hit painted area */}
+          <ellipse cx="1269" cy="506" rx="38" ry="30" fill="transparent" />
+          <path d="M1240 495 C1252 484, 1268 484, 1278 494" fill="none" stroke="#d97b62" strokeWidth="5" strokeLinecap="round" opacity="0.85" />
+          <circle cx="1284" cy="512" r="15" fill="#84cc16" stroke="#3f6212" strokeWidth="2" filter="url(#organelleShadow)" />
+          <circle cx="1278" cy="506" r="4.5" fill="#e4f9cf" opacity="0.7" />
         </g>
 
         {/* mitochondrion */}
@@ -1401,6 +1460,23 @@ function DetailPanel({ selected, onBack }: { selected: OrganelleKey; onBack: () 
         <button onClick={onBack} style={{ border: "1px solid var(--border)", background: "var(--surface)", borderRadius: 8, padding: "8px 14px", fontWeight: 600, fontSize: 14, color: "var(--ink)", cursor: "pointer" }}>
           ← Back to cell
         </button>
+      </div>
+
+      <div
+        style={{
+          margin: 0,
+          padding: "14px 16px",
+          borderRadius: 12,
+          border: "1px solid var(--border)",
+          borderLeft: `4px solid ${info.stroke}`,
+          background: "var(--surface)",
+          boxShadow: "var(--shadow-sm)",
+        }}
+      >
+        <p style={{ margin: "0 0 4px", fontSize: 11, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: info.stroke }}>
+          Function
+        </p>
+        <p style={{ margin: 0, fontSize: 15, lineHeight: 1.5, color: "var(--ink)" }}>{info.function}</p>
       </div>
 
       {CustomMiniSim ? <CustomMiniSim stepIndex={stepIndex} /> : <GenericMiniSim organelle={info} stepIndex={Math.min(stepIndex, 3)} />}
